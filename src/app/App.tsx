@@ -5,10 +5,8 @@ function App() {
 
   return (
     <>
-      <div> 
         {/* Routers */}
           <Header/>
-      </div>
     </>
   )
 }

@@ -3,6 +3,6 @@
     height: 49px;
     border: 1px solid #ccc;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     display: flex;
 }
