@@ -1,5 +1,11 @@
 .container {
-    width: 248px;
-    height: 23px;
-    border: 1px solid #ccc;
+    width: 56.49202733485194%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
 }

@@ -1,5 +1,7 @@
 .container{
     width: 241px;
     height: 48px;
-    border: 1px solid #ccc;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }

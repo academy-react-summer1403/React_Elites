@@ -1,13 +1,13 @@
 import React from 'react';
-import { NotifAndMode } from '../NotifAndMode/NotifAndMode.tsx';
+import { NotifAndModeHolder } from '../NotifAndMode/Notif&ModeHolder/NotifAndModeHolder.tsx';
 import { NavBar } from '../NavBar/NavBar.tsx';
-import { Logo } from '../Logo/Logo.tsx';
+import { Logo } from '../Logo/LogoHolder/Logo.tsx';
 import style from '../../../../Style/Header.module.css'
 
 const Header = () => {
     return (
         <div className={style.header}>
-                <NotifAndMode />
+                <NotifAndModeHolder />
                 <NavBar />
                 <Logo />
         </div>

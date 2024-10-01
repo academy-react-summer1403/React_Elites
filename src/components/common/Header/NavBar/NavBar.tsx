@@ -1,11 +1,12 @@
 import React from 'react'
 import { NavBarItems } from './NavBarItems/NavBarItems.tsx'
-import { Profile } from './Profile/Profile.tsx'
+import { LogInOrRegister } from './LogInOrRegister/LogInOrRegister.tsx'
+import style from '../../../../Style/NavBar.module.css'
 
 const NavBar = () => {
     return (
-        <div style={{width: '372px', height: '48px', display: "flex",}}>
-            <Profile />
+        <div className={style.container}>
+            <LogInOrRegister />
             <NavBarItems />
         </div>
     )

@@ -1,10 +1,13 @@
 .container {
-    width: 372px;
-    height: 48px;
-    justify-content: center;
+    width: 32.28%;
+    height: 47px;
+    justify-content: left;
     flex-flow: row wrap;
-    gap: 8px;
     border-radius: 56px;
     background: #2F2F2F;
     align-items: center;
+    align-items: center;
+    flex-flow: row wrap;
+    display: flex;
+    gap: 20px;
 }

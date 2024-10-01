@@ -1,5 +1,8 @@
 .container{
     width: 241px;
     height: 48px;
-    border: 1px solid #ccc;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    align-items: center;
 }
