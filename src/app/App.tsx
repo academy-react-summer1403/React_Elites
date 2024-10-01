@@ -1,4 +1,5 @@
 import React from "react"
+import { Header } from "../components/common/Header/HolderHeader/Header.tsx"
 
 function App() {
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <div> 
         {/* Routers */}
+          <Header/>
       </div>
     </>
   )

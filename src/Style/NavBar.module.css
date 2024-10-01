@@ -1,0 +1,10 @@
+.container {
+    width: 372px;
+    height: 48px;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 8px;
+    border-radius: 56px;
+    background: #2F2F2F;
+    align-items: center;
+}
