@@ -5,4 +5,5 @@
     flex-flow: row nowrap;
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }

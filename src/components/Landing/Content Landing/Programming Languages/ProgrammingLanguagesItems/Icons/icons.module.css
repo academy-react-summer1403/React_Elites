@@ -1,0 +1,74 @@
+.html{
+    width: 95px;
+    height: 95px;
+    background: url("../../../../../../assets/Images/html.png") 50% 50% no-repeat;
+    background-size: 70%;
+    transform: rotate(9.2deg);
+    position: relative;
+}
+
+.css{
+    width: 95px;
+    height: 95px;
+    background: url("../../../../../../assets/Images/css.png") 50% 50% no-repeat;
+    background-size: 70%;
+    transform: rotate(-15.61deg);
+    position: relative;
+}
+
+.js{
+    width: 95px;
+    height: 95px;
+    background: url("../../../../../../assets/Images/js.png") 50% 50% no-repeat;
+    background-size: 70%;
+    position: relative;
+}
+
+.react{
+    width: 95px;
+    height: 95px;
+    background: url("../../../../../../assets/Images/react.png") 50% 50% no-repeat;
+    background-size: 70%;
+    transform: rotate(-15.47deg);
+    position: relative;
+}
+
+.figma{
+    width: 95px;
+    height: 95px;
+    background: url("../../../../../../assets/Images/figma.png") 50% 50% no-repeat;
+    background-size: 70%;
+    transform: rotate(14.68deg);
+    position: relative;
+}
+
+.html:hover > div{
+    background: url("../../../../../../assets/Images/borderCopy.png") 50% 50% no-repeat;
+    background-size: 100%;
+    transition: 3s linear;
+}
+
+.css:hover > div{
+    background: url("../../../../../../assets/Images/borderCssCopy.png") 50% 50% no-repeat;
+    background-size: 120%;
+    transition: 3s linear;
+}
+
+.js:hover > div{
+    background: url("../../../../../../assets/Images/borderCopy.png") 50% 50% no-repeat;
+    background-size: 100%;
+    transition: 3s linear;
+}
+
+.react:hover > div{
+    background: url("../../../../../../assets/Images/borderCssCopy.png") 50% 50% no-repeat;
+    background-size: 120%;
+    transition: 3s linear;
+}
+
+.figma:hover > div{
+    background: url("../../../../../../assets/Images/figmaBorderCopy.png") 50% 50% no-repeat;
+    background-size: 100%;
+    transition: 3s linear;
+}
+
