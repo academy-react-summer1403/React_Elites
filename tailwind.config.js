@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./src/index.css",
+    "./src/components/login/login.tsx",
+    "./src/components/forgetPassword/forgetPassword.tsx"
+  ],
   theme: {
     extend: {},
   },

@@ -1,12 +1,12 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useEffect, useState } from 'react'
-import  styleLogin  from "./../../style/list.module.css";
+import  styleLogin  from "../../Style/list.module.css";
 
 const ForgetPass = () => {
 
   return (
     
-        <Formik initialValues={formValues}>
+        <Formik initialValues={{password: "", address: "", rememberPass: ""} }>
           {(form) => (
             <div className='flex justify-center'>
               <div className={styleLogin.page}>

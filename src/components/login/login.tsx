@@ -1,12 +1,12 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useEffect, useState } from 'react'
-import  styleLogin  from "./../../style/list.module.css";
+import  styleLogin  from "../../Style/list.module.css";
 
 const Login = () => {
 
   return (
     
-        <Formik initialValues={formValues}>
+        <Formik initialValues={{password: "", address: "", rememberPass: ""}}>
           {(form) => (
             <div className='flex justify-center'>
               <div className={styleLogin.page}>
@@ -56,7 +56,7 @@ const Login = () => {
                       </div>
                       <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">
                         <div className="flex items-center gap-1.5">
-                          <label for="rememberPassInput" className="text-xs font-bold text-black">مرا به خاطر بسپار</label>
+                          <label htmlFor="rememberPassInput" className="text-xs font-bold text-black">مرا به خاطر بسپار</label>
                           <Field id="rememberPassInput" type="checkbox" className="items-center w-4 text-right text-black" name="rememberPass"/>
                         </div>
                         <div className="border-none bg-slate-100 px-4 py-2 rounded-full cursor-pointer text-blue-700 text-xs font-bold tracking-tight" onClick={() => window.location.href = '/forgetPassword'}> رمز عبور را فراموش کرده اید؟</div>
