@@ -1,0 +1,18 @@
+.holder{
+    width: 94.444444444444444%;
+    height: 547px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 700;
+    color: #2F2F2F;
+    text-align: center;
+    width: 100%;
+    line-height: 130px;
+}

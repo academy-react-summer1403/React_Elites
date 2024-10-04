@@ -3,7 +3,7 @@ import style from './style.module.css'
 
 const Image = (props) => {
   return (
-    <img className={style.imageServices} src={props.image} />
+    <img className={style.imageProgramming} src={props.image} />
   )
 }
 
