@@ -6,6 +6,7 @@ import { OurGoalsHolder } from '../Our Goals/OurGoalsHolder/OurGoalsHolder'
 import { ServicesHolder } from '../Our services/OurServicesHolder/ServicesHolder'
 import { CoursesHolder } from '../Courses Of The Weekend/CoursesHolder/CoursesHolder'
 import { Blogs } from '../Blogs/BlogsHolder/Blogs'
+import { Teachers } from '../Teacher OF The Weekend/TeachersHolder/Teachers'
 
 const ContentLandingHolder = () => {
   return (
@@ -17,6 +18,7 @@ const ContentLandingHolder = () => {
           <ServicesHolder />
           <CoursesHolder />
           <Blogs />
+          <Teachers />
         </div>
     </>
   )
