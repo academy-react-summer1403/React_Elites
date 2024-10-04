@@ -1,0 +1,8 @@
+.NavBar {
+    width: 700px;
+    height: 48px;
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+    align-items: center;
+}

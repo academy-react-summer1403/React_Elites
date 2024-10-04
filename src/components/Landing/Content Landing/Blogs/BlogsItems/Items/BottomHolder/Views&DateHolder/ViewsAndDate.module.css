@@ -1,0 +1,24 @@
+.holder{
+    width: auto;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+}
+
+.views{
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #707070;
+    background: url(../../../../../../../../assets/Images/icons8-eye-24.png) 5% 50% no-repeat;
+    background-size: 15px;
+}
+
+.date{
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #707070;
+    background: url(../../../../../../../../assets/Images/icons8-date-16.png) 0% 50% no-repeat;
+    background-size: 15px;
+}

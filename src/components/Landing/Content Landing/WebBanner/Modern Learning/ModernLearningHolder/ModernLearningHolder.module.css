@@ -1,0 +1,8 @@
+.modernLearning{
+    width: 310px;
+    height: 196px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+}

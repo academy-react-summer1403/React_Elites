@@ -1,8 +1,9 @@
 .header{
     width: 94.44444444444444%;
     height: 49px;
-    border: 1px solid #ccc;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
