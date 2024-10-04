@@ -5,6 +5,7 @@ import BlogTitle from './BlogTitle'
 import reactBlog from '../../../../../assets/Images/reactBlog.png'
 import figmaBlog from '../../../../../assets/Images/figmaBlog.png'
 import JSBlog from '../../../../../assets/Images/JSBlog.png'
+import { Button } from '../../Courses Of The Weekend/CoursesItems/CoursesItemsHolder/Button'
 
 const Blogs = () => {
     let data=[
@@ -28,6 +29,7 @@ const Blogs = () => {
                 />
             )
         })}
+        <Button />
     </div>
   )
 }
