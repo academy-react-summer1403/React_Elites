@@ -6,4 +6,5 @@
     margin-left: 3%;
     background: url("../../../../../../assets/Images/Graphic.png");
     position: relative;
+    overflow: hidden;
 }

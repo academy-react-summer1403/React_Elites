@@ -34,3 +34,13 @@
     text-align: center;
     line-height: 35px;
 }
+
+@media screen and (max-width: 1200px) {
+    .paragraph{
+        font-size: 12px;
+        height: auto;
+    }
+    .button{
+        font-size: 12px;
+    }
+}

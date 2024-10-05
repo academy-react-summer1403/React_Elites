@@ -7,8 +7,8 @@ import { TitleAndDescHolder } from '../ServicesTitleAndDesc/TitleAndDescHolder'
 const ServicesItemsHolder = (props) => {
   return (
     <div className={style.holder}>
-      <TitleAndDescHolder title={props.title} desc={props.desc}/>
       <Image image={props.image} />
+      <TitleAndDescHolder title={props.title} desc={props.desc}/>
     </div>
   )
 }

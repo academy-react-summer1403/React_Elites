@@ -5,9 +5,10 @@
     border-radius: 32px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     background: #F6F6F6;
+    direction: rtl;
 }
 
 .title{
@@ -16,4 +17,11 @@
     color: #2F2F2F;
     width: 100%;
     text-align: center;
+}
+
+@media screen and (max-width: 1021px) {
+    .holder{
+        height: auto;
+        padding: 20px;
+    }
 }
