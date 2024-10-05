@@ -13,7 +13,7 @@ function App() {
           {/* <Header/>
           <LandingHolder />
           <HolderFooter/> */}
-          {/* <Login /> */}
+        {/* <Login /> */}
           {/* <ForgetPass /> */}
     </>
   )
