@@ -11,6 +11,10 @@
     direction: rtl;
 }
 
+.holder:hover{
+    border: 2px solid #3772FF;
+}
+
 .title{
     font-size: 32px;
     font-weight: 700;

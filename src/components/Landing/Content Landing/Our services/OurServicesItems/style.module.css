@@ -9,12 +9,24 @@
 }
 
 .imageServices {
+    width: 45px;
+    height: 44px;
+}
+
+.imageHolder{
     width: 88px;
     height: 88px;
     border: 2px solid #DCDCDC;
     background: #FCFCFC;
     border-radius: 100%;
     margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div:hover > .imageHolder{
+    border: 2px solid #3772FF;
 }
 
 .holder{
