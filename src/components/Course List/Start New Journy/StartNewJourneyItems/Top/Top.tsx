@@ -3,7 +3,7 @@ import style from './Top.module.css'
 
 const Top = () => {
   return (
-    <div className={style.top}>Top</div>
+    <div className={style.top}>شروع ماجراجویی جدید</div>
   )
 }
 

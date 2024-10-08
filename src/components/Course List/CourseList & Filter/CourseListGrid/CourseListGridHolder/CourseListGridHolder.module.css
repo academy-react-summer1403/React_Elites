@@ -1,15 +1,9 @@
 .courseListGridHolder{
     width: 75.80882352941176%;
-    border: 3px solid Orange;
-    min-height: 1000px;
-    direction: rtl;
-    justify-content: space-between;
-    flex-flow: row wrap;
     display: flex;
-}
-
-.inv{
-    width: 48.49660523763337%;
-    height: 40px;
-    
+    justify-content: right;
+    align-items: flex-start;
+    direction: rtl;
+    flex-flow: row wrap;
+    height: auto;
 }

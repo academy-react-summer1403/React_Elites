@@ -9,7 +9,6 @@ const CourseListGridHolder = () => {
   return (
     <div className={style.courseListGridHolder}>
       <TopHolder />
-      <div className={style.inv}></div>
       <CoursesHolder />
     </div>
   )

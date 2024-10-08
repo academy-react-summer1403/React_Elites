@@ -4,7 +4,7 @@ import { TopItems } from './TopItems'
 
 const TopHolder = () => {
   return (
-    <div className={style.holder}>items
+    <div className={style.holder}>ترتیب
       <TopItems />
     </div>
   )
