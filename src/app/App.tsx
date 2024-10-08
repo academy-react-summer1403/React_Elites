@@ -10,9 +10,9 @@ function App() {
   return (
     <>
         {/* Routers */}
-          {/* <Header/>
+          {/* <Header/> */}
           <LandingHolder />
-          <HolderFooter/> */}
+          {/* <HolderFooter/> */}
         {/* <Login /> */}
           {/* <ForgetPass /> */}
     </>

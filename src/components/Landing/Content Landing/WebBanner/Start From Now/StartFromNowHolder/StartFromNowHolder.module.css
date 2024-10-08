@@ -3,6 +3,26 @@
     margin-left: 6.5%;
     height: 44.4%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: right;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1306px) {
+    .startFromNow{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 1096px) {
+    .startFromNow{
+        width: 20%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1007px) {
+    .startFromNow{
+        width: 25%;
+    }
 }

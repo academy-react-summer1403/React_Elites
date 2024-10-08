@@ -9,3 +9,9 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 1217px) {
+    .container{
+        font-size: 12px;
+    }
+}

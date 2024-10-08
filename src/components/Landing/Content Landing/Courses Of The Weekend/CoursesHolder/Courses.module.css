@@ -16,3 +16,15 @@
     width: 100%;
     line-height: 130px;
 }
+
+@media screen and (max-width: 1412px) {
+    .holder{
+        margin-top: 400px;
+    }
+}
+
+@media screen and (max-width: 1021px) {
+    .holder{
+        margin-top: 600px;
+    }
+}
