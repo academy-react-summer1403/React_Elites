@@ -9,3 +9,10 @@
     font-size: 14px;
     line-height: 30px;
 }
+
+@media screen and (max-width: 1222px) {
+    .juniors{
+        font-size: 12px;
+        background-size: 40%;
+    }
+}

@@ -11,3 +11,9 @@
     display: flex;
     gap: 20px;
 }
+
+@media screen and (max-width: 975px) {
+    .container{
+        width: 35%;
+    }
+}

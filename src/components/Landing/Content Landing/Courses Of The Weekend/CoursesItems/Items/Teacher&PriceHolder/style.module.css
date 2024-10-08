@@ -22,3 +22,12 @@
     width: auto;
     text-align: left;
 }
+
+@media screen and (max-width: 1116px) {
+    .price{
+        font-size: 10px;
+    }
+    .teacher{
+        font-size: 10px;
+    }
+}
