@@ -5,3 +5,9 @@
     font-weight: 500;
     color: #707070;
 }
+
+@media screen and (max-width: 1021px) {
+    .publisher{
+        font-size: 10px;
+    }
+}

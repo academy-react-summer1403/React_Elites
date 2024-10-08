@@ -1,0 +1,46 @@
+.holder{
+    width: 36.59722222222222%;
+    height: 63.33333333333333%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    direction: rtl;
+    margin-right: 3%;
+}
+
+.title{
+    width: 100%;
+    height: 12.78195488721805%;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FCFCFC;
+    text-align: right;
+}
+
+.paragraph{
+    width: 100%;
+    height: 54.51127819548872%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #F6F6F6;
+    text-align: right;
+}
+
+.button{
+    width: 22.58064516129032%;
+    height: 14.66165413533835%;
+    background: #3772FF;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+    .paragraph{
+        font-size: 12px;
+        height: auto;
+    }
+    .button{
+        font-size: 12px;
+    }
+}

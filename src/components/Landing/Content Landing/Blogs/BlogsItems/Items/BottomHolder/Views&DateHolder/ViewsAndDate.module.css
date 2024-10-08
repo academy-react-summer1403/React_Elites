@@ -22,3 +22,12 @@
     background: url(../../../../../../../../assets/Images/icons8-date-16.png) 0% 50% no-repeat;
     background-size: 15px;
 }
+
+@media screen and (max-width: 1139px) {
+    .date{
+        font-size: 10px;
+    }
+    .views{
+        font-size: 10px;
+    }
+}
