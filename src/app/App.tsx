@@ -8,9 +8,7 @@ function App() {
   return (
     <>
         {/* Routers */}
-          <Header/>
-          <CourseList />
-          <HolderFooter />
+      <CourseList />
     </>
   )
 }

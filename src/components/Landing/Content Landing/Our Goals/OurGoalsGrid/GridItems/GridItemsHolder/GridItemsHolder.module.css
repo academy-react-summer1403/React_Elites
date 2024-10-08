@@ -1,0 +1,15 @@
+.holder{
+    width: 23.60%;
+    height: 100%;
+    border: 2px solid #DCDCDC;
+    border-radius: 24px;
+    direction: rtl;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+
+}
+
+.holder:hover{
+    border: 2px solid #3772FF;
+}

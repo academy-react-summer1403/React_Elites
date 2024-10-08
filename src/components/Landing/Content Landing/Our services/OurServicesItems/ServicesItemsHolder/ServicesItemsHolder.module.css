@@ -1,0 +1,31 @@
+.holder{
+    width: 48.82352941176471%;
+    height: 31.85840707964602%;
+    border: 2px solid #DCDCDC;
+    border-radius: 32px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F6F6F6;
+    direction: rtl;
+}
+
+.holder:hover{
+    border: 2px solid #3772FF;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 700;
+    color: #2F2F2F;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1021px) {
+    .holder{
+        height: auto;
+        padding: 20px;
+    }
+}
