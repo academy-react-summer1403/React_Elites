@@ -4,6 +4,8 @@ import { HolderFooter } from "../components/common/Footer/HolderFooter/HolderFoo
 import { LandingHolder } from "../components/Landing/A-LandingHolder/LandingHolder.tsx"
 import { Login } from "../components/login/login.tsx"
 import { ForgetPass } from "../components/forgetPassword/forgetPassword.tsx"
+import { Blogs } from "../components/Landing/Content Landing/Blogs/BlogsHolder/Blogs.tsx"
+import { BlogsList } from "../components/blogs/blogsList.tsx"
 
 function App() {
 
@@ -11,10 +13,11 @@ function App() {
     <>
         {/* Routers */}
           {/* <Header/> */}
-          <LandingHolder />
+          {/* <LandingHolder /> */}
           {/* <HolderFooter/> */}
         {/* <Login /> */}
           {/* <ForgetPass /> */}
+          <BlogsList />
     </>
   )
 }
