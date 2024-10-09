@@ -14,7 +14,7 @@
     height: 100%;
     border-radius: 32px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -82,6 +82,68 @@
     width: 1030px;
     gap: 32px;
 }
-
-
-
+.ChangePageList{
+    background: #EFEFEF;
+    width: 322px;
+    border-radius: 16px;
+    height: 48px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.ChangePageList > span{
+    width: 45px;
+    color: #272727;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.55px;
+    text-align: center;
+    padding: 11.5px 0;
+    border-radius: 8px;
+}
+.ChangePageList > .selected{
+    background: #3772FF;
+    color: white;
+}
+.sortsAndFilter{
+    display: none;
+    justify-content: space-between;    
+    width: 100%;    
+    direction: ltr;
+}
+.sortButton,.filterButton{
+    height: 48px;
+    
+    background-color: #2F2F2F;
+    border-radius: 40px;
+    padding: 12px 16px;
+    font-family: DanaFaNum;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.88px;
+    text-align: right;
+    display: flex;
+    gap: 10px;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    padding-right: 46px;
+    background-size: 20px;
+}
+.sortButton{
+    background-image: url("../assets/Images/sortIcon.png");
+}
+.filterButton{
+    background-image: url("https://img.icons8.com/?size=100&id=tBHxiVksS0Fw&format=png&color=ffffff");
+}
+@media screen and (max-width: 490px) {
+    .sorts{
+        display: none;
+    }
+    .h1{
+        font-size: 32px;
+    }
+    .sortsAndFilter{
+        display: flex;
+    }
+}

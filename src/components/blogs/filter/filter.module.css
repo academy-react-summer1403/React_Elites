@@ -1,6 +1,6 @@
 .filter{
     width: 298px;
-    height: 370px;
+    height: 100%;
     top: 413px;
     left: 1102px;
     gap: 0px;
@@ -50,3 +50,8 @@
 }
 
 
+@media screen and (max-width: 490px) {
+    .filter{
+        display: none;
+    }
+}

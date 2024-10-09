@@ -13,11 +13,12 @@ function App() {
     <>
         {/* Routers */}
           {/* <Header/> */}
+          <BlogsList />
           {/* <LandingHolder /> */}
           {/* <HolderFooter/> */}
         {/* <Login /> */}
           {/* <ForgetPass /> */}
-          <BlogsList />
+
     </>
   )
 }
