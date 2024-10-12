@@ -1,0 +1,23 @@
+.holder{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
+}
+
+.comments{
+    color: #000000;
+    font-size: 16;
+    font-weight: 500;
+}
+
+.rate{
+    width: 50%;
+    background: url(../../../../../../../assets/Images/icons8-star-48.png) repeat-x 50%;
+    background-size: 16%;
+    color: #000000;
+    font-size: 16;
+    font-weight: 500;
+    text-align: right;
+}
