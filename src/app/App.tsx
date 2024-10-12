@@ -11,14 +11,15 @@ function App() {
 
   return (
     <>
-        {/* Routers */}
-          {/* <Header/> */}
-          <BlogsList />
-          {/* <LandingHolder /> */}
-          {/* <HolderFooter/> */}
-        {/* <Login /> */}
-          {/* <ForgetPass /> */}
+      {/* Routers */}
+      <Header/>
 
+      {/* <BlogsList /> */}
+      {/* <LandingHolder /> */}
+      <Login />
+      {/* <ForgetPass /> */}
+
+      <HolderFooter/>
     </>
   )
 }

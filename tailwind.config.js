@@ -6,6 +6,15 @@ export default {
     "./src/components/forgetPassword/forgetPassword.tsx"
   ],
   theme: {
+    fontFamily: {
+      'DannaThin': ['DannaThin'],
+      'DannaExtraLight': ['DannaExtraLight'],
+      'DannaLight': ['DannaLight'],
+      'DannaNormal': ['DannaNormal'],
+      'DannaDemiBold': ['DannaDemiBold'],
+      'DannaBold': ['DannaBold'],
+      'DannaExtraBold': ['DannaExtraBold'],
+    },
     extend: {},
   },
   plugins: [],
