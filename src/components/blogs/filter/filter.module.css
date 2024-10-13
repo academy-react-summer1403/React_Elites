@@ -6,23 +6,22 @@
     gap: 0px;
     border-radius: 32px;
     border: 2px solid #DCDCDC;
-    margin-top: 27.5px;
+    margin-top: 70px;
     padding: 20px;
 }
 .filterTitle{
-    font-family: DanaFaNum;
+    font-family: DannaBold;
     font-size: 24px;
-    font-weight: 800;
     line-height: 34.32px;
     text-align: right;
     color: #2F2F2F;
     margin-bottom: 15px;
 }
 .filterText{
-    font-family: DanaFaNum;
+    font-family: DannaMedium;
     font-size: 16px;
-    font-weight: 600;
-    line-height: 22.88px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     color: #2F2F2F;
 
@@ -33,20 +32,47 @@
     border-radius: 16px;
     padding: 14px;
     gap: 8px;
-    font-family: DanaFaNum;
-    font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
+    font-size: 12px;
     line-height: 20.02px;
     text-align: right;
+    color: #707070 !important;
+    outline: none;
+}
+.filterCategory{
+    width: 100%;
+    border-radius: 16px;
+    padding: 14px;
+    gap: 8px;
+    font-family: DannaMedium;
+    font-size: 12px;
+    line-height: 20.02px;
+    text-align: right;
+    background: #F1F1F1 url(../../../assets/Images/icons8-arrow-down-30.png) 5% 50% no-repeat;
+    background-size: 8%;
+    color: #707070;
+
 }
 .filterDetail{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 5px;
+    position: relative;
 }
 .filterTextImg{
-    width: 24px;
+    width: 30px;
+    height: 30px;
+}
+.searchBox{
+    width: 50px;
+    height: 48px;
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    border-radius: 16px;
+    background: #3772FF url(../../../assets/Images/icons8-search-30white.png) 50% 50% no-repeat;
+    background-size: 50%;
 }
 
 

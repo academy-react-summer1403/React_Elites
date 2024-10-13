@@ -5,9 +5,10 @@
 }
 
 .title{
-    font-weight: 700;
     font-size: 24px;
     color: #2F2F2F;
     width: 100%;
     text-align: right;
+    font-family: DannaBold;
+    line-height: 40px;
 }

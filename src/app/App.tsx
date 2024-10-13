@@ -14,9 +14,9 @@ function App() {
       {/* Routers */}
       <Header/>
 
-      {/* <BlogsList /> */}
+      <BlogsList />
       {/* <LandingHolder /> */}
-      <Login />
+      {/* <Login /> */}
       {/* <ForgetPass /> */}
 
       <HolderFooter/>
