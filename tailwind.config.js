@@ -11,6 +11,7 @@ export default {
       'DannaExtraLight': ['DannaExtraLight'],
       'DannaLight': ['DannaLight'],
       'DannaNormal': ['DannaNormal'],
+      'DannaMedium': ['DannaMedium'],
       'DannaDemiBold': ['DannaDemiBold'],
       'DannaBold': ['DannaBold'],
       'DannaExtraBold': ['DannaExtraBold'],
