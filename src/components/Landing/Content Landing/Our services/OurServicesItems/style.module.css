@@ -1,11 +1,11 @@
 .title{
     font-size: 20px;
-    font-weight: 700;
+    font-family: DannaBold;
     color: #2F2F2F;
     width: 100%;
     height: 50%;
     text-align: right;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .imageServices {
@@ -40,11 +40,12 @@ div:hover > .imageHolder{
 
 .desc{
     font-size: 16px;
-    font-weight: 400;
+    font-family: DannaNormal;
     color: #707070;
     width: 100%;
     height: 50%;
     text-align: right;
+    line-height: 40px;
 }
 
 @media screen and (max-width: 1021px) {
