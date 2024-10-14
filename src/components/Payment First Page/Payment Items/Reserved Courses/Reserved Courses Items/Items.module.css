@@ -1,0 +1,42 @@
+.title{
+    width: 93%;
+    font-family: DannaBold;
+    font-size: 32px;
+    color: black;
+    text-align: right;
+    user-select: none;
+}
+
+.coursesHolder{
+    width: 92.48291571753986%;
+    height: 200px;
+    border-bottom: 2px solid #DCDCDC;
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
+    align-items: center;
+    position: relative;
+}
+
+.image{
+    width: 26.97044334975369%;
+    height: 137px;
+}
+
+.titleCourse{
+    font-family: DannaDemiBold;
+    font-size: 32px;
+    margin-right: 30px;
+    color: black;
+    user-select: none;
+}
+
+.price{
+    font-family: DannaNormal;
+    font-size: 20px;
+    color: #000000;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    user-select: none;
+}
