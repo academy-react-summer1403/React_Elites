@@ -5,7 +5,16 @@
     gap: 200px;
     justify-content:center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 150px;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  500px 700px;
+}
+
+@keyframes visible{
+    to {
+        margin-top: 0px;
+    }
 }
 
 @media screen and (max-width: 1096px) {

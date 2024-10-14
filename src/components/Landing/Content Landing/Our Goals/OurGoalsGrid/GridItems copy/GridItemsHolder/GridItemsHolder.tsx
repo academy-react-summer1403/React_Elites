@@ -4,7 +4,7 @@ import { GridItemsTitle } from '../GridItemsTitle/GridItemsTitle'
 import { Description } from '../GridItemsDescription/Description'
 import { Image } from '../GridItemsImage/Image'
 
-const GridItemsHolder = (props) => {
+const GridItemsHolderTwo = () => {
 
   return (
     <div className={style.holder}>
@@ -15,4 +15,4 @@ const GridItemsHolder = (props) => {
   )
 }
 
-export {GridItemsHolder}
+export {GridItemsHolderTwo}

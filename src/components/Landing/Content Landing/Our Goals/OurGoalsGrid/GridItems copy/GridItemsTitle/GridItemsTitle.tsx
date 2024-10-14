@@ -3,7 +3,7 @@ import style from './GridItemsTitle.module.css'
 
 const GridItemsTitle = () => {
   return (
-    <div className={style.title}>آماده سازی برای بازار کار</div>
+    <div className={style.title}>آموزش‌های تخصصی</div>
   )
 }
 

@@ -13,7 +13,7 @@
     rotate: -180deg;
     animation: visible linear forwards;
     animation-timeline: view();
-    animation-range:  entry ;
+    animation-range:  entry 150px;
 }
 
 @keyframes visible{
