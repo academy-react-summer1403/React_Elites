@@ -1,0 +1,24 @@
+.logo{
+    width: 130.2px;
+    height: 104.083px;
+    background: url(../../../../assets/Images/ap.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.logo2{
+    width: 186px;
+    height: 122.85px;
+    background: url(../../../../assets/Images/shaparak.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.title{
+    font-family: inherit;
+    color: black;
+    font-weight: bold;
+    font-size: 23px;
+    width: 714px;
+    height: 64px;
+    line-height: 70px;
+    text-align: center;
+}

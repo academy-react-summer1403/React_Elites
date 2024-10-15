@@ -7,6 +7,7 @@ import { ForgetPass } from "../components/forgetPassword/forgetPassword.tsx"
 import { Blogs } from "../components/Landing/Content Landing/Blogs/BlogsHolder/Blogs.tsx"
 import { BlogsList } from "../components/blogs/blogsList.tsx"
 import { Payment } from "../components/Payment First Page/Payment Holder/Payment.tsx"
+import { PaymentGateway } from "../components/Payment Gateway/PaymentGateway.tsx"
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
       {/* <LandingHolder /> */}
       {/* <Login /> */}
       {/* <ForgetPass /> */}
-      <Payment />
+      {/* <Payment /> */}
+      <PaymentGateway />
 
       {/* <HolderFooter/> */}
     </>
