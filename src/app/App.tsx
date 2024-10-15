@@ -6,20 +6,21 @@ import { Login } from "../components/login/login.tsx"
 import { ForgetPass } from "../components/forgetPassword/forgetPassword.tsx"
 import { Blogs } from "../components/Landing/Content Landing/Blogs/BlogsHolder/Blogs.tsx"
 import { BlogsList } from "../components/blogs/blogsList.tsx"
+import { Dashboard } from "../components/dashboard/dashboard.tsx"
 
 function App() {
 
   return (
     <>
       {/* Routers */}
-      <Header/>
-
+      {/*Header/>*/}
+      <Dashboard /> 
       {/* <BlogsList /> */}
       {/* <LandingHolder /> */}
-      <Login />
-      {/* <ForgetPass /> */}
+     {/* <Login />
+      {/* ForgetPass /> */}
 
-      <HolderFooter/>
+     {/* HolderFooter*/}
     </>
   )
 }

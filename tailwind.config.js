@@ -3,7 +3,8 @@ export default {
   content: [
     "./src/index.css",
     "./src/components/login/login.tsx",
-    "./src/components/forgetPassword/forgetPassword.tsx"
+    "./src/components/forgetPassword/forgetPassword.tsx",
+    "./src/components/dashboard/dashboard.tsx",
   ],
   theme: {
     fontFamily: {
