@@ -17,26 +17,6 @@ function App() {
   return (
     <>
       {/* Routers */}
-<<<<<<< HEAD
-      {/* <Header/> */}
-      {/* <StudentPanel /> */}
-      {/* <LandingHolder /> */}
-      {/* <HolderFooter/> */}
-      {/* <Login /> */}
-      {/* <ForgetPass /> */}
-      {/* Routers */}
-      {/* <Header/> */}
-      {/* <BlogsList /> */}
-=======
-      <Header/>
->>>>>>> 4c352cb9070109361330d41b3b5a1d103f9bd281
-
-      <BlogsList />
->>>>>>> 6ff3cf6720dab0eba34cf7bb2f898eee50c7f69f
-      {/* <LandingHolder /> */}
-      {/* <Login /> */}
-      {/* <ForgetPass /> */}
-      {/* <HolderFooter/> */}
     </>
   )
 }
