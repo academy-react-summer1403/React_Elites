@@ -1,5 +1,4 @@
-import http from '../../interceptor/index'
-import { baseUrl } from "../../../config/config";
+import http from '../../interceptor/index.ts'
 
 const getStudentAndTeacherCount = async () => {
     try {

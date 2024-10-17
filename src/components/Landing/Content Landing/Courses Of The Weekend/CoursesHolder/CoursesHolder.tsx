@@ -9,29 +9,21 @@ import WebCourse from '../../../../../assets/Images/webCourse.png'
 import { Button } from '../CoursesItems/CoursesItemsHolder/Button'
 import axios from 'axios'
 
-const CoursesHolder = () => {
-  let data = [
-    {title: "دوره طراحی سایت", teacher: "محمدحسین بحرالعلومی", price: "500،000 تومان", category: "برنامه نویسی", level: "پیشرفته", image: WebCourse},
-    {title: "دوره جاوااسکریپت", teacher: "محمدحسین بحرالعلومی", price: "2،500،000 تومان", category: "برنامه نویسی", level: "پیشرفته", image: JSCourse},
-    {title: "دوره فیگما", teacher: "محمدحسین خلیل‌پور", price: "1،000،000 تومان", category: "طراحی", level: "پیشرفته", image: figmaCourse},
-    {title: "دوره ری‌اکت جی‌اس", teacher: "محسن اسفندیاری", price: "تومان 4،500،000", category: "برنامه نویسی", level: "مقدماتی", image: reactJs}
-  ]
-
-
-
+const CoursesHolder = (props) => {
 
   return (
     <div className={style.holder}>
         <CoursesTitle />
-        {data.map((item, index) => {
+        {props.courseList.map((item, index) => {
         return (
           <CoursesItemsHolder 
+            key={index}
             title={item.title}
-            teacher={item.teacher}
-            price={item.price}
-            category={item.category}
-            level={item.level}
-            image={item.image}
+            teacher={item.teacherName}
+            price={item.cost}
+            category={item.statusName}
+            level={item.levelName}
+            image={item.tumbImageAddress}
           />
         )
       })}

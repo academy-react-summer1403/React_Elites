@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import style from './LandingHolder.module.css'
 import { ContentLandingHolder } from '../Content Landing/ContentLandingHolder/ContentLandingHolder'
 import axios from 'axios'
-import {getStudentAndTeacherCount} from '../../../core/services/api/StudentAndTeacher.js'
+import {getStudentAndTeacherCount} from '../../../core/services/api/StudentAndTeacher.ts'
 
 const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
