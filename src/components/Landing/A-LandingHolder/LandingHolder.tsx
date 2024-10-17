@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react'
 import style from './LandingHolder.module.css'
 import { ContentLandingHolder } from '../Content Landing/ContentLandingHolder/ContentLandingHolder'
 import axios from 'axios'
+import {getStudentAndTeacherCount} from '../../../core/services/api/StudentAndTeacher.js'
 
 const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
 
-  const getCourseList = async () => {
-    const result = await axios.get('https://classapi.sepehracademy.ir/api/Home/LandingReport')
-    setMAndJ(result.data)
-  };
+  const getSAndT = async () => {
+    const SAndT = await getStudentAndTeacherCount();
+    setMAndJ(SAndT)
+  }
 
   useEffect(() => {
-    getCourseList();
+    getSAndT();
   }, [])
   
   return (
