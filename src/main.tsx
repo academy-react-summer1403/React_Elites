@@ -8,7 +8,6 @@ import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
 import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/link.tsx'
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
-import {LandingHolder} from './components/Landing/A-LandingHolder/LandingHolder.tsx'
 import {BlogsList} from './components/blogs/blogsList.tsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
