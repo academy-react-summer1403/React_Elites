@@ -53,3 +53,16 @@
         padding: 20px;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .holder{
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .title{
+        font-size: 28px;
+    }
+}

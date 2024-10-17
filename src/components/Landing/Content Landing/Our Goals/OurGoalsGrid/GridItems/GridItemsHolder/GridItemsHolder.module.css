@@ -26,3 +26,10 @@
 .holder:hover{
     border: 2px solid #3772FF;
 }
+
+@media screen and (max-width: 900px) {
+    .holder{
+        width: 361px;
+        height: 434px;
+    }
+}

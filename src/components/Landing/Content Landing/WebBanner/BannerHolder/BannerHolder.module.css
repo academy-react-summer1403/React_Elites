@@ -7,6 +7,7 @@
     align-items: center;
     margin-top: 150px;
     animation: visible linear forwards;
+    flex-flow: row wrap;
     animation-timeline: view();
     animation-range:  500px 700px;
 }
@@ -21,5 +22,12 @@
     .banner{
         justify-content: space-between;
         gap: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .banner{
+        height: auto;
+        align-items: flex-start;
     }
 }

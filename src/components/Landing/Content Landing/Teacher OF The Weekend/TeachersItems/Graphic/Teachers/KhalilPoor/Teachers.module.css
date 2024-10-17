@@ -36,3 +36,17 @@
     color: #FCFCFC;
     text-align: center;
 }
+
+@media screen and (max-width: 900px) {
+    .holder{
+        top: 700px;
+        left: 150px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .holder{
+        top: 700px;
+        left: 110px;
+    }
+}

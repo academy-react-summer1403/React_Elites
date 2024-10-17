@@ -5,6 +5,7 @@
     flex-flow: column wrap;
     justify-content: space-between;
     direction: rtl;
+    display: none;
 }
 
 @media screen and (max-width: 1306px) {
@@ -27,6 +28,11 @@
 
 @media screen and (max-width: 900px) {
     .container{
-        display: none;
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 50px;
+        height: auto;
+        display: flex;
     }
 }

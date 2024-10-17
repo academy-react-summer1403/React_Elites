@@ -8,6 +8,15 @@
     margin-right: 3%;
 }
 
+@media screen and (max-width: 900px) {
+    .holder{
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
 .title{
     width: 100%;
     height: 12.78195488721805%;
@@ -20,6 +29,13 @@
     animation-range:  entry;
     scale: 0;
     opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .title{
+        text-align: center;
+        margin: o;
+    }
 }
 
 @keyframes visible{
@@ -41,6 +57,12 @@
     animation-range:  entry;
     scale: 0;
     opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .paragraph{
+        text-align: center;
+    }
 }
 
 @keyframes visible{

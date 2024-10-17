@@ -14,6 +14,16 @@
     opacity: 0;
 }
 
+@media screen and (max-width: 900px) {
+    .holder{
+        background: url("../../../../../../assets/Images/GraphicVertical.png") no-repeat 50% 50%;
+        background-size: cover;
+        height: 900px;
+        margin: 0;
+        width: 100%;
+    }
+}
+
 @keyframes visible{
     to {
         scale: 1;
