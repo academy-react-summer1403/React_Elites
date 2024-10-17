@@ -7,7 +7,7 @@ import { ChangePageList } from "./ChangePageList/ChangePageList.tsx";
 const BlogsList = () => {
 
   return (
-
+  <>
     <Formik>
       {(form) => (
         <div className=' h-full w-full flex flex-wrap justify-center'>
@@ -23,9 +23,19 @@ const BlogsList = () => {
                 <div className={styleBlogList.filterButton}>فیلتر</div>
               </div>
               <div className={styleBlogList.sorts}>
-                <h1 className="w-20 font-bold text-xl text-black">ترتیب</h1>
-                <div className={styleBlogList.sortButtonNew}>× جدید ترین </div>
-                <div className={styleBlogList.sortButtonPop}>محبوب ترین</div>
+                <h1 className={styleBlogList.sortingTitle}>ترتیب</h1>
+
+
+                <input type="radio" checked name="sort" id="New" className={styleBlogList.inputSort} />
+                <label htmlFor="New" className={styleBlogList.sortButtonLabel} > جدیدترین </label>
+
+
+
+                <input type="radio" name="sort" id="Popular" className={styleBlogList.inputSort} />
+                <label htmlFor="Popular" className={styleBlogList.sortButtonLabel} > محبوبترین </label>
+
+                <div className={styleBlogList.filterResponsive}>فیلتر</div>
+                <div className={styleBlogList.sortResponsive}>ترتیب</div>
               </div>
               <ListCardBlogs />
               <ChangePageList />
@@ -35,7 +45,7 @@ const BlogsList = () => {
         </div>
       )}
     </Formik>
-
+  </>
   )
 }
 
