@@ -6,4 +6,14 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
+    margin-top: 50px;
+    flex-flow: row wrap;
+    direction: rtl;
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        height: auto;
+        justify-content: center;
+    }
 }

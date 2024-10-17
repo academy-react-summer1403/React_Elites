@@ -5,6 +5,18 @@
     flex-flow: row wrap;
     justify-content: space-between;
     position: relative;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  entry;
+    scale: 0;
+    opacity: 0;
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }
 
 .button{
@@ -13,9 +25,9 @@
     border-radius: 40px;
     background: #2F2F2F;
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     margin: 40px auto;
-    line-height: 35px;
+    line-height: 40px;
     text-align: center;
 }

@@ -6,8 +6,9 @@ import { Graphic } from '../TeachersItems/Graphic/Graphic'
 const Teachers = () => {
   return (
     <div className={style.container}>
-        <Graphic />
         <Right />
+        <Graphic />
+
     </div>
   )
 }

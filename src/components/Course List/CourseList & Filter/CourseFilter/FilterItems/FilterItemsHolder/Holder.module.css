@@ -1,0 +1,15 @@
+.holder{
+    width: 86.57718120805369%;
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+
+.title{
+    width: 100%;
+    color: #2F2F2F;
+    font-size: 24px;
+    font-family: DannaBold;
+    text-align: right;
+}

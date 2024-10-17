@@ -8,9 +8,9 @@ const GridItemsHolder = (props) => {
 
   return (
     <div className={style.holder}>
-      <GridItemsTitle title={props.title} />
-      <Description description={props.description} />
-      <Image image={props.image} />
+      <GridItemsTitle />
+      <Description />
+      <Image />
     </div>
   )
 }
