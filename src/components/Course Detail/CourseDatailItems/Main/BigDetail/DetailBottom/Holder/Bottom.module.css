@@ -5,6 +5,13 @@
     border-radius: 16px;
     display: flex;
     justify-content: right;
-    
+}
 
+@media screen and (max-width: 698px) {
+    .bottom{
+        height: auto;
+        flex-flow: row wrap;
+        border: none;
+        border-radius: none;
+    }
 }

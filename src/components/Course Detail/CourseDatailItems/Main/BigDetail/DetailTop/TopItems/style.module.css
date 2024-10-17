@@ -12,11 +12,17 @@
     font-size: 14px;
     font-family: DannaMedium;
     color: #707070;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
 .bottomS{
     font-size: 16px;
     font-family: DannaMedium;
     color: #FCFCFC;
+    width: 101px;
+    height: 27px;
     padding-left: 4px;
     padding-right: 4px;
     background: #FF5353;
@@ -24,6 +30,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .Level{
@@ -40,6 +49,10 @@
     font-size: 14px;
     font-family: DannaMedium;
     color: #707070;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
 .bottomL{
     font-size: 16px;
@@ -52,6 +65,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .Category{
@@ -68,6 +84,10 @@
     font-size: 14px;
     font-family: DannaMedium;
     color: #707070;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
 .bottomC{
     font-size: 16px;
@@ -80,6 +100,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .Teacher{
@@ -96,6 +119,10 @@
     font-family: DannaMedium;
     color: #707070;
     width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
 .bottomT{
     font-size: 16px;
@@ -104,4 +131,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 698px) {
+    .Teacher{
+        margin-top: 10px;
+        width: 50%;
+        border: 2px solid #DCDCDC;
+        border-radius: 16px 0 0 16px;
+        height: 80px;
+    }
+    .Status{
+        margin-top: 10px;
+        width: 50%;
+        border: 2px solid #DCDCDC;
+        border-radius: 0 16px 16px 0;
+        height: 80px;
+    }
+    .Category{
+        margin-top: 10px;
+        width: 50%;
+        border: 2px solid #DCDCDC;
+        border-radius: 0 16px 16px 0;
+        height: 80px;
+    }
+    .Level{
+        margin-top: 10px;
+        width: 50%;
+        border: 2px solid #DCDCDC;
+        border-radius: 16px 0 0 16px;
+        height: 80px;
+    }
 }
