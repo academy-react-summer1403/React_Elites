@@ -8,6 +8,7 @@ const Mentors = (props) => {
       <div className={style.teacherCount}> + {props.teacherCount.teacherCount} </div>
       <div className={style.title}>اساتید برتر جهان</div>
     </div>
+
   )
 }
 

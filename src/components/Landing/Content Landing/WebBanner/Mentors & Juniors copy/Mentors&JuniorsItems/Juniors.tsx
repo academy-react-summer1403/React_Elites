@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './Juniors.module.css'
 
+
 const Juniors = (props) => {
   return (
     <div className={style.container}>

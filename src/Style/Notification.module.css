@@ -7,3 +7,9 @@
     background: url("../assets/Images/icons8-notification-48.png") 50% 50% no-repeat;
     background-size: 60%;
 }
+
+@media screen and (max-width: 900px) {
+    .notification{
+        display: none;
+    }
+}
