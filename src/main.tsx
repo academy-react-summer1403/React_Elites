@@ -18,8 +18,9 @@ import "./app/App.css"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingHolder />,
+    element: <Root />,
     children:[
+
       {
         path: "/Login",
         element: <Login />,
