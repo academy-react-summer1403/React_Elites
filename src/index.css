@@ -1,11 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: DannaThin;
+    src: url(./assets/Fonts/dana-fanum-thin.ttf);
+  }
+  @font-face {
+    font-family: DannaExtraLight;
+    src: url(./assets/Fonts/dana-fanum-extralight.ttf);
+  }
+  @font-face {
+    font-family: DannaLight;
+    src: url(./assets/Fonts/dana-fanum-light.ttf);
+  }
+  @font-face {
+    font-family: DannaNormal;
+    src: url(./assets/Fonts/dana-fanum-regular.ttf);
+  }
+  @font-face {
+    font-family: DannaMedium;
+    src: url(./assets/Fonts/dana-fanum-medium.ttf);
+  }
+  @font-face {
+    font-family: DannaDemiBold;
+    src: url(./assets/Fonts/dana-fanum-demibold.ttf);
+  }
+  @font-face {
+    font-family: DannaBold;
+    src: url(./assets/Fonts/dana-fanum-bold.ttf);
+  }
+  @font-face {
+    font-family: DannaExtraBold;
+    src: url(./assets/Fonts/dana-fanum-extrabold.ttf);
+  }
+  @font-face {
+    font-family: IranYekan;
+    src: url(./assets/Fonts/iranyekanwebbold.ttf);
+  }
+}
 
 :root {
-
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

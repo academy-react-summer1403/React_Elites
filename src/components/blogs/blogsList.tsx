@@ -1,6 +1,8 @@
-import { Formik } from "formik";
+import { Formik  } from "formik";
 import styleBlogList from "./../../Style/blogList.module.css";
 import { Filter } from "./filter/filter.tsx";
+import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
+import { ChangePageList } from "./ChangePageList/ChangePageList.tsx";
 
 const BlogsList = () => {
 
@@ -16,14 +18,30 @@ const BlogsList = () => {
           <div className={styleBlogList.page}>
             <Filter />            
             <div className={styleBlogList.page2}>
-              <div className={styleBlogList.sorts}>
-                <h1 className="w-20 font-bold text-xl text-black">ترتیب</h1>
-                <div className={styleBlogList.sortButtonNew}>× جدید ترین </div>
-                <div className={styleBlogList.sortButtonPop}>محبوب ترین</div>
+              <div className={styleBlogList.sortsAndFilter}>
+                <div className={styleBlogList.sortButton}> ترتیب </div>
+                <div className={styleBlogList.filterButton}>فیلتر</div>
               </div>
-              <div className={styleBlogList.ListCard}></div>
+              <div className={styleBlogList.sorts}>
+                <h1 className={styleBlogList.sortingTitle}>ترتیب</h1>
+
+
+                <input type="radio" checked name="sort" id="New" className={styleBlogList.inputSort} />
+                <label htmlFor="New" className={styleBlogList.sortButtonLabel} > جدیدترین </label>
+
+
+
+                <input type="radio" name="sort" id="Popular" className={styleBlogList.inputSort} />
+                <label htmlFor="Popular" className={styleBlogList.sortButtonLabel} > محبوبترین </label>
+
+                <div className={styleBlogList.filterResponsive}>فیلتر</div>
+                <div className={styleBlogList.sortResponsive}>ترتیب</div>
+              </div>
+              <ListCardBlogs />
+              <ChangePageList />
             </div>
           </div>
+          
         </div>
       )}
     </Formik>

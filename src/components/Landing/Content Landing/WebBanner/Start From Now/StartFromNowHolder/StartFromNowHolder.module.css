@@ -26,3 +26,9 @@
         width: 25%;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .startFromNow{
+        display: none;
+    }
+}

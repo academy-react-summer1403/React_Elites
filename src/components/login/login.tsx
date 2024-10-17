@@ -11,7 +11,7 @@ const Login = () => {
             <div className='flex justify-center'>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
-                  <div className='flex justify-end items-right w-full h-full'>
+                  <div className='flex justify-end items-right w-full'>
                     <div className='w-44 h-10 scale-250 items-right relative overflow-hidden object-fill rounded-2xl'>
                       <img className='bottom-2 absolute' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
                     </div>
@@ -41,8 +41,8 @@ const Login = () => {
                         </div>
                       </div>
                       <div className="h-full max-w-96 my-8 mx-0">
-                        <h1 className="text-black text-2xl font-bold m-4">خوش برگشتی!</h1>
-                        <p className="text-gray-400 text-sm font-semibold">لطفا شماره همراه یا ایمیل و رمز عبور را برای ورود به حساب کاربری وارد کنید</p>
+                        <h1 className="text-black text-2xl font-DannaDemiBold m-4">خوش برگشتی!</h1>
+                        <p className="text-gray-400 text-sm font-semibold">لطفا شماره همراه یا ایمیل و رمز عبور را برای ورود<br /> به حساب کاربری وارد کنید</p>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-bold text-black pb-3">شماره همراه یا ایمیل </label>
@@ -56,8 +56,8 @@ const Login = () => {
                       </div>
                       <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">
                         <div className="flex items-center gap-1.5">
-                          <label htmlFor="rememberPassInput" className="text-xs font-bold text-black">مرا به خاطر بسپار</label>
-                          <Field id="rememberPassInput" type="checkbox" className="items-center w-4 text-right text-black" name="rememberPass"/>
+                          <label htmlFor="rememberPassInput" className="text-xs font-bold text-black text-left ">مرا به خاطر بسپار</label>
+                          <Field id="rememberPassInput" type="checkbox" className="items-right rounded w-4 text-right text-black :" name="rememberPass"/>
                         </div>
                         <div className="border-none bg-slate-100 px-4 py-2 rounded-full cursor-pointer text-blue-700 text-xs font-bold tracking-tight" onClick={() => window.location.href = '/forgetPassword'}> رمز عبور را فراموش کرده اید؟</div>
                         <ErrorMessage name="rememberPass" component={"p"} className="error"/>
@@ -68,7 +68,7 @@ const Login = () => {
                       </div>
                       <div className="mt-2 max-w-96 flex justify-center gap-1.5">
                         <h1 className="red text-black text-sm font-extrabold ">حساب کاربری ندارید؟</h1>
-                        <button className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight" type="submit">ایجاد حساب کاربری</button>
+                        <button className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight decoratio underline" type="submit">ایجاد حساب کاربری</button>
                       </div>
                       <div className="flex max-w-96  justify-center mt-8">
                         <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100" onClick={() => window.location.href = '/'}>

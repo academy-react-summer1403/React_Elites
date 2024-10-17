@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './GridItemsTitle.module.css'
 
-const GridItemsTitle = (props) => {
+const GridItemsTitle = () => {
   return (
-    <div className={style.title}>{props.title}</div>
+    <div className={style.title}>آماده سازی برای بازار کار</div>
   )
 }
 
