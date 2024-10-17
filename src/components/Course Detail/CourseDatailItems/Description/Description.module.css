@@ -10,27 +10,36 @@
     width: 100%;
     text-align: right;
     font-size: 20px;
-    font-weight: 700;
+    font-family: DannaBold;
     color: #707070;
     margin-bottom: 10px;
 }
 
 .paragraph{
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #2F2F2F;
     text-align: right;
     margin-top: 20px;
 }
 
 .yourRate{
-    width: 15%;
+    width: 5%;
     height: 28px;
     color: #3772FF;
     font-size: 16px;
-    font-weight: 600;
+    font-family: DannaDemiBold;
     text-align: right;
     margin-top: 15px;
+}
+
+.rate{
+    width: 10%;
+    background: url(../../../../assets/Images/icons8-star-gray.png) repeat-x;
+    background-size: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .copyLink{
@@ -39,7 +48,7 @@
     border: 1px solid #3772FF;
     border-radius: 48px;
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #3772FF;
     margin-top: 13px;
     text-align: center;

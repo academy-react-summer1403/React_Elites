@@ -14,6 +14,7 @@ import { CourseList } from './components/Course List/CourseListHolder/CourseList
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import "./app/App.css"
+import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/Course-List",
         element: <CourseList />,
+      }, 
+      {
+        path: "/Course-Detail",
+        element: <CourseDetail />,
       }, 
     ]
   },

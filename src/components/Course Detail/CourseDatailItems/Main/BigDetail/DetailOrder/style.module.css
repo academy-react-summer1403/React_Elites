@@ -9,25 +9,31 @@
 .reserve{
     width: 28.2798833819242%;
     height: 100%;
-    background: #3772FF;
     color: #FCFCFC;
-    font-weight: 700;
+    font-family: DannaBold;
     font-size: 20px;
     text-align: center;
-    line-height: 50px;
     border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3772FF url(../../../../../../assets/Images/icons8-book-48.png) 83% 50% no-repeat;
+    background-size: 12%;
 }
 
 .AddToFav{
     width: 48.39650145772595%;
     height: 100%;
-    background: #2F2F2F;
     color: #FCFCFC;
-    font-weight: 700;
+    font-family: DannaBold;
     font-size: 20px;
     text-align: center;
-    line-height: 50px;
     border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2F2F2F url(../../../../../../assets/Images/icons8-archive-32white.png) 90% 50% no-repeat;
+    background-size: 8%;
 }
 
 .like{

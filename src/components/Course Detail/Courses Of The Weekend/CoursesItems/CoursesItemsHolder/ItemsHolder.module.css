@@ -1,21 +1,21 @@
 .holder{
-    width: 31.23181377303589%;
-    height: 366px;
+    width: 23.67647058823529%;
+    height: 66.91042047531993%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     position: relative;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  entry;
+    scale: 0;
+    opacity: 0;
 }
 
-@media screen and (max-width: 900px) {
-    .holder{
-        width: 49%;
-    }
-}
-
-@media screen and (max-width: 543px) {
-    .holder{
-        width: 80%;
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
     }
 }
 
@@ -28,6 +28,6 @@
     font-family: DannaMedium;
     color: #FCFCFC;
     margin: 40px auto;
-    line-height: 35px;
+    line-height: 40px;
     text-align: center;
 }

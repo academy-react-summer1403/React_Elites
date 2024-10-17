@@ -10,17 +10,20 @@
 }
 .topS{
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #707070;
 }
 .bottomS{
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     padding-left: 4px;
     padding-right: 4px;
     background: #FF5353;
     border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Level{
@@ -35,17 +38,20 @@
 }
 .topL{
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #707070;
 }
 .bottomL{
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     padding-left: 4px;
     padding-right: 4px;
     background: #FF37F5;
     border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Category{
@@ -60,17 +66,20 @@
 }
 .topC{
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #707070;
 }
 .bottomC{
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     padding-left: 4px;
     padding-right: 4px;
     background: #3772FF;
     border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Teacher{
@@ -84,12 +93,15 @@
 }
 .topT{
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #707070;
     width: 100%;
 }
 .bottomT{
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #2F2F2F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

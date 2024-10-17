@@ -5,6 +5,7 @@ import { Comment } from '../Items/Comment'
 const AllComments = () => {
   return (
     <div className={style.container}>
+      <div className={style.title}> نظرات دانشجو ها و اساتید </div>
         <Comment />
         <Comment />
         <Comment />
