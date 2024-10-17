@@ -16,6 +16,7 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
         {/* Routers */}
           {/* <Header/> */}
           <StudentPanel />
@@ -23,7 +24,17 @@ function App() {
           {/* <HolderFooter/> */}
         {/* <Login /> */}
           {/* <ForgetPass /> */}
+=======
+      {/* Routers */}
+      <Header/>
+>>>>>>> 4c352cb9070109361330d41b3b5a1d103f9bd281
 
+      {/* <BlogsList /> */}
+      {/* <LandingHolder /> */}
+      <Login />
+      {/* <ForgetPass /> */}
+
+      <HolderFooter/>
     </>
   )
 }
