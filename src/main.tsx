@@ -44,6 +44,7 @@ const router = createBrowserRouter([
         path: "/Course-Detail",
         element: <CourseDetail />,
       }, 
+      {
         path: "*",
         element: <ErrorPage404 />
       }
