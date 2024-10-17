@@ -96,7 +96,7 @@
     display: flex;
     flex-flow: row-reverse nowrap;
     justify-content: space-between;
-    margin-top: 30px;
+    margin: 30px auto;
 }
 .ChangePageList > span{
     width: 45px;
@@ -163,14 +163,62 @@
     background: #3772FF;
     color: white;
 }
-@media screen and (max-width: 490px) {
+
+.sortResponsive{
+    width: 103px;
+    height: 58px;
+    border-radius: 40px;
+    background: #2F2F2F url(../assets/Images/sortWhite.png) 85% 50% no-repeat;
+    background-size: 25%;
+    padding-right: 50px;
+    color: white;
+    line-height: 60px;
+    font-family: DannaMedium;
+    font-size: 16px;
+    display: none;
+}
+
+.filterResponsive{
+    width: 103px;
+    height: 58px;
+    border-radius: 40px;
+    background: #2F2F2F url(../assets/Images/filter.png) 85% 50% no-repeat;
+    background-size: 25%;
+    padding-right: 50px;
+    color: white;
+    line-height: 60px;
+    font-family: DannaMedium;
+    font-size: 16px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
     .sorts{
+        justify-content: space-between;
+        width: 97.5%;
+    }
+    .sortResponsive{
+        display: block;
+    }
+    .filterResponsive{
+        display: block;
+    }
+    .sortButtonLabel{
         display: none;
     }
+    .sortingTitle{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .h1{
         font-size: 32px;
     }
-    .sortsAndFilter{
-        display: flex;
+}
+
+@media screen and (max-width: 587px) {
+    .sorts{
+        width: 80%;
     }
 }

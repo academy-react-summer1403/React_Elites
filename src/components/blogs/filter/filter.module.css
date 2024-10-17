@@ -38,6 +38,9 @@
     text-align: right;
     color: #707070 !important;
     outline: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .filterCategory{
     width: 100%;
@@ -51,7 +54,9 @@
     background: #F1F1F1 url(../../../assets/Images/icons8-arrow-down-30.png) 5% 50% no-repeat;
     background-size: 8%;
     color: #707070;
-
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .filterDetail{
     display: flex;
@@ -76,7 +81,7 @@
 }
 
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 900px) {
     .filter{
         display: none;
     }

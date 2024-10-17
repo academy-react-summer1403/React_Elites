@@ -33,6 +33,9 @@ const BlogsList = () => {
 
                 <input type="radio" name="sort" id="Popular" className={styleBlogList.inputSort} />
                 <label htmlFor="Popular" className={styleBlogList.sortButtonLabel} > محبوبترین </label>
+
+                <div className={styleBlogList.filterResponsive}>فیلتر</div>
+                <div className={styleBlogList.sortResponsive}>ترتیب</div>
               </div>
               <ListCardBlogs />
               <ChangePageList />
