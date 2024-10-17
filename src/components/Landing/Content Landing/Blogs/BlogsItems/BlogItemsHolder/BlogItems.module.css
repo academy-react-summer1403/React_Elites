@@ -1,0 +1,16 @@
+.holder{
+    width: 31.69117647058824%;
+    height: 66.84981684981685%;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  entry;
+    scale: 0;
+    opacity: 0;
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}

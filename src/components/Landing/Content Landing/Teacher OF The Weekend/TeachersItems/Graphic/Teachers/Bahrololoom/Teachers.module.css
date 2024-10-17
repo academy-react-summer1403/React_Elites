@@ -36,3 +36,18 @@
     color: #FCFCFC;
     text-align: right;
 }
+
+@media screen and (max-width: 900px) {
+    .holder{
+        top: 50px;
+        left: 150px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .holder{
+        top: 50px;
+        left: 110px;
+    }
+}
+

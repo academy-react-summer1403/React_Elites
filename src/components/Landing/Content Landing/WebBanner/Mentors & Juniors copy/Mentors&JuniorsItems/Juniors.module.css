@@ -1,0 +1,65 @@
+.juniors {
+    width: 100%;
+    background: url(../../../../../../assets/Images/Juniors.png)88% 50% no-repeat;
+    height: 32px;
+    background-size: 45%;
+    text-align: left;
+    color: #2F2F2F;
+    font-family: DannaMedium;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 1222px) {
+    .juniors{
+        font-size: 12px;
+        background-size: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .juniors{
+        width: 70%;
+        background-size: 20%;
+        background-position: 76% 50%;
+        font-family: DannaMedium;
+        line-height: 35px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 822px) {
+    .juniors{
+        background-size: 20%;
+        background-position: 80% 50%;
+    }
+}
+@media screen and (max-width: 632px) {
+    .juniors{
+        background-size: 25%;
+        background-position: 85% 50%;
+    }
+}
+
+@media screen and (max-width: 632px) {
+    .juniors{
+        background-size: 20%;
+        background-position: 85% 50%;
+    }
+}
+
+@media screen and (max-width: 488px) {
+    .juniors{
+        background-size: 20%;
+        background-position: 90% 50%;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .juniors{
+        background-size: 26%;
+        background-position: 95% 50%;
+        width: 80%;
+    }
+}
