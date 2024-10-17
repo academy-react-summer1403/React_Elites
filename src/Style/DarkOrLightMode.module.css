@@ -16,24 +16,12 @@
     background-size: 50%;
 }
 
-@media screen and (max-width: 900px) {
-    .menu{
-        display: block;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .DarkOrLight{
-        display: none;
-    }
-}
-
 .user{
     width: 88px;
     height: 56px;
     border-radius: 32px;
     border: 1px solid #DCDCDC;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
 
@@ -96,4 +84,19 @@
     width: 40px;
     background: url(../assets/Images/BahrAcImg.png) 100% 50% no-repeat;
     background-size: cover;
+}
+
+@media screen and (max-width: 900px) {
+    .menu{
+        display: block;
+    }
+    .user{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .DarkOrLight{
+        display: none;
+    }
 }
