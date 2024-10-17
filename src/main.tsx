@@ -8,8 +8,8 @@ import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
 import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/link.tsx'
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
-import {LandingH}
 import {BlogsList} from './components/blogs/blogsList.tsx'
+import { CourseList } from './components/Course List/CourseListHolder/CourseList.tsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
@@ -52,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/LocationForm",
         element: <LocationForm />,
+      }, 
+      {
+        path: "/Course-List",
+        element: <CourseList />,
       }, 
     ]
   },

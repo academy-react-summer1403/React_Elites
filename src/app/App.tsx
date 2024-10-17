@@ -19,17 +19,7 @@ function App() {
 
   return (
     <>
-
-        {/* Routers */}
-      <CourseList />
-      {/* Routers */}
-      {/* <Header/> */}
-      {/* <BlogsList /> */}
-      {/* <LandingHolder /> */}
-      {/* <Login /> */}
-      {/* <ForgetPass /> */}
-      {/* <HolderFooter/> */}
-      {/* Routers */}
+      
     </>
   )
 }
