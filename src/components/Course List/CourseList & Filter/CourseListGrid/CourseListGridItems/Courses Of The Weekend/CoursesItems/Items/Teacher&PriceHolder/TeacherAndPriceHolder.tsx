@@ -6,8 +6,8 @@ import { Teacher } from './Teacher'
 const TeacherAndPriceHolder = (props) => {
   return (
     <div className={style.holder}>
-        <Price price={props.price} />
         <Teacher teacher={props.teacher} />
+        <Price price={props.price} />
     </div>
   )
 }

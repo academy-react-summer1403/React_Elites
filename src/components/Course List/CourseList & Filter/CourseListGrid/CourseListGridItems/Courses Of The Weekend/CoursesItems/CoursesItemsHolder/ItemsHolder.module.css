@@ -7,6 +7,18 @@
     position: relative;
 }
 
+@media screen and (max-width: 900px) {
+    .holder{
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 543px) {
+    .holder{
+        width: 80%;
+    }
+}
+
 .button{
     width: 125px;
     height: 39px;

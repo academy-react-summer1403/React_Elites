@@ -8,6 +8,12 @@
     row-gap: 50px;
 }
 
+@media screen and (max-width: 543px) {
+    .holder{
+        justify-content: center;
+    }
+}
+
 .title{
     font-size: 32px;
     font-weight: 700;
@@ -15,16 +21,4 @@
     text-align: center;
     width: 100%;
     line-height: 130px;
-}
-
-@media screen and (max-width: 1412px) {
-    .holder{
-        margin-top: 400px;
-    }
-}
-
-@media screen and (max-width: 1021px) {
-    .holder{
-        margin-top: 600px;
-    }
 }
