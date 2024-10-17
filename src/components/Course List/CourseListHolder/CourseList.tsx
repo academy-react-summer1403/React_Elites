@@ -5,10 +5,12 @@ import { CourseListAndFilter } from '../CourseList & Filter/CourseList&FilterHol
 
 const CourseList = () => {
   return (
-    <div className={style.courseListHolder}>
+    <>
+        <div className={style.courseListHolder}>
         <StartNewJourney />
         <CourseListAndFilter />
-    </div>
+        </div>
+    </>
   )
 }
 

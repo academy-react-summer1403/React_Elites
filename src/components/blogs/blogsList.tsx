@@ -7,7 +7,7 @@ import { ChangePageList } from "./ChangePageList/ChangePageList.tsx";
 const BlogsList = () => {
 
   return (
-
+  <>
     <Formik>
       {(form) => (
         <div className=' h-full w-full flex flex-wrap justify-center'>
@@ -45,7 +45,7 @@ const BlogsList = () => {
         </div>
       )}
     </Formik>
-
+  </>
   )
 }
 

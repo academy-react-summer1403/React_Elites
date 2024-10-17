@@ -6,14 +6,14 @@ import { StartFromNowHolder } from '../Start From Now/StartFromNowHolder/StartFr
 import { StartFromNowHolderRes } from '../Start From Now copy/StartFromNowHolder/StartFromNowHolder'
 import { MentorsAndJuniorsHolderRes } from '../Mentors & Juniors copy/Mentors&JuniorsHolder/Mentors&JuniorsHolder'
 
-const BannerHolder = () => {
+const BannerHolder = (props) => {
   return (
     <>
         <div className={style.banner}>
             <StartFromNowHolder />
             <ModernLearningHolder />
-            <MentorsAndJuniorsHolder />
-            <MentorsAndJuniorsHolderRes />
+            <MentorsAndJuniorsHolder MAndJ={props.MAndJ} />
+            <MentorsAndJuniorsHolderRes MAndJRes={props.MAndJ} />
             <StartFromNowHolderRes />
         </div>
     </>
