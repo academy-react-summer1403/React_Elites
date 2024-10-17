@@ -24,7 +24,7 @@
 }
 
 .yourRate{
-    width: 5%;
+    width: 80px;
     height: 28px;
     color: #3772FF;
     font-size: 16px;
@@ -34,7 +34,7 @@
 }
 
 .rate{
-    width: 10%;
+    width: 160px;
     background: url(../../../../assets/Images/icons8-star-gray.png) repeat-x;
     background-size: 20%;
     margin-top: 10px;
@@ -43,7 +43,7 @@
 }
 
 .copyLink{
-    width: 12%;
+    width: 180px;
     height: 30px;
     border: 1px solid #3772FF;
     border-radius: 48px;
@@ -52,4 +52,5 @@
     color: #3772FF;
     margin-top: 13px;
     text-align: center;
+    line-height: 30px;
 }

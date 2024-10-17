@@ -33,3 +33,15 @@
     line-height: 40px;
     margin-left: 10px;
 }
+
+@media screen and (max-width: 1142px) {
+    .holder{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 698px) {
+    .holder{
+        width: 100%;
+    }
+}

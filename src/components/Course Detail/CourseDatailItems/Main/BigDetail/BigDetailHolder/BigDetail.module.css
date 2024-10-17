@@ -5,3 +5,10 @@
     justify-content: space-around;
     flex-flow: row wrap;
 }
+
+@media screen and (max-width: 1078px) {
+    .holder{
+        width: 100%;
+        height: auto;
+    }
+}
