@@ -29,9 +29,9 @@ function App() {
       <Header/>
 >>>>>>> 4c352cb9070109361330d41b3b5a1d103f9bd281
 
-      {/* <BlogsList /> */}
+      <BlogsList />
       {/* <LandingHolder /> */}
-      <Login />
+      {/* <Login /> */}
       {/* <ForgetPass /> */}
 
       <HolderFooter/>

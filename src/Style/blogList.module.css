@@ -27,8 +27,9 @@
     width: 100%;
 }
 .h1{
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
+    font-family: DannaBold;
     line-height: 57.2px;
     text-align: center;  
     color: #2F2F2F;  
@@ -36,7 +37,7 @@
     width: 100%;
 }
 .p{
-    font-family: tahoma;
+    font-family: DannaMedium;
     font-size: 18px;
     font-weight: 500;
     line-height: 25.74px;
@@ -45,31 +46,36 @@
     width: 297px;
     letter-spacing: -0.025em;
 }
-.sortButtonNew{
-    font-family: DanaFaNum;
+.sortButtonLabel{
+    font-family: DannaMedium;
     font-size: 18px;
-    font-weight: 500;
     line-height: 25.74px;
     text-align: center;
     width: 144px;    
-    color: #FF5353;
-    display: grid;
-    border: 1px solid;
-    border-radius: 50px;
-    cursor: pointer;
-}
-.sortButtonPop{
-    font-family: DanaFaNum;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.74px;
-    text-align: center;
-    width: 144px;    
+    height: 40px;
     color: #000000;
-    display: grid;
+    display: flex;
+    align-items: center;
     border: 1px solid black;
     border-radius: 50px;
+    justify-content: center;
     cursor: pointer;
+}
+.inputSort{
+    display: none;
+}
+/* input[type="radio"]:checked+label{
+    border: 1px solid #FF5353;
+    color: #FF5353;
+} */
+.sortingTitle{
+    color: black;
+    font-family: DannaBold;
+    font-size: 20px;
+    line-height: 38px;
+}
+.inputChangePage{
+    display: none;
 }
 .sorts{
     display: flex;
@@ -135,6 +141,27 @@
 }
 .filterButton{
     background-image: url("https://img.icons8.com/?size=100&id=tBHxiVksS0Fw&format=png&color=ffffff");
+}
+.toLeft{
+    background: url(../assets/Images/icons8-arrow-left.png) 50% 50% no-repeat;
+    background-size: 55%;
+}
+.toRight{
+    background: url(../assets/Images/icons8-arrow-right.png) 50% 50% no-repeat;
+    background-size: 55%;
+}
+.button{
+    font-family: IranYekan;
+    height: 100%;
+    width: 45px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    color: #272727;
+}
+.inputChangePage:checked+label{
+    background: #3772FF;
+    color: white;
 }
 @media screen and (max-width: 490px) {
     .sorts{
