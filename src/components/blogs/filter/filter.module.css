@@ -1,0 +1,57 @@
+.filter{
+    width: 298px;
+    height: 100%;
+    top: 413px;
+    left: 1102px;
+    gap: 0px;
+    border-radius: 32px;
+    border: 2px solid #DCDCDC;
+    margin-top: 27.5px;
+    padding: 20px;
+}
+.filterTitle{
+    font-family: DanaFaNum;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 34.32px;
+    text-align: right;
+    color: #2F2F2F;
+    margin-bottom: 15px;
+}
+.filterText{
+    font-family: DanaFaNum;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.88px;
+    text-align: center;
+    color: #2F2F2F;
+
+}
+.filterInput{
+    background-color: #F1F1F1;
+    width: 100%;
+    border-radius: 16px;
+    padding: 14px;
+    gap: 8px;
+    font-family: DanaFaNum;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20.02px;
+    text-align: right;
+}
+.filterDetail{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+.filterTextImg{
+    width: 24px;
+}
+
+
+@media screen and (max-width: 490px) {
+    .filter{
+        display: none;
+    }
+}

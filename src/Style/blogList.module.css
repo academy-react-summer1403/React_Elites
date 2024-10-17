@@ -1,0 +1,149 @@
+.page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 1rem;
+    margin-top: 40px;
+    direction: rtl;
+}
+.page2{
+    width: 1030px;
+    height: 100%;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.titleBlogs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 71px;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+.h1{
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 57.2px;
+    text-align: center;  
+    color: #2F2F2F;  
+    letter-spacing: -0.05em;
+    width: 100%;
+}
+.p{
+    font-family: tahoma;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.74px;
+    text-align: center;
+    color: #707070;
+    width: 297px;
+    letter-spacing: -0.025em;
+}
+.sortButtonNew{
+    font-family: DanaFaNum;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.74px;
+    text-align: center;
+    width: 144px;    
+    color: #FF5353;
+    display: grid;
+    border: 1px solid;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.sortButtonPop{
+    font-family: DanaFaNum;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.74px;
+    text-align: center;
+    width: 144px;    
+    color: #000000;
+    display: grid;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.sorts{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16PX;
+    width: 100%;
+    justify-content: right;
+}
+.ListCard{
+    width: 1030px;
+    gap: 32px;
+}
+.ChangePageList{
+    background: #EFEFEF;
+    width: 322px;
+    border-radius: 16px;
+    height: 48px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.ChangePageList > span{
+    width: 45px;
+    color: #272727;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.55px;
+    text-align: center;
+    padding: 11.5px 0;
+    border-radius: 8px;
+}
+.ChangePageList > .selected{
+    background: #3772FF;
+    color: white;
+}
+.sortsAndFilter{
+    display: none;
+    justify-content: space-between;    
+    width: 100%;    
+    direction: ltr;
+}
+.sortButton,.filterButton{
+    height: 48px;
+    
+    background-color: #2F2F2F;
+    border-radius: 40px;
+    padding: 12px 16px;
+    font-family: DanaFaNum;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.88px;
+    text-align: right;
+    display: flex;
+    gap: 10px;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    padding-right: 46px;
+    background-size: 20px;
+}
+.sortButton{
+    background-image: url("../assets/Images/sortIcon.png");
+}
+.filterButton{
+    background-image: url("https://img.icons8.com/?size=100&id=tBHxiVksS0Fw&format=png&color=ffffff");
+}
+@media screen and (max-width: 490px) {
+    .sorts{
+        display: none;
+    }
+    .h1{
+        font-size: 32px;
+    }
+    .sortsAndFilter{
+        display: flex;
+    }
+}
