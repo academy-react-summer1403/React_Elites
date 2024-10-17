@@ -1,4 +1,7 @@
 import React from "react"
+<<<<<<< HEAD
+import { CourseList } from "../components/Course List/CourseListHolder/CourseList.tsx"
+=======
 import { Header } from "../components/common/Header/HolderHeader/Header.tsx"
 import { HolderFooter } from "../components/common/Footer/HolderFooter/HolderFooter.tsx"
 import { LandingHolder } from "../components/Landing/A-LandingHolder/LandingHolder.tsx"
@@ -16,7 +19,7 @@ function App() {
 
   return (
     <>
-      {/* Routers */}
+      
     </>
   )
 }
