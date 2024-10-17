@@ -1,7 +1,7 @@
 .holder{
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
@@ -13,23 +13,20 @@
     justify-content: space-between;
 }
 .date,.view,.teacher{
+    font-family: DanaFaNum;
     font-size: 14px;
     font-weight: 600;
-    font-family: DannaMedium;
     line-height: 20.02px;
     text-align: right;
-    color: #707070;
+    color: #2F2F2F;
+}
+.teacher{
+    width: 13.1%;
 }
 .date{
-    background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=000000") no-repeat 0% 50%;
-    background-size: 18px;
-    padding-left: 20px;
+    width: 10.5%;
 }
-.view{
-    background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=000000") no-repeat 0% 50%;
-    background-size: 18px;
-    padding-left: 20px;
-}
+
 @media screen and (max-width: 1116px) {
     .teacher,.date,.view{
         font-size: 10px;
