@@ -1,0 +1,84 @@
+.Status{
+    border-left: 2px solid #DCDCDC;
+    height: 100%;
+    width: 27%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    flex-flow:  row wrap;
+}
+.topS{
+    font-size: 14px;
+    font-family: DannaMedium;
+    color: #707070;
+    width: 100%;
+}
+.bottomS{
+    font-size: 16px;
+    font-family: DannaMedium;
+    color: #2F2F2F;
+}
+
+.Level{
+    border-left: 2px solid #DCDCDC;
+    height: 100%;
+    width: 20%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    flex-flow:  row wrap;
+}
+.topL{
+    font-size: 14px;
+    font-family: DannaMedium;
+    color: #707070;
+}
+.bottomL{
+    font-size: 16px;
+    font-family: DannaMedium;
+    color: #2F2F2F;
+}
+
+.Category{
+    border-left: 2px solid #DCDCDC;
+    height: 100%;
+    width: 23%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    flex-flow:  row wrap;
+}
+.topC{
+    font-size: 14px;
+    font-family: DannaMedium;
+    color: #707070;
+}
+.bottomC{
+    font-size: 16px;
+    font-family: DannaMedium;
+    color: #2F2F2F;
+}
+
+.Teacher{
+    height: 100%;
+    width: 20%;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    flex-flow:  row wrap;
+}
+.topT{
+    font-size: 14px;
+    font-family: DannaMedium;
+    color: #707070;
+    width: 100%;
+}
+.bottomT{
+    font-size: 16px;
+    font-family: DannaMedium;
+    color: #2F2F2F;
+}

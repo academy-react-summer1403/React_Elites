@@ -13,6 +13,7 @@ import { CourseList } from './components/Course List/CourseListHolder/CourseList
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import "./app/App.css"
+import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
 import { ErrorPage404 } from './components/Error 404/Error404.tsx'
 import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
 import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolder.tsx'
@@ -40,6 +41,9 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       }, 
       {
+        path: "/Course-Detail",
+        element: <CourseDetail />,
+      }, 
         path: "*",
         element: <ErrorPage404 />
       }

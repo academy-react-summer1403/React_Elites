@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-top: 50px;
+}
+
+.title{
+    width: 100%;
+    color: #707070;
+    font-family: DannaBold;
+    font-size: 20px;
+    text-align: right;
+    margin: 10px 0 20px 0;
+}

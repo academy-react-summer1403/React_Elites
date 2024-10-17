@@ -1,0 +1,17 @@
+.holder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.title{
+    font-size: 20px;
+    font-family: DannaBold;
+    color: #707070;
+    text-align: right;
+    height: 100px;
+    width: 100%;
+    line-height: 120px;
+}
