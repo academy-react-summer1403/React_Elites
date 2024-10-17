@@ -8,11 +8,11 @@ import { CoursesHolder } from '../Courses Of The Weekend/CoursesHolder/CoursesHo
 import { Blogs } from '../Blogs/BlogsHolder/Blogs'
 import { Teachers } from '../Teacher OF The Weekend/TeachersHolder/Teachers'
 
-const ContentLandingHolder = () => {
+const ContentLandingHolder = (props) => {
   return (
     <>
         <div className={style.contentLanding}>
-          <BannerHolder />
+          <BannerHolder MAndJ={props.MAndJ} />
           <ProgrammingLanguagesHolder />
           <OurGoalsHolder />
           <ServicesHolder />
