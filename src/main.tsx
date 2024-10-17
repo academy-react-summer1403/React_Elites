@@ -10,60 +10,85 @@ import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/li
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
 import {BlogsList} from './components/blogs/blogsList.tsx'
 import { CourseList } from './components/Course List/CourseListHolder/CourseList.tsx'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import "./app/App.css"
 import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
+import { ErrorPage404 } from './components/Error 404/Error404.tsx'
+import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
+import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolder.tsx'
+import { Register } from './components/register/register.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children:[
-
       {
-        path: "/Login",
-        element: <Login />,
+        path: "/",
+        element: <LandingHolder />,
+        errorElement: <ErrorPage />
       },
       {
-        path: "/ForgetPass",
-        element: <ForgetPass />,
-      },
-      {
-        path: "/BlogsList",
+        path: "/Blogs-List",
         element: <BlogsList />,
+        errorElement: <ErrorPage />
       },
       {
-        path: "/StudentPanelCurse",
-        element: <StudentPanel />,
-      }, 
-      {
-        path: "/ImageForm",
-        element: <ImageForm />,
-      },
-      {
-        path: "/InformationForm",
-        element: <InformationForm />,
-      }, 
-      {
-        path: "/LinkForm",
-        element: <LinkForm />,
-      },
-      {
-        path: "/LocationForm",
-        element: <LocationForm />,
-      }, 
-      {
-        path: "/Course-List",
+        path: "/Courses-List",
         element: <CourseList />,
+        errorElement: <ErrorPage />
       }, 
       {
         path: "/Course-Detail",
         element: <CourseDetail />,
       }, 
+        path: "*",
+        element: <ErrorPage404 />
+      }
     ]
   },
+  {
+    path: "/Login",
+    element: <Login />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Register",
+    element: <Register />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Forget-Password",
+    element: <ForgetPass />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/StudentPanelCurse",
+    element: <StudentPanel />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: "/ImageForm",
+    element: <ImageForm />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/InformationForm",
+    element: <InformationForm />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: "/LinkForm",
+    element: <LinkForm />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/LocationForm",
+    element: <LocationForm />,
+    errorElement: <ErrorPage />
+  }, 
 
 ])
 
