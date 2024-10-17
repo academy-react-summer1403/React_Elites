@@ -18,6 +18,7 @@ import { ErrorPage404 } from './components/Error 404/Error404.tsx'
 import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
 import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolder.tsx'
 import { Register } from './components/register/register.tsx'
+import { BlogsDetail } from './components/Blogs Detail/CourseDetailHolder/Blogs.tsx'
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,13 @@ const router = createBrowserRouter([
       {
         path: "/Course-Detail",
         element: <CourseDetail />,
+        errorElement: <ErrorPage />
       }, 
+      {
+        path: "/Blogs-Detail",
+        element: <BlogsDetail />,
+        errorElement: <ErrorPage />
+      },
       {
         path: "*",
         element: <ErrorPage404 />
