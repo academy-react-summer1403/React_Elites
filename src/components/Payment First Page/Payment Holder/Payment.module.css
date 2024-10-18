@@ -1,0 +1,8 @@
+.payment{
+    width: 83.85416666666667%;
+    margin-top: 50px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
