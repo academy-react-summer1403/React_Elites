@@ -5,6 +5,9 @@ import estedad from "../../../../../../assets/Images/estedad.png"
 import rahnamaiee from "../../../../../../assets/Images/rahnamaiee.png"
 import amoozesh from "../../../../../../assets/Images/amoozesh.png"
 import kar from "../../../../../../assets/Images/kar.png"
+import { GridItemsHolderTwo } from '../GridItems copy/GridItemsHolder/GridItemsHolder'
+import { GridItemsHolderThree } from '../GridItems copy 2/GridItemsHolder/GridItemsHolder'
+import { GridItemsHolderFour } from '../GridItems copy 3/GridItemsHolder/GridItemsHolder'
 
 const GridHolder = () => {
   let data = [
@@ -15,16 +18,12 @@ const GridHolder = () => {
   ]
   return (
     <div className={style.container}>
-        {data.map((item, index) => {
-        return (
-          <GridItemsHolder 
-          key={index} 
-          title={item.tile} 
-          description={item.description} 
-          image={item.image}
-          />
-        )
-      } )}
+          <>
+            <GridItemsHolder />
+            <GridItemsHolderTwo />
+            <GridItemsHolderThree />
+            <GridItemsHolderFour />
+          </>
     </div>
   )
 }

@@ -1,0 +1,90 @@
+.holder{
+    width: 51.50339476236663%;
+    height: 40px;
+    text-align: right;
+    color: #2F2F2F;
+    font-size: 20px;
+    font-family: DannaBold;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    line-height:35px;
+}
+
+@media screen and (max-width: 1250px) {
+    .holder{
+        width: 73%;
+    }
+}
+
+
+
+
+.categories{
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+    border: 1px solid #2F2F2F;
+    border-radius: 34px;
+    width: auto;
+    color: #2F2F2F;
+    font-size: 18px;
+    font-family: DannaMedium;
+    line-height:35px;
+}
+
+@media screen and (max-width: 900px) {
+    .title{
+        display: none;
+    }
+}
+
+.sortResponsive{
+    width: 103px;
+    height: 58px;
+    border-radius: 40px;
+    background: #2F2F2F url(../../../../../../assets/Images/sortWhite.png) 85% 50% no-repeat;
+    background-size: 25%;
+    padding-right: 50px;
+    color: white;
+    line-height: 60px;
+    font-family: DannaMedium;
+    font-size: 16px;
+    display: none;
+}
+
+.filterResponsive{
+    width: 103px;
+    height: 58px;
+    border-radius: 40px;
+    background: #2F2F2F url(../../../../../../assets/Images/filter.png) 85% 50% no-repeat;
+    background-size: 25%;
+    padding-right: 50px;
+    color: white;
+    line-height: 60px;
+    font-family: DannaMedium;
+    font-size: 16px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .categories{
+        display: none;
+    }
+    .holder{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .sortResponsive{
+        display: block;
+    }
+    .filterResponsive{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 543px) {
+    .holder{
+        width: 80%;
+    }
+}

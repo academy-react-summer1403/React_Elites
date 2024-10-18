@@ -7,3 +7,10 @@
     position: absolute;
     left: -105px;
 }
+
+@media screen and (max-width: 488px) {
+    .border{
+        background-size: 70%;
+        top: 88px;
+    }
+}
