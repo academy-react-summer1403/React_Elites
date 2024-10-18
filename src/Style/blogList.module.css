@@ -46,7 +46,7 @@
     width: 297px;
     letter-spacing: -0.025em;
 }
-.sortButtonLabel{
+.sortButtonLabel,.sortButtonLabelModal{
     font-family: DannaMedium;
     font-size: 18px;
     line-height: 25.74px;
@@ -61,14 +61,14 @@
     justify-content: center;
     cursor: pointer;
 }
-.inputSort{
+.inputSort,.inputSortModal{
     display: none;
 }
 /* input[type="radio"]:checked+label{
     border: 1px solid #FF5353;
     color: #FF5353;
 } */
-.sortingTitle{
+.sortingTitle,.sortingTitleModal{
     color: black;
     font-family: DannaBold;
     font-size: 20px;
@@ -190,6 +190,37 @@
     font-family: DannaMedium;
     font-size: 16px;
     display: none;
+}
+
+.sortModal{
+    position: absolute;
+    width: 100%;
+    background: white;
+    z-index: 100;
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    gap: 10px;
+}
+.holderTitle{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.closeBtn{
+    width: 101px;
+    height: 40px;
+    border: 1px solid #FF5353;
+    border-radius: 32px;
+    color: #FF5353;
+    font-family: DannaMedium;
+    text-align: center;
+    cursor: pointer;
+    line-height: 35px;
 }
 
 @media screen and (max-width: 900px) {

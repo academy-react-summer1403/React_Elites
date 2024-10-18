@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    z-index: 100;
+    height: auto;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    border-radius: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.holder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    width: 50%;
+}
+.categories{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 40px;
+    border: 1px solid #2F2F2F;
+    border-radius: 34px;
+    width: auto;
+    color: #2F2F2F;
+    font-size: 18px;
+    font-family: DannaMedium;
+    line-height:35px;
+}
+
+.closeBtn{
+    width: 101px;
+    height: 40px;
+    border: 1px solid #FF5353;
+    border-radius: 32px;
+    color: #FF5353;
+    font-family: DannaMedium;
+    text-align: center;
+    cursor: pointer;
+}

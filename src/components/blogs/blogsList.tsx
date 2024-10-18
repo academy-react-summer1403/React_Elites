@@ -3,9 +3,13 @@ import styleBlogList from "./../../Style/blogList.module.css";
 import { Filter } from "./filter/filter.tsx";
 import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
 import { ChangePageList } from "./ChangePageList/ChangePageList.tsx";
+import { useState } from "react";
+import { FilterModal } from "./Filter Modal/FilterModal.tsx";
+import { SortModal } from "./Sort Modal/SortModal.tsx";
 
 const BlogsList = () => {
-
+  const [filterModal, setFilterModal] = useState(false)
+  const [sortModal, setSortModal] = useState(false)
   return (
   <>
     <Formik>
@@ -34,8 +38,24 @@ const BlogsList = () => {
                 <input type="radio" name="sort" id="Popular" className={styleBlogList.inputSort} />
                 <label htmlFor="Popular" className={styleBlogList.sortButtonLabel} > محبوبترین </label>
 
-                <div className={styleBlogList.filterResponsive}>فیلتر</div>
-                <div className={styleBlogList.sortResponsive}>ترتیب</div>
+                <div className={styleBlogList.filterResponsive} onClick={() => {
+                  if(filterModal == false){
+                    setFilterModal(true)
+                  }
+                  else if(filterModal == true){
+                    setFilterModal(false)
+                  }
+                }}>فیلتر</div>
+                { filterModal && <FilterModal setFilterModal={setFilterModal} />}
+                <div className={styleBlogList.sortResponsive} onClick={() => {
+                  if(sortModal == false){
+                    setSortModal(true)
+                  }
+                  else if(sortModal == true){
+                    setSortModal(false)
+                  }
+                }}>ترتیب</div>
+                { sortModal && <SortModal setSortModal={setSortModal} /> }
               </div>
               <ListCardBlogs />
               <ChangePageList />
