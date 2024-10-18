@@ -19,6 +19,8 @@ import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
 import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolder.tsx'
 import { Register } from './components/register/register.tsx'
 import { BlogsDetail } from './components/Blogs Detail/CourseDetailHolder/Blogs.tsx'
+import { Payment } from './components/Payment First Page/Payment Holder/Payment.tsx'
+import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 
 const router = createBrowserRouter([
   {
@@ -97,6 +99,16 @@ const router = createBrowserRouter([
     element: <LocationForm />,
     errorElement: <ErrorPage />
   }, 
+  {
+    path: "/Shopping-Basket",
+    element: <Payment />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Payment-Gateway",
+    element: <PaymentGateway />,
+    errorElement: <ErrorPage />
+  }
 
 ])
 
