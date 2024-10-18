@@ -73,27 +73,27 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/StudentPanelCurse",
+    path: "/Student-Panel-Course",
     element: <StudentPanel />,
     errorElement: <ErrorPage />
   }, 
   {
-    path: "/ImageForm",
+    path: "/Image",
     element: <ImageForm />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/InformationForm",
+    path: "/Information",
     element: <InformationForm />,
     errorElement: <ErrorPage />
   }, 
   {
-    path: "/LinkForm",
+    path: "/Link",
     element: <LinkForm />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/LocationForm",
+    path: "/Location",
     element: <LocationForm />,
     errorElement: <ErrorPage />
   }, 

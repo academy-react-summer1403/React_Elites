@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useEffect, useState } from 'react'
 import  styleLogin  from "../../Style/list.module.css";
+import { NavLink } from "react-router-dom";
 
 const Register = () => {
 
@@ -61,11 +62,11 @@ const Register = () => {
                       </div>
                       <div className="mt-2 max-w-96 flex justify-center gap-1.5">
                         <h1 className="red text-black text-sm font-extrabold ">حساب کاربری دارید؟</h1>
-                        <button className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight" onClick={() => window.location.href = '/login'}> ورود به حساب کاربری</button>
+                        <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight" to="/Login"> ورود به حساب کاربری</NavLink>
                       </div>
                       <div className="flex max-w-96  justify-center mt-8">
-                        <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100" onClick={() => window.location.href = '/'}>
-                          <h1 className="border-non  cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> صفحه اصلی </h1>
+                        <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100">
+                          <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> صفحه اصلی </NavLink>
                           <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-extrabold "></img>
                         </div>
                       </div>
