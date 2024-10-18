@@ -8,6 +8,7 @@ import image1 from "../../../../assets/Images/profile1.png";
 import image2 from "../../../../assets/Images/profile2.png";
 import image3 from "../../../../assets/Images/profile3.png";
 import image4 from "../../../../assets/Images/profile4.png";
+import { NavLink } from "react-router-dom";
 
 const ImageForm = () => {
 
@@ -26,10 +27,10 @@ const ImageForm = () => {
                             <div className={styleImage.page2}>
                                 <div className={styleInform.rightHolder}>
                                     <div className={styleInform.right}>
-                                        <h1>اطلاعات حساب کاربری </h1>
+                                        <NavLink to="/Information" className={styleInform.pages}>اطلاعات حساب کاربری </NavLink>
                                         <div><h1 className={styleImage.selected}>عکس ها </h1></div>
-                                        <h1>محل سکونت </h1>
-                                        <h1>لینک ها </h1>
+                                        <NavLink to="/Location" className={styleInform.pages}>محل سکونت </NavLink>
+                                        <NavLink to='/Link' className={styleInform.pages}>لینک ها </NavLink>
                                     </div>
                                 </div>
                                 <div className={styleImage.imagesHolder}>

@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import style from "./../../../Style/studentPanel.module.css";
+import { NavLink } from "react-router-dom";
 
 const StudentGhabLeft = () => {
 
@@ -11,7 +12,7 @@ const StudentGhabLeft = () => {
                     <p className={style.userLevel}> دانشجو</p>
                   </div>
                   <div className={style.navigate}> 
-                    <p className={style.titleHeader}>صفحه اصلی </p>
+                    <NavLink to="/" className={style.titleHeader}>صفحه اصلی </NavLink>
                     <p className={style.titleHeader}>گزارش </p>
                     <p className={style.titleHeader}> ارتباط باما</p>
                   </div>

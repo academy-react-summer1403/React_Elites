@@ -21,6 +21,9 @@
     color: #FCFCFC;
     border-radius: 32px;
     background: #FF37F5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .category{

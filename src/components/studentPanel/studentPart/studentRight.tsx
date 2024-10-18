@@ -36,7 +36,7 @@ const StudentGhabRight = () => {
                         </div>
                         <div>
                             <div className={style.pay}> </div>
-                            <NavLink> پرداخت ها</NavLink>
+                            <NavLink to="/Shopping-Basket"> پرداخت ها</NavLink>
                         </div>
                     </div>
                     <div className={style.logout}>

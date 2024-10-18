@@ -13,10 +13,9 @@
     width: 600px;
     padding-right: 24px;
 }
-.right > h1,.right > div{
+.right > .pages,.right > div{
     width: 100%;
     color: #707070;
-    font-family: DanaFaNum;
     font-size: 18px;
     font-family: DannaDemiBold;
     line-height: 25.74px;

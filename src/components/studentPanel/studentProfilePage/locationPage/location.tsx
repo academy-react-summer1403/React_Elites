@@ -25,10 +25,10 @@ const LocationForm = () => {
 
                                 <div className={styleInform.rightHolder}>
                                     <div className={styleInform.right}>
-                                        <h1>اطلاعات حساب کاربری </h1>
-                                        <NavLink to='/Image'>عکس ها </NavLink>
-                                        <div><NavLink to='/Location' className={styleLocation.selected}>محل سکونت </NavLink></div>
-                                        <NavLink to='/Link'>لینک ها </NavLink>
+                                        <NavLink to="/Information" className={styleInform.pages}>اطلاعات حساب کاربری </NavLink>
+                                        <NavLink to='/Image' className={styleInform.pages}>عکس ها </NavLink>
+                                        <div><h1 className={styleLocation.selected}>محل سکونت </h1></div>
+                                        <NavLink to='/Link' className={styleInform.pages}>لینک ها </NavLink>
                                     </div>
                                 </div>
                                 <div className={styleLocation.left}>
