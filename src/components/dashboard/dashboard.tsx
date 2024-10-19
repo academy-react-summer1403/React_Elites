@@ -25,17 +25,17 @@ const Dashboard1 = () => {
                        
                          <div className="flex flex-row">
                             <div className=" text-black font-bold text-2xl"> سلام پارسا،روزت بخیر</div> 
-                            <div className=" text-black">سلام من پارسام این بیو پروفایلمه</div> 
+                            <div className=" text-black ms-96">سلام من پارسام این بیو پروفایلمه</div> 
                             </div>
                          <div className="flex flex-row mt-3.5"> 
                             <div className="bg-[#F6F6F6]  w-3/5 h-44 rounded-lg">
                                 <div className="text-black"> دوره ی من </div>
                                 <div className="flex flex-row  text-black bg-[#F1F1F1] rounded-lg mx-2.5 items-center	justify-start space-x-9">
-                                  <div>#</div>
-                                  <div>نام </div>
-                                  <div>مدرس</div>
-                                  <div>تاریخ برگذاری </div>
-                                  <div>سطح</div>
+                                  <div className="pr-19">#</div>
+                                  <div className="pr-20">نام </div>
+                                  <div className="pr-16">مدرس</div>
+                                  <div className="pr-16">تاریخ برگذاری </div>
+                                  <div className="pr-16">سطح</div>
                                 </div>
                                 <div className=""></div>
                             </div>
@@ -46,7 +46,7 @@ const Dashboard1 = () => {
                             chart: {
                               id: "basic-donut",
                             },
-                            labels: ["تکمیل شده ", "تکمیل نشده"],
+                            /*labels: ["تکمیل شده ", "تکمیل نشده"],*/
                           }}
                           series={[30, 70]}
                           type="donut"
