@@ -5,6 +5,13 @@
     margin-top: 50px;
     margin-bottom: 40px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 862px) {
+    .footerContainer {
+        flex-flow: row wrap;
+        height: auto;
+    }
 }

@@ -37,20 +37,3 @@
     border-radius: 32px;
     background: #3772FF;
 }
-
-@media screen and (max-width: 1048px) {
-    .category{
-        font-size: 12px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    .level{
-        font-size: 12px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-}
