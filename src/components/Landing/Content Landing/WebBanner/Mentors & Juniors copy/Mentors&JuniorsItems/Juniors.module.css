@@ -1,65 +1,66 @@
-.juniors {
-    width: 100%;
-    background: url(../../../../../../assets/Images/Juniors.png)88% 50% no-repeat;
-    height: 32px;
+
+.title{
+    height: 100%;
     background-size: 45%;
     text-align: left;
     color: #2F2F2F;
     font-family: DannaMedium;
     font-size: 14px;
     line-height: 30px;
+    width: 150px;
+    text-align: right;
 }
 
-@media screen and (max-width: 1222px) {
-    .juniors{
-        font-size: 12px;
-        background-size: 40%;
+.container{
+    width: 50%;
+    height: 32px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-right: 100px;
+}
+
+.studentCount{
+    font-family: DannaBold;
+    width: 50px;
+    height: 32px;
+    color: black;
+    line-height: 30px;
+}
+
+.juniors {
+    width: 82px;
+    background: url(../../../../../../assets/Images/Juniors.png) 50% 50% no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        margin-right: 80px;
     }
 }
-
-@media screen and (max-width: 900px) {
-    .juniors{
+@media screen and (max-width: 700px) {
+    .container{
+        margin-right: 60px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        margin-right: 40px;
         width: 70%;
-        background-size: 20%;
-        background-position: 76% 50%;
-        font-family: DannaMedium;
-        line-height: 35px;
-        text-align: center;
-        font-size: 14px;
     }
 }
-
-@media screen and (max-width: 822px) {
-    .juniors{
-        background-size: 20%;
-        background-position: 80% 50%;
+@media screen and (max-width: 500px) {
+    .container{
+        margin-right: 20px;
+        width: 75%;
     }
 }
-@media screen and (max-width: 632px) {
-    .juniors{
-        background-size: 25%;
-        background-position: 85% 50%;
-    }
-}
-
-@media screen and (max-width: 632px) {
-    .juniors{
-        background-size: 20%;
-        background-position: 85% 50%;
-    }
-}
-
-@media screen and (max-width: 488px) {
-    .juniors{
-        background-size: 20%;
-        background-position: 90% 50%;
-    }
-}
-
-@media screen and (max-width: 384px) {
-    .juniors{
-        background-size: 26%;
-        background-position: 95% 50%;
+@media screen and (max-width: 500px) {
+    .container{
+        margin-right: 50px;
         width: 80%;
     }
 }

@@ -10,7 +10,7 @@
     line-height: 45px;
 }
 
-@media screen and (max-width: 1096px) {
+@media screen and (max-width: 1214px) {
     .Button{
         width: 50%;
         font-size: 12px;

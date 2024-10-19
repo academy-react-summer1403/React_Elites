@@ -3,12 +3,12 @@ import style from './Mentors&JuniorsHolder.module.css'
 import { Juniors } from '../Mentors&JuniorsItems/Juniors'
 import { Mentors } from '../Mentors&JuniorsItems/Mentors'
 
-const MentorsAndJuniorsHolderRes = () => {
+const MentorsAndJuniorsHolderRes = (props) => {
   return (
     <>
         <div className={style.container}>
-          <Juniors />
-          <Mentors />
+          <Juniors studentCount={props.MAndJRes} />
+          <Mentors teacherCount={props.MAndJRes}  />
         </div>
     </>
   )
