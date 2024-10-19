@@ -10,6 +10,7 @@ import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/li
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
 import {BlogsList} from './components/blogs/blogsList.tsx'
 import { CourseList } from './components/Course List/CourseListHolder/CourseList.tsx'
+import { Dashboard1 } from './components/dashboard/dashboard.tsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
         path: "/Course-List",
         element: <CourseList />,
       }, 
+      {
+        path: "Dashboard1",
+      element: <Dashboard1  />,
+    }, 
     ]
   },
 

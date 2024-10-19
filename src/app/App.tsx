@@ -14,7 +14,7 @@ import { InformationForm } from "../components/studentPanel/studentProfilePage/I
 import { LinkForm } from "../components/studentPanel/studentProfilePage/LinkPage/link.tsx"
 import { LocationForm } from "../components/studentPanel/studentProfilePage/locationPage/location.tsx"
 import { ImageForm } from "../components/studentPanel/studentProfilePage/ImagesPage/Image.tsx"
-
+import { Dashboard1 } from "../components/dashboard/dashboard.tsx"
 function App() {
 
   return (
