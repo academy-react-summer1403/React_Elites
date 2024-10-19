@@ -1,9 +1,10 @@
 import React from 'react'
 import style from './Image.module.css'
+import kar from "../../../../../../../assets/Images/kar.png"
 
-const Image = (props) => {
+const Image = () => {
   return (
-    <img className={style.image} src={props.image} />
+    <img className={style.image} src={kar} />
   )
 }
 

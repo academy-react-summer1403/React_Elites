@@ -25,7 +25,7 @@
 }
 .userName{
     font-size: 16px;
-    font-weight: 600;
+    font-family: DannaDemiBold;
     line-height: 22.88px;
     text-align: right;
     color: #FCFCFC;
@@ -33,7 +33,7 @@
 }
 .userLevel{
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 20.02px;
     text-align: right;
     color: #F6F6F6;
@@ -48,11 +48,12 @@
     flex-wrap: nowrap;
     width: 306px;
     justify-content: space-between;
+    align-items: center;
 }
 .titleHeader{
     font-family: DanaFaNum;
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 22.88px;
     text-align: right;
     color: #FCFCFC;
@@ -88,7 +89,7 @@
     right: 0;
     bottom: 0;
     font-size: 12px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 17.16px;
     text-align: center;
 
@@ -96,7 +97,7 @@
 .title{
     font-family: DanaFaNum;
     font-size: 24px;
-    font-weight: 700;
+    font-family: DannaBold;
     line-height: 34.32px;
     text-align: right;
     color: #2F2F2F;
@@ -130,9 +131,8 @@
     gap: 8px;
 }
 .menu > div > h1{
-    font-family: DanaFaNum;
     font-size: 18px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 25.74px;
     text-align: right;
     color: #FCFCFC;
@@ -161,6 +161,9 @@
 .profile{
     background-image: url(../assets/Images/profile.png);
 }
+.pay{
+    background-image: url(../assets/Images/moneyWhite.png);
+}
 .logout{
     margin: 250px 16px 0 16px;
     padding: 4.65% 4.5% 4.65% 20%;
@@ -174,9 +177,8 @@
     gap: 12px;
 }
 .logout > h1{
-    font-family: DanaFaNum;
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 22.88px;
     text-align: right;
 }
@@ -206,7 +208,7 @@
 }
 .searchAndDateHolder > div > div > label{
     font-size: 16px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 22.88px;
     text-align: center;
     color: #2F2F2F;
@@ -232,7 +234,7 @@
 }
 .input::placeholder{
     font-size: 13px;
-    font-weight: 500;
+    font-family: DannaMedium;
     line-height: 17.16px;
     text-align: right;
     background-color: #ececec;
@@ -259,7 +261,7 @@
     margin: 12px 0;
     font-family: DanaFaNum;
     font-size: 14px;
-    font-weight: 600;
+    font-family: DannaDemiBold;
     line-height: 20.02px;
     text-align: right;
     color: #707070;

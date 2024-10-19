@@ -5,12 +5,12 @@
     background: #2F2F2F;
     color: #FCFCFC;
     text-align: center;
-    font-weight: 500;
+    font-family: DannaMedium;
     font-size: 16px;
-    line-height: 38px;
+    line-height: 45px;
 }
 
-@media screen and (max-width: 1096px) {
+@media screen and (max-width: 1214px) {
     .Button{
         width: 50%;
         font-size: 12px;

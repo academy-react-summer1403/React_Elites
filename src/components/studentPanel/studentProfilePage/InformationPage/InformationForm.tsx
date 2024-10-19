@@ -3,6 +3,7 @@ import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./partInformation/Information.module.css";
 import { StudentGhabRight } from "../../studentPart/studentRight";
 import { StudentGhabLeft } from "../../studentPart/studentLeft";
+import { NavLink } from "react-router-dom";
 
 
 const InformationForm = () => {
@@ -24,9 +25,9 @@ const InformationForm = () => {
                                 <div className={styleInform.rightHolder}>
                                     <div className={styleInform.right}>
                                         <div><h1 className={style.selected}>اطلاعات حساب کاربری </h1></div>
-                                        <h1>عکس ها </h1>
-                                        <h1>محل سکونت </h1>
-                                        <h1>لینک ها </h1>
+                                        <NavLink to="/Image" className={styleInform.pages}>عکس ها </NavLink>
+                                        <NavLink to="/Location"  className={styleInform.pages}>محل سکونت </NavLink>
+                                        <NavLink to="/Link"  className={styleInform.pages}>لینک ها </NavLink>
                                     </div>
                                 </div>
                                 <div className={styleInform.left}>

@@ -12,9 +12,7 @@
     border-radius: 12px;
 }
 .holder > div{
-    font-family: DanaFaNum;
     font-size: 16px;
-    font-weight: 700;
     line-height: 22.88px;
     
     margin-top: 12px;
@@ -22,11 +20,14 @@
 .level{
     width: 6%;
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     border-radius: 32px;
     background: #FF37F5;
-    text-align: center;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 24px;
 }
 .View{

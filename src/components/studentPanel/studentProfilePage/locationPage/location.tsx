@@ -4,6 +4,7 @@ import styleInform from "./../InformationPage/partInformation/Information.module
 import styleLocation from "./partLocationPage/location.module.css";
 import { StudentGhabRight } from "../../studentPart/studentRight";
 import { StudentGhabLeft } from "../../studentPart/studentLeft";
+import { NavLink } from "react-router-dom";
 
 
 const LocationForm = () => {
@@ -24,10 +25,10 @@ const LocationForm = () => {
 
                                 <div className={styleInform.rightHolder}>
                                     <div className={styleInform.right}>
-                                        <h1>اطلاعات حساب کاربری </h1>
-                                        <h1>عکس ها </h1>
+                                        <NavLink to="/Information" className={styleInform.pages}>اطلاعات حساب کاربری </NavLink>
+                                        <NavLink to='/Image' className={styleInform.pages}>عکس ها </NavLink>
                                         <div><h1 className={styleLocation.selected}>محل سکونت </h1></div>
-                                        <h1>لینک ها </h1>
+                                        <NavLink to='/Link' className={styleInform.pages}>لینک ها </NavLink>
                                     </div>
                                 </div>
                                 <div className={styleLocation.left}>

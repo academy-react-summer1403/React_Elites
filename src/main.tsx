@@ -8,53 +8,107 @@ import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
 import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/link.tsx'
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
-import {LandingHolder} from './components/Landing/A-LandingHolder/LandingHolder.tsx'
 import {BlogsList} from './components/blogs/blogsList.tsx'
-
+import { CourseList } from './components/Course List/CourseListHolder/CourseList.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import "./app/App.css"
+import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
+import { ErrorPage404 } from './components/Error 404/Error404.tsx'
+import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
+import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolder.tsx'
+import { Register } from './components/register/register.tsx'
+import { BlogsDetail } from './components/Blogs Detail/CourseDetailHolder/Blogs.tsx'
+import { Payment } from './components/Payment First Page/Payment Holder/Payment.tsx'
+import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children:[
-
       {
-        path: "/Login",
-        element: <Login />,
+        path: "/",
+        element: <LandingHolder />,
+        errorElement: <ErrorPage />
       },
       {
-        path: "/ForgetPass",
-        element: <ForgetPass />,
-      },
-      {
-        path: "/BlogsList",
+        path: "/Blogs-List",
         element: <BlogsList />,
+        errorElement: <ErrorPage />
       },
       {
-        path: "/StudentPanelCurse",
-        element: <StudentPanel />,
+        path: "/Courses-List",
+        element: <CourseList />,
+        errorElement: <ErrorPage />
       }, 
       {
-        path: "/ImageForm",
-        element: <ImageForm />,
+        path: "/Course-Detail",
+        element: <CourseDetail />,
+        errorElement: <ErrorPage />
+      }, 
+      {
+        path: "/Blogs-Detail",
+        element: <BlogsDetail />,
+        errorElement: <ErrorPage />
       },
       {
-        path: "/InformationForm",
-        element: <InformationForm />,
-      }, 
-      {
-        path: "/LinkForm",
-        element: <LinkForm />,
-      },
-      {
-        path: "/LocationForm",
-        element: <LocationForm />,
-      }, 
+        path: "*",
+        element: <ErrorPage404 />
+      }
     ]
   },
+  {
+    path: "/Login",
+    element: <Login />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Register",
+    element: <Register />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Forget-Password",
+    element: <ForgetPass />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Student-Panel-Course",
+    element: <StudentPanel />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: "/Image",
+    element: <ImageForm />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Information",
+    element: <InformationForm />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: "/Link",
+    element: <LinkForm />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Location",
+    element: <LocationForm />,
+    errorElement: <ErrorPage />
+  }, 
+  {
+    path: "/Shopping-Basket",
+    element: <Payment />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Payment-Gateway",
+    element: <PaymentGateway />,
+    errorElement: <ErrorPage />
+  }
 
 ])
 

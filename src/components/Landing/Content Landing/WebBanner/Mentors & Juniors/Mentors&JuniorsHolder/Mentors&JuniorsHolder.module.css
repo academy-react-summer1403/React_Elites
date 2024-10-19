@@ -24,3 +24,9 @@
         width: 25%;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .container{
+        display: none;
+    }
+}
