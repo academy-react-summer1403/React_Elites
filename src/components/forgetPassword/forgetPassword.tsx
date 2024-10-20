@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useEffect, useState } from 'react'
 import  styleLogin  from "../../Style/list.module.css";
+import { NavLink } from "react-router-dom";
 
 const ForgetPass = () => {
 
@@ -11,7 +12,7 @@ const ForgetPass = () => {
             <div className='flex justify-center'>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
-                  <div className='flex justify-end items-right w-full h-full'>
+                  <div className='flex justify-end items-right w-full '>
                     <div className='w-44 h-10 scale-250 items-right relative overflow-hidden object-fill rounded-2xl'>
                       <img className='bottom-2 absolute' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
                     </div>
@@ -54,8 +55,8 @@ const ForgetPass = () => {
                         <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 text-sm font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ارسال لینک</button>
                       </div>
                       <div className="flex max-w-96  justify-center mt-4">
-                        <div className=" flex rounded-full justify-center gap-1.5 w-28 px-4 py-2 bg-white border border-px border-gray-300" onClick={() => window.location.href = '/login'}>
-                          <h1 className="border-non cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> بازگشت &gt;</h1>
+                        <div className=" flex rounded-full justify-center gap-1.5 w-28 px-4 py-2 bg-white border border-px border-gray-300">
+                          <NavLink to="/Login" className="border-non cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> بازگشت &gt; </NavLink>
                         </div>
                       </div>
                   </Form>

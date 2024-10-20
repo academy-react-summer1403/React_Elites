@@ -17,10 +17,13 @@
     padding-right: 20px;
     padding-left: 20px;
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     border-radius: 32px;
     background: #FF37F5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .category{
@@ -29,25 +32,8 @@
     padding-right: 20px;
     padding-left: 20px;
     font-size: 14px;
-    font-weight: 500;
+    font-family: DannaMedium;
     color: #FCFCFC;
     border-radius: 32px;
     background: #3772FF;
-}
-
-@media screen and (max-width: 1048px) {
-    .category{
-        font-size: 12px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    .level{
-        font-size: 12px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
 }

@@ -42,33 +42,37 @@
     position: relative;
 }
 
-.html:hover > div{
-    background: url("../../../../../../assets/Images/borderCopy.png") 50% 50% no-repeat;
-    background-size: 100%;
-    transition: 3s linear;
+@media screen and (max-width: 488px) {
+    .figma{
+        width: 65px;
+        height: 65px;
+    }
 }
 
-.css:hover > div{
-    background: url("../../../../../../assets/Images/borderCssCopy.png") 50% 50% no-repeat;
-    background-size: 120%;
-    transition: 3s linear;
+@media screen and (max-width: 488px) {
+    .react{
+        width: 65px;
+        height: 65px;
+    }
 }
 
-.js:hover > div{
-    background: url("../../../../../../assets/Images/borderCopy.png") 50% 50% no-repeat;
-    background-size: 100%;
-    transition: 3s linear;
+@media screen and (max-width: 488px) {
+    .js{
+        width: 65px;
+        height: 65px;
+    }
 }
 
-.react:hover > div{
-    background: url("../../../../../../assets/Images/borderCssCopy.png") 50% 50% no-repeat;
-    background-size: 120%;
-    transition: 3s linear;
+@media screen and (max-width: 488px) {
+    .css{
+        width: 65px;
+        height: 65px;
+    }
 }
 
-.figma:hover > div{
-    background: url("../../../../../../assets/Images/figmaBorderCopy.png") 50% 50% no-repeat;
-    background-size: 100%;
-    transition: 3s linear;
+@media screen and (max-width: 488px) {
+    .html{
+        width: 65px;
+        height: 65px;
+    }
 }
-

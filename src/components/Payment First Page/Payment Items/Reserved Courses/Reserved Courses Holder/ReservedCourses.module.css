@@ -1,0 +1,11 @@
+.reserved{
+    width: 68.16770186335404%;
+    padding: 12px;
+    border: 2px solid #DCDCDC;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+}

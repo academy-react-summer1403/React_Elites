@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   @font-face {
     font-family: DannaThin;
@@ -33,6 +34,10 @@
   @font-face {
     font-family: DannaExtraBold;
     src: url(./assets/Fonts/dana-fanum-extrabold.ttf);
+  }
+  @font-face {
+    font-family: IranYekan;
+    src: url(./assets/Fonts/iranyekanwebbold.ttf);
   }
 }
 

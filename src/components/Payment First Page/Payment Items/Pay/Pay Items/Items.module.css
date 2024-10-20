@@ -1,0 +1,47 @@
+.top{
+    width: 84.61538461538462%;
+    height: 15%;
+    border-bottom: 2px solid #DCDCDC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom{
+    width: 84.61538461538462%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price{
+    width: auto;
+    font-family: DannaNormal;
+    font-size: 15px;
+    color: #757575;
+    user-select: none;
+}
+
+.allPrice{
+    width: auto;
+    font-family: DannaNormal;
+    font-size: 15px;
+    color: #757575;
+    direction: rtl;
+    user-select: none;
+}
+
+.pay{
+    width: 90%;
+    height: 60px;
+    border-radius: 16px;
+    background: #2F2F2F;
+    font-family: DannaBold;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    line-height: 60px;
+    user-select: none;
+    cursor: pointer;
+}

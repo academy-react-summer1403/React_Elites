@@ -5,3 +5,16 @@
     justify-content: right;
     align-items: center;
 }
+
+@media screen and (max-width: 1328px) {
+    .logoContainer {
+        width: 150px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 862px) {
+    .logoContainer {
+        margin-bottom: 15px;
+    }
+}

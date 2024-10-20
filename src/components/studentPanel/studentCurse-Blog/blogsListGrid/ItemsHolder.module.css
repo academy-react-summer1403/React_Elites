@@ -1,0 +1,47 @@
+.holder{
+    width: 100%;
+    min-width: 270px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.holder > img{
+    width: 8%;
+    height: 52px;
+    border-radius: 12px;
+}
+.holder > div{
+    font-size: 16px;
+    line-height: 22.88px;
+    
+    margin-top: 12px;
+}
+.level{
+    width: 6%;
+    font-size: 14px;
+    font-family: DannaMedium;
+    color: #FCFCFC;
+    border-radius: 32px;
+    background: #FF37F5;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+}
+.View{
+    background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=000000") no-repeat 0% 50%;
+    background-size: 100%;
+    width: 2.32%;
+}
+.holder > div:nth-child(2){
+    height: 34px;
+    overflow: hidden;
+    width: 11.6%;
+}
+@media screen and (max-width: 490px) {
+    .holder{
+        width: 78%;
+    }
+}

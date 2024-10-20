@@ -1,0 +1,10 @@
+.pay{
+    width: 26.24223602484472%;
+    height: 500px;
+    border: 2px solid #DCDCDC;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}

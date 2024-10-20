@@ -1,9 +1,10 @@
 import React from 'react'
 import style from '../../../../../Style/LogInOrRegister.module.css'
+import { NavLink } from 'react-router-dom';
 
 const LogInOrRegister = () => {
   return (
-    <div className={style.container}>ثبت نام یا ورود</div>
+    <NavLink to="/Login" className={style.container}>ثبت نام یا ورود</NavLink>
   )
 }
 
