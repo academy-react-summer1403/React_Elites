@@ -1,0 +1,20 @@
+.title{
+    scale: 0;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: DannaBold;
+    font-size: 32px;
+    margin-top: 60px;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  550 600;
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}

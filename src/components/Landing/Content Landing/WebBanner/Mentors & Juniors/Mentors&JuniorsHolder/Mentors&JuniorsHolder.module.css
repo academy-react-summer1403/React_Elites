@@ -1,0 +1,32 @@
+.container {
+    width: 18.30882352941176%;
+    height: 32%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+@media screen and (max-width: 1306px) {
+    .container{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1096px) {
+    .container{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1007px) {
+    .container{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        display: none;
+    }
+}

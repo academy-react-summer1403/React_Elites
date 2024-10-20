@@ -1,0 +1,68 @@
+.holder{
+    scale: 0;
+    opacity: 0;
+    width: 48.82352941176471%;
+    height: 31.85840707964602%;
+    border: 2px solid #DCDCDC;
+    border-radius: 32px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F6F6F6;
+    direction: rtl;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  300px 400px;
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.holder:hover{
+    border: 2px solid #3772FF;
+}
+
+.title{
+    scale: 0;
+    opacity: 0;
+    font-size: 32px;
+    font-family: DannaBold;
+    color: #2F2F2F;
+    width: 100%;
+    text-align: center;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  entry;
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1021px) {
+    .holder{
+        height: auto;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .holder{
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .title{
+        font-size: 28px;
+    }
+}
