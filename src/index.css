@@ -54,7 +54,16 @@
 }
 
 [data-theme="dark"] {
-  background: #0C134F;
-  color: #D4ADFC;
-  border-color: #5C469C;
+  background: #0C134F !important;
+  color: #D4ADFC !important;
+  border-color: #5C469C !important;
+}
+[data-theme="darkNoBG"] {
+  color: #D4ADFC !important;
+  border-color: #5C469C !important;
+}
+[data-theme="darkSmall"] {
+  background: #1D267D !important;
+  color: #D4ADFC !important;
+  border-color: #5C469C !important;
 }
