@@ -74,6 +74,12 @@
     }
 }
 
+@media screen and (max-width: 1078px) {
+    .holder{
+        margin-top: 20px;
+    }
+}
+
 @media screen and (max-width: 698px) {
     .holder{
         height: auto;
