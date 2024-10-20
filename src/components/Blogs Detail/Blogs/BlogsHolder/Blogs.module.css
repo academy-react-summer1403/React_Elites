@@ -10,10 +10,14 @@
     animation: visible linear forwards;
 }
 
+.slider{
+    width: 95%;
+}
+
 .container{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
 }

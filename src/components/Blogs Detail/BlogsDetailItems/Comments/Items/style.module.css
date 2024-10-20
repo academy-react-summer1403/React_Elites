@@ -111,7 +111,7 @@
     }
 }
 
-@media screen and (max-width: 698px) {
+@media screen and (max-width: 900px) {
     .comments{
         width: 100%;
         margin-top: 10px;
