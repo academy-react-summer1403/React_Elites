@@ -7,6 +7,10 @@
     background-size: 60%;
 }
 
+.inputToggle{
+    display: none;
+}
+
 .menu{
     display: none;
     width: 56px;

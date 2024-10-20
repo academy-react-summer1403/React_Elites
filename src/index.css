@@ -52,3 +52,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+[data-theme="dark"] {
+  background: #0C134F;
+  color: #D4ADFC;
+  border-color: #5C469C;
+}

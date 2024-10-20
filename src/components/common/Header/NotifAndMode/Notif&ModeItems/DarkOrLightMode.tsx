@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from '../../../../../Style/DarkOrLightMode.module.css'
 
 const DarkOrLightMode = () => {
+
   return (
     <>
-        <div className={style.DarkOrLight}></div>
+        <input type='checkbox' id="check" className={style.inputToggle}/>
+        <label htmlFor='check' className={style.DarkOrLight}></label>
     </>
   )
 }
