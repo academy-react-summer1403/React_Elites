@@ -3,11 +3,12 @@ import style from './GridItemsHolder.module.css'
 import { GridItemsTitle } from '../GridItemsTitle/GridItemsTitle'
 import { Description } from '../GridItemsDescription/Description'
 import { Image } from '../GridItemsImage/Image'
+import styleDark from './../../../../../../../Style/DarkMode.module.css'
 
 const GridItemsHolderThree = () => {
 
   return (
-    <div className={style.holder}>
+    <div className={`${style.holder} ${styleDark.holder}`}>
       <GridItemsTitle />
       <Description />
       <Image />

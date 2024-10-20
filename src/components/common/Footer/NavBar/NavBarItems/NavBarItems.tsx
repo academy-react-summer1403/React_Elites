@@ -1,16 +1,17 @@
 import React from 'react'
 import style from './NavBarItems.module.css'
+import { NavLink } from 'react-router-dom'
 
 const NavBarItems = () => {
   return (
     <>        
-        <div className={style.text}> خدمات ما </div>
-        <div className={style.text}> ارتباط باما </div>
-        <div className={style.text}> درباره ما </div>
-        <div className={style.text}> اساتید </div>
-        <div className={style.text}> بلاگ ها </div>
-        <div className={style.text}> دوره ها </div>
-        <div className={style.text}> خانه </div>
+        <NavLink to="/" className={style.text}> خدمات ما  </NavLink>
+        <NavLink to="/" className={style.text}> ارتباط باما  </NavLink>
+        <NavLink to="/" className={style.text}> درباره ما  </NavLink>
+        <NavLink to="/" className={style.text}> اساتید  </NavLink>
+        <NavLink to="/Blogs-List" className={style.text}> بلاگ ها  </NavLink>
+        <NavLink to="/Courses-List" className={style.text}>  دوره ها </NavLink>
+        <NavLink to="/" className={style.text}>  خانه </NavLink>
     </>
   )
 }
