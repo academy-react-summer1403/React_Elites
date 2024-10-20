@@ -9,7 +9,7 @@ const DateFilter = () => {
             <img className={styleFilter.filterTextImg} src="https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=000000" /> 
             <p className={styleFilter.filterText}>تاریخ انتشار</p>
         </div>
-        <Field className={styleFilter.filterInput} name="password" placeholder="?" />
+        <Field type="date" className={styleFilter.filterInput} name="password" placeholder="" />
     </div>
 )
 }
