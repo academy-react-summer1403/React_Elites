@@ -1,8 +1,10 @@
 import React from 'react'
 import style from './NavBarItems.module.css'
+import { useGlobalState } from '../../../../../State/State';
 import { NavLink } from 'react-router-dom'
 
 const NavBarItems = () => {
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <>        
         <NavLink to="/" className={style.text}> خدمات ما  </NavLink>

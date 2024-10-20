@@ -1,0 +1,37 @@
+.title{
+    width: 100%;
+    text-align: center;
+    font-family: DannaBold;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #2F2F2F;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  entry;
+    scale: 0;
+    opacity: 0;
+}
+
+.slider{
+    width: 95%;
+    display: flex !important;
+    justify-content: center !important;
+    flex-flow: row wrap !important; 
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.container{
+    width: 94.44444444444444444%;
+    height: 546px;
+    margin-top: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}

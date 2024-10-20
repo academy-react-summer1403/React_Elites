@@ -1,0 +1,23 @@
+.holder{
+    width: 431px;
+    height: 365px;
+    animation: visible linear forwards;
+    animation-timeline: view();
+    animation-range:  entry;
+    scale: 0;
+    opacity: 0;
+}
+
+@keyframes visible{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 982px) {
+    .holder{
+        width: 322px;
+        height: 292px;
+    }
+}

@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from '../../../../../Style/DarkOrLightMode.module.css'
+import { useGlobalState } from '../../../../../State/State';
 
 const DarkOrLightMode = () => {
+
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <>
-        <div className={style.DarkOrLight}></div>
+        <input type='checkbox' id="check" className={style.inputToggle} onChange={() => {
+          setDarkMode(!darkMode)
+        }}/>
+        <label htmlFor='check' className={style.DarkOrLight}></label>
     </>
   )
 }
