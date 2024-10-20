@@ -19,8 +19,8 @@
         background: url("../../../../../../assets/Images/GraphicVertical.png") no-repeat 50% 50%;
         background-size: cover;
         height: 900px;
-        margin: 0;
-        width: 100%;
+        margin-bottom: 20px;
+        width: 80%;
     }
 }
 

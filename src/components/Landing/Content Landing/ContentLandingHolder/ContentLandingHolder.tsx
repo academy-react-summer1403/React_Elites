@@ -14,7 +14,7 @@ const ContentLandingHolder = (props) => {
   const [courseList, setCourseList] = useState([]);
 
   const getList = async () => {
-    const courses = await getCourseList(4);
+    const courses = await getCourseList(7);
     setCourseList(courses);
   };
 

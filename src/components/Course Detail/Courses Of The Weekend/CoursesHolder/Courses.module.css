@@ -1,9 +1,13 @@
 .holder{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
+}
+
+.slider{
+    width: 95%;
 }
 
 .title{
