@@ -51,7 +51,7 @@ const LoginPage2 = () => {
                         <ErrorMessage name="password" component={"p"} className="error"/>
                       </div>
                     
-                      <NavLink to="/Login-Page2" className="h-11 max-w-96 overflow-hidden flex">
+                      <NavLink to="/" className="h-11 max-w-96 overflow-hidden flex">
                         <button  className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ورود به حساب</button>
                       </NavLink>
                       <div className="flex max-w-96  justify-center mt-4">
