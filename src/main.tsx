@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import {Root} from './components/root/Root.tsx'
 import {Login} from './components/login/login.tsx'
 import {ForgetPass} from './components/forgetPassword/forgetPassword.tsx'
+import {LoginPage2} from './components/Login Page2/login.tsx'
+
 import {StudentPanel} from './components/studentPanel/studentCurse-Blog/studentPanel.tsx'
 import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage/Image.tsx'
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
@@ -53,15 +55,20 @@ const router = createBrowserRouter([
         element: <BlogsDetail />,
         errorElement: <ErrorPage />
       },
-      {
+    ]
+  },
+  {
         path: "*",
         element: <ErrorPage404 />
-      }
-    ]
   },
   {
     path: "/Login",
     element: <Login />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Login-Page2",
+    element: <LoginPage2 />,
     errorElement: <ErrorPage />
   },
   {
@@ -74,6 +81,7 @@ const router = createBrowserRouter([
     element: <ForgetPass />,
     errorElement: <ErrorPage />
   },
+
   {
     path: "/Student-Panel-Course",
     element: <StudentPanel />,
