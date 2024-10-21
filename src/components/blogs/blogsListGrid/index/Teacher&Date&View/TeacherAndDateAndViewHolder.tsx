@@ -5,6 +5,7 @@ import { ViewAndDateHolder } from './DateAndViewHolder'
 
 
 const TeacherAndViewAndDateHolder = (props) => {
+
   return (
     <div className={style.holder}>
         <Teacher teacher={props.teacher} />
