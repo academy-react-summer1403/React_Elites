@@ -1,10 +1,11 @@
 import React from 'react'
 import style from './GridItemsTitle.module.css'
-import styleDark from './../../../../../../../Style/DarkMode.module.css'
+import { useGlobalState } from '../../../../../../../State/State';
 
 const GridItemsTitle = () => {
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={`${style.title} ${styleDark.title}`}>استعدادیابی</div>
+    <div className={style.title} data-theme={darkMode ? "dark" : "lightMode"}>استعدادیابی</div>
   )
 }
 

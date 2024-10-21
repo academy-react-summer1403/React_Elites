@@ -7,7 +7,7 @@ const TeacherAndPriceHolder = (props) => {
   return (
     <div className={style.holder}>
         <Teacher teacher={props.teacher} />
-        <Price price={props.price} />
+        <Price price={props.price}  />
     </div>
   )
 }

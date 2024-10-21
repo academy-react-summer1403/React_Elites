@@ -14,6 +14,7 @@ const ServicesHolder = () => {
     {title: "فرصت‌های شغلی", desc: "با توجه به سطح توانایی شما فرصت های شغلی به شما پیشنهاد داده میشه", image: work},
     {title: "مشاوره 24 ساعته", desc: "مشاورین ما 24 ساعته جوابگو سوال های شما هستند", image: moshavere}
   ]
+
   return (
     <div className={style.holder}>
       <ServicesTitle />

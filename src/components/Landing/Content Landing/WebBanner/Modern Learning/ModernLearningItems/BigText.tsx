@@ -1,10 +1,11 @@
 import React from 'react'
 import style from './BigText.module.css'
-import styleDark from './../../../../../../Style/DarkMode.module.css'
+import { useGlobalState } from '../../../../../../State/State';
 
 const BigText = () => {
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={`${style.bigText} ${styleDark.bigText}`}>آموزش مدرن <br /> پیشرفت سریع </div>
+    <div className={style.bigText} data-theme={darkMode ? "dark" : "lightMode"}>آموزش مدرن <br /> پیشرفت سریع </div>
   )
 }
 

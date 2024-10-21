@@ -1,10 +1,11 @@
 import React from 'react'
 import style from './OurGoalsTitle.module.css'
-import styleDark from './../../../../../Style/DarkMode.module.css'
+import { useGlobalState } from '../../../../../State/State';
 
 const OurGoalsTitle = () => {
+    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     return (
-        <div className={`${style.title} ${styleDark.title}`}>اهداف ما در آکادمی</div>
+        <div className={style.title}  data-theme={darkMode ? "dark" : "lightMode"}>اهداف ما در آکادمی</div>
     )
 }
 
