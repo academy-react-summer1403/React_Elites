@@ -99,5 +99,24 @@
   color: #14FFEC !important;
   border-color: #0D7377 !important;
 }
+[data-theme="darkOrLight"] {
+  background:white url("https://img.icons8.com/?size=100&id=H3mmKEsuafpa&format=png&color=000000") 50% 50% no-repeat;
+  background-size: 60%;
+}
+[data-theme="notification"] {
+  background: url("https://img.icons8.com/?size=100&id=eMfeVHKyTnkc&format=png&color=FFFFFF") 50% 50% no-repeat;
+  background-size: 60%;
+}
+[data-theme="instagram"] {
 
+}
+[data-theme="telegram"] {
+
+}
+[data-theme="youtube"] {
+
+}
+[data-theme="twitter"] {
+
+}
 
