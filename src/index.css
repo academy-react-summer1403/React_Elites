@@ -70,7 +70,7 @@
 */
 
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   background: #202020 !important;
   color: #ffffff !important;
   border-color: #7b7b7b !important;
@@ -83,5 +83,21 @@
   background: #808080 !important;
   color: #000000 !important;
   border-color: #000000 !important;
+} */
+
+[data-theme="dark"] {
+  background: #202020 !important;
+  color: #14FFEC !important;
+  border-color: #0D7377 !important;
 }
+[data-theme="darkNoBG"] {
+  color: #14FFEC !important;
+  border-color: #0D7377 !important;
+}
+[data-theme="darkSmall"] {
+  background: #323232 !important;
+  color: #14FFEC !important;
+  border-color: #0D7377 !important;
+}
+
 
