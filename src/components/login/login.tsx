@@ -63,9 +63,9 @@ const Login = () => {
                         <ErrorMessage name="rememberPass" component={"p"} className="error"/>
                       </div>
                     
-                      <div className="h-11 max-w-96 overflow-hidden">
-                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ورود به حساب</button>
-                      </div>
+                      <NavLink to="/Login-Page2" className="h-11 max-w-96 overflow-hidden flex">
+                        <button  className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ورود به حساب</button>
+                      </NavLink>
                       <div className="mt-2 max-w-96 flex justify-center gap-1.5">
                         <h1 className="red text-black text-sm font-extrabold ">حساب کاربری ندارید؟</h1>
                         <NavLink to="/Register" className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight decoratio underline" type="submit">ایجاد حساب کاربری</NavLink>

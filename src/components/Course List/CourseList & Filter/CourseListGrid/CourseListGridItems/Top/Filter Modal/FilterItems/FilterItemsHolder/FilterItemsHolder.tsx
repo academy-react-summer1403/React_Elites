@@ -11,10 +11,12 @@ import { Date } from '../FilterDate/Date'
 const FilterItemsHolder = (props) => {
   return (
     <div className={style.holder}>
-        <Title />
+      <div className={style.holderTitle}>
+      <Title />
         <div className={style.closeBtn} onClick={() => {
           props.setClicked(false)
         }}> بستن </div>
+      </div>
         <Search />
         <Category />
         <Level />

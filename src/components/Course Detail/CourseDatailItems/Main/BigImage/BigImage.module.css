@@ -3,6 +3,14 @@
     height: 100%;
 }
 
+@media screen and (max-width: 1077px) {
+    .image{
+        width: 60%;
+        height: 300px;
+        margin: 20px auto;
+    }
+}
+
 @media screen and (max-width: 698px) {
     .image{
         width: 100%;
