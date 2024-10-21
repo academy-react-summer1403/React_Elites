@@ -5,7 +5,7 @@ import { useGlobalState } from '../../../../../State/State';
 const Date = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.date} jhj>{props.date}</div>
+    <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{props.date}</div>
   )
 }
 
