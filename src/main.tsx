@@ -2,8 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {Root} from './components/root/Root.tsx'
 import {Login} from './components/login/login.tsx'
-import {ForgetPass} from './components/forgetPassword/forgetPassword.tsx'
 import {LoginPage2} from './components/Login Page2/login.tsx'
+import {ForgetPass} from './components/forgetPassword/forgetPassword.tsx'
+import {ForgetPassPage2} from './components/forgetPassword page2/forgetPassword.tsx'
 
 import {StudentPanel} from './components/studentPanel/studentCurse-Blog/studentPanel.tsx'
 import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage/Image.tsx'
@@ -79,6 +80,11 @@ const router = createBrowserRouter([
   {
     path: "/Forget-Password",
     element: <ForgetPass />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/Forget-Password-Page2",
+    element: <ForgetPassPage2 />,
     errorElement: <ErrorPage />
   },
 
