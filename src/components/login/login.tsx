@@ -1,14 +1,41 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import  styleLogin  from "../../Style/list.module.css";
 import { NavLink } from "react-router-dom";
+import { loginAPI } from "../../core/services/api/auth-Login";
+import { useEffect, useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
+import { useGlobalState } from "../../State/State";
 
 const Login = () => {
 
+  const [isLogin, setIsLogin] = useGlobalState('isLogin');
+
+  const secceed = () => {
+    toast.success('ورود با موفقیت انجام شد')
+  }
+
+  const loginUser = async (values) => {
+    const user = await loginAPI(values)
+    if(user.success == true){
+      secceed();
+    }
+    else {
+      return
+    }
+    setIsLogin(true)
+    console.log(user)
+  }
+
+
   return (
     
-        <Formik initialValues={{password: "", address: "", rememberPass: ""}}>
+        <Formik 
+          initialValues={{password: "", phoneOrGmail: ""}}
+          onSubmit={(values) => loginUser(values)}
+          >
           {(form) => (
             <div className='flex justify-center'>
+              <Toaster />
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
                   <div className='flex justify-end items-right w-full'>
@@ -46,8 +73,8 @@ const Login = () => {
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaDemiBold text-black pb-3">شماره همراه یا ایمیل </label>
-                        <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
-                        <ErrorMessage name="adress" component={"p"} className="error"/>
+                        <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
+                        <ErrorMessage name="phoneOrGmail" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96  my-4 mx-0 text-right">
                         <label className="text-base font-DannaDemiBold text-black pb-1.5">رمز عبور</label>
@@ -55,25 +82,25 @@ const Login = () => {
                         <ErrorMessage name="password" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">
-                        <div className="flex items-center gap-1.5">
+                        {/* <div className="flex items-center gap-1.5">
                           <label htmlFor="rememberPassInput" className="text-base font-DannaDemiBold text-black text-left ">مرا به خاطر بسپار</label>
                           <Field id="rememberPassInput" type="checkbox" className="items-right rounded w-4 text-right text-black :" name="rememberPass"/>
-                        </div>
-                        <NavLink to="/Forget-Password" className="border-none bg-slate-100 px-4 py-2 rounded-full cursor-pointer text-blue-700 text-xs font-bold tracking-tight"> رمز عبور را فراموش کرده اید؟</NavLink>
+                        </div> */}
+                        <NavLink to="/Forget-Password" className="border-none bg-slate-100 px-4 py-2 rounded-full cursor-pointer text-blue-700 text-xs font-DannaBold tracking-tight"> رمز عبور را فراموش کرده اید؟</NavLink>
                         <ErrorMessage name="rememberPass" component={"p"} className="error"/>
                       </div>
                     
-                      <NavLink to="/Login-Page2" className="h-11 max-w-96 overflow-hidden flex">
-                        <button  className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ورود به حساب</button>
-                      </NavLink>
+                      <div className="h-11 max-w-96 overflow-hidden flex">
+                        <button  className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-DannaBold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ورود به حساب</button>
+                      </div>
                       <div className="mt-2 max-w-96 flex justify-center gap-1.5">
-                        <h1 className="red text-black text-sm font-extrabold ">حساب کاربری ندارید؟</h1>
-                        <NavLink to="/Register" className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight decoratio underline" type="submit">ایجاد حساب کاربری</NavLink>
+                        <h1 className="red text-black text-sm font-DannaExtraBold ">حساب کاربری ندارید؟</h1>
+                        <NavLink to="/Register" className="border-none cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight decoratio underline">ایجاد حساب کاربری</NavLink>
                       </div>
                       <div className="flex max-w-96  justify-center mt-8">
                         <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100">
-                          <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> صفحه اصلی </NavLink>
-                          <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-extrabold "></img>
+                          <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> صفحه اصلی </NavLink>
+                          <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-DannaExtraBold "></img>
                         </div>
                       </div>
                   </Form>
