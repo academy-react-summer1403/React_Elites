@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import  styleLogin  from "../../Style/list.module.css";
 import { NavLink } from "react-router-dom";
 
-const Register = () => {
+const RegisterPage2 = () => {
 
   return (
     
@@ -32,12 +32,12 @@ const Register = () => {
                   <Form className={styleLogin.form}>
                   <div className={styleLogin.navigate}>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
-                          <div className="w-full h-2 rounded-lg black bg-blue-600">  </div>
-                          <h1 className={`${styleLogin.textNavigate} ${styleLogin.selectedNavigate}`}>وارد کردن شماره تلفن </h1>
+                          <div className="w-full h-2 rounded-lg black bg-blue-500 opacity-500">  </div>
+                          <h1 className={styleLogin.textNavigate}>وارد کردن شماره تلفن </h1>
                         </div>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
-                          <div className="w-full h-2 rounded-lg black bg-gray-400">  </div>
-                          <h1 className={styleLogin.textNavigate}>تایید کد ارسال شده </h1>
+                          <div className="w-full h-2 rounded-lg black bg-blue-600">  </div>
+                          <h1 className={`${styleLogin.textNavigate} ${styleLogin.selectedNavigate}`}>تایید کد ارسال شده </h1>
                         </div>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
                           <div className="w-full h-2 rounded-lg black bg-gray-400">  </div>
@@ -45,28 +45,23 @@ const Register = () => {
                         </div>
                       </div>
                       <div className="h-full max-w-96 my-8 mx-0">
-                        <h1 className="text-black text-2xl font-bold m-4">خوش اومدی!</h1>
-                        <p className="text-gray-400 text-sm font-semibold">لطفا شماره همراه  خود را وارد کنید تا کد تائید برای شما ارسال شود</p>
+                        <h1 className="text-black text-2xl font-bold m-4">تایید کد ارسال شده </h1>
+                        <p className="text-gray-400 text-sm font-semibold">لطفا کد ارسال شده به شماره همراه 09381235486 را وارد کنید</p>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
-                        <label className="text-base font-bold text-black pb-3">شماره همراه </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="شماره همراه خود را وارد کنید" />
+                        <label className="text-base font-bold text-black pb-3">کد تایید </label>
+                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="کد تایید خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
-                     
-                    
-                    
-                      <NavLink to="/Register-Page2" className="flex h-11 max-w-96 overflow-hidden mt-4">
-                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ارسال کد تائید</button>
-                      </NavLink>
-                      <div className="mt-2 max-w-96 flex justify-center gap-1.5">
-                        <h1 className="red text-black text-sm font-extrabold ">حساب کاربری دارید؟</h1>
-                        <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight" to="/Login"> ورود به حساب کاربری</NavLink>
+                      <div className="h-11 max-w-96 overflow-hidden mt-4">
+                        <button className="h-full w-1/2 border-non cursor-pointer rounded-full text-blue-700 bg-slate-100 text-xs font-bold tracking-tight" type="submit">ارسال مجدد کد تایید 01:00</button>
                       </div>
+                      <NavLink to="/Register-Page3" className="flex h-11 max-w-96 overflow-hidden mt-4">
+                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">تایید</button>
+                      </NavLink>
                       <div className="flex max-w-96  justify-center mt-8">
                         <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100">
-                          <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> صفحه اصلی </NavLink>
-                          <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-extrabold "></img>
+                        <NavLink to="/Register" className="border-non cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> بازگشت &gt; </NavLink>
                         </div>
                       </div>
                   </Form>
@@ -79,4 +74,4 @@ const Register = () => {
   )
 }
 
-export { Register }
+export { RegisterPage2 }

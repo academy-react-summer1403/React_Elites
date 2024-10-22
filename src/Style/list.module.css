@@ -1,6 +1,6 @@
 .page2{
     background-color: #f1f1f1;
-    width: 748px;
+    width: 63%;
     height: 100%;
     border-radius: 32px;
     display: flex;
@@ -27,6 +27,22 @@ form{
     gap: 6px;
     display: flex;
     height: 100%;
+}
+.textNavigate{
+    font-size: 1rem;
+    font-family: DanaFaNum;
+    font-weight: 700;
+    line-height: 22.88px;
+    text-align: right;
+    color: #2f2f2f86;
+    letter-spacing: -0.9px;
+}
+.selectedNavigate{
+    color: #000000;
+}
+.lastNavigate{
+    background-color: #3772FF !important;
+    opacity: 0.5 !important;
 }
 @media screen and (max-width:600px){
     .page2{
