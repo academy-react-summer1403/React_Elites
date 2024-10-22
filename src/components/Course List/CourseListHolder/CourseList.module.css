@@ -4,3 +4,10 @@
     flex-flow: row wrap;
     display: flex;
 }
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}

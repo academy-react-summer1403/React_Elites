@@ -56,6 +56,7 @@ const CoursesHolder = ({courseList}) => {
     ]
   };
 
+
   return (
     <div className={style.holder}>
         <CoursesTitle />

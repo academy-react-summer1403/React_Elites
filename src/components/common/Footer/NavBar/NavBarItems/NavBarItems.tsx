@@ -1,16 +1,19 @@
 import React from 'react'
 import style from './NavBarItems.module.css'
+import { useGlobalState } from '../../../../../State/State';
+import { NavLink } from 'react-router-dom'
 
 const NavBarItems = () => {
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <>        
-        <div className={style.text}> خدمات ما </div>
-        <div className={style.text}> ارتباط باما </div>
-        <div className={style.text}> درباره ما </div>
-        <div className={style.text}> اساتید </div>
-        <div className={style.text}> بلاگ ها </div>
-        <div className={style.text}> دوره ها </div>
-        <div className={style.text}> خانه </div>
+        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> خدمات ما  </NavLink>
+        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> ارتباط باما  </NavLink>
+        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> درباره ما  </NavLink>
+        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> اساتید  </NavLink>
+        <NavLink to="/Blogs-List" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ ها  </NavLink>
+        <NavLink to="/Courses-List" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}>  دوره ها </NavLink>
+        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}>  خانه </NavLink>
     </>
   )
 }

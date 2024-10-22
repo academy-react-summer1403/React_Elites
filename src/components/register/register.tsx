@@ -12,7 +12,7 @@ const Register = () => {
             <div className='flex justify-center'>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
-                  <div className='flex justify-end items-right w-full h-full'>
+                  <div className='flex justify-end items-right w-full'>
                     <div className='w-44 h-10 scale-250 items-right relative overflow-hidden object-fill rounded-2xl'>
                       <img className='bottom-2 absolute' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
                     </div>
