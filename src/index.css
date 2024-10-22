@@ -108,15 +108,20 @@
   background-size: 60%;
 }
 [data-theme="instagram"] {
-
+  background: url("https://img.icons8.com/?size=100&id=32292&format=png&color=14FFEC");
+  background-size: cover;
 }
 [data-theme="telegram"] {
-
+  background: url(./assets/Images/telegramRes.png);
+  background-size: cover;
 }
 [data-theme="youtube"] {
-
+  background: url("https://img.icons8.com/?size=100&id=Aq10GU126KJX&format=png&color=14FFEC");
+  background-size: cover;
 }
 [data-theme="twitter"] {
+  background: url("https://img.icons8.com/?size=100&id=gNsLgEvYCwpR&format=png&color=14FFEC");
+  background-size: cover;
 
 }
 
