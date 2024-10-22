@@ -122,6 +122,25 @@
 [data-theme="twitter"] {
   background: url("https://img.icons8.com/?size=100&id=gNsLgEvYCwpR&format=png&color=14FFEC");
   background-size: cover;
-
+}
+[data-theme="search"] {
+  background: url("https://img.icons8.com/?size=100&id=132&format=png&color=14FFEC")  no-repeat 90% 50%;
+  color: #14FFEC !important;
+  background-size: 25px;
+}
+[data-theme="level"] {
+  background: url("https://img.icons8.com/?size=100&id=fJKs3A7hg7iS&format=png&color=14FFEC")  no-repeat 100% 50%;
+  color: #14FFEC !important;
+  background-size: 25px;
+}
+[data-theme="teacher"] {
+  background: url("https://img.icons8.com/?size=100&id=bJigj27ADlj_&format=png&color=14FFEC")  no-repeat 100% 50%;
+  color: #14FFEC !important;
+  background-size: 25px;
+}
+[data-theme="date"] {
+  background: url("https://img.icons8.com/?size=100&id=43503&format=png&color=14FFEC")  no-repeat 100% 50%;
+  color: #14FFEC !important;
+  background-size: 25px;
 }
 

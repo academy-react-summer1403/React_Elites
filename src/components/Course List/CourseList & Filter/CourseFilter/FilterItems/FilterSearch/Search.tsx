@@ -6,7 +6,7 @@ const Search = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <>
-        <label htmlFor='search' className={style.labelSearch} data-theme={darkMode ? "darkNoBG" : "lightMode"}> جستجو </label>
+        <label htmlFor='search' className={style.labelSearch} data-theme={darkMode ? "search" : "lightMode"}> جستجو </label>
         <input name='search' type='search' placeholder='دوره مورد نظر را جست‌جو کنید...' className={style.search} data-theme={darkMode ? "dark" : "lightMode"}/>
     </>
   )
