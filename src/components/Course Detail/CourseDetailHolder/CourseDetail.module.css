@@ -2,3 +2,11 @@
     width: 94.444444444444%;
     margin-top: 50px;
 }
+
+.body{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}

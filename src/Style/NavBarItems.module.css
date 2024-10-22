@@ -1,5 +1,5 @@
 .container {
-    width: 56.49202733485194%;
+    width: 248px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -8,6 +8,23 @@
     color: white;
     font-size: 16px;
     font-family: DannaMedium;
+}
+
+.selected{
+    background: url(../assets/Images/icons8-dot-24.png) 50% 100% no-repeat;
+    background-size: 15px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 1.1;
+}
+
+.items{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 1217px) {

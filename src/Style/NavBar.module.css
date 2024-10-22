@@ -1,13 +1,11 @@
 .container {
-    width: 32.28%;
+    width: auto;
     height: 47px;
-    justify-content: left;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     border-radius: 56px;
     background: #2F2F2F;
     align-items: center;
-    align-items: center;
-    flex-flow: row wrap;
+    padding: 2px 20px 2px 0px;
     display: flex;
     gap: 20px;
 }
