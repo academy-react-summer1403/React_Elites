@@ -8,7 +8,7 @@ const TeacherPage = (props) => {
   const [teacherList, setTeacherList] = useState([]);
 
   const getTeacherList = async () => {
-    const teacher = await getTeacher(6);
+    const teacher = await getTeacher();
     setTeacherList(teacher);
   };
 
