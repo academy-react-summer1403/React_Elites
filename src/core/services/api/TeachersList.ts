@@ -1,10 +1,8 @@
 import http from '../../interceptor/index.ts'
 
-const getTeacher = async (count) => {
+const getTeacher = async () => {
     try {
-        console.log("Fetching started...");
-        const result = await http.get(`/Home/GetCoursesTop?Count=${count}`);
-      
+        const result = await http.get('/Home/GetTeachers');
         return result;
     } catch (error) {
         return [];
