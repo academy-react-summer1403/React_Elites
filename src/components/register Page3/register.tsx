@@ -21,8 +21,8 @@ const RegisterPage3 = () => {
                     </div>
                   </div>
                   <div className="mt-10">
-                    <h1 className="text-black font-bold text-3xl ">شروع یک ماجراجویی</h1>
-                    <h1 className="mt-2 text-base items-right text-gray-500 font-semibold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
+                    <h1 className="text-black font-DannaBold text-3xl ">شروع یک ماجراجویی</h1>
+                    <h1 className="mt-2 text-base items-right text-gray-500 font-DannaDemiBold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
                   </div>
                   <div className="flex w-full mt-64 mb-40 justify-center">
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
@@ -45,21 +45,21 @@ const RegisterPage3 = () => {
                         </div>
                       </div>
                       <div className="h-full max-w-96 my-8 mx-0">
-                        <h1 className="text-black text-2xl font-bold m-4">وارد کردن اطلاعات شخصی </h1>
-                        <p className="text-gray-400 text-sm font-semibold">لطفا اطلاعات اولیه خواسته شده را وارد کنید</p>
+                        <h1 className="text-black text-2xl font-DannaBold m-4">وارد کردن اطلاعات شخصی </h1>
+                        <p className="text-gray-400 text-sm font-DannaDemiBold">لطفا اطلاعات اولیه خواسته شده را وارد کنید</p>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
-                        <label className="text-base font-bold text-black pb-3">ایمیل </label>
+                        <label className="text-base font-DannaBold text-black pb-3">ایمیل </label>
                         <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="ایمیل خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
-                        <label className="text-base font-bold text-black pb-3">رمزعبور جدید </label>
+                        <label className="text-base font-DannaBold text-black pb-3">رمزعبور جدید </label>
                         <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="رمزعبور جدید خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
                       <div className="h-11 max-w-96 overflow-hidden mt-4">
-                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">تایید </button>
+                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-DannaBold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">تایید </button>
                       </div>
                   </Form>
                 </div>

@@ -2,12 +2,33 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useEffect, useState } from 'react'
 import  styleLogin  from "../../Style/list.module.css";
 import { NavLink } from "react-router-dom";
+import { registerPhoneNumber } from "../../core/services/api/auth-register-phonenumber";
+import toast, { Toaster } from 'react-hot-toast';
+import { RegisterPage2 } from "../register Page2/register";
 
 const Register = () => {
 
+  const secceed = () => {
+    toast.success('کد تایید را وارد کنید ')
+  }
+
+  const Register_User_PhoneNumber = async (values) => {
+    const phoneNumber = await registerPhoneNumber(values)
+    if(phoneNumber.success == true){
+      secceed();
+    }
+    else {
+      return
+    }
+    console.log(phoneNumber)
+  }
+
   return (
     
-        <Formik initialValues={{password: "", address: "", rememberPass: ""}}>
+        <Formik 
+          initialValues={{phoneNumber: ""}}
+          onSubmit={(values) => Register_User_PhoneNumber(values)}
+        >
           {(form) => (
             <div className='flex justify-center'>
               <div className={styleLogin.page}>
@@ -21,8 +42,8 @@ const Register = () => {
                     </div>
                   </div>
                   <div className="mt-10">
-                    <h1 className="text-black font-bold text-3xl ">شروع یک ماجراجویی</h1>
-                    <h1 className="mt-2 text-base items-right text-gray-500 font-semibold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
+                    <h1 className="text-black font-DannaBold text-3xl ">شروع یک ماجراجویی</h1>
+                    <h1 className="mt-2 text-base items-right text-gray-500 font-DannaDemiBold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
                   </div>
                   <div className="flex w-full mt-64 mb-40 justify-center">
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
@@ -45,33 +66,34 @@ const Register = () => {
                         </div>
                       </div>
                       <div className="h-full max-w-96 my-8 mx-0">
-                        <h1 className="text-black text-2xl font-bold m-4">خوش اومدی!</h1>
-                        <p className="text-gray-400 text-sm font-semibold">لطفا شماره همراه  خود را وارد کنید تا کد تائید برای شما ارسال شود</p>
+                        <h1 className="text-black text-2xl font-DannaBold m-4">خوش اومدی!</h1>
+                        <p className="text-gray-400 text-sm font-DannaDemiBold">لطفا شماره همراه  خود را وارد کنید تا کد تائید برای شما ارسال شود</p>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
-                        <label className="text-base font-bold text-black pb-3">شماره همراه </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="شماره همراه خود را وارد کنید" />
-                        <ErrorMessage name="adress" component={"p"} className="error"/>
+                        <label className="text-base font-DannaBold text-black pb-3">شماره همراه </label>
+                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneNumber" placeholder="شماره همراه خود را وارد کنید" />
+                        <ErrorMessage name="phoneNumber" component={"p"} className="error"/>
                       </div>
                      
                     
                     
-                      <NavLink to="/Register-Page2" className="flex h-11 max-w-96 overflow-hidden mt-4">
-                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-bold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ارسال کد تائید</button>
-                      </NavLink>
+                      <div className="flex h-11 max-w-96 overflow-hidden mt-4">
+                        <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-DannaBold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ارسال کد تائید</button>
+                      </div>
                       <div className="mt-2 max-w-96 flex justify-center gap-1.5">
-                        <h1 className="red text-black text-sm font-extrabold ">حساب کاربری دارید؟</h1>
-                        <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-bold tracking-tight" to="/Login"> ورود به حساب کاربری</NavLink>
+                        <h1 className="red text-black text-sm font-DannaExtraBold ">حساب کاربری دارید؟</h1>
+                        <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight" to="/Login"> ورود به حساب کاربری</NavLink>
                       </div>
                       <div className="flex max-w-96  justify-center mt-8">
                         <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100">
-                          <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-bold tracking-tight"> صفحه اصلی </NavLink>
-                          <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-extrabold "></img>
+                          <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> صفحه اصلی </NavLink>
+                          <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-DannaExtraBold "></img>
                         </div>
                       </div>
                   </Form>
                 </div>
               </div>
+              <RegisterPage2 />
             </div>
           )}
         </Formik>
