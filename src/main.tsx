@@ -59,12 +59,13 @@ const router = createBrowserRouter([
         element: <CourseList />,
       }, 
       {
-        path: "Dashboard1",
+        path: "/Dashboard1",
       element: <Dashboard1  />,
     }, 
     ]
   },
 
+  
 ])
 
 createRoot(document.getElementById('root')!).render(
