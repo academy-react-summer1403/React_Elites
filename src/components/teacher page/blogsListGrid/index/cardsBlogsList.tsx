@@ -12,6 +12,8 @@ const ListCardBlogs = ({teacherList}) => {
             key={index}
             title={item.fullName}
             image={item.pictureAddress}
+            count={item.courseCounts}
+            countN={item.newsCount}
           />
         )
       })}

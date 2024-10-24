@@ -1,6 +1,6 @@
 import style from './ItemsHolder.module.css'
 import { Image } from '../../Landing/Content Landing/Courses Of The Weekend/CoursesItems/Items/image'
-import { Title } from '../../Landing/Content Landing/Courses Of The Weekend/CoursesItems/Items/title'
+import { TitleAndCountHolder } from './index/TitleAndCountHolder'
 import { NavLink } from "react-router-dom";
 
 const CardBlogs = (props) => {
@@ -8,7 +8,7 @@ const CardBlogs = (props) => {
     
     <div className={style.holder}>
         <Image image={props.image} />
-        <Title className={style.title} title={props.title} />
+        <TitleAndCountHolder title={props.title} count={props.count} countN={props.countN} />
     </div>
   )
 }

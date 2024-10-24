@@ -1,14 +1,16 @@
 .holder{
-    width: 30%;
+    width: 732px;
     min-width: 270px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: right;
     gap: 10px;
     border: 2px solid #ccc;
     border-radius: 20px;
     padding: 5px;
     cursor: pointer;
+    background-color: #ededed;
+    overflow: hidden;
 }
 .holder > img{
     height: 90px;
@@ -18,11 +20,11 @@
 }
 .holder > div:nth-child(2){
     white-space: wrap;
-    margin-top: 6%;
+    height: 100%;
 }
 
 @media screen and (max-width: 587px) {
     .holder{
-        width: 80%;
+        width: 100%;
     }
 }

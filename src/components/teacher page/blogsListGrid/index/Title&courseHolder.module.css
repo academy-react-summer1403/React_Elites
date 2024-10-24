@@ -1,0 +1,12 @@
+.holder{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+.holder > div:nth-child(2),.holder > div:nth-child(3){
+    color: #656565;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    border-top: 1px solid #989898;
+}

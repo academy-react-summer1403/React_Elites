@@ -1,6 +1,7 @@
-import { Formik  } from "formik";
-import styleBlogList from "./../../Style/blogList.module.css";
+import { Formik, Form, Field } from "formik";
+import style from "./../../Style/teacher.module.css";
 import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
+import { SearchBar } from "./blogsListGrid/index/SearchBar.tsx";
 import { useEffect, useState } from "react";
 import {getTeacher} from '../../core/services/api/TeachersList.ts'
 
@@ -21,9 +22,16 @@ const TeacherPage = (props) => {
     <Formik>
       {(form) => (
         <div className=' h-full w-full flex flex-wrap justify-center'>
-          <div className={styleBlogList.page}>       
+          <div className={style.titleHolder}>
+            <h1 className={style.title}>لیست اساتید!</h1>
+            <h1 className={style.p}>لیستی از بهترین اساتید در آکادمی سپهر!</h1>
+          </div>  
+          <div className={style.page}>
+            <SearchBar />
+            <div className={style.page2}>      
               <ListCardBlogs teacherList={teacherList} />
             </div>
+          </div>  
         </div>
       )}
     </Formik>
@@ -31,6 +39,5 @@ const TeacherPage = (props) => {
   )
 }
 
-/*className={`${style.class1} ${style.class2}`}*/
 
 export { TeacherPage }

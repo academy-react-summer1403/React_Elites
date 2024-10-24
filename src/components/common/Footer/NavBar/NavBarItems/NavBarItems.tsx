@@ -10,7 +10,7 @@ const NavBarItems = () => {
         <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> خدمات ما  </NavLink>
         <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> ارتباط باما  </NavLink>
         <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> درباره ما  </NavLink>
-        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> اساتید  </NavLink>
+        <NavLink to="/teacher-page" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> اساتید  </NavLink>
         <NavLink to="/Blogs-List" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ ها  </NavLink>
         <NavLink to="/Courses-List" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}>  دوره ها </NavLink>
         <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}>  خانه </NavLink>

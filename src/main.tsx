@@ -67,8 +67,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
   },
   {
-        path: "*",
-        element: <ErrorPage404 />
+    path: "*",
+    element: <ErrorPage404 />
   },
   {
     path: "/Login",
