@@ -9,7 +9,7 @@ const LoginPage2 = () => {
     
         <Formik initialValues={{password: "", address: "", rememberPass: ""} }>
           {(form) => (
-            <div className='flex justify-center'>
+            <div className={styleLogin.main}>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
                   <div className='flex justify-end items-right w-full '>
@@ -28,7 +28,7 @@ const LoginPage2 = () => {
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
                   </div>
                 </div>
-                <div className="w-387 relative"> 
+                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
                       <div className={styleLogin.navigate}>
                         <div className="w-1/2 flex flex-wrap h-full w-64 bg-blue">

@@ -1,6 +1,7 @@
 .filterHolder{
     width: 21.91176470588235%;
-    height: 665px;
+    padding: 20px 0 20px 0;
+    height: auto;
     border-radius: 32px;
     border: 2px solid #DCDCDC;
     margin-top: 60px;

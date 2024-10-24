@@ -7,7 +7,9 @@ const Teacher = () => {
   return (
     <>
         <div className={style.titleTeacher} data-theme={darkMode ? "teacher" : "lightMode"}> اساتید </div>
-        <div className={style.teacher} data-theme={darkMode ? "dark" : "lightMode"}>استاد مورد نظر را انتخاب کنید</div>
+        <div className={style.teacher} data-theme={darkMode ? "dark" : "lightMode"}>استاد مورد نظر را انتخاب کنید
+          <div className={style.filterTeacher}></div>
+        </div>
     </>
   )
 }
