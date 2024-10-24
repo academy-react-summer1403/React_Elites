@@ -4,8 +4,6 @@ import style from './Courses.module.css'
 
 const CoursesHolder = ({courseList}) => {
 
-
-
   return (
     <div className={style.holder}>
         {courseList.map((item, index) => {

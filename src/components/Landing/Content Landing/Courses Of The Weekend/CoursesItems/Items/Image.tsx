@@ -2,10 +2,10 @@ import React from 'react'
 import style from './style.module.css'
 import { NavLink } from 'react-router-dom'
 
-const Image = (props) => {
+const Image = ({id, image}) => {
   return (
-    <NavLink to={"/Blogs-Detail/" +props.id} className={style.holderImage}>
-          <img className={style.imageProgramming} src={props.image} />
+    <NavLink to={"/Course-Detail/" +id} className={style.holderImage}>
+          <img className={style.imageProgramming} src={image} />
     </NavLink>
   )
 }

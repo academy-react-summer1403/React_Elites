@@ -5,13 +5,13 @@ import { Title } from '../Items/title'
 import { TeacherAndPriceHolder } from '../Items/Teacher&PriceHolder/TeacherAndPriceHolder'
 import { LevelAndCategoryHolder } from '../Items/level&CategoryHolder/LevelAndCategoryHolder'
 
-const CoursesItemsHolder = (props) => {
+const CoursesItemsHolder = ({image, id, title, teacher, price, level, category}) => {
   return (
     <div className={style.holder}>
-        <Image id={props.id} image={props.image} />
-        <Title title={props.title} />
-        <TeacherAndPriceHolder teacher={props.teacher} price={props.price} />
-        <LevelAndCategoryHolder level={props.level} category={props.category} />
+        <Image id={id} image={image} />
+        <Title title={title} />
+        <TeacherAndPriceHolder teacher={teacher} price={price} />
+        <LevelAndCategoryHolder level={level} category={category} />
     </div>
   )
 }

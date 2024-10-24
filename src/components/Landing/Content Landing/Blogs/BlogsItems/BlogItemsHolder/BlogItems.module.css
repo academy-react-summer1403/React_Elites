@@ -1,18 +1,11 @@
+
 .holder{
     width: 431px;
     height: 365px;
-    animation: visible linear forwards;
-    animation-timeline: view();
-    animation-range:  entry;
-    scale: 0;
-    opacity: 0;
-}
-
-@keyframes visible{
-    to {
-        scale: 1;
-        opacity: 1;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
 }
 
 @media screen and (max-width: 982px) {

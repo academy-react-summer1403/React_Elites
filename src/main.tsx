@@ -58,13 +58,12 @@ const router = createBrowserRouter([
         element: <BlogsDetail />,
         errorElement: <ErrorPage />
       },
-      
-    ]
-  },
-  {
+      {
         path: "/teacher-page",
         element: <TeacherPage />,
         errorElement: <ErrorPage />
+      }
+    ]
   },
   {
     path: "*",

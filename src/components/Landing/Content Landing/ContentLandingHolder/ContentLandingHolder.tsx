@@ -8,18 +8,25 @@ import { CoursesHolder } from '../Courses Of The Weekend/CoursesHolder/CoursesHo
 import { Blogs } from '../Blogs/BlogsHolder/Blogs'
 import { Teachers } from '../Teacher OF The Weekend/TeachersHolder/Teachers'
 import {getCourseList} from '../../../../core/services/api/CourseList.ts'
+import { getTopBlogs } from '../../../../core/services/api/TopBlogs.ts'
 
 
 const ContentLandingHolder = (props) => {
   const [courseList, setCourseList] = useState([]);
+  const [topBlogs, setTopBlogs] = useState([])
 
   const getList = async () => {
     const courses = await getCourseList(7);
     setCourseList(courses);
   };
+  const TopBlogs = async () => {
+    const Blogs = await getTopBlogs();
+    setTopBlogs(Blogs.news);
+  }
 
   useEffect(() => {
     getList();
+    TopBlogs();
   }, []);
   return (
     <>
@@ -29,7 +36,7 @@ const ContentLandingHolder = (props) => {
           <OurGoalsHolder />
           <ServicesHolder />
           <CoursesHolder courseList={courseList} />
-          <Blogs />
+          <Blogs topBlogs={topBlogs} />
           <Teachers />
         </div>
     </>

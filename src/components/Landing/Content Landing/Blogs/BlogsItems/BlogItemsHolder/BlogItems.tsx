@@ -4,12 +4,12 @@ import { Image } from '../Items/ImageBlog/Image'
 import { Title } from '../Items/TitleBlog/Title'
 import { Bottom } from '../Items/BottomHolder/Bottom'
 
-const BlogItems = (props) => {
+const BlogItems = ({image, id, title, pub, views}) => {
   return (
     <div className={style.holder}>
-        <Image image={props.image} />
-        <Title title={props.title} />
-        <Bottom pub={props.pub} date={props.date} views={props.views} />
+        <Image image={image} id={id} />
+        <Title title={title} />
+        <Bottom pub={pub} views={views} />
     </div>
   )
 }
