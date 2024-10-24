@@ -3,15 +3,19 @@ import style from './AllComments.module.css'
 import { Comment } from '../Items/Comment'
 import { useGlobalState } from '../../../../../State/State';
 
-const AllComments = () => {
+const AllComments = ({comments}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <div className={style.container}>
       <div className={style.title} data-theme={darkMode ? "dark" : "lightMode"}> نظرات دانشجو ها و اساتید </div>
-        <Comment />
-        <Comment />
-        <Comment />
-        <Comment />
+        {comments.map((item, index) => {
+          return (
+            <Comment
+              title={item.title}
+              describe={item.describe}
+            />
+          )
+        })}
     </div>
   )
 }

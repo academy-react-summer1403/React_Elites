@@ -30,6 +30,7 @@ const ListCardBlogs = () => {
             teacher={item.addUserFullName}
             view={item.currentView}
             // date={item.date}
+            id={item.id}
             image={item.currentImageAddressTumb}
           />
         )

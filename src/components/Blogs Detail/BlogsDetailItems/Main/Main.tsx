@@ -2,13 +2,23 @@ import React from 'react'
 import style from './Main.module.css'
 import { BigImage } from './BigImage/BigImage'
 import { BigDetail } from './BigDetail/BigDetailHolder/BigDetail'
+import { Category } from './BigDetail/DetailTop/TopItems/Category'
 
-const Main = () => {
+const Main = ({ image, teacher, views, likes, dislikes, rate, title, category, comment}) => {
   return (
     <div className={style.main}>
 
-        <BigDetail />
-        <BigImage />
+        <BigDetail 
+          category={category}
+          title={title}
+          teacher={teacher}
+          views={views}
+          likes={likes}
+          dislikes={dislikes}
+          rate={rate}
+          comment={comment}
+        />
+        <BigImage image={image} />
 
     </div>
   )
