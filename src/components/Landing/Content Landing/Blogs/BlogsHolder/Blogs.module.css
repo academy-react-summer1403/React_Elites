@@ -71,9 +71,6 @@
 
 .slider{
     width: 95%;
-    display: flex !important;
-    justify-content: center !important;
-    flex-flow: row wrap !important; 
 }
 
 @keyframes visible{

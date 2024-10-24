@@ -71,6 +71,7 @@ const CoursesHolder = ({courseList}) => {
               category={item.statusName}
               level={item.levelName}
               image={item.tumbImageAddress}
+              id={item.courseId}
             />
           )
         })}

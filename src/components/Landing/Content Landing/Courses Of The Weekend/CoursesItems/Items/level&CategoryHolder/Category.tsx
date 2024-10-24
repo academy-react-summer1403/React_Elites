@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './style.module.css'
 
-const Category = (props) => {
+const Category = ({category}) => {
   return (
-    <div className={style.category}>{props.category}</div>
+    <div className={style.category}>{category}</div>
   )
 }
 

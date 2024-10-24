@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './style.module.css'
 
-const Level = (props) => {
+const Level = ({level}) => {
   return (
-    <div className={style.level}>{props.level}</div>
+    <div className={style.level}>{level}</div>
   )
 }
 
