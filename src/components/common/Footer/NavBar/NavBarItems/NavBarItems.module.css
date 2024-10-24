@@ -9,10 +9,8 @@
 
 
 .textHover {
-
     box-sizing: border-box;
     position: relative;
-    padding: 10px;
     &::before,
     &::after {
         content: '';

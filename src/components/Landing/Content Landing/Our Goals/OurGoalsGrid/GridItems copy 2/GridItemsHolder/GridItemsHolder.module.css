@@ -15,7 +15,10 @@
     animation-timeline: view();
     animation-range:  entry 100px;
 }
-
+.holder:hover{
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.155);
+    scale: 1.05;
+}
 @keyframes visible{
     to {
         top: 0;

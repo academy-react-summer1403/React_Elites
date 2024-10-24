@@ -60,7 +60,6 @@ const BlogsList = () => {
                 { sortModal && <SortModal setSortModal={setSortModal} /> }
               </div>
               <ListCardBlogs />
-              <ChangePageList />
             </div>
           </div>
           

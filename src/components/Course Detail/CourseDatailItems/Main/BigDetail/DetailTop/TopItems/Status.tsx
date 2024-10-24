@@ -2,7 +2,7 @@ import React from 'react'
 import style from './style.module.css'
 import { useGlobalState } from '../../../../../../../State/State';
 
-const Status = () => {
+const Status = ({status}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <div className={style.Status} data-theme={darkMode ? "darkNoBG" : "lightMode"}>

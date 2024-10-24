@@ -21,13 +21,15 @@
 }
 
 .button {
-    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 40px auto;
-    text-align:center;
     border: none;
     background-size: 300% 100%;
     background: #2F2F2F;
@@ -42,6 +44,10 @@
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+}
+
+.button:active {
+    scale: 2;
 }
 
 .button:hover {

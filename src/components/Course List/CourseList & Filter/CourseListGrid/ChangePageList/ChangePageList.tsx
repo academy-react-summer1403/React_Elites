@@ -2,22 +2,44 @@ import React from 'react'
 import style from '../../../../../Style/blogList.module.css'
 import { useGlobalState } from '../../../../../State/State';
 
-const ChangePageList = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+const ChangePageList = ({setPagInation, pagInation}) => {
+  const [darkMode] = useGlobalState('DarkMode');
+
+  const toNextPage = () => {
+    if(pagInation > 5){
+      setPagInation(1)
+    }
+    else{
+      setPagInation(pagInation++);
+    }
+  }
+  const toPreviousPage = () => {
+    if(pagInation < 1){
+      setPagInation(5)
+    }
+    else{
+      setPagInation(pagInation--);
+    }
+  }
   return (
     <div className={style.ChangePageList} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-        <span className={style.toLeft}></span>
-          <input type='radio' name='page' id='page1' className={style.inputChangePage} />
-            <label htmlFor='page1' className={style.button}  data-theme={darkMode ? "darkSmall" : "lightMode"}>1</label>
-            <input type='radio' name='page' id='page2' className={style.inputChangePage}/>
-            <label htmlFor='page2' className={style.button} data-theme={darkMode ? "darkSmall" : "lightMode"}>2</label>
-            <input type='radio' name='page' id='page3' className={style.inputChangePage}/>
-            <label htmlFor='page3' className={style.button} data-theme={darkMode ? "darkSmall" : "lightMode"}>3</label>
-            <input type='radio' name='page' id='page4' className={style.inputChangePage}/>
-            <label htmlFor='page4' className={style.button} data-theme={darkMode ? "darkSmall" : "lightMode"}>4</label>
-            <input type='radio' name='page' id='page5' className={style.inputChangePage}/>
-            <label htmlFor='page5' className={style.button} data-theme={darkMode ? "darkSmall" : "lightMode"}>5</label>
-        <span className={style.toRight}></span>
+        <span className={style.toLeft} onClick={toPreviousPage}></span>
+          <div className={pagInation == 1 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+              setPagInation(1)
+          }}>1</div>
+          <div className={pagInation == 2 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+              setPagInation(2)
+          }}>2</div>
+          <div className={pagInation == 3 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+              setPagInation(3)
+          }}>3</div>
+          <div className={pagInation == 4 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+              setPagInation(4)
+          }}>4</div>
+          <div className={pagInation == 5 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+              setPagInation(5)
+          }}>5</div>
+        <span className={style.toRight} onClick={toNextPage}></span>
     </div>
   )
 }
