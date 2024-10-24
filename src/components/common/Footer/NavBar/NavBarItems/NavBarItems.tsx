@@ -7,7 +7,7 @@ const NavBarItems = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <>        
-        <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> خدمات ما  </NavLink>
+        <NavLink to="/" className={style.text} data-theme={darkMode ? "darkNoBG" : "lightMode"}> خدمات ما  </NavLink>
         <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> ارتباط باما  </NavLink>
         <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> درباره ما  </NavLink>
         <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> اساتید  </NavLink>
