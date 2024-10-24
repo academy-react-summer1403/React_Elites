@@ -146,9 +146,15 @@
     background: url(../assets/Images/icons8-arrow-left.png) 50% 50% no-repeat;
     background-size: 55%;
 }
+.toLeft:active{
+    scale: 1.5;
+}
 .toRight{
     background: url(../assets/Images/icons8-arrow-right.png) 50% 50% no-repeat;
     background-size: 55%;
+}
+.toRight:active{
+    scale: 1.5;
 }
 .button{
     font-family: IranYekan;
@@ -158,10 +164,19 @@
     text-align: center;
     line-height: 50px;
     color: #272727;
+    user-select: none;
 }
-.inputChangePage:checked+label{
+.selected{
     background: #3772FF;
     color: white;
+    font-family: IranYekan;
+    height: 100%;
+    width: 45px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    color: #272727;
+    user-select: none;
 }
 
 .sortResponsive{

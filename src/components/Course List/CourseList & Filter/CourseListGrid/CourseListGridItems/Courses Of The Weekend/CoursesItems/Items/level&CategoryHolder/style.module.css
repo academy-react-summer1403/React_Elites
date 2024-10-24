@@ -1,21 +1,21 @@
 .holder{
-    width: auto;
+    width: 95%;
     height: 10%;
     position: absolute;
     top: 10px;
     right: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    gap: 20px;
-    flex-flow: row wrap;
+    gap: 10px;
+    flex-flow: row nowrap;
 }
 
 .level{
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 3%;
+    padding-left: 3%;
     font-size: 14px;
     font-family: DannaMedium;
     color: #FCFCFC;
@@ -24,10 +24,13 @@
 }
 
 .category{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 3%;
+    padding-left: 3%;
     font-size: 14px;
     font-family: DannaMedium;
     color: #FCFCFC;
