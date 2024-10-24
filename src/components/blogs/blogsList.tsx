@@ -3,15 +3,18 @@ import styleBlogList from "./../../Style/blogList.module.css";
 import { Filter } from "./filter/filter.tsx";
 import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
 import { ChangePageList } from "./ChangePageList/ChangePageList.tsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FilterModal } from "./Filter Modal/FilterModal.tsx";
 import { SortModal } from "./Sort Modal/SortModal.tsx";
 import { useGlobalState } from "../../State/State.tsx";
+import { useParams } from "react-router-dom";
+import { getBlogById } from "../../core/services/api/BlogById.ts";
 
 const BlogsList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [filterModal, setFilterModal] = useState(false)
   const [sortModal, setSortModal] = useState(false)
+
   return (
   <>
     <Formik>

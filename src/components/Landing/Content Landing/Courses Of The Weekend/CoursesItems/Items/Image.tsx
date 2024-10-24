@@ -1,9 +1,12 @@
 import React from 'react'
 import style from './style.module.css'
+import { NavLink } from 'react-router-dom'
 
 const Image = (props) => {
   return (
-    <img className={style.imageProgramming} src={props.image} />
+    <NavLink to={"/Blogs-Detail/" +props.id} className={style.holderImage}>
+          <img className={style.imageProgramming} src={props.image} />
+    </NavLink>
   )
 }
 

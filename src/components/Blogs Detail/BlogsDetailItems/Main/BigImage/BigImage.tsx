@@ -1,10 +1,9 @@
 import React from 'react'
 import style from './BigImage.module.css'
-import FigmaCourse from '../../../../../assets/Images/FigmaCourse.png'
 
-const BigImage = () => {
+const BigImage = ({image}) => {
   return (
-    <img src={FigmaCourse} className={style.image} />
+    <img src={image} className={style.image} />
   )
 }
 
