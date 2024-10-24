@@ -16,7 +16,6 @@ const CourseDetail = () => {
 
   const getCourseDetail = async () => {
     const Details = await getCourseById(id)
-    console.log(Details)
     setCourseDetail(Details)
   }
   useEffect(() => {
