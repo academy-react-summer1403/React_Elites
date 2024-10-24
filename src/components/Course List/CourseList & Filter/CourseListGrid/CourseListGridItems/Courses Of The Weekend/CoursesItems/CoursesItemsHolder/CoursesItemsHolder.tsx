@@ -8,7 +8,7 @@ import { LevelAndCategoryHolder } from '../Items/level&CategoryHolder/LevelAndCa
 const CoursesItemsHolder = (props) => {
   return (
     <div className={style.holder}>
-        <Image image={props.image} />
+        <Image id={props.id} image={props.image} />
         <Title title={props.title} />
         <TeacherAndPriceHolder teacher={props.teacher} price={props.price} />
         <LevelAndCategoryHolder level={props.level} category={props.category} />
