@@ -6,14 +6,14 @@ import { Category } from '../TopItems/Category'
 import { Teacher } from '../TopItems/Teacher'
 import { useGlobalState } from '../../../../../../../State/State'
 
-const Top = () => {
+const Top = ({status, teacher, category, level}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <div className={style.top} data-theme={darkMode ? "dark" : "lightMode"}>
-        <Teacher />
-        <Category />
-        <Level />
-        <Status />
+        <Teacher teacher={teacher} />
+        <Category category={category} />
+        <Level level={level} />
+        <Status status={status} />
     </div>
   )
 }

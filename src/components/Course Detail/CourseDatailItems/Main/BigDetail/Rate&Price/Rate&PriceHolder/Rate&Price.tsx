@@ -3,11 +3,11 @@ import style from './Rate&Price.module.css'
 import { Price } from '../Price/Price'
 import { RateAndCommentsHolder } from '../Rate&Comments/RateAndCommentsHolder'
 
-const RateAndPrice = () => {
+const RateAndPrice = ({comments, rate, price}) => {
   return (
     <div className={style.holder}>
-        <Price />
-        <RateAndCommentsHolder />
+        <Price price={price} />
+        <RateAndCommentsHolder rate={rate} comments={comments} />
     </div>
   )
 }

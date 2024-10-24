@@ -11,6 +11,7 @@ const CoursesHolder = ({courseList}) => {
         {courseList.map((item, index) => {
         return (
           <CoursesItemsHolder 
+            id={item.courseId}
             title={item.title}
             teacher={item.teacherName}
             price={item.cost}
