@@ -6,6 +6,7 @@ import {LoginPage2} from './components/Login Page2/login.tsx'
 import {ForgetPass} from './components/forgetPassword/forgetPassword.tsx'
 import {ForgetPassPage2} from './components/forgetPassword page2/forgetPassword.tsx'
 import {TeacherPage} from './components/teacher page/teacherPage.tsx'
+import {AboutWe} from './components/aboutWe/aboutWe.tsx'
 import {StudentPanel} from './components/studentPanel/studentCurse-Blog/studentPanel.tsx'
 import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage/Image.tsx'
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
       {
         path: "/teacher-page",
         element: <TeacherPage />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/about-we",
+        element: <AboutWe />,
         errorElement: <ErrorPage />
       },
     ]
