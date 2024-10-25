@@ -20,6 +20,10 @@ const StudentGhabLeft = () => {
                             <div className={style.bottom}>
                                 <div className={style.menu}>
                                     <div>
+                                        <div className={style.home}> </div>
+                                        <NavLink to='/' data-theme={darkMode ? "darkNoBG" : "lightMode"}> صفحه اصلی</NavLink>
+                                    </div>
+                                    <div>
                                         <div className={style.Dashboard}> </div>
                                         <NavLink data-theme={darkMode ? "darkNoBG" : "lightMode"}> داشبرد</NavLink>
                                     </div>
@@ -47,10 +51,18 @@ const StudentGhabLeft = () => {
                                         <div className={style.pay}> </div>
                                         <NavLink to="/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> پرداخت ها</NavLink>
                                     </div>
-                                </div>
-                                <div className={style.logout}>
-                                    <div className={style.exit}> </div>
-                                    <NavLink to='/'> خروج از حساب کاربری</NavLink>
+                                    <div>
+                                    <div className={style.report}> </div>
+                                    <NavLink to='/' data-theme={darkMode ? "darkNoBG" : "lightMode"}> گزارش </NavLink>
+                                    </div>
+                                    <div>
+                                        <div className={style.communicate}> </div>
+                                        <NavLink to='/' data-theme={darkMode ? "darkNoBG" : "lightMode"}> ارتباط با ما </NavLink>
+                                    </div>
+                                    <div className={style.logout}>
+                                        <div className={style.exit}> </div>
+                                        <NavLink to='/'> خروج از حساب کاربری</NavLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>

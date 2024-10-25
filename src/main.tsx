@@ -28,6 +28,8 @@ import { BlogsDetail } from './components/Blogs Detail/CourseDetailHolder/Blogs.
 import { Payment } from './components/Payment First Page/Payment Holder/Payment.tsx'
 import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 import { StudentPayment } from './components/studentPanel/Student Payment/StudentPayment.tsx'
+import { StudentMyCourse } from './components/studentPanel/studentCurse-Blog/My Courses/StudentMyCourse.tsx'
+import { StudentMyReserve } from './components/studentPanel/studentCurse-Blog/My Reserve/StudentMyReserve.tsx'
 
 const router = createBrowserRouter([
   {
@@ -111,36 +113,47 @@ const router = createBrowserRouter([
     element: <ForgetPassPage2 />,
     errorElement: <ErrorPage />
   },
-
   {
-    path: "/Student-Panel-Course",
+    path: "/Student-Panel",
     element: <StudentPanel />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/Image",
-    element: <ImageForm />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Information",
-    element: <InformationForm />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/Link",
-    element: <LinkForm />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Location",
-    element: <LocationForm />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/Shopping-Basket",
-    element: <StudentPayment />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    children:[
+      {
+        path: "/Student-Panel/My-Courses",
+        element: <StudentMyCourse />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/Student-Panel/Information",
+        element: <InformationForm />,
+        errorElement: <ErrorPage />
+      }, 
+      {
+        path: "/Student-Panel/Image",
+        element: <ImageForm />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/Link",
+        element: <LinkForm />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/Location",
+        element: <LocationForm />,
+        errorElement: <ErrorPage />
+      }, 
+      {
+        path: "/Student-Panel/Shopping-Basket",
+        element: <StudentPayment />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/My-Reserve",
+        element: <StudentMyReserve />,
+        errorElement: <ErrorPage />
+      },
+    ]
   },
   {
     path: "/Payment-Gateway",

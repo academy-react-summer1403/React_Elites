@@ -12,14 +12,8 @@ const StudentPayment = () => {
   return (
     <Formik>
       {(form) => (
-        <div className={style.root}>
-            <StudentGhabRight />
-            <div className={style.left}> 
-                <StudentGhabLeft />
-                    <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-                        <Payment />
-                    </div>
-            </div>
+        <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+          <Payment />
         </div>
       )}
     </Formik>

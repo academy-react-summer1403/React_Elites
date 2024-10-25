@@ -1,7 +1,7 @@
-import { CardBlogs } from '../cardsBlogs'
+import { CardBlogs } from '../CoursesCard'
 import style from './cardsBlogsListStyle.module.css'
-import figmaCourse from '../../../../../assets/Images/figmaBlog.png'
-import JSBlog from '../../../../../assets/Images/JSBlog.png'
+import figmaCourse from '../../../../../../assets/Images/figmaBlog.png'
+import JSBlog from '../../../../../../assets/Images/jsBlog.png'
 
 const ListCardBlogs = () => {
 

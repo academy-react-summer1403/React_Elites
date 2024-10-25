@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './../../ItemsHolder.module.css'
-import { useGlobalState } from '../../../../../../State/State';
+import { useGlobalState } from '../../../../../../../State/State';
 
 const Level = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');

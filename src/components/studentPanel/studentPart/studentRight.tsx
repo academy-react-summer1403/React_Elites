@@ -18,11 +18,11 @@ const StudentGhabRight = () => {
                         </div>
                         <div>
                             <div className={style.MyPeriod}> </div>
-                            <NavLink to='/Student-Panel-Course' data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره من</NavLink>
+                            <NavLink to='/Student-Panel/My-Courses' data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره من</NavLink>
                         </div>
                         <div>
                             <div className={style.MyReservation}> </div>
-                            <NavLink to='' data-theme={darkMode ? "darkNoBG" : "lightMode"}> رزرو من</NavLink>
+                            <NavLink to='/Student-Panel/My-Reserve' data-theme={darkMode ? "darkNoBG" : "lightMode"}> رزرو من</NavLink>
                         </div>
                         <div>
                             <div className={style.favoritePeriod}> </div>
@@ -34,11 +34,11 @@ const StudentGhabRight = () => {
                         </div>
                         <div>
                             <div className={style.profile}> </div>
-                            <NavLink to='/Information' data-theme={darkMode ? "darkNoBG" : "lightMode"}> پروفایل</NavLink>
+                            <NavLink to='/Student-Panel/Information' data-theme={darkMode ? "darkNoBG" : "lightMode"}> پروفایل</NavLink>
                         </div>
                         <div>
                             <div className={style.pay}> </div>
-                            <NavLink to="/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> پرداخت ها</NavLink>
+                            <NavLink to="/Student-Panel/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> پرداخت ها</NavLink>
                         </div>
                     </div>
                     <div className={style.logout}>

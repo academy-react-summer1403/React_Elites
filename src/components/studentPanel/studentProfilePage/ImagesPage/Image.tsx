@@ -18,31 +18,25 @@ const ImageForm = () => {
 
         <Formik>
             {(form) => (
-                <div className={style.root}>
-                    <StudentGhabRight />
-                    <div className={style.left}>
-                        <StudentGhabLeft />
-                        <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-                            <div className={style.titleHolder}>
-                                <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
-                            </div>
-                            <div className={styleImage.page2}>
-                                <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
-                                    <div className={styleInform.right}>
-                                        <NavLink to="/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اطلاعات حساب کاربری </NavLink>
-                                        <div><h1 className={styleImage.selected}>عکس ها </h1></div>
-                                        <NavLink to="/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
-                                        <NavLink to='/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
-                                    </div>
-                                </div>
-                                <div className={styleImage.imagesHolder}>
-                                    <img className={styleImage.img} src={image1} />
-                                    <img className={styleImage.img} src={image2} />
-                                    <img className={styleImage.img} src={image3} />
-                                    <img className={styleImage.img} src={image4} />
-                                </div>    
+                <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+                    <div className={style.titleHolder}>
+                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
+                    </div>
+                    <div className={styleImage.page2}>
+                        <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
+                            <div className={styleInform.right}>
+                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اطلاعات حساب کاربری </NavLink>
+                                <div><h1 className={styleImage.selected}>عکس ها </h1></div>
+                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
+                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
                             </div>
                         </div>
+                        <div className={styleImage.imagesHolder}>
+                            <img className={styleImage.img} src={image1} />
+                            <img className={styleImage.img} src={image2} />
+                            <img className={styleImage.img} src={image3} />
+                            <img className={styleImage.img} src={image4} />
+                        </div>    
                     </div>
                 </div>
             )}

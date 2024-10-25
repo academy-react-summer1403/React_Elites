@@ -172,6 +172,15 @@
 .pay{
     background-image: url(../assets/Images/moneyWhite.png);
 }
+.home{
+    background-image: url(https://img.icons8.com/?size=100&id=Gc9qmZNN9yFN&format=png&color=FFFFFF);
+}
+.report{
+    background-image: url(https://img.icons8.com/?size=100&id=7SDxQwWmjb1X&format=png&color=FFFFFF);
+}
+.communicate{
+    background-image: url(https://img.icons8.com/?size=100&id=23410&format=png&color=FFFFFF);
+}
 .logout{
     margin: 250px 16px 0 16px;
     padding: 4.65% 4.5% 4.65% 20%;
@@ -266,7 +275,8 @@
     background-color: #ececec;
     height: 48px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
+    gap: 60px;
     padding: 0 10px;
 }
 .headerList > div{
@@ -318,7 +328,7 @@
     top: 0;
     right: 0;
     width: 0px;
-    height: 100vh;
+    height: 100%;
     visibility: hidden;
     transition: 0.5s;
     opacity: 0;
@@ -336,9 +346,13 @@
     height: 30px;
     background: url(../assets/Images/icons8-close-50.png);
     background-size: cover;
+    
 }
 
 @media screen and (max-width:1362px){
+    .navigate{
+        display: none;
+    }
     .right{
         display: none;
     }
@@ -351,6 +365,7 @@
     .hamburgerMenu{
         display: block;
     }
+
 }
 @media screen and (max-width: 1085px) {
     .list{
