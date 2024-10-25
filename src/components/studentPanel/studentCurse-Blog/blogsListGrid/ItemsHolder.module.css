@@ -32,16 +32,38 @@
 }
 .View{
     background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=000000") no-repeat 0% 50%;
-    background-size: 100%;
-    width: 2.32%;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
 }
 .holder > div:nth-child(2){
     height: 34px;
     overflow: hidden;
     width: 11.6%;
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 1003px) {
     .holder{
-        width: 78%;
+        justify-content: right;
+        gap: 50px;
+    }
+    .holder > div:nth-child(2){
+    width: 20%;
+    }
+    .level{
+        width: 15%;
+    }
+    .View{
+        width: 50px;
+    }
+}
+@media screen and (max-width: 859px) {
+    .level{
+        display: none;
+    }
+}
+@media screen and (max-width: 491px) {
+    .holder > div:nth-child(2){
+        width: 300px;
     }
 }

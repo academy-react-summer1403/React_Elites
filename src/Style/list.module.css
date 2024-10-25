@@ -23,18 +23,16 @@ form{
     direction: rtl;
 }
 .navigate{
-    max-width: 24rem;
+    max-width: 550px;
     gap: 6px;
     display: flex;
     height: 100%;
 }
 .textNavigate{
-    font-size: 1rem;
-    font-family: DannaِBold;
+    font-size: 16px;
     line-height: 22.88px;
     text-align: right;
     color: #2f2f2f86;
-    letter-spacing: -0.9px;
 }
 .selectedNavigate{
     color: #000000;

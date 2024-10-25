@@ -42,7 +42,7 @@ const Register = () => {
                     </div>
                   </div>
                   <div className="mt-10">
-                    <h1 className="text-black font-DannaBold text-3xl ">شروع یک ماجراجویی</h1>
+                    <h1 className="text-black font-DannaBold text-3xl text-right">شروع یک ماجراجویی</h1>
                     <h1 className="mt-2 text-base items-right text-gray-500 font-DannaDemiBold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
                   </div>
                   <div className="flex w-full mt-64 mb-40 justify-center">
@@ -93,7 +93,6 @@ const Register = () => {
                   </Form>
                 </div>
               </div>
-              <RegisterPage2 />
             </div>
           )}
         </Formik>

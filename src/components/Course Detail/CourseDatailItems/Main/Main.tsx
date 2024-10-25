@@ -9,7 +9,6 @@ const Main = ({dislike, image, rate, comments, like, price, teacher, status, lev
 
         <BigDetail 
           dislike={dislike}
-          dislike={dislike}
           like={like}
           rate={rate}
           comments={comments}

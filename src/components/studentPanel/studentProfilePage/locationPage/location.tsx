@@ -5,9 +5,11 @@ import styleLocation from "./partLocationPage/location.module.css";
 import { StudentGhabRight } from "../../studentPart/studentRight";
 import { StudentGhabLeft } from "../../studentPart/studentLeft";
 import { NavLink } from "react-router-dom";
+import { useGlobalState } from "../../../../State/State";
 
 
 const LocationForm = () => {
+    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
     return (
 
@@ -17,23 +19,23 @@ const LocationForm = () => {
                     <StudentGhabRight />
                     <div className={style.left}>
                         <StudentGhabLeft />
-                        <div className={style.page}>
+                        <div className={style.page} data-theme={darkMode ? "dark" : "lightMode"}>
                             <div className={style.titleHolder}>
-                                <h1 className={style.title}>پروفایل من</h1>
+                                <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
                             </div>
                             <div className={styleInform.page2}>
 
-                                <div className={styleInform.rightHolder}>
-                                    <div className={styleInform.right}>
-                                        <NavLink to="/Information" className={styleInform.pages}>اطلاعات حساب کاربری </NavLink>
-                                        <NavLink to='/Image' className={styleInform.pages}>عکس ها </NavLink>
-                                        <div><h1 className={styleLocation.selected}>محل سکونت </h1></div>
-                                        <NavLink to='/Link' className={styleInform.pages}>لینک ها </NavLink>
+                                <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
+                                    <div className={styleInform.right} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
+                                        <NavLink to="/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اطلاعات حساب کاربری </NavLink>
+                                        <NavLink to='/Image' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>عکس ها </NavLink>
+                                        <div><h1 className={styleLocation.selected} >محل سکونت </h1></div>
+                                        <NavLink to='/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
                                     </div>
                                 </div>
                                 <div className={styleLocation.left}>
                                     <div className={styleLocation.locationHolder}> 
-                                        <h1>داخل نقشه موقعیت مکانی محل سکونت خود را انتخاب کنید</h1>
+                                        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>داخل نقشه موقعیت مکانی محل سکونت خود را انتخاب کنید</h1>
                                         <div className={styleLocation.location}></div>
                                     </div>
                                 </div>
