@@ -25,4 +25,16 @@
     text-align: left;
     direction: rtl;
 }
+.tooman{
+    font-size: 14px;
+    font-family: DannaNormal;
+}
+.holderP{
+    color: #2F2F2F;
+    width: auto;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    gap: 3px;
+}
 

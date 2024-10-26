@@ -12,16 +12,6 @@
     background-color: #ededed;
     overflow: hidden;
 }
-.holder > img{
-    height: 90px;
-    width: auto;
-    border-radius: 20px;
-
-}
-.holder > div:nth-child(2){
-    white-space: wrap;
-    height: 100%;
-}
 
 @media screen and (max-width: 587px) {
     .holder{

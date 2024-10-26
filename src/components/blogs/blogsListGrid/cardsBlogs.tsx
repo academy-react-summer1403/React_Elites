@@ -1,6 +1,6 @@
 import style from './ItemsHolder.module.css'
-import { Image } from '../../Landing/Content Landing/Courses Of The Weekend/CoursesItems/Items/image'
-import { Title } from '../../Landing/Content Landing/Courses Of The Weekend/CoursesItems/Items/title'
+import { Image } from './index/Items/Image'
+import { Title } from './index/Items/Title'
 import { TeacherAndViewAndDateHolder } from './index/Teacher&Date&View/TeacherAndDateAndViewHolder'
 
 const CardBlogs = (props) => {

@@ -11,7 +11,7 @@ const NavBarItems = () => {
   const [isChecked4, setIsChecked4] = useState(false)
   return (
     <div className={style.container}>
-        <NavLink to="" className={isChecked ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}
+        <NavLink to="/about-We" className={isChecked ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}
           onClick={() => {
             setIsChecked(true);
             setIsChecked2(false);

@@ -35,19 +35,16 @@
     font-weight: 500;
     font-family: DannaBold;
 }
-input{
+.input{
     width: 298px;
     border-radius: 20px;
     background: #848484;
-    color: #fff !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    font-family: DannaBold !important;
-    padding: 10px 20px !important;
+    color: #fff ;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: DannaBold;
+    padding: 10px 20px ;
     border: 2px solid #4d4d4d;
-}
-input::placeholder{
-    color: #fff !important;
     text-align: right;
 }
 @media screen and (max-width: 500px) {

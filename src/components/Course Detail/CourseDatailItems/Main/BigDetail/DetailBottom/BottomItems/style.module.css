@@ -43,6 +43,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    width: 100%;
 }
 .bottomL{
     font-size: 16px;
@@ -51,6 +52,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    width: 100%;
 }
 
 .Category{
@@ -70,6 +72,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    width: 100%;
 }
 .bottomC{
     font-size: 16px;
@@ -78,6 +81,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    width: 100%;
 }
 
 .Teacher{
@@ -87,7 +91,7 @@
     display: flex;
     justify-content: space-between;
     direction: rtl;
-    flex-flow:  row wrap;
+    flex-flow: row wrap;
 }
 .topT{
     font-size: 14px;
@@ -105,6 +109,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    width: 100%;
 }
 
 @media screen and (max-width: 698px) {

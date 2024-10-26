@@ -7,7 +7,6 @@ import { ReservedCourses } from '../Payment Items/Reserved Courses/Reserved Cour
 const Payment = () => {
   return (
     <div className={style.payment}>
-        <HeaderPayment />
         <Pay />
         <ReservedCourses />
     </div>

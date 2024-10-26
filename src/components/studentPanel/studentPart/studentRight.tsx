@@ -1,8 +1,10 @@
 import { Formik } from "formik";
 import style from "./../../../Style/studentPanel.module.css";
 import { NavLink } from "react-router-dom";
+import { useGlobalState } from "../../../State/State";
 
 const StudentGhabRight = () => {
+    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
     return (
         <Formik>
@@ -12,31 +14,31 @@ const StudentGhabRight = () => {
                     <div className={style.menu}>
                         <div>
                             <div className={style.Dashboard}> </div>
-                            <NavLink> داشبرد</NavLink>
+                            <NavLink data-theme={darkMode ? "darkNoBG" : "lightMode"}> داشبرد</NavLink>
                         </div>
                         <div>
                             <div className={style.MyPeriod}> </div>
-                            <NavLink to='/Student-Panel-Course'> دوره من</NavLink>
+                            <NavLink to='/Student-Panel/My-Courses' data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره من</NavLink>
                         </div>
                         <div>
                             <div className={style.MyReservation}> </div>
-                            <NavLink to=''> رزرو من</NavLink>
+                            <NavLink to='/Student-Panel/My-Reserve' data-theme={darkMode ? "darkNoBG" : "lightMode"}> رزرو من</NavLink>
                         </div>
                         <div>
                             <div className={style.favoritePeriod}> </div>
-                            <NavLink> دوره های موردعلاقه</NavLink>
+                            <NavLink to="/Student-Panel/Fav-Courses" data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره های موردعلاقه</NavLink>
                         </div>
                         <div>
                             <div className={style.BlogMenu}> </div>
-                            <NavLink> بلاگ های موردعلاقه</NavLink>
+                            <NavLink data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ های موردعلاقه</NavLink>
                         </div>
                         <div>
                             <div className={style.profile}> </div>
-                            <NavLink to='/Information'> پروفایل</NavLink>
+                            <NavLink to='/Student-Panel/Information' data-theme={darkMode ? "darkNoBG" : "lightMode"}> پروفایل</NavLink>
                         </div>
                         <div>
                             <div className={style.pay}> </div>
-                            <NavLink to="/Shopping-Basket"> پرداخت ها</NavLink>
+                            <NavLink to="/Student-Panel/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> پرداخت ها</NavLink>
                         </div>
                     </div>
                     <div className={style.logout}>

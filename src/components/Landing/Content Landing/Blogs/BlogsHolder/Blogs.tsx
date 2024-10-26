@@ -64,6 +64,7 @@ const Blogs = ({topBlogs}) => {
                     title={item.title}
                     pub={item.addUserFullName}
                     views={item.currentView}
+                    date={item.insertDate}
                 />
               )
           })}

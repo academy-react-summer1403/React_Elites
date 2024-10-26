@@ -38,6 +38,8 @@ const CourseDetail = () => {
           rate={courseDetail?.currentRate}
           price={courseDetail?.cost}
           image={courseDetail?.imageAddress}
+          start={courseDetail?.startTime}
+          end={courseDetail?.endTime}
         />
         <Description description={courseDetail?.describe} />
         <AllComments />

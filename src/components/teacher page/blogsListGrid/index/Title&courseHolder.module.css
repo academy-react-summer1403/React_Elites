@@ -1,6 +1,4 @@
 .holder{
-    display: flex;
-    flex-flow: row wrap;
     width: 100%;
 }
 .holder > div:nth-child(2),.holder > div:nth-child(3){

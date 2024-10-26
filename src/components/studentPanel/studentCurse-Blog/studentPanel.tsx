@@ -2,12 +2,12 @@ import {  Formik  } from "formik";
 import style from "./../../../Style/studentPanel.module.css";
 import {StudentGhabRight} from "../studentPart/studentRight";
 import {StudentGhabLeft} from "../studentPart/studentLeft";
-import {StudentPanelSearch} from "../studentPart/studentPanelSearch";
-import {ListCardBlogs} from "./blogsListGrid/index/cardsBlogsList";
-import {ChangePageList} from "../../blogs/ChangePageList/ChangePageList";
+import { useGlobalState } from "../../../State/State";
+import { Outlet } from "react-router-dom";
 
 
 const StudentPanel = () => {
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
 
@@ -17,28 +17,8 @@ const StudentPanel = () => {
             <StudentGhabRight />
             <div className={style.left}> 
                 <StudentGhabLeft />
-                <div className={style.page}>           
-                    <div className={style.page2}>
-                        <div className={style.titleHolder}>
-                            <h1 className={style.title}>دوره من</h1>
-                        </div>
-                        <StudentPanelSearch />
-                        <div className={style.list}> 
-                          <div className={style.headerList}>
-                            <div className={style.imgList}># </div>
-                            <div className={style.nameList}>نام </div>
-                            <div className={style.teacherList}> مدرس</div>
-                            <div className={style.dateStartList} >تاریخ برگزاری </div>
-                            <div className={style.dateEndList}>تاریخ اتمام </div>
-                            <div className={style.levelList}>سطح </div>
-                            <div className={style.eyeList}> </div>
-                          </div>
-                          <ListCardBlogs />
-                          <div className="flex justify-center mt-8">
-                            <ChangePageList />
-                          </div>  
-                        </div>
-                    </div>
+                <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+                  <Outlet />          
                 </div>
             </div>
         </div>

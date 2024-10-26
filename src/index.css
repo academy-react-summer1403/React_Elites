@@ -147,3 +147,6 @@
   background: url("https://img.icons8.com/?size=24&id=7FSfWwb2mVjQ&format=png&color=14FFEC")  no-repeat 100% 50%;
   color: #14FFEC !important;
 }
+[data-theme="view"] {
+  background: url("https://img.icons8.com/?size=25&id=85028&format=png&color=14FFEC")  no-repeat 100% 50%;
+}

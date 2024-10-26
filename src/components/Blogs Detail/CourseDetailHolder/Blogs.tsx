@@ -37,6 +37,7 @@ const BlogsDetail = () => {
           dislikes={blogDetail?.currentDissLikeCount}
           rate={blogDetail?.currentRate}
           comment={blogDetail?.commentsCount}
+          insertDate={blogDetail?.insertDate}
         />
         <Description description={blogDetail?.describe} />
         <AllComments comments={comments} />

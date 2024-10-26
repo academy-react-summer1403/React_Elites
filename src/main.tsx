@@ -6,6 +6,7 @@ import {LoginPage2} from './components/Login Page2/login.tsx'
 import {ForgetPass} from './components/forgetPassword/forgetPassword.tsx'
 import {ForgetPassPage2} from './components/forgetPassword page2/forgetPassword.tsx'
 import {TeacherPage} from './components/teacher page/teacherPage.tsx'
+import {AboutWe} from './components/aboutWe/aboutWe.tsx'
 import {StudentPanel} from './components/studentPanel/studentCurse-Blog/studentPanel.tsx'
 import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage/Image.tsx'
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
@@ -26,6 +27,10 @@ import { RegisterPage3 } from './components/register Page3/register.tsx'
 import { BlogsDetail } from './components/Blogs Detail/CourseDetailHolder/Blogs.tsx'
 import { Payment } from './components/Payment First Page/Payment Holder/Payment.tsx'
 import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
+import { StudentPayment } from './components/studentPanel/Student Payment/StudentPayment.tsx'
+import { StudentMyCourse } from './components/studentPanel/studentCurse-Blog/My Courses/StudentMyCourse.tsx'
+import { StudentMyReserve } from './components/studentPanel/studentCurse-Blog/My Reserve/StudentMyReserve.tsx'
+import { StudentMyFavCourses } from './components/studentPanel/studentCurse-Blog/Fav Courses/StudentMyFavCourses.tsx'
 
 const router = createBrowserRouter([
   {
@@ -62,7 +67,12 @@ const router = createBrowserRouter([
         path: "/teacher-page",
         element: <TeacherPage />,
         errorElement: <ErrorPage />
-      }
+      },
+      {
+        path: "/about-we",
+        element: <AboutWe />,
+        errorElement: <ErrorPage />
+      },
     ]
   },
   {
@@ -104,36 +114,52 @@ const router = createBrowserRouter([
     element: <ForgetPassPage2 />,
     errorElement: <ErrorPage />
   },
-
   {
-    path: "/Student-Panel-Course",
+    path: "/Student-Panel",
     element: <StudentPanel />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/Image",
-    element: <ImageForm />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Information",
-    element: <InformationForm />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/Link",
-    element: <LinkForm />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Location",
-    element: <LocationForm />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/Shopping-Basket",
-    element: <Payment />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    children:[
+      {
+        path: "/Student-Panel/My-Courses",
+        element: <StudentMyCourse />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/Student-Panel/Information",
+        element: <InformationForm />,
+        errorElement: <ErrorPage />
+      }, 
+      {
+        path: "/Student-Panel/Image",
+        element: <ImageForm />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/Link",
+        element: <LinkForm />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/Location",
+        element: <LocationForm />,
+        errorElement: <ErrorPage />
+      }, 
+      {
+        path: "/Student-Panel/Shopping-Basket",
+        element: <StudentPayment />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/My-Reserve",
+        element: <StudentMyReserve />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/Fav-Courses",
+        element: <StudentMyFavCourses />,
+        errorElement: <ErrorPage />
+      },
+    ]
   },
   {
     path: "/Payment-Gateway",

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './ViewsAndDate.module.css'
 import { useGlobalState } from '../../../../../../../../State/State';
 
-const Date = (props) => {
+const Date = ({dateMiladi}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
   return (
-    <div className={style.date} data-theme={darkMode ? "dark" : "lightMode"}>{props.date}</div>
+    <div className={style.date} data-theme={darkMode ? "dark" : "lightMode"}>{dateMiladi}</div>
   )
 }
 
