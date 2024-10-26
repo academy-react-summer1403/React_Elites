@@ -26,7 +26,7 @@ const StudentGhabRight = () => {
                         </div>
                         <div>
                             <div className={style.favoritePeriod}> </div>
-                            <NavLink data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره های موردعلاقه</NavLink>
+                            <NavLink to="/Student-Panel/Fav-Courses" data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره های موردعلاقه</NavLink>
                         </div>
                         <div>
                             <div className={style.BlogMenu}> </div>

@@ -11,7 +11,7 @@ const ReserveCards = (props) => {
   return (
     <div className={style.holder}>
         <Image image={props.image} />
-        <Title className={style.title} title={props.title} />
+        <Title title={props.title} />
         <Teacher teacher={props.teacher} />
         <Date date={props.date} />
         <Date date={props.date} />

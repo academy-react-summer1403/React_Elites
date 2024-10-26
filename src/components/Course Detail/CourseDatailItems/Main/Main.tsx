@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './Main.module.css'
 import { BigImage } from './BigImage/BigImage'
 import { BigDetail } from './BigDetail/BigDetailHolder/BigDetail'
 
-const Main = ({dislike, image, rate, comments, like, price, teacher, status, level, category, title}) => {
+const Main = ({dislike, image, rate, comments, like, price, teacher, status, level, category, title, start, end}) => {
+  
   return (
     <div className={style.main}>
-
         <BigDetail 
           dislike={dislike}
           like={like}
@@ -18,9 +18,10 @@ const Main = ({dislike, image, rate, comments, like, price, teacher, status, lev
           level={level}
           category={category}
           title={title}
+          start={start}
+          end={end}
         />
         <BigImage image={image} />
-
     </div>
   )
 }

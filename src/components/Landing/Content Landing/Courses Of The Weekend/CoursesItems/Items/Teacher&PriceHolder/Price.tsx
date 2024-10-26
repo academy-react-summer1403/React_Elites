@@ -5,7 +5,10 @@ import { useGlobalState } from '../../../../../../../State/State';
 const Price = ({price}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.price} data-theme={darkMode ? "dark" : "lightMode"}>{price}</div>
+    <div className={style.holderP}>
+      <div className={style.tooman}> تومان </div>
+      <div className={style.price} data-theme={darkMode ? "dark" : "lightMode"}> {price}</div>
+    </div>
   )
 }
 

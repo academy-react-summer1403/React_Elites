@@ -276,7 +276,7 @@
     height: 48px;
     display: flex;
     justify-content: right;
-    gap: 60px;
+    gap: 55px;
     padding: 0 10px;
 }
 .headerList > div{

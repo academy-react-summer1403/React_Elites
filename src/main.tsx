@@ -30,6 +30,7 @@ import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 import { StudentPayment } from './components/studentPanel/Student Payment/StudentPayment.tsx'
 import { StudentMyCourse } from './components/studentPanel/studentCurse-Blog/My Courses/StudentMyCourse.tsx'
 import { StudentMyReserve } from './components/studentPanel/studentCurse-Blog/My Reserve/StudentMyReserve.tsx'
+import { StudentMyFavCourses } from './components/studentPanel/studentCurse-Blog/Fav Courses/StudentMyFavCourses.tsx'
 
 const router = createBrowserRouter([
   {
@@ -151,6 +152,11 @@ const router = createBrowserRouter([
       {
         path: "/Student-Panel/My-Reserve",
         element: <StudentMyReserve />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/Fav-Courses",
+        element: <StudentMyFavCourses />,
         errorElement: <ErrorPage />
       },
     ]

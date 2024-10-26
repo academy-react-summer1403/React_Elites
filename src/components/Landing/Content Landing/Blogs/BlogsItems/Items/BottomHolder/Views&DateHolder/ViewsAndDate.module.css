@@ -10,11 +10,12 @@
     font-size: 14px;
     font-family: DannaMedium;
     color: #707070;
-    background: url(../../../../../../../../assets/Images/icons8-eye-24.png) 5% 50% no-repeat;
-    background-size: 15px;
+    background: url(../../../../../../../../assets/Images/icons8-eye-24.png) 0% 20% no-repeat;
+    background-size: 18px;
 }
 
 .date{
+    direction: rtl;
     padding-left: 20px;
     font-size: 14px;
     font-family: DannaMedium;
