@@ -20,7 +20,7 @@ const InformationForm = () => {
                 <div className={styleInform.page2}>
                 <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
                     <div className={styleInform.right}>
-                        <div><h1 className={style.selected}>اطلاعات حساب کاربری </h1></div>
+                        <div><h1 className={styleInform.selected}>اطلاعات حساب کاربری </h1></div>
                         <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>عکس ها </NavLink>
                         <NavLink to="/Student-Panel/Location"  className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
                         <NavLink to="/Student-Panel/Link"  className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>

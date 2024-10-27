@@ -1,16 +1,15 @@
 .container {
-    width: 248px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     color: white;
     font-size: 16px;
     font-family: DannaMedium;
 }
 
-.selected{
+.selected {
     background: url(../assets/Images/icons8-dot-24.png) 50% 100% no-repeat;
     background-size: 15px;
     height: 100%;
@@ -20,15 +19,99 @@
     scale: 1.1;
 }
 
-.items{
+.items {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.container>a:first-child {
+    position: relative;
+}
+.container > a:first-child:hover > .miniBasket{
+    display: flex;
+}
+
+.miniBasket {
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px #eee;
+    width: 320px;
+    font-size: 10px;
+    padding: 10px;
+    z-index: 2000;
+    display: none;
+}
+
+.miniBasket > div > h2{
+    color: black;
+    font-size: 22px;
+    text-align: right;
+}
+
+.buttonHolder{
+    display: flex;
+    justify-content: right;
+}
+
+.button{
+    background-color: rgb(0, 106, 255);
+    text-align: right;
+    border-radius: 32px;
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.miniBasketItems>li {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 10px;
+    direction: rtl;
+}
+
+.miniBasketItems {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.imgMiniBasket {
+    width: 100px;
+}
+
+.titleAndPrice {
+    color: #000000;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title{
+    font-size: 19px;
+    font-weight: 700px;
+}
+
+.price,
+.title {
+    width: 100%;
+    text-align: right;
+}
+
 @media screen and (max-width: 1217px) {
-    .container{
+    .container {
         font-size: 12px;
     }
 }
