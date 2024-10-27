@@ -65,8 +65,7 @@ const Dashboard1 = () => {
                 
                   <div className="flex flex-row mr-5 rounded-lg text-black bg-slate-200">
                     وضعیت اطلاعات حساب کاربری
-                    <h1> {time}</h1>
-                    <h2> {date}</h2>
+                  
                     <div className="relative flex items-center justify-center" style={{ width: '200px', height: '100px' }}>
                       <Chart
                         options={{
