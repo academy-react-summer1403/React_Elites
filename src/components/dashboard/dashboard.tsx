@@ -3,10 +3,38 @@ import style from "./../../Style/studentPanel.module.css";
 import { StudentGhabRight } from "../studentPanel/studentPart/studentRight";
 import { StudentGhabLeft } from "../studentPanel/studentPart/studentLeft";
 import Chart from 'react-apexcharts';
+import  { useState, useEffect } from 'react';
+import moment from 'jalali-moment';
+
 
 const Dashboard1 = () => {
   const series = [30, 70]; // مقادیر سری
   const displayValue = series[1]; // مقدار 70 برای نمایش
+  const [time, setTime] = useState('');
+  const [date, setDate] = useState('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      
+      // فرمت زمان به زبان فارسی
+      const formattedTime = now.toLocaleTimeString('fa-IR', { hour: '2-digit', minute: '2-digit', hour12: false });
+      
+      // فرمت تاریخ شمسی با نام ماه و اعداد فارسی
+      const formattedDate = moment(now).locale('fa').format(' DD MMMM YYYY ');
+      
+      // تبدیل اعداد تاریخ به فارسی
+      const persianDate = formattedDate.replace(/\d/g, (digit) => String.fromCharCode(digit.charCodeAt(0) + 1728));
+      
+      setTime(formattedTime);
+      setDate(persianDate);
+    };
+
+    updateTime(); // Update the time and date immediately on mount
+    const interval = setInterval(updateTime, 60000); // Update every minute
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <Formik>
@@ -18,7 +46,9 @@ const Dashboard1 = () => {
             <div className={style.page}>
               <div className={style.page2}>
                 <div className="flex flex-row">
-                  <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر</div>
+                  <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر 
+                  <h1> {time}</h1>
+                    <h2> {date}</h2> </div>
                   <div className="text-black ms-96">سلام من پارسام این بیو پروفایلمه</div>
                 </div>
                 <div className="flex flex-row mt-3.5">
@@ -35,6 +65,8 @@ const Dashboard1 = () => {
                 
                   <div className="flex flex-row mr-5 rounded-lg text-black bg-slate-200">
                     وضعیت اطلاعات حساب کاربری
+                    <h1> {time}</h1>
+                    <h2> {date}</h2>
                     <div className="relative flex items-center justify-center" style={{ width: '200px', height: '100px' }}>
                       <Chart
                         options={{
@@ -101,7 +133,7 @@ const Dashboard1 = () => {
                       <div className="text-black  text-sm font-semibold  ">  شما</div>  
                       </div>
                       <div className="text-black pr-2 font-DannaBold text-base font-bold">دوره خیلی خوبی بود واقعا لذت بردم</div>
-                      <div className="text-black pr-4 text-sm font-DannaNormal">واقعا عالی بود. هم استادش و هم کلاس ها منظم برگزار شدن و اصلا از مباحث عقب نموندم و تونستم به مقدار ثابتی پیشرفت کنم توی کدنویسی جاوا اسکریپت. ممنون از آکادمی بحر که این دوره رو گذاشتن </div>
+                      <div className="  text-black lg:text-red-500 pr-4 text-sm font-DannaNormal ">واقعا عالی بود. هم استادش و هم کلاس ها منظم برگزار شدن و اصلا از مباحث عقب نموندم و تونستم به مقدار ثابتی پیشرفت کنم توی کدنویسی جاوا اسکریپت. ممنون از آکادمی بحر که این دوره رو گذاشتن </div>
                   </div>
                 </div>
               </div>
