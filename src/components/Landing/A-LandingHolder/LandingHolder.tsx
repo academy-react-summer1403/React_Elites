@@ -28,7 +28,6 @@ const LandingHolder = () => {
   const getProfilee = async () => {
     let userInfo = await getProfile()
     setUserInfoObj(userInfo)
-    console.log(userInfo)
   }
 
   useEffect(() => {

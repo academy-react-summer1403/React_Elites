@@ -31,6 +31,7 @@ import { StudentPayment } from './components/studentPanel/Student Payment/Studen
 import { StudentMyCourse } from './components/studentPanel/studentCurse-Blog/My Courses/StudentMyCourse.tsx'
 import { StudentMyReserve } from './components/studentPanel/studentCurse-Blog/My Reserve/StudentMyReserve.tsx'
 import { StudentMyFavCourses } from './components/studentPanel/studentCurse-Blog/Fav Courses/StudentMyFavCourses.tsx'
+import { Auth } from './components/Auth/Auth.tsx'
 
 const router = createBrowserRouter([
   {
@@ -75,44 +76,47 @@ const router = createBrowserRouter([
       },
     ]
   },
-  {
-    path: "*",
-    element: <ErrorPage404 />
-  },
-  {
-    path: "/Login",
-    element: <Login />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Login-Page2",
-    element: <LoginPage2 />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Register",
-    element: <Register />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Register-Page2",
-    element: <RegisterPage2 />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Register-Page3",
-    element: <RegisterPage3 />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Forget-Password",
-    element: <ForgetPass />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/Forget-Password-Page2",
-    element: <ForgetPassPage2 />,
-    errorElement: <ErrorPage />
+  { 
+    path: "/auth",
+    element: <Auth />,
+    errorElement: <ErrorPage />,
+    children:[
+      {
+        path: "/auth/Login",
+        element: <Login />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/auth/Login-Page2",
+        element: <LoginPage2 />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/auth/Register",
+        element: <Register />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/auth/Register-Page2",
+        element: <RegisterPage2 />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/auth/Register-Page3",
+        element: <RegisterPage3 />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/auth/Forget-Password",
+        element: <ForgetPass />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/auth/Forget-Password-Page2",
+        element: <ForgetPassPage2 />,
+        errorElement: <ErrorPage />
+      },
+    ]
   },
   {
     path: "/Student-Panel",
@@ -165,8 +169,11 @@ const router = createBrowserRouter([
     path: "/Payment-Gateway",
     element: <PaymentGateway />,
     errorElement: <ErrorPage />
-  }
-
+  },
+  {
+    path: "*",
+    element: <ErrorPage404 />
+  },
 ])
 
 createRoot(document.getElementById('root')!).render(

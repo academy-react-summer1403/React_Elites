@@ -9,45 +9,25 @@ const LoginPage2 = () => {
     
         <Formik initialValues={{password: "", address: "", rememberPass: ""} }>
           {(form) => (
-            <div className={styleLogin.main}>
-              <div className={styleLogin.page}>
-                <div className={styleLogin.page2}>  
-                  <div className='flex justify-end items-right w-full '>
-                    <div className='w-44 h-10 scale-250 items-right relative overflow-hidden object-fill rounded-2xl'>
-                      <img className='bottom-2 absolute' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
-                    </div>
-                    <div className='w-11 h-10  overflow-hidden object-fill rounded-2xl'>
-                      <img src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
-                    </div>
-                  </div>
-                  <div className="mt-10">
-                    <h1 className="text-black font-DannaBold text-3xl ">شروع یک ماجراجویی</h1>
-                    <h1 className="mt-2 text-base items-right text-gray-500 font-DannaDemiBoldiBoldiBoldiBold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
-                  </div>
-                  <div className="flex w-full mt-64 mb-40 justify-center">
-                    <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
-                  </div>
-                </div>
-                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
-                      <div className={styleLogin.navigate}>
-                        <div className="w-1/2 flex flex-wrap h-full w-64 bg-blue">
-                          <div className="w-full h-2 rounded-lg black bg-gray-400">  </div>
-                          <h1 className="w-full align-right text-gray-400 text-sm font-DannaDemiBoldiBoldiBoldiBold tracking-tight">واردکردن شماره همراه </h1>
-                        </div>
-                        <div className="w-1/2 h-full flex flex-wrap w-64 bg-blue">
-                          <div className="w-full h-2 rounded-lg black  bg-blue-500">  </div>
-                          <h1 className="w-full items-right  text-black text-sm font-DannaDemiBoldiBoldiBoldiBold tracking-tight">تایید کد ارسال شده دو مرحله ای </h1>
-                          <h1 className="w-full items-right text-black text-xs font-DannaBold tracking-tight">(درصورت فعال بودن دو مرحله ای) </h1>
-                        </div>
+                    <div className={styleLogin.navigate}>
+                      <div className="w-72 flex flex-wrap h-full">
+                        <div className={styleLogin.lastNavigate}>  </div>
+                        <h1 className="w-full align-right text-gray-400 text-base font-DannaMedium tracking-tight mt-3">وارد کردن شماره همراه </h1>
                       </div>
-                      <div className="h-full max-w-96 my-8 mx-0">
-                        <h1 className="text-black text-2xl font-DannaBold m-4">تایید کد دو مرحله‌ای!!</h1>
-                        <p className="text-gray-400 text-sm font-DannaDemiBoldiBoldiBoldiBold"> کد دومرحله‌ای به شماره همراه شما ارسال شد لطفا کد را وارد کنید</p>
+                      <div className="w-72 h-full flex flex-wrap">
+                        <div className="w-full h-2 rounded-lg bg-blue-500">  </div>
+                        <h1 className="w-full items-right text-black text-base font-DannaMedium tracking-tight mt-3">تایید کد ارسال شده دو مرحله ای </h1>
+                        <h1 className="w-full items-right text-black text-sm font-DannaMedium tracking-tight">(درصورت فعال بودن دو مرحله ای) </h1>
+                      </div>
+                    </div>
+                      <div className="h-full max-w-96 my-8 mx-0 mt-20">
+                        <h1 className="text-black text-2xl font-DannaDemiBold mt-4 mb-4">تایید کد دو مرحله‌ای!</h1>
+                        <p className="text-gray-400 text-sm font-DannaMedium"> کد دومرحله‌ای به شماره همراه شما ارسال شد لطفا کد را<br /> وارد کنید</p>
                       </div>
                       <div className="h-full max-w-96  my-4 mx-0 text-right">
-                        <label className="text-base font-DannaBold text-black pb-1.5">کد دو مرحله‌ای</label>
-                        <Field className="w-full text-right h-11 pr-3 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="forgetPassPage2" placeholder="کد دو مرحله‌ای خود را وارد کنید" />
+                        <label className="text-base font-DannaDemiBold text-black pb-1.5">کد دو مرحله‌ای</label>
+                        <Field className="w-full text-sm font-DannaMedium text-right h-11 pr-3 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="forgetPassPage2" placeholder="کد دو مرحله‌ای خود را وارد کنید" />
                         <ErrorMessage name="password" component={"p"} className="error"/>
                       </div>
                     
@@ -56,13 +36,10 @@ const LoginPage2 = () => {
                       </NavLink>
                       <div className="flex max-w-96  justify-center mt-4">
                         <div className=" flex rounded-full justify-center gap-1.5 w-28 px-4 py-2 bg-white border border-px border-gray-300">
-                          <NavLink to="/Forget-Password" className="border-non cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> بازگشت &gt; </NavLink>
+                          <NavLink to="/Forget-Password" className="border-non cursor-pointer text-blue-700 text-sm font-DannaMedium tracking-tight"> بازگشت </NavLink>
                         </div>
                       </div>
                   </Form>
-                </div>
-              </div>
-            </div>
           )}
         </Formik>
 

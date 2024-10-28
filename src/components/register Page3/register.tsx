@@ -17,26 +17,6 @@ const RegisterPage3 = () => {
         <Formik initialValues={{password: "", gmail: ""}}
         onSubmit={(values) => verifyGmail(values)}>
           {(form) => (
-            <div className={styleLogin.main}>
-              <div className={styleLogin.page}>
-                <div className={styleLogin.page2}>  
-                  <div className='flex justify-end items-right w-full'>
-                    <div className='w-44 h-10 scale-250 items-right relative overflow-hidden object-fill rounded-2xl'>
-                      <img className='bottom-2 absolute' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
-                    </div>
-                    <div className='w-11 h-10  overflow-hidden object-fill rounded-2xl'>
-                      <img src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/89782e651551396a2baebe523401d4b33d0ab02a"></img>
-                    </div>
-                  </div>
-                  <div className="mt-10">
-                    <h1 className="text-black font-DannaBold text-3xl ">شروع یک ماجراجویی</h1>
-                    <h1 className="mt-2 text-base items-right text-gray-500 font-DannaDemiBold">هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر</h1>
-                  </div>
-                  <div className="flex w-full mt-64 mb-40 justify-center">
-                    <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
-                  </div>
-                </div>
-                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
                   <div className={styleLogin.navigate}>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
@@ -70,9 +50,6 @@ const RegisterPage3 = () => {
                         <button className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-DannaBold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">تایید </button>
                       </div>
                   </Form>
-                </div>
-              </div>
-            </div>
           )}
         </Formik>
 
