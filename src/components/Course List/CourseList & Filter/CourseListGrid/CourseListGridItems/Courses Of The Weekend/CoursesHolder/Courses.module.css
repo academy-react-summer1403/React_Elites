@@ -1,7 +1,7 @@
 .holder{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: flex-start;
     flex-flow: row wrap;
     margin-top: 20px;
