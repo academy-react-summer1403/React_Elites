@@ -26,10 +26,16 @@
     align-items: center;
 }
 
-.container>a:first-child {
+.miniBasketHolder {
     position: relative;
+    border: 1px solid #DCDCDC;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    background: url(https://img.icons8.com/?size=100&id=2616&format=png&color=000000) no-repeat 50% 50%;
+    background-size: 60%;
 }
-.container > a:first-child:hover > .miniBasket{
+.miniBasketHolder:hover > .miniBasket{
     display: flex;
 }
 
@@ -37,7 +43,7 @@
     background: #fff;
     position: absolute;
     top: 40px;
-    right: 0;
+    left: 0;
     border: 1px solid #eee;
     border-radius: 5px;
     box-shadow: 0 0 10px 1px #eee;
