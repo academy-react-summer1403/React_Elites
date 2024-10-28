@@ -1,30 +1,26 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import  styleLogin  from "../../Style/list.module.css";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import { loginAPI } from "../../core/services/api/auth-Login";
-import { useEffect, useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
 import { useGlobalState } from "../../State/State";
+import { setItem } from "../../core/services/storage/storage.services";
 
 const Login = () => {
 
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
-  const secceed = () => {
-    toast.success('ورود با موفقیت انجام شد')
-  }
-
   const loginUser = async (values) => {
     const user = await loginAPI(values)
+    setItem("token", user.token)
     if(user.success == true){
-      secceed();
+      setIsLogin(true)
+      setItem('isLogin', isLogin)
     }
     else {
       return
     }
-    setIsLogin(true)
-    console.log(user)
   }
+  
 
 
   return (
@@ -35,7 +31,7 @@ const Login = () => {
           >
           {(form) => (
             <div className={styleLogin.main}>
-              <Toaster />
+              {isLogin && <Navigate to="/" replace={true} />}
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
                   <div className='flex justify-end items-right w-full'>
@@ -73,12 +69,12 @@ const Login = () => {
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaDemiBold text-black pb-3">شماره همراه یا ایمیل </label>
-                        <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-Gray-800 border border-solid border-Gray-400 rounded-3xl" name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
+                        <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-gray-800 border border-solid border-Gray-400 rounded-3xl" name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
                         <ErrorMessage name="phoneOrGmail" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96  my-4 mx-0 text-right">
                         <label className="text-base font-DannaDemiBold text-black pb-1.5">رمز عبور</label>
-                        <Field className="w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-Gray-800 border border-solid border-Gray-400 rounded-3xl" name="password" placeholder="رمز عبور خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-gray-800 border border-solid border-Gray-400 rounded-3xl" name="password" placeholder="رمز عبور خود را وارد کنید" />
                         <ErrorMessage name="password" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">

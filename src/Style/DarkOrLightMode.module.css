@@ -36,7 +36,7 @@
     display: none;
     justify-content: space-around;
     align-items: center;
-
+    position: relative;
 }
 
 .profile{
@@ -50,6 +50,43 @@
     height: 20px;
     background: url(../assets/Images/icons8-arrow-down-50.png) no-repeat 50% 50%;
     background-size: 50%;
+}
+
+.userAccebility{
+    padding: 10px 10px 0 10px;
+    width: 160px;
+    height: auto;
+    background: #2F2F2F;
+    box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.315);
+    border: 1px solid black;
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 43px;
+    right: 0;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.items{
+    text-align: right;
+    font-family: DannaBold;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    animation: none;
+}
+.holderr{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.fixed{
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
 }
 
 .mainMenu{
