@@ -5,22 +5,14 @@ import { NavLink } from "react-router-dom";
 import { registerPhoneNumber } from "../../core/services/api/auth-register-phonenumber";
 import toast, { Toaster } from 'react-hot-toast';
 import { RegisterPage2 } from "../register Page2/register";
+import { useGlobalState } from "../../State/State";
 
 const Register = () => {
-
-  const secceed = () => {
-    toast.success('کد تایید را وارد کنید ')
-  }
+  const [phoneNumber, setPhoneNumber] = useGlobalState('phoneNumber');
 
   const Register_User_PhoneNumber = async (values) => {
-    const phoneNumber = await registerPhoneNumber(values)
-    if(phoneNumber.success == true){
-      secceed();
-    }
-    else {
-      return
-    }
-    console.log(phoneNumber)
+    const phoneNumb = await registerPhoneNumber(values)
+    console.log(phoneNumb)
   }
 
   return (
@@ -30,7 +22,7 @@ const Register = () => {
           onSubmit={(values) => Register_User_PhoneNumber(values)}
         >
           {(form) => (
-            <div className='flex justify-center'>
+            <div className={styleLogin.main}>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
                   <div className='flex justify-end items-right w-full'>
@@ -49,7 +41,7 @@ const Register = () => {
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
                   </div>
                 </div>
-                <div className="w-387 relative"> 
+                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
                   <div className={styleLogin.navigate}>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
@@ -73,8 +65,7 @@ const Register = () => {
                         <label className="text-base font-DannaBold text-black pb-3">شماره همراه </label>
                         <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneNumber" placeholder="شماره همراه خود را وارد کنید" />
                         <ErrorMessage name="phoneNumber" component={"p"} className="error"/>
-                      </div>
-                     
+                    </div>
                     
                     
                       <div className="flex h-11 max-w-96 overflow-hidden mt-4">

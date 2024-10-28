@@ -34,7 +34,7 @@ const Login = () => {
           onSubmit={(values) => loginUser(values)}
           >
           {(form) => (
-            <div className='flex justify-center'>
+            <div className={styleLogin.main}>
               <Toaster />
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
@@ -54,7 +54,7 @@ const Login = () => {
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
                   </div>
                 </div>
-                <div className="w-387 relative"> 
+                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
                       <div className={styleLogin.navigate}>
                         <div className="w-1/2 flex flex-wrap h-full w-64 bg-blue">
@@ -73,12 +73,12 @@ const Login = () => {
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaDemiBold text-black pb-3">شماره همراه یا ایمیل </label>
-                        <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
+                        <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-Gray-800 border border-solid border-Gray-400 rounded-3xl" name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
                         <ErrorMessage name="phoneOrGmail" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96  my-4 mx-0 text-right">
                         <label className="text-base font-DannaDemiBold text-black pb-1.5">رمز عبور</label>
-                        <Field className="w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="password" placeholder="رمز عبور خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-Gray-800 border border-solid border-Gray-400 rounded-3xl" name="password" placeholder="رمز عبور خود را وارد کنید" />
                         <ErrorMessage name="password" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">

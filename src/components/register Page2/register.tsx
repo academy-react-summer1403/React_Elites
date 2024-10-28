@@ -4,25 +4,25 @@ import  styleLogin  from "../../Style/list.module.css";
 import { NavLink } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import { verifyMessageAPI } from "../../core/services/api/auth-register-verifymessage";
+import { useGlobalState } from "../../State/State";
 
 const RegisterPage2 = () => {
-  const secceed = () => {
-    toast.success('کد تایید را وارد کنید ')
-  }
+  const [phoneNumber, setPhoneNumber] = useGlobalState('phoneNumber');
 
   const verifyMessage = async (values) => {
-    const user = await verifyMessageAPI(values);
+    const user = await verifyMessageAPI({values, phoneNumber});
     console.log(user);
+    console.log(phoneNumber)
   }
 
   return (
     
         <Formik 
-          initialValues={{phoneNumber: "", verifyCode: ""}}
+          initialValues={{ verifyCode: ""}}
           onSubmit={(values) => verifyMessage(values)}
           >
           {(form) => (
-            <div className='flex justify-center'>
+            <div className={styleLogin.main}>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
                   <div className='flex justify-end items-right w-full'>
@@ -41,7 +41,7 @@ const RegisterPage2 = () => {
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
                   </div>
                 </div>
-                <div className="w-387 relative"> 
+                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
                   <div className={styleLogin.navigate}>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
@@ -65,11 +65,6 @@ const RegisterPage2 = () => {
                         <label className="text-base font-DannaBold text-black pb-3">کد تایید </label>
                         <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="verifyCode" placeholder="کد تایید خود را وارد کنید" />
                         <ErrorMessage name="verifyCode" component={"p"} className="error"/>
-                      </div>
-                      <div className="h-full max-w-96 mx-0 text-right">
-                        <label className="text-base font-DannaBold text-black pb-3"> شماره همراه </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneNumber" placeholder="لطفا شماره همراه را وارد کنید" />
-                        <ErrorMessage name="phoneNumber" component={"p"} className="error"/>
                       </div>
                       <div className="h-11 max-w-96 overflow-hidden mt-4">
                         <button className="h-full w-1/2 border-non cursor-pointer rounded-full text-blue-700 bg-slate-100 text-xs font-DannaBold tracking-tight" type="submit">ارسال مجدد کد تایید 01:00</button>

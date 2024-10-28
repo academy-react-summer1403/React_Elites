@@ -13,3 +13,40 @@
     font-family: DannaBold;
     text-align: right;
 }
+
+.applyFilter{
+    border-radius: 16px;
+    width: 100px;
+    padding: 10px;
+    background: green;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    font-family: DannaMedium;
+    color: white;
+}
+
+.applyFilter2{
+    border-radius: 16px;
+    width: 100px;
+    padding: 10px;
+    background: green;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    font-family: DannaMedium;
+    color: white;
+    opacity: 0.5;
+}
+
+.deleteFilter{
+    border-radius: 16px;
+    width: 100px;
+    padding: 10px;
+    background: red;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    font-family: DannaMedium;
+    color: white;
+}

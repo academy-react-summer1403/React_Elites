@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from '../../../../../Style/blogList.module.css'
 import { useGlobalState } from '../../../../../State/State';
 
-const ChangePageList = ({setPagInation, pagInation}) => {
+const ChangePageList = ({setPagInation, pagInation, totalCount}) => {
   const [darkMode] = useGlobalState('DarkMode');
 
   const toNextPage = () => {
-    if(pagInation > 5){
+    if(pagInation > Math.ceil(totalCount/12)){
       setPagInation(1)
     }
     else{
@@ -15,30 +15,38 @@ const ChangePageList = ({setPagInation, pagInation}) => {
   }
   const toPreviousPage = () => {
     if(pagInation < 1){
-      setPagInation(5)
+      setPagInation(Math.ceil(totalCount/12))
     }
     else{
       setPagInation(pagInation--);
     }
   }
+
+  const syncPageList = (N) => {
+    var newArr = [];
+    for (let i = 1; i <= N; i++) {
+      newArr.push(i);
+    }
+    return newArr
+  }
+
+  let totalCountCourses = Math.ceil(totalCount/12)
+
+  useEffect(() => {
+    syncPageList(totalCountCourses)
+  }, [totalCount])
+  
+
   return (
     <div className={style.ChangePageList} data-theme={darkMode ? "darkSmall" : "lightMode"}>
         <span className={style.toLeft} onClick={toPreviousPage}></span>
-          <div className={pagInation == 1 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
-              setPagInation(1)
-          }}>1</div>
-          <div className={pagInation == 2 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
-              setPagInation(2)
-          }}>2</div>
-          <div className={pagInation == 3 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
-              setPagInation(3)
-          }}>3</div>
-          <div className={pagInation == 4 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
-              setPagInation(4)
-          }}>4</div>
-          <div className={pagInation == 5 ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
-              setPagInation(5)
-          }}>5</div>
+          {syncPageList(totalCountCourses).map((index, item) => {
+            return(
+              <div key={index} className={pagInation == index ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+                setPagInation(index)
+              }}>{index}</div>
+            )
+          })}
         <span className={style.toRight} onClick={toNextPage}></span>
     </div>
   )

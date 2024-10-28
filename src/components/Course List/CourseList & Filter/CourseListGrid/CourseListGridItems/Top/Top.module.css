@@ -1,5 +1,5 @@
 .holder{
-    width: 51.50339476236663%;
+    width: 70.50339476236663%;
     height: 40px;
     text-align: right;
     color: #2F2F2F;
@@ -28,6 +28,19 @@
     border-radius: 34px;
     width: auto;
     color: #2F2F2F;
+    font-size: 18px;
+    font-family: DannaMedium;
+    line-height:35px;
+}
+
+.selected{
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+    border: 1px solid red;
+    border-radius: 34px;
+    width: auto;
+    color: red;
     font-size: 18px;
     font-family: DannaMedium;
     line-height:35px;

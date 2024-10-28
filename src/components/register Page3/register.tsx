@@ -2,14 +2,22 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useEffect, useState } from 'react'
 import  styleLogin  from "../../Style/list.module.css";
 import { NavLink } from "react-router-dom";
+import { registerGmail } from "../../core/services/api/auth-register-gmail";
+import { useGlobalState } from "../../State/State";
 
 const RegisterPage3 = () => {
+  const [phoneNumber, setPhoneNumber] = useGlobalState('phoneNumber');
+  const verifyGmail = async (values) => {
+    const user = await registerGmail({phoneNumber, values});
+    console.log(user);
+  }
 
   return (
     
-        <Formik initialValues={{password: "", address: "", rememberPass: ""}}>
+        <Formik initialValues={{password: "", gmail: ""}}
+        onSubmit={(values) => verifyGmail(values)}>
           {(form) => (
-            <div className='flex justify-center'>
+            <div className={styleLogin.main}>
               <div className={styleLogin.page}>
                 <div className={styleLogin.page2}>  
                   <div className='flex justify-end items-right w-full'>
@@ -28,7 +36,7 @@ const RegisterPage3 = () => {
                     <img className='w-96 h-80  flex rounded-2xl' src="https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98"></img>
                   </div>
                 </div>
-                <div className="w-387 relative"> 
+                <div className={styleLogin.right}> 
                   <Form className={styleLogin.form}>
                   <div className={styleLogin.navigate}>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
@@ -50,12 +58,12 @@ const RegisterPage3 = () => {
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaBold text-black pb-3">ایمیل </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="ایمیل خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="gmail" placeholder="ایمیل خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaBold text-black pb-3">رمزعبور جدید </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="adress" placeholder="رمزعبور جدید خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="password" placeholder="رمزعبور جدید خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
                       <div className="h-11 max-w-96 overflow-hidden mt-4">

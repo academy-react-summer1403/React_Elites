@@ -1,6 +1,6 @@
-.teacher{
+.teacher1{
     width: 100%;
-    height: 48px;
+    height: auto;
     background: #F1F1F1;
     color: #707070;
     font-size: 12px;
@@ -12,10 +12,31 @@
     line-height: 22px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
-
+.teacher{
+    width: 100%;
+    display: block;
+    padding: 10px 15px 10px 15px;
+    text-align: right;
+    font-family: DannaMedium;
+    color: black;
+    font-size: 14px;
+}
+.input{
+    display: none;
+}
+.input:checked + label {
+    font-size: 15px;
+    font-family: DannaBold;
+}
 .titleTeacher{
+    user-select: none;
+    cursor: pointer;
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
@@ -23,4 +44,26 @@
     width: 80px;
     text-align: left;
     /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
+}
+.arrowDown{
+    width: 20px;
+    height: 20px;
+    background: url(../../../../../../assets/Images/arrow down.png);
+    background-size: cover;
+}
+.arrowUp{
+    width: 20px;
+    height: 20px;
+    background: url(../../../../../../assets/Images/arrow up.png);
+    background-size: cover;
+}
+
+.filterTeacher{
+    transition: 0.3s;
+    width: 100%;
+    height: auto;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    background: rgb(178, 178, 178);
 }
