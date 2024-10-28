@@ -54,7 +54,7 @@ const Dashboard1 = () => {
             <div className={style.page}>
               <div className={style.page2}>
                 <div className="flex flex-row">
-                  <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر 
+                  <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر 👋
                   <div className="flex flex-row">
                     <div className="flex flex-row">
                     
@@ -97,7 +97,7 @@ const Dashboard1 = () => {
                           },
                           colors: ['#FFD700', '#FFC107'],
                           stroke: {
-                            width: 2,
+                            width: 0,
                           },
                           plotOptions: {
                             pie: {
