@@ -18,7 +18,7 @@ const RegisterPage3 = () => {
         onSubmit={(values) => verifyGmail(values)}>
           {(form) => (
                   <Form className={styleLogin.form}>
-                  <div className={styleLogin.navigate}>
+                  <div className={`${styleLogin.navigate} ${styleLogin.navigateRegister}`}>
                         <div className="w-1/3 flex flex-wrap h-full w-64 bg-blue">
                           <div className="w-full h-2 rounded-lg black bg-blue-500 opacity-500">  </div>
                           <h1 className={styleLogin.textNavigate}>وارد کردن شماره تلفن </h1>
@@ -38,12 +38,12 @@ const RegisterPage3 = () => {
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaBold text-black pb-3">ایمیل </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="gmail" placeholder="ایمیل خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mb-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="gmail" placeholder="ایمیل خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
                       <div className="h-full max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaBold text-black pb-3">رمزعبور جدید </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="password" placeholder="رمزعبور جدید خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mb-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="password" placeholder="رمزعبور جدید خود را وارد کنید" />
                         <ErrorMessage name="adress" component={"p"} className="error"/>
                       </div>
                       <div className="h-11 max-w-96 overflow-hidden mt-4">

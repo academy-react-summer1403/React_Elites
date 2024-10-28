@@ -6,7 +6,7 @@ import { useGlobalState } from '../../../../../State/State';
 const LogInOrRegister = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <NavLink to="/Login" className={style.container} data-theme={darkMode ? "darkNoBG" : "lightMode"}>ثبت نام یا ورود</NavLink>
+    <NavLink to="/auth/Login" className={style.container} data-theme={darkMode ? "darkNoBG" : "lightMode"}>ثبت نام یا ورود</NavLink>
   )
 }
 

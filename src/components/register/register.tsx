@@ -23,7 +23,7 @@ const Register = () => {
         >
           {(form) => (
                   <Form className={styleLogin.form}>
-                  <div className={styleLogin.navigate}>
+                  <div className={`${styleLogin.navigate} ${styleLogin.navigateRegister}`}>
                         <div className="flex flex-wrap h-full bg-blue w-60">
                           <div className="w-full h-2 rounded-lg black bg-blue-600">  </div>
                           <h1 className={`${styleLogin.textNavigate} ${styleLogin.selectedNavigate}`}>وارد کردن شماره تلفن </h1>
@@ -41,9 +41,9 @@ const Register = () => {
                         <h1 className="text-black text-2xl font-DannaBold mt-4 mb-4">خوش اومدی!</h1>
                         <p className="text-gray-400 text-sm font-DannaDemiBold">لطفا شماره همراه  خود را وارد کنید تا کد تائید برای شما ارسال شود</p>
                       </div>
-                      <div className="h-full max-w-96 mx-0 text-right">
+                      <div className="h-full mt-8 max-w-96 mx-0 text-right">
                         <label className="text-base font-DannaBold text-black pb-3">شماره همراه </label>
-                        <Field className="w-full text-right h-11 pr-3 mb-5 mt-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneNumber" placeholder="شماره همراه خود را وارد کنید" />
+                        <Field className="w-full text-right h-11 pr-3 mb-5 mb-4 bg-white text-black border border-solid border-black-800 rounded-3xl text-black" name="phoneNumber" placeholder="شماره همراه خود را وارد کنید" />
                         <ErrorMessage name="phoneNumber" component={"p"} className="error"/>
                     </div>
                     
@@ -56,7 +56,7 @@ const Register = () => {
                         <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight" to="/Login"> ورود به حساب کاربری</NavLink>
                       </div>
                       <div className="flex max-w-96  justify-center mt-8">
-                        <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100">
+                        <div className={styleLogin.HomePageButton}>
                           <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> صفحه اصلی </NavLink>
                           <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-DannaExtraBold "></img>
                         </div>

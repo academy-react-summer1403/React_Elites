@@ -1,9 +1,11 @@
 .main{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .page{
     width: 100%;
-    height: 100vh;
+    max-width: 1536px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -13,7 +15,6 @@
 .page2{
     background-color: #f1f1f1;
     width: 55%;
-    height: 100vh;
     border-radius: 32px;
     display: flex;
     justify-content: right;
@@ -50,11 +51,38 @@
 .laptop{
     width: 368px;
     height: 309px;
-    background: url(https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98);
+    background: url(https://www.figma.com/file/DFWKDvBB5J1oVrvpxRyFK2/image/063a86db2252b8c9c38fc789bcd1287b9320cb98)no-repeat 50% 50%;
+    background-size: 100%;
 }
 .right{
     padding-top: 20px;
     position: relative;
     width: 42%;
     height: 100vh;
+}
+
+@media screen and (max-width:889px){
+    .page{
+        padding: 20px;
+    }
+}
+@media screen and (max-width:600px){
+    .page2{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .navigate{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 15px;
+    }
+    .navigate > div{
+        width: 100%;
+    }
+    form > div:nth-child(1) > div > h1{
+        text-align: center;
+        width: 100%;
+    }
 }

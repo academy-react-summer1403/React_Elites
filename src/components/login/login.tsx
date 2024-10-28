@@ -45,12 +45,12 @@ const Login = () => {
             </div>
             <div className="h-full max-w-96 mx-0 text-right">
               <label className="text-base font-DannaDemiBold text-black pb-3">شماره همراه یا ایمیل </label>
-              <Field className="font-DannaMedium w-full text-right h-11 pr-3 mt-4 bg-white text-gray-800 border border-solid border-Gray-400 rounded-3xl" name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
+              <Field className={styleLogin.input} name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
               <ErrorMessage name="phoneOrGmail" component={"p"} className="error"/>
             </div>
             <div className="h-full max-w-96  my-4 mx-0 text-right">
               <label className="text-base font-DannaDemiBold text-black pb-1.5">رمز عبور</label>
-              <Field type='password' className="w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-gray-800 border border-solid border-Gray-400 rounded-3xl" name="password" placeholder="رمز عبور خود را وارد کنید" />
+              <Field type='password' className={`${styleLogin.input} ${styleLogin.inputPassword}`} name="password" placeholder="رمز عبور خود را وارد کنید" />{/*w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-gray-800 border border-solid border-Gray-400 rounded-3xl */}
               <ErrorMessage name="password" component={"p"} className="error"/>
             </div>
             <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">
@@ -69,7 +69,7 @@ const Login = () => {
               <NavLink to="/Register" className="border-none cursor-pointer text-blue-700 text-sm font-DannaDemiBold tracking-tight decoratio underline">ایجاد حساب کاربری</NavLink>
             </div>
             <div className="flex max-w-96  justify-center mt-8">
-              <div className="mt-2 flex rounded-full justify-center gap-1.5 w-36 px-4 py-2 bg-slate-100">
+              <div className={styleLogin.HomePageButton}>
                 <NavLink to="/" className="border-non  cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> صفحه اصلی </NavLink>
                 <img src="https://img.icons8.com/?size=64&id=Gc9qmZNN9yFN&format=png" className="w-5 text-black text-sm font-DannaExtraBold "></img>
               </div>
