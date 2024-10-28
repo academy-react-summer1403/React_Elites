@@ -5,6 +5,14 @@ import { StudentGhabLeft } from "../studentPanel/studentPart/studentLeft";
 import Chart from 'react-apexcharts';
 import  { useState, useEffect } from 'react';
 import moment from 'jalali-moment';
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineDislike } from "react-icons/ai";
+import { SlCalender } from "react-icons/sl";
+import { TbClock } from "react-icons/tb";
+
+
+
+
 
 
 const Dashboard1 = () => {
@@ -47,8 +55,18 @@ const Dashboard1 = () => {
               <div className={style.page2}>
                 <div className="flex flex-row">
                   <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر 
-                  <h1> {time}</h1>
-                    <h2> {date}</h2> </div>
+                  <div className="flex flex-row">
+                    <div className="flex flex-row">
+                    
+                    <TbClock />
+                    <h1> {time} </h1>
+                    
+                    </div>
+                    <div className="flex flex-row">
+                    <SlCalender />
+                    <h2> {date} 
+</h2>  </div></div>
+                    </div>
                   <div className="text-black ms-96">سلام من پارسام این بیو پروفایلمه</div>
                 </div>
                 <div className="flex flex-row mt-3.5">
@@ -65,6 +83,7 @@ const Dashboard1 = () => {
                 
                   <div className="flex flex-row mr-5 rounded-lg text-black bg-slate-200">
                     وضعیت اطلاعات حساب کاربری
+                    
                   
                     <div className="relative flex items-center justify-center" style={{ width: '200px', height: '100px' }}>
                       <Chart
@@ -133,6 +152,7 @@ const Dashboard1 = () => {
                       </div>
                       <div className="text-black pr-2 font-DannaBold text-base font-bold">دوره خیلی خوبی بود واقعا لذت بردم</div>
                       <div className="  text-black lg:text-red-500 pr-4 text-sm font-DannaNormal ">واقعا عالی بود. هم استادش و هم کلاس ها منظم برگزار شدن و اصلا از مباحث عقب نموندم و تونستم به مقدار ثابتی پیشرفت کنم توی کدنویسی جاوا اسکریپت. ممنون از آکادمی بحر که این دوره رو گذاشتن </div>
+                      <div className=" text-black  flex flex-row"><AiOutlineLike size={22}/><AiOutlineDislike size={22}/></div>
                   </div>
                 </div>
               </div>
