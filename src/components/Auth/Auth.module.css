@@ -41,6 +41,12 @@
     flex-flow: row wrap;
     height: 100px;
 }
+.textWelcome > h1:first-child{
+    font-size: 22px;
+}
+.textWelcome > h1:last-child{
+    color: rgb(107 114 128) !important;
+}
 .laptopHolder{
     width: 100%;
     display: flex;
