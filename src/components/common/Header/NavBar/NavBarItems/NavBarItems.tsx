@@ -6,43 +6,17 @@ import { useGlobalState } from '../../../../../State/State';
 
 const NavBarItems = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
-  const [isChecked, setIsChecked] = useState(false)
-  const [isChecked2, setIsChecked2] = useState(false)
-  const [isChecked3, setIsChecked3] = useState(false)
-  const [isChecked4, setIsChecked4] = useState(false)
+  const [isLanding, setisLanding] = useGlobalState('isLanding');
+  const [isBlog, setisBlog] = useGlobalState('isBlog');
+  const [isAboutUs, setisAboutUs] = useGlobalState('isAboutUs');
+  const [isCourse, setisCourse] = useGlobalState('isCourse');
   return (
     <div className={style.container}>
             
-        <NavLink to="/about-We" className={isChecked ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}
-          onClick={() => {
-            setIsChecked(true);
-            setIsChecked2(false);
-            setIsChecked3(false);
-            setIsChecked4(false);
-          }}
-        > درباره ما </NavLink>
-        <NavLink to="/Blogs-List" className={isChecked2 ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}
-        onClick={() => {
-          setIsChecked(false);
-          setIsChecked2(true);
-          setIsChecked3(false);
-          setIsChecked4(false);
-        }}
-        > بلاگ ها </NavLink>
-        <NavLink to="/Courses-List" className={isChecked3 ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}
-                onClick={() => {
-                  setIsChecked(false);
-                  setIsChecked2(false);
-                  setIsChecked3(true);
-                  setIsChecked4(false);
-                }}> دوره ها</NavLink>
-        <NavLink to="/" className={isChecked4 ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}
-                onClick={() => {
-                  setIsChecked(false);
-                  setIsChecked2(false);
-                  setIsChecked3(false);
-                  setIsChecked4(true);
-                }}>  خانه </NavLink>    
+        <NavLink to="/about-We" className={isAboutUs ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}> درباره ما </NavLink>
+        <NavLink to="/Blogs-List" className={isBlog ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ ها </NavLink>
+        <NavLink to="/Courses-List" className={isCourse ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره ها</NavLink>
+        <NavLink to="/" className={isLanding ? style.selected : style.items} data-theme={darkMode ? "darkNoBG" : "lightMode"}>  خانه </NavLink>    
     </div>
   )
 }

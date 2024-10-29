@@ -10,13 +10,13 @@
 }
 
 .selected {
-    background: url(../assets/Images/icons8-dot-24.png) 50% 100% no-repeat;
-    background-size: 15px;
+    background: url(../assets/Images/icons8-dot-24.png) 50% 90% no-repeat;
+    background-size: 11px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    scale: 1.1;
+    font-size: 17px;
 }
 
 .items {
@@ -24,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 7px 0 7px;
 }
 
 .miniBasketHolder {
@@ -32,7 +33,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50px;
-    background: url(https://img.icons8.com/?size=100&id=2616&format=png&color=000000) no-repeat 50% 50%;
+    background: url(https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=000000) no-repeat 50% 50%;
     background-size: 60%;
 }
 .miniBasketHolder:hover > .miniBasket{

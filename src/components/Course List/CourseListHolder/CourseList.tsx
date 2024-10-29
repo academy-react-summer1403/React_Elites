@@ -12,7 +12,15 @@ const CourseList = () => {
   const [levelId, setLevelId] = useState("")
   const [searchValue, setSearchValue] = useState("")
   const [isSearched, setIsSearched] = useState(false)
-
+  const [isCourse, setisCourse] = useGlobalState('isCourse');
+  useEffect(() => {
+    setisCourse(true)
+  }, [])
+  useEffect(() => {
+    return () => {
+      setisCourse(false)
+    }
+  }, [])
   return (
     <div className={style.body}  data-theme={darkMode ? "dark" : "lightMode"}>
         <div className={style.courseListHolder}>

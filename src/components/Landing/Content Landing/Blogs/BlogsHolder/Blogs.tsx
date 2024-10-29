@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import style from './Blogs.module.css'
 import { BlogItems } from '../BlogsItems/BlogItemsHolder/BlogItems'
 import BlogTitle from './BlogTitle'
-import { Button } from '../../Courses Of The Weekend/CoursesItems/CoursesItemsHolder/Button'
+import { Button } from './Button'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

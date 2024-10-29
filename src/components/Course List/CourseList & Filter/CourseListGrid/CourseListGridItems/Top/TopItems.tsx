@@ -47,7 +47,7 @@ const TopItems = ({clicked, setClicked, sortModal, setSortModal, setSortType, se
           setIsClicked3(false)
           setIsClicked4(!isClicked4)
           setSortType("ASC")}}>ارزان ترین</div>
-          <div className={style.categories} onClick={() => {
+          <div className={style.categories} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
           setapplySort(false)
           setIsClicked1(false)
           setIsClicked2(false)

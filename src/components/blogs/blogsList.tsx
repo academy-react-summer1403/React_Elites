@@ -15,11 +15,23 @@ const BlogsList = () => {
   const [filterModal, setFilterModal] = useState(false)
   const [sortModal, setSortModal] = useState(false)
 
+  const [isBlog, setisBlog] = useGlobalState('isBlog');
+
+  useEffect(() => {
+    setisBlog(true)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      setisBlog(false)
+    }
+  }, [])
+
   return (
   <>
     <Formik>
       {(form) => (
-        <div className=' h-full w-full flex flex-wrap justify-center' data-theme={darkMode ? "dark" : "lightMode"}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={darkMode ? "dark" : "lightMode"}>
           <div className={styleBlogList.titleBlogs}>
             <h1 className={styleBlogList.h1} data-theme={darkMode ? "dark" : "lightMode"}>اطلاعات بیشتر ، درک بهتر</h1>
             <p className={styleBlogList.p} data-theme={darkMode ? "dark" : "lightMode"}>ما در بلاگ ها اطلاعات شما رو نسبت به تکنولوژی ای که یاد میگیرید بیشتر میکنیم</p>

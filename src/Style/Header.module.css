@@ -6,4 +6,10 @@
     display: flex;
     align-items: center;
     padding: 0px 20px 0px 20px;
+    background: white;
+    z-index: 1000000;
+    position: fixed;
+}
+[data-scroll='70px'] {
+    position: fixed;
 }
