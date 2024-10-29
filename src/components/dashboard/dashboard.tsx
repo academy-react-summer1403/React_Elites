@@ -9,6 +9,8 @@ import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { SlCalender } from "react-icons/sl";
 import { TbClock } from "react-icons/tb";
+import { PiEyeBold } from "react-icons/pi";
+
 
 
 
@@ -57,13 +59,18 @@ const Dashboard1 = () => {
                   <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر 👋
                   <div className="flex flex-row">
                     <div className="flex flex-row">
-                    
-                    <TbClock />
-                    <h1> {time} </h1>
-                    
+                     <div className="flex">
+                      <TbClock />
+                     </div>
+                     <div className="flex flex-col "> 
+                     <div className="flex flex-col text-black">تاریخ</div>
+                     <h1> {time} </h1>
+                     </div>
                     </div>
-                    <div className="flex flex-row">
+                    <div className="flex flex-row ">
+                      <div className="bg-[#F1F1F1] rounded-full">
                     <SlCalender />
+                    </div>
                     <h2> {date} 
 </h2>  </div></div>
                     </div>
@@ -79,7 +86,30 @@ const Dashboard1 = () => {
                       <div className="pr-16">تاریخ برگزاری</div>
                       <div className="pr-16">سطح</div>
                     </div>
+                    <div className="flex flex-row text-black"> 
+                     <div className="flex bg-[#FF6C6C] items-center justify-center  rounded-md w-[83px] h-[52px]"> <img  src="https://s3-alpha-sig.figma.com/img/72eb/0bda/c649ce20dfb0409d36134908c7d16a53?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LsMESIDdTDdV9Hzk10HIyq~5tQakmREpfVGddxI~Zf93RBQNdMl7DGvzlIv~LhP2ImcOUpYB988UNDCVl-G59-oAPXPTcmcq6ZqnaVt2GHkeGl9ZPyNVoIzSdSUbDm4IgmA4D~p-diOlB1hJQHGrGHoqUD8Ztkhfe2ydpPZ28SknnAFHvB4e9SMncnPmPKRFA8zhC~VveQMblSY0SXXXgWbJ7sEwJpp0UKwal6~BP0CtRnjyXqJJKs7BblNdcgCSAyEpneYbST9190NZF06fibnSffFoqbMIifoVAjENPbB5epex9zTcJ7QxAo8iGF9FBZCy2edDKwoG-asc7rctoQ__" 
+                      alt="Sample" 
+                       className="w-[33px] h-8"/>
+                     </div>
+                      <div className="pr-20 font-bold">دوره فیگما</div>
+                      <div className="pr-20">محمد حسن خلیل پور</div>
+                      <div className="">29 اردیبهشت 1403</div>
+                      <div className="bg-[#FF37F5] pr-2 w-[62px] h-[24px]  text-white rounded-full">پیشرفته</div>
+                      <PiEyeBold size={24} />
+                      </div>
+                      <div className="flex flex-row text-black"> 
+                     <div className="flex bg-[#F0DB4F] items-center justify-center  rounded-md w-[83px] h-[52px]"> <img  src="https://s3-alpha-sig.figma.com/img/6405/b314/68db8ea561a27064e67d06d024404030?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aS3P~J8zZtlXQeQwq8mOKF256gWG33vxy6Erh8J5NsgzOLvGW~eNYF~-yywjKxmfp23XnG~EQOi9Po23-twKwpzhI7CfYMhz3uc5yWRT84d6vZyGth2dRBGodN47mQBzKPV4PY54GhKD69qcMqTxtrZBsFdXB0Garsrb5qPcmpd1pEIB~CzNFlqVMpK7yh0KF6mjZZGWKD00iAnAzHdfuwpojCwJ-TS3Givdbn5LVc9S3KWknqvGD6DvsvkFDkpkPUEbWCF1OKH5qAENrO1vMYHp1vt5V4SHhBSm7z0K9GPij1HQOSSpwD85aktlFqLd4vBau0sBvME4RE~MIanMTA__" 
+                      alt="Sample" 
+                       className="w-[33px] h-8"/>
+                     </div>
+                      <div className="pr-20 font-bold">دوره جاوا اسکریپت</div>
+                      <div className="">محمدحسین بحرالعلومی</div>
+                      <div className="">29 اردیبهشت 1403</div>
+                      <div className="bg-[#FF37F5] pr-2 w-[62px] h-[24px]  text-white rounded-full">پیشرفته</div>
+                      <PiEyeBold size={24} />
+                      </div>
                   </div>
+                  
                 
                   <div className="flex flex-row mr-5 rounded-lg text-black bg-slate-200">
                     وضعیت اطلاعات حساب کاربری
@@ -134,14 +164,20 @@ const Dashboard1 = () => {
                       <div className="pr-3 bg-red-800 mr-24 text-white rounded-full">تائید نشده</div>
                     </div>
                   </div>
-                  <div className="">cvvc
+                  <div className="">
+                     <div className="flex flex-row justify-between  items-center text-black ">
+                      <div className="flex ">نظرات شما</div>
+                     <div className="flex justify-start " ><button className="text-[#3772FF]">مشاهده بیشتر</button>
+                     </div>
+                     </div>
+
                 
-                  <div className="flex">
+                   <div className="flex">
                     {/* خط و متن در اینجا */}
                     <div className="flex flex-row content-center items-center justify-center pr-24">
-                      <div className="flex-grow h-px  w-12 bg-black"></div>
+                      <div className="flex-grow h-px  w-[114px] bg-black"></div>
                       <span className=" text-gray-700  px-2">دوره ها و بلاگ ها</span>
-                      <div className="flex-grow h-px  w-12 bg-black"></div>
+                      <div className="flex-grow h-px  w-[114px] bg-black"></div>
                       </div>
                       
                     </div>
