@@ -8,7 +8,7 @@ const MiniBasket = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <>
-        <NavLink to="/Student-Panel/Shopping-Basket" className={style.miniBasketHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>  
+        <NavLink to="/Student-Panel/Shopping-Basket" className={style.miniBasketHolder}  data-theme={darkMode ? "minibasket" : "lightMode"}>  
               <div  className={style.miniBasket}> 
                 <div id="basMenu">
                   <h2> تعداد دوره در سبد:3 </h2>

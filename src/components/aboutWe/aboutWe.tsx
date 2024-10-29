@@ -8,16 +8,29 @@ import {CursesTeaching} from "./aboutWeItems/CursesTeaching.tsx";
 import {Learning} from "./aboutWeItems/Learning.tsx";
 import {LearningWorld} from "./aboutWeItems/LearningWorld.tsx";
 import {Programming} from "./aboutWeItems/Programming.tsx";
+import { useGlobalState } from "../../State/State.tsx";
+import { useEffect } from "react";
 
 const AboutWe = (props) => {
-
+  const [isAboutUs, setisAboutUs] = useGlobalState('isAboutUs');
+  const [darkMode, ] = useGlobalState('DarkMode');
+  useEffect(() => {
+    setisAboutUs(true)
+  }, [])
+  useEffect(() => {
+    return () => {
+      setisAboutUs(false)
+    }
+  }, [])
+  
   return (
   <>
     <Formik>
       {(form) => (
-        <div className={style.page}>
-          <h1 className={style.title}>درباره ما!</h1>
-          <div className={style.page2}>
+        <div className={style.container} data-theme={darkMode ? "dark" : "lightMode"}>
+          <div className={style.page} data-theme={darkMode ? "dark" : "lightMode"}>
+          <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>درباره ما!</h1>
+          <div className={style.page2} data-theme={darkMode ? "dark" : "lightMode"}>
             <AboutWeDesc />
             <TargetWe />
             <Teaching />
@@ -27,6 +40,7 @@ const AboutWe = (props) => {
             <LearningWorld />
             <Programming />
           </div>  
+        </div>
         </div>
       )}
     </Formik>

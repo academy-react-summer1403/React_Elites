@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { clearStorages, getItem, removeItem } from '../services/storage/storage.services';
+import { useGlobalState } from '../../State/State';
 
 const baseURL = import.meta.env.VITE_BASE_URL
 
@@ -13,8 +14,10 @@ const onSuccess = (response) => {
 
 const onError = (err) => {
     if(err.response.status === 401) {
+        const [isLogin, setIsLogin] = useGlobalState('isLogin');
         removeItem('token')
         window.location.pathname = '/Login'
+        setIsLogin(false)
     }
 
     if (err.response.status >= 400 && err.response.status < 500) {

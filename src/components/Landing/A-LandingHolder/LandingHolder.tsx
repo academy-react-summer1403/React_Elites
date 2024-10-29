@@ -10,20 +10,21 @@ const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
+  const [isLanding, setisLanding] = useGlobalState('isLanding');
 
   const getSAndT = async () => {
     const SAndT = await getStudentAndTeacherCount();
     setMAndJ(SAndT)
   }
 
-  const isLoginOrNot = () => {
-    if(isLogin === true){
-      toast.success('ورود با موفقیت انجام شد')
-    }
-    else{
-      return
-    }
-  }
+  // const isLoginOrNot = () => {
+  //   if(isLogin === true){
+  //     toast.success('ورود با موفقیت انجام شد')
+  //   }
+  //   else{
+  //     return
+  //   }
+  // }
 
   const getProfilee = async () => {
     let userInfo = await getProfile()
@@ -32,9 +33,16 @@ const LandingHolder = () => {
 
   useEffect(() => {
     getSAndT();
-    isLoginOrNot();
+    // isLoginOrNot();
     getProfilee();
+    setisLanding(true)
   }, [])
+  useEffect(() => {
+    return () => {
+      setisLanding(false)
+    }
+  }, [])
+  
 
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   

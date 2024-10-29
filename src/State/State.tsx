@@ -4,7 +4,11 @@ const { useGlobalState} = createGlobalState({
     DarkMode: false,
     isLogin: false,
     phoneNumber: "",
-    userInfoObj: {}
+    userInfoObj: {},
+    isLanding: false,
+    isCourse: false,
+    isBlog: false,
+    isAboutUs: false
 })
 
 

@@ -25,7 +25,7 @@ const TeacherPage = (props) => {
     <Formik>
       {(form) => (
 
-        <div className=' h-full w-full flex flex-wrap justify-center' data-theme={darkMode ? "dark" : "lightMode"}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={darkMode ? "dark" : "lightMode"}>
           <div className={style.titleHolder}>
             <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لیست اساتید!</h1>
             <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لیستی از بهترین اساتید در آکادمی سپهر!</h1>

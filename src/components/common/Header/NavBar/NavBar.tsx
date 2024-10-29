@@ -13,7 +13,7 @@ const NavBar = () => {
     let loginStatus = getItem('isLogin')
     return (
         <div className={style.container} data-theme={darkMode ? "dark" : "lightMode"}>
-            { loginStatus ? <User /> : <LogInOrRegister />}
+            { isLogin ? <User /> : <LogInOrRegister />}
             <NavBarItems />
         </div>
     )
