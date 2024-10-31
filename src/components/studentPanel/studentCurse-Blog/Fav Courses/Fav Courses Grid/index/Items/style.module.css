@@ -14,7 +14,7 @@
     font-family: DannaBold;
     font-size: 24px;
     color: #2F2F2F;
-    width: 100%;
+    width: 122px;
     text-align: right;
     height: auto;
     line-height: 40px;
@@ -26,7 +26,7 @@
     margin-top: 12px;
 }
 
-@media screen and (max-width: 1003px) {
+/* @media screen and (max-width: 1003px) {
     .title{
         width: 200px;
     }
@@ -47,4 +47,4 @@
     .imageProgramming{
         display: none;
     }
-}
+} */

@@ -7,16 +7,21 @@ import { CoursesHolder } from '../Courses Of The Weekend/CoursesHolder/CoursesHo
 import { useGlobalState } from '../../../State/State'
 import { useParams } from 'react-router-dom'
 import { getCourseById } from '../../../core/services/api/courseById'
+import { getCourseComment } from '../../../core/services/api/getCourseComment'
 
 const CourseDetail = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   const [courseDetail, setCourseDetail] = useState([])
+  const [comments, setComments] = useState([])
   const {id} = useParams();
 
   const getCourseDetail = async () => {
     const Details = await getCourseById(id)
+    const comment = await getCourseComment(id)
     setCourseDetail(Details)
+    setComments(comment)
+    console.log(comments)
   }
   useEffect(() => {
     getCourseDetail()
@@ -42,7 +47,7 @@ const CourseDetail = () => {
           end={courseDetail?.endTime}
         />
         <Description description={courseDetail?.describe} />
-        <AllComments />
+        <AllComments comments={comments} />
         <CoursesHolder />
       </div>
     </div>

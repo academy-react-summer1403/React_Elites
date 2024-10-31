@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './style.module.css'
 import { Title } from './Title'
 import { Content } from './Content'
 import { Footer } from './Footer'
 import { useGlobalState } from '../../../../../State/State'
 
-const Comment = () => {
+const Comment = ({title, describe}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
   return (
     <div className={style.comments} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-        <Title />
-        <Content />
+        <Title title={title} />
+        <Content describe={describe} />
         <Footer />
     </div>
   )

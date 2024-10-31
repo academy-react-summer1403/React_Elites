@@ -15,6 +15,7 @@ const Login = () => {
     if(user.success == true){
       setIsLogin(true)
       setItem('isLogin', isLogin)
+      console.log(user)
     }
     else {
       return
@@ -28,6 +29,7 @@ const Login = () => {
     >
     {(form) => (
         <Form className={styleLogin.form}>
+          {isLogin && <Navigate to="/" />}
           <div className={styleLogin.navigate}>
             <div className="w-72 flex flex-wrap h-full">
               <div className="w-full h-2 rounded-lg black bg-blue-500">  </div>

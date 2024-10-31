@@ -14,34 +14,11 @@
     font-family: DannaBold;
     font-size: 24px;
     color: #2F2F2F;
-    width: 100%;
+    width: 122px;
     text-align: right;
     height: auto;
     line-height: 40px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-@media screen and (max-width: 1003px) {
-    .title{
-        width: 200px;
-    }
-    .imageProgramming{
-        width: 200px;
-    }
-}
-@media screen and (max-width: 859px) {
-    .title{
-        width: 400px;
-    }
-    .imageProgramming{
-        width: 400px;
-    }
-}
-
-@media screen and (max-width: 727px) {
-    .imageProgramming{
-        display: none;
-    }
 }

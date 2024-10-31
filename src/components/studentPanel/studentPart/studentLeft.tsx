@@ -4,10 +4,20 @@ import { NavLink } from "react-router-dom";
 import { DarkOrLightMode } from "./DarkOrLightMode";
 import { useGlobalState } from "../../../State/State";
 import profile from "../../../assets/Images/userName.png"
+import { getProfile } from "../../../core/services/api/getProfileInfo";
+import { useEffect, useState } from "react";
 
 const StudentGhabLeft = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
-
+  const [user, setUser] = useState([])
+    const getUserInfo = async () => {
+        const userInfo = await getProfile();
+        setUser(userInfo)
+    }
+    useEffect(() => {
+        getUserInfo()
+    }, [])
+    
     return (
         <Formik>
             <div className={style.header}> 
@@ -67,9 +77,9 @@ const StudentGhabLeft = () => {
                             </div>
                         </div>
                     </label>
-                    <img src={profile} className={style.userProfile} />
+                    <img src={user.currentPictureAddress} className={style.userProfile} />
                     <div className={style.userHolder}>
-                      <p className={style.userName} data-theme={darkMode ? "darkNoBG" : "lightMode"}> پارسا آقایی</p>
+                      <p className={style.userName} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{user.fName} {user.lName}</p>
                       <p className={style.userLevel} data-theme={darkMode ? "darkNoBG" : "lightMode"}> دانشجو</p>
                     </div>
                   </div>

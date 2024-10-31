@@ -39,7 +39,7 @@
     margin-top: 12px;
 }
 
-@media screen and (max-width: 1116px) {
+/* @media screen and (max-width: 1116px) {
     .teacher,.date,.view{
         font-size: 10px;
     }
@@ -57,4 +57,4 @@
     .teacher{
         display: none;
     } 
-}
+} */

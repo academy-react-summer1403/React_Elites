@@ -10,6 +10,3 @@
     z-index: 1000000;
     position: fixed;
 }
-[data-scroll='70px'] {
-    position: fixed;
-}

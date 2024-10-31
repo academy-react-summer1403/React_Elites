@@ -23,7 +23,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 18px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,8 +41,8 @@
     background: #3772FF;
 }
 
-@media screen and (max-width: 859px) {
+/* @media screen and (max-width: 859px) {
     .level{
         display: none;
     }
-}
+} */

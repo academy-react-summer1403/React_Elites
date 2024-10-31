@@ -18,7 +18,7 @@ const StudentPanel = () => {
             <div className={style.left}> 
                 <StudentGhabLeft />
                 <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-                  <Outlet />          
+                  <Outlet />
                 </div>
             </div>
         </div>

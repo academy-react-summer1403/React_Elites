@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StudentPanelSearch } from '../../studentPart/studentPanelSearch'
 import { FavCoursesCardsList } from './Fav Courses Grid/index/FavCoursesCardsList'
 import style from "./../../../../Style/studentPanel.module.css";
 import { useGlobalState } from '../../../../State/State';
+import { getFavCourses } from '../../../../core/services/api/getFavCourses';
 
 const StudentMyFavCourses = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const [userFavcoursesObj, setuserFavcoursesObj] = useState([])
+
+  const getFavCoursesCall = async () => {
+    const userFavouriteCoursesRes = await getFavCourses();
+    setuserFavcoursesObj(userFavouriteCoursesRes.favoriteCourseDto)
+  }
+
+  useEffect(() => {
+    getFavCoursesCall()
+  }, [])
+  
+  
   return (
     <div className={style.page2}>
       <div className={style.titleHolder}>
@@ -22,7 +35,7 @@ const StudentMyFavCourses = () => {
           <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>سطح </div>
           <div className={style.eyeList}> </div>
         </div>
-        <FavCoursesCardsList />
+        <FavCoursesCardsList userFavcoursesObj={userFavcoursesObj} />
       </div>
     </div>
   )

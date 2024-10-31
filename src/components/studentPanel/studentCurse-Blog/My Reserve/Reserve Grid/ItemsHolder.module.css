@@ -48,12 +48,7 @@
     width: 30px;
     height: 30px;
 }
-.holder > div:nth-child(2){
-    height: 34px;
-    overflow: hidden;
-    width: 11.6%;
-}
-@media screen and (max-width: 1003px) {
+/* @media screen and (max-width: 1003px) {
     .holder{
         justify-content: right;
         gap: 50px;
@@ -77,4 +72,4 @@
     .holder > div:nth-child(2){
         width: 300px;
     }
-}
+} */
