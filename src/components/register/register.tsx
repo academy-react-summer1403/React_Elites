@@ -53,7 +53,7 @@ const Register = () => {
                       </div>
                       <div className="mt-2 max-w-96 flex justify-center gap-1.5">
                         <h1 className="red text-black text-sm font-DannaExtraBold ">حساب کاربری دارید؟</h1>
-                        <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight" to="/Login"> ورود به حساب کاربری</NavLink>
+                        <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight underline" to="/Auth/Login"> ورود به حساب کاربری</NavLink>
                       </div>
                       <div className="flex max-w-96  justify-center mt-8">
                         <div className={styleLogin.HomePageButton}>
