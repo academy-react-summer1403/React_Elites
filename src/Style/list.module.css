@@ -41,6 +41,18 @@ form>div:not(form>div:first-child),form > a{
     background: url(https://img.icons8.com/?size=100&id=85028&format=png&color=707070) no-repeat 3% 50%;
     background-size: 24px;
 }
+form > div:nth-child(5) > div > input{
+    background-color: rgb(255, 255, 255);
+    height: 16px !important;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+form > div:nth-child(5) > div > input:checked{
+    appearance: auto;
+}
+form > div:nth-child(5) > div{
+    direction: ltr;
+}
 .selectedNavigate{
     color: #000000;
 }

@@ -31,12 +31,12 @@ const ForgetPass = () => {
                         <ErrorMessage name="password" component={"p"} className="error"/>
                       </div>
                     
-                      <NavLink to="/Forget-Password-Page2" className="h-11 max-w-96 overflow-hidden flex">
+                      <NavLink to="/Auth/Forget-Password-Page2" className="h-11 max-w-96 overflow-hidden flex">
                         <button  className="h-full w-full text-white bg-blue-600 text-lg leading-4 font-lg font-DannaBold uppercase tracking-wider cursor-pointer rounded-full overflow-hidden" type="submit">ارسال لینک</button>
                       </NavLink>
                       <div className="flex max-w-96  justify-center mt-4">
                         <div className=" flex rounded-full justify-center gap-1.5 w-28 px-4 py-2 bg-white border border-px border-gray-300">
-                          <NavLink to="/Login" className="border-non cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> بازگشت &gt; </NavLink>
+                          <NavLink to="/Auth/Login" className="border-non cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight"> بازگشت &gt; </NavLink>
                         </div>
                       </div>
                   </Form>
