@@ -5,17 +5,19 @@
     display: flex;
     width: 876px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     gap: 24px;
     height: 100%;
+    padding-right: 20px;
 }
 .img{
     width: 189px;
     height: 189px;
+    border-radius: 16px;
 }
 .selected{
     width: 60%;
-    background-color: #ebebeb;
+    background-color: #F1F1F1 !important;
     color: #3772FF;
     border-radius: 48px;
     padding: 11px 16px;

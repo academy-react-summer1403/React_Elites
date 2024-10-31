@@ -2,8 +2,6 @@ import { Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleLink from "./../LinkPage/partLinkPage/link.module.css";
-import { StudentGhabRight } from "../../studentPart/studentRight";
-import { StudentGhabLeft } from "../../studentPart/studentLeft";
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../State/State";
 
@@ -15,7 +13,7 @@ const LinkForm = () => {
 
         <Formik>
             {(form) => (
-                <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+                <>
                     <div className={style.titleHolder}>
                         <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
                     </div>
@@ -43,7 +41,7 @@ const LinkForm = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </>
             )}
         </Formik>
 

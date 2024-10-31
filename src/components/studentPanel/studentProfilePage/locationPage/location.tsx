@@ -14,7 +14,7 @@ const LocationForm = () => {
     return (
         <Formik>
             {(form) => (
-                <div className={style.page} data-theme={darkMode ? "dark" : "lightMode"}>
+                <>
                     <div className={style.titleHolder}>
                         <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
                     </div>
@@ -34,7 +34,7 @@ const LocationForm = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </>
             )}
         </Formik>
 

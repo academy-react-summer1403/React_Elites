@@ -1,5 +1,5 @@
 import React from 'react'
-import style from "./../../../../Style/studentPanel.module.css";
+import style from "./style.module.css";
 import { StudentPanelSearch } from '../../studentPart/studentPanelSearch';
 import { ListCardBlogs } from './Courses Grid/index/CoursesCardsList';
 import { ChangePageList } from '../../../blogs/ChangePageList/ChangePageList';

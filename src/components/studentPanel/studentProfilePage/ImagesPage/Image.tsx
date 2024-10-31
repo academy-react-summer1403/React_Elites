@@ -2,23 +2,45 @@ import { Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleImage from "./partImagePage/Image.module.css";
-import { StudentGhabRight } from "../../studentPart/studentRight";
-import { StudentGhabLeft } from "../../studentPart/studentLeft";
-import image1 from "../../../../assets/Images/profile1.png";
-import image2 from "../../../../assets/Images/profile2.png";
-import image3 from "../../../../assets/Images/profile3.png";
-import image4 from "../../../../assets/Images/profile4.png";
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../State/State";
+import { getProfile } from "../../../../core/services/api/getProfileInfo";
+import { useEffect, useState } from "react";
+import { selectImage } from "../../../../core/services/api/postSelectImage";
+import { formToJSON } from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const ImageForm = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+    const [images, setImages] = useState([])
+
+
+    const getAllImagesCall = async () => {
+        const userInfo = await getProfile()
+        setImages(userInfo.userImage)
+    }
+
+    const postSelectImageCall = async (ImageId) => {
+        const onSucces = await selectImage(ImageId)
+        if (onSucces.success == true) {
+            toast.success("عملیات با موفقیت انجام شد")
+        }
+        else if(onSucces.success == true){
+            toast.error("خطا در انجام عملیات")
+        }
+    }
+
+    useEffect(() => {
+        getAllImagesCall()
+    }, [])
+    
 
     return (
 
         <Formik>
             {(form) => (
-                <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+                <>
+                <Toaster />
                     <div className={style.titleHolder}>
                         <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
                     </div>
@@ -32,13 +54,27 @@ const ImageForm = () => {
                             </div>
                         </div>
                         <div className={styleImage.imagesHolder}>
-                            <img className={styleImage.img} src={image1} />
-                            <img className={styleImage.img} src={image2} />
-                            <img className={styleImage.img} src={image3} />
-                            <img className={styleImage.img} src={image4} />
+                            <div className={style.header}>
+                                <div className={style.uploadImage}> اضافه کردن عکس 
+                                    <span className={style.addImage}></span>
+                                </div>
+                            </div>
+                            {
+                                images.map((item, index) => {
+                                    return (
+                                        <img 
+                                            key={index} 
+                                            className={styleImage.img} 
+                                            src={item.puctureAddress} 
+                                            onClick={() => {
+                                            postSelectImageCall({ImageId: item.id})
+                                        }} />
+                                    )
+                                })
+                            }
                         </div>    
                     </div>
-                </div>
+                </>
             )}
         </Formik>
 
