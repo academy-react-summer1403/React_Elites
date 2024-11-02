@@ -45,7 +45,14 @@
     width: 56px;
     height: 56px;
     border-radius: 100%;
-    background: #3772FF url(../../../../../../assets/Images/icons8-like-24.png) 50% 50% no-repeat;
+    background: url(https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=000000) 50% 50% no-repeat;
+    border: 1px solid #DCDCDC;
+}
+.liked{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #3772FF url(https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=FFFFFF) 50% 50% no-repeat;
 }
 
 .dislike{
@@ -53,6 +60,14 @@
     height: 56px;
     border-radius: 100%;
     background: url(../../../../../../assets/Images/icons8-dislike-24.png) 50% 50% no-repeat;
+    border: 1px solid #DCDCDC;
+}
+
+.disliked{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #3772FF url(../../../../../../assets/Images/dislikewhitec.png) 50% 50% no-repeat;
     border: 1px solid #DCDCDC;
 }
 

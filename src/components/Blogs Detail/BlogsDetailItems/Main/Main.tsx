@@ -4,7 +4,7 @@ import { BigImage } from './BigImage/BigImage'
 import { BigDetail } from './BigDetail/BigDetailHolder/BigDetail'
 import { Category } from './BigDetail/DetailTop/TopItems/Category'
 
-const Main = ({ image, teacher, views, likes, dislikes, rate, title, category, comment, insertDate}) => {
+const Main = ({id, image, teacher, views, likes, dislikes, rate, title, category, comment, insertDate, currentUserIsDissLike, currentUserIsLike}) => {
   return (
     <div className={style.main}>
 
@@ -18,6 +18,9 @@ const Main = ({ image, teacher, views, likes, dislikes, rate, title, category, c
           rate={rate}
           comment={comment}
           insertDate={insertDate}
+          currentUserIsLike={currentUserIsLike}
+          currentUserIsDissLike={currentUserIsDissLike}
+          id={id}
         />
         <BigImage image={image} />
 

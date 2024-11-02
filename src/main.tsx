@@ -24,7 +24,7 @@ import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolde
 import { Register } from './components/register/register.tsx'
 import { RegisterPage2 } from './components/register Page2/register.tsx'
 import { RegisterPage3 } from './components/register Page3/register.tsx'
-import { BlogsDetail } from './components/Blogs Detail/CourseDetailHolder/Blogs.tsx'
+import { BlogsDetail } from './components/Blogs Detail/BlogDetailHolder/Blogs.tsx'
 import { Payment } from './components/Payment First Page/Payment Holder/Payment.tsx'
 import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 import { StudentPayment } from './components/studentPanel/Student Payment/StudentPayment.tsx'

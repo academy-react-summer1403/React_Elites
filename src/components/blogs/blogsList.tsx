@@ -2,19 +2,19 @@ import { Formik  } from "formik";
 import styleBlogList from "./../../Style/blogList.module.css";
 import { Filter } from "./filter/filter.tsx";
 import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
-import { ChangePageList } from "./ChangePageList/ChangePageList.tsx";
 import { useEffect, useState } from "react";
 import { FilterModal } from "./Filter Modal/FilterModal.tsx";
 import { SortModal } from "./Sort Modal/SortModal.tsx";
 import { useGlobalState } from "../../State/State.tsx";
-import { useParams } from "react-router-dom";
-import { getBlogById } from "../../core/services/api/BlogById.ts";
 
 const BlogsList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [filterModal, setFilterModal] = useState(false)
   const [sortModal, setSortModal] = useState(false)
 
+  const [categoryId, setCategoryId] = useState("")
+  const [applyFilter, setApplyFilter] = useState(false)
+  const [searchValue, setSearchValue] = useState("")
   const [isBlog, setisBlog] = useGlobalState('isBlog');
 
   useEffect(() => {
@@ -37,7 +37,13 @@ const BlogsList = () => {
             <p className={styleBlogList.p} data-theme={darkMode ? "dark" : "lightMode"}>ما در بلاگ ها اطلاعات شما رو نسبت به تکنولوژی ای که یاد میگیرید بیشتر میکنیم</p>
           </div>
           <div className={styleBlogList.page}>
-            <Filter />            
+            <Filter 
+              setCategoryId={setCategoryId}
+              setApplyFilter={setApplyFilter}
+              categoryId={categoryId}
+              applyFilter={applyFilter}
+              setSearchValue={setSearchValue}
+            />            
             <div className={styleBlogList.page2}>
               <div className={styleBlogList.sortsAndFilter}>
                 <div className={styleBlogList.sortButton} data-theme={darkMode ? "dark" : "lightMode"}> ترتیب </div>
@@ -74,7 +80,11 @@ const BlogsList = () => {
                 }}>ترتیب</div>
                 { sortModal && <SortModal setSortModal={setSortModal} /> }
               </div>
-              <ListCardBlogs />
+              <ListCardBlogs 
+                searchValue={searchValue}
+                applyFilter={applyFilter}
+                categoryId={categoryId}
+              />
             </div>
           </div>
           

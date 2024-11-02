@@ -7,17 +7,21 @@ import { useGlobalState } from "../../../../State/State";
 import { getProfile } from "../../../../core/services/api/getProfileInfo";
 import { useEffect, useState } from "react";
 import { selectImage } from "../../../../core/services/api/postSelectImage";
-import { formToJSON } from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { uploadImage } from "../../../../core/services/api/postUserProfile";
+import { removeUserProfile } from "../../../../core/services/api/deleteUserProfile";
 
 const ImageForm = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [images, setImages] = useState([])
-
+    const [isClicked, setisClicked] = useState(false)
+    const [userInfoo, setUserInfoo] = useState()
+    const [image, setImage] = useState()
 
     const getAllImagesCall = async () => {
         const userInfo = await getProfile()
         setImages(userInfo.userImage)
+        setUserInfoo(userInfo)
     }
 
     const postSelectImageCall = async (ImageId) => {
@@ -30,16 +34,20 @@ const ImageForm = () => {
         }
     }
 
+    const onUpload = async (image) => {
+        const result = await uploadImage(image)
+        if(result.success == true){
+            toast.success("عملیات با موفقیت انجام شد")
+        }
+    }
+
     useEffect(() => {
         getAllImagesCall()
     }, [])
     
 
     return (
-
-        <Formik>
-            {(form) => (
-                <>
+            <>
                 <Toaster />
                     <div className={style.titleHolder}>
                         <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
@@ -56,28 +64,58 @@ const ImageForm = () => {
                         <div className={styleImage.imagesHolder}>
                             <div className={style.header}>
                                 <div className={style.uploadImage}> اضافه کردن عکس 
-                                    <span className={style.addImage}></span>
+                                    <span className={style.addImage} onClick={() => {
+                                        setisClicked(!isClicked)
+                                    }}></span>
                                 </div>
+                                {isClicked && 
+                                <>
+                                    <div className={style.overlay}></div>
+                                    <div className={styleImage.uploadModule}>
+                                        <div className={styleImage.uploadHeader}>
+                                            <div className={styleImage.closeBtn} onClick={() => {
+                                                setisClicked(!isClicked)
+                                            }}></div>
+                                        </div>
+                                        <img className={styleImage.profile} src={image ? URL.createObjectURL(image) : image} />
+                                        <div className={styleImage.holderUploadButton}>
+                                        <button className={styleImage.upload} onClick={() => {
+                                            const imageData = new FormData();
+                                            imageData.append('formFile', image)
+                                            onUpload(imageData)
+                                        }}> بارگذاری </button>
+                                        </div>
+                                        <div className={styleImage.fileHolder}></div>
+                                        <input type="file" id="file" className={styleImage.file} onChange={(e) => setImage(e.target.files[0])} />
+                                        <label htmlFor="file" className={styleImage.labelFile}></label>
+                                    </div>
+                                </>
+                                }
                             </div>
                             {
                                 images.map((item, index) => {
                                     return (
-                                        <img 
-                                            key={index} 
-                                            className={styleImage.img} 
-                                            src={item.puctureAddress} 
-                                            onClick={() => {
-                                            postSelectImageCall({ImageId: item.id})
-                                        }} />
+                                        <div key={index} className={styleImage.holderProfiles} >
+                                            <img 
+                                                className={styleImage.img} 
+                                                src={item.puctureAddress} 
+                                                onClick={() => {
+                                                postSelectImageCall({ImageId: item.id})
+                                            }} />
+                                            <span className={styleImage.delete} onClick={async () => {
+                                                const data = new FormData();
+                                                data.append("DeleteEntityId", item.id);
+                                                let res = await removeUserProfile(data)
+                                                console.log(res)
+                                            }}></span>
+                                            {userInfoo.currentPictureAddress == item.puctureAddress && <span className={styleImage.tick}></span> }
+                                        </div>
                                     )
                                 })
                             }
                         </div>    
                     </div>
-                </>
-            )}
-        </Formik>
-
+            </>
     )
 }
 
