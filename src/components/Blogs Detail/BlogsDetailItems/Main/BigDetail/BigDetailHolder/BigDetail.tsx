@@ -11,7 +11,7 @@ const BigDetail = ({isCurrentUserFavorite, id, category, teacher, views, likes, 
   return (
     <div className={style.holder}>
         <Title title={title}/>
-        <Top category={category} teacher={teacher} views={views} date={date}/>
+        <Top category={category} teacher={teacher} views={views} date={insertDate}/>
         <Bottom likes={likes} dislikes={dislikes}/>
 
         <RateAndPrice rate={rate} comment={comment} />
