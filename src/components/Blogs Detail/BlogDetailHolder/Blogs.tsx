@@ -19,7 +19,6 @@ const BlogsDetail = () => {
     const Details = await getBlogById(id)
     setBlogDetail(Details.detailsNewsDto)
     setComments(Details.commentDtos)
-    console.log(Details.detailsNewsDto)
   }
   useEffect(() => {
     getBlogDetail()
@@ -42,6 +41,7 @@ const BlogsDetail = () => {
           currentUserIsDissLike={blogDetail?.currentUserIsDissLike}
           currentUserIsLike={blogDetail?.currentUserIsLike}
           id={blogDetail?.id}
+          isCurrentUserFavorite={blogDetail?.isCurrentUserFavorite}
         />
         <Description description={blogDetail?.describe} />
         <AllComments comments={comments} />

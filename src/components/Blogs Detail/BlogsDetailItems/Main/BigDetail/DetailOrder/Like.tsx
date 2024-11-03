@@ -3,7 +3,7 @@ import style from './style.module.css'
 import { likeNews } from '../../../../../../core/services/api/postNewsLike'
 import toast, { Toaster } from 'react-hot-toast'
 
-const Like = ({currentUserIsLike, id}) => {
+const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
 
   const likeNewsCall = async (id) => {
     let res = await likeNews(id)
@@ -17,8 +17,10 @@ const Like = ({currentUserIsLike, id}) => {
   return (
     <>
     <Toaster />
-    <div className={currentUserIsLike ? style.liked : style.like} onClick={() => {
+    <div className={isClicked ? style.liked : style.like} onClick={() => {
       likeNewsCall(id)
+      setIsClicked2(false)
+      setIsClicked(true)
     }}></div>
     </>
   )

@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { likeNews } from '../../../../../../core/services/api/postNewsLike'
 import { dislikeNews } from '../../../../../../core/services/api/postNewsDislike'
 
-const DisLike = ({currentUserIsDissLike, id}) => {
+const DisLike = ({isClicked2, setIsClicked2, setIsClicked, id}) => {
   
   const likeNewsCall = async (id) => {
     let res = await dislikeNews(id)
@@ -18,8 +18,10 @@ const DisLike = ({currentUserIsDissLike, id}) => {
   return (
     <>
       <Toaster />
-      <div className={currentUserIsDissLike ? style.disliked : style.dislike} onClick={() => {
+      <div className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
       likeNewsCall(id)
+      setIsClicked(false)
+      setIsClicked2(true)
     }}></div>
     </>
   )

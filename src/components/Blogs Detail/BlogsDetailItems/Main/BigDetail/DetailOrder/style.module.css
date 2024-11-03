@@ -25,6 +25,20 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+.isFaved{
+        width: 48.39650145772595%;
+    height: 100%;
+    color: #FCFCFC;
+    font-family: DannaBold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2F2F2F url(https://img.icons8.com/?size=100&id=7690&format=png&color=FFFFFF) 95% 40% no-repeat;
+    background-size: 8%;
+}
 
 .AddToFav{
     width: 48.39650145772595%;

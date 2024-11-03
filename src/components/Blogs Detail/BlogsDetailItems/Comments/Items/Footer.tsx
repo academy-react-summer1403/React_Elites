@@ -8,6 +8,15 @@ const Footer = ({autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLi
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [renderLike, setrenderLike] = useState(false)
 
+  const [isClicked, setisClicked] = useState(false)
+  const [isClicked2, setisClicked2] = useState(false)
+
+  useEffect(() => {
+    setisClicked(currentUserIsLike)
+    setisClicked2(currentUserIsDissLike)
+  }, [])
+  
+
   const likeSystem = async (id, type) => {
     let res = await likeComment(id, type)
     setrenderLike(!renderLike)
@@ -27,12 +36,16 @@ const Footer = ({autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLi
       <Toaster />
         <div className={style.likeAndDislikes}>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {likeCount} </div>
-            <div className={currentUserIsLike ? style.like : style.iconLike} onClick={() => {
+            <div className={isClicked ? style.like : style.iconLike} onClick={() => {
               likeSystem(id, true)
+              setisClicked(true)
+              setisClicked2(false)
             }}></div>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {dissLikeCount} </div>
-            <div className={currentUserIsDissLike ? style.dislike : style.iconDislike} onClick={() => {
+            <div className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
               likeSystem(id, false)
+              setisClicked(false)
+              setisClicked2(true)
             }}></div>
         </div>
         <div className={style.user}>
