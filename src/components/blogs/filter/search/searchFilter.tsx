@@ -2,7 +2,7 @@ import {Field} from "formik";
 import styleFilter from "./../filter.module.css";
 import { useGlobalState } from "../../../../State/State";
 
-const SearchFilter = () => {
+const SearchFilter = ({setSearchValue}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
@@ -11,7 +11,9 @@ const SearchFilter = () => {
       <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgSearch}`} data-theme={darkMode ? "search" : "lightMode"}/>
         <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>جست‌جو</p>
       </div>
-      <Field className={styleFilter.filterInput} name="password" placeholder="بلاگ مورد نظر را جست‌جو کنید..." data-theme={darkMode ? "dark" : "lightMode"}/>
+      <input className={styleFilter.filterInput} name="password" placeholder="بلاگ مورد نظر را جست‌جو کنید..." data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
+          setSearchValue(e.target.value)
+        }}/>
       <div className={styleFilter.searchBox}></div>
     </div>
 )

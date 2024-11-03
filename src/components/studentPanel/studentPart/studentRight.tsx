@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import style from "./../../../Style/studentPanel.module.css";
+import style from "./../../../Style/studentPanel.module.css"
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../State/State";
 
@@ -30,7 +30,7 @@ const StudentGhabRight = () => {
                         </div>
                         <div>
                             <div className={style.BlogMenu}> </div>
-                            <NavLink data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ های موردعلاقه</NavLink>
+                            <NavLink to="/Student-Panel/Fav-Blogs" data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ های موردعلاقه</NavLink>
                         </div>
                         <div>
                             <div className={style.profile}> </div>

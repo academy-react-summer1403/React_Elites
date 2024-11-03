@@ -38,11 +38,11 @@
 }
 
 .likeAndDislikes{
-    width: 103px;
     height: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .count{
@@ -54,11 +54,23 @@
 .like{
     width: 24px;
     height: 24px;
-    background: url(../../../../../assets/Images/like.png) 50% 50% no-repeat;
+    background: url('../../../../../assets/Images/like(1).png') 50% 50% no-repeat;
+    background-size: cover;
+}
+.iconLike{
+    width: 24px;
+    height: 24px;
+    background: url(../../../../../assets/Images/like.png ) 50% 50% no-repeat;
     background-size: cover;
 }
 
 .dislike{
+    width: 24px;
+    height: 24px;
+    background: url('../../../../../assets/Images/dislike(1).png') 50% 50% no-repeat;
+    background-size: cover;
+}
+.iconDislike{
     width: 24px;
     height: 24px;
     background: url(../../../../../assets/Images/dislike.png) 50% 50% no-repeat;
@@ -103,6 +115,7 @@
     width: 40px;
     height: 40px;
     border-radius: 100%;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 1078px) {

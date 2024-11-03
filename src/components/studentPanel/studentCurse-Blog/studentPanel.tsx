@@ -10,9 +10,6 @@ const StudentPanel = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
-
-    <Formik>
-      {(form) => (
         <div className={style.root}>
             <StudentGhabRight />
             <div className={style.left}> 
@@ -22,8 +19,6 @@ const StudentPanel = () => {
                 </div>
             </div>
         </div>
-      )}
-    </Formik>
 
   )
 }

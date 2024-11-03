@@ -1,13 +1,13 @@
 .rightHolder{
     height: 798px;
-    width: 22.3%;  
     border-left: 1px solid #DCDCDC;
-    padding: 10px;
+    padding-left: 10px;
 }
 .right{
-    width: 100%;
+    width: 210px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: right;
     gap: 16px;
 }
 .left{
@@ -15,7 +15,7 @@
     padding-right: 24px;
 }
 .right > .pages,.right > div{
-    width: 100%;
+    width: 220px;
     color: #707070;
     font-size: 18px;
     font-family: DannaDemiBold;
@@ -28,7 +28,7 @@
     background-color: #ebebeb;
     color: #3772FF;
     border-radius: 48px;
-    padding: 11px 16px;
+    padding: 10px;
     text-align: center;
 }
 .page2{
@@ -109,7 +109,16 @@
     border-radius: 40px;
     margin-top: 20px;
 }
+.left > button:active{
+    scale: 1.1;
+}
 .selected{
-    width: 90%;
+    width: 210px;
+    background-color: #F1F1F1 !important;
+}
+@media screen and(max-width: 570px) {
+    .right{
+        width: 150px;
+    }
 }
 

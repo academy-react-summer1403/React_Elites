@@ -1,22 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
-import Bahr from '../../../../../assets/Images/Bahr.jpg'
 import { useGlobalState } from '../../../../../State/State';
+import { likeComment } from '../../../../../core/services/api/postCommentBlogLike';
+import toast, { Toaster } from 'react-hot-toast';
 
-const Footer = () => {
+const Footer = ({autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const [renderLike, setrenderLike] = useState(false)
+
+  const likeSystem = async (id, type) => {
+    let res = await likeComment(id, type)
+    setrenderLike(!renderLike)
+    console.log(res)
+    if(res.success === true){
+      toast.success('عملیات با موفقیت انجام شد')
+    }
+    else{
+      return
+    }
+  }
+
+  
+  
   return (
     <div className={style.footer}>
+      <Toaster />
         <div className={style.likeAndDislikes}>
-            <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>1</div>
-            <div className={style.like}></div>
-            <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>20</div>
-            <div className={style.dislike}></div>
+            <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {likeCount} </div>
+            <div className={currentUserIsLike ? style.like : style.iconLike} onClick={() => {
+              likeSystem(id, true)
+            }}></div>
+            <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {dissLikeCount} </div>
+            <div className={currentUserIsDissLike ? style.dislike : style.iconDislike} onClick={() => {
+              likeSystem(id, false)
+            }}></div>
         </div>
         <div className={style.user}>
-            <div className={style.username} data-theme={darkMode ? "darkNoBG" : "lightMode"}>مهدی امیرخانی</div>
-            <img className={style.profile} src={Bahr} />
-            <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}>29 اردیبهشت 1403</div>
+            <div className={style.username} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {autor} </div>
+            <img className={style.profile} />
+            <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {inserDate} </div>
         </div>
     </div>
   )

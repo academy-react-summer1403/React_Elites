@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StudentPanelSearch } from '../../studentPart/studentPanelSearch'
 import { FavCoursesCardsList } from './Fav Courses Grid/index/FavCoursesCardsList'
-import style from "./../../../../Style/studentPanel.module.css";
+import style from "./style.module.css";
 import { useGlobalState } from '../../../../State/State';
 import { getFavCourses } from '../../../../core/services/api/getFavCourses';
 
@@ -30,8 +30,8 @@ const StudentMyFavCourses = () => {
           <div className={style.imgList} data-theme={darkMode ? "darkNoBG" : "lightMode"}># </div>
           <div className={style.nameList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>نام </div>
           <div className={style.teacherList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> مدرس</div>
-          <div className={style.dateStartList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ برگزاری </div>
-          <div className={style.dateEndList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ اتمام </div>
+          <div className={style.dateLastUpdate} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ اخرین تغییرات </div>
+          <div className={style.viewList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> بازدیدکنندگان  </div>
           <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>سطح </div>
           <div className={style.eyeList}> </div>
         </div>

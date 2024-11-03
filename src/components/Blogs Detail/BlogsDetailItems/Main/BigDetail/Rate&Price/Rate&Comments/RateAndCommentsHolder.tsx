@@ -1,13 +1,13 @@
 import React from 'react'
 import style from './style.module.css'
 import { Comments } from './Comments'
-import { Rate } from './Rate'
+import { Ratee } from './Rate'
 
 const RateAndCommentsHolder = ({rate, comment}) => {
   return (
     <div className={style.holder}>
         <Comments comment={comment} />
-        <Rate rate={rate} />
+        <Ratee rate={rate} />
     </div>
   )
 }
