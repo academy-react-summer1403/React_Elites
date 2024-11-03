@@ -43,9 +43,9 @@ const ListCardBlogs = ({categoryId, applyFilter, searchValue}) => {
             title={item.title}
             teacher={item.addUserFullName}
             view={item.currentView}
-            // date={item.date}
             id={item.id}
             image={item.currentImageAddressTumb}
+            date={item.insertDate}
           />
         )
       })}

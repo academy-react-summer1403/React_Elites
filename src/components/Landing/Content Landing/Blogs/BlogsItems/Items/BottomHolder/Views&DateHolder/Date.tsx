@@ -6,7 +6,7 @@ const Date = ({dateMiladi}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   
   return (
-    <div className={style.date} data-theme={darkMode ? "dark" : "lightMode"}>{dateMiladi}</div>
+    <div className={style.date} data-theme={darkMode ? "DateBlog" : "lightMode"}>{dateMiladi}</div>
   )
 }
 

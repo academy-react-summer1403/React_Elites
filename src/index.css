@@ -125,9 +125,9 @@
   background-size: cover;
 }
 [data-theme="search"] {
-  background: url("https://img.icons8.com/?size=100&id=132&format=png&color=14FFEC")  no-repeat 90% 50%;
+  background: url("https://img.icons8.com/?size=100&id=132&format=png&color=14FFEC")  no-repeat 90% 50% !important;
   color: #14FFEC !important;
-  background-size: 25px;
+  background-size: 25px !important;
 }
 [data-theme="level"] {
   background: url("https://img.icons8.com/?size=100&id=fJKs3A7hg7iS&format=png&color=14FFEC")  no-repeat 100% 50%;
@@ -154,4 +154,24 @@
 [data-theme="minibasket"] {
   background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFFFFF") 50% 50% no-repeat;
   background-size: 60%;
+}
+[data-theme="dateBlogFilter"] {
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=14FFEC") 50% 50% no-repeat !important;
+  background-size: 25px !important;
+}
+[data-theme="categoryBlogFilter"] {
+  background: url("https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=14FFEC") 50% 50% no-repeat !important;
+  background-size: 25px !important;
+}
+[data-theme="ViewBlog"] {
+  background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=14FFEC") 0% 50% no-repeat !important;
+  background-size: 18px !important;
+  color: #14FFEC !important;
+  border-color: #0D7377 !important;
+}
+[data-theme="DateBlog"] {
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=14FFEC") 0% 50% no-repeat !important;
+  background-size: 18px !important;
+  color: #14FFEC !important;
+  border-color: #0D7377 !important;
 }

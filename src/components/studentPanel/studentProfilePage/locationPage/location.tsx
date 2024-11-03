@@ -2,8 +2,7 @@ import { Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleLocation from "./partLocationPage/location.module.css";
-import { StudentGhabRight } from "../../studentPart/studentRight";
-import { StudentGhabLeft } from "../../studentPart/studentLeft";
+
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../State/State";
 

@@ -8,7 +8,7 @@ const DateFilter = () => {
   return (
     <div className={styleFilter.filterDetail}>
         <div className="flex gap-1.5">
-            <img className={styleFilter.filterTextImg} src="https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=000000" /> 
+            <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgDate}`} data-theme={darkMode ? "dateBlogFilter" : "lightMode"}/>
             <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ انتشار</p>
         </div>
         <Field type="date" className={styleFilter.filterInput} name="password" placeholder="" data-theme={darkMode ? "dark" : "lightMode"}/>

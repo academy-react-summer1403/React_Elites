@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './Bottom.module.css'
 import { Likes } from '../BottomItems/Likes'
 import { DisLikes } from '../BottomItems/DisLikes'
