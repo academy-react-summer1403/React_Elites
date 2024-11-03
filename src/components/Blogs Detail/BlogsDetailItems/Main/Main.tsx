@@ -17,7 +17,7 @@ const Main = ({ image, teacher, views, likes, dislikes, rate, title, category, c
           dislikes={dislikes}
           rate={rate}
           comment={comment}
-          insertDate={insertDate}
+          date={insertDate}
         />
         <BigImage image={image} />
 

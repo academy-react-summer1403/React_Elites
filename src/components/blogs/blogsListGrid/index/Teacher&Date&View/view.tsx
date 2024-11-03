@@ -5,7 +5,7 @@ import { useGlobalState } from '../../../../../State/State';
 const View = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.view} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{props.view} </div>
+    <div className={style.view} data-theme={darkMode ? "ViewBlog" : "lightMode"}>{props.view} </div>
   )
 }
 

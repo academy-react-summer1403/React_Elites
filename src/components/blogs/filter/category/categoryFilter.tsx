@@ -7,7 +7,7 @@ const CategoryFilter = () => {
   return (
     <div className={styleFilter.filterDetail}>
         <div className="flex gap-1.5">
-            <img className={styleFilter.filterTextImg} src="https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=000000" /> 
+            <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgCategory}`} data-theme={darkMode ? "categoryBlogFilter" : "lightMode"}/> 
             <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>دسته بندی </p>
         </div>
         <div className={styleFilter.filterCategory} data-theme={darkMode ? "dark" : "lightMode"}> دسته مورد نظر را انتخاب کنید </div>

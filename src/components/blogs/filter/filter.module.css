@@ -68,6 +68,19 @@
 .filterTextImg{
     width: 30px;
     height: 30px;
+    background-size: 25px;
+}
+.filterImgSearch{
+    background: url(https://img.icons8.com/?size=100&id=132&format=png&color=000000) no-repeat 90% 50%;
+    background-size: 25px;
+}
+.filterImgCategory{
+    background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=000000) no-repeat 90% 50%;
+    background-size: 25px;
+}
+.filterImgDate{
+    background: url(https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=000000) no-repeat 90% 50%;
+    background-size: 25px;
 }
 .searchBox{
     width: 50px;
