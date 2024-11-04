@@ -116,6 +116,9 @@
     height: 40px;
     border-radius: 100%;
     border: 1px solid black;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIH5efPMLE_yEELrFragrSk-6-gnwHI4qXyQ&s")no-repeat 50% 50%;
+    opacity: 0.5;
+    background-size: 100%;
 }
 
 @media screen and (max-width: 1078px) {
