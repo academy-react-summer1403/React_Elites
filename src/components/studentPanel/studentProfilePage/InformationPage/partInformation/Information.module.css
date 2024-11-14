@@ -11,8 +11,8 @@
     gap: 16px;
 }
 .left{
-    width: 600px;
-    padding-right: 24px;
+    width: 600px !important;
+    padding-right: 24px !important;
 }
 .right > .pages,.right > div{
     width: 220px;
@@ -37,14 +37,11 @@
 }
 .Input{
     background-color: #FCFCFC;
-    width: 100%;
+    width: 100% !important;
     height: 48px;
     border-radius: 24px;
     padding-right: 10px;
     border: 1px solid #DCDCDC;
-}
-.Input::placeholder{
-    font-family: DanaFaNum;
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 17.16px;
@@ -73,6 +70,7 @@
 .left > div{
     display: flex;
     gap: 39px;
+    width: 100% !important;
 }
 .aboutMe > div > input{
     height: 123px;

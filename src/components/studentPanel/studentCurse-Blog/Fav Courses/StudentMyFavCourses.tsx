@@ -12,6 +12,7 @@ const StudentMyFavCourses = () => {
   const getFavCoursesCall = async () => {
     const userFavouriteCoursesRes = await getFavCourses();
     setuserFavcoursesObj(userFavouriteCoursesRes.favoriteCourseDto)
+    console.log(userFavcoursesObj)
   }
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const StudentMyFavCourses = () => {
           <div className={style.nameList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>نام </div>
           <div className={style.teacherList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> مدرس</div>
           <div className={style.dateLastUpdate} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ اخرین تغییرات </div>
-          <div className={style.viewList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> بازدیدکنندگان  </div>
+          <div className={style.viewList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> نوع  </div>
           <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>سطح </div>
           <div className={style.eyeList}> </div>
         </div>

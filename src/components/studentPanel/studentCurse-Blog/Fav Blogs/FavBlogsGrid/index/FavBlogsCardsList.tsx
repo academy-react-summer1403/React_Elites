@@ -14,6 +14,7 @@ const FavBlogsCardsList = ({userFavBlogsObj}) => {
             date={item.updateDate}
             image={item.currentImageAddressTumb}
             level={item.currentRate}
+            id={item.newsId}
           />
         )
       })}

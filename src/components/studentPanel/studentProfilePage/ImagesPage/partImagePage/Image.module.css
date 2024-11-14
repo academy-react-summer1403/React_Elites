@@ -23,6 +23,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
+    z-index: 100;
 }
 .holderUploadButton{
     width: 100%;

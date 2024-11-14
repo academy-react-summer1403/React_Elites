@@ -25,7 +25,7 @@ form{
     border: 1px solid #DCDCDC;
     padding: 8px 16px;
 }
-input{
+/* input{
     background-color: #fff;
     border: 1px solid #DCDCDC;
     width: 100%;
@@ -33,15 +33,15 @@ input{
     border-radius: 24px;
     padding-right: 12px !important;
     color: #3d3d3d !important;
-}
-form>div:not(form>div:first-child),form > a{
+} */
+/* form>div:not(form>div:first-child),form > a{
     max-width: 384px;
-}
+} */
 .inputPassword{
     background: url(https://img.icons8.com/?size=100&id=85028&format=png&color=707070) no-repeat 3% 50%;
     background-size: 24px;
 }
-form > div:nth-child(5) > div > input{
+/* form > div:nth-child(5) > div > input{
     background-color: rgb(255, 255, 255);
     height: 16px !important;
     border: 1px solid #ccc;
@@ -52,7 +52,7 @@ form > div:nth-child(5) > div > input:checked{
 }
 form > div:nth-child(5) > div{
     direction: ltr;
-}
+} */
 .selectedNavigate{
     color: #000000;
 }
@@ -68,9 +68,9 @@ form > div:nth-child(5) > div{
     .page2{
         display: none;
     }
-    form > div,form > a{
+    /* form > div,form > a{
         max-width: 100% !important;
-    }
+    } */
     .HomePageButton{
         display: none;
     }

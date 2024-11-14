@@ -5,6 +5,7 @@ import { Teacher } from './index/Teacher&Date&View/Teacher'
 import { Date } from './index/Teacher&Date&View/Date'
 import { Level } from './index/Teacher&Date&View/Level'
 import { useGlobalState } from '../../../../../State/State'
+import { NavLink } from 'react-router-dom'
 
 const CardBlogs = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -16,7 +17,7 @@ const CardBlogs = (props) => {
         <Date date={props.date} />
         <Date date={props.date} />
         <Level level={props.level}/>
-        <span className={style.View} data-theme={darkMode ? "view" : "lightMode"}></span>
+        <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
     </div>
   )
 }

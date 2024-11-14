@@ -12,10 +12,12 @@ const FavCoursesCardsList = ({userFavcoursesObj}) => {
           <FavCoursesCards
             key={index}
             title={item.courseTitle}
+            type={item.typeName}
             teacher={item.teacheName}
             date={item.lastUpdate}
             image={item.tumbImageAddress}
             level={item.typeName}
+            id={item.courseId}
           />
         )
       })}

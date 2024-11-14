@@ -17,6 +17,8 @@ const ImageForm = () => {
     const [isClicked, setisClicked] = useState(false)
     const [userInfoo, setUserInfoo] = useState()
     const [image, setImage] = useState()
+    const [uploaded, setuploaded] = useState(false)
+    const [imageChanged, setimageChanged] = useState(false)
 
     const getAllImagesCall = async () => {
         const userInfo = await getProfile()
@@ -38,12 +40,18 @@ const ImageForm = () => {
         const result = await uploadImage(image)
         if(result.success == true){
             toast.success("عملیات با موفقیت انجام شد")
+            setuploaded(!uploaded)
         }
+        setisClicked(false)
     }
 
     useEffect(() => {
         getAllImagesCall()
     }, [])
+
+    useEffect(() => {
+        getAllImagesCall()
+    }, [uploaded, imageChanged])
     
 
     return (
@@ -100,6 +108,7 @@ const ImageForm = () => {
                                                 className={styleImage.img} 
                                                 src={item.puctureAddress} 
                                                 onClick={() => {
+                                                setimageChanged(!imageChanged)
                                                 postSelectImageCall({ImageId: item.id})
                                             }} />
                                             <span className={styleImage.delete} onClick={async () => {

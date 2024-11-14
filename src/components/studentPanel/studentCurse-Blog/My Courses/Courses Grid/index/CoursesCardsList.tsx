@@ -17,12 +17,14 @@ const ListCardBlogs = () => {
     <div className={style.holder}>
         {data.map((item, index) => {
         return (
-          <CardBlogs 
+          <CardBlogs
+            key={index} 
             title={item.title}
             teacher={item.teacher}
             date={item.date}
             image={item.image}
             level={item.level}
+            id={item.courseId}
           />
         )
       })}
