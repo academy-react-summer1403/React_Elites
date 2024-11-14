@@ -2,10 +2,12 @@ import {Field} from "formik";
 import styleFilter from "./../filter.module.css";
 import { useGlobalState } from "../../../../State/State";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const CategoryFilter = ({setCategoryId, categoryId}) => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [isClicked, setIsClicked] = useState(false)
+    const { t } = useTranslation();
 
   return (
     <div className={styleFilter.filterDetail}>

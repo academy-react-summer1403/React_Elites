@@ -9,7 +9,7 @@ import { User } from '../Notif&ModeItems/User'
 const NotifAndModeHolder = () => {
   return (
     <div className={style.container}>
-      <DarkOrLightMode />
+      
       <Notification />
       {/* <MiniBasket /> */}
       <Menu />
