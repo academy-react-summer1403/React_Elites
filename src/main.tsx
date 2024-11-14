@@ -17,6 +17,7 @@ import { CourseList } from './components/Course List/CourseListHolder/CourseList
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import "./app/App.css"
+import "./i18n.ts"
 import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
 import { ErrorPage404 } from './components/Error 404/Error404.tsx'
 import { ErrorPage } from './components/Error Page/ErrorPage.tsx'

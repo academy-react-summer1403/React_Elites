@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import { LandingHolder } from '../Landing/A-LandingHolder/LandingHolder'
 import { Header } from '../common/Header/HolderHeader/Header'
+import  LangAndMode  from '../common/bottom-nav/LangAndMode'
 import { HolderFooter } from '../common/Footer/HolderFooter/HolderFooter'
 
 const Root = () => {
@@ -9,7 +9,8 @@ const Root = () => {
   return (
     <>
     <Header />
-        <Outlet />
+    <LangAndMode />
+    <Outlet />
     <HolderFooter />
     </>
   )
