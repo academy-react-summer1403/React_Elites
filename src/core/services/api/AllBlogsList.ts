@@ -1,4 +1,4 @@
-import http from '../../interceptor/index.ts'
+import http from '../../interceptor/index'
 
 const getAllBlogsList = async () => {
     try {
