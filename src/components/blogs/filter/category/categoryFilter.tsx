@@ -13,7 +13,7 @@ const CategoryFilter = ({setCategoryId, categoryId}) => {
     <div className={styleFilter.filterDetail}>
         <div className="flex gap-1.5">
             <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgCategory}`} data-theme={darkMode ? "categoryBlogFilter" : "lightMode"}/> 
-            <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>دسته بندی </p>
+            <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("category")} </p>
         </div>
         <div className={styleFilter.filterCategory} data-theme={darkMode ? "dark" : "lightMode"}> دسته مورد نظر را انتخاب کنید 
             <div className={isClicked ? styleFilter.arrowUp : styleFilter.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>

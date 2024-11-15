@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import style from './Level.module.css'
 import { useGlobalState } from '../../../../../../State/State';
+import { useTranslation } from "react-i18next";
 
 const Level = ({setLevelId}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isClicked, setIsClicked] = useState(false)
+  const { t } = useTranslation();
   return (
     <>
-        <div className={style.titleLevel} data-theme={darkMode ? "level" : "lightMode"}> سطح آموزشی </div>
+        <div className={style.titleLevel} data-theme={darkMode ? "level" : "lightMode"}> {t("EducationalLevel")} </div>
         <div className={style.level1} data-theme={darkMode ? "dark" : "lightMode"}>سطح مورد نظر را انتخاب کنید
         <div className={isClicked ? style.arrowUp : style.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
           {isClicked && 

@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import style from './Modal.module.css'
 import { useSpring, animated, useTransition } from '@react-spring/web'
 import { ModalComments } from './Modal Comments/ModalComments'
+import { useTranslation } from 'react-i18next';
 
 const AddCommentModal = ({comments, isOpen, onClose}) => {
+    const { t } = useTranslation();
 
     const handleEscape = e => {
         if(e.keyCode == 27) {
@@ -41,7 +43,7 @@ const AddCommentModal = ({comments, isOpen, onClose}) => {
             <div className={style.header}>
                 <div className={style.close} onClick={() => {
                     onClose()
-                }}> بستن 
+                }}> {t("close")} 
                     <div className={style.closeIcon}></div>
                 </div>
             <div className={style.titleHolder}>

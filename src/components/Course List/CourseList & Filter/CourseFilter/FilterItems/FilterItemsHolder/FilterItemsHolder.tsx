@@ -7,9 +7,10 @@ import { Level } from '../FilterLevel/Level'
 import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { Date } from '../FilterDate/Date'
+import { useTranslation } from "react-i18next";
 
 const FilterItemsHolder = ({setTeacherId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {
-  
+  const { t } = useTranslation();
   return (
     <div className={style.holder}>
         <Title />
@@ -23,11 +24,11 @@ const FilterItemsHolder = ({setTeacherId, setApplyFilter, applyFilter, setLevelI
           setApplyFilter(false);
           setTeacherId("")
           setLevelId("")
-        }}> حذف فیلتر </span>
+        }}> {t("deleteFilter")} </span>
         <span className={applyFilter ? style.applyFilter2 : style.applyFilter} onClick={() => {
           setApplyFilter(true);
 
-        }}> اعمال فیلتر </span>
+        }}> {t("applyFilter")} </span>
 
     </div>
   )

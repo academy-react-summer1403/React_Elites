@@ -14,7 +14,7 @@ const StudentGhabRight = () => {
                     <div className={style.menu}>
                         <div>
                             <div className={style.Dashboard}> </div>
-                            <NavLink data-theme={darkMode ? "darkNoBG" : "lightMode"}> داشبرد</NavLink>
+                            <NavLink to='/Student-Panel/dashboard' data-theme={darkMode ? "darkNoBG" : "lightMode"}> داشبرد</NavLink>
                         </div>
                         <div>
                             <div className={style.MyPeriod}> </div>

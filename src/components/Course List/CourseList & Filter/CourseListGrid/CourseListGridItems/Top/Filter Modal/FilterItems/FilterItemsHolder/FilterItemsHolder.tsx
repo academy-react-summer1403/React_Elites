@@ -7,15 +7,17 @@ import { Level } from '../FilterLevel/Level'
 import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { Date } from '../FilterDate/Date'
+import { useTranslation } from 'react-i18next';
 
 const FilterItemsHolder = (props) => {
+  const { t } = useTranslation();
   return (
     <div className={style.holder}>
       <div className={style.holderTitle}>
       <Title />
         <div className={style.closeBtn} onClick={() => {
           props.setClicked(false)
-        }}> بستن </div>
+        }}> {t("close")} </div>
       </div>
         <Search />
         <Category />

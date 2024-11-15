@@ -34,6 +34,7 @@ import { StudentMyReserve } from './components/studentPanel/studentCurse-Blog/My
 import { StudentMyFavCourses } from './components/studentPanel/studentCurse-Blog/Fav Courses/StudentMyFavCourses.tsx'
 import { Auth } from './components/Auth/Auth.tsx'
 import { StudentMyFavBlogs } from './components/studentPanel/studentCurse-Blog/Fav Blogs/StudentMyFavBlogs.tsx'
+import { StudentDashboard } from './components/studentPanel/dashboard/dashboard.tsx'
 
 const router = createBrowserRouter([
   {
@@ -168,6 +169,11 @@ const router = createBrowserRouter([
       {
         path: "/Student-Panel/Fav-Blogs",
         element: <StudentMyFavBlogs />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/dashboard",
+        element: <StudentDashboard />,
         errorElement: <ErrorPage />
       },
     ]

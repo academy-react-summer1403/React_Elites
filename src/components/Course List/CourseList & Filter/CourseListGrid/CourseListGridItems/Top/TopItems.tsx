@@ -70,7 +70,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         else if (clicked == true) {
           setClicked(false)
         }
-      }}>فیلتر
+      }}>{t("filter")}
       </div>
       {clicked && <CourseFilterHolder clicked={clicked} setClicked={setClicked} />}
 
@@ -81,7 +81,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         else if (sortModal == true) {
           setSortModal(false)
         }
-      }} >ترتیب
+      }} >{t("order")}
       </div>
       {sortModal && <SortModal sortModal={sortModal} setSortModal={setSortModal} />}
 

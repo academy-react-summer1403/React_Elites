@@ -30,7 +30,7 @@ const StudentMyReserve = () => {
                 <div className={style.teacherList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> مدرس</div>
                 <div className={style.dateStartList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ برگزاری </div>
                 <div className={style.dateEndList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تاریخ اتمام </div>
-                <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>سطح </div>
+                <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>وضعیت </div>
                 <div className={style.eyeList}> </div>
             </div>
             <ReserveCardsList userReserveCoursesObj={userReserveCoursesObj} />

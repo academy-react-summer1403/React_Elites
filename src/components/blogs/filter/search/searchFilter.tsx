@@ -11,7 +11,7 @@ const SearchFilter = ({setSearchValue}) => {
     <div className={styleFilter.filterDetail}>
       <div className="flex gap-1.5">
       <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgSearch}`} data-theme={darkMode ? "search" : "lightMode"}/>
-        <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>جست‌جو</p>
+        <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("search")}</p>
       </div>
       <input className={styleFilter.filterInput} name="password" placeholder="بلاگ مورد نظر را جست‌جو کنید..." data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
           setSearchValue(e.target.value)
