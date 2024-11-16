@@ -59,20 +59,23 @@ const Dashboard1 = () => {
                   <div className="text-black font-bold text-2xl">سلام پارسا، روزت بخیر 👋
                   <div className="flex flex-row">
                     <div className="flex flex-row">
-                     <div className="flex">
-                      <TbClock />
+                     <div className="bg-[#F1F1F1] w-[40px] h-[40px]  flex items-center justify-center rounded-full">
+                      <TbClock size={24}/>
                      </div>
                      <div className="flex flex-col "> 
-                     <div className="flex flex-col text-black">تاریخ</div>
-                     <h1> {time} </h1>
+                     <div className="flex flex-col font-DannaNormal text-sm font-medium text-[#707070]">ساعت</div>
+                   <div className="font-DannaNormal text-base ">{time} </div>
                      </div>
                     </div>
-                    <div className="flex flex-row ">
-                      <div className="bg-[#F1F1F1] rounded-full">
-                    <SlCalender />
+                    <div className="flex flex-row pr-20 ">
+                      <div className="bg-[#F1F1F1] w-[40px] h-[40px]  flex items-center justify-center rounded-full">
+                    <SlCalender size={24} />
                     </div>
-                    <h2> {date} 
-</h2>  </div></div>
+                    <div className="flex flex-col pr-2 "> 
+                    <div className="flex flex-col font-DannaNormal text-sm font-medium text-[#707070]">تاریخ</div>
+                    <div className="font-DannaNormal text-base font-semibold"> {date} 
+</div> 
+</div> </div></div>
                     </div>
                   <div className="text-black ms-96">سلام من پارسام این بیو پروفایلمه</div>
                 </div>
@@ -80,29 +83,29 @@ const Dashboard1 = () => {
                   <div className="bg-[#F6F6F6] w-3/5 h-44 rounded-lg">
                     <div className="text-black">دوره ی من</div>
                     <div className="flex flex-row text-black bg-[#F1F1F1] rounded-lg mx-2.5 items-center justify-start space-x-9">
-                      <div className="pr-19">#</div>
+                      <div className="pr-1">#</div>
                       <div className="pr-20">نام</div>
-                      <div className="pr-16">مدرس</div>
-                      <div className="pr-16">تاریخ برگزاری</div>
-                      <div className="pr-16">سطح</div>
+                      <div className="pr-20">مدرس</div>
+                      <div className="pr-20">تاریخ برگزاری</div>
+                      <div className="pr-20">سطح</div>
                     </div>
-                    <div className="flex flex-row text-black"> 
+                    <div className="flex flex-row text-black items-center justify-start space-x-9"> 
                      <div className="flex bg-[#FF6C6C] items-center justify-center  rounded-md w-[83px] h-[52px]"> <img  src="https://s3-alpha-sig.figma.com/img/72eb/0bda/c649ce20dfb0409d36134908c7d16a53?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LsMESIDdTDdV9Hzk10HIyq~5tQakmREpfVGddxI~Zf93RBQNdMl7DGvzlIv~LhP2ImcOUpYB988UNDCVl-G59-oAPXPTcmcq6ZqnaVt2GHkeGl9ZPyNVoIzSdSUbDm4IgmA4D~p-diOlB1hJQHGrGHoqUD8Ztkhfe2ydpPZ28SknnAFHvB4e9SMncnPmPKRFA8zhC~VveQMblSY0SXXXgWbJ7sEwJpp0UKwal6~BP0CtRnjyXqJJKs7BblNdcgCSAyEpneYbST9190NZF06fibnSffFoqbMIifoVAjENPbB5epex9zTcJ7QxAo8iGF9FBZCy2edDKwoG-asc7rctoQ__" 
                       alt="Sample" 
                        className="w-[33px] h-8"/>
                      </div>
-                      <div className="pr-20 font-bold">دوره فیگما</div>
-                      <div className="pr-20">محمد حسن خلیل پور</div>
+                      <div className="pr-2 font-bold">دوره فیگما</div>
+                      <div className="pr-2">محمد حسن خلیل پور</div>
                       <div className="">29 اردیبهشت 1403</div>
                       <div className="bg-[#FF37F5] pr-2 w-[62px] h-[24px]  text-white rounded-full">پیشرفته</div>
                       <PiEyeBold size={24} />
                       </div>
-                      <div className="flex flex-row text-black"> 
+                      <div className="flex flex-row text-black items-center justify-start space-x-6"> 
                      <div className="flex bg-[#F0DB4F] items-center justify-center  rounded-md w-[83px] h-[52px]"> <img  src="https://s3-alpha-sig.figma.com/img/6405/b314/68db8ea561a27064e67d06d024404030?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aS3P~J8zZtlXQeQwq8mOKF256gWG33vxy6Erh8J5NsgzOLvGW~eNYF~-yywjKxmfp23XnG~EQOi9Po23-twKwpzhI7CfYMhz3uc5yWRT84d6vZyGth2dRBGodN47mQBzKPV4PY54GhKD69qcMqTxtrZBsFdXB0Garsrb5qPcmpd1pEIB~CzNFlqVMpK7yh0KF6mjZZGWKD00iAnAzHdfuwpojCwJ-TS3Givdbn5LVc9S3KWknqvGD6DvsvkFDkpkPUEbWCF1OKH5qAENrO1vMYHp1vt5V4SHhBSm7z0K9GPij1HQOSSpwD85aktlFqLd4vBau0sBvME4RE~MIanMTA__" 
                       alt="Sample" 
                        className="w-[33px] h-8"/>
                      </div>
-                      <div className="pr-20 font-bold">دوره جاوا اسکریپت</div>
+                      <div className="pr-2 font-bold">دوره جاوا اسکریپت</div>
                       <div className="">محمدحسین بحرالعلومی</div>
                       <div className="">29 اردیبهشت 1403</div>
                       <div className="bg-[#FF37F5] pr-2 w-[62px] h-[24px]  text-white rounded-full">پیشرفته</div>
@@ -111,11 +114,12 @@ const Dashboard1 = () => {
                   </div>
                   
                 
-                  <div className="flex flex-row mr-5 rounded-lg text-black bg-slate-200">
-                    وضعیت اطلاعات حساب کاربری
-                    
+                  <div className="relative flex flex-col  items-center  justify-center rounded-lg text-black bg-slate-200 w-[253px] h-[246px]">
+                 
+                    <div className="absolute pr-2.5 pt-2.5 inset-0 p-0 justify-items-start object-right-top text-sm text-[#2F2F2F] font-semibold font-DannaDemiBold"> وضعیت اطلاعات  حساب کاربری</div>
                   
-                    <div className="relative flex items-center justify-center" style={{ width: '200px', height: '100px' }}>
+                    <div className="relative flex items-center  justify-center w-[136px] h-[136px]   ">
+                      
                       <Chart
                         options={{
                           chart: {
@@ -132,7 +136,7 @@ const Dashboard1 = () => {
                           plotOptions: {
                             pie: {
                               donut: {
-                                size: '80%',
+                                size: '85%',
                               },
                             },
                           },
@@ -143,7 +147,10 @@ const Dashboard1 = () => {
                         series={series}
                         type="donut"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold">
+                   
+                      <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold" 
+       
+     >
                         {displayValue}%
                       </div>
                     </div>
@@ -164,7 +171,7 @@ const Dashboard1 = () => {
                       <div className="pr-3 bg-red-800 mr-24 text-white rounded-full">تائید نشده</div>
                     </div>
                   </div>
-                  <div className="">
+                  <div className="w-96 bg-[#F6F6F6]">
                      <div className="flex flex-row justify-between  items-center text-black ">
                       <div className="flex ">نظرات شما</div>
                      <div className="flex justify-start " ><button className="text-[#3772FF]">مشاهده بیشتر</button>
