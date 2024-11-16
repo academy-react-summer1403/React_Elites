@@ -77,7 +77,7 @@ const Dashboard1 = () => {
 </div> 
 </div> </div></div>
                     </div>
-                  <div className="text-black ms-96">سلام من پارسام این بیو پروفایلمه</div>
+                  <div className="text-black ms-96">سلام من پارسام این بیو پروفایلمiiه</div>
                 </div>
                 <div className="flex flex-row mt-3.5">
                   <div className="bg-[#F6F6F6] w-3/5 h-44 rounded-lg">
