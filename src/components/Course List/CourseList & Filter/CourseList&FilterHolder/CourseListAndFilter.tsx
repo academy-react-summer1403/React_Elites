@@ -3,7 +3,7 @@ import style from './CourseListAndFilter.module.css'
 import { CourseListGridHolder } from '../CourseListGrid/CourseListGridHolder/CourseListGridHolder'
 import { CourseFilterHolder } from '../CourseFilter/CourseFilterHolder/CourseFilterHolder'
 
-const CourseListAndFilter = ({applyFilter, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched}) => {
+const CourseListAndFilter = ({applyFilter, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
   return (
     <div className={style.CourseListAndFilterHolder}>
       <CourseListGridHolder
@@ -14,6 +14,7 @@ const CourseListAndFilter = ({applyFilter, setTeacherId, setApplyFilter, teacher
         levelId={levelId}
         searchValue={searchValue}
         isSearched={isSearched}
+        categoryId={categoryId}
       />
       <CourseFilterHolder
         setTeacherId={setTeacherId} 
@@ -24,6 +25,7 @@ const CourseListAndFilter = ({applyFilter, setTeacherId, setApplyFilter, teacher
         searchValue={searchValue}
         setIsSearched={setIsSearched}
         isSearched={isSearched}
+        setcategoryId={setcategoryId}
       />
     </div>
   )
