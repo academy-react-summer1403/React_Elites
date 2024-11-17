@@ -30,6 +30,7 @@ export const en={
         "authDesc": "Find and learn any course you want easily", "enterPhoneNumber": "Enter mobile number", "confirmCodeTitle": "Two-step verification of the submitted code", "confirmCodeDesc": "(if two-stage is active) ", "login1TitleHeader": "Welcome back! ", "login2TitleHeader": " Two-step code verification! ", "login1Desc1Header": "Please enter mobile number or email and password to login ", "login1Desc2Header": "Enter the user account ","login2Desc1Header": "A two-step code has been sent to your mobile number. Please enter the code ", "login2Desc2Header": "enter ", "EmailOrPhoneNumber": "Mobile number or email ", "password": "password ", "rememberMe": "remember me ", "forgetPassword": "Forgot your password? ", "loginAccount": "Login to the account ", "Don'tHaveAnAccount": "Don't have an account? ", "creatAccount": "Create a user account", "MainPage": "Main page", "TwoCode": "Two-step code", "return": "return ",
         "sendLink":"send link", "ForgotPasswordHeaderTitle":"Forgot password!", "ForgotPasswordHeaderDesc":"If you have forgotten your password, enter your email address and a link to the password change page will be sent to you","email": "Email","enterEmail": "Enter email ", "welcome": " You are welcome!  ", "registerHeaderDesc": " Please enter your mobile number so that the confirmation code will be sent to you  ",
         "confirmCodeRegister":"Confirm the code sent ", "sendCodeRegister":"Send verification code ", "enterInformationRegister":"Enter personal information ", "enterPhoneNumberReg": "Enter mobile number","PhoneNumberReg": "mobile number", "haveAccount":"Do you have an account?",
-
+    // student panel
+        "Report":"Report", "SignOut":"Sign out of the user account", "woman":"woman", "man":"man",
 
 }

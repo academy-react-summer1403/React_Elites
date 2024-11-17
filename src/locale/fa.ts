@@ -32,8 +32,9 @@ export const fa = {
     "authDesc": "هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر", "enterPhoneNumber": "وارد کردن شماره همراه", "confirmCodeTitle": "تایید کد ارسال شده دو مرحله ای", "confirmCodeDesc": "(درصورت فعال بودن دو مرحله ای) ", "login1TitleHeader": "خوش برگشتی! ", "login2TitleHeader": " تایید کد دو مرحله‌ای! ", "login1Desc1Header": "لطفا شماره همراه یا ایمیل و رمز عبور را برای ورود ", "login1Desc2Header": "به حساب کاربری وارد کنید ","login2Desc1Header": "کد دومرحله‌ای به شماره همراه شما ارسال شد لطفا کد را ", "login2Desc2Header": "وارد کنید ", "EmailOrPhoneNumber": "شماره همراه یا ایمیل ", "password": "رمز عبور ", "rememberMe": "مرا به خاطر بسپار ", "forgetPassword": "رمز عبور را فراموش کرده اید؟ ", "loginAccount": "ورود به حساب ", "Don'tHaveAnAccount": "حساب کاربری ندارید؟ ", "creatAccount": "ایجاد حساب کاربری", "MainPage": "صفحه اصلی", "TwoCode": "کد دو مرحله‌ای", "return": "بازگشت ",
     "sendLink":"ارسال لینک", "ForgotPasswordHeaderTitle":"فراموشی رمز عبور!", "ForgotPasswordHeaderDesc":"اگر رمزعبور خود را فراموش کرده اید ایمیل خود را وارد کنید تا لینک صفحه تغییر رمز عبور برای شما ارسال شود","email": "ایمیل","enterEmail": "وارد کردن ایمیل ", "welcome": " خوش اومدی!  ", "registerHeaderDesc": " لطفا شماره همراه خود را وارد کنید تا کد تائید برای شما ارسال شود  ", "haveAccount":"حساب کاربری دارید؟",
     "confirmCodeRegister":"تایید کد ارسال شده ", "sendCodeRegister":"ارسال کد تایید ", "enterInformationRegister":"واردکردن اطلاعات شخصی ", "enterPhoneNumberReg": "وارد کردن شماره همراه", "PhoneNumberReg": "شماره همراه",
-
-
+    //student panel
+        "myProfile": "پروفایل من", "informationAccount": "اطلاعات حساب کاربری", "name": "نام", "images": "عکس ها", "links": "لینک ها", "placeInform": "محل سکونت","addressInform": "آدرس سکونت", "lastName": "نام خانوادگی", "aboutMe": "درباره من", 
+        "nationalCode": "کد ملی", "birthday": "تاریخ تولد", "gender": "جنسیت", "select": "انتخاب کنید", "applyChanges": "اعمال تغییرات", "Report":"گزارش", "SignOut":"خروج از حساب کاربری", "woman":"زن", "man":"مرد",
 
 
 

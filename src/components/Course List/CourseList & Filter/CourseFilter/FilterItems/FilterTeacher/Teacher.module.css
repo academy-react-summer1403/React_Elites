@@ -6,7 +6,7 @@
     font-size: 12px;
     padding: 15px;
     font-family: DannaMedium;
-    text-align: right;
+ text-align: center;
     border-radius: 16px;
     direction: rtl;
     line-height: 22px;
@@ -22,7 +22,7 @@
     width: 100%;
     display: block;
     padding: 10px 15px 10px 15px;
-    text-align: right;
+ text-align: center;
     font-family: DannaMedium;
     color: black;
     font-size: 14px;
@@ -42,7 +42,7 @@
     font-family: DannaMedium;
     background: url(../../../../../../assets/Images/icons8-teacher-24.png) 100% 50% no-repeat;
     width: 80px;
-    text-align: left;
+ text-align: center;
     /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
 }
 .arrowDown{

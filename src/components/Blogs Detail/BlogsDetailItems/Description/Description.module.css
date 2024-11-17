@@ -8,7 +8,7 @@
 
 .title{
     width: 100%;
-    text-align: right;
+ text-align: center;
     font-size: 20px;
     font-family: DannaBold;
     color: #707070;
@@ -19,7 +19,7 @@
     font-size: 16px;
     font-family: DannaMedium;
     color: #2F2F2F;
-    text-align: right;
+ text-align: center;
     margin-top: 20px;
     width: 100%;
 }
@@ -30,7 +30,7 @@
     color: #3772FF;
     font-size: 16px;
     font-family: DannaDemiBold;
-    text-align: right;
+ text-align: center;
     margin-top: 15px;
 }
 

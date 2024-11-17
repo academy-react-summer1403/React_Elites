@@ -26,7 +26,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    text-align: right;
+ text-align: center;
 }
 
 .Level{
