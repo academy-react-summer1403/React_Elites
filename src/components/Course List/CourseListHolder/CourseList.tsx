@@ -13,6 +13,8 @@ const CourseList = () => {
   const [searchValue, setSearchValue] = useState("")
   const [isSearched, setIsSearched] = useState(false)
   const [isCourse, setisCourse] = useGlobalState('isCourse');
+  const [categoryId, setcategoryId] = useState([2,3])
+
   useEffect(() => {
     setisCourse(true)
   }, [])
@@ -38,6 +40,8 @@ const CourseList = () => {
           setSearchValue={setSearchValue}
           isSearched={isSearched}
           setIsSearched={setIsSearched}
+          setcategoryId={setcategoryId}
+          categoryId={categoryId}
           />
         </div>
     </div>
