@@ -49,7 +49,7 @@ const ReserveCards = (props) => {
         <Teacher teacher={courseDetail.teacherName} />
         <Date date={courseDetail.startTime} />
         <Date date={courseDetail.endTime} />
-        <Status Status={accept}/>
+        <Status Status={courseDetail.accept}/>
         <div className={style.closeAndViewHolder}>
           <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
           <span className={style.Close} onClick={() => {

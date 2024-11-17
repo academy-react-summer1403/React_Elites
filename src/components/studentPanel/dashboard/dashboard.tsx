@@ -86,7 +86,7 @@ const StudentDashboard = () => {
             <div className={style.listMyReserveDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
               <div className={style.titleHeaderMyCourseList}>
                 <h1>رزرو من</h1>
-                <NavLink to='/Student-Panel/My-courses'>مشاهده بیشتر &gt;</NavLink>
+                <NavLink to='/Student-Panel/My-Reserve'>مشاهده بیشتر &gt;</NavLink>
               </div>
               <div className={style.headerList} data-theme={darkMode ? "darkSmall" : "lightMode"}>
                 <div className={style.imgList} data-theme={darkMode ? "darkNoBG" : "lightMode"}># </div>
@@ -97,18 +97,15 @@ const StudentDashboard = () => {
               </div>
               <ReserveCardsList userReserveCoursesObj={userReserveCoursesObj} />
             </div>
-            <div className={style.statusDashboard}>
-              <div className={style.topStatusDashboard}>
-                <h1>وضعیت اطلاعات حساب کاربری</h1>
-                <NavLink to='/Student-Panel/Information'> </NavLink>
+            <div className={style.commentDashboard}>
+              <div className={style.titleHeaderMyCourseList}>
+                <h1>نظرات شما</h1>
+                <NavLink to='/Student-Panel/Information'>مشاهده بیشتر &gt; </NavLink>
               </div>
-              <div className={style.middleStatusDashboard}>
-                <div>
-                  <div>70%</div>
-                </div>
-              </div>
-              <div className={style.bottomStatusDashboard}>
-                <h1>اطلاعات حساب کاربری شما کامل نیست</h1>
+              <div className={style.CoursesAndBlogsHolder}>
+                <div className={style.CoursesAndBlogsLine}></div>
+                <h1 className={style.CoursesAndBlogsSt}>دوره ها و بلاگ ها </h1>
+                <div className={style.CoursesAndBlogsLine}></div>
               </div>
             </div>
           </div>

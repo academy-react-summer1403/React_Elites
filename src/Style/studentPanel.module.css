@@ -685,6 +685,50 @@
     height: 20px;
 }
 
+.listMyReserveDashboard{
+    width: 59.5%;
+    background-color: #e8e8e8;
+    border-radius: 24px;
+    max-height: 448px;
+    overflow: hidden;
+    
+}
+.listMyReserveDashboard > .headerList{
+    justify-content: space-between;
+    background-color: #dbdbdb;
+}
+.listMyReserveDashboard > div:last-child > div > div:nth-child(5),.listMyReserveDashboard > div:last-child > div > div:nth-child(6){
+    display: none;
+}
+.commentDashboard{
+    background-color: #e8e8e8;
+    border-radius: 24px;
+    width: 32%;
+}
+.CoursesAndBlogsHolder{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.CoursesAndBlogsLine{
+    background-color: #c9c9c9;
+    width: 30%;
+    height: 2px;
+    margin-top: 3%;
+}
+.CoursesAndBlogsSt{
+    font-family: DanaFaNum;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.02px;
+    text-align: center;
+    color: #707070;
+    width: 30%;
+}
+
+
+
 
 @media screen and (max-width:1362px) {
     .navigate {
