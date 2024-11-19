@@ -7,6 +7,7 @@
     font-size: 16px;  
     font-family: DannaDemiBold;
     margin-left: 5px;
+    padding: 0 4px 4px;
 }
 
 @media screen and (max-width: 1217px) {

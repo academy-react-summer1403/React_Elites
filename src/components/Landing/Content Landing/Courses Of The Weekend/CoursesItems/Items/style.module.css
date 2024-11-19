@@ -16,9 +16,10 @@
     color: #2F2F2F;
     width: 100%;
  text-align: center;
-    height: auto;
+    width: 100%;
     line-height: 40px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 40px;
 }

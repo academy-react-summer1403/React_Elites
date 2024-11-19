@@ -14,7 +14,7 @@
 }
 .applyFilter{
     border-radius: 16px;
-    width: 100px;
+    width: 40%;
     padding: 10px;
     background: green;
     display: flex;
@@ -23,7 +23,9 @@
     font-family: DannaMedium;
     color: white;
 }
-
+.filter > div{
+    width: 100%;
+}
 .applyFilter2{
     border-radius: 16px;
     width: 100px;
@@ -39,7 +41,7 @@
 
 .deleteFilter{
     border-radius: 16px;
-    width: 100px;
+    width: 40%;
     padding: 10px;
     background: red;
     display: flex;

@@ -6,13 +6,16 @@ import azmoon from '../../../../../assets/Images/azmoon.png'
 import work from '../../../../../assets/Images/work.png'
 import moshavere from '../../../../../assets/Images/moshavere.png'
 import madrak from '../../../../../assets/Images/madrak.png'
+import { useTranslation } from 'react-i18next';
 
 const ServicesHolder = () => {
+
+  const { t } = useTranslation();
   let data = [
-    {title: "آزمون ها", desc: "با آزمون های تعیین سطح شما میتوانید سطح دانش خودتون رو بسنجید", image: azmoon},
-    {title: "مدرک معتبر", desc: "با مدرک ما میتوانید به راحتی در همه جا استخدام بشید", image: madrak},
-    {title: "فرصت‌های شغلی", desc: "با توجه به سطح توانایی شما فرصت های شغلی به شما پیشنهاد داده میشه", image: work},
-    {title: "مشاوره 24 ساعته", desc: "مشاورین ما 24 ساعته جوابگو سوال های شما هستند", image: moshavere}
+    {title: t("ourServicesTitle1"), desc: t("ourServicesDesc1"), image: azmoon},
+    {title: t("ourServicesTitle2"), desc: t("ourServicesDesc2"), image: madrak},
+    {title: t("ourServicesTitle3"), desc: t("ourServicesDesc3"), image: work},
+    {title: t("ourServicesTitle4"), desc: t("ourServicesDesc4"), image: moshavere}
   ]
 
   return (

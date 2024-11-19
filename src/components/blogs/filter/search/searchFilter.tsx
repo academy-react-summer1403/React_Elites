@@ -13,7 +13,7 @@ const SearchFilter = ({setSearchValue}) => {
       <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgSearch}`} data-theme={darkMode ? "search" : "lightMode"}/>
         <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("search")}</p>
       </div>
-      <input className={styleFilter.filterInput} name="password" placeholder="بلاگ مورد نظر را جست‌جو کنید..." data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
+      <input className={styleFilter.filterInput} name="password" placeholder={t("searchBlogs")} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
           setSearchValue(e.target.value)
         }}/>
       <div className={styleFilter.searchBox}></div>

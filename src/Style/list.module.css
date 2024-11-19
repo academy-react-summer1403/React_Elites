@@ -9,6 +9,12 @@ form{
     flex-flow: row nowrap;
     height: 100%;
 }
+.navigate > div{
+    width: 45.629%;
+}
+.navigate > div > h1{
+    text-align: center;
+}
 .navigateRegister > div{
     width: 30.629%;
 }
@@ -25,7 +31,7 @@ form{
     border: 1px solid #DCDCDC;
     padding: 8px 16px;
 }
-/* input{
+.input{
     background-color: #fff;
     border: 1px solid #DCDCDC;
     width: 100%;
@@ -33,7 +39,7 @@ form{
     border-radius: 24px;
     padding-right: 12px !important;
     color: #3d3d3d !important;
-} */
+} 
 /* form>div:not(form>div:first-child),form > a{
     max-width: 384px;
 } */

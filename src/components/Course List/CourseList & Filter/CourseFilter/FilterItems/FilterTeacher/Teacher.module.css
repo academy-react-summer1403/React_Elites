@@ -41,8 +41,9 @@
     font-size: 16px;
     font-family: DannaMedium;
     background: url(../../../../../../assets/Images/icons8-teacher-24.png) 100% 50% no-repeat;
-    width: 80px;
- text-align: center;
+    width: 100%;
+    padding-right: 25px;
+ text-align: right;
     /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
 }
 .arrowDown{

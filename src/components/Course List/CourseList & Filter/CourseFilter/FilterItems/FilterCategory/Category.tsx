@@ -23,7 +23,7 @@ const Category = ({setcategoryId}) => {
   return (
     <>
         <div className={style.titleCat} data-theme={darkMode ? "cat" : "lightMode"}> {t("category")} </div>
-        <div className={style.cat1} data-theme={darkMode ? "dark" : "lightMode"}>دسته مورد نظر را انتخاب کنید
+        <div className={style.cat1} data-theme={darkMode ? "dark" : "lightMode"}>{t("CategoryBlogs")}
           <div className={isClicked ? style.arrowUp : style.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
           {isClicked && <div className={style.filterCategory}>
             {categoriesList.map((item, index) => {

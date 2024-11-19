@@ -10,7 +10,7 @@ const CategoryFilter = () => {
             <img className={styleFilter.filterTextImg} src="https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=000000" /> 
             <p className={styleFilter.filterText}>{t("category")} </p>
         </div>
-        <div className={styleFilter.filterCategory} > دسته مورد نظر را انتخاب کنید </div>
+        <div className={styleFilter.filterCategory} > {t("CategoryBlogs")} </div>
     </div>
 )
 }

@@ -11,7 +11,7 @@ const SearchBar = ({setSearchValue}) => {
       <h1>{t("filter")}</h1>
       <div>
         <h2>{t("search")}</h2>
-        <input className={style.input} placeholder='جستجو در نام اساتید...' data-theme={darkMode ? "darkSmall" : "lightMode"}></input>
+        <input className={style.input} placeholder={t("TeacherSearch")} data-theme={darkMode ? "darkSmall" : "lightMode"}></input>
       </div>  
     </div>
   )

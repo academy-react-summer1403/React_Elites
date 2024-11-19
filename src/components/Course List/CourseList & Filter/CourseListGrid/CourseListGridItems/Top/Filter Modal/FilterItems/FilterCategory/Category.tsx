@@ -9,7 +9,7 @@ const Category = () => {
   return (
     <>
         <div className={style.titleCat}  data-theme={darkMode ? "cat" : "lightMode"}> {t("category")} </div>
-        <div className={style.cat}  data-theme={darkMode ? "dark" : "lightMode"}>دسته مورد نظر را انتخاب کنید</div>
+        <div className={style.cat}  data-theme={darkMode ? "dark" : "lightMode"}>{t("CategoryBlogs")}</div>
     </>
   )
 }

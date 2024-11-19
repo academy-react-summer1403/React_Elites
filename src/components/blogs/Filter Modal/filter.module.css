@@ -13,6 +13,9 @@
     background: white;
 
 }
+.filter > div{
+    width: 100%;
+}
 .container{
     width: 100%;
     display: flex;

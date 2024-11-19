@@ -1,4 +1,12 @@
-
+.titleHeaderTopStudent{
+    font-family: DanaFaNum;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.32px;
+    text-align: right;
+    color: #2f2f2f;
+    margin-bottom: 20px;
+}
 .searchAndDateHolder{
    
     display: flex;

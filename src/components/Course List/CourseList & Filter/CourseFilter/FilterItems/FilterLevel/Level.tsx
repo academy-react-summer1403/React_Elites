@@ -10,7 +10,7 @@ const Level = ({setLevelId}) => {
   return (
     <>
         <div className={style.titleLevel} data-theme={darkMode ? "level" : "lightMode"}> {t("EducationalLevel")} </div>
-        <div className={style.level1} data-theme={darkMode ? "dark" : "lightMode"}>سطح مورد نظر را انتخاب کنید
+        <div className={style.level1} data-theme={darkMode ? "dark" : "lightMode"}>{t("levelCourses")}
         <div className={isClicked ? style.arrowUp : style.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
           {isClicked && 
             <div className={style.filterLevel}>

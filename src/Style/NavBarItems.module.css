@@ -64,6 +64,8 @@
 .buttonHolder{
     display: flex;
     justify-content: right;
+    padding-top: 5px;
+    border-top: 1px solid #ccc;
 }
 
 .button{
@@ -72,6 +74,8 @@
     border-radius: 32px;
     border: 2px solid blue;
     padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .miniBasketItems>li {
