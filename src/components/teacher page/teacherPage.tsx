@@ -5,8 +5,10 @@ import { SearchBar } from "./blogsListGrid/index/SearchBar.tsx";
 import { useEffect, useState } from "react";
 import {getTeacher} from '../../core/services/api/TeachersList.ts'
 import { useGlobalState } from "../../State/State.tsx";
+import { useTranslation } from 'react-i18next';
 
 const TeacherPage = (props) => {
+  const { t } = useTranslation();
   const [teacherList, setTeacherList] = useState([]);
 
   const getTeacherList = async () => {
@@ -25,10 +27,10 @@ const TeacherPage = (props) => {
     <Formik>
       {(form) => (
 
-        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={darkMode ? "dark" : "lightMode"}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-8' data-theme={darkMode ? "dark" : "lightMode"}>
           <div className={style.titleHolder}>
-            <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لیست اساتید!</h1>
-            <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لیستی از بهترین اساتید در آکادمی سپهر!</h1>
+            <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPage")}</h1>
+            <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPageDesc")}</h1>
           </div>  
           <div className={style.page}>
             <SearchBar />

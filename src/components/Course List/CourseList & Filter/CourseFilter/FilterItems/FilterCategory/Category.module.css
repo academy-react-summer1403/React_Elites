@@ -6,7 +6,7 @@
     font-size: 12px;
     padding: 15px;
     font-family: DannaMedium;
-    text-align: right;
+    text-align: center;
     border-radius: 16px;
     direction: rtl;
     line-height: 22px;
@@ -52,8 +52,9 @@
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
-    width: 110px;
-    text-align: left;
+    width: 100%;
+    padding-right: 25px;
+ text-align: right;
     background: url(https://img.icons8.com/?size=24&id=7FSfWwb2mVjQ&format=png&color=000000) 100% 50% no-repeat;
     /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
 }

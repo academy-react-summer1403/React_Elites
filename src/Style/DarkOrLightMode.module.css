@@ -70,7 +70,7 @@
 }
 
 .items{
-    text-align: right;
+ text-align: center;
     font-family: DannaBold;
     font-size: 14px;
     cursor: pointer;
@@ -157,7 +157,7 @@
     font-family: DannaBold;
     font-size: 32px;
     color: #FCFCFC;
-    text-align: right;
+ text-align: center;
 }
 
 .footer{

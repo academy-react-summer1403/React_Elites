@@ -14,7 +14,7 @@
 }
 .applyFilter{
     border-radius: 16px;
-    width: 100px;
+    width: 40%;
     padding: 10px;
     background: green;
     display: flex;
@@ -23,7 +23,9 @@
     font-family: DannaMedium;
     color: white;
 }
-
+.filter > div{
+    width: 100%;
+}
 .applyFilter2{
     border-radius: 16px;
     width: 100px;
@@ -39,7 +41,7 @@
 
 .deleteFilter{
     border-radius: 16px;
-    width: 100px;
+    width: 40%;
     padding: 10px;
     background: red;
     display: flex;
@@ -52,7 +54,7 @@
     font-family: DannaBold;
     font-size: 24px;
     line-height: 34.32px;
-    text-align: right;
+ text-align: center;
     color: #2F2F2F;
     margin-bottom: 15px;
 }
@@ -74,7 +76,7 @@
     font-family: DannaMedium;
     font-size: 12px;
     line-height: 20.02px;
-    text-align: right;
+ text-align: center;
     color: #707070 !important;
     outline: none;
     white-space: nowrap;
@@ -89,7 +91,7 @@
     font-size: 12px;
     padding: 15px;
     font-family: DannaMedium;
-    text-align: right;
+ text-align: center;
     border-radius: 16px;
     direction: rtl;
     line-height: 22px;
@@ -129,7 +131,7 @@
     width: 100%;
     display: block;
     padding: 10px 15px 10px 15px;
-    text-align: right;
+ text-align: center;
     font-family: DannaMedium;
     color: black;
     font-size: 14px;

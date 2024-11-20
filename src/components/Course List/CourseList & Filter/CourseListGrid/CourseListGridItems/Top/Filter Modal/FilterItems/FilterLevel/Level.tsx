@@ -10,7 +10,7 @@ const Level = () => {
   return (
     <>
         <div className={style.titleLevel}  data-theme={darkMode ? "level" : "lightMode"}> {t("EducationalLevel")} </div>
-        <div className={style.level}  data-theme={darkMode ? "dark" : "lightMode"}>سطح مورد نظر را انتخاب کنید</div>
+        <div className={style.level}  data-theme={darkMode ? "dark" : "lightMode"}>{t("levelCourses")}</div>
     </>
   )
 }

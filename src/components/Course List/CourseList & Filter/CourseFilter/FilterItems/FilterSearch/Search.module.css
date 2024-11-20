@@ -4,7 +4,7 @@
     background: #F1F1F1;
     color: #707070;
     font-size: 12px;
-    text-align: right;
+ text-align: center;
     border-radius: 16px;
     direction: rtl;
     padding: 15px;
@@ -18,7 +18,9 @@
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
-    width: 100px;
-    text-align: left;
-    background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%;
+    width: 100%;
+    padding-right: 25px;
+ text-align: right;
+    background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 100% 50%;
+    background-size: 23px;
 }

@@ -48,12 +48,12 @@ const Login = () => {
             </div>
             <div className="h-full max-w-96 mx-0 text-right">
               <label className="text-base font-DannaDemiBold text-black pb-3">{t("EmailOrPhoneNumber")} </label>
-              <Field className={styleLogin.input} name="phoneOrGmail" placeholder="شماره همراه یا ایمیل خود را وارد کنید" />
+              <Field className={styleLogin.input} name="phoneOrGmail" placeholder={t("enterNumber&email")} />
               <ErrorMessage name="phoneOrGmail" component={"p"} className="error"/>
             </div>
             <div className="h-full max-w-96  my-4 mx-0 text-right">
               <label className="text-base font-DannaDemiBold text-black pb-1.5">{t("password")}</label>
-              <Field type='password' className={`${styleLogin.input} ${styleLogin.inputPassword}`} name="password" placeholder="رمز عبور خود را وارد کنید" />{/*w-full text-right h-11 pr-3 mt-4 font-DannaMedium bg-white text-gray-800 border border-solid border-Gray-400 rounded-3xl */}
+              <Field type='password' className={`${styleLogin.input} ${styleLogin.inputPassword}`} name="password" placeholder={t("enterPasswordPlaceHolder")} />
               <ErrorMessage name="password" component={"p"} className="error"/>
             </div>
             <div className="h-full max-w-96 flex justify-between my-4 mx-0 text-right">

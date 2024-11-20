@@ -8,7 +8,7 @@ export const fa = {
         "readyForMarketLanding3": "راهنمایی و ایجاد انگیزه", "readyForMarketLandingDesc3": " آشنایی با پشته ای تکنولوژیک از زبان های کدنویسی با نگاهی عمل محور برای تحریک ذهنیت خلاق در طول فرآیند آموزش",
         "readyForMarketLanding4": "استعدادیابی", "readyForMarketLandingDesc4": " یافتن رگه های علاقه و استعداد در دوره های پایلوت استعدادیابی صرف نظر از سن ، رشته تحصیلی ، جغرافیا و جنسیت و ...",
         //our Services
-        "ourServicesTitleLanding1": "خدماتی که ما در طی دوره ها", "ourServicesTitleLanding2": " به شما ارائه میدیم",
+        "ourServicesTitleLanding1": "خدماتی که ما در طی دوره ها", "ourServicesTitleLanding2": " به شما ارائه میدیم", "ourServicesTitle1": " آزمون ها", "ourServicesTitle2": " مدرک معتبر", "ourServicesTitle3": " فرصت‌های شغلی", "ourServicesTitle4": " مشاوره 24 ساعته", "ourServicesDesc1": " با آزمون های تعیین سطح شما میتوانید سطح دانش خودتون رو بسنجید","ourServicesDesc2": " با مدرک ما میتوانید به راحتی در همه جا استخدام بشید","ourServicesDesc3": " با توجه به سطح توانایی شما فرصت های شغلی به شما پیشنهاد داده میشه","ourServicesDesc4": " مشاورین ما 24 ساعته جوابگو سوال های شما هستند",
         //courses of the weekend 
         "CoursesOfTheWeek": "دوره های برتر هفته",
         //Blogs 
@@ -32,11 +32,13 @@ export const fa = {
     "authDesc": "هر دوره ای که بخوای رو به راحتی پیدا کن و یاد بگیر", "enterPhoneNumber": "وارد کردن شماره همراه", "confirmCodeTitle": "تایید کد ارسال شده دو مرحله ای", "confirmCodeDesc": "(درصورت فعال بودن دو مرحله ای) ", "login1TitleHeader": "خوش برگشتی! ", "login2TitleHeader": " تایید کد دو مرحله‌ای! ", "login1Desc1Header": "لطفا شماره همراه یا ایمیل و رمز عبور را برای ورود ", "login1Desc2Header": "به حساب کاربری وارد کنید ","login2Desc1Header": "کد دومرحله‌ای به شماره همراه شما ارسال شد لطفا کد را ", "login2Desc2Header": "وارد کنید ", "EmailOrPhoneNumber": "شماره همراه یا ایمیل ", "password": "رمز عبور ", "rememberMe": "مرا به خاطر بسپار ", "forgetPassword": "رمز عبور را فراموش کرده اید؟ ", "loginAccount": "ورود به حساب ", "Don'tHaveAnAccount": "حساب کاربری ندارید؟ ", "creatAccount": "ایجاد حساب کاربری", "MainPage": "صفحه اصلی", "TwoCode": "کد دو مرحله‌ای", "return": "بازگشت ",
     "sendLink":"ارسال لینک", "ForgotPasswordHeaderTitle":"فراموشی رمز عبور!", "ForgotPasswordHeaderDesc":"اگر رمزعبور خود را فراموش کرده اید ایمیل خود را وارد کنید تا لینک صفحه تغییر رمز عبور برای شما ارسال شود","email": "ایمیل","enterEmail": "وارد کردن ایمیل ", "welcome": " خوش اومدی!  ", "registerHeaderDesc": " لطفا شماره همراه خود را وارد کنید تا کد تائید برای شما ارسال شود  ", "haveAccount":"حساب کاربری دارید؟",
     "confirmCodeRegister":"تایید کد ارسال شده ", "sendCodeRegister":"ارسال کد تایید ", "enterInformationRegister":"واردکردن اطلاعات شخصی ", "enterPhoneNumberReg": "وارد کردن شماره همراه", "PhoneNumberReg": "شماره همراه",
-
-
-
-
+    //student panel
+        "myProfile": "پروفایل من", "informationAccount": "اطلاعات حساب کاربری", "name": "نام", "images": "عکس ها", "links": "لینک ها", "placeInform": "محل سکونت","addressInform": "آدرس سکونت", "lastName": "نام خانوادگی", "aboutMe": "درباره من", 
+        "nationalCode": "کد ملی", "birthday": "تاریخ تولد", "gender": "جنسیت", "select": "انتخاب کنید", "applyChanges": "اعمال تغییرات", "Report":"گزارش", "SignOut":"خروج از حساب کاربری", "woman":"زن", "man":"مرد","lecturer":"مدرس","HoldingDate":"تاریخ برگزاری",
+        "CompletionDate":"تاریخ اتمام","level":"سطح","student":"دانشجو", "status":"وضعیت", "type":"نوع", "lastChangeDate":"تاریخ اخرین تغییرات","Visitors":"بازدیدکنندگان","Score":"امتیاز",
+    //teacher page
+        "TeacherPage":"لیست اساتید!","TeacherPageDesc":"لیستی از بهترین اساتید در آکادمی سپهر!",
 
     //placeholder
-        "enterNumberReg":"شماره همراه خود را وارد کنید", "enterNumber&Reg":"شماره همراه خود را وارد کنید",  
+        "enterNumberReg":"شماره همراه خود را وارد کنید", "enterPasswordPlaceHolder":"رمز عبور خود را وارد کنید", "enterNumber&email":"شماره همراه یا ایمیل خود را وارد کنید", "searchBlogs":"بلاگ مورد نظر را جست‌جو کنید...",  "searchCourses":"دوره مورد نظر را جست‌جو کنید...", "levelCourses":"سطح مورد نظر را انتخاب کنید", "TeacherCourses":"استاد مورد نظر را انتخاب کنید", "dateCourses":"تاریخ مورد نظر را انتخاب کنید", "CategoryBlogs":"دسته مورد نظر را انتخاب کنید", "enterEmailReg":"ایمیل خود را وارد کنید","TeacherSearch":"جستجو در نام اساتید...",
 }

@@ -9,7 +9,7 @@ const Teacher = () => {
   return (
     <>
         <div className={style.titleTeacher}  data-theme={darkMode ? "teacher" : "lightMode"}> {t("teachers")} </div>
-        <div className={style.teacher}  data-theme={darkMode ? "dark" : "lightMode"}>استاد مورد نظر را انتخاب کنید</div>
+        <div className={style.teacher}  data-theme={darkMode ? "dark" : "lightMode"}>{t("TeacherCourses")}</div>
     </>
   )
 }

@@ -10,7 +10,7 @@ const Teacher = ({setTeacherId}) => {
   return (
     <>
         <div className={style.titleTeacher} data-theme={darkMode ? "teacher" : "lightMode"}> {t("teachers")} </div>
-        <div className={style.teacher1} data-theme={darkMode ? "dark" : "lightMode"}>استاد مورد نظر را انتخاب کنید
+        <div className={style.teacher1} data-theme={darkMode ? "dark" : "lightMode"}>{t("TeacherCourses")}
           <div className={isClicked ? style.arrowUp : style.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
           {isClicked && <div className={style.filterTeacher}>
             <input type="radio" id='one' name='teachers' className={style.input} onChange={() => {

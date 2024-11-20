@@ -8,24 +8,7 @@
     gap: 10px;
 }
 
-@media screen and (max-width: 1306px) {
-    .startFromNow{
-        width: 15%;
-    }
-}
 
-@media screen and (max-width: 1214px) {
-    .startFromNow{
-        width: 15%;
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 1007px) {
-    .startFromNow{
-        width: 25%;
-    }
-}
 
 @media screen and (max-width: 900px) {
     .startFromNow{

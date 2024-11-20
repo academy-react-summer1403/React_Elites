@@ -20,7 +20,7 @@
     font-size: 18px;
     font-family: DannaDemiBold;
     line-height: 25.74px;
-    text-align: right;
+ text-align: center;
     cursor: pointer;
     height: 100%;
 }
@@ -45,7 +45,7 @@
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 17.16px;
-    text-align: right;
+ text-align: center;
     color: #707070;
 }
 .bigDiv{
@@ -64,7 +64,7 @@
     font-size: 16px;
     font-family: DannaDemiBold;
     line-height: 22.88px;
-    text-align: right;
+ text-align: center;
     color: #2F2F2F;
 }
 .left > div{

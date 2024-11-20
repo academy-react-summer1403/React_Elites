@@ -9,7 +9,7 @@ const Date = () => {
   return (
     <>
         <label htmlFor='date' className={style.titleDate} data-theme={darkMode ? "date" : "lightMode"}> {t("dateStart-end")} </label>
-        <input name='date' type='date' className={style.date} placeholder='تاریخ مورد نظر را انتخاب کنید' data-theme={darkMode ? "dark" : "lightMode"}/>
+        <input name='date' type='date' className={style.date} placeholder={t("dateCourses")} data-theme={darkMode ? "dark" : "lightMode"}/>
     </>
   )
 }

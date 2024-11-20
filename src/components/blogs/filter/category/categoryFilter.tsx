@@ -15,7 +15,7 @@ const CategoryFilter = ({setCategoryId, categoryId}) => {
             <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgCategory}`} data-theme={darkMode ? "categoryBlogFilter" : "lightMode"}/> 
             <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("category")} </p>
         </div>
-        <div className={styleFilter.filterCategory} data-theme={darkMode ? "dark" : "lightMode"}> دسته مورد نظر را انتخاب کنید 
+        <div className={styleFilter.filterCategory} data-theme={darkMode ? "dark" : "lightMode"}>  {t("CategoryBlogs")}
             <div className={isClicked ? styleFilter.arrowUp : styleFilter.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
             {isClicked && 
             <div className={styleFilter.filterBox}>

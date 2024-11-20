@@ -1,5 +1,6 @@
 .holder{
     width: 400px;
+    min-height: 131.9px;
     min-width: 270px;
     display: flex;
     flex-flow: row nowrap;
@@ -11,6 +12,10 @@
     cursor: pointer;
     background-color: #ededed;
     overflow: hidden;
+}
+.holder > img {
+    height: auto;
+    min-width: 116px;    
 }
 
 @media screen and (max-width: 587px) {

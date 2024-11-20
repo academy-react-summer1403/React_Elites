@@ -7,23 +7,6 @@
     direction: rtl;
 }
 
-@media screen and (max-width: 1306px) {
-    .container{
-        width: 20%;
-    }
-}
-
-@media screen and (max-width: 1096px) {
-    .container{
-        width: 20%;
-    }
-}
-
-@media screen and (max-width: 1007px) {
-    .container{
-        width: 25%;
-    }
-}
 
 @media screen and (max-width: 900px) {
     .container{

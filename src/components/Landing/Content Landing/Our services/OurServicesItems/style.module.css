@@ -4,7 +4,7 @@
     color: #2F2F2F;
     width: 100%;
     height: 50%;
-    text-align: right;
+ text-align: center;
     line-height: 50px;
 }
 
@@ -56,7 +56,7 @@ div:hover > .imageHolder{
     color: #707070;
     width: 100%;
     height: 50%;
-    text-align: right;
+ text-align: center;
     line-height: 40px;
 }
 

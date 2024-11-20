@@ -11,7 +11,7 @@ const SearchFilter = () => {
         <img className={styleFilter.filterTextImg} src={search} /> 
         <p className={styleFilter.filterText}>{t("search")}</p>
       </div>
-      <Field className={styleFilter.filterInput} name="password" placeholder="بلاگ مورد نظر را جست‌جو کنید..." />
+      <Field className={styleFilter.filterInput} name="password" placeholder={t("searchBlogs")} />
       <div className={styleFilter.searchBox}></div>
     </div>
 )

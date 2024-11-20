@@ -11,7 +11,7 @@ const NotifAndModeHolder = () => {
     <div className={style.container}>
       
       <Notification />
-      {/* <MiniBasket /> */}
+      <MiniBasket /> 
       <Menu />
       <User />
     </div>

@@ -3,7 +3,7 @@ import styleLogin from "../../../Style/list.module.css";
 const FPNavigate = () => {
   return (
     <div className={styleLogin.navigate}>
-      <div className="w-1/2 flex flex-wrap h-full w-64 bg-blue">
+      <div className="w-[600px] flex flex-wrap h-full w-64 bg-blue">
         <div className="w-full h-2 rounded-lg black bg-gray-400">  </div>
         <h1 className="w-full align-right text-gray-400 text-sm font-DannaDemiBold tracking-tight">وارد کردن ایمیل </h1>
       </div>
