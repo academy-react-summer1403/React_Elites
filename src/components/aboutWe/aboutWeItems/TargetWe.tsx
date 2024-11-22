@@ -9,7 +9,7 @@ const TargetWe = (props) => {
   return (
     <div className={style.holderP}>
       <span data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsTitle2")}</span>
-      <p className={style.courseCounts} data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsDesc3")}</p>
+      <p className={style.courseCounts} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("aboutUsDesc3")}</p>
     </div>
   )
 }

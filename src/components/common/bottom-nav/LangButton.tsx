@@ -13,9 +13,9 @@ function ChangeLang() {
   };
   return (
     <select className={style.Language} onChange={onChangeLocale} value={language}>
-      <option value="fa">Persian</option>
-      <option value="en">English </option>
-      <option value="ar">Arabic </option>
+      <option value="fa">fa</option>
+      <option value="en">en </option>
+      <option value="ar">ar </option>
     </select>
   )
 }

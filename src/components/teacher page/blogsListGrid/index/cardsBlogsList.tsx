@@ -1,8 +1,9 @@
 import { CardBlogs } from '../cardsBlogs'
 import style from './cardsBlogsListStyle.module.css'
+import { useEffect, useState } from "react";
+import { getTeacher } from '../../../../core/services/api/TeachersList'
 
 const ListCardBlogs = ({teacherList}) => {
-
 
   return (
     <div className={style.holder}>

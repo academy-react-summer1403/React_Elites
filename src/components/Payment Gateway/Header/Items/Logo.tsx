@@ -3,7 +3,7 @@ import style from './Items.module.css'
 
 const Logo = () => {
   return (
-    <div className={style.logo}></div>
+    <img src='https://bpm.shaparak.ir/pgwchannel/img/behpardakht_logo.svg' className={style.logo}></img>
   )
 }
 

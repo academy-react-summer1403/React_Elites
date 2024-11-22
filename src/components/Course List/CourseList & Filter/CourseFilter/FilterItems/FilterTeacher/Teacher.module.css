@@ -6,7 +6,7 @@
     font-size: 12px;
     padding: 15px;
     font-family: DannaMedium;
- text-align: center;
+ text-align: right;
     border-radius: 16px;
     direction: rtl;
     line-height: 22px;
@@ -22,7 +22,7 @@
     width: 100%;
     display: block;
     padding: 10px 15px 10px 15px;
- text-align: center;
+ text-align: right;
     font-family: DannaMedium;
     color: black;
     font-size: 14px;

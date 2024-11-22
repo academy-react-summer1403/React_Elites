@@ -17,6 +17,7 @@ import { CourseList } from './components/Course List/CourseListHolder/CourseList
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import "./app/App.css"
+import LangAndMode from './components/common/bottom-nav/LangAndMode.tsx'
 import "./i18n.ts"
 import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
 import { ErrorPage404 } from './components/Error 404/Error404.tsx'
@@ -35,6 +36,8 @@ import { StudentMyFavCourses } from './components/studentPanel/studentCurse-Blog
 import { Auth } from './components/Auth/Auth.tsx'
 import { StudentMyFavBlogs } from './components/studentPanel/studentCurse-Blog/Fav Blogs/StudentMyFavBlogs.tsx'
 import { StudentDashboard } from './components/studentPanel/dashboard/dashboard.tsx'
+import { Compare } from './components/Compare 2 products/Compare.tsx'
+import { CompareSelect } from './components/Compare 2 products/Compare select.tsx'
 
 const router = createBrowserRouter([
   {
@@ -75,6 +78,16 @@ const router = createBrowserRouter([
       {
         path: "/about-we",
         element: <AboutWe />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Compare-products",
+        element: <Compare />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Compare-products-select",
+        element: <CompareSelect />,
         errorElement: <ErrorPage />
       },
     ]
@@ -191,6 +204,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <LangAndMode />
     <RouterProvider router={router} />
   </StrictMode>,
 )

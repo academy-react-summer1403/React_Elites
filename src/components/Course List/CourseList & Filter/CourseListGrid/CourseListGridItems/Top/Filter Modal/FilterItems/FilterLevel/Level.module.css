@@ -4,7 +4,7 @@
     background: #F1F1F1;
     color: #707070;
     font-size: 12px;
- text-align: center;
+ text-align: right;
     border-radius: 16px;
     direction: rtl;
     line-height: 22px;
@@ -22,6 +22,6 @@
     background: url(../../../../../../../../../assets/Images/icons8-layer-48.png) 100% 50% no-repeat;
     background-size: 20%;
     width: 128px;
- text-align: center;
+ text-align: right;
     /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
 }

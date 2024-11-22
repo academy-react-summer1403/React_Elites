@@ -35,7 +35,7 @@
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 22.88px;
-    text-align: center;
+     text-align: right;
     color: #2F2F2F;
 }
 .searchLogo{
@@ -59,7 +59,7 @@
     font-size: 13px;
     font-family: DannaMedium;
     line-height: 17.16px;
- text-align: center;
+  text-align: right;
     color: #707070;
     border: none;
 }
@@ -87,7 +87,7 @@
     font-size: 14px;
     font-family: DannaDemiBold;
     line-height: 20.02px;
- text-align: center;
+  text-align: right;
     color: #707070;
 }
 .imgList{

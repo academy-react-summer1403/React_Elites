@@ -6,7 +6,7 @@
     font-size: 12px;
     padding: 15px;
     font-family: DannaMedium;
- text-align: center;
+ text-align: right;
     border-radius: 16px;
     direction: rtl;
     line-height: 22px;
@@ -21,6 +21,6 @@
     font-family: DannaMedium;
     background: url(../../../../../../../../../assets/Images/icons8-teacher-24.png) 100% 50% no-repeat;
     width: 80px;
- text-align: center;
+ text-align: right;
     /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
 }

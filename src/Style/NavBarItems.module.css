@@ -58,7 +58,7 @@
 .miniBasket > div > h2{
     color: black;
     font-size: 22px;
- text-align: center;
+  text-align: right;
 }
 
 .buttonHolder{
@@ -70,7 +70,7 @@
 
 .button{
     background-color: rgb(0, 106, 255);
- text-align: center;
+  text-align: right;
     border-radius: 32px;
     border: 2px solid blue;
     padding: 10px;
@@ -118,7 +118,7 @@
 .price,
 .title {
     width: 100%;
- text-align: center;
+  text-align: right;
 }
 
 @media screen and (max-width: 1217px) {

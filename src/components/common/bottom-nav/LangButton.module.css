@@ -44,7 +44,7 @@
 }
 .holder2:hover > div{
     border: 1px solid #6a6a6a;
-    background: #0088ff url(https://img.icons8.com/?size=100&id=7849&format=png&color=000000)no-repeat 50% 50%;
+    background: #0088ff url(https://img.icons8.com/?size=100&id=7849&format=png&color=ffffff)no-repeat 50% 50%;
     background-size: 70%;
     rotate: -90deg;
     transition: 0.5s;
@@ -60,7 +60,7 @@
 }
 .DarkAndLangButton:hover{
     border: 1px solid #6a6a6a;
-    background: #0088ff url(https://img.icons8.com/?size=100&id=7849&format=png&color=000000)no-repeat 50% 50%;
+    background: #0088ff url(https://img.icons8.com/?size=100&id=7849&format=png&color=ffffff)no-repeat 50% 50%;
     background-size: 70%;
     rotate: -90deg;
     transition: 0.5s;

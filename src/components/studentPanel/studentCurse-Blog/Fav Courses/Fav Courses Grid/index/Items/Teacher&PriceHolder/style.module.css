@@ -11,7 +11,7 @@
     font-family: DannaMedium;
     color: #707070;
     width: auto;
- text-align: center;
+  text-align: right;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -22,7 +22,7 @@
     font-family: DannaBold;
     color: #2F2F2F;
     width: auto;
- text-align: center;
+  text-align: right;
     direction: rtl;
 }
 

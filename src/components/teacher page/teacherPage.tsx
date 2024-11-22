@@ -10,6 +10,8 @@ import { useTranslation } from 'react-i18next';
 const TeacherPage = (props) => {
   const { t } = useTranslation();
   const [teacherList, setTeacherList] = useState([]);
+  const [searchValue, setSearchValue] = useState("")
+  const [applyFilter, setApplyFilter] = useState(false)
 
   const getTeacherList = async () => {
     const teacher = await getTeacher();
@@ -33,9 +35,9 @@ const TeacherPage = (props) => {
             <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPageDesc")}</h1>
           </div>  
           <div className={style.page}>
-            <SearchBar />
+            <SearchBar setSearchValue={setSearchValue}/>
             <div className={style.page2}>      
-              <ListCardBlogs teacherList={teacherList} />
+              <ListCardBlogs  teacherList={teacherList} />
             </div>
           </div>  
         </div>

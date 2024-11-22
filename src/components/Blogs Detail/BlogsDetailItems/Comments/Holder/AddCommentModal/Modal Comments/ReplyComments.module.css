@@ -49,7 +49,7 @@
     color: #2F2F2F;
     height: 50%;
     width: 100%;
- text-align: center;
+ text-align: right;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -60,7 +60,7 @@
     color: #707070;
     height: 50%;
     width: 100%;
- text-align: center;
+ text-align: right;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -82,14 +82,14 @@
     font-size: 18px;
     font-family: DannaBold;
     color: #2F2F2F;
- text-align: center;
+ text-align: right;
 }
 .commentDesc{
     width: 100%;
     font-size: 16px;
     font-family: DannaMedium;
     color: #2F2F2F;
- text-align: center;
+ text-align: right;
 }
 .footer{
     width: 100%;

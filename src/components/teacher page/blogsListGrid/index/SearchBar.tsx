@@ -2,6 +2,7 @@ import React from 'react'
 import { useGlobalState } from '../../../../State/State';
 import style from '../../../../Style/teacher.module.css'
 import { useTranslation } from 'react-i18next';
+import { SearchBarInput } from './SearchInput';
 
 const SearchBar = ({setSearchValue}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -11,7 +12,7 @@ const SearchBar = ({setSearchValue}) => {
       <h1>{t("filter")}</h1>
       <div>
         <h2>{t("search")}</h2>
-        <input className={style.input} placeholder={t("TeacherSearch")} data-theme={darkMode ? "darkSmall" : "lightMode"}></input>
+        <SearchBarInput  setSearchValue={setSearchValue} />
       </div>  
     </div>
   )

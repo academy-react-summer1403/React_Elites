@@ -3,7 +3,10 @@ import style from './Items.module.css'
 
 const Title = () => {
   return (
-    <div className={style.title}>درگاه پرداخت اینترنتی آسان پرداخت</div>
+    <div className={style.titleHolder}>
+      <div className={style.title}>پرداخت اینترنتی به پرداخت ملت</div>
+      <span className={style.Link}>www.Behpardakht.com </span>
+    </div>
   )
 }
 

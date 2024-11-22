@@ -2,13 +2,13 @@
 .title{
     height: 100%;
     background-size: 45%;
- text-align: center;
+ text-align: right;
     color: #2F2F2F;
     font-family: DannaMedium;
     font-size: 14px;
     line-height: 30px;
     width: 150px;
- text-align: center;
+ text-align: right;
 }
 
 .container{

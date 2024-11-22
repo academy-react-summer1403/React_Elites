@@ -51,7 +51,7 @@
     font-size: 13px;
     font-family: DannaMedium;
     line-height: 17.16px;
- text-align: center;
+  text-align: right;
     color: #707070;
     border: none;
 }
@@ -88,7 +88,7 @@
     font-size: 14px;
     font-family: DannaDemiBold;
     line-height: 20.02px;
- text-align: center;
+  text-align: right;
     color: #707070;
 }
 .imgList{

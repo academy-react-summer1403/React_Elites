@@ -38,14 +38,23 @@
     width: 100%;
     justify-content: right;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     height: 100px;
 }
 .textWelcome > h1:first-child{
+    color: #2F2F2F;
+    width: 100%;
     font-size: 32px;
+    font-weight: 800;
+    line-height: 45.76px;
+    text-align: right;
+
 }
 .textWelcome > h1:last-child{
     color: rgb(107 114 128) !important;
+    width: 100%;
+    text-align: right;
+    font-weight: 600;
 }
 .laptopHolder{
     width: 100%;

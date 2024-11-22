@@ -95,6 +95,10 @@
   color: #14FFEC !important;
   border-color: #0D7377 !important;
 }
+[data-theme="darkNoBGDisc"] {
+  color: #00897c !important;
+  border-color: #0D7377 !important;
+}
 [data-theme="darkSmall"] {
   background: #323232 !important;
   color: #14FFEC !important;

@@ -18,7 +18,7 @@ const User = () => {
       {isClicked && <div className={style.userAccebility}>
         <div className={style.fixed}>
           <div className={style.holder}>
-            <NavLink to="/" className={style.items}> {t("Dashboard")} </NavLink>
+            <NavLink to="/Student-Panel/dashboard" className={style.items}> {t("Dashboard")} </NavLink>
           </div>
           <div className={style.holder}>
             <NavLink to="Student-Panel/My-Courses" className={style.items}> {t("myCourse")} </NavLink>

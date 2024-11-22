@@ -10,8 +10,8 @@ const CursesTeaching = (props) => {
     <div className={style.holderP}>
       <span data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsTitle5")}</span>
       <div className={style.holderGap}>
-        <p className={style.courseCounts} data-theme={darkMode ? "dark" : "lightMode"}> {t("aboutUsDesc8")} </p> 
-        <p className={style.courseCounts} data-theme={darkMode ? "dark" : "lightMode"}> {t("aboutUsDesc9")} </p> 
+        <p className={style.courseCounts} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}> {t("aboutUsDesc8")} </p> 
+        <p className={style.courseCounts} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}> {t("aboutUsDesc9")} </p> 
       </div>
     </div>  
   )

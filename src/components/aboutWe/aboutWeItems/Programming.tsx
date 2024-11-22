@@ -9,7 +9,7 @@ const Programming = (props) => {
   return (
     <div className={style.holderP}>
       <span data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsTitle8")}</span>
-      <p className={style.courseCounts} data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsDesc12")}</p>
+      <p className={style.courseCounts} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("aboutUsDesc12")}</p>
     </div>
   )
 }

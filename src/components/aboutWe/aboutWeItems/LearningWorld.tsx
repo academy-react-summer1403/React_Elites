@@ -9,7 +9,7 @@ const LearningWorld = (props) => {
   return (
     <div className={style.holderP}>
       <span data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsTitle7")}</span>
-      <p className={style.courseCounts} data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsDesc11")}</p>
+      <p className={style.courseCounts} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("aboutUsDesc11")}</p>
     </div>
   )
 }

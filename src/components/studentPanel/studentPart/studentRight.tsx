@@ -2,8 +2,10 @@ import { Formik } from "formik";
 import style from "./../../../Style/studentPanel.module.css"
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../State/State";
+import { useTranslation } from 'react-i18next';
 
 const StudentGhabRight = () => {
+    const { t } = useTranslation();
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
     return (
@@ -14,36 +16,36 @@ const StudentGhabRight = () => {
                     <div className={style.menu}>
                         <div>
                             <div className={style.Dashboard}> </div>
-                            <NavLink to='/Student-Panel/dashboard' data-theme={darkMode ? "darkNoBG" : "lightMode"}> داشبرد</NavLink>
+                            <NavLink to='/Student-Panel/dashboard' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Dashboard")}</NavLink>
                         </div>
                         <div>
                             <div className={style.MyPeriod}> </div>
-                            <NavLink to='/Student-Panel/My-Courses' data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره من</NavLink>
+                            <NavLink to='/Student-Panel/My-Courses' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("myCourse")}</NavLink>
                         </div>
                         <div>
                             <div className={style.MyReservation}> </div>
-                            <NavLink to='/Student-Panel/My-Reserve' data-theme={darkMode ? "darkNoBG" : "lightMode"}> رزرو من</NavLink>
+                            <NavLink to='/Student-Panel/My-Reserve' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("MyReservation")}</NavLink>
                         </div>
                         <div>
                             <div className={style.favoritePeriod}> </div>
-                            <NavLink to="/Student-Panel/Fav-Courses" data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره های موردعلاقه</NavLink>
+                            <NavLink to="/Student-Panel/Fav-Courses" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("FavoriteCourses")}</NavLink>
                         </div>
                         <div>
                             <div className={style.BlogMenu}> </div>
-                            <NavLink to="/Student-Panel/Fav-Blogs" data-theme={darkMode ? "darkNoBG" : "lightMode"}> بلاگ های موردعلاقه</NavLink>
+                            <NavLink to="/Student-Panel/Fav-Blogs" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("FavoriteBlogs")}</NavLink>
                         </div>
                         <div>
                             <div className={style.profile}> </div>
-                            <NavLink to='/Student-Panel/Information' data-theme={darkMode ? "darkNoBG" : "lightMode"}> پروفایل</NavLink>
+                            <NavLink to='/Student-Panel/Information' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Profile")}</NavLink>
                         </div>
                         <div>
                             <div className={style.pay}> </div>
-                            <NavLink to="/Student-Panel/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> پرداخت ها</NavLink>
+                            <NavLink to="/Student-Panel/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Payments")}</NavLink>
                         </div>
                     </div>
                     <div className={style.logout}>
                         <div className={style.exit}> </div>
-                        <NavLink to='/'> خروج از حساب کاربری</NavLink>
+                        <NavLink to='/'> {t("SignOut")}</NavLink>
                     </div>
                 </div>
             </div>

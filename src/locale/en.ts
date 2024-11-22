@@ -36,7 +36,7 @@ export const en = {
     "CompletionDate": "Completion date", "level": "level", "student": "student", "status": "status", "type": "type", "lastChangeDate": "Date of last changes", "Visitors": "Visitors", "Score": "Score",
 
     //teacher page
-        "TeacherPage":"List of professors!","TeacherPageDesc":"A list of the best professors in Sepehr Academy!",
+        "TeacherPage":"!List of professors","TeacherPageDesc":"!A list of the best professors in Sepehr Academy",
 
     //placeholder
     "enterNumberReg": "Enter your mobile number", "enterPasswordPlaceHolder": "Enter your password", "enterNumber&email": "Enter your mobile number or email", "searchBlogs": "...Search for the desired blog", "searchCourses": "...Search for the desired course", "levelCourses": "Select the desired level", "TeacherCourses": "Choose the desired professor", "dateCourses": "Select the desired date", "CategoryBlogs": "Select the desired category", "enterEmailReg": "Enter your email","TeacherSearch":"...Search in the names of professors",
