@@ -19,13 +19,7 @@ const ReserveCards = (props) => {
   const getCourseDetail = async () => {
     const Details = await getCourseById(props.id)
     setCourseDetail(Details)
-  //   console.log(Details.courseReseveId)
-  //   if(.isCourseUser === "0"){
-  //     setAccept("تایید نشده")
-  //   }
-  //   else if(.isCourseUser === "1"){
-  //     setAccept("تایید شده")
-  //   }
+    console.log(Details)
   }
 
   // const deleteCourseReserveCall = async (id) => {
@@ -49,11 +43,10 @@ const ReserveCards = (props) => {
         <Teacher teacher={courseDetail.teacherName} />
         <Date date={courseDetail.startTime} />
         <Date date={courseDetail.endTime} />
-        <Status Status={courseDetail.accept}/>
+        <Status status={courseDetail.isCourseUser}/>
         <div className={style.closeAndViewHolder}>
           <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
-          <span className={style.Close} onClick={() => {
-          }}></span>
+          <span className={style.Close} ></span>
         </div>
     </div>
   )

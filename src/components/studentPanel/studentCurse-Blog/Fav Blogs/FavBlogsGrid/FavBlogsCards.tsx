@@ -15,7 +15,7 @@ const FavBlogsCards = (props) => {
         <Title title={props.title} />
         <Teacher teacher={props.teacher} />
         <Date date={props.date} />
-        <Level level={props.level}/>
+        <Level level={Math.round(props.level)}/>
         <div className={style.closeAndViewHolder}>
           <NavLink to={"/Blogs-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
           <span className={style.Close}></span>

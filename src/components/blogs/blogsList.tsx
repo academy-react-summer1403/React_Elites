@@ -17,6 +17,7 @@ const BlogsList = () => {
   const [searchValue, setSearchValue] = useState("")
   const [isBlog, setisBlog] = useGlobalState('isBlog');
 
+
   useEffect(() => {
     setisBlog(true)
   }, [])

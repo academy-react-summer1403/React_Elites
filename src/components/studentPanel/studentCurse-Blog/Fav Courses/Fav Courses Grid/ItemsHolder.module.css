@@ -55,6 +55,17 @@
     line-height: 22.88px;
     margin-top: 12px;
 }
+
+.styleSkeleton{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.inline{
+    display: inline;
+}
 .holder > div{
     font-size: 16px;
     line-height: 55px;

@@ -6,15 +6,60 @@ import { ListCardBlogs } from '../studentCurse-Blog/My Courses/Courses Grid/inde
 import { ReserveCardsList } from '../studentCurse-Blog/My Reserve/Reserve Grid/index/ReserveCardsList';
 import { NavLink } from 'react-router-dom';
 import { getCourseReserve } from '../../../core/services/api/getCourseReserveId';
+import ApexCharts from 'apexcharts'
+import Chart from 'react-apexcharts'
+import { getProfile } from '../../../core/services/api/getProfileInfo';
+import { Color } from 'antd/es/color-picker';
 
 const StudentDashboard = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [userReserveCoursesObj, setUserReserveCoursesObj] = useState([])
+  const [percentage, setpercentage] = useState("")
+  const [user, setuser] = useState({})
 
   const getCourseReserveCall = async () => {
     const userReserveCoursesRes = await getCourseReserve();
     setUserReserveCoursesObj(userReserveCoursesRes)
+
+    let res = await getProfile()
+    setpercentage(res.profileCompletionPercentage)
+    setuser(res)
   }
+  const options = {
+    chart: {
+      height: 350,
+    },
+    fill: {
+      type: 'solid',
+    },
+    stroke: {
+      lineCap: "round",
+    },
+    colors: ["#fce803"],
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          margin: 15,
+          size: "65%",
+        },
+       
+        dataLabels: {
+          name: {
+            show: false,
+            offsetY: -10,
+            color: "#888",
+            fontSize: "13px"
+          },
+          value: {
+            color: "#111",
+            fontSize: "30px",
+            show: true
+          }
+        }
+      }
+    } 
+  },
+  series = [Number(percentage)]
 
   useEffect(() => {
       getCourseReserveCall()
@@ -27,7 +72,7 @@ const StudentDashboard = () => {
           <div className={style.TopDashboard}>
             <div className={style.rightTopDashboard}>
               <div className={style.TopRightTopDashboard}>
-                <h1>سلام پارسا ، روزت بخیر👋</h1>
+                <h1 className='DannaM'>سلام {user.lName} {user.fName} ، روزت بخیر👋</h1>
                 <p>امیدوارم امروز روز خوبی رو داشته باشید</p>
               </div>
               <div className={style.BottomRightTopDashboard}>
@@ -48,7 +93,7 @@ const StudentDashboard = () => {
               </div>
             </div>
             <div className={style.leftTopDashboard}>
-              <h1>سلام ، من پارسام <br />اینم بیو پروفایلمه واقعا نمیدونم چی بنویسم خودتون بیایید منو بشناسید حال ندارم بخدا خستم</h1>
+              <h1>{user.userAbout}</h1>
             </div>
           </div>
           <div className={style.MyCourseAndStatus}>
@@ -72,11 +117,7 @@ const StudentDashboard = () => {
                 <h1>وضعیت اطلاعات حساب کاربری</h1>
                 <NavLink to='/Student-Panel/Information'> </NavLink>
               </div>
-              <div className={style.middleStatusDashboard}>
-                <div>
-                  <div>70%</div>
-                </div>
-              </div>
+                <Chart options={options} label={false} series={series} type='radialBar'/>
               <div className={style.bottomStatusDashboard}>
                 <h1>اطلاعات حساب کاربری شما کامل نیست</h1>
               </div>
