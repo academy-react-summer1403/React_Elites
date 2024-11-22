@@ -9,9 +9,9 @@ const SearchBar = ({setSearchValue}) => {
   const { t } = useTranslation();
   return (
     <div className={style.inputHolder}>
-      <h1>{t("filter")}</h1>
+      <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"} >{t("filter")}</h1>
       <div>
-        <h2>{t("search")}</h2>
+        <h2  data-theme={darkMode ? "darkNoBG" : "lightMode"} >{t("search")}</h2>
         <SearchBarInput  setSearchValue={setSearchValue} />
       </div>  
     </div>
