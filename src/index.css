@@ -41,7 +41,9 @@
     src: url(./assets/Fonts/iranyekanwebbold.ttf);
   }
 }
-
+.DannaM{
+  font-family: DannaMedium;
+}
 :root {
 
   color-scheme: light dark;

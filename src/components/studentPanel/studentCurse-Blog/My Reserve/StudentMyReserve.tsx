@@ -17,8 +17,9 @@ const StudentMyReserve = () => {
     }
   
     useEffect(() => {
-        getCourseReserveCall()
+      getCourseReserveCall()
     }, [])
+    
   return (
     <div className={style.page2}>
         <div className={style.titleHolder}>

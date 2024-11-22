@@ -8,13 +8,15 @@ import { useTranslation } from 'react-i18next';
 
 const StudentMyFavCourses = () => {
   const { t } = useTranslation();
+  const [isLoading, setisLoading] = useState(true)
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [userFavcoursesObj, setuserFavcoursesObj] = useState([])
 
   const getFavCoursesCall = async () => {
     const userFavouriteCoursesRes = await getFavCourses();
     setuserFavcoursesObj(userFavouriteCoursesRes.favoriteCourseDto)
-    console.log(userFavcoursesObj)
+    
+    setisLoading(false)
   }
 
   useEffect(() => {
@@ -38,7 +40,7 @@ const StudentMyFavCourses = () => {
           <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("level")} </div>
           <div className={style.eyeList}> </div>
         </div>
-        <FavCoursesCardsList userFavcoursesObj={userFavcoursesObj} />
+        <FavCoursesCardsList userFavcoursesObj={userFavcoursesObj} isLoading={isLoading} />
       </div>
     </div>
   )

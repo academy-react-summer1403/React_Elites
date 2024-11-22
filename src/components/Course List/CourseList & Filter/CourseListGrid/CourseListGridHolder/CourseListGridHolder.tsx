@@ -14,14 +14,18 @@ const CourseListGridHolder = ({applyFilter, teacherId, setTotalCount, totalCount
   
   const [courseList, setCourseList] = useState([]);
   const [pagInation, setPagInation] = useState(1)
-  const [sortType, setSortType] = useState("")
-  const [col, setCol] = useState("")
+  const [sortType, setSortType] = useState("insertDate")
+  const [col, setCol] = useState("DESC")
   const [applySort, setapplySort] = useState(false)
+
+  const [isLoading, setisLoading] = useState(true)
 
 
 
 
   const getFilteredList = async () => {
+
+
 
     let data = await Filter(teacherId, pagInation, levelId, categoryId, categoryId.length)
 
@@ -42,6 +46,8 @@ const CourseListGridHolder = ({applyFilter, teacherId, setTotalCount, totalCount
     else if(applySort === true){
       setCourseList(sortData.courseFilterDtos)
     }
+
+    setisLoading(false)
   }
 
 
@@ -75,6 +81,7 @@ const CourseListGridHolder = ({applyFilter, teacherId, setTotalCount, totalCount
       <TopHolder clicked={clicked} setClicked={setClicked} setapplySort={setapplySort} sortModal={sortModal} applySort={applySort} setSortModal={setSortModal} setSortType={setSortType} setCol={setCol}/>
       <CoursesHolder 
       courseList={courseList}
+      isLoading={isLoading}
       />
       {isSearched || applySort === false && <ChangePageList setPagInation={setPagInation} pagInation={pagInation} totalCount={totalCount}/>}
     </div>

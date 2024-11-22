@@ -3,9 +3,11 @@ import style from './cardsBlogsListStyle.module.css'
 import { getAllBlogsList } from '../../../../core/services/api/AllBlogsList'
 import { useEffect, useState } from 'react'
 import { FilterBlogs } from '../../../../core/services/api/getBlogsFilterList'
+import { CardsBlogSkeleton } from './CardsBlogSkeleton'
 
 const ListCardBlogs = ({categoryId, applyFilter, searchValue}) => {
   const [blogsList, setBlogsList] = useState([]);
+  const [isLoading, setisLoading] = useState(true)
 
   const allBlogsList = async () => {
 
@@ -21,6 +23,8 @@ const ListCardBlogs = ({categoryId, applyFilter, searchValue}) => {
       setBlogsList(allBlogs.news)
       setBlogsList(allBlogs.news.filter(doc => doc.title.includes(searchValue)))
     }
+
+    setisLoading(false)
   }
 
   useEffect(() => {
@@ -36,6 +40,7 @@ const ListCardBlogs = ({categoryId, applyFilter, searchValue}) => {
 
   return (
     <div className={style.holder}>
+      {isLoading && <CardsBlogSkeleton cards={9} />}
         {blogsList.map((item, index) => {
         return (
           <CardBlogs 
