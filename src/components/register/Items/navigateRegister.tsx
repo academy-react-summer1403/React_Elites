@@ -11,16 +11,16 @@ const NavigateRegister = () => {
   return (
 
     <div className={`${styleLogin.navigate} ${styleLogin.navigateRegister}`}>
-      <div className="flex flex-wrap h-full bg-blue w-60">
-        <div className="w-full h-2 rounded-lg black bg-blue-600">  </div>
+      <div className={styleLogin.select}>
+        <div>  </div>
         <h1 className={`${styleLogin.textNavigate} ${styleLogin.selectedNavigate}`}>{t("enterPhoneNumberReg")} </h1>
       </div>
-      <div className="flex flex-wrap h-full w-60 bg-blue">
-        <div className="w-full h-2 rounded-lg black bg-gray-400">  </div>
+      <div>
+        <div>  </div>
         <h1 className={styleLogin.textNavigate}>{t("confirmCodeRegister")} </h1>
       </div>
-      <div className="flex flex-wrap h-full w-60 bg-blue">
-        <div className="w-full h-2 rounded-lg black bg-gray-400">  </div>
+      <div>
+        <div>  </div>
         <h1 className={styleLogin.textNavigate}>{t("enterInformationRegister")} </h1>
       </div>
     </div>

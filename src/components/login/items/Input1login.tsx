@@ -8,7 +8,7 @@ const Input1Login = () => {
 
   return (
 
-    <div className="h-full mt-8 max-w-96 mx-0 text-right">
+    <div className={styleLogin.inputHolder}>
       <label className="text-base font-DannaDemiBold text-black pb-3">{t("EmailOrPhoneNumber")} </label>
       <Field className={styleLogin.input} name="phoneOrGmail" placeholder={t("enterNumber&email")} />
       <ErrorMessage name="phoneOrGmail" component={"p"} className="error" />

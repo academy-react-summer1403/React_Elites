@@ -7,9 +7,9 @@ const ReturnLogin2 = () => {
   const { t } = useTranslation();
   return (
 
-    <div className="flex   justify-center mt-4">
+    <div className={styleLogin.returnHolder}>
       <div className={styleLogin.return}>
-        <NavLink to="/Auth/Login" className="border-non cursor-pointer text-blue-700 text-sm font-DannaMedium tracking-tight"> {t("return")} &gt;</NavLink>
+        <NavLink to="/Auth/Login"> {t("return")} &gt;</NavLink>
       </div>
     </div>
 

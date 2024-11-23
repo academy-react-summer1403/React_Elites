@@ -47,6 +47,7 @@ const MiddleStatusDashboard = ({percentage}) => {
 
   return (
 
+
     <div className={style.middleStatusDashboard}>
       <div>
         <Chart series={series} data-theme={darkMode ? "darkNoBG" : "lightMode"} />
