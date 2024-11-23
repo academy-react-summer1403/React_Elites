@@ -9,8 +9,6 @@ import { getCourseReserve } from '../../../core/services/api/getCourseReserveId'
 import { TopDashboard } from './Items/TopDashboard';
 import { MyCourseAndStatus } from './Items/MyCourseAndStatus';
 import { MyReserveAndComment } from './Items/MyReserveAndComment';
-import ApexCharts from 'apexcharts'
-import Chart from 'react-apexcharts'
 import { getProfile } from '../../../core/services/api/getProfileInfo';
 import { Color } from 'antd/es/color-picker';
 
@@ -40,7 +38,7 @@ const StudentDashboard = () => {
         <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
 
           <TopDashboard />
-          <MyCourseAndStatus />
+          <MyCourseAndStatus percentage={percentage} />
           <MyReserveAndComment userReserveCoursesObj={userReserveCoursesObj} />
         </div>
       )

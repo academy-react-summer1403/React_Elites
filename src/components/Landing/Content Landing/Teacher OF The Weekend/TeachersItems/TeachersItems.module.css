@@ -64,6 +64,7 @@
     opacity: 0;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: DannaMedium;
 }
 
 @keyframes visible{

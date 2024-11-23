@@ -5,14 +5,14 @@ import { BottomStatusDashboard } from "./BottomStatusDashboard";
 import { TopStatusDashboard } from "./TopStatusDashboard";
 import { MiddleStatusDashboard } from "./middleStatusDashboard";
 
-const StatusDashboard = () => {
+const StatusDashboard = ({percentage}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
 
     <div className={style.statusDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
       <TopStatusDashboard />
-      <MiddleStatusDashboard />
+      <MiddleStatusDashboard  percentage={percentage}/>
       <BottomStatusDashboard />
     </div>
   )

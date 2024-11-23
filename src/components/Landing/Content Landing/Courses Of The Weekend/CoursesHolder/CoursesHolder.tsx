@@ -9,12 +9,21 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const CoursesHolder = ({courseList}) => {
-  const Arrow = (props) => {
-    const { className, style, onClick } = props;
+  const ArrowRight = (props) => {
+    const { className, onClick } = props;
     return (
       <div
-        className={className}
-        style={{ ...style, display: "block", background: "black" }}
+        className={`${style.arrowRight} ${className}`}
+        onClick={onClick}
+      />
+    );
+  }
+
+  const ArrowLeft = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div
+        className={`${style.arrowLeft} ${className}`}
         onClick={onClick}
       />
     );
@@ -26,8 +35,8 @@ const CoursesHolder = ({courseList}) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
+    nextArrow: <ArrowRight />,
+    prevArrow: <ArrowLeft />,
     responsive: [
       {
         breakpoint: 1406,
