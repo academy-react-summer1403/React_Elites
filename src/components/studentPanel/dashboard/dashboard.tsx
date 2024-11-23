@@ -73,11 +73,9 @@ const StudentDashboard = () => {
     <Formik>
       {(form) => (
         <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-<<<<<<< HEAD
           <TopDashboard />
           <MyCourseAndStatus />
           <MyReserveAndComment userReserveCoursesObj={userReserveCoursesObj} />
-=======
           <div className={style.TopDashboard}>
             <div className={style.rightTopDashboard}>
               <div className={style.TopRightTopDashboard}>
@@ -159,7 +157,6 @@ const StudentDashboard = () => {
               </div>
             </div>
           </div>
->>>>>>> f8c0e801c7f3769cdd6499e9796cf8073c224359
         </div>
       )
       }
