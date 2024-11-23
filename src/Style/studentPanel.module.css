@@ -467,7 +467,9 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20.02px;
+
     text-align: right;
+
     color: #707070;
     margin-top: 10px;
     width: auto !important;
@@ -511,7 +513,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20.02px;
-  text-align: right;
+    text-align: right;
     color: #707070;
 }
 

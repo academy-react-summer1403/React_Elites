@@ -8,13 +8,13 @@
 }
 .page{
     width: 90%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     padding-right: 2rem;
     direction: rtl;
+    height: 100%;
 }
 .page2{
     width: 100%;
