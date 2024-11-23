@@ -1,18 +1,16 @@
 import style from "./../../../../../Style/studentPanel.module.css";
 import { useGlobalState } from "../../../../../State/State";
 import { NavLink } from "react-router-dom";
+import Chart from 'react-apexcharts'
 
 
-const MiddleStatusDashboard = () => {
+const MiddleStatusDashboard = ({options,series}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
 
-    <div className={style.middleStatusDashboard}>
-      <div>
-        <div data-theme={darkMode ? "darkNoBG" : "lightMode"}>70%</div>
-      </div>
-    </div>
+  
+      <Chart options={options} label={false} series={series} type='radialBar'/>
   )
 }
 

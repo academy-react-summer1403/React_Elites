@@ -8,7 +8,7 @@ const RegisterLogin = () => {
 
   return (
 
-    <div className="mt-2 max-w-96 flex justify-center gap-1.5">
+    <div className={styleLogin.RegisterLoginButton}>
       <h1 className="red text-black text-sm font-DannaDemiBold">{t("Don'tHaveAnAccount")}</h1>
       <NavLink to="/Auth/Register" className="border-none cursor-pointer text-blue-700 text-sm font-DannaDemiBold tracking-tight decoratio underline">{t("creatAccount")}</NavLink>
     </div>

@@ -3,13 +3,13 @@ import { useGlobalState } from "../../../../../State/State";
 import { TopRightTopDashboard } from "./TopRightTopDashboard";
 import { BottomRightTopDashboard } from "./BottomRightTopDashboard";
 
-const RightTopDashboard = () => {
+const RightTopDashboard = ({user}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
 
     <div className={style.rightTopDashboard}>
-      <TopRightTopDashboard />
+      <TopRightTopDashboard user={user} />
       <BottomRightTopDashboard />
     </div>
   )

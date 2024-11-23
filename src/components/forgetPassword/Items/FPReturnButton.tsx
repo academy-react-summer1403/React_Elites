@@ -5,9 +5,9 @@ import styleLogin from "../../../Style/list.module.css";
 const FPReturnButton = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex max-w-96  justify-center mt-4">
-      <div className={styleLogin.HomePageButton}>
-        <NavLink to="/Auth/Login" className="border-non cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight">&lt; {t("return")} </NavLink>
+    <div  className={styleLogin.returnHolder}>
+      <div className={styleLogin.return}>
+        <NavLink to="/Auth/Login"> {t("return")} &gt;</NavLink>
       </div>
     </div>
   )

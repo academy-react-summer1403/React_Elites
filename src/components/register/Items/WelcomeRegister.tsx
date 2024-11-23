@@ -10,7 +10,7 @@ const WelcomeRegister = () => {
 
   return (
 
-    <div className="h-full max-w-96 mb-8 mt-20">
+    <div className={styleLogin.HeaderLogin}>
       <h1 className="text-black text-2xl font-DannaBold mt-4 mb-4">{t("welcome")} </h1>
       <p className="text-gray-400 text-sm font-DannaDemiBold">{t("registerHeaderDesc")}</p>
     </div>

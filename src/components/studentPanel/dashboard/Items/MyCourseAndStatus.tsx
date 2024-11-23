@@ -5,13 +5,13 @@ import { ListMyCoursesDashboard } from './MyCourseAndStatus/listMyCoursesDashboa
 import { StatusDashboard } from './MyCourseAndStatus/StatusDashboard';
 
 
-const MyCourseAndStatus = () => {
+const MyCourseAndStatus = ({options,series}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
     <div className={style.MyCourseAndStatus}>
       <ListMyCoursesDashboard />
-      <StatusDashboard />
+      <StatusDashboard options={options}  series={series}/>
     </div>
   )
 }

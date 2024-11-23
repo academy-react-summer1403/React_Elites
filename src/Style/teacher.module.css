@@ -21,6 +21,7 @@
 .titleHolder {
     margin: 60px 0 90px 0;
     direction: rtl;
+    width: 100%;
 }
 
 .title {

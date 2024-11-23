@@ -10,7 +10,7 @@ const PhoneNumberReg = () => {
 
   return (
 
-    <div className="h-full mt-8 max-w-96 mx-0 text-right">
+    <div className={styleLogin.inputHolder}>
       <label className="text-base font-DannaBold text-black pb-3"> {t("PhoneNumberReg")}</label>
       <Field className={styleLogin.input} name="phoneNumber" placeholder={t("enterNumberReg")} />
       <ErrorMessage name="phoneNumber" component={"p"} className="error" />
