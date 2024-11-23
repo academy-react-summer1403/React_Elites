@@ -6,11 +6,13 @@ import { useTranslation } from "react-i18next";
 const Search = ({setSearchValue, setIsSearched, searchValue, isSearched}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
+  
 
   return (
     <>
         <label htmlFor='search' className={style.labelSearch} data-theme={darkMode ? "search" : "lightMode"}> {t("search")} </label>
-        <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
+        <div className={style.holderSearch}>
+                  <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
           setSearchValue(e.target.value)
         }}
         onKeyUp={() => {
@@ -22,6 +24,8 @@ const Search = ({setSearchValue, setIsSearched, searchValue, isSearched}) => {
           }
         }}
         />
+        <div className={style.searchBox}></div>
+        </div>
     </>
   )
 }

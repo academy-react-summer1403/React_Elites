@@ -12,6 +12,21 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    position: relative;
+}
+.holderSearch{
+    position: relative;
+    width: 100%;
+}
+.searchBox{
+    width: 50px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 16px;
+    background: #3772FF url(../../../../../../assets/Images/icons8-search-30white.png) 50% 50% no-repeat;
+    background-size: 50%;
 }
 
 .labelSearch{

@@ -8,7 +8,7 @@ import { Filter } from '../../../../../core/services/api/Filter'
 import { Sort } from '../../../../../core/services/api/Sort'
 
 
-const CourseListGridHolder = ({applyFilter, teacherId, setTotalCount, totalCount, levelId, searchValue, isSearched, categoryId}) => {
+const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTotalCount, totalCount, levelId, searchValue, isSearched, categoryId}) => {
   const [clicked, setClicked] = useState(false)
   const [sortModal, setSortModal] = useState(false)
   
@@ -27,7 +27,7 @@ const CourseListGridHolder = ({applyFilter, teacherId, setTotalCount, totalCount
 
 
 
-    let data = await Filter(teacherId, pagInation, levelId, categoryId, categoryId.length)
+    let data = await Filter(teacherId, pagInation, levelId, categoryId, categoryId.length, minValue, maxValue)
 
     let sortData = await Sort(col, sortType)
 

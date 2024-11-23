@@ -14,6 +14,8 @@ const CourseList = () => {
   const [isSearched, setIsSearched] = useState(false)
   const [isCourse, setisCourse] = useGlobalState('isCourse');
   const [categoryId, setcategoryId] = useState([2,3])
+  const [minValue, set_minValue] = useState();
+  const [maxValue, set_maxValue] = useState();
 
   useEffect(() => {
     setisCourse(true)
@@ -42,6 +44,10 @@ const CourseList = () => {
           setIsSearched={setIsSearched}
           setcategoryId={setcategoryId}
           categoryId={categoryId}
+          maxValue={maxValue}
+          minValue={minValue}
+          set_minValue={set_minValue}
+          set_maxValue={set_maxValue}
           />
         </div>
     </div>

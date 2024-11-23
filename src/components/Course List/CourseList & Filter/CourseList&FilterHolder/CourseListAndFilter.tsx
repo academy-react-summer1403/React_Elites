@@ -3,7 +3,7 @@ import style from './CourseListAndFilter.module.css'
 import { CourseListGridHolder } from '../CourseListGrid/CourseListGridHolder/CourseListGridHolder'
 import { CourseFilterHolder } from '../CourseFilter/CourseFilterHolder/CourseFilterHolder'
 
-const CourseListAndFilter = ({applyFilter, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
+const CourseListAndFilter = ({applyFilter, set_minValue, set_maxValue,  maxValue, minValue, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
   return (
     <div className={style.CourseListAndFilterHolder}>
       <CourseListGridHolder
@@ -15,8 +15,14 @@ const CourseListAndFilter = ({applyFilter, setTeacherId, setApplyFilter, teacher
         searchValue={searchValue}
         isSearched={isSearched}
         categoryId={categoryId}
+        maxValue={maxValue}
+        minValue={minValue}
       />
       <CourseFilterHolder
+        maxValue={maxValue}
+        minValue={minValue}
+        set_minValue={set_minValue}
+        set_maxValue={set_maxValue}
         setTeacherId={setTeacherId} 
         setApplyFilter={setApplyFilter}
         setLevelId={setLevelId}

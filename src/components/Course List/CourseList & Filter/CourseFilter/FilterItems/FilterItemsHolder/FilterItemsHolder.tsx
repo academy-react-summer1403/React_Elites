@@ -9,7 +9,7 @@ import { Price } from '../FilterPrice/Price'
 import { Date } from '../FilterDate/Date'
 import { useTranslation } from "react-i18next";
 
-const FilterItemsHolder = ({setTeacherId, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {
+const FilterItemsHolder = ({setTeacherId, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {
   const { t } = useTranslation();
   return (
     <div className={style.holder}>
@@ -18,13 +18,20 @@ const FilterItemsHolder = ({setTeacherId, setcategoryId, setApplyFilter, applyFi
         <Category setcategoryId={setcategoryId} />
         <Level setLevelId={setLevelId}/>
         <Teacher  setTeacherId={setTeacherId}/>
-        <Price />
+        <Price 
+          maxValue={maxValue}
+          minValue={minValue}
+          set_minValue={set_minValue}
+          set_maxValue={set_maxValue}
+        />
         <Date />
         <span className={style.deleteFilter} onClick={() => {
           setApplyFilter(false);
           setTeacherId("")
           setLevelId("")
           setcategoryId([])
+          set_minValue()
+          set_maxValue()
         }}> {t("deleteFilter")} </span>
         <span className={applyFilter ? style.applyFilter2 : style.applyFilter} onClick={() => {
           setApplyFilter(true);
