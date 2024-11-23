@@ -7,7 +7,6 @@
     padding: 1rem;
     margin-top: 40px;
     direction: rtl;
-    height: 100%;
 }
 .page2{
     width: 1030px;
@@ -124,7 +123,7 @@
     background-color: #2F2F2F;
     border-radius: 40px;
     padding: 12px 16px;
-    font-family: DanaFaNum;
+    font-family: DannaMedium;
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 22.88px;
