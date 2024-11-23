@@ -11,7 +11,7 @@ const CategoryFilter = ({setCategoryId, categoryId}) => {
 
   return (
     <div className={styleFilter.filterDetail}>
-        <div className="flex gap-1.5">
+        <div className={styleFilter.Flex}>
             <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgCategory}`} data-theme={darkMode ? "categoryBlogFilter" : "lightMode"}/> 
             <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("category")} </p>
         </div>

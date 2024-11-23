@@ -9,7 +9,7 @@ const DateFilter = () => {
 
   return (
     <div className={styleFilter.filterDetail}>
-        <div className="flex gap-1.5">
+        <div className={styleFilter.Flex}>
             <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgDate}`} data-theme={darkMode ? "dateBlogFilter" : "lightMode"}/>
             <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("PublicationDate")}</p>
         </div>

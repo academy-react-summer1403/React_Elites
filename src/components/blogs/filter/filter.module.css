@@ -1,5 +1,5 @@
 .filter{
-    width: 298px;
+    width: 19.8%;
     height: 100%;
     top: 413px;
     left: 1102px;
@@ -25,6 +25,10 @@
 }
 .filter > div{
     width: 100%;
+}
+.Flex{
+    display: flex;
+    gap: 8px;
 }
 .applyFilter2{
     border-radius: 16px;
