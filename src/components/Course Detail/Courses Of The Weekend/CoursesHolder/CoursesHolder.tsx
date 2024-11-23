@@ -10,14 +10,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const CoursesHolder = () => {
+const CoursesHolder = (related) => {
 
-  let data = [
-    {title: "دوره طراحی سایت", teacher: "محمدحسین بحرالعلومی", price: "500،000 تومان", category: "برنامه نویسی", level: "پیشرفته", image: WebCourse},
-    {title: "دوره جاوااسکریپت", teacher: "محمدحسین بحرالعلومی", price: "2،500،000 تومان", category: "برنامه نویسی", level: "پیشرفته", image: JSCourse},
-    {title: "دوره فیگما", teacher: "محمدحسین خلیل‌پور", price: "1،000،000 تومان", category: "طراحی", level: "پیشرفته", image: figmaCourse},
-    {title: "دوره ری‌اکت جی‌اس", teacher: "محسن اسفندیاری", price: "تومان 4،500،000", category: "برنامه نویسی", level: "مقدماتی", image: reactJs}
-  ]
   const Arrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -69,15 +63,16 @@ const CoursesHolder = () => {
     <div className={style.holder}>
         <CoursesTitle />
         <Slider className={style.slider} {...settings} >
-        {data.map((item, index) => {
+        {related.map((item, index) => {
         return (
           <CoursesItemsHolder 
+            key={index}
             title={item.title}
-            teacher={item.teacher}
-            price={item.price}
-            category={item.category}
-            level={item.level}
-            image={item.image}
+            teacher={item.teacherName}
+            price={item.cost}
+            category={item.technologyList}
+            level={item.levelName}
+            image={item.tumbImageAddress}
           />
         )
       })}

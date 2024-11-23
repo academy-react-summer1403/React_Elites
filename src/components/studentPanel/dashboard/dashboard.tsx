@@ -29,41 +29,6 @@ const StudentDashboard = () => {
     setpercentage(res.profileCompletionPercentage)
     setuser(res)
   }
-  const options = {
-    chart: {
-      height: 350,
-    },
-    fill: {
-      type: 'solid',
-    },
-    stroke: {
-      lineCap: "round",
-    },
-    colors: ["#fce803"],
-    plotOptions: {
-      radialBar: {
-        hollow: {
-          margin: 15,
-          size: "65%",
-        },
-       
-        dataLabels: {
-          name: {
-            show: false,
-            offsetY: -10,
-            color: "#888",
-            fontSize: "13px"
-          },
-          value: {
-            color: "#111",
-            fontSize: "30px",
-            show: true
-          }
-        }
-      }
-    } 
-  },
-  series = [Number(percentage)]
 
   useEffect(() => {
       getCourseReserveCall()

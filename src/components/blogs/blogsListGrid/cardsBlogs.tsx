@@ -7,7 +7,7 @@ const CardBlogs = (props) => {
   return (
     <div className={style.holder}>
         <Image image={props.image} id={props.id} />
-        <Title className={style.title} title={props.title} />
+        <Title title={props.title} />
         <TeacherAndViewAndDateHolder teacher={props.teacher} view={props.view} date={props.date} />
     </div>
   )

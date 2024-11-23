@@ -8,23 +8,39 @@ import { useGlobalState } from '../../../State/State'
 import { useParams } from 'react-router-dom'
 import { getCourseById } from '../../../core/services/api/courseById'
 import { getCourseComment } from '../../../core/services/api/getCourseComment'
+import { allCourseList } from '../../../core/services/api/AllCourseList'
 
 const CourseDetail = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   const [courseDetail, setCourseDetail] = useState([])
   const [comments, setComments] = useState([])
+  const [related, setrelated] = useState([])
+  const [allCourseListt, setallCourseList] = useState([])
   const {id} = useParams();
 
   const getCourseDetail = async () => {
     const Details = await getCourseById(id)
-    const comment = await getCourseComment(id)
+    const res = await getCourseComment(id)
     setCourseDetail(Details)
-    setComments(comment)
-    console.log(comments)
+    setComments(res)
   }
+
+  const getAllCourse = async () => {
+    const list = await allCourseList(500)
+    setallCourseList(list.courseFilterDtos)
+  }
+
+  const getRelated = () => {
+    setrelated(allCourseListt.filter((item) => Array(item.technologyList) == courseDetail?.techs))
+    console.log(related)
+  }
+
+  
   useEffect(() => {
     getCourseDetail()
+    getAllCourse()
+    getRelated()
   }, [])
   
 
@@ -45,10 +61,11 @@ const CourseDetail = () => {
           image={courseDetail?.imageAddress}
           start={courseDetail?.startTime}
           end={courseDetail?.endTime}
+          id={courseDetail?.courseId}
         />
         <Description description={courseDetail?.describe} />
-        <AllComments comments={comments} />
-        <CoursesHolder />
+        <AllComments comments={comments} id={id} />
+        {/* <CoursesHolder related={related} /> */}
       </div>
     </div>
   )
