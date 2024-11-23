@@ -9,16 +9,25 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Blogs = ({topBlogs}) => {
 
-  const Arrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "black" }}
-        onClick={onClick}
-      />
-    );
-  }
+    const ArrowRight = (props) => {
+      const { className, onClick } = props;
+      return (
+        <div
+          className={`${style.arrowRight} ${className}`}
+          onClick={onClick}
+        />
+      );
+    }
+  
+    const ArrowLeft = (props) => {
+      const { className, onClick } = props;
+      return (
+        <div
+          className={`${style.arrowLeft} ${className}`}
+          onClick={onClick}
+        />
+      );
+    }
 
   var settings = {
     dots: false,
@@ -27,8 +36,8 @@ const Blogs = ({topBlogs}) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
+    nextArrow: <ArrowRight />,
+    prevArrow: <ArrowLeft />,
     responsive: [
       {
         breakpoint: 1406,
