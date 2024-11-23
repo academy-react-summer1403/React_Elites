@@ -9,7 +9,7 @@ const SearchFilter = ({setSearchValue}) => {
 
   return (
     <div className={styleFilter.filterDetail}>
-      <div className="flex gap-1.5">
+      <div className={styleFilter.Flex}>
       <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgSearch}`} data-theme={darkMode ? "search" : "lightMode"}/>
         <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("search")}</p>
       </div>
