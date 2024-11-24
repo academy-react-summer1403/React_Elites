@@ -10,7 +10,7 @@ const ViewAndDateHolder = ({view, date}) => {
     var miladi = date
     var miladi2 = miladi.slice(0, 10)
     var year = miladi2.slice(0, 4)
-    var month = miladi2.slice(6,7)
+    var month = miladi2.slice(5,7)
     if(month == 1){
       month = "ژانویه"
     }
@@ -42,7 +42,7 @@ const ViewAndDateHolder = ({view, date}) => {
       month = "اکتبر"
     }
     else if(month == 11){
-      month = "نامبر"
+      month = "نوامبر"
     }
     else if(month == 12){
       month = "دسامبر"

@@ -33,9 +33,15 @@
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
-    width: 100%;
-    padding-right: 25px;
+    width: 80%;
+    padding-right: 5px;
  text-align: right;
-    background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 100% 50%;
-    background-size: 23px;
+}
+
+.holderIconAndTitle{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-flow: row nowrap;
+    direction: rtl;
 }

@@ -35,6 +35,9 @@ const CoursesHolder = ({courseList}) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
     responsive: [
@@ -53,13 +56,15 @@ const CoursesHolder = ({courseList}) => {
       {
         breakpoint: 700,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          fade: true,
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          fade: true,
         }
       }
     ]

@@ -22,6 +22,9 @@
     border-radius: 32px;
 }
 .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-family: DannaBold;
     font-size: 24px;
     color: #2F2F2F;
