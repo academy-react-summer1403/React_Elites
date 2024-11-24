@@ -6,7 +6,7 @@ const allCourseList = async (pageNumber) => {
     return result;
     }
     catch (error) {
-    return [];
+    return error;
     }
 };
 

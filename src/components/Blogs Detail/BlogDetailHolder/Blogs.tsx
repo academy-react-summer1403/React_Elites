@@ -10,6 +10,7 @@ import { getBlogById } from '../../../core/services/api/BlogById'
 
 const BlogsDetail = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const [isLoading, setisLoading] = useState(true)
   
   const [blogDetail, setBlogDetail] = useState([])
   const [comments, setComments] = useState([])
@@ -19,6 +20,7 @@ const BlogsDetail = () => {
     const Details = await getBlogById(id)
     setBlogDetail(Details.detailsNewsDto)
     setComments(Details.commentDtos)
+    setisLoading(false)
   }
   useEffect(() => {
     getBlogDetail()
@@ -42,9 +44,10 @@ const BlogsDetail = () => {
           currentUserIsLike={blogDetail?.currentUserIsLike}
           id={blogDetail?.id}
           isCurrentUserFavorite={blogDetail?.isCurrentUserFavorite}
+          isLoading={isLoading}
         />
-        <Description description={blogDetail?.describe} />
-        <AllComments comments={comments} />
+        <Description description={blogDetail?.describe} isLoading={isLoading} />
+        <AllComments comments={comments} isLoading={isLoading} />
         <Blogs />
     </div>
     </div>

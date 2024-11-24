@@ -1,11 +1,14 @@
 import React from 'react'
 import style from './style.module.css'
 import { useGlobalState } from '../../../../../../../State/State';
+import { ClipLoader } from 'react-spinners';
 
-const Comments = ({comments}) => {
+const Comments = ({comments, isLoading}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.comments} data-theme={darkMode ? "darkNoBG" : "lightMode"}> نظرات ({comments})  + </div>
+    <>
+    {isLoading ? <ClipLoader /> :<div className={style.comments} data-theme={darkMode ? "darkNoBG" : "lightMode"}> نظرات ({comments})  + </div>}
+    </>
   )
 }
 

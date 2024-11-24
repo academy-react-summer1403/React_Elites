@@ -5,7 +5,7 @@ const Sort = async (col, sortType) => {
         const result = await http.get(`/Home/GetCoursesWithPagination?RowsOfPage=85&SortingCol=${col}&SortType=${sortType}`);
         return result;
     } catch (error) {
-        return [];
+        return error;
     }
 };
 

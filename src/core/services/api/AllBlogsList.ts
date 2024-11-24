@@ -6,7 +6,7 @@ const getAllBlogsList = async () => {
     return result;
     }
     catch (error) {
-    return [];
+    return error;
     }
 };
 

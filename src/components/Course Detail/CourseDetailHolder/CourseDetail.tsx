@@ -17,6 +17,7 @@ const CourseDetail = () => {
   const [comments, setComments] = useState([])
   const [related, setrelated] = useState([])
   const [allCourseListt, setallCourseList] = useState([])
+  const [isLoading, setisLoading] = useState(true)
   const {id} = useParams();
 
   const getCourseDetail = async () => {
@@ -24,6 +25,7 @@ const CourseDetail = () => {
     const res = await getCourseComment(id)
     setCourseDetail(Details)
     setComments(res)
+    setisLoading(false)
   }
 
   const getAllCourse = async () => {
@@ -48,6 +50,7 @@ const CourseDetail = () => {
     <div className={style.body} data-theme={darkMode ? "dark" : "lightMode"}>
       <div className={style.holder}>
         <Main 
+          isLoading={isLoading}
           dislike={courseDetail?.dissLikeCount}
           like={courseDetail?.likeCount}
           teacher={courseDetail?.teacherName}
@@ -63,8 +66,8 @@ const CourseDetail = () => {
           end={courseDetail?.endTime}
           id={courseDetail?.courseId}
         />
-        <Description description={courseDetail?.describe} />
-        <AllComments comments={comments} id={id} />
+        <Description description={courseDetail?.describe} isLoading={isLoading} />
+        <AllComments isLoading={isLoading} comments={comments} id={id} />
         {/* <CoursesHolder related={related} /> */}
       </div>
     </div>

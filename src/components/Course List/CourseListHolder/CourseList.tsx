@@ -3,6 +3,7 @@ import style from './CourseList.module.css'
 import { StartNewJourney } from '../Start New Journy/StartNewJourneyHolder/StartNewJourney'
 import { CourseListAndFilter } from '../CourseList & Filter/CourseList&FilterHolder/CourseListAndFilter'
 import { useGlobalState } from '../../../State/State'
+import { Sort } from '../../../core/services/api/Sort'
 
 const CourseList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -14,11 +15,23 @@ const CourseList = () => {
   const [isSearched, setIsSearched] = useState(false)
   const [isCourse, setisCourse] = useGlobalState('isCourse');
   const [categoryId, setcategoryId] = useState([2,3])
-  const [minValue, set_minValue] = useState();
-  const [maxValue, set_maxValue] = useState();
+  const [minValue, set_minValue] = useState("");
+  const [maxValue, set_maxValue] = useState("");
+  const [maxValueBining, setmaxValueBining] = useState()
+  const [minValueBining, setminValueBining] = useState()
+
+  const getMaxValue = async () => {
+    let res = await Sort("Cost", "DESC")
+    let res2 = await Sort("Cost", "ASC")
+    setmaxValueBining(res.courseFilterDtos[0].cost)
+    setminValueBining(res2.courseFilterDtos[0].cost)
+    set_maxValue(String(res.courseFilterDtos[0].cost))
+    set_minValue(String(res2.courseFilterDtos[0].cost))
+  }
 
   useEffect(() => {
     setisCourse(true)
+    getMaxValue()
   }, [])
   useEffect(() => {
     return () => {
@@ -48,6 +61,8 @@ const CourseList = () => {
           minValue={minValue}
           set_minValue={set_minValue}
           set_maxValue={set_maxValue}
+          minValueBining={minValueBining}
+          maxValueBining={maxValueBining}
           />
         </div>
     </div>

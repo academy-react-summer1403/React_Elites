@@ -1,6 +1,7 @@
 .image{
     width: 47.20588235294118%;
     height: 100%;
+    border-radius: 32px;
 }
 
 @media screen and (max-width: 1077px) {

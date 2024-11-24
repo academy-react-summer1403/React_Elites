@@ -3,25 +3,13 @@ import style from './Price.module.css'
 import MultiRangeSlider from "multi-range-slider-react";
 import { Sort } from '../../../../../../core/services/api/Sort';
 
-const Price = ({maxValue, minValue, set_minValue, set_maxValue}) => {
-  const [maxValueBining, setmaxValueBining] = useState()
-  const [minValueBining, setminValueBining] = useState()
+const Price = ({maxValue, minValue, set_minValue, set_maxValue, maxValueBining, minValueBining}) => {
+  
 
   const handleInput = (e) => {
     set_minValue(e.minValue);
     set_maxValue(e.maxValue);
   };
-
-  const getMaxValue = async () => {
-    let res = await Sort("Cost", "DESC")
-    let res2 = await Sort("Cost", "ASC")
-    setmaxValueBining(res.courseFilterDtos[0].cost)
-    setminValueBining(res2.courseFilterDtos[0].cost)
-  }
-
-  useEffect(() => {
-    getMaxValue()
-  }, [])
 
   return (
     <>
@@ -52,8 +40,8 @@ const Price = ({maxValue, minValue, set_minValue, set_maxValue}) => {
       barRightColor='#F1F1F1'
       label='false'
 			step={10000}
-			minValue={minValue}
-			maxValue={maxValue}
+			minValue={minValueBining}
+			maxValue={maxValueBining}
 			onInput={(e) => {
 				handleInput(e);
 			}}

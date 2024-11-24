@@ -1,11 +1,4 @@
-import React from 'react'
-import style from './style.module.css'
-import { useGlobalState } from '../../../../../../../State/State';
-
-const Date = ({date}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
-
-  const dateConvertor = (item) => {
+export const dateConvertor = (item) => {
     let miladiRaw = `${item}`
     let miladi = miladiRaw.slice(0, 10);
     let year = miladi.slice(0, 4);
@@ -50,9 +43,3 @@ const Date = ({date}) => {
     let dateMiladii = `${day} ${month} ${year}`;
     return dateMiladii;
   }
-  return (
-    <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{dateConvertor(date)}</div>
-  )
-}
-
-export {Date}

@@ -5,12 +5,11 @@ import { CoursesHolderSkeleton } from './CoursesHolderSkeleton'
 
 const CoursesHolder = ({courseList, isLoading}) => {
 
-
   return (
     <div className={style.holder}>
 
       {isLoading && <CoursesHolderSkeleton cards={9} />}
-        {courseList.map((item, index) => {
+        {courseList && courseList.map((item, index) => {
         return (
           <CoursesItemsHolder 
             id={item.courseId}

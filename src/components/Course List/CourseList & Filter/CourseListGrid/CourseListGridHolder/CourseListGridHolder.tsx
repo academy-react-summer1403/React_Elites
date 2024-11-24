@@ -14,8 +14,8 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
   
   const [courseList, setCourseList] = useState([]);
   const [pagInation, setPagInation] = useState(1)
-  const [sortType, setSortType] = useState("insertDate")
-  const [col, setCol] = useState("DESC")
+  const [sortType, setSortType] = useState("DESC")
+  const [col, setCol] = useState("insertDate")
   const [applySort, setapplySort] = useState(false)
 
   const [isLoading, setisLoading] = useState(true)
@@ -25,28 +25,24 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
 
   const getFilteredList = async () => {
 
-
-
-    let data = await Filter(teacherId, pagInation, levelId, categoryId, categoryId.length, minValue, maxValue)
+    let data = await Filter(String(teacherId), String(pagInation), String(levelId), String(categoryId), String(categoryId.length), String(minValue), String(maxValue))
 
     let sortData = await Sort(col, sortType)
 
     const allCourses = await allCourseList(pagInation)
-    let allCoursesData = allCourses.courseFilterDtos
 
     if(applyFilter === true){
       setCourseList(data.courseFilterDtos)
       setTotalCount(data.totalCount)
     }
     else if(applyFilter === false && applySort === false){
-      setCourseList(allCoursesData)
+      setCourseList(allCourses.courseFilterDtos)
       setTotalCount(allCourses.totalCount)
-      setCourseList(allCoursesData.filter(doc => doc.title.includes(searchValue)))
+      setCourseList(allCourses.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
     }
     else if(applySort === true){
       setCourseList(sortData.courseFilterDtos)
     }
-
     setisLoading(false)
   }
 
