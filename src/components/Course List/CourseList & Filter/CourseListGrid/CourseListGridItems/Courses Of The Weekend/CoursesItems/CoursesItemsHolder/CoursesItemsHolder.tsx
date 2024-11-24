@@ -9,8 +9,10 @@ const CoursesItemsHolder = ({image, id, title, teacher, price, level, category})
   return (
     <div className={style.holder}>
         <Image id={id} image={image} />
-        <Title title={title} />
-        <TeacherAndPriceHolder teacher={teacher} price={price} />
+        <div className={style.titleAndTeacherHolder}>
+          <Title title={title} />
+          <TeacherAndPriceHolder teacher={teacher} price={price} />
+        </div>
         <LevelAndCategoryHolder level={level} category={category} />
     </div>
   )

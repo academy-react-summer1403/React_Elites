@@ -160,6 +160,11 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
+        path: "/Student-Panel/changePassword",
+        element: <LinkForm />,
+        errorElement: <ErrorPage />
+      },
+      {
         path: "/Student-Panel/Location",
         element: <LocationForm />,
         errorElement: <ErrorPage />

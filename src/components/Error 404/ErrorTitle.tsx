@@ -3,7 +3,7 @@ import style from './Error.module.css'
 
 const ErrorTitle = () => {
   return (
-    <div className={style.title}> بنظر میرسد مشکلی پیش آمده لطفا بعدا تلاش کنید</div>
+    <div className={style.title}> !صفحه مورد نظر یافت نشد</div>
   )
 }
 

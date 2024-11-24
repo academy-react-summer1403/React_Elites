@@ -24,6 +24,7 @@ const LocationForm = () => {
                                 <NavLink to='/Student-Panel/Image' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>عکس ها </NavLink>
                                 <div><h1 className={styleLocation.selected} >محل سکونت </h1></div>
                                 <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
                             </div>
                         </div>
                         <div className={styleLocation.left}>
