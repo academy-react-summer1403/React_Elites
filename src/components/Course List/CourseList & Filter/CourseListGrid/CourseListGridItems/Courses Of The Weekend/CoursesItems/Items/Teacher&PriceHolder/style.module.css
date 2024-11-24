@@ -7,6 +7,17 @@
     margin-top: 5%;
 }
 
+/* view2 */
+.holder{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: left;
+    align-items: center;
+    margin-top: 5%;
+    gap: 15px;
+}
+
 .teacher{
     font-size: 14px;
     font-family: DannaMedium;

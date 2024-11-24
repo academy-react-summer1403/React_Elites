@@ -67,6 +67,7 @@ const ImageForm = () => {
                                 <div><h1 className={styleImage.selected}>عکس ها </h1></div>
                                 <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
                                 <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
                             </div>
                         </div>
                         <div className={styleImage.imagesHolder}>

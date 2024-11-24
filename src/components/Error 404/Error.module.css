@@ -1,15 +1,15 @@
 .errorPage{
     width: 100%;
     min-height: 1000px;
-    background: #E4F2FD;
+    background: #ffffff;
 }
 
 .image{
     margin: auto;
-    width: 406px;
-    height: 441px;
-    background: url(../../assets/Images/Error-pages.png) no-repeat 50% 50%;
-    background-size: cover;
+    width: 596px;
+    height: 381px;
+    background: url(https://img.freepik.com/premium-photo/premium-quality-ecommerce-store-3d-illustrations_1266756-425.jpg?semt=ais_hybrid) no-repeat 50% 50%;
+    background-size: 100%;
 }
 
 .title{
