@@ -10,6 +10,12 @@
     animation-duration: 10s;
     text-shadow: 0 7px 10px black;
 }
+.arrowLeft::before{
+    display: none !important;
+}
+.arrowRight::before{
+    display: none !important;
+}
 .arrowRight{
     background: url("https://img.icons8.com/?size=100&id=100530&format=png&color=000000") !important;
     width: 50px !important;

@@ -16,7 +16,9 @@ const BlogsList = () => {
   const [applyFilter, setApplyFilter] = useState(false)
   const [searchValue, setSearchValue] = useState("")
   const [isBlog, setisBlog] = useGlobalState('isBlog');
-
+  const [applySort, setapplySort] = useState(false)
+  const [sortType, setSortType] = useState("insertDate")
+  const [col, setCol] = useState("DESC")
 
   useEffect(() => {
     setisBlog(true)
@@ -48,11 +50,17 @@ const BlogsList = () => {
                 sortModal={sortModal}
                 setFilterModal={setFilterModal}
                 setSortModal={setSortModal}
+                setapplySort={setapplySort}
+                setSortType={setSortType}
+                setCol={setCol}
               />
               <ListCardBlogs 
                 searchValue={searchValue}
                 applyFilter={applyFilter}
                 categoryId={categoryId}
+                applySort={applySort}
+                sortType={sortType}
+                col={col}
               />
             </div>
           </div>

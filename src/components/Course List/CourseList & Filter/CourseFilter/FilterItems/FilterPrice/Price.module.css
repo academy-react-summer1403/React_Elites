@@ -9,11 +9,17 @@
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
-    background: url(../../../../../../assets/Images/icons8-layer-48.png) 100% 50% no-repeat;
-    background-size: 23px;
-    width: 100%;
-    padding-right: 25px;
+    width: 80%;
+    padding-right: 5px;
  text-align: right;
+}
+
+.holderIconAndTitle{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-flow: row nowrap;
+    direction: rtl;
 }
 
 .valueHolder{

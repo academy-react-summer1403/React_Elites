@@ -35,16 +35,20 @@
     font-family: DannaBold;
 }
 .titleTeacher{
-    user-select: none;
-    cursor: pointer;
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
-    background: url(../../../../../../assets/Images/icons8-teacher-24.png) 100% 50% no-repeat;
-    width: 100%;
-    padding-right: 25px;
+    width: 80%;
+    padding-right: 5px;
  text-align: right;
-    /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
+}
+
+.holderIconAndTitle{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-flow: row nowrap;
+    direction: rtl;
 }
 .arrowDown{
     width: 20px;
