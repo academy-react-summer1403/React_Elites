@@ -4,13 +4,13 @@ import { Image } from './index/Items/Image';
 import { TitleAndCountHolder } from './index/TitleAndCountHolder';
 import { NavLink } from "react-router-dom";
 
-const CardBlogs = ({image, title,count,countN}) => {
+const CardBlogs = ({image, title,count,countN, LinkedinProf}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     
     <div className={style.holder} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-        <Image image={image ? image : 'https://classapi.sepehracademy.ir///Pictures//Course//blank-thumbnail_4031a67c-6002-4004-baf7-c0840ebed86f.jpg'} />
-        <TitleAndCountHolder title={title} count={count} countN={countN} />
+        <Image image={image && image.slice(0, 5) == "https" ? image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtu74pEiq7ofeQeTsco0migV16zZoBwSlGg&s'} />
+        <TitleAndCountHolder LinkedinProf={LinkedinProf} title={title} count={count} countN={countN} />
     </div>
   )
 }

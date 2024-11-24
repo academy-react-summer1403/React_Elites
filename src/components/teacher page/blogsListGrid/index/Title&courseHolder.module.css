@@ -6,5 +6,9 @@
     font-size: 16px;
     font-weight: 600;
     width: 100%;
-    border-top: 1px solid #989898;
+}
+
+.linkedin{
+    width: 100% !important;
+    color: blue;
 }
