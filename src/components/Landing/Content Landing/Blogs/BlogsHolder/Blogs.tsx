@@ -60,7 +60,7 @@ const Blogs = ({topBlogs}) => {
     ]
   };
 
-  return (
+  return topBlogs.length > 1 && (
     <div className={style.container}>
         <BlogTitle />
         <Slider  className={style.slider} {...settings} >
