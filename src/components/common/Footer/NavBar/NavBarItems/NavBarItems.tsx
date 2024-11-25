@@ -9,7 +9,7 @@ const NavBarItems = () => {
   const {t} = useTranslation();
   return (
     <>        
-        <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("OurServices")}   </NavLink>
+        <a href="#OurService" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("OurServices")}   </a>
         <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("contactUs")}  </NavLink>
         <NavLink to="/about-We" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("aboutUs")}   </NavLink>
         <NavLink to="/teacher-page" className={`${style.text} ${style.textHover}`} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("teachers")}</NavLink>

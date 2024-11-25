@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import style from "./../../Style/teacher.module.css";
 import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
-import { SearchBar } from "./blogsListGrid/index/SearchBar.tsx";
+import { SearchFilter } from "./blogsListGrid/index/search/searchFilter.tsx";
 import { useEffect, useState } from "react";
 import {getTeacher} from '../../core/services/api/TeachersList.ts'
 import { useGlobalState } from "../../State/State.tsx";
@@ -35,7 +35,7 @@ const TeacherPage = (props) => {
             <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPageDesc")}</h1>
           </div>  
           <div className={style.page}>
-            <SearchBar setSearchValue={setSearchValue}/>
+            <SearchFilter setSearchValue={setSearchValue}/>
             <div className={style.page2}>      
               <ListCardBlogs  teacherList={teacherList} />
             </div>

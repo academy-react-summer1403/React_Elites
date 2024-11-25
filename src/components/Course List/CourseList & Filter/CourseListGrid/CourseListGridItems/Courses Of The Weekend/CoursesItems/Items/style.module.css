@@ -9,18 +9,6 @@
     height: 100%;
     border-radius: 32px;
 }
-/* view2 */
-.holderImage{
-    height: 100%;
-    border-radius: 32px;
-}
-
-/* view2 */
-.imageProgramming{
-    width: 300px;
-    height: 100%;
-    border-radius: 32px;
-}
 .title{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -32,16 +20,4 @@
  text-align: right;
     font-family: DannaBold;
     line-height: 40px;
-}
-/* view2 */
-.title{
-    font-family: DannaBold;
-    font-size: 24px;
-    color: #2F2F2F;
-    width: 100%;
- text-align: left;
-    font-family: DannaBold;
-    line-height: 40px;
-    height: 32px;
-    overflow: hidden;
 }

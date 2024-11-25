@@ -2,6 +2,7 @@
     color: #2F2F2F;
     font-family: DannaDemiBold;
     font-size: 18px;
+    transition: 0.5s;
     &:hover {
     cursor: pointer;
     }

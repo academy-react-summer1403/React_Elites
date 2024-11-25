@@ -8,6 +8,26 @@
     width: 100%;
 }
 
+.searchBox{
+    width: 50px;
+    height: 48px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 16px;
+    background: #3772FF url(../../../../assets/Images/icons8-search-30white.png) 50% 50% no-repeat;
+    background-size: 50%;
+}
+
+.filterDetail{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+    position: relative;
+    width: 500px;
+}
+
 .linkedin{
     width: 100% !important;
     color: blue;

@@ -19,7 +19,7 @@ const ServicesHolder = () => {
   ]
 
   return (
-    <div className={style.holder}>
+    <div className={style.holder} id='OurService'>
       <ServicesTitle />
       {data.map((item, index) => {
         return (

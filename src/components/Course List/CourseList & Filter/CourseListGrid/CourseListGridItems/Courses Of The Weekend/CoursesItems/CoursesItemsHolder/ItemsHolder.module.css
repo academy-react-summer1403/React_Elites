@@ -6,23 +6,6 @@
     justify-content: space-between;
     position: relative;
 }
-/* view2 */
-.holder{
-    width: 48%;
-    height: 217px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    position: relative;
-    background: #ebebeb;
-    box-shadow: 1px 1px 10px 1px #2f2f2f;
-    border-radius: 16px;
-    padding: 5px;
-}
-.titleAndTeacherHolder{
-    display: flex;
-    flex-flow: row wrap;
-}
 
 @media screen and (max-width: 900px) {
     .holder{
