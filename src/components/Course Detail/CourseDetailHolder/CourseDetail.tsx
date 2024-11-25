@@ -25,25 +25,23 @@ const CourseDetail = () => {
     const res = await getCourseComment(id)
     setCourseDetail(Details)
     setComments(res)
-    setisLoading(false)
-  }
 
-  const getAllCourse = async () => {
-    const list = await allCourseList(500)
-    setallCourseList(list.courseFilterDtos)
-  }
+    const list = await allCourseList(1)
+    setrelated(list.courseFilterDtos.filter((e) => String(e.technologyList) == String(Details?.techs)))
 
-  const getRelated = () => {
-    setrelated(allCourseListt.filter((item) => Array(item.technologyList) == courseDetail?.techs))
     console.log(related)
+
+    setisLoading(false)
   }
 
   
   useEffect(() => {
     getCourseDetail()
-    getAllCourse()
-    getRelated()
   }, [])
+
+  useEffect(() => {
+    getCourseDetail()
+  }, [id])
   
 
   return (
@@ -68,7 +66,7 @@ const CourseDetail = () => {
         />
         <Description description={courseDetail?.describe} isLoading={isLoading} />
         <AllComments isLoading={isLoading} comments={comments} id={id} />
-        {/* <CoursesHolder related={related} /> */}
+        <CoursesHolder related={related} />
       </div>
     </div>
   )

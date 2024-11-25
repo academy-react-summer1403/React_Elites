@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { SortBlogList } from "./sort/SortBlogList.tsx";
 import { TitleHeaderBlogs } from "./Items/TitleHeaderBlogs.tsx";
 import { useGlobalState } from "../../State/State.tsx";
+import { getNewsCategoryList } from "../../core/services/api/getNewsCategoryList.ts";
+import { getAllBlogsList } from "../../core/services/api/AllBlogsList.ts";
 
 const BlogsList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -19,9 +21,16 @@ const BlogsList = () => {
   const [applySort, setapplySort] = useState(false)
   const [sortType, setSortType] = useState("insertDate")
   const [col, setCol] = useState("DESC")
+  const [categoryList, setcategoryList] = useState([])
+
+  const getNewsCategoryListCall = async () => {
+    let res = await getNewsCategoryList()
+    setcategoryList(res)
+  }
 
   useEffect(() => {
     setisBlog(true)
+    getNewsCategoryListCall()
   }, [])
 
   useEffect(() => {
@@ -43,6 +52,7 @@ const BlogsList = () => {
               categoryId={categoryId}
               applyFilter={applyFilter}
               setSearchValue={setSearchValue}
+              categoryList={categoryList}
             />            
             <div className={styleBlogList.page2}>
               <SortBlogList 

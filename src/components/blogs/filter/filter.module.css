@@ -132,6 +132,9 @@
     background-size: 25px;
 }
 .category{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     width: 100%;
     display: block;
     padding: 10px 15px 10px 15px;

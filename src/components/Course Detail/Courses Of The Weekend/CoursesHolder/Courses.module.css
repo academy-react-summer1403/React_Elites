@@ -5,6 +5,25 @@
     align-items: flex-start;
     flex-flow: row wrap;
 }
+.arrowLeft::before{
+    display: none !important;
+}
+.arrowRight::before{
+    display: none !important;
+}
+.arrowRight{
+    background: url("https://img.icons8.com/?size=100&id=100530&format=png&color=000000") !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-size: cover !important;
+}
+.arrowLeft{
+    background: url("https://img.icons8.com/?size=100&id=101310&format=png&color=000000") !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-size: cover !important;
+    left: -40px !important;
+}
 
 .slider{
     width: 95%;
