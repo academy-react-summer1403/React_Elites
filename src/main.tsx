@@ -1,41 +1,77 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {Root} from './components/root/Root.tsx'
-import {Login} from './components/login/login.tsx'
-import {LoginPage2} from './components/Login Page2/login.tsx'
-import {ForgetPass} from './components/forgetPassword/forgetPassword.tsx'
-import {ForgetPassPage2} from './components/forgetPassword page2/forgetPassword.tsx'
-import {TeacherPage} from './components/teacher page/teacherPage.tsx'
-import {AboutWe} from './components/aboutWe/aboutWe.tsx'
-import {StudentPanel} from './components/studentPanel/studentCurse-Blog/studentPanel.tsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './index.css'
+import "./app/App.css"
+import "./i18n.ts"
+
+
+
+import { Root } from './routes/Root.tsx'
+import LangAndMode from './components/common/bottom-nav/LangAndMode.tsx'
+
+// Auth
+
+import { AuthPages } from './pages/AuthPages.tsx'
+import { LoginPageOne } from './pages/LoginPageOne.tsx'
+import { LoginPageTwo } from './pages/LoginPageTwo.tsx'
+import { ForgetPasswordPageOne } from './pages/ForgetPasswordPageOne.tsx'
+import { ForgetPasswordPageTwo } from './pages/ForgetPasswordPageTwo.tsx'
+import { RegisterPageOne } from './pages/RegisterPageOne.tsx'
+import { RegisterPageTwo } from './pages/RegisterPageTwo.tsx'
+import { RegisterPageThree } from './pages/RegisterPageThree.tsx'
+
+// Landing
+
+import { Landing } from './pages/LandingPage.tsx'
+
+// Courses List
+
+import { CourseListPage } from './pages/CourseListPage.tsx'
+
+// Blogs List
+
+import { BlogListPage } from './pages/BlogListPage.tsx'
+
+// About Us
+
+import { AboutUsPage } from './pages/AboutUsPage.tsx'
+
+// Teacher Page
+
+import { TeacherPage } from './pages/TeacherPage.tsx'
+
+// Student Panel
+import { StudentPanelPage } from './pages/StudentPanelPage.tsx'
 import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage/Image.tsx'
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
 import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/link.tsx'
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
-import {BlogsList} from './components/blogs/blogsList.tsx'
-import { CourseList } from './components/Course List/CourseListHolder/CourseList.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
-import "./app/App.css"
-import LangAndMode from './components/common/bottom-nav/LangAndMode.tsx'
-import "./i18n.ts"
-import { CourseDetail } from './components/Course Detail/CourseDetailHolder/CourseDetail.tsx'
-import { ErrorPage404 } from './components/Error 404/Error404.tsx'
-import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
-import { LandingHolder } from './components/Landing/A-LandingHolder/LandingHolder.tsx'
-import { Register } from './components/register/register.tsx'
-import { RegisterPage2 } from './components/register Page2/register.tsx'
-import { RegisterPage3 } from './components/register Page3/register.tsx'
-import { BlogsDetail } from './components/Blogs Detail/BlogDetailHolder/Blogs.tsx'
-import { Payment } from './components/Payment First Page/Payment Holder/Payment.tsx'
-import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 import { StudentPayment } from './components/studentPanel/Student Payment/StudentPayment.tsx'
 import { StudentMyCourse } from './components/studentPanel/studentCurse-Blog/My Courses/StudentMyCourse.tsx'
 import { StudentMyReserve } from './components/studentPanel/studentCurse-Blog/My Reserve/StudentMyReserve.tsx'
 import { StudentMyFavCourses } from './components/studentPanel/studentCurse-Blog/Fav Courses/StudentMyFavCourses.tsx'
-import { Auth } from './components/Auth/Auth.tsx'
 import { StudentMyFavBlogs } from './components/studentPanel/studentCurse-Blog/Fav Blogs/StudentMyFavBlogs.tsx'
 import { StudentDashboard } from './components/studentPanel/dashboard/dashboard.tsx'
+
+// Course Detail
+
+import { CourseDetailPage } from './pages/CourseDetail.tsx'
+
+// Blog Detail
+
+import { BlogDetailPage } from './pages/BlogDetail.tsx'
+
+// Error Pages
+import { ErrorPage404 } from './components/Error 404/Error404.tsx'
+import { ErrorPage } from './components/Error Page/ErrorPage.tsx'
+
+// Payment Gateway
+
+import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
+
+// Compare Products
+
 import { Compare } from './components/Compare 2 products/Compare.tsx'
 import { CompareSelect } from './components/Compare 2 products/Compare select.tsx'
 
@@ -47,27 +83,27 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <LandingHolder />,
+        element: <Landing />,
         errorElement: <ErrorPage />
       },
       {
         path: "/Blogs-List",
-        element: <BlogsList />,
+        element: <BlogListPage />,
         errorElement: <ErrorPage />
       },
       {
         path: "/Courses-List",
-        element: <CourseList />,
+        element: <CourseListPage />,
         errorElement: <ErrorPage />
       }, 
       {
         path: "/Course-Detail/:id",
-        element: <CourseDetail />,
+        element: <CourseDetailPage />,
         errorElement: <ErrorPage />
       }, 
       {
         path: "/Blogs-Detail/:id",
-        element: <BlogsDetail />,
+        element: <BlogDetailPage />,
         errorElement: <ErrorPage />
       },
       {
@@ -77,7 +113,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about-we",
-        element: <AboutWe />,
+        element: <AboutUsPage />,
         errorElement: <ErrorPage />
       },
       {
@@ -94,49 +130,49 @@ const router = createBrowserRouter([
   },
   { 
     path: "/auth",
-    element: <Auth />,
+    element: <AuthPages />,
     errorElement: <ErrorPage />,
     children:[
       {
         path: "/auth/Login",
-        element: <Login />,
+        element: <LoginPageOne />,
         errorElement: <ErrorPage />
       },
       {
         path: "/auth/Login-Page2",
-        element: <LoginPage2 />,
+        element: <LoginPageTwo />,
         errorElement: <ErrorPage />
       },
       {
         path: "/auth/Register",
-        element: <Register />,
+        element: <RegisterPageOne />,
         errorElement: <ErrorPage />
       },
       {
         path: "/auth/Register-Page2",
-        element: <RegisterPage2 />,
+        element: <RegisterPageTwo />,
         errorElement: <ErrorPage />
       },
       {
         path: "/auth/Register-Page3",
-        element: <RegisterPage3 />,
+        element: <RegisterPageThree />,
         errorElement: <ErrorPage />
       },
       {
         path: "/auth/Forget-Password",
-        element: <ForgetPass />,
+        element: <ForgetPasswordPageOne />,
         errorElement: <ErrorPage />
       },
       {
         path: "/auth/Forget-Password-Page2",
-        element: <ForgetPassPage2 />,
+        element: <ForgetPasswordPageTwo />,
         errorElement: <ErrorPage />
       },
     ]
   },
   {
     path: "/Student-Panel",
-    element: <StudentPanel />,
+    element: <StudentPanelPage />,
     errorElement: <ErrorPage />,
     children:[
       {

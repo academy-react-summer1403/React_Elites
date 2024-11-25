@@ -25,7 +25,7 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
 
   const getFilteredList = async () => {
 
-    let data = await Filter(String(teacherId), String(pagInation), String(levelId), String(categoryId), String(categoryId.length), String(minValue), String(maxValue))
+    let data = await Filter(String(teacherId), String(pagInation), String(levelId), String(categoryId), String(categoryId.length))
 
     let sortData = await Sort(col, sortType)
 

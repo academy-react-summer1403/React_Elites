@@ -8,12 +8,13 @@ import { TitleHeaderBlogs } from "./Items/TitleHeaderBlogs.tsx";
 import { useGlobalState } from "../../State/State.tsx";
 import { getNewsCategoryList } from "../../core/services/api/getNewsCategoryList.ts";
 import { getAllBlogsList } from "../../core/services/api/AllBlogsList.ts";
+import { motion, useScroll } from "framer-motion";
 
 const BlogsList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [filterModal, setFilterModal] = useState(false)
   const [sortModal, setSortModal] = useState(false)
-
+  const { scrollYProgress } = useScroll()
   const [categoryId, setCategoryId] = useState("")
   const [applyFilter, setApplyFilter] = useState(false)
   const [searchValue, setSearchValue] = useState("")
@@ -44,6 +45,7 @@ const BlogsList = () => {
     <Formik>
       {(form) => (
         <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={darkMode ? "dark" : "lightMode"}>
+          <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
           <TitleHeaderBlogs />
           <div className={styleBlogList.page}>
             <Filter 

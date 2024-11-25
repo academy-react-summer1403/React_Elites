@@ -14,10 +14,12 @@ import { getTopBlogs } from '../../../../core/services/api/TopBlogs.ts'
 const ContentLandingHolder = (props) => {
   const [courseList, setCourseList] = useState([]);
   const [topBlogs, setTopBlogs] = useState([])
+  const [isLoading, setisLoading] = useState(true)
 
   const getList = async () => {
     const courses = await getCourseList(7);
     setCourseList(courses);
+    setisLoading(false)
   };
   const TopBlogs = async () => {
     const Blogs = await getTopBlogs();
@@ -35,7 +37,7 @@ const ContentLandingHolder = (props) => {
           <ProgrammingLanguagesHolder />
           <OurGoalsHolder />
           <ServicesHolder />
-          <CoursesHolder courseList={courseList} />
+          <CoursesHolder isLoading={isLoading} courseList={courseList} />
           <Blogs topBlogs={topBlogs} />
           <Teachers />
         </div>

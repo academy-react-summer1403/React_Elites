@@ -181,3 +181,15 @@
   color: #14FFEC !important;
   border-color: #0D7377 !important;
 }
+
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: #3772FF;
+  transform-origin: 0%;
+  z-index: 10000000000;
+  margin-top: 70px;
+}

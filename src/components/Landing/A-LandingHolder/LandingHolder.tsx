@@ -5,6 +5,7 @@ import {getStudentAndTeacherCount} from '../../../core/services/api/StudentAndTe
 import toast, { Toaster } from 'react-hot-toast'
 import { useGlobalState } from '../../../State/State.tsx'
 import { getProfile } from '../../../core/services/api/getProfileInfo.ts'
+import { motion, useScroll } from "framer-motion";
 
 const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
@@ -45,10 +46,13 @@ const LandingHolder = () => {
   
 
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const { scrollYProgress } = useScroll()
   
   return (
     <>
       <Toaster />
+
+        <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
         <div className={style.landing} data-theme={darkMode ? "dark" : "light"}>
           <ContentLandingHolder
             MAndJ={MAndJ}

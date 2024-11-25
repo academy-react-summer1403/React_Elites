@@ -8,8 +8,6 @@
     margin-top: 150px;
     animation: visible linear forwards;
     flex-flow: row wrap;
-    animation-timeline: view();
-    animation-range:  500px 700px;
 }
 
 @keyframes visible{

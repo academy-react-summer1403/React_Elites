@@ -11,10 +11,13 @@ import {LearningWorld} from "./aboutWeItems/LearningWorld.tsx";
 import {Programming} from "./aboutWeItems/Programming.tsx";
 import { useGlobalState } from "../../State/State.tsx";
 import { useEffect } from "react";
+import { motion, useScroll } from "framer-motion";
 
 const AboutWe = (props) => {
   const [isAboutUs, setisAboutUs] = useGlobalState('isAboutUs');
   const [darkMode, ] = useGlobalState('DarkMode');
+  const { scrollYProgress } = useScroll()
+
   useEffect(() => {
     setisAboutUs(true)
   }, [])
@@ -29,6 +32,7 @@ const AboutWe = (props) => {
     <Formik>
       {(form) => (
         <div className={style.container} data-theme={darkMode ? "dark" : "lightMode"}>
+          <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
           <div className={style.page} data-theme={darkMode ? "dark" : "lightMode"}>
             <AboutUsTitleHeader />
           <div className={style.page2} data-theme={darkMode ? "dark" : "lightMode"}>
