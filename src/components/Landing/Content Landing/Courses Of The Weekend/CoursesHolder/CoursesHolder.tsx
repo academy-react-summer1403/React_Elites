@@ -6,9 +6,12 @@ import { Button } from '../CoursesItems/CoursesItemsHolder/Button'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { CoursesHolderSkeleton } from './CoursesHolderSkeleton'
+import { PacmanLoader, PuffLoader, RiseLoader, ScaleLoader } from 'react-spinners'
+import { ScaleControl } from 'react-map-gl'
 
 
-const CoursesHolder = ({courseList}) => {
+const CoursesHolder = ({courseList, isLoading}) => {
   const ArrowRight = (props) => {
     const { className, onClick } = props;
     return (
@@ -75,8 +78,10 @@ const CoursesHolder = ({courseList}) => {
     <div className={style.holder}>
         <CoursesTitle />
         <Slider className={style.slider} {...settings} >
+          {isLoading && <PuffLoader />}
           {courseList.map((item, index) => {
           return (
+            <>
             <CoursesItemsHolder 
               key={index}
               title={item.title}
@@ -87,6 +92,7 @@ const CoursesHolder = ({courseList}) => {
               image={item.tumbImageAddress}
               id={item.courseId}
             />
+            </>
           )
         })}
       </Slider>

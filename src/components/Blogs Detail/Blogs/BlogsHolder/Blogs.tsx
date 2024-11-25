@@ -9,67 +9,72 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Blogs = () => {
-    let data=[
-        {image: JSBlog, title: "زبان جاوا اسکریپت در چه حوزه ای به کار میره؟", pub: "محمدحسین بحرالعلومی", views: "200", date: "22 اردیبهشت 1403"},
-        {image: figmaBlog, title: "فیگما یا ادوبی ایکس‌دی؟", pub: "محمدحسین خلیل‌پور", views: "200", date: "20 اردیبهشت 1403"},
-        {image: reactBlog, title: "فرق ری‌اکت با نکست جی‌اس چیست؟", pub: "محسن اسفندیاری", views: "229", date: "27 اردیبهشت 1403"}
-    ]
-    const Arrow = (props) => {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block", background: "black" }}
-            onClick={onClick}
-          />
-        );
+const Blogs = ({related}) => {
+  const ArrowRight = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div
+        className={`${style.arrowRight} ${className}`}
+        onClick={onClick}
+      />
+    );
+  }
+
+  const ArrowLeft = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div
+        className={`${style.arrowLeft} ${className}`}
+        onClick={onClick}
+      />
+    );
+  }
+
+var settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  nextArrow: <ArrowRight />,
+  prevArrow: <ArrowLeft />,
+  responsive: [
+    {
+      breakpoint: 1406,
+      settings: {
+        slidesToShow: 2
       }
-    
-      var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        nextArrow: <Arrow />,
-        prevArrow: <Arrow />,
-        responsive: [
-          {
-            breakpoint: 1406,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 1066,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 760,
-            settings: {
-              slidesToShow: 1
-            }
-          }
-        ]
-      };
+    },
+    {
+      breakpoint: 1066,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+};
 
   return (
     <div className={style.container}>
         <BlogTitle />
         <Slider className={style.slider}  {...settings} >
-        {data.map((item, index) => {
+        {related.length > 0 && related.map((item, index) => {
             return(
                 <BlogItems
                     key={index}
-                    image={item.image}
+                    id={item.id}
+                    image={item.currentImageAddressTumb}
                     title={item.title}
-                    pub={item.pub}
-                    views={item.views}
-                    date={item.date}
+                    pub={item.addUserFullName}
+                    views={item.currentView}
+                    date={item.insertDate}
                 />
             )
         })}

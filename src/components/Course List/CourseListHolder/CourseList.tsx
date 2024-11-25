@@ -4,6 +4,7 @@ import { StartNewJourney } from '../Start New Journy/StartNewJourneyHolder/Start
 import { CourseListAndFilter } from '../CourseList & Filter/CourseList&FilterHolder/CourseListAndFilter'
 import { useGlobalState } from '../../../State/State'
 import { Sort } from '../../../core/services/api/Sort'
+import { motion, useScroll } from "framer-motion";
 
 const CourseList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -19,6 +20,7 @@ const CourseList = () => {
   const [maxValue, set_maxValue] = useState("");
   const [maxValueBining, setmaxValueBining] = useState()
   const [minValueBining, setminValueBining] = useState()
+  const { scrollYProgress } = useScroll()
 
   const getMaxValue = async () => {
     let res = await Sort("Cost", "DESC")
@@ -40,6 +42,7 @@ const CourseList = () => {
   }, [])
   return (
     <div className={style.body}  data-theme={darkMode ? "dark" : "lightMode"}>
+        <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
         <div className={style.courseListHolder}>
         <StartNewJourney />
         <CourseListAndFilter 

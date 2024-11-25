@@ -4,7 +4,7 @@ import { useGlobalState } from "../../../../State/State";
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
-const CategoryFilter = ({setCategoryId, categoryId}) => {
+const CategoryFilter = ({setCategoryId, categoryId, categoryList}) => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [isClicked, setIsClicked] = useState(false)
     const { t } = useTranslation();
@@ -19,15 +19,16 @@ const CategoryFilter = ({setCategoryId, categoryId}) => {
             <div className={isClicked ? styleFilter.arrowUp : styleFilter.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
             {isClicked && 
             <div className={styleFilter.filterBox}>
-                <input type="radio" id='one' name='categories' className={styleFilter.input} onChange={() => {
-                    setCategoryId("2")
-                    console.log(categoryId)
-                }}/>
-                <label htmlFor='one' className={styleFilter.category}> دیتای بک اند هک شد 😘 </label>
-                <input type="radio" id='two' name='categories' className={styleFilter.input} onChange={() => {
-                    setCategoryId("3")
-                }} />
-                <label htmlFor='two' className={styleFilter.category}> hvddd </label>
+                {categoryList.map((item, index) => {
+                    return(
+                        <>
+                        <input type="radio" id={index} name='categories' className={styleFilter.input} onChange={() => {
+                            setCategoryId(item.id)
+                        }}/>
+                        <label htmlFor={index} className={styleFilter.category}>{item.categoryName}</label>
+                        </>
+                    )
+                })}
             </div>}
         </div>
     </div>
