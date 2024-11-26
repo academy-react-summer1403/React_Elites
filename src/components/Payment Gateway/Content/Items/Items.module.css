@@ -206,7 +206,7 @@
 }
 .InputsHolder{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap !important;
     width: 340px !important;
     height: 34px;
     display: flex;

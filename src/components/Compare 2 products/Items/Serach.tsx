@@ -9,7 +9,7 @@ const Search = ({ setSearchValue, setIsSearched, searchValue, isSearched }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={styleCompare.searchHolder}>
+    <div id='searchCompare' className={styleCompare.searchHolder}>
       <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
         setSearchValue(e.target.value)
       }}

@@ -7,7 +7,7 @@ const Dislike = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const {t} = useTranslation();
   return (
-    <div className={style.dislike} data-theme={darkMode ? "dark" : "lightMode"}>دیسلایک ها:{props.dissLikeCount}</div>
+    <div className={style.dislike} data-theme={darkMode ? "dark" : "lightMode"}>{t("Dislikes")}: {props.dissLikeCount}</div>
   )
 }
 

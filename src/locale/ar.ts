@@ -21,6 +21,7 @@ export const ar = {
     "Dashboard": "لوحة القيادة", "myCourse": "دورتي الشهرية", "MyReservation": "حجزي", "FavoriteCourses": "الدورات المفضلة", "FavoriteBlogs": "المدونات المفضلة", "Profile": "پروفایل", "Payments": "المدفوعات", "exit": "رحيل",
     //Courses
     "headerTitleCoursesList": "ابدأ مغامرة جديدة", "headerDescCoursesList1": "بداية قوية لتعلم المشكلة", "headerDescCoursesList2": "الجديد يمكن أن يساعدك على التقدم", "order": "طلب", "newest": "الأحدث", "oldest": "الأقدم", "mostExpensive": "أغلى", "cheapest": "أرخص", "ClearSort": "فرز واضح", "filter": "فلتر", "applyFilter": "تطبيق الفلتر", "deleteFilter": "قم بإزالة الفلتر", "search": "يبحث", "category": "فئة", "EducationalLevel": "المستوى التعليمي", "dateStart-end": "تاريخ عقد - الانتهاء",
+    "ClassroomNumber": "رقم الفصل الدراسي","likes": "يحب","Dislikes": "يكره","NumberRegistrants": "عدد المسجلين","LastChange": "التغيير الأخير",
     //blogs  
     "headerTitleBlogsList": "المزيد من المعلومات، فهم أفضل", "headerDescBlogsList1": "في المدونات، نشارك معلوماتك", "headerDescBlogsList2": "سوف نقوم بزيادة التكنولوجيا التي تتعلمها", "PublicationDate": "تاريخ النشر", "popular": "الأكثر شعبية", "close": "غلق",
     //about us

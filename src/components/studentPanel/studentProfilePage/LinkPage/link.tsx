@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { putUserInfoEdit } from "../../../../core/services/api/putUserInfoEdit";
 import toast, { Toaster } from "react-hot-toast";
 import { getProfile } from "../../../../core/services/api/getProfileInfo";
+import { LinksHolder } from "./partLinkPage/LinkedinAndTelegramHolder";
 
 
 const LinkForm = () => {
@@ -52,20 +53,7 @@ const LinkForm = () => {
                                 <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
                             </div>
                         </div>
-                        <div className={styleInform.left}>
-                            <div className={styleInform.email}> 
-                                <div className={styleInform.bigDiv}>
-                                    <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>تلگرام</h1>
-                                    <Field name="telegramLink" className={styleInform.Input} placeholder="لینک تلگرام خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"}/>
-                                </div>
-                            </div>
-                            <div className={styleInform.location}> 
-                                <div className={styleInform.bigDiv}>
-                                    <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینکدین</h1>
-                                    <Field name="linkdinProfile" className={styleInform.Input} placeholder="لینک لینکدین خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"}/>
-                                </div>
-                            </div>
-                        </div>
+                        <LinksHolder />
                     </div>
                 </Form>
             )}

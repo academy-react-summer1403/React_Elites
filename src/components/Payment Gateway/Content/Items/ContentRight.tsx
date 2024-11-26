@@ -67,7 +67,7 @@ const ContentRight = () => {
                 </div>
                 <div>
                     <button>پرداخت</button>
-                    <NavLink to=''>انصراف</NavLink>
+                    <NavLink to='/Student-Panel/Shopping-Basket'>انصراف</NavLink>
                 </div>
             </div>
 

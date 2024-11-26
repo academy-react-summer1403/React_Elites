@@ -53,7 +53,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         setIsClicked4(!isClicked4)
         setSortType("ASC")
       }}>{t("cheapest")}</div>
-      <div className={style.clearSort} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+      <div className={style.clearSort} data-theme={darkMode ? "darkClearSort" : "lightMode"} onClick={() => {
         setapplySort(false)
         setIsClicked1(false)
         setIsClicked2(false)

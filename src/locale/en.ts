@@ -21,6 +21,7 @@ export const en = {
     "Dashboard": "Dashboard", "myCourse": "my course", "MyReservation": "My reservation", "FavoriteCourses": "Favorite courses", "FavoriteBlogs": "Favorite blogs", "Profile": "Profile", "Payments": "Payments", "exit": "exit",
     //Courses
     "headerTitleCoursesList": "Start a new adventure", "headerDescCoursesList1": "A strong start to learning a problem", "headerDescCoursesList2": "New can help you progress", "order": "order", "newest": "The newest", "oldest": "The oldest", "mostExpensive": "the most expensive", "cheapest": "The cheapest", "ClearSort": "Clear sort", "filter": "filter", "applyFilter": "Apply filter", "deleteFilter": "delete filter", "search": "search", "category": "category", "EducationalLevel": "Educational level", "dateStart-end": "Date of holding - Completion",
+    "ClassroomNumber": "Classroom number","likes": "likes","Dislikes": "Dislikes","NumberRegistrants": "Number of registrants","LastChange": "Last change",
     //blogs  
     "headerTitleBlogsList": "More information, better understanding", "headerDescBlogsList1": "In blogs, we share your information", "headerDescBlogsList2": "We will increase the technology you learn", "PublicationDate": "Publication date", "popular": "the most popular", "close": "close",
     //about us

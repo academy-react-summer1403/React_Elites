@@ -23,6 +23,7 @@ export const fa = {
         "Dashboard": "داشبورد", "myCourse": "دوره من", "MyReservation": "رزرو من", "FavoriteCourses": "دوره های مورد علاقه", "FavoriteBlogs": "بلاگ های مورد علاقه", "Profile": "پروفایل", "Payments": "پرداخت ها", "exit": "خروج",
     //Courses
     "headerTitleCoursesList": "شروع ماجراجویی جدید", "headerDescCoursesList1": "یک شروع قوی برای یادگیری یک مسئله", "headerDescCoursesList2": "جدید میتونه تو پیشرفت کمکت کنه", "order": "ترتیب", "newest": "جدیدترین", "oldest": "قدیمی ترین", "mostExpensive": "گران ترین", "cheapest": "ارزان ترین", "ClearSort": "پاک کردن مرتب سازی", "filter": "فیلتر", "applyFilter": "اعمال فیلتر", "deleteFilter": "حذف فیلتر", "search": "جستجو", "category": "دسته بندی", "EducationalLevel": "سطح آموزشی", "dateStart-end": "تاریخ برگزاری - اتمام",
+    "ClassroomNumber": "شماره کلاس درس","likes": "لایک ها","Dislikes": "دیسلایک ها","NumberRegistrants": "تعداد ثبت نام کنندگان","LastChange": "آخرین تغییر",
     //blogs  
     "headerTitleBlogsList": "اطلاعات بیشتر ، درک بهتر", "headerDescBlogsList1": "ما در بلاگ ها اطلاعات شما رو نسبت به", "headerDescBlogsList2": "تکنولوژی ای که یاد میگیرید بیشتر میکنیم", "PublicationDate": "تاریخ انتشار", "popular": "محبوبترین", "close": "بستن",
     //about us
@@ -40,5 +41,6 @@ export const fa = {
         "TeacherPage":"لیست اساتید!","TeacherPageDesc":"لیستی از بهترین اساتید در آکادمی سپهر!",
 
     //placeholder
+
         "enterNumberReg":"شماره همراه خود را وارد کنید", "enterPasswordPlaceHolder":"رمز عبور خود را وارد کنید", "enterNumber&email":"شماره همراه یا ایمیل خود را وارد کنید", "searchBlogs":"بلاگ مورد نظر را جست‌جو کنید...",  "searchCourses":"دوره مورد نظر را جست‌جو کنید...", "levelCourses":"سطح مورد نظر را انتخاب کنید", "TeacherCourses":"استاد مورد نظر را انتخاب کنید", "dateCourses":"تاریخ مورد نظر را انتخاب کنید", "CategoryBlogs":"دسته مورد نظر را انتخاب کنید", "enterEmailReg":"ایمیل خود را وارد کنید","TeacherSearch":"جستجو در نام اساتید...",
 }
