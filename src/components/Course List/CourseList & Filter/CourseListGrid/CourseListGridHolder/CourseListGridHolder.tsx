@@ -11,7 +11,6 @@ import { Sort } from '../../../../../core/services/api/Sort'
 const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTotalCount, totalCount, levelId, searchValue, isSearched, categoryId}) => {
   const [clicked, setClicked] = useState(false)
   const [sortModal, setSortModal] = useState(false)
-  
   const [courseList, setCourseList] = useState([]);
   const [pagInation, setPagInation] = useState(1)
   const [sortType, setSortType] = useState("DESC")

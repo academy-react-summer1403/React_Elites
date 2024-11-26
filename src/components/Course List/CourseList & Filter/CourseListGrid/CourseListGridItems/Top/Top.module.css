@@ -11,6 +11,26 @@
     line-height:35px;
 }
 
+.gridView{
+    background: url(../../../../../../assets/Images/gridView.png) 50% 50% no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 75%;
+    border: 2px solid black;
+}
+
+.listView{
+    background: url(../../../../../../assets/Images/image.png) 50% 50% no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+        border: 2px solid black;
+}
+
+.selectedG{
+    scale: 1.1;
+}
+
 @media screen and (max-width: 1250px) {
     .holder{
         width: 73%;

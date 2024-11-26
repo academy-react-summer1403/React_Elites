@@ -13,11 +13,13 @@ const TeacherList = (props) => {
   const [teacherList, setTeacherList] = useState([]);
   const [searchValue, setSearchValue] = useState("")
   const [applyFilter, setApplyFilter] = useState(false)
+  const [isLoading, setisLoading] = useState(true)
   const { scrollYProgress } = useScroll()
 
   const getTeacherList = async () => {
     const teacher = await getTeacher();
     setTeacherList(teacher);
+    setisLoading(false)
   };
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const TeacherList = (props) => {
           <div className={style.page}>
             <SearchFilter setSearchValue={setSearchValue}/>
             <div className={style.page2}>      
-              <ListCardBlogs  teacherList={teacherList} />
+              <ListCardBlogs isLoading={isLoading}  teacherList={teacherList} />
             </div>
           </div>  
         </div>

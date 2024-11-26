@@ -12,6 +12,10 @@ import { allCourseList } from '../../../core/services/api/AllCourseList'
 
 const CourseDetail = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const [isLiked, setIsLiked] = useGlobalState('courseLike');
+  const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
+  const [isReserved, setIsReserved] = useGlobalState('isReserved');
+  const [isFavourite, setIsFavourite] = useGlobalState('isFavoriteCourse');
 
   const [courseDetail, setCourseDetail] = useState([])
   const [comments, setComments] = useState([])
@@ -25,6 +29,11 @@ const CourseDetail = () => {
     const res = await getCourseComment(id)
     setCourseDetail(Details)
     setComments(res)
+    setDiIsLiked(Details?.currentUserDissLike)
+    setIsLiked(Details?.currentUserLike)
+    setIsReserved(Details?.isCourseReseve)
+    setIsFavourite(Details?.isUserFavorite)
+    setDiIsLiked(Details?.currentUserDissLike)
 
     const list = await allCourseList(1)
     setrelated(list.courseFilterDtos.filter((e) => String(e.technologyList) == String(Details?.techs)))
@@ -41,7 +50,7 @@ const CourseDetail = () => {
 
   useEffect(() => {
     getCourseDetail()
-  }, [id])
+  }, [id, isLiked, isReserved, isFavourite])
   
 
   return (
@@ -64,7 +73,7 @@ const CourseDetail = () => {
           end={courseDetail?.endTime}
           id={courseDetail?.courseId}
         />
-        <Description description={courseDetail?.describe} isLoading={isLoading} />
+        <Description description={courseDetail?.describe} isLoading={isLoading} currentUserRateNumber={courseDetail?.currentUserRateNumber} id={id} />
         <AllComments isLoading={isLoading} comments={comments} id={id} />
         <CoursesHolder related={related} />
       </div>

@@ -7,6 +7,21 @@
     align-items: center;
 }
 
+.AddedToFav{
+    width: 48.39650145772595%;
+    height: 100%;
+    color: #FCFCFC;
+    font-family: DannaBold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2F2F2F url(../../../../../../assets/Images/icons8-archive-32white.png) 95% 50% no-repeat;
+    background-size: 8%;
+}
+
 .reserve{
     width: 28.2798833819242%;
     height: 100%;
@@ -19,6 +34,22 @@
     justify-content: center;
     align-items: center;
     background: #3772FF url(../../../../../../assets/Images/icons8-book-48.png) 83% 50% no-repeat;
+    background-size: 12%;
+    cursor: pointer;
+}
+
+.reserved{
+    width: 28.2798833819242%;
+    height: 100%;
+    color: #FCFCFC;
+    font-family: DannaBold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3772FF url(../../../../../../assets/Images/icons8-book-48.png) 89% 50% no-repeat;
     background-size: 12%;
 }
 
@@ -35,13 +66,30 @@
     align-items: center;
     background: #2F2F2F url(../../../../../../assets/Images/icons8-archive-32white.png) 90% 50% no-repeat;
     background-size: 8%;
+    cursor: pointer;
 }
 
 .like{
     width: 56px;
     height: 56px;
     border-radius: 100%;
-    background: #3772FF url(../../../../../../assets/Images/icons8-like-24.png) 50% 50% no-repeat;
+    background: url("https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=000000") 50% 50% no-repeat;
+    border: 1px solid #DCDCDC;
+}
+
+.liked{
+    background: #3772FF url("https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=ffffff") 50% 50% no-repeat;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.disLiked{
+    background: #3772FF url(../../../../../../assets/Images/dislikewhitec.png) 50% 50% no-repeat;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
 }
 
 .dislike{
@@ -50,6 +98,7 @@
     border-radius: 100%;
     background: url(../../../../../../assets/Images/icons8-dislike-24.png) 50% 50% no-repeat;
     border: 1px solid #DCDCDC;
+    cursor: pointer;
 }
 
 

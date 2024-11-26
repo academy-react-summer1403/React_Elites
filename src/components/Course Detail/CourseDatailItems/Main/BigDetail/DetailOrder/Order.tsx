@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './style.module.css'
 import { ReserveCourse } from './ReserveCourse'
 import { AddToFavourite } from './AddToFavourite'
@@ -8,10 +8,10 @@ import { DisLike } from './DisLike'
 const Order = ({id}) => {
   return (
     <div className={style.holder}>
-        <DisLike />
-        <Like />
-        <AddToFavourite />
-        <ReserveCourse id={id} />
+        <DisLike id={id}/>
+        <Like id={id}/>
+        <AddToFavourite id={id}/>
+        <ReserveCourse id={id}/>
     </div>
   )
 }
