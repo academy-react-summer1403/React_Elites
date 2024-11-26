@@ -1,9 +1,21 @@
 import React from 'react'
 import style from './style.module.css'
+import { postCourseFavourite } from '../../../../../../core/services/api/postCourseFavoutite'
+import toast from 'react-hot-toast'
+import { useGlobalState } from '../../../../../../State/State'
 
-const AddToFavourite = () => {
+const AddToFavourite = ({id}) => {
+  const [isFavourite, setIsFavourite] = useGlobalState('isFavoriteCourse');
+
+  const addToFavoutite = async () => {
+    let res = await postCourseFavourite({courseId: `${id}`})
+    if(res.success === true){
+      toast.success("دوره به لیست مورد علاقه اضافه شد")
+      setIsFavourite(true)
+    }
+  }
   return (
-    <div className={style.AddToFav}>اضافه به لیست موردعلاقه</div>
+    <div className={isFavourite ? style.AddedToFav : style.AddToFav} onClick={() => addToFavoutite()}>{isFavourite === false ? " اضافه به لیست موردعلاقه" : "به لیست مورد علاقه اضافه شد"}</div>
   )
 }
 

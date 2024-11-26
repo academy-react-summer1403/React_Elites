@@ -14,7 +14,7 @@ const BigDetail = ({dislike, isLoading, id, rate, comments, like, price, teacher
         <Top isLoading={isLoading} status={status} teacher={teacher} level={level} category={category} />
         <Bottom isLoading={isLoading} like={like} dislike={dislike} start={start} end={end} />
         <RateAndPrice isLoading={isLoading} comments={comments} rate={rate} price={price} />
-        <Order isLoading={isLoading} id={id} />
+        <Order id={id} />
     </div>
   )
 }

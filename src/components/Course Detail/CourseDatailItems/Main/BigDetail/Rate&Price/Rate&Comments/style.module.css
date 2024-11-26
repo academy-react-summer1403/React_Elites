@@ -4,6 +4,7 @@
     display: flex;
     justify-content: right;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .comments{
@@ -15,9 +16,6 @@
 }
 
 .rate{
-    width: 40%;
-    background: url(../../../../../../../assets/Images/icons8-star-48.png) repeat-x 50%;
-    background-size: 20%;
     color: #000000;
     font-size: 16;
     font-family: DannaMedium;

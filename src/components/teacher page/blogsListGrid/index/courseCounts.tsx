@@ -5,7 +5,7 @@ import { useGlobalState } from '../../../../State/State';
 const CourseCounts = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره ها : {props.count}</div>
+    <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> دوره ها : {props.count}</div>
   )
 }
 

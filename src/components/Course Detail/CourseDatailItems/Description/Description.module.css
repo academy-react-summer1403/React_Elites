@@ -5,6 +5,7 @@
     justify-content: right;
     flex-flow: row wrap;
     direction: rtl;
+    align-items: center;
 }
 
 .title{
@@ -38,7 +39,6 @@
 
 .rate{
     width: 160px;
-    background: url(../../../../assets/Images/icons8-star-gray.png) repeat-x;
     background-size: 20%;
     margin-top: 10px;
     margin-left: 10px;
@@ -56,4 +56,5 @@
     margin-top: 13px;
     text-align: center;
     line-height: 30px;
+    cursor: pointer;
 }

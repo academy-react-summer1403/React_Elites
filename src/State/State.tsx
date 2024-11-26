@@ -8,7 +8,12 @@ const { useGlobalState} = createGlobalState({
     isLanding: false,
     isCourse: false,
     isBlog: false,
-    isAboutUs: false
+    isAboutUs: false,
+    isGrid: true,
+    courseLike: "0",
+    courseDisLike: "0",
+    isReserved: "0",
+    isFavoriteCourse: false,
 })
 
 
