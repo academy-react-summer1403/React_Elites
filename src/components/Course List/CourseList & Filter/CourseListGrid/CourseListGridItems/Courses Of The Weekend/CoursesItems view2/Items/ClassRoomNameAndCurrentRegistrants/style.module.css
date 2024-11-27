@@ -1,36 +1,32 @@
 .holder{
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
- 
-    height: 24px;
 }
 
-.like,.dislike{
+.classRoom,.NumberRegistrants{
     font-size: 16px;
     font-family: DannaBold;
     color: #2F2F2F;
     width: auto;
- text-align: right;
     direction: rtl;
 }
 
-@media screen and (max-width: 1116px) {
-    .price{
-        font-size: 10px;
+@media screen and (max-width: 1451px) {
+    .classRoom{
+        display: none;
     }
-    .teacher{
-        font-size: 10px;
+    .NumberRegistrants{
+        text-align: center;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 900px) {
-    .price{
-        font-size: 16px;
-    }
-    .teacher{
+@media screen and (max-width: 409px) {
+    .NumberRegistrants{
         font-size: 14px;
     }
 }

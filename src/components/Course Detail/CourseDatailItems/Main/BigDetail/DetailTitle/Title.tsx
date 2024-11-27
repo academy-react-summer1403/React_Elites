@@ -5,14 +5,14 @@ import {  NavLink } from "react-router-dom";
 import ClipLoader from "react-spinners/BeatLoader";
 import BeatLoader from 'react-spinners/BeatLoader';
 
-const Title = ({title, isLoading}) => {
+const Title = ({title, isLoading, id}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <div className={style.titleHolder}>
       {isLoading ? <BeatLoader /> : 
       <>
             <div className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{title}</div>
-            <NavLink className={style.CompareButton} to='/Compare-products-select'>مقایسه دوره</NavLink>
+            <NavLink className={style.CompareButton} to={"/Compare-products-select/" +id}>مقایسه دوره</NavLink>
       </>}
     </div>
   )
