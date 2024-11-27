@@ -7,7 +7,7 @@ const Like = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const {t} = useTranslation();
   return (
-    <div className={style.like} data-theme={darkMode ? "dark" : "lightMode"}>{t("likes")}: {props.like}</div>
+    <div className={style.like} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("likes")}: {props.like}</div>
   )
 }
 

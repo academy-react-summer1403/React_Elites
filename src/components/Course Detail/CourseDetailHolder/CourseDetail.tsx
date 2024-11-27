@@ -22,7 +22,7 @@ const CourseDetail = () => {
   const [related, setrelated] = useState([])
   const [allCourseListt, setallCourseList] = useState([])
   const [isLoading, setisLoading] = useState(true)
-  const {id} = useParams();
+  const { id } = useParams();
 
   const getCourseDetail = async () => {
     const Details = await getCourseById(id)
@@ -43,7 +43,7 @@ const CourseDetail = () => {
     setisLoading(false)
   }
 
-  
+
   useEffect(() => {
     getCourseDetail()
   }, [])
@@ -51,12 +51,12 @@ const CourseDetail = () => {
   useEffect(() => {
     getCourseDetail()
   }, [id, isLiked, isReserved, isFavourite])
-  
+
 
   return (
     <div className={style.body} data-theme={darkMode ? "dark" : "lightMode"}>
       <div className={style.holder}>
-        <Main 
+        <Main
           isLoading={isLoading}
           dislike={courseDetail?.dissLikeCount}
           like={courseDetail?.likeCount}
@@ -81,4 +81,4 @@ const CourseDetail = () => {
   )
 }
 
-export {CourseDetail}
+export { CourseDetail }

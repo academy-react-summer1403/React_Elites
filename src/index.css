@@ -181,6 +181,16 @@
   color: #14FFEC !important;
   border-color: #0D7377 !important;
 }
+[data-theme="gridView"] {
+  background: url(https://img.icons8.com/?size=100&id=20228&format=png&color=14ffec) 50% 50% no-repeat !important;
+  background-size: 90% 120% !important;
+  border: 2px solid #14ffec !important;
+}
+[data-theme="listView"] {
+  background: url(https://img.icons8.com/?size=100&id=82758&format=png&color=14FFEC) 50% 50% no-repeat !important;
+  background-size: 100% !important;
+  border: 2px solid #14ffec !important;
+}
 
 .progressBar {
   position: fixed;

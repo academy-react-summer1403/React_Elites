@@ -8,7 +8,7 @@ const LastUpdate = ({lastUpdate}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const {t} = useTranslation();
   return (
-    <div className={style.lastUpdate} data-theme={darkMode ? "dark" : "lightMode"}>{t("LastChange")}:{dateConvertor(lastUpdate)}</div>
+    <div className={style.lastUpdate} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("LastChange")}:{dateConvertor(lastUpdate)}</div>
   )
 }
 

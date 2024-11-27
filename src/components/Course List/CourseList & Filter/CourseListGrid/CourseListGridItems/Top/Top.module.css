@@ -1,4 +1,4 @@
-.holder{
+.holder {
     height: 40px;
     text-align: right;
     color: #2F2F2F;
@@ -8,31 +8,33 @@
     gap: 20px;
     justify-content: space-between;
     flex-flow: row wrap;
-    line-height:35px;
+    line-height: 35px;
 }
 
-.gridView{
-    background: url(../../../../../../assets/Images/gridView.png) 50% 50% no-repeat;
+.gridView {
+    background: url(https://img.icons8.com/?size=100&id=20228&format=png&color=000000) 50% 50% no-repeat;
     width: 35px;
     height: 35px;
-    background-size: 75%;
+    cursor: pointer;
+    background-size: 90% 120%;
+    border: 2px solid #000000;
+}
+
+.listView {
+    background: url(https://img.icons8.com/?size=100&id=82758&format=png&color=000000) 50% 50% no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
     border: 2px solid black;
+    cursor: pointer;
 }
 
-.listView{
-    background: url(../../../../../../assets/Images/image.png) 50% 50% no-repeat;
-    width: 35px;
-    height: 35px;
-    background-size: cover;
-        border: 2px solid black;
-}
-
-.selectedG{
+.selectedG {
     scale: 1.1;
 }
 
 @media screen and (max-width: 1250px) {
-    .holder{
+    .holder {
         width: 73%;
     }
 }
@@ -40,8 +42,8 @@
 
 
 
-.categories{
-        cursor: pointer;
+.categories {
+    cursor: pointer;
     padding-left: 12px;
     padding-right: 12px;
     height: 100%;
@@ -51,13 +53,14 @@
     color: #2F2F2F;
     font-size: 18px;
     font-family: DannaMedium;
-    line-height:35px;
+    line-height: 35px;
 }
-.categories:active{
+
+.categories:active {
     scale: 1.1;
 }
 
-.clearSort{
+.clearSort {
     background: url(https://img.icons8.com/?size=100&id=71202&format=png&color=000000) 50% 50% no-repeat;
     background-size: 100%;
     width: 35px;
@@ -65,11 +68,11 @@
     cursor: pointer;
 }
 
-.clearSort:active{
+.clearSort:active {
     scale: 1.1;
 }
 
-.selected{
+.selected {
     padding-left: 12px;
     padding-right: 12px;
     height: 100%;
@@ -79,16 +82,16 @@
     color: red;
     font-size: 18px;
     font-family: DannaMedium;
-    line-height:35px;
+    line-height: 35px;
 }
 
 @media screen and (max-width: 900px) {
-    .title{
+    .title {
         display: none;
     }
 }
 
-.sortResponsive{
+.sortResponsive {
     width: 103px;
     height: 58px;
     border-radius: 40px;
@@ -102,7 +105,7 @@
     display: none;
 }
 
-.filterResponsive{
+.filterResponsive {
     width: 103px;
     height: 58px;
     border-radius: 40px;
@@ -117,23 +120,26 @@
 }
 
 @media screen and (max-width: 900px) {
-    .categories{
+    .categories {
         display: none;
     }
-    .holder{
+
+    .holder {
         width: 100%;
         margin-bottom: 15px;
     }
-    .sortResponsive{
+
+    .sortResponsive {
         display: block;
     }
-    .filterResponsive{
+
+    .filterResponsive {
         display: block;
     }
 }
 
 @media screen and (max-width: 543px) {
-    .holder{
+    .holder {
         width: 80%;
     }
 }

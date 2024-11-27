@@ -29,13 +29,13 @@
 
 @media screen and (max-width: 900px) {
     .holder{
-        width: 49%;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 543px) {
     .holder{
-        width: 80%;
+        width: 100%;
     }
 }
 

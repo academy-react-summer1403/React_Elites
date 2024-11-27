@@ -122,7 +122,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-        path: "/Compare-products-select",
+        path: "/Compare-products-select/:id",
         element: <CompareSelect />,
         errorElement: <ErrorPage />
       },

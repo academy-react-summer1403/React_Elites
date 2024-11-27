@@ -7,7 +7,7 @@ const Price = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const {t} = useTranslation();
   return (
-    <div className={style.price} data-theme={darkMode ? "dark" : "lightMode"}>{props.price} {t("toman")}</div>
+    <div className={style.price} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{props.price} {t("toman")}</div>
   )
 }
 
