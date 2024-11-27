@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './AllComments.module.css'
 import { Comment } from '../Items/Comment'
 import { useGlobalState } from '../../../../../State/State';
 import { AddComment } from './AddComment/AddComment';
 import { PulseLoader, ScaleLoader } from 'react-spinners';
 
-const AllComments = ({comments, id, isLoading}) => {
+const AllComments = ({comments, id, isLoading, title}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
@@ -15,6 +15,8 @@ const AllComments = ({comments, id, isLoading}) => {
       {comments.slice(0,3).map((item, index) => {
         return(
           <Comment
+            id={id}
+            commentId={item.id}
             key={index}
             title={item.title}
             describe={item.describe}
@@ -26,7 +28,7 @@ const AllComments = ({comments, id, isLoading}) => {
           />
         )
         })}
-        <AddComment comments={comments} id={id} />
+        <AddComment comments={comments} id={id} title={title} />
     </div>
   )
 }

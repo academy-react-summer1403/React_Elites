@@ -16,6 +16,7 @@
     margin-right: 20px;
 }
 .inputs{
+    outline: 0 none;
     width: 362px;
     background: white;
     font-size: 14px;
@@ -23,6 +24,14 @@
     text-align: right;
     color: #707070;
     padding: 2px;
+}
+.send{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+    background: #3772FF url("https://img.icons8.com/?size=100&id=TbpCBFVQVHZA&format=png&color=ffffff") 50% 50% no-repeat;
+    background-size: 60%;
 }
 .borderG{
     border-bottom: 2px solid #DCDCDC;
@@ -78,14 +87,6 @@
     font-size: 18px;
     font-family: DannaMedium;
     gap: 5px;
-}
-.send{
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    margin-right: 10px;
-    background: #3772FF url("https://img.icons8.com/?size=100&id=TbpCBFVQVHZA&format=png&color=ffffff") 50% 50% no-repeat;
-    background-size: 60%;
 }
 .closeIcon{
     background: url(https://img.icons8.com/?size=16&id=82771&format=png&color=FF0000);

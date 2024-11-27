@@ -14,6 +14,9 @@ const { useGlobalState} = createGlobalState({
     courseDisLike: "0",
     isReserved: "0",
     isFavoriteCourse: false,
+    isFavouriteBlog: false,
+    isReplying: false,
+    courseCommentId: "",
 })
 
 

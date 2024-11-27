@@ -7,6 +7,14 @@
     color: white;
     font-size: 16px;
     font-family: DannaMedium;
+}.holderMiniBasketOveral{
+    overflow: hidden;
+}
+.titleMiniBasketCount{
+    font-family: DannaMedium;
+    color: black;
+    font-size: 15px;
+    text-align: right;
 }
 
 .selected {
@@ -45,80 +53,68 @@
     position: absolute;
     top: 40px;
     left: 0;
-    border: 1px solid #eee;
     border-radius: 5px;
     box-shadow: 0 0 10px 1px #eee;
-    width: 320px;
     font-size: 10px;
-    padding: 10px;
     z-index: 2000;
     display: none;
+    padding: 10px;
+    overflow: hidden;
 }
 
-.miniBasket > div > h2{
-    color: black;
-    font-size: 22px;
-  text-align: right;
+.miniBasketItems{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
 }
 
 .buttonHolder{
     display: flex;
     justify-content: right;
-    padding-top: 5px;
-    border-top: 1px solid #ccc;
 }
-
 .button{
     background-color: rgb(0, 106, 255);
-  text-align: right;
+    text-align: right;
     border-radius: 32px;
-    border: 2px solid blue;
     padding: 10px;
     font-size: 15px;
-    font-weight: 600;
+    font-family: DannaMedium;
 }
 
-.miniBasketItems>li {
-    padding: 10px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    gap: 10px;
-    direction: rtl;
-}
-
-.miniBasketItems {
-    padding: 10px;
-    margin: 0;
-    list-style: none;
-    max-height: 280px;
-    overflow-y: auto;
-}
-
-.imgMiniBasket {
+.imgMiniBasket{
     width: 100px;
+    height: 70px;
+    border-radius: 8px;
 }
 
 .titleAndPrice {
     color: #000000;
     font-size: 16px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    margin-right: 10px;
 }
 
-.title{
-    font-size: 19px;
-    font-weight: 700px;
+.holderReserve{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: right;
+    direction: rtl;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .price,
 .title {
-    width: 100%;
-  text-align: right;
+    width: 150px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: DannaMedium;
 }
 
 @media screen and (max-width: 1217px) {

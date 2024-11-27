@@ -101,6 +101,7 @@
     flex-flow: row wrap;
     justify-content: center;
     row-gap: 100px;
+    height: 100vh;
 }
 
 .header{

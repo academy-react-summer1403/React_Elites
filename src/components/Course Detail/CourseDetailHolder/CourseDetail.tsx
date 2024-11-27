@@ -22,7 +22,9 @@ const CourseDetail = () => {
   const [related, setrelated] = useState([])
   const [allCourseListt, setallCourseList] = useState([])
   const [isLoading, setisLoading] = useState(true)
+
   const { id } = useParams();
+
 
   const getCourseDetail = async () => {
     const Details = await getCourseById(id)
@@ -74,7 +76,7 @@ const CourseDetail = () => {
           id={courseDetail?.courseId}
         />
         <Description description={courseDetail?.describe} isLoading={isLoading} currentUserRateNumber={courseDetail?.currentUserRateNumber} id={id} />
-        <AllComments isLoading={isLoading} comments={comments} id={id} />
+        <AllComments isLoading={isLoading} comments={comments} id={id} title={courseDetail?.title}/>
         <CoursesHolder related={related} />
       </div>
     </div>

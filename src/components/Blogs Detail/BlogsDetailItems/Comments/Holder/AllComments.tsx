@@ -5,7 +5,7 @@ import { useGlobalState } from '../../../../../State/State';
 import { AddComment } from './AddComment/AddComment';
 import { PulseLoader } from 'react-spinners';
 
-const AllComments = ({comments, isLoading}) => {
+const AllComments = ({comments, isLoading, title}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
@@ -25,10 +25,11 @@ const AllComments = ({comments, isLoading}) => {
               currentUserIsLike={item.currentUserIsLike}
               currentUserIsDissLike={item.currentUserIsDissLike}
               id={item.id}
+              pictureAddress={item.pictureAddress}
             />
           )
         })}
-        <AddComment comments={comments}  />
+        <AddComment title={title} comments={comments}/>
     </div>
   )
 }

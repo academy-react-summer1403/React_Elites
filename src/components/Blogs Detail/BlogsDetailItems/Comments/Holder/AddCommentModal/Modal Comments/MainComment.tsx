@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import style from './ModalComments.module.css'
 import { likeComment } from '../../../../../../../core/services/api/postCommentBlogLike'
 import toast, { Toaster } from 'react-hot-toast'
+import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 
-const MainComment = ({title, describe, autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
+const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
 
     const [isClicked, setIsClicked] = useState(false)
     const [isClicked2, setIsClicked2] = useState(false)
@@ -31,9 +32,9 @@ const MainComment = ({title, describe, autor, dissLikeCount, likeCount, inserDat
             <div className={style.holderUser}>
                 <div className={style.holderUsername}>
                     <div className={style.userName}> {autor} </div>
-                    <div className={style.insertDate}> {inserDate} </div>
+                    <div className={style.insertDate}> {dateConvertor(inserDate)} </div>
                 </div>
-                <img className={style.userAvatar} />
+                <img className={style.userAvatar} src={pictureAddress} />
             </div>
         </div>
         <div className={style.content}>

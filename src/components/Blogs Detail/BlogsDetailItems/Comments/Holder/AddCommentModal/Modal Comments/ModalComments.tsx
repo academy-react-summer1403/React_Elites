@@ -6,7 +6,7 @@ import { ReplyComment } from './ReplyComment'
 import toast from 'react-hot-toast'
 import { likeComment } from '../../../../../../../core/services/api/postCommentBlogLike'
 
-const ModalComments = ({title, describe, autor, dissLikeCount, likeCount, inserDate, id, currentUserIsLike, currentUserIsDissLike}) => {
+const ModalComments = ({title, pictureAddress, describe, autor, dissLikeCount, likeCount, inserDate, id, currentUserIsLike, currentUserIsDissLike}) => {
 
     const [repliesObj, setRepliesObj] = useState([])
 
@@ -21,7 +21,8 @@ const ModalComments = ({title, describe, autor, dissLikeCount, likeCount, inserD
 
     return (
         <div className={style.holderReplyAndComment}>
-            <MainComment 
+            <MainComment
+            pictureAddress={pictureAddress} 
             title={title}
             describe={describe}
             autor={autor}
@@ -35,6 +36,7 @@ const ModalComments = ({title, describe, autor, dissLikeCount, likeCount, inserD
             {repliesObj.map((item, index) => {
                 return(
                     <ReplyComment
+                        pictureAddress={item.pictureAddress}
                         key={index}
                         title={item.title}
                         describe={item.describe}

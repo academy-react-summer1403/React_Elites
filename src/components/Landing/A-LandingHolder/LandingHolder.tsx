@@ -46,13 +46,10 @@ const LandingHolder = () => {
   
 
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
-  const { scrollYProgress } = useScroll()
   
   return (
     <>
       <Toaster />
-
-        <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
         <div className={style.landing} data-theme={darkMode ? "dark" : "light"}>
           <ContentLandingHolder
             MAndJ={MAndJ}

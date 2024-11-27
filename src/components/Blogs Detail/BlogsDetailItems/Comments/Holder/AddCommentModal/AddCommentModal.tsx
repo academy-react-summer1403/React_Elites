@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Modal.module.css'
 import { useSpring, animated, useTransition } from '@react-spring/web'
 import { ModalComments } from './Modal Comments/ModalComments'
 import { useTranslation } from 'react-i18next';
+import { Field, Form, Formik } from 'formik';
 
-const AddCommentModal = ({comments, isOpen, onClose}) => {
+const AddCommentModal = ({comments, isOpen, onClose, title}) => {
     const { t } = useTranslation();
+    const [addYourComment, setaddYourComment] = useState(false)
 
     const handleEscape = e => {
         if(e.keyCode == 27) {
@@ -39,6 +41,28 @@ const AddCommentModal = ({comments, isOpen, onClose}) => {
     return modalTransition((styles, isOpen) => isOpen && (
         <>
             <animated.div style={styles} className={style.overLay} onClick={onClose}></animated.div>
+            {addYourComment === true && 
+                    <Formik
+            initialValues={{Title: '', Describe: ''}}
+            onSubmit={async (values) => {
+                // let res = await 
+                // console.log(res)
+                // if(res.success === true){
+                //     toast.success("نظر شما به بلاگ اضافه شد")
+                // }
+            }}
+        >
+            <Form >
+            <div className={style.addCommentInput}>
+            <div className={style.inputHolders}>
+                    <Field name='Title' className={`${style.inputs} ${style.borderG}`} placeholder='عنوان نظر خود را بنویسید' />
+                    <Field name='Describe' className={style.inputs} placeholder='متن نظر خود را بنویسید' />
+                </div>
+                <button type='submit' className={style.send}></button>
+            </div>
+            </Form>
+            </Formik>
+            }
         <animated.div style={springs} className={style.holder}>
             <div className={style.header}>
                 <div className={style.close} onClick={() => {
@@ -47,18 +71,19 @@ const AddCommentModal = ({comments, isOpen, onClose}) => {
                     <div className={style.closeIcon}></div>
                 </div>
             <div className={style.titleHolder}>
-            <div className={style.titleBlog}>( فیگما یا ادوبه ایکس دی ؟ )</div>
+            <div className={style.titleBlog}>({title})</div>
                 <div className={style.titleModal}> نظرات دانشجو ها و اساتید </div>
             </div>
         </div>
         <div className={style.yourCommentHodler}>
-            <div className={style.addComment}>نظر شما 
+            <div className={style.addComment} onClick={() => setaddYourComment(!addYourComment)}>نظر شما 
                 <div className={style.addCommentIcon}></div>
             </div>
         </div>
         {comments.map((item, index) => {
             return (
                 <ModalComments
+                    pictureAddress={item.pictureAddress}
                     key={index}
                     title={item.title}
                     describe={item.describe}
