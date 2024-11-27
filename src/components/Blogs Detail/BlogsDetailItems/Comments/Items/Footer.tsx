@@ -3,8 +3,9 @@ import style from './style.module.css'
 import { useGlobalState } from '../../../../../State/State';
 import { likeComment } from '../../../../../core/services/api/postCommentBlogLike';
 import toast, { Toaster } from 'react-hot-toast';
+import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi';
 
-const Footer = ({autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
+const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [renderLike, setrenderLike] = useState(false)
 
@@ -50,8 +51,8 @@ const Footer = ({autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLi
         </div>
         <div className={style.user}>
             <div className={style.username} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {autor} </div>
-            <img className={style.profile} />
-            <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {inserDate} </div>
+            <img className={style.profile} src={pictureAddress} />
+            <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {dateConvertor(inserDate)} </div>
         </div>
     </div>
   )

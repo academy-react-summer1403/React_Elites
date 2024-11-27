@@ -5,13 +5,14 @@ import { getReplyComment } from '../../../../../../../core/services/api/getReply
 import { ReplyComment } from './ReplyComment'
 import toast from 'react-hot-toast'
 import { likeComment } from '../../../../../../../core/services/api/postCommentBlogLike'
+import { getCourseReplyComment } from '../../../../../../../core/services/api/getReplyCourseComment'
 
-const ModalComments = ({title, describe, autor, dissLikeCount, pictureAddress, likeCount, inserDate, id, currentUserIsLike, currentUserIsDissLike}) => {
+const ModalComments = ({title, courseId, describe, author, dissLikeCount, pictureAddress, likeCount, insertDate, id}) => {
 
     const [repliesObj, setRepliesObj] = useState([])
 
     const getReplyCall = async (id) => {
-      let res = await getReplyComment(id)
+      let res = await getCourseReplyComment(courseId, id)
       setRepliesObj(res)
     }
 
@@ -22,15 +23,13 @@ const ModalComments = ({title, describe, autor, dissLikeCount, pictureAddress, l
     return (
         <>
         <div className={style.holderReplyAndComment}>
-            <MainComment 
+            <MainComment
             title={title}
             describe={describe}
-            autor={autor}
+            author={author}
             dissLikeCount={dissLikeCount}
             likeCount={likeCount}
-            inserDate={inserDate}
-            currentUserIsLike={currentUserIsLike}
-            currentUserIsDissLike={currentUserIsDissLike}
+            insertDate={insertDate}
             id={id}
             pictureAddress={pictureAddress}
             />
@@ -40,10 +39,11 @@ const ModalComments = ({title, describe, autor, dissLikeCount, pictureAddress, l
                         key={index}
                         title={item.title}
                         describe={item.describe}
-                        autor={item.autor}
+                        author={item.author}
                         dissLikeCount={item.dissLikeCount}
                         likeCount={item.likeCount}
-                        inserDate={item.inserDate}
+                        insertDate={item.insertDate}
+                        pictureAddress={item.pictureAddress}
                     />
                 )
             })}

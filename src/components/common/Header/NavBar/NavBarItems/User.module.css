@@ -35,7 +35,7 @@
     position: absolute;
     top: 43px;
     right: 0;
-    z-index: 10;
+    z-index: 1000000000000000000000000000000000000000000000;
     border-radius: 5px;
 }
 

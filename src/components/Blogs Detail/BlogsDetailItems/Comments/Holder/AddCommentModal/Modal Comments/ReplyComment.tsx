@@ -1,7 +1,8 @@
 import React from 'react'
 import style from './ReplyComments.module.css'
+import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 
-const ReplyComment = ({title, describe, autor, dissLikeCount, likeCount, inserDate}) => {
+const ReplyComment = ({title, pictureAddress, describe, autor, dissLikeCount, likeCount, inserDate}) => {
     return (
         <div className={style.mainHolder}>
             <div className={style.isReply}></div>
@@ -10,9 +11,9 @@ const ReplyComment = ({title, describe, autor, dissLikeCount, likeCount, inserDa
                 <div className={style.holderUser}>
                     <div className={style.holderUsername}>
                         <div className={style.userName}> {autor} </div>
-                        <div className={style.insertDate}> {inserDate} </div>
+                        <div className={style.insertDate}> {dateConvertor(inserDate)} </div>
                     </div>
-                    <img className={style.userAvatar} />
+                    <img className={style.userAvatar} src={pictureAddress} />
                 </div>
             </div>
             <div className={style.content}>

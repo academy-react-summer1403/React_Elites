@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Modal.module.css'
 import { useSpring, animated, useTransition } from '@react-spring/web'
 import { ModalComments } from './Modal Comments/ModalComments'
@@ -6,9 +6,14 @@ import { useTranslation } from 'react-i18next';
 import { Field, Form, Formik } from 'formik';
 import { postCourseComment } from '../../../../../../core/services/api/postCommentCourse';
 import toast, { Toaster } from 'react-hot-toast';
+import { postCourseReplyComment } from '../../../../../../core/services/api/postCourseReplyComment';
+import { useGlobalState } from '../../../../../../State/State';
 
-const AddCommentModal = ({comments, isOpen, onClose, id}) => {
+const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
     const { t } = useTranslation();
+    const [addYourComment, setaddYourComment] = useState(false)
+    const [isReplying, setIsReplying] = useGlobalState('isReplying');
+    const [commentId, setCommentId] = useGlobalState('courseCommentId');
 
     const handleEscape = e => {
         if(e.keyCode == 27) {
@@ -42,7 +47,8 @@ const AddCommentModal = ({comments, isOpen, onClose, id}) => {
     return modalTransition((styles, isOpen) => isOpen && (
         <>
         <animated.div style={styles} className={style.overLay} onClick={onClose}></animated.div>
-        <Formik
+            {addYourComment === true && 
+                    <Formik
             initialValues={{Title: '', Describe: '', CourseId: id}}
             onSubmit={async (values) => {
                 let res = await postCourseComment(values)
@@ -61,7 +67,28 @@ const AddCommentModal = ({comments, isOpen, onClose, id}) => {
                 <button type='submit' className={style.send}></button>
             </div>
             </Form>
-        </Formik>
+            </Formik>
+            }
+            {isReplying === true &&
+                <Formik
+                initialValues={{CommentId: commentId, CourseId: id, Title: '', Describe: ''}}
+                onSubmit={async (values) => {
+                    let res = await postCourseReplyComment(values)
+                    if(res.success === true){
+                        toast.success("پاسخ شما به کامنت اضافه شد")
+                    }
+                }}
+            > 
+            <Form >
+            <div className={style.addCommentInput}>
+            <div className={style.inputHolders}>
+                    <Field name='Title' className={`${style.inputs} ${style.borderG}`} placeholder='عنوان پاسخ خود را بنویسید' />
+                    <Field name='Describe' className={style.inputs} placeholder='متن پاسخ خود را بنویسید' />
+                </div>
+                <button type='submit' className={style.send}></button>
+            </div>
+            </Form>
+            </Formik>}
         <animated.div style={springs} className={style.holder}>
             <div className={style.header}>
                 <div className={style.close} onClick={() => {
@@ -70,29 +97,28 @@ const AddCommentModal = ({comments, isOpen, onClose, id}) => {
                     <div className={style.closeIcon}></div>
                 </div>
             <div className={style.titleHolder}>
-            <div className={style.titleBlog}>( فیگما یا ادوبه ایکس دی ؟ )</div>
+            <div className={style.titleBlog}>({title})</div>
                 <div className={style.titleModal}> نظرات دانشجو ها و اساتید </div>
             </div>
         </div>
         <div className={style.yourCommentHodler}>
-            <div className={style.addComment}>نظر شما 
+            <div className={style.addComment} onClick={() => setaddYourComment(!addYourComment)}>نظر شما 
                 <div className={style.addCommentIcon}></div>
             </div>
         </div>
         {comments.map((item, index) => {
             return (
                 <ModalComments
+                    courseId={id}
                     key={index}
                     title={item.title}
                     describe={item.describe}
-                    autor={item.autor}
+                    author={item.author}
                     dissLikeCount={item.disslikeCount}
                     likeCount={item.likeCount}
-                    inserDate={item.inserDate}
+                    insertDate={item.insertDate}
                     id={item.id}
                     pictureAddress={item.pictureAddress}
-                    currentUserIsLike={item.currentUserIsLike}
-                    currentUserIsDissLike={item.currentUserIsDissLike}
                 />
             )
         })}

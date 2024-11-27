@@ -4,6 +4,8 @@
     display: flex;
     justify-content: right;
     flex-flow: row wrap;
+    align-items: center;
+    direction: rtl;
 }
 
 .title{

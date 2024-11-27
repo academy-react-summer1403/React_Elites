@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from '../AllComments.module.css'
 import { AddCommentModal } from '../AddCommentModal/AddCommentModal'
 
-const AddComment = ({comments}) => {
+const AddComment = ({comments, title}) => {
   const [openModal, setOpenModal] = useState(false)
   return (
     <>
@@ -11,7 +11,7 @@ const AddComment = ({comments}) => {
             <div className={style.bigText}> نظر شما </div>
             <div className={style.smallText}> برای نظر دادن کلیک کنید </div>
         </div>
-        <AddCommentModal comments={comments} isOpen={openModal} onClose={() => setOpenModal(false)} />
+        <AddCommentModal title={title} comments={comments} isOpen={openModal} onClose={() => setOpenModal(false)} />
     </>
   )
 }

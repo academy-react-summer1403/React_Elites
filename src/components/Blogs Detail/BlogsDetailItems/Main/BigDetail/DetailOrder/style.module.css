@@ -8,6 +8,7 @@
 }
 
 .reserve{
+    cursor: pointer;
     width: 28.2798833819242%;
     height: 100%;
     color: #FCFCFC;
@@ -41,6 +42,7 @@
 }
 
 .AddToFav{
+        cursor: pointer;
     width: 48.39650145772595%;
     height: 100%;
     color: #FCFCFC;
@@ -56,6 +58,7 @@
 }
 
 .like{
+        cursor: pointer;
     width: 56px;
     height: 56px;
     border-radius: 100%;
@@ -70,6 +73,7 @@
 }
 
 .dislike{
+        cursor: pointer;
     width: 56px;
     height: 56px;
     border-radius: 100%;
