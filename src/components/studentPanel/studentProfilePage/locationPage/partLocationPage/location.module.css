@@ -27,4 +27,13 @@
     border-radius: 16px;
 
 }
-
+.MapHolder{
+    position: relative;
+    width: 50vw;
+    height: 50vh;
+}
+.MapContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

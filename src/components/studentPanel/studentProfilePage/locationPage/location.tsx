@@ -2,6 +2,7 @@ import { Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleLocation from "./partLocationPage/location.module.css";
+import {Map} from "./partLocationPage/Map";
 
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../State/State";
@@ -30,7 +31,7 @@ const LocationForm = () => {
                         <div className={styleLocation.left}>
                             <div className={styleLocation.locationHolder}> 
                                 <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>داخل نقشه موقعیت مکانی محل سکونت خود را انتخاب کنید</h1>
-                                <div className={styleLocation.location}></div>
+                                <Map />
                             </div>
                         </div>
                     </div>
