@@ -6,6 +6,7 @@ import { useGlobalState } from '../../../../../../State/State'
 
 const AddToFavourite = ({id}) => {
   const [isFavouriteBlog, setisCurrentUserFavorite] = useGlobalState('isFavouriteBlog');
+  const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
 
   const addToFavCall = async (newsId) => {
@@ -13,6 +14,9 @@ const AddToFavourite = ({id}) => {
     if(res.success === true) {
       toast.success("بلاگ به لیست مورد علاقه اضافه شد")
       setisCurrentUserFavorite("1")
+    }
+    else if(isLogin === false){
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   return (

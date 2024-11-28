@@ -1,17 +1,21 @@
 import {Field} from "formik";
 import styleFilter from "./../filter.module.css";
-import search from '../../../../assets/Images/icons8-search-30.png'
+import { useGlobalState } from "../../../../State/State";
 import { useTranslation } from 'react-i18next';
 
-const SearchFilter = () => {
+const SearchFilter = ({setSearchValue}) => {
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
+
   return (
     <div className={styleFilter.filterDetail}>
-      <div className="flex gap-1.5">
-        <img className={styleFilter.filterTextImg} src={search} /> 
-        <p className={styleFilter.filterText}>{t("search")}</p>
+      <div className={styleFilter.Flex}>
+      <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgSearch}`} data-theme={darkMode ? "search" : "lightMode"}/>
+        <p className={styleFilter.filterText} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("search")}</p>
       </div>
-      <Field className={styleFilter.filterInput} name="password" placeholder={t("searchBlogs")} />
+      <input className={styleFilter.filterInput} name="password" placeholder={t("searchBlogs")} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
+          setSearchValue(e.target.value)
+        }}/>
       <div className={styleFilter.searchBox}></div>
     </div>
 )

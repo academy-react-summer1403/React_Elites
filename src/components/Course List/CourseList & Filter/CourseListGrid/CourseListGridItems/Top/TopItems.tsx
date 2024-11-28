@@ -5,7 +5,7 @@ import { SortModal } from './Sort Modal/SortModal'
 import { useGlobalState } from '../../../../../../State/State'
 import { useTranslation } from 'react-i18next';
 
-const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, setCol, applySort, setapplySort }) => {
+const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, setCol, applySort, setapplySort, }) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isClicked1, setIsClicked1] = useState(false)
   const [isClicked2, setIsClicked2] = useState(false)
@@ -82,8 +82,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         }
       }} >{t("order")}
       </div>
-      {sortModal && <SortModal sortModal={sortModal} setSortModal={setSortModal} />}
-
+      {sortModal && <SortModal setSortModal={setSortModal} setSortType={setSortType} setCol={setCol} setapplySort={setapplySort} applySort={applySort} />}
     </>
   )
 }

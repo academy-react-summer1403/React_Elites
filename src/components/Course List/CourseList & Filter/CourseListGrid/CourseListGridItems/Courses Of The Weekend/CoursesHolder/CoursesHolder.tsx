@@ -38,7 +38,7 @@ const CoursesHolder = ({courseList, isLoading}) => {
         category={item.technologyList}
         level={item.levelName}
         image={item.tumbImageAddress}
-        key={index} 
+        key={index}
         />
       })}
     </div>

@@ -15,9 +15,9 @@ const CourseList = () => {
   const [searchValue, setSearchValue] = useState("")
   const [isSearched, setIsSearched] = useState(false)
   const [isCourse, setisCourse] = useGlobalState('isCourse');
-  const [categoryId, setcategoryId] = useState([2,3])
-  const [minValue, set_minValue] = useState("");
-  const [maxValue, set_maxValue] = useState("");
+  const [categoryId, setcategoryId] = useState(2)
+  const [minValue, set_minValue] = useState("1000");
+  const [maxValue, set_maxValue] = useState("100000000");
   const [maxValueBining, setmaxValueBining] = useState()
   const [minValueBining, setminValueBining] = useState()
   const { scrollYProgress } = useScroll()
@@ -27,8 +27,6 @@ const CourseList = () => {
     let res2 = await Sort("Cost", "ASC")
     setmaxValueBining(res.courseFilterDtos[0].cost)
     setminValueBining(res2.courseFilterDtos[0].cost)
-    set_maxValue(String(res.courseFilterDtos[0].cost))
-    set_minValue(String(res2.courseFilterDtos[0].cost))
   }
 
   useEffect(() => {

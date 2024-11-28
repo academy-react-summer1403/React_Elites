@@ -8,6 +8,7 @@ import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { Date } from '../FilterDate/Date'
 import { useTranslation } from "react-i18next";
+import { useGlobalState } from '../../../../../../State/State'
 
 const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {
   const { t } = useTranslation();
@@ -26,14 +27,13 @@ const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxVal
           set_minValue={set_minValue}
           set_maxValue={set_maxValue}
         />
-        <Date />
         <span className={style.deleteFilter} onClick={() => {
           setApplyFilter(false);
           setTeacherId("")
           setLevelId("")
-          setcategoryId([])
-          set_minValue("")
-          set_maxValue("")
+          setcategoryId(2)
+          set_minValue("1000000000")
+          set_maxValue("1000")
         }}> {t("deleteFilter")} </span>
         <span className={applyFilter ? style.applyFilter2 : style.applyFilter} onClick={() => {
           setApplyFilter(true);

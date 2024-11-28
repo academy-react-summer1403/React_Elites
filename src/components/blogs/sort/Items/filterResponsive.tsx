@@ -2,6 +2,7 @@ import React from 'react'
 import styleBlogList from '../../../../Style/blogList.module.css'
 import { FilterModal } from "../../Filter Modal/FilterModal.tsx";
 import { useTranslation } from 'react-i18next';
+import { Filter } from '../../Filter Modal/filter.tsx';
 
 const FilterResBlogList = ({ setFilterModal, filterModal }) => {
   const { t } = useTranslation();
@@ -15,7 +16,7 @@ const FilterResBlogList = ({ setFilterModal, filterModal }) => {
           setFilterModal(false)
         }
       }}>{t("filter")}</div>
-      {filterModal && <FilterModal setFilterModal={setFilterModal} />}
+      {filterModal && <Filter setFilterModal={setFilterModal} />}
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Holder.module.css'
 import { Title } from './Title'
 import { Search } from '../FilterSearch/Search'
@@ -7,24 +7,42 @@ import { Level } from '../FilterLevel/Level'
 import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { Date } from '../FilterDate/Date'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { useGlobalState } from '../../../../../../../../../State/State'
 
-const FilterItemsHolder = (props) => {
+const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched, setClicked}) => {
   const { t } = useTranslation();
+  const[startDate, setStartDate] = useGlobalState("startDate")
+  const[endDate, setEndDate] = useGlobalState("endDate")
   return (
     <div className={style.holder}>
-      <div className={style.holderTitle}>
-      <Title />
-        <div className={style.closeBtn} onClick={() => {
-          props.setClicked(false)
-        }}> {t("close")} </div>
-      </div>
-        <Search />
-        <Category />
-        <Level />
-        <Teacher />
-        <Price />
-        <Date />
+        <Title setClicked={setClicked} />
+        <Search setSearchValue={setSearchValue} setIsSearched={setIsSearched} searchValue={searchValue} isSearched={isSearched}/>
+        <Category setcategoryId={setcategoryId} />
+        <Level setLevelId={setLevelId}/>
+        <Teacher setTeacherId={setTeacherId}/>
+        <Price 
+          minValueBining={minValueBining}
+          maxValueBining={maxValueBining}
+          maxValue={maxValue}
+          minValue={minValue}
+          set_minValue={set_minValue}
+          set_maxValue={set_maxValue}
+        />
+        <span className={style.deleteFilter} onClick={() => {
+          setApplyFilter(false);
+          setTeacherId("")
+          setLevelId("")
+          setcategoryId(2)
+          set_minValue("1000000000")
+          set_maxValue("1000")
+          setStartDate("")
+          setEndDate("")
+        }}> {t("deleteFilter")} </span>
+        <span className={applyFilter ? style.applyFilter2 : style.applyFilter} onClick={() => {
+          setApplyFilter(true);
+        }}> {t("applyFilter")} </span>
+
     </div>
   )
 }

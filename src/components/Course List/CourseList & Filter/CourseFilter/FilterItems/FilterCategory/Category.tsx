@@ -37,8 +37,8 @@ const Category = ({setcategoryId}) => {
             {categoriesList.map((item, index) => {
               return (
                 <>
-                  <input type="checkbox" id={String(index)} name='teachers' className={style.input} onChange={() => {
-                    setcategoryId([item.id]);
+                  <input type="radio" name="categories" id={String(index)} className={style.input} onChange={() => {
+                    setcategoryId(item.id);
                   }}/>
                   <label htmlFor={String(index)} className={style.filter}>{item.techName}</label>
                 </>

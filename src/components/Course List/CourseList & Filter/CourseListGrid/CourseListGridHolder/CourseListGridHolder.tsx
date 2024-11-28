@@ -6,6 +6,7 @@ import { ChangePageList } from '../ChangePageList/ChangePageList'
 import { allCourseList } from '../../../../../core/services/api/AllCourseList'
 import { Filter } from '../../../../../core/services/api/Filter'
 import { Sort } from '../../../../../core/services/api/Sort'
+import { useGlobalState } from '../../../../../State/State'
 
 
 const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTotalCount, totalCount, levelId, searchValue, isSearched, categoryId}) => {
@@ -24,25 +25,30 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
 
   const getFilteredList = async () => {
 
-    let data = await Filter(String(teacherId), String(pagInation), String(levelId), String(categoryId), String(categoryId.length))
+    let data = await Filter(teacherId, pagInation, levelId, categoryId, maxValue, minValue)
 
     let sortData = await Sort(col, sortType)
 
     const allCourses = await allCourseList(pagInation)
 
     if(applyFilter === true){
+      setisLoading(true)
       setCourseList(data.courseFilterDtos)
       setTotalCount(data.totalCount)
+      setisLoading(false)
     }
     else if(applyFilter === false && applySort === false){
+      setisLoading(true)
       setCourseList(allCourses.courseFilterDtos)
       setTotalCount(allCourses.totalCount)
       setCourseList(allCourses.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
+      setisLoading(false)
     }
     else if(applySort === true){
+      setisLoading(true)
       setCourseList(sortData.courseFilterDtos)
+      setisLoading(false)
     }
-    setisLoading(false)
   }
 
 
@@ -73,7 +79,7 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
 
   return (
     <div className={style.courseListGridHolder}>
-      <TopHolder clicked={clicked} setClicked={setClicked} setapplySort={setapplySort} sortModal={sortModal} applySort={applySort} setSortModal={setSortModal} setSortType={setSortType} setCol={setCol}/>
+      <TopHolder clicked={clicked} setClicked={setClicked} sortModal={sortModal} setSortModal={setSortModal} setSortType={setSortType} setCol={setCol} setapplySort={setapplySort} applySort={applySort}/>
       <CoursesHolder 
       courseList={courseList}
       isLoading={isLoading}

@@ -1,6 +1,5 @@
-.level{
+.level1{
     width: 100%;
-    height: 48px;
     background: #F1F1F1;
     color: #707070;
     font-size: 12px;
@@ -11,17 +10,62 @@
     padding: 15px;
     font-family: DannaMedium;
     white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
     text-overflow: ellipsis;
-    overflow: hidden;
+}
+.filterLevel{
+    transition: 0.3s;
+    width: 100%;
+    height: auto;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+    background: rgb(178, 178, 178);
+}
+.level{
+    width: 100%;
+    display: block;
+    padding: 10px 15px 10px 15px;
+ text-align: right;
+    font-family: DannaMedium;
+    color: black;
+    font-size: 14px;
+}
+.input{
+    display: none;
+}
+.input:checked + label {
+    font-size: 15px;
+    font-family: DannaBold;
+}
+.arrowDown{
+    width: 20px;
+    height: 20px;
+    background: url(../../../../../../assets/Images/arrow down.png);
+    background-size: cover;
+}
+.arrowUp{
+    width: 20px;
+    height: 20px;
+    background: url(../../../../../../assets/Images/arrow up.png);
+    background-size: cover;
 }
 
 .titleLevel{
     color: #2F2F2F;
     font-size: 16px;
     font-family: DannaMedium;
-    background: url(../../../../../../../../../assets/Images/icons8-layer-48.png) 100% 50% no-repeat;
-    background-size: 20%;
-    width: 128px;
+    width: 80%;
+    padding-right: 5px;
  text-align: right;
-    /* background: url(../../../../../../assets/Images/icons8-search-30.png) no-repeat 90% 50%; */
+}
+
+.holderIconAndTitle{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-flow: row nowrap;
+    direction: rtl;
 }

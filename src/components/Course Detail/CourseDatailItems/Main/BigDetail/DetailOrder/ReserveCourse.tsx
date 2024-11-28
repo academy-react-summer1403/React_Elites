@@ -6,12 +6,16 @@ import { useGlobalState } from '../../../../../../State/State'
 
 const ReserveCourse = ({id}) => {
   const [isReserved, setIsReserved] = useGlobalState('isReserved');
+  const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
   const reserveCourse = async () => {
     let res = await postReserveCourse(id)
     if(res.success === true){
       toast.success("دوره رزرو شد")
       setIsReserved("1")
+    }
+    if(isLogin === false){
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   return (

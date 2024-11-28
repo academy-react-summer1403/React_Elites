@@ -13,20 +13,10 @@ const CommentDashboard = () => {
   const [comments, setComments] = useState([])
   const {id} = useParams();
 
-  const getBlogDetail = async () => {
-    const Details = await getBlogById(id)
-    setBlogDetail(Details.detailsNewsDto)
-    setComments(Details.commentDtos)
-  }
-  useEffect(() => {
-    getBlogDetail()
-  }, [])
-
   return (
     <div className={style.commentDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
       <TitleHeaderMyCommentList />
       <CoursesAndBlogsHolder />
-      <AllComments comments={comments}/>
     </div>
   )
 }

@@ -1,36 +1,23 @@
 import style from "./../../../../../Style/studentPanel.module.css";
 import { useGlobalState } from "../../../../../State/State";
 import { NavLink } from "react-router-dom";
-import ApexCharts from 'apexcharts'
 import Chart from 'react-apexcharts'
 
 
 const MiddleStatusDashboard = ({percentage}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
-
-  const options = {
-    chart: {
-      height: 350,
-    },
-    fill: {
-      type: 'solid',
-    },
-    stroke: {
-      lineCap: "round",
-    },
-    colors: ["#fce803"],
+  var options = {
     plotOptions: {
       radialBar: {
         hollow: {
-          margin: 15,
-          size: "65%",
+          size: "65%"
         },
-       
         dataLabels: {
+          showOn: "always",
           name: {
-            show: false,
             offsetY: -10,
+            show: false,
             color: "#888",
             fontSize: "13px"
           },
@@ -41,17 +28,20 @@ const MiddleStatusDashboard = ({percentage}) => {
           }
         }
       }
-    } 
-  },
-  series = [Number(percentage)]
+    },
+  
+    stroke: {
+      lineCap: "round",
+    },
+    labels: ["Progress"]
+  };
+  let series = [Number(percentage)]
 
   return (
 
 
     <div className={style.middleStatusDashboard}>
-      <div>
-        <Chart series={series} data-theme={darkMode ? "darkNoBG" : "lightMode"} />
-      </div>
+        <Chart series={series} width={250} options={options} type='radialBar' data-theme={darkMode ? "darkNoBG" : "lightMode"} />
     </div>
   )
 }

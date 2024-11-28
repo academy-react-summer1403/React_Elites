@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styleBlogList from '../../../Style/blogList.module.css'
-import { SortResBlogList } from "./Items/SortResponsive.tsx";
+import { SortResBlogList } from './Items/sortResponsive.tsx';
 import { FilterResBlogList } from "./Items/filterResponsive.tsx";
 import { PopularInputBlogs } from "./Items/PopularInput.tsx";
 import { NewInputBlogs } from "./Items/NewInput.tsx";
@@ -25,6 +25,7 @@ const SortBlogList = ({ setSortModal, setFilterModal, filterModal, sortModal, se
         setisClicked1={setisClicked1}
         isClicked2={isClicked2}
         setSortType={setSortType}
+        setapplySort={setapplySort}
         setCol={setCol}
        />
         <div className={styleBlogList.clearSort} onClick={() => {
