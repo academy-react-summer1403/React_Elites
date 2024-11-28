@@ -14,6 +14,7 @@ const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
     const [addYourComment, setaddYourComment] = useState(false)
     const [isReplying, setIsReplying] = useGlobalState('isReplying');
     const [commentId, setCommentId] = useGlobalState('courseCommentId');
+    const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
     const handleEscape = e => {
         if(e.keyCode == 27) {
@@ -56,6 +57,9 @@ const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
                 if(res.success === true){
                     toast.success("نظر شما به دوره اضافه شد")
                 }
+                else if(isLogin === false){
+                    toast.error("لطفا به حساب کاربری خود وارد شوید")
+                }
             }}
         >
             <Form >
@@ -76,6 +80,9 @@ const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
                     let res = await postCourseReplyComment(values)
                     if(res.success === true){
                         toast.success("پاسخ شما به کامنت اضافه شد")
+                    }
+                    else if(isLogin === false){
+                        toast.error("لطفا به حساب کاربری خود وارد شوید")
                     }
                 }}
             > 

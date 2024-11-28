@@ -6,21 +6,21 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     line-height: 35px;
 }
 
 .gridView {
-    background: url(https://img.icons8.com/?size=100&id=20228&format=png&color=000000) 50% 50% no-repeat;
+    background: url('../../../../../../assets/Images/gridView.png') 50% 50% no-repeat;
     width: 35px;
     height: 35px;
     cursor: pointer;
-    background-size: 90% 120%;
+    background-size:75%;
     border: 2px solid #000000;
 }
 
 .listView {
-    background: url(https://img.icons8.com/?size=100&id=82758&format=png&color=000000) 50% 50% no-repeat;
+    background: url('../../../../../../assets/Images/image.png') 50% 50% no-repeat;
     width: 35px;
     height: 35px;
     background-size: 100%;
@@ -30,12 +30,6 @@
 
 .selectedG {
     scale: 1.1;
-}
-
-@media screen and (max-width: 1250px) {
-    .holder {
-        width: 73%;
-    }
 }
 
 
@@ -53,6 +47,9 @@
     font-size: 18px;
     font-family: DannaMedium;
     line-height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .categories:active {
@@ -126,6 +123,15 @@
     .holder {
         width: 100%;
         margin-bottom: 15px;
+    }
+    .gridView{
+        display: none;
+    }
+    .listView{
+        display: none;
+    }
+    .clearSort{
+        display: none;
     }
 
     .sortResponsive {

@@ -3,7 +3,7 @@ import style from './CourseListAndFilter.module.css'
 import { CourseListGridHolder } from '../CourseListGrid/CourseListGridHolder/CourseListGridHolder'
 import { CourseFilterHolder } from '../CourseFilter/CourseFilterHolder/CourseFilterHolder'
 
-const CourseListAndFilter = ({applyFilter, minValueBining, maxValueBining,  set_minValue, set_maxValue,  maxValue, minValue, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
+const CourseListAndFilter = ({applyFilter, minValueBining, maxValueBining,  set_minValue, set_maxValue, maxValue, minValue, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
   return (
     <div className={style.CourseListAndFilterHolder}>
       <CourseListGridHolder

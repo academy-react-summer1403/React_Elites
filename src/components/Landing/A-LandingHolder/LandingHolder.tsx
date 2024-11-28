@@ -11,7 +11,7 @@ const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
-  const [isLanding, setisLanding] = useGlobalState('isLanding');
+  const [isLanding, setisLanding] = useGlobalState('isLanding')
 
   const getSAndT = async () => {
     const SAndT = await getStudentAndTeacherCount();
@@ -38,6 +38,9 @@ const LandingHolder = () => {
     getProfilee();
     setisLanding(true)
   }, [])
+  useEffect(() => {
+    getProfilee();
+  }, [isLogin])
   useEffect(() => {
     return () => {
       setisLanding(false)

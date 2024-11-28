@@ -7,12 +7,16 @@ import toast, { Toaster } from 'react-hot-toast';
 const Like = ({id}) => {
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
+  const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
   const likeCourse = async () => {
     let res = await postCourseLike(id)
     if(res.success === true){
       toast.success("دوره با موفقیت لایک شد")
       setIsLiked("1")
+    }
+    if(isLogin === false){
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   return (

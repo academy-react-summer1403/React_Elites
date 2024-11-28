@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 const Date = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const[startDate, setStartDate] = useGlobalState("startDate")
+  const[endDate, setEndDate] = useGlobalState("endDate")
   const { t } = useTranslation();
   return (
     <>
@@ -17,7 +19,9 @@ const Date = () => {
             </svg>
             <label htmlFor='date' data-theme={darkMode ? "darkNoBG" : "lightMode"} className={style.titleDate}> {t("dateStart-end")} </label>
           </div>
-        <input name='date' type='date' className={style.date} placeholder={t("dateCourses")} data-theme={darkMode ? "dark" : "lightMode"}/>
+        <input name='date' className={style.date} placeholder={t("dateCourses")} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
+          setStartDate(e.target.value);
+        }}/>
     </>
   )
 }

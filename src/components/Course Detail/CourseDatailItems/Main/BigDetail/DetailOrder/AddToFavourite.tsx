@@ -6,12 +6,16 @@ import { useGlobalState } from '../../../../../../State/State'
 
 const AddToFavourite = ({id}) => {
   const [isFavourite, setIsFavourite] = useGlobalState('isFavoriteCourse');
+  const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
   const addToFavoutite = async () => {
     let res = await postCourseFavourite({courseId: `${id}`})
     if(res.success === true){
       toast.success("دوره به لیست مورد علاقه اضافه شد")
       setIsFavourite(true)
+    }
+    if(isLogin === false){
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   return (

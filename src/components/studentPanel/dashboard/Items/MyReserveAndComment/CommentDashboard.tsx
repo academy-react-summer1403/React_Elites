@@ -21,29 +21,10 @@ const CommentDashboard = () => {
   const [isLoading, setisLoading] = useState(true)
   const [related, setrelated] = useState([])
 
-  const getBlogDetail = async () => {
-    const Details = await getBlogById(id)
-    setBlogDetail(Details.detailsNewsDto)
-    setComments(Details.commentDtos)
-    setisCurrentUserFavorite(Details?.detailsNewsDto.isCurrentUserFavorite)
-    
-    let relatedBlogs = await getRelatedBlog(Details?.detailsNewsDto.newsCatregoryId)
-    setrelated(relatedBlogs)
-    setisLoading(false)
-  }
-  useEffect(() => {
-    getBlogDetail()
-  }, [])
-
-  useEffect(() => {
-    getBlogDetail()
-  }, [isFavouriteBlog])
-
   return (
     <div className={style.commentDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
       <TitleHeaderMyCommentList />
       <CoursesAndBlogsHolder />
-      <AllComments title={blogDetail?.title} comments={comments} isLoading={isLoading}/>
     </div>
   )
 }

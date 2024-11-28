@@ -1,13 +1,14 @@
 import React from 'react'
 import style from './CourseFilterHolder.module.css'
-import { FilterItemsHolder } from '../FilterItems/FilterItemsHolder/FilterItemsHolder'
 import { useGlobalState } from '../../../../../../../../State/State';
+import { FilterItemsHolder } from '../FilterItems/FilterItemsHolder/FilterItemsHolder';
 
-const CourseFilterHolder = (props) => {
+
+const CourseFilterHolder = ({setClicked}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <div className={style.filterHolder}  data-theme={darkMode ? "darkSmall" : "lightMode"}>
-      <FilterItemsHolder clicked={props.clicked} setClicked={props.setClicked} />
+        <FilterItemsHolder setClicked={setClicked} />
     </div>
   )
 }

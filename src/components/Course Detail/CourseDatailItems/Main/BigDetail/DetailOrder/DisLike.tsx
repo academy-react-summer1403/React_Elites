@@ -7,12 +7,16 @@ import { postCourseDisLike } from '../../../../../../core/services/api/postCours
 const DisLike = ({id}) => {
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
+  const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
   const dislikeCourse = async () => {
     let res = await postCourseDisLike(id)
     if(res.success === true){
       toast.success("دوره با موفقیت دیسلایک شد")
       setIsLiked("0")
+    }
+    if(isLogin === false){
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
 

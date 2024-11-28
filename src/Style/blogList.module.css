@@ -282,6 +282,8 @@
     .sortButtonLabel{
         display: none;
     }
+    .categories{display: none;}
+    .clearSort{display: none;}
     .sortingTitle{
         display: none;
     }

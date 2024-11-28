@@ -20,11 +20,9 @@ const Login = () => {
 
   const loginUser = async (values) => {
     const user = await loginAPI(values)
-    setItem("token", user.token)
     if (user.success == true) {
+      setItem("token", user.token)
       setIsLogin(true)
-      setItem('isLogin', isLogin)
-      console.log(user)
     }
     else {
       return

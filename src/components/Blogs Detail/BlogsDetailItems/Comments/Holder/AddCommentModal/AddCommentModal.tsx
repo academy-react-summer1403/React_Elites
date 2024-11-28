@@ -4,10 +4,13 @@ import { useSpring, animated, useTransition } from '@react-spring/web'
 import { ModalComments } from './Modal Comments/ModalComments'
 import { useTranslation } from 'react-i18next';
 import { Field, Form, Formik } from 'formik';
+import toast from 'react-hot-toast';
+import { useGlobalState } from '../../../../../../State/State';
 
 const AddCommentModal = ({comments, isOpen, onClose, title}) => {
     const { t } = useTranslation();
     const [addYourComment, setaddYourComment] = useState(false)
+    const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
     const handleEscape = e => {
         if(e.keyCode == 27) {
@@ -46,10 +49,12 @@ const AddCommentModal = ({comments, isOpen, onClose, title}) => {
             initialValues={{Title: '', Describe: ''}}
             onSubmit={async (values) => {
                 // let res = await 
-                // console.log(res)
                 // if(res.success === true){
                 //     toast.success("نظر شما به بلاگ اضافه شد")
                 // }
+                // else if(isLogin === false){
+                //     toast.error("لطفا به حساب کاربری خود وارد شوید")
+                //   }
             }}
         >
             <Form >
