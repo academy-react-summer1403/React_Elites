@@ -301,3 +301,8 @@
         width: 80%;
     }
 }
+@media screen and (max-width: 337px) {
+    .ChangePageList{
+        width: 100%;
+    }
+}

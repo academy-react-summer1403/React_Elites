@@ -38,7 +38,7 @@ const StudentDashboard = () => {
         <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
 
           <TopDashboard user={user}/>
-          <MyCourseAndStatus options={options}  series={series}/>
+          <MyCourseAndStatus percentage={percentage}/>
           <MyReserveAndComment userReserveCoursesObj={userReserveCoursesObj} />
 
         </div>

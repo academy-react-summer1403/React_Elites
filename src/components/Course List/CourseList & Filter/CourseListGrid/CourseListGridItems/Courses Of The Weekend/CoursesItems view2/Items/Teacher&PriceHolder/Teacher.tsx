@@ -6,7 +6,7 @@ const Teacher = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const {t} = useTranslation();
   return (
-    <div className={style.teacher} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("lecturer")}:  {props.teacher}</div>
+    <div className={style.teacher} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("lecturer")}:  {props.teacher}</div>
   )
 }
 

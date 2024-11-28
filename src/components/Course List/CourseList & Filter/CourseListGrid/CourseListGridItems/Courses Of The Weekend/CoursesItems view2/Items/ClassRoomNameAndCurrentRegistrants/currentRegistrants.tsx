@@ -7,7 +7,7 @@ const CurrentRegistrants = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const {t} = useTranslation();
   return (
-    <div className={style.NumberRegistrants} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("NumberRegistrants")}: {props.currentRegistrants}</div>
+    <div className={style.NumberRegistrants} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("NumberRegistrants")}: {props.currentRegistrants}</div>
   )
 }
 

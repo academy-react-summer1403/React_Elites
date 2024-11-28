@@ -5,6 +5,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     position: relative;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -16,6 +17,12 @@
 @media screen and (max-width: 543px) {
     .holder{
         width: 80%;
+    }
+}
+@media screen and (max-width: 394px) {
+    .holder{
+        height: 346px;
+        width: 100%;
     }
 }
 

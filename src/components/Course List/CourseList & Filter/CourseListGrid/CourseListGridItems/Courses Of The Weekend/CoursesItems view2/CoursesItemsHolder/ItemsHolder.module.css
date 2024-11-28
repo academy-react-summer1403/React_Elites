@@ -1,6 +1,5 @@
 .holder{
     width: 90%;
-    height: 366px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;

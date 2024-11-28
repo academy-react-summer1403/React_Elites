@@ -39,6 +39,7 @@
 .information{
     display: flex;
     flex-wrap: wrap;
+    gap: 3px;
 }
 .information > div{
     display: flex;
@@ -66,9 +67,9 @@
     text-align: right;
 }
 .price{
-    padding: 24px 16px;
+    padding: 24px 0;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-flow: row-reverse nowrap;
     justify-content: space-between;
     height: 90px;
@@ -80,12 +81,15 @@
     color: #45bb00;
     font-weight: 600;
     text-align: right;
+    font-family: DannaMedium;
+    margin-top: 3px;
 }
 .price > h2{
     font-size: 23px;
     color: #45bb00;
     font-weight: 700;
     text-align: right;
+    font-family: DannaDemiBold;
 }
 
 .contentRight{
