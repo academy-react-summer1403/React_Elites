@@ -72,13 +72,13 @@ form {
 }
 
 .input {
-    background-color: #fff !important;
+    background-color: #fff ;
     border: 1px solid #DCDCDC;
     width: 100%;
     height: 48px !important;
     border-radius: 24px;
     padding-right: 12px !important;
-    color: #3d3d3d !important;
+    color: #3d3d3d;
 }
 
 .inputHolder{
@@ -149,6 +149,7 @@ form > div:nth-child(5) > div{
     width: 100%;
     font-family: DannaMedium;
     font-size: 16px;
+    border-radius: 50px;
     font-weight: 600;
     line-height: 22.88px;
 }
@@ -303,6 +304,7 @@ form > div:nth-child(5) > div{
 .RegisterLoginButton{
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 
 .RegisterLoginButton > a{

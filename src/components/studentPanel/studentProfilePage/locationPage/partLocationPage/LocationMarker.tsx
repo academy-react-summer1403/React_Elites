@@ -13,7 +13,6 @@ export const LocationMarker = () => {
         setlocList((prev) => [...prev, e.latlng])
     })
     return <>
-    {locList.map((item,index)=> <Marker key={index} position={item} icon={markerIcon}/>)}
     <Marker position={position} icon={markerIcon}/>
 
         </>;
