@@ -12,6 +12,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
     "@react-spring/web": "^9.7.5",
+    "@types/leaflet": "^1.9.14",
     "animate.css": "^4.1.1",
     "antd": "^5.21.6",
     "apexcharts": "^4.0.0",
@@ -31,6 +32,7 @@
     "react-hooks-global-state": "^2.1.0",
     "react-hot-toast": "^2.4.1",
     "react-i18next": "^15.1.1",
+    "react-leaflet": "^4.2.1",
     "react-loading-skeleton": "^3.5.0",
     "react-map-gl": "^7.1.7",
     "react-router-dom": "^6.27.0",

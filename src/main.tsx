@@ -46,6 +46,7 @@ import { StudentPanelPage } from './pages/StudentPanelPage.tsx'
 import {ImageForm} from './components/studentPanel/studentProfilePage/ImagesPage/Image.tsx'
 import {InformationForm} from './components/studentPanel/studentProfilePage/InformationPage/InformationForm.tsx'
 import {LinkForm} from './components/studentPanel/studentProfilePage/LinkPage/link.tsx'
+import {ChangePassword} from './components/studentPanel/studentProfilePage/changePassword/changePassword.tsx'
 import {LocationForm} from './components/studentPanel/studentProfilePage/locationPage/location.tsx'
 import { StudentPayment } from './components/studentPanel/Student Payment/StudentPayment.tsx'
 import { StudentMyCourse } from './components/studentPanel/studentCurse-Blog/My Courses/StudentMyCourse.tsx'
@@ -197,7 +198,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Student-Panel/changePassword",
-        element: <LinkForm />,
+        element: <ChangePassword />,
         errorElement: <ErrorPage />
       },
       {

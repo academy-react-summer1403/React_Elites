@@ -7,11 +7,12 @@ import { useTranslation } from 'react-i18next';
 
 const SendCode = () => {
   const { t } = useTranslation();
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
 
-    <div className={styleLogin.LoginAccount}>
-      <button type="submit">{t("sendCodeRegister")}</button>
+    <div data-theme={darkMode ? "darkSmall" : "lightMode"} className={styleLogin.LoginAccount}>
+      <button data-theme={darkMode ? "darkNoBG" : "lightMode"}  type="submit">{t("sendCodeRegister")}</button>
     </div>
 
   )
