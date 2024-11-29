@@ -100,9 +100,19 @@ form {
 /* form>div:not(form>div:first-child),form > a{
     max-width: 384px;
 } */
+.inputPasswordHolder{
+    position: relative;
+    display: flex;
+}
 .inputPassword {
     background: url(https://img.icons8.com/?size=100&id=85028&format=png&color=707070) no-repeat 3% 50%;
     background-size: 24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    cursor: pointer;
 }
 
 .form>div>div>a {}

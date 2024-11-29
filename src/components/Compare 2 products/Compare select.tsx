@@ -1,6 +1,15 @@
 import style from "../../Style/Compare.module.css";
 import { useTranslation } from 'react-i18next';
-import { Search } from './Items/Serach';
+import { Search } from './Items Compare Select/Serach';
+import { Image } from './Items Compare Select/Image';
+import { Title } from './Items Compare Select/title';
+import { Discription } from './Items Compare Select/Discription';
+import { Price } from './Items Compare Select/Cost';
+import { Like } from './Items Compare Select/Like';
+import { Status } from './Items Compare Select/status';
+import { Category } from './Items Compare Select/category';
+import { Level } from './Items Compare Select/Level';
+import { TeacherName } from './Items Compare Select/TeacherName';
 import React, { useEffect, useState } from 'react'
 import { useGlobalState } from '../../State/State'
 import { useParams } from 'react-router-dom'
@@ -54,75 +63,15 @@ const CompareSelect = () => {
 
   return (
     <div className={style.Holder} data-theme={darkMode ? "dark" : "lightMode"}>
-      <div className={style.Images}>
-        <img className={style.imageProgramming} src={courseDetail?.imageAddress}src={courseDetail?.imageAddress && courseDetail?.imageAddress.slice(0,5) == "https" && courseDetail?.imageAddress !== null ? courseDetail?.imageAddress : 'https://classapi.sepehracademy.ir///Pictures//Course//blank-thumbnail_4031a67c-6002-4004-baf7-c0840ebed86f.jpg'} />
-
-        <Search setSearchValue={setSearchValue} setIsSearched={setIsSearched} searchValue={searchValue} isSearched={isSearched} />
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>نام دوره</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.title}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>سایر توضیحات</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.describe}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>قیمت</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.cost}  {t("toman")}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>تعداد لایک ها</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.likeCount}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>وضعیت</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.courseStatusName}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>سطح آموزشی</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.courseLevelName}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>دسته بندی</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.techs}</div>
-
-
-        </div>
-      </div>
-      <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>نام استاد</h1>
-        <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{courseDetail?.teacherName}</div>
-
-
-        </div>
-      </div>
+      <Image Image={courseDetail?.imageAddress} />
+      <Title title={courseDetail?.title}/>
+      <Discription discription={courseDetail?.describe} />
+      <Price cost={courseDetail?.cost}/>
+      <Like like={courseDetail?.likeCount}/>
+      <Status status={courseDetail?.courseStatusName}/>
+      <Level level={courseDetail?.courseLevelName}/>
+      <Category techs={courseDetail?.techs} />
+      <TeacherName teacherName={courseDetail?.teacherName}/>
     </div>
   )
 }
