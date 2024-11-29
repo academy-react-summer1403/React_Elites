@@ -34,6 +34,7 @@
 .page2{
     height: 928px;
     display: flex;
+    user-select: none;
 }
 .Input{
     background-color: #FCFCFC;
@@ -85,12 +86,29 @@
     flex-flow: row-reverse nowrap;
     gap: 8px;
     color: black;
-    height: 20px;
+    padding-top: 5px;
 }
-.inputGender > div > input{
+
+.inputGender > div > h1{
+    color: rgb(0, 0, 0);
+    font-family: DannaMedium;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+}
+
+.GenderInput{
     width: 20px;
     height: 20px;
     background-color: #fff;
+    appearance: none;
+    border: 1px solid #d4d4d8;
+    border-radius: 50px;
+}
+
+.GenderInput:checked{
+    appearance: auto;
 }
 
 .inputGender >  button{
