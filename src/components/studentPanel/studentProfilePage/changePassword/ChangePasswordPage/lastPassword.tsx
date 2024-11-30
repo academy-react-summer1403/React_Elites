@@ -14,7 +14,7 @@ const LastPassword = () => {
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
                 <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>رمز فعلی</h1>
-                <Field name="linkdinProfile" className={styleInform.Input} placeholder="رمز فعلی خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
+                <Field name="oldPassword" className={styleInform.Input} placeholder="رمز فعلی خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
             </div>
         </div>
 

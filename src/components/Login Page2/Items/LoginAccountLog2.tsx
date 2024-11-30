@@ -9,9 +9,9 @@ const LoginAccountLog2 = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
 
-    <NavLink  data-theme={darkMode ? "darkSmall" : "lightMode"} to="/" className={styleLogin.LoginAccount}>
+    <div  data-theme={darkMode ? "darkSmall" : "lightMode"} className={styleLogin.LoginAccount}>
       <button  type="submit">{t("loginAccount")} </button>
-    </NavLink>
+    </div>
 
   )
 }

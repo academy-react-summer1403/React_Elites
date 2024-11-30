@@ -6,7 +6,9 @@ const Button = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
     return (
-        <button className={style.button}> تغییر رمز عبور</button>
+        <div>
+            <button className={style.button} type="submit" onClick={(e) => e.preventDefault()}> تغییر رمز عبور</button>
+        </div>
     )
 }
 

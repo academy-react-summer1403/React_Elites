@@ -165,7 +165,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-        path: "/auth/Forget-Password-Page2",
+        path: "/auth/Forget-Password-Page2/:id",
         element: <ForgetPasswordPageTwo />,
         errorElement: <ErrorPage />
       },

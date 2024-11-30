@@ -3,6 +3,7 @@ import { createGlobalState } from "react-hooks-global-state";
 const { useGlobalState} = createGlobalState({
     DarkMode: false,
     isLogin: false,
+    userId: '',
     phoneNumber: "",
     userInfoObj: {},
     isLanding: false,
@@ -17,6 +18,9 @@ const { useGlobalState} = createGlobalState({
     isFavouriteBlog: false,
     isReplying: false,
     courseCommentId: "",
+    isTwoStep: false,
+    userGmail: '',
+    userPass: '',
 })
 
 

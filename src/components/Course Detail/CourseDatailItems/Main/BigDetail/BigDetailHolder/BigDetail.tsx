@@ -7,14 +7,14 @@ import { RateAndPrice } from '../Rate&Price/Rate&PriceHolder/Rate&Price'
 import { Order } from '../DetailOrder/Order'
 
 
-const BigDetail = ({dislike, isLoading, id, rate, comments, like, price, teacher, status, level, category, title, start, end}) => {
+const BigDetail = ({dislike, userLikeId, isLoading, id, rate, comments, like, price, teacher, status, level, category, title, start, end}) => {
   return (
     <div className={style.holder}>
         <Title id={id} title={title} isLoading={isLoading}/>
         <Top isLoading={isLoading} status={status} teacher={teacher} level={level} category={category} />
         <Bottom isLoading={isLoading} like={like} dislike={dislike} start={start} end={end} />
         <RateAndPrice isLoading={isLoading} comments={comments} rate={rate} price={price} />
-        <Order id={id} />
+        <Order userLikeId={userLikeId} id={id} />
     </div>
   )
 }

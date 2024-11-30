@@ -7,7 +7,14 @@
     text-align: center;
 }
 .button{
-    margin-top: 200px !important;
+    margin-top: 20px !important;
+    background: #3772FF;
+    border-radius: 32px;
+    padding: 11px;
+    font-family: DannaMedium;
+}
+.button:active{
+    scale: 1.1;
 }
 
 

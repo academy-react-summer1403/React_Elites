@@ -74,6 +74,7 @@ const CourseDetail = () => {
           start={courseDetail?.startTime}
           end={courseDetail?.endTime}
           id={courseDetail?.courseId}
+          userLikeId={courseDetail?.userLikeId}
         />
         <Description description={courseDetail?.describe} isLoading={isLoading} currentUserRateNumber={courseDetail?.currentUserRateNumber} id={id} />
         <AllComments isLoading={isLoading} comments={comments} id={id} title={courseDetail?.title}/>
