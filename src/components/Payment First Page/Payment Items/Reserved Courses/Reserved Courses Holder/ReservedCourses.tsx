@@ -5,20 +5,20 @@ import { Courses } from '../Reserved Courses Items/Courses'
 import { useGlobalState } from '../../../../../State/State'
 import { getCourseById } from '../../../../../core/services/api/courseById'
 import { getCourseReserve } from '../../../../../core/services/api/getCourseReserveId'
+import { getMyCourse } from '../../../../../core/services/api/getMyCourse'
 
 const ReservedCourses = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [coursesArr, setcoursesArr] = useState([])
   const getCourses = async () => {
-    let res = await getCourseReserve()
-    setcoursesArr(res)
+    let res = await getMyCourse()
+    setcoursesArr(res.listOfMyCourses)
   }
   useEffect(() => {
     getCourses()
   }, [])
   return (
     <div className={style.reserved} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
-      <ReservedTitle />
       <div className={style.coursesHolder}>
         {coursesArr.map((item, index) => {
           return (
