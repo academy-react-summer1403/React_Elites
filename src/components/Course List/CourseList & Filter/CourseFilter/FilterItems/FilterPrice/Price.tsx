@@ -40,7 +40,7 @@ const Price = ({maxValue, minValue, set_minValue, set_maxValue, maxValueBining, 
       barLeftColor='#F1F1F1'
       barRightColor='#F1F1F1'
       label='false'
-			step={10000}
+			step={100000}
 			minValue={minValueBining}
 			maxValue={maxValueBining}
 			onInput={(e) => {
