@@ -10,18 +10,14 @@
 .like,.dislike{
     font-size: 16px;
     font-family: DannaBold;
-    color: #2F2F2F;
+    color: #5E5E5E;
     width: auto;
  text-align: right;
     direction: rtl;
 }
 
 @media screen and (max-width: 583px) {
-    .dislike{
+    .holder{
         display: none;
-    }
-    .like{
-        text-align: center;
-        width: 100%;
     }
 }

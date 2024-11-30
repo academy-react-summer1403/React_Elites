@@ -5,10 +5,12 @@ import { FilterResBlogList } from "./Items/filterResponsive.tsx";
 import { PopularInputBlogs } from "./Items/PopularInput.tsx";
 import { NewInputBlogs } from "./Items/NewInput.tsx";
 import { TitleSortBlogs } from "./Items/TitleSort.tsx";
+import { useGlobalState } from '../../../State/State.tsx';
 
 const SortBlogList = ({ setSortModal, setFilterModal, filterModal, sortModal, setapplySort, setSortType, setCol }) => {
   const [isClicked1, setisClicked1] = useState(false)
   const [isClicked2, setisClicked2] = useState(false)
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
     <div className={styleBlogList.sorts}>
       <TitleSortBlogs />
@@ -28,7 +30,7 @@ const SortBlogList = ({ setSortModal, setFilterModal, filterModal, sortModal, se
         setapplySort={setapplySort}
         setCol={setCol}
        />
-        <div className={styleBlogList.clearSort} onClick={() => {
+        <div data-theme={darkMode ? "darkClearSort" : "lightMode"} className={styleBlogList.clearSort} onClick={() => {
         setisClicked1(false)
         setisClicked2(false)
         setapplySort(false)

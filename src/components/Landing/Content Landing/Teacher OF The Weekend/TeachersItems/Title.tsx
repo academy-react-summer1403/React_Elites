@@ -7,7 +7,7 @@ const Title = () => {
   const {t} = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.title} data-theme={darkMode ? "dark" : "lightMode"}>{t("teacherPageLandingTitle")}</div>
+    <div className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("teacherPageLandingTitle")}</div>
   )
 }
 

@@ -7,7 +7,7 @@ import { useGlobalState } from '../../../../../State/State'
 const Teachers = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.container} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.container} data-theme={darkMode ? "darkSmall" : "lightMode"}>
         <Right />
         <Graphic />
 

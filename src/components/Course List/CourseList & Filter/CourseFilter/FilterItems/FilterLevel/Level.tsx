@@ -1,12 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Level.module.css'
 import { useGlobalState } from '../../../../../../State/State';
 import { useTranslation } from "react-i18next";
+import { GetCourseLevel } from '../../../../../../core/services/api/getCorseLevel';
 
 const Level = ({setLevelId}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isClicked, setIsClicked] = useState(false)
+  const [Level, setLevel] = useState([])
   const { t } = useTranslation();
+
+  const getAllTeachers = async () => {
+    let res = await GetCourseLevel()
+    setLevel(res)
+  }
+
+  useEffect(() => {
+    getAllTeachers()
+  }, [])
+
   return (
     <>
           <div className={style.holderIconAndTitle}>
@@ -19,21 +31,18 @@ const Level = ({setLevelId}) => {
           </div>
         <div className={style.level1} data-theme={darkMode ? "dark" : "lightMode"}>{t("levelCourses")}
         <div className={isClicked ? style.arrowUp : style.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
-          {isClicked && 
-            <div className={style.filterLevel}>
-              <input type="radio" id='oneL' name='levels' className={style.input} onChange={() => {
-                setLevelId("1");
-              }}/>
-              <label htmlFor='oneL' className={style.level}> مبتدی </label>
-              <input type="radio" id='twoL' name='levels' className={style.input} onChange={() => {
-                setLevelId("2");
-              }} />
-              <label htmlFor='twoL' className={style.level}> متوسط </label>
-              <input type="radio" id='threeL' name='levels' className={style.input} onChange={() => {
-                setLevelId("3");
-              }}/>
-              <label htmlFor='threeL' className={style.level}> پیشرفته </label>
-            </div>}
+        {isClicked && <div className={style.filterLevel}>
+            {Level.map((item, index) => {
+              return (  
+                <>
+                  <input type="radio" id={String(index)} name='teachers' className={style.input} onChange={() => {
+                    setLevelId(String(item.LevelId));
+                  }}/>
+                  <label htmlFor={String(index)} className={style.Level}>{item.levelName}</label>
+                </>
+              )
+            })}
+          </div>}
         </div>
     </>
   )

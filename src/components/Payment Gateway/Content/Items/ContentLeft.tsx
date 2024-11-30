@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Items.module.css'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { getProfile } from '../../../../core/services/api/getProfileInfo'
 
 const ContentLeft = () => {
+  const {t} = useTranslation();
+  const [user, setUser] = useState([])
+  const getUserInfo = async () => {
+      const userInfo = await getProfile();
+      setUser(userInfo)
+  }
+  useEffect(() => {
+      getUserInfo()
+  }, [])
   return (
     <div className={style.contentLeft}>
       <div className={style.title}>
@@ -14,15 +25,15 @@ const ContentLeft = () => {
       <div className={style.information}>
         <div>
           <h1> :نام پذیرنده</h1>
-          <h2>React Elite</h2>
+          <h2>{user.fName} {user.lName}</h2>
         </div>
         <div>
           <h1> :شماره پذیرنده</h1>
-          <h2>12345678</h2>
+          <h2>35624343</h2>
         </div>
         <div>
           <h1> :شماره ترمینال</h1>
-          <h2>87654321</h2>
+          <h2>67681024</h2>
         </div>
         <div>
           <h1> :آدرس وبسایت</h1>
@@ -31,7 +42,7 @@ const ContentLeft = () => {
       </div>
       <div className={style.price}>
         <h1>:مبلغ قابل پرداخت</h1>
-        <h2>ریال90000</h2>
+        <h2>{t("toman")} 600,145,000 </h2>
       </div>
     </div>
   )

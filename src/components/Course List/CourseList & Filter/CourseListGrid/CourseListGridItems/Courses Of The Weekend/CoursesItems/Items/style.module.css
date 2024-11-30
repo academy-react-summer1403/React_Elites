@@ -20,4 +20,10 @@
  text-align: right;
     font-family: DannaBold;
     line-height: 40px;
+    height: 38px;
+}
+@media screen and (max-width: 394px) {
+    .holderImage{
+        height: 70%;
+    }
 }

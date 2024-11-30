@@ -24,7 +24,7 @@
     border-right: 1px solid gray;
     background: rgb(178, 178, 178);
 }
-.level{
+.Level{
     width: 100%;
     display: block;
     padding: 10px 15px 10px 15px;
@@ -33,9 +33,11 @@
     color: black;
     font-size: 14px;
 }
+
 .input{
     display: none;
 }
+
 .input:checked + label {
     font-size: 15px;
     font-family: DannaBold;

@@ -7,7 +7,7 @@ const Paragraph = () => {
   const {t} = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.paragraph} data-theme={darkMode ? "dark" : "lightMode"}>{t("teacherPageLandingDesc")}</div>
+    <div className={style.paragraph} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("teacherPageLandingDesc")}</div>
   )
 }
 

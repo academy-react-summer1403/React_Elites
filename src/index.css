@@ -173,13 +173,17 @@
   background: url("https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=14FFEC") 50% 50% no-repeat !important;
   background-size: 25px !important;
 }
-[data-theme="ViewBlog"] {
-  color: #14FFEC !important;
-  border-color: #0D7377 !important;
-}
 [data-theme="DateBlog"] {
   color: #14FFEC !important;
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=14FFEC") no-repeat 0% 50% !important;
   border-color: #0D7377 !important;
+    background-size: 18px !important;
+}
+[data-theme="ViewBlog"] {
+  color: #14FFEC !important;
+  background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=14FFEC") no-repeat 0% 50% !important;
+  border-color: #0D7377 !important;  
+  background-size: 18px !important;
 }
 [data-theme="gridView"] {
   background: url(https://img.icons8.com/?size=100&id=20228&format=png&color=14ffec) 50% 50% no-repeat !important;

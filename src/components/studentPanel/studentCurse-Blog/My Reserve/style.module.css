@@ -66,10 +66,11 @@
 .list{
     width: 1078px;
     background-color: #f1f1f1;
-    height: 710px;
+    height: 690px;
     border-radius: 24px;
     margin-top: 24px;
     padding-top: 24px;
+    overflow-y: scroll;
 }
 .headerList{
     margin:0 24px;

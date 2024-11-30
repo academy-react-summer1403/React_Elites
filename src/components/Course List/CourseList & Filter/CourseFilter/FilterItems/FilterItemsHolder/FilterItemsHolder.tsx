@@ -6,7 +6,6 @@ import { Category } from '../FilterCategory/Category'
 import { Level } from '../FilterLevel/Level'
 import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
-import { Date } from '../FilterDate/Date'
 import { useTranslation } from "react-i18next";
 import { useGlobalState } from '../../../../../../State/State'
 

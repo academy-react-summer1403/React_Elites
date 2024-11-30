@@ -1,5 +1,4 @@
 .holder {
-    height: 40px;
     text-align: right;
     color: #2F2F2F;
     font-size: 20px;
@@ -146,6 +145,19 @@
 
 @media screen and (max-width: 543px) {
     .holder {
-        width: 80%;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 414px) {
+    .holder {
+        gap: 59px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 282px) {
+    .holder {
+        gap: 30px;
+        justify-content: center;
     }
 }

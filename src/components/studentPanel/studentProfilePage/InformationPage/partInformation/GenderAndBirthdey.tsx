@@ -22,16 +22,16 @@ const GenderAndBirthdey = ({setisMale, isMale, form}) => {
                     <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("gender")}</h1>
                     <div className={styleInform.inputGender}>
                         <div>
-                            <Field type="radio" id="manInput" name="gender" className={styleInform.Input} onChange={() => {
+                            <Field type="radio" id="manInput" name="gender" className={styleInform.GenderInput} onChange={() => {
                                 setisMale(true)
                             }} />
-                            <label htmlFor="manInput" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("man")}</label>
+                            <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("man")}</h1>
                         </div>
                         <div>
-                            <Field type="radio" id="womanInput" name="gender" className={styleInform.Input} onChange={() => {
+                            <Field type="radio" id="womanInput" name="gender" className={styleInform.GenderInput} onChange={() => {
                                 setisMale(false)
                             }} />
-                            <label htmlFor="womanInput" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("woman")}</label>
+                            <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("woman")}</h1>
                         </div>
                         <button onClick={() => {
                             if (isMale === true) {
