@@ -29,7 +29,7 @@ const Courses = ({ id, reserverDate }) => {
         <PayButtonHolder id={courseDetail.courseId} />
         <Price cost={courseDetail.cost} />
       </div>
-      <NavLink to={"/Course-Detail/" +courseDetail.courseId} className={style.TitleAndImageHolder}>
+      <NavLink to={"/Course-Detail/" + courseDetail.courseId} className={style.TitleAndImageHolder}>
         <Title title={courseDetail.title} />
         <Image Image={courseDetail.imageAddress} />
       </NavLink>

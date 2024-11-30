@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Items.module.css'
 import { NavLink } from 'react-router-dom'
+import { addCoursePayment } from '../../../../core/services/api/postAddPayment'
+import toast, { Toaster } from 'react-hot-toast'
 
-const ContentRight = () => {
+const ContentRight = ({Details}) => {
+
+    const [value, setvalue] = useState({
+        CourseId: Details.courseId,
+        Paid: Details.cost,
+        PeymentDate: new Date,
+        PaymentInvoiceNumber: 1265765645656465,
+    })
+
+
+    const paymentValue = async () => {
+        let res = await addCoursePayment(value)
+        if(res.success == true){
+            toast.success("پرداخت انجام شد")
+        }
+        console.log(value)
+    }
+
     return (
         <div className={style.contentRight}>
+            <Toaster />
             <div className={style.title}>
                 <h1>اطلاعات کارت</h1>
             </div>
@@ -66,7 +86,7 @@ const ContentRight = () => {
                     <input type="checkbox" id='saveCart' />
                 </div>
                 <div>
-                    <button>پرداخت</button>
+                    <button onClick={() => paymentValue()}>پرداخت</button>
                     <NavLink to='/Student-Panel/Shopping-Basket'>انصراف</NavLink>
                 </div>
             </div>

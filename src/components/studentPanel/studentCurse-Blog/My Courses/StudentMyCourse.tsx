@@ -6,15 +6,19 @@ import { ChangePageList } from '../../../blogs/ChangePageList/ChangePageList';
 import { useGlobalState } from '../../../../State/State';
 import { useTranslation } from 'react-i18next';
 import { getMyCourse } from '../../../../core/services/api/getMyCourse';
+import { getCoursePayment } from '../../../../core/services/api/getCoursePayment';
 
 const StudentMyCourse = () => {
   const { t } = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [data, setdata] = useState([])
+  const [paymentList, setpaymentList] = useState([])
   const myCourses = async () => {
     let res = await getMyCourse()
     setdata(res.listOfMyCourses)
+
   }
+
   useEffect(() => {
     myCourses()
   }, [])

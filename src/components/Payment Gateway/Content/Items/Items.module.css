@@ -1,6 +1,5 @@
 .contentLeft{
     width: 31%;
-    height: 415.7px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
@@ -8,11 +7,13 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
+    flex-flow: row wrap;
 }
 .title{
     display: flex;
     justify-content: right;
     width: 100%;
+    margin-bottom: 10px;
 }
 .title > h1{
     color: #ffffff;
@@ -53,6 +54,8 @@
     color: #494949;
     font-weight: 600;
     text-align: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .information > div > h2{
     font-size: 17px;
