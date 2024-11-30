@@ -234,7 +234,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/Payment-Gateway",
+    path: "/Payment-Gateway/:id",
     element: <PaymentGateway />,
     errorElement: <ErrorPage />
   },

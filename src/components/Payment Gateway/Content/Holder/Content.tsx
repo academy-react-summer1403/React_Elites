@@ -3,10 +3,10 @@ import style from './Content.module.css'
 import { ContentLeft } from '../Items/ContentLeft'
 import { ContentRight } from '../Items/ContentRight'
 
-const Content = () => {
+const Content = ({price}) => {
   return (
     <div className={style.content}>
-        <ContentLeft />
+        <ContentLeft price={price}/>
         <ContentRight />
     </div>
   )

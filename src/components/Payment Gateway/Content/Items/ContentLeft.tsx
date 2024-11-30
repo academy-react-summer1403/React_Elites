@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { getProfile } from '../../../../core/services/api/getProfileInfo'
 
-const ContentLeft = () => {
+const ContentLeft = ({price}) => {
   const {t} = useTranslation();
   const [user, setUser] = useState([])
   const getUserInfo = async () => {
@@ -42,7 +42,7 @@ const ContentLeft = () => {
       </div>
       <div className={style.price}>
         <h1>:مبلغ قابل پرداخت</h1>
-        <h2>{t("toman")} 600,145,000 </h2>
+        <h2>{price}  {t("toman")} </h2>
       </div>
     </div>
   )

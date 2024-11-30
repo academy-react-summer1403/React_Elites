@@ -1,9 +1,9 @@
 .payment{
     width: 100%;
-    margin-top: 50px;
     height: auto;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
     direction: ltr;
+    border-radius: 16px;
 }

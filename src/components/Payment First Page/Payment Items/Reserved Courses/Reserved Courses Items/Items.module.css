@@ -1,15 +1,20 @@
 .title{
-    width: 93%;
+    width: 100%;
     font-family: DannaBold;
     font-size: 25px;
     color: black;
  text-align: right;
     user-select: none;
-    margin-bottom: 17px;
+    padding-bottom: 27px;
+    border-bottom: 1.5px solid #9d9d9d;
+}
+.PaymentTitle{
+    font-family: DannaMedium;
+    color: black;
 }
 
 .coursesHolder{
-    width: 92.48291571753986%;
+    width: 95%;
     height: 100px;
     border-bottom: 2px solid #DCDCDC;
     display: flex;
@@ -22,6 +27,18 @@
     width: 120px;
     height: 80px;
     border-radius: 8px;
+}
+
+.PaymentButton{
+    width: 30px;
+    height: 30px;
+    background: url(https://img.icons8.com/?size=100&id=7994&format=png&color=000000) no-repeat 50% 50%;
+    background-size: 100%;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.PaymentHolder{
+    margin-right: 5px;
 }
 
 .titleCourse{
@@ -37,7 +54,10 @@
     height: 100%;    
     padding-top: 10px;
 }
-
+.PriceAndPayHolder{
+    display: flex;   
+    padding-top: 10px;
+}
 .price{
     font-family: DannaDemiBold;
     font-size: 20px;
@@ -45,6 +65,8 @@
     user-select: none;
     display: flex;
     direction: rtl;
+    height: 30px;
+    margin-top: 13px;
 }
 
 .priceHolder{
