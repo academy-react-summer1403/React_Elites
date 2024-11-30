@@ -7,10 +7,12 @@
     user-select: none;
     padding-bottom: 27px;
     border-bottom: 1.5px solid #9d9d9d;
+    
 }
 .PaymentTitle{
     font-family: DannaMedium;
-    color: black;
+    color: rgb(255, 255, 255);
+    margin-top: 4px;
 }
 
 .coursesHolder{
@@ -31,13 +33,21 @@
 .PaymentButton{
     width: 30px;
     height: 30px;
-    background: url(https://img.icons8.com/?size=100&id=7994&format=png&color=000000) no-repeat 50% 50%;
+    background: url(https://img.icons8.com/?size=100&id=7994&format=png&color=ffffff) no-repeat 50% 50%;
     background-size: 100%;
     cursor: pointer;
     margin: 0 auto;
+
+
 }
 .PaymentHolder{
-    margin-right: 5px;
+    margin-right: 10px;
+    background-color: #000;    
+    border-radius: 500px;
+    padding: 6px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    gap: 10px;
 }
 
 .titleCourse{
