@@ -23,7 +23,7 @@ const PaymentGateway = () => {
   return (
     <div className={style.paymentGateway}>
       <Header />
-      <Content price={courseDetail?.cost} />
+      <Content Details={courseDetail} price={courseDetail?.cost} />
     </div>
   )
 }
