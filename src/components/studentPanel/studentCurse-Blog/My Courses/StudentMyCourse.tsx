@@ -37,7 +37,6 @@ const StudentMyCourse = () => {
             </div>
             <ListCardBlogs data={data} />
             <div className="flex justify-center mt-8">
-            <ChangePageList />
             </div>  
         </div>
     </div>

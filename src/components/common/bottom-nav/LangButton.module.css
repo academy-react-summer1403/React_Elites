@@ -1,18 +1,16 @@
 .Language{
-    height: 50px;
-    border-radius: 50px;
-    border: 1px solid rgb(71, 71, 71);
-    background-color: #d4d4d4;
+    height: 48px;
+    width: 55px;
+    border-radius: 20px;
+    border: 1px solid #dcdcdc;
+    background-color: #ffffff;
     color: black;
-    padding: 0 10px;
     z-index: 1;
     position: relative;
+    padding: 10px;
 }
 .Language > option{
     margin-top: -4px;
-}
-.Language:hover,.Language:hover > option,.Language > option{
-    display: block;
 }
 .holder{
     width: 91px;
@@ -34,38 +32,22 @@
     flex-flow: row wrap-reverse;
     margin-bottom: 10px;
 }
-.holder2:hover{
-    margin-bottom: 0;
-    padding: 10px;
-    height: 200px;
-}
-.holder2:hover > Label ,.holder2:hover > select{
-    display: block;
-}
-.holder2:hover > div{
-    background: #0088ff url(https://img.icons8.com/?size=100&id=7849&format=png&color=ffffff)no-repeat 50% 50%;
-    background-size: 50%;
-    rotate: -90deg;
-    transition: 0.5s;
-}
 .DarkAndLangButton{
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background: #0088ff url(https://img.icons8.com/?size=100&id=7849&format=png&color=ffffff)no-repeat 50% 50%;
+    background: #ffffff url(https://img.icons8.com/?size=100&id=82535&format=png&color=000000)no-repeat 50% 50%;
     background-size: 50%;
     transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 0 5px 2px #5d5d5d;
 }
 .DarkAndLangButton:hover{
-    background-size: 50%;
-    rotate: -90deg;
+    background-size: 60%;
     transition: 0.5s;
 }
-.DarkAndLangButton:hover ~ label ,.DarkAndLangButton:hover ~ select{
-    display: block;
-}
 .DarkAndLangButton ~ Label ,.DarkAndLangButton ~ select{
-    display: none;
     transition: 0.1s;
 }
 

@@ -170,12 +170,10 @@
     background-color: white;
     border-radius: 32px;
     padding: 24px;
-    overflow: scroll;
 }
 
 .page2 {
     width: 100%;
-    overflow: scroll;
 }
 
 .logoBahr {
