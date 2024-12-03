@@ -93,6 +93,7 @@ const SearchModal = () => {
                   desc={item.miniDescribe}
                   image={item.currentImageAddressTumb}
                   NavLinkTitle="/Blogs-Detail/"
+                  NavTitle="بلاگ"
                 />
               )
             })}
@@ -122,6 +123,7 @@ const SearchModal = () => {
                   desc={item.describe}
                   image={item.tumbImageAddress}
                   NavLinkTitle="/Course-Detail/"
+                  NavTitle="دوره"
                 />
               )
             })}
