@@ -21,14 +21,11 @@ const Like = ({id, userLikeId}) => {
     }
   }
   const unLikeCourse = async () => {
+
+    let res2 = await deleteCourseLike({CourseLikeId: userLikeId})
     console.log(userLikeId)
-
-    const likeId = new FormData();
-    likeId.append('CourseLikeId', `${userLikeId}`)
-
-    let res2 = await deleteCourseLike(likeId)
     if(res2.success === true){
-      toast.success("دوره با موفقیت لایک شد")
+      toast.success("لایک دوره برداشته شد")
       setIsLiked("0")
     }
     else if(isLogin === false){

@@ -2,9 +2,7 @@ import http from '../../interceptor/index.ts'
 
 const deleteCourseReserve = async (id) => {
     let config = {
-        headers: {
-            "Content-Type": "application/json", 
-        }
+        data: {foo: 'bar'}
     }
     try {
         const result = await http.delete('/CourseReserve', id, config);

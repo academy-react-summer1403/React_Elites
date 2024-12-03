@@ -9,7 +9,7 @@ import { postCourseReplyComment } from '../../../../../../../core/services/api/p
 import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 import { useGlobalState } from '../../../../../../../State/State'
 
-const MainComment = ({title, pictureAddress, describe, author, dissLikeCount, likeCount, insertDate, id}) => {
+const MainComment = ({title, currentUserEmotion, pictureAddress, describe, author, dissLikeCount, likeCount, insertDate, id}) => {
     const [replyComment, setreplyComment] = useState(false)
     const [isReplying, setIsReplying] = useGlobalState('isReplying');
     const [commentId, setCommentId] = useGlobalState('courseCommentId');
@@ -31,14 +31,14 @@ const MainComment = ({title, pictureAddress, describe, author, dissLikeCount, li
             <div className={style.commentDesc}> {describe} </div>
         </div>
         <div className={style.footer}>
-            <div  className={style.likeIcon} onClick={async () => {
+            <div className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
             let res = await postCourseCommentLike(id)
             if(res.success === true){
             toast.success('کامنت لایک شد')
             }
             }}></div>
-            <div  className={style.likeCount}> {likeCount} </div>
-            <div  className={style.dislikeIcon} onClick={async () => {
+            <div className={style.likeCount}> {likeCount} </div>
+            <div className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
             let res = await postCourseCommentDisLike(id)
             if(res.success === true){
             toast.success('کامنت دیس لایک شد')

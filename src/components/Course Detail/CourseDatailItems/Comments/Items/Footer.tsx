@@ -7,7 +7,7 @@ import { postCourseCommentLike } from '../../../../../core/services/api/postCour
 import toast, { Toaster } from 'react-hot-toast';
 import { postCourseCommentDisLike } from '../../../../../core/services/api/postCourseCommentDisLike';
 
-const Footer = ({pictureAddress, id, author, disslikeCount, likeCount, insertDate, commentId}) => {
+const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, likeCount, insertDate, commentId}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
@@ -15,15 +15,16 @@ const Footer = ({pictureAddress, id, author, disslikeCount, likeCount, insertDat
       <Toaster />
         <div className={style.likeAndDislikes}>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{likeCount}</div>
-            <div className={style.like} onClick={async () => {
+            <div className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
               let res = await postCourseCommentLike(commentId)
               if(res.success === true){
                 toast.success("کامنت لایک شد")
               }
             }}></div>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{disslikeCount}</div>
-            <div className={style.dislike} onClick={async () => {
+            <div className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
               let res = await postCourseCommentDisLike(commentId)
+              console.log(res)
               if(res.success === true){
                 toast.success("کامنت دیس لایک شد")
               }

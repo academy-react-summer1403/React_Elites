@@ -25,6 +25,7 @@ const AllComments = ({comments, id, isLoading, title}) => {
             author={item.author}
             likeCount={item.likeCount}
             insertDate={item.insertDate}
+            currentUserEmotion={item.currentUserEmotion}
           />
         )
         })}

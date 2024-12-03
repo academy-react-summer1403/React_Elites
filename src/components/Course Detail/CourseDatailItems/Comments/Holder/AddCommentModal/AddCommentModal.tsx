@@ -126,6 +126,7 @@ const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
                     insertDate={item.insertDate}
                     id={item.id}
                     pictureAddress={item.pictureAddress}
+                    currentUserEmotion={item.currentUserEmotion}
                 />
             )
         })}

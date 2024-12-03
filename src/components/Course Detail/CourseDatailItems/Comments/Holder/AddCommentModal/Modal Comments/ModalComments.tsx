@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 import { likeComment } from '../../../../../../../core/services/api/postCommentBlogLike'
 import { getCourseReplyComment } from '../../../../../../../core/services/api/getReplyCourseComment'
 
-const ModalComments = ({title, courseId, describe, author, dissLikeCount, pictureAddress, likeCount, insertDate, id}) => {
+const ModalComments = ({title, currentUserEmotion, courseId, describe, author, dissLikeCount, pictureAddress, likeCount, insertDate, id}) => {
 
     const [repliesObj, setRepliesObj] = useState([])
 
@@ -24,6 +24,7 @@ const ModalComments = ({title, courseId, describe, author, dissLikeCount, pictur
         <>
         <div className={style.holderReplyAndComment}>
             <MainComment
+            currentUserEmotion={currentUserEmotion}
             title={title}
             describe={describe}
             author={author}

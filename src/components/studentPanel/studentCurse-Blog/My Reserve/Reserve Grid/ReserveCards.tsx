@@ -22,15 +22,14 @@ const ReserveCards = (props) => {
     console.log(Details)
   }
 
-  // const deleteCourseReserveCall = async (id) => {
-  //   let s = await deleteCourseReserve({id: `${id}`})
-  //   if(s.success === true){
-  //     toast.success("عملیات با موفقیت انجام شد")
-  //   }
-  //   else if(s.success === false){
-  //     toast.success(" خطا در انجام عملیات ")
-  //   }
-  // }
+  const deleteCourseReserveCall = async () => {
+    let request = {id: props.reserveId}
+    let s = await deleteCourseReserve(request)
+    console.log(s)
+    if(s.success === true){
+      toast.success("عملیات با موفقیت انجام شد")
+    }
+  }
 
   useEffect(() => {
     getCourseDetail()
@@ -46,7 +45,7 @@ const ReserveCards = (props) => {
         <Status status={courseDetail.isCourseUser}/>
         <div className={style.closeAndViewHolder}>
           <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
-          <span className={style.Close} ></span>
+          <span className={style.Close} onClick={() => deleteCourseReserveCall()} ></span>
         </div>
     </div>
   )

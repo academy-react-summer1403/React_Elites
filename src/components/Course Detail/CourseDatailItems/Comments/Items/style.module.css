@@ -9,6 +9,20 @@
     flex-flow: row wrap;
 }
 
+.disliked{
+    width: 24px;
+    height: 24px;
+    background: url('../../../../../assets/Images/dislike(1).png') 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.liked{
+    width: 24px;
+    height: 24px;
+    background: url('../../../../../assets/Images/like(1).png') 50% 50% no-repeat;
+    background-size: cover;
+}
+
 .title{
     width: 100%;
  text-align: right;
@@ -56,6 +70,7 @@
     height: 24px;
     background: url(../../../../../assets/Images/like.png) 50% 50% no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 
 .dislike{
@@ -63,7 +78,9 @@
     height: 24px;
     background: url(../../../../../assets/Images/dislike.png) 50% 50% no-repeat;
     background-size: cover;
+        cursor: pointer;
 }
+
 
 .user{
     display: flex;

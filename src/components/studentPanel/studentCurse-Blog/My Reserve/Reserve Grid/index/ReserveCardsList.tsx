@@ -11,6 +11,7 @@ const ReserveCardsList = ({userReserveCoursesObj}) => {
             key={index}
             id={item.courseId}
             accept={item.accept}
+            reserveId={item.reserveId}
           />
         )
       })}

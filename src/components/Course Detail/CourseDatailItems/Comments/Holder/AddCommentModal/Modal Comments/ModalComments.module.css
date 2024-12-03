@@ -130,13 +130,13 @@
     gap: 15px;
     direction: rtl;
 }
-.like{
+.liked{
     width: 24px;
     height: 24px;
     background: url('../../../../../../../assets/Images/like(1).png') no-repeat 50% 50%;
     background-size: cover;
 }
-.likeIcon{
+.like{
     width: 24px;
     height: 24px;
     background: url(../../../../../../../assets/Images/like.png) no-repeat 50% 50%;
@@ -147,13 +147,13 @@
     font-size: 16px;
     color: #000000;
 }
-.dislike{
+.disliked{
     width: 24px;
     height: 24px;
     background: url('../../../../../../../assets/Images/dislike(1).png') no-repeat 50% 50%;
     background-size: cover;
 }
-.dislikeIcon{
+.dislike{
     width: 24px;
     height: 24px;
     background: url(../../../../../../../assets/Images/dislike.png) no-repeat 50% 50%;
