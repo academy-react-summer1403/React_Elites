@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from "react";
 import { Modal } from "antd";
 import { Comment } from "./comment";
-const TitleHeaderMyCommentList = ({courseCommentt}) => {
+const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBlog, setisBlog] = useState(false)
@@ -31,13 +31,19 @@ const TitleHeaderMyCommentList = ({courseCommentt}) => {
           <div className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
-              <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
-              <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
+              <div className={isBlog === false ? s.courses : s.selected} onClick={() => {
+                setisBlog(true)
+                setdata(newsComment)
+                }}> بلاگ ها </div>
+              <div className={isBlog === true ? s.courses : s.selected} onClick={() => {
+                setisBlog(false)
+                setdata(courseCommentt)
+                }}> دوره ها </div>
             </div>
             <div className={s.title}> نظرات شما </div>
           </div>
           <div className={s.holderComments}>
-          {courseCommentt.map((item, index) => {
+          {data.map((item, index) => {
             return(
               <Comment
                 id={item.commentId}
