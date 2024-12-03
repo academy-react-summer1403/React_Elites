@@ -51,6 +51,7 @@ const LinkForm = () => {
                                 <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
                                 <div><h1 className={styleLink.selected}>لینک ها </h1></div>
                                 <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> تنظیمات کاربری </NavLink> 
                             </div>
                         </div>
                         <LinksHolder />

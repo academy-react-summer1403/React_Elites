@@ -1,17 +1,15 @@
 import { Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
-import styleLink from "./ChangePasswordPage/link.module.css";
-import { Form, NavLink } from "react-router-dom";
+import styleLink from "../Change Security/Items/EditSecurity.module.css";
 import { useGlobalState } from "../../../../State/State";
 import { useEffect, useState } from "react";
-import { putUserInfoEdit } from "../../../../core/services/api/putUserInfoEdit";
-import toast, { Toaster } from "react-hot-toast";
-import { getProfile } from "../../../../core/services/api/getProfileInfo";
-import { LinksHolder } from "./ChangePasswordPage/LastAndNewPassword";
+import { Toaster } from "react-hot-toast";
+import { NavLink } from "react-router-dom";
+import { EditSecurityHolder } from "./Items/EditSecurityHolder";
 
 
-const ChangePassword = () => {
+const ChangeSecurity = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
     return (
@@ -27,14 +25,14 @@ const ChangePassword = () => {
                                 <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>عکس ها </NavLink>
                                 <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
                                 <NavLink to="/Student-Panel/Link" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink> 
-                                <div><h1 className={styleLink.selected}>تغییر رمز عبور </h1></div>
-                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> تنظیمات کاربری </NavLink> 
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink> 
+                                <div><h1 className={styleLink.selected}> تنظیمات کاربری </h1></div>
                             </div>
                         </div>
-                        <LinksHolder />
+                        <EditSecurityHolder />
                     </div>
             </>
     )
 }
 
-export { ChangePassword }
+export { ChangeSecurity }

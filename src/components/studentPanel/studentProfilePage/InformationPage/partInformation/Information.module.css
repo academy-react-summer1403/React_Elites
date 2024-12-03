@@ -3,6 +3,11 @@
     border-left: 1px solid #DCDCDC;
     padding-left: 10px;
 }
+.checkBox{
+    width: 25px;
+    height: 25px;
+
+}
 .right{
     width: 210px;
     display: flex;
