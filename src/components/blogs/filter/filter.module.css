@@ -22,6 +22,10 @@
     align-items: center;
     font-family: DannaMedium;
     color: white;
+    cursor: pointer;
+}
+.applyFilter:active{
+    scale: 1.1;
 }
 .filter > div{
     width: 100%;
@@ -52,7 +56,12 @@
     justify-self: start;
     align-items: center;
     font-family: DannaMedium;
+        cursor: pointer;
     color: white;
+}
+
+.deleteFilter:active{
+    scale: 1.1;
 }
 .filterTitle{
     font-family: DannaBold;

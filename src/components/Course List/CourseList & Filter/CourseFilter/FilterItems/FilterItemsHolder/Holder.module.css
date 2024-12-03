@@ -24,6 +24,7 @@
     align-items: center;
     font-family: DannaMedium;
     color: white;
+        cursor: pointer;
 }
 
 .applyFilter2{
@@ -49,4 +50,5 @@
     align-items: center;
     font-family: DannaMedium;
     color: white;
+        cursor: pointer;
 }

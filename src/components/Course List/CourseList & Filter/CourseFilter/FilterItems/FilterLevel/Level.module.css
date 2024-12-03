@@ -47,6 +47,7 @@
     height: 20px;
     background: url(../../../../../../assets/Images/arrow down.png);
     background-size: cover;
+    cursor:pointer;
 }
 .arrowUp{
     width: 20px;
