@@ -6,18 +6,18 @@ import { NavLink } from 'react-router-dom'
 import { getCourseReserve } from '../../../../../core/services/api/getCourseReserveId';
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi';
 import { ReserveCourses } from './ReserveCourses';
+import { getMyCourse } from '../../../../../core/services/api/getMyCourse';
 
 const MiniBasket = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [coursesArr, setcoursesArr] = useState([])
   const getCourses = async () => {
-    let res = await getCourseReserve()
-    setcoursesArr(res)
+    let res = await getMyCourse()
+    setcoursesArr(res.listOfMyCourses)
   }
   useEffect(() => {
     getCourses()
   }, [])
-  
   return (
     <>
         <NavLink to="/Student-Panel/Shopping-Basket" className={style.miniBasketHolder}  data-theme={darkMode ? "minibasket" : "lightMode"}>  

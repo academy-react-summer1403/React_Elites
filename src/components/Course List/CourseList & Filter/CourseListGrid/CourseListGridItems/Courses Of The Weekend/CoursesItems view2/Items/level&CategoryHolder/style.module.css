@@ -29,13 +29,14 @@
     white-space: nowrap;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-right: 10px;
+    padding-left: 5px;
     font-size: 14px;
     font-family: DannaMedium;
     color: #FCFCFC;
     border-radius: 32px;
     background: #3772FF;
+    max-width: 200px;
 }
 
 @media screen and (max-width: 1048px) {
