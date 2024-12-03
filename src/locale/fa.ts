@@ -1,7 +1,7 @@
 export const fa = {
     //landing
         //webBanner
-        "TeachLandingBannerBig1": "آموزش مدرن  ", "TeachLandingBannerBig2": "  پیشرفت سریع", "TeachLandingBannerSmall": "آکادمی آموزش تخصصی برنامه نویسی بحر از کودکان تا بزرگسال", "ActiveStudentBanner": "دانشجو فعال در دوره", "BestTeacherBanner": "اساتید برتر جهان", "StartNowBanner1": "همین حالا", "StartNowBanner2": "اساتید برتر جهان", "NewCourses": "جدیدترین دوره ها",
+        "TeachLandingBannerBig1": "آموزش مدرن  ", "TeachLandingBannerBig2": "  پیشرفت سریع", "TeachLandingBannerSmall": "آکادمی آموزش تخصصی برنامه نویسی بحر از کودکان تا بزرگسال", "ActiveStudentBanner": "دانشجو فعال در دوره", "BestTeacherBanner": "اساتید برتر جهان", "StartNowBanner1": "همین حالا", "StartNowBanner2": "!شروع کن به یادگیری", "NewCourses": "جدیدترین دوره ها",
         //our Goals
         "ourGoalsLandingTitle": "اهداف ما در آکادمی ", "readyForMarketLanding": "آماده سازی برای بازار کار", "readyForMarketLandingDesc": "جلسات تنظیم cv برای ساخت‌واشتراک رزومه فنی دربسترهای داخلی و بین المللی کاریابی و آماده سازی برای شرکت ها",
         "readyForMarketLanding2": "آموزش‌های تخصصی", "readyForMarketLandingDesc2": "کارگاه های تخصصی و تکمیلی برای کار با پلتفرم های بازاری مورد اقبال و برگزاری تورنمت های تیمی رقابتی برای تقویت روحیه کار تیمی و ... ",

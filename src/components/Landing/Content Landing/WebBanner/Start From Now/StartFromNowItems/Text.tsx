@@ -8,7 +8,7 @@ const Text = () => {
   const {t} = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.text}  data-theme={darkMode ? "dark" : "light"}>{t("StartNowBanner1")} <br /> {t("BestTeacherBanner")}</div>
+    <div className={style.text}  data-theme={darkMode ? "dark" : "light"}>{t("StartNowBanner1")} <br /> {t("StartNowBanner2")}</div>
   )
 }
 

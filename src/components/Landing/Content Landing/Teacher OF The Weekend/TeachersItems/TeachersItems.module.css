@@ -32,7 +32,7 @@
     width: 100%;
     height: 54.51127819548872%;
     font-size: 20px;
-    font-family: DannaMedium;
+    font-family: DannaNormal;
     color: #F6F6F6;
  text-align: right;
     animation: visible linear forwards;
@@ -81,6 +81,9 @@
     }
     .button{
         font-size: 12px;
+    }
+    .holder{
+        padding-top: 20px;
     }
 }
 

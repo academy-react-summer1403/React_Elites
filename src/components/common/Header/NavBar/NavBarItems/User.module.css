@@ -46,14 +46,18 @@
     cursor: pointer;
     position: relative;
     animation: none;
+    transition: 0.5s;
 }
 .items:hover{
-    animation: hoverAnimation 0.5s ease;
+    scale: 1.1;
+    transition: 0.5s;
+    text-shadow: 1px 1px 10px white;
 }
 .holder{
     width: 100%;
-    border-bottom: 1px solid #ccc;
     padding: 10px;
+    display: flex;
+    justify-content: right;
 }
 
 .fixed{

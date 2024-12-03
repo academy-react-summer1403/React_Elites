@@ -10,7 +10,6 @@ const Teachers = () => {
     <div className={style.container} data-theme={darkMode ? "darkSmall" : "lightMode"}>
         <Right />
         <Graphic />
-
     </div>
   )
 }

@@ -1,6 +1,7 @@
 .holder{
     width: 23.60%;
     height: 100%;
+    background: white;
     border: 2px solid #DCDCDC;
     border-radius: 24px;
     direction: rtl;
@@ -14,10 +15,11 @@
     animation: visible linear forwards;
     animation-timeline: view();
     animation-range:  entry 100px;
+    transition: 0.3s;
 }
 .holder:hover{
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.155);
     scale: 1.05;
+    transition: 0.3s;
 }
 @keyframes visible{
     to {

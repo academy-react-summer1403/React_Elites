@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 const Juniors = (props) => {
   const {t} = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
+  
   return (
     <div className={style.container}>
       <div className={style.juniors}></div>
