@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+        transition: 0.5s;
 }
 
 @media screen and (max-width: 900px) {
@@ -33,6 +34,7 @@
 
 div:hover > .imageHolder{
     border: 2px solid #3772FF;
+        transition: 0.5s;
 }
 
 .holder{

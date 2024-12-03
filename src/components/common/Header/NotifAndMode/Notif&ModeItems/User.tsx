@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import style from '../../../../../Style/DarkOrLightMode.module.css'
-import bahr from '../../../../../assets/Images/Bahr.jpg'
 import { useGlobalState } from '../../../../../State/State';
 
 const User = () => {

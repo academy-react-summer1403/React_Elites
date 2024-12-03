@@ -1,24 +1,12 @@
 import style from "./../../../../../Style/studentPanel.module.css";
+import s from './modal.module.css'
 import { useGlobalState } from "../../../../../State/State";
-import { NavLink } from 'react-router-dom';
-import { Comment } from "./comment";
-import { getMyCourseComment } from "../../../../../core/services/api/getMyCourseComments";
-import { useEffect, useState } from "react";
+import {CommentMain} from './CommentMain'
 
 
-const CoursesAndBlogsHolder = () => {
+const CoursesAndBlogsHolder = ({courseCommentt}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
-  const [courseCommentt, setcourseCommentt] = useState([])
-
-  const courseComment = async () => {
-    let res = await getMyCourseComment()
-    setcourseCommentt(res.myCommentsDtos)
-  }
-
-  useEffect(() => {
-    courseComment()
-  }, [])
   
 
   return (
@@ -27,9 +15,12 @@ const CoursesAndBlogsHolder = () => {
       <div className={style.CoursesAndBlogsLine}></div>
       <h1 className={style.CoursesAndBlogsSt} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>دوره ها و بلاگ ها </h1>
       <div className={style.CoursesAndBlogsLine}></div>
+      <div className={s.holderCommentsD}>
       {courseCommentt.map((item, index) => {
         return(
-          <Comment
+          <CommentMain
+            id={item.commentId}
+            courseId={item.courseId}
             avatar={userInfoObj.currentPictureAddress}
             userName={userInfoObj.fName}
             date={item.insertDate}
@@ -40,6 +31,7 @@ const CoursesAndBlogsHolder = () => {
            />
         )
       })}
+      </div>
     </div>
   )
 }

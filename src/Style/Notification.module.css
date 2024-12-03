@@ -4,8 +4,9 @@
     border-radius: 100%;
     background: white;
     border: 1px solid #DCDCDC;
-    background: url("../assets/Images/icons8-notification-48.png") 50% 50% no-repeat;
-    background-size: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 900px) {

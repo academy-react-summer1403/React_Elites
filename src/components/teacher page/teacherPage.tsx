@@ -26,6 +26,10 @@ const TeacherList = (props) => {
     getTeacherList();
   }, []);
 
+  useEffect(() => {
+    getTeacherList();
+  }, [searchValue]);
+
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
@@ -40,7 +44,6 @@ const TeacherList = (props) => {
             <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPageDesc")}</h1>
           </div>  
           <div className={style.page}>
-            <SearchFilter setSearchValue={setSearchValue}/>
             <div className={style.page2}>      
               <ListCardBlogs isLoading={isLoading}  teacherList={teacherList} />
             </div>

@@ -1,7 +1,7 @@
 export const en = {
     //landing
     //webBanner
-    "TeachLandingBannerBig1": "Modern education  ", "TeachLandingBannerBig2": "  Rapid progress", "TeachLandingBannerSmall": "Bahr programming training academy from children to adults", "ActiveStudentBanner": "Active student in the course", "BestTeacherBanner": "The best professors in the world", "StartNowBanner1": "Right now", "NewCourses": "The latest courses",
+    "TeachLandingBannerBig1": "Modern education  ", "TeachLandingBannerBig2": "  Rapid progress", "TeachLandingBannerSmall": "Bahr programming training academy from children to adults", "ActiveStudentBanner": "Active students", "BestTeacherBanner": "The best teachers", "StartNowBanner1": "Right now", "StartNowBanner2": "start to learn", "NewCourses": "The latest courses",
     //our Goals
     "ourGoalsLandingTitle": "Our goals in the academy ", "readyForMarketLanding": "Preparation for the job market", "readyForMarketLandingDesc": "cv preparation sessions for creating and sharing technical resumes in domestic and international recruitment and preparation for companies ",
     "readyForMarketLanding2": "Specialized training", "readyForMarketLandingDesc2": "Specialized and supplementary workshops for working with popular market platforms and holding competitive team tournaments to strengthen the spirit of teamwork and... ",

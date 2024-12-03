@@ -1,22 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import style from './comment.module.css'
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi'
-import { getCourseReplyComment } from '../../../../../core/services/api/getReplyCourseComment'
-import { ReplyComment } from './ReplyComment'
 
-const Comment = ({avatar, userName, date, title, description, likeCount, disLikeCount, id, courseId}) => {
+const CommentMain = ({avatar, userName, date, title, description, likeCount, disLikeCount}) => {
 
-    const [repliesObj, setRepliesObj] = useState([])
-
-    const getReplyCall = async () => {
-        let res = await getCourseReplyComment(courseId, id)
-        setRepliesObj(res)
-        console.log(res)
-    }
-
-    useEffect(() => {
-        getReplyCall()
-    }, [])
 
     return (
         <>
@@ -45,22 +32,8 @@ const Comment = ({avatar, userName, date, title, description, likeCount, disLike
                 </div>
             </div>
         </div> 
-        {repliesObj.map((item, index) => {
-            return(
-                <ReplyComment
-                    title={item.title}
-                    key={index}
-                    pictureAddress={item.pictureAddress}
-                    describe={item.describe}
-                    author={item.author}
-                    insertDate={item.insertDate}
-                    likeCount={item.likeCount}
-                    disslikeCount={item.disslikeCount}
-                />
-            )
-        })}
         </>
     )
 }
 
-export {Comment}
+export {CommentMain}
