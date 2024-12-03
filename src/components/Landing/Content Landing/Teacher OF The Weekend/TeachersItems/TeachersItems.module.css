@@ -50,6 +50,10 @@
     }
 }
 
+.button:active{
+    scale: 1.1;
+}
+
 .button{
     width: 22.58064516129032%;
     height: 14.66165413533835%;

@@ -176,6 +176,7 @@
 .toLeft{
     background: url(../assets/Images/icons8-arrow-left.png) 50% 50% no-repeat;
     background-size: 55%;
+        cursor: pointer;
 }
 .toLeft:active{
     scale: 1.5;
@@ -183,6 +184,7 @@
 .toRight{
     background: url(../assets/Images/icons8-arrow-right.png) 50% 50% no-repeat;
     background-size: 55%;
+        cursor: pointer;
 }
 .toRight:active{
     scale: 1.5;
@@ -196,6 +198,7 @@
     line-height: 50px;
     color: #272727;
     user-select: none;
+    cursor: pointer;
 }
 .selected{
     background: #3772FF;
