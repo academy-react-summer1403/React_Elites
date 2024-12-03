@@ -4,6 +4,7 @@ import { Notification } from '../Notif&ModeItems/Notification'
 import { DarkOrLightMode } from '../Notif&ModeItems/DarkOrLightMode'
 import { MiniBasket } from '../Notif&ModeItems/miniBasket'
 import { Menu } from '../Notif&ModeItems/Menu'
+import  SearchModal  from '../Notif&ModeItems/search/searchModal/searchModal'
 import { User } from '../Notif&ModeItems/User'
 import { useGlobalState } from '../../../../../State/State'
 
@@ -14,6 +15,7 @@ const NotifAndModeHolder = () => {
       
       <Notification />
       <Menu />
+      <SearchModal />
       <User />
       {isLogin === true && <MiniBasket />}
     </div>
