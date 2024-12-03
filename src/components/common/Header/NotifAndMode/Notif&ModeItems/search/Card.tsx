@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './SeachModal.module.css'
 import { NavLink } from 'react-router-dom'
 
-const CardModal = ({ id, title, desc, image, NavLinkTitle }) => {
+const CardModal = ({ id, title, desc, image, NavLinkTitle, NavTitle }) => {
 
     return (
         <div className={style.Card}>
@@ -13,7 +13,7 @@ const CardModal = ({ id, title, desc, image, NavLinkTitle }) => {
                     <div className={style.CardDesc}>{desc}</div>
                 </div>
             </div>
-            <NavLink to={NavLinkTitle + id} className={style.CardBottom}>مشاهده جزییات این دوره</NavLink>
+            <NavLink to={NavLinkTitle + id} className={style.CardBottom}>مشاهده جزییات این {NavTitle}</NavLink>
         </div>
     )
 }
