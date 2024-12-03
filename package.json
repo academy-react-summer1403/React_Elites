@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
+    "@nextui-org/react": "^2.4.8",
     "@react-spring/web": "^9.7.5",
     "@types/leaflet": "^1.9.14",
     "animate.css": "^4.1.1",
@@ -36,6 +37,7 @@
     "react-live-clock": "^6.1.25",
     "react-loading-skeleton": "^3.5.0",
     "react-map-gl": "^7.1.7",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.27.0",
     "react-slick": "^0.30.2",
     "react-spinners": "^0.14.1",
