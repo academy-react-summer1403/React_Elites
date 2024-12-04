@@ -11,11 +11,11 @@ const CoursesAndBlogsHolder = ({courseCommentt}) => {
 
   return (
 
-    <div className={style.CoursesAndBlogsHolder}>
+    <div className={style.CoursesAndBlogsHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
       <div className={style.CoursesAndBlogsLine}></div>
       <h1 className={style.CoursesAndBlogsSt} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>دوره ها و بلاگ ها </h1>
       <div className={style.CoursesAndBlogsLine}></div>
-      <div className={s.holderCommentsD}>
+      <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.holderCommentsD}>
       {courseCommentt.map((item, index) => {
         return(
           <CommentMain
