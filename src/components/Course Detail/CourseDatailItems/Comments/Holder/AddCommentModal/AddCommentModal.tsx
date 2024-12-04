@@ -3,12 +3,13 @@ import style from './Modal.module.css'
 import { useSpring, animated, useTransition } from '@react-spring/web'
 import { ModalComments } from './Modal Comments/ModalComments'
 import { useTranslation } from 'react-i18next';
-import { Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { postCourseComment } from '../../../../../../core/services/api/postCommentCourse';
 import toast, { Toaster } from 'react-hot-toast';
 import { postCourseReplyComment } from '../../../../../../core/services/api/postCourseReplyComment';
 import { useGlobalState } from '../../../../../../State/State';
 import { Modal } from 'antd';
+import * as yup from "yup";
 
 const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => {
     const { t } = useTranslation();
@@ -23,6 +24,10 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
       const handleCancel = () => {
         setIsModalOpen(false);
       };
+      const validation = yup.object().shape({
+        Title: yup.string().required("لطفا عنوان نظر را وارد کنید").test('len', 'عنوان نمیتواند کمتر از 5 کاراکتر باشد', val => val.length >= 5),
+        Describe: yup.string().required("لطفا توضیحات نظر وارد کنید").test('len', 'توضیحات نمیتواند کمتر از 5 کاراکتر باشد', val => val.length >= 5),
+      });
 
 
     return(
@@ -31,9 +36,9 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
             {addYourComment === true && 
                     <Formik
             initialValues={{Title: '', Describe: '', CourseId: id}}
+            validationSchema={validation}
             onSubmit={async (values) => {
                 let res = await postCourseComment(values)
-                console.log(res)
                 if(res.success === true){
                     toast.success("نظر شما به دوره اضافه شد")
                 }
@@ -46,7 +51,9 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
             <div className={style.addCommentInput}>
             <div className={style.inputHolders}>
                     <Field name='Title' className={`${style.inputs} ${style.borderG}`} placeholder='عنوان نظر خود را بنویسید' />
+                    <ErrorMessage name="Title" component={"p"} className="error" />
                     <Field name='Describe' className={style.inputs} placeholder='متن نظر خود را بنویسید' />
+                    <ErrorMessage name="Describe" component={"p"} className="error" />
                 </div>
                 <button type='submit' className={style.send}></button>
             </div>
@@ -56,6 +63,7 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
             {isReplying === true &&
                 <Formik
                 initialValues={{CommentId: commentId, CourseId: id, Title: '', Describe: ''}}
+                validationSchema={validation}
                 onSubmit={async (values) => {
                     let res = await postCourseReplyComment(values)
                     if(res.success === true){
@@ -70,7 +78,9 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
             <div className={style.addCommentInput}>
             <div className={style.inputHolders}>
                     <Field name='Title' className={`${style.inputs} ${style.borderG}`} placeholder='عنوان پاسخ خود را بنویسید' />
+                    <ErrorMessage name="Title" component={"p"} className="error" />
                     <Field name='Describe' className={style.inputs} placeholder='متن پاسخ خود را بنویسید' />
+                    <ErrorMessage name="Describe" component={"p"} className="error" />
                 </div>
                 <button type='submit' className={style.send}></button>
             </div>
@@ -78,6 +88,7 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
             </Formik>}
             <div className={style.header}>
                 <div className={style.close} onClick={() => {
+                    handleCancel()
                 }}> {t("close")} 
                     <div className={style.closeIcon}></div>
                 </div>

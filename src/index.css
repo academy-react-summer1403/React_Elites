@@ -55,6 +55,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.error{
+  color: red;
+  font-family: DannaMedium;
+  text-align: right;
+  width: 100%;
+}
 /*
 [data-theme="dark"] {
   background: #0C134F !important;

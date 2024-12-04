@@ -8,6 +8,7 @@ import { postChangePass } from "../../../../../core/services/api/postChangePass"
 import { NewPassword } from "./NewPassword";
 import toast, { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import * as yup from "yup";
 
 const LinksHolder = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -20,11 +21,17 @@ const LinksHolder = () => {
         }
     }
 
+    const validation = yup.object().shape({
+        oldPassword: yup.string().required("لطفا رمز عبور را وارد کنید"),
+        newPassword: yup.string().required("لطفا تکرار رمز جدید عبور وارد کنید"),
+      });
+
     return (
         <>
             <Toaster />
             <Formik
                 onSubmit={(value) => sendNewPass(value)}
+                validationSchema={validation}
                 initialValues={{ oldPassword: '', newPassword: '' }}
                 className={styleInform.left}
             >

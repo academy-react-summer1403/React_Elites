@@ -201,8 +201,16 @@
 .menu>div {
     width: 100%;
     display: flex;
+    position: relative;
+    transition: 0.5s;
+    right: 0px;
     flex-wrap: nowrap;
     gap: 8px;
+}
+
+.menu>div:hover {
+    right: 20px;
+    text-shadow: 1px 1px 10px white;
 }
 
 .menu>div>h1 {
