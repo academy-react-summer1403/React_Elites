@@ -20,6 +20,7 @@ const ImageForm = () => {
     const [image, setImage] = useState()
     const [uploaded, setuploaded] = useState(false)
     const [imageChanged, setimageChanged] = useState(false)
+    const [sthChanged, setsthChanged] = useGlobalState('sthChangedStu')
     const { t } = useTranslation();
 
     const getAllImagesCall = async () => {
@@ -36,6 +37,7 @@ const ImageForm = () => {
         else if(onSucces.success == true){
             toast.error("خطا در انجام عملیات")
         }
+        setsthChanged(!sthChanged)
     }
 
     const onUpload = async (image) => {

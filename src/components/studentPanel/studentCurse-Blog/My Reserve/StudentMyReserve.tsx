@@ -10,10 +10,12 @@ const StudentMyReserve = () => {
     const { t } = useTranslation();
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [userReserveCoursesObj, setUserReserveCoursesObj] = useState([])
+    const [isLoading, setisLoading] = useState(true)
 
     const getCourseReserveCall = async () => {
       const userReserveCoursesRes = await getCourseReserve();
       setUserReserveCoursesObj(userReserveCoursesRes)
+      setisLoading(false)
     }
   
     useEffect(() => {
@@ -36,7 +38,7 @@ const StudentMyReserve = () => {
                 <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("status")}</div>
                 <div className={style.eyeList}> </div>
             </div>
-            <ReserveCardsList userReserveCoursesObj={userReserveCoursesObj} />
+            <ReserveCardsList isLoading={isLoading} userReserveCoursesObj={userReserveCoursesObj} />
         </div>
     </div>
   )

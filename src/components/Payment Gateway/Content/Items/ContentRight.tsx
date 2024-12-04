@@ -7,10 +7,10 @@ import toast, { Toaster } from 'react-hot-toast'
 const ContentRight = ({Details}) => {
 
     const [value, setvalue] = useState({
-        CourseId: Details.courseId,
-        Paid: Details.cost,
+        CourseId: Details?.courseId,
+        Paid: Details?.cost,
         PeymentDate: new Date,
-        PaymentInvoiceNumber: 1265765645656465,
+        PaymentInvoiceNumber: Math.floor(Math.random() * 100) + 100000,
     })
 
 

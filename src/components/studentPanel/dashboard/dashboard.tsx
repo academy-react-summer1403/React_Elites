@@ -18,6 +18,7 @@ const StudentDashboard = () => {
   const [userReserveCoursesObj, setUserReserveCoursesObj] = useState([])
   const [percentage, setpercentage] = useState("")
   const [user, setuser] = useState({})
+  const [isLoading, setisLoading] = useState(true)
 
   const getCourseReserveCall = async () => {
     const userReserveCoursesRes = await getCourseReserve();
@@ -26,6 +27,7 @@ const StudentDashboard = () => {
     let res = await getProfile()
     setpercentage(res.profileCompletionPercentage)
     setuser(res)
+    setisLoading(false)
   }
 
   useEffect(() => {
@@ -39,7 +41,7 @@ const StudentDashboard = () => {
 
           <TopDashboard user={user}/>
           <MyCourseAndStatus percentage={percentage}/>
-          <MyReserveAndComment userReserveCoursesObj={userReserveCoursesObj} />
+          <MyReserveAndComment isLoading={isLoading} userReserveCoursesObj={userReserveCoursesObj} />
 
         </div>
       )

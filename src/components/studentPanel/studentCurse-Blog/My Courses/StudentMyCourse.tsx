@@ -11,9 +11,11 @@ const StudentMyCourse = () => {
   const { t } = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [data, setdata] = useState([])
+  const [isLoading, setisLoading] = useState(true)
   const myCourses = async () => {
     let res = await getMyCourse()
     setdata(res.listOfMyCourses)
+    setisLoading(false)
   }
   useEffect(() => {
     myCourses()
@@ -35,7 +37,7 @@ const StudentMyCourse = () => {
                 <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("level")} </div>
                 <div className={style.eyeList}> </div>
             </div>
-            <ListCardBlogs data={data} />
+            <ListCardBlogs isLoading={isLoading} data={data} />
             <div className="flex justify-center mt-8">
             </div>  
         </div>

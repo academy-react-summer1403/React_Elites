@@ -10,10 +10,12 @@ const StudentMyFavBlogs = () => {
     const { t } = useTranslation();
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [userFavBlogsObj, setuserFavBlogsObj] = useState([])
+    const [isLoading, setisLoading] = useState(true)
     
     const getFavBlogsCall = async () => {
     const userFavouriteBlogsRes = await getFavBlogs();
     setuserFavBlogsObj(userFavouriteBlogsRes.myFavoriteNews)
+    setisLoading(false)
     }
     
     useEffect(() => {
@@ -35,7 +37,7 @@ const StudentMyFavBlogs = () => {
             <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("Score")} </div>
             <div className={style.eyeList}> </div>
             </div>
-            <FavBlogsCardsList userFavBlogsObj={userFavBlogsObj} />
+            <FavBlogsCardsList isLoading={isLoading} userFavBlogsObj={userFavBlogsObj} />
         </div>
         </div>
     )

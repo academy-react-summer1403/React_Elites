@@ -1,10 +1,12 @@
 import { FavBlogsCards } from '../FavBlogsCards'
 import style from './FavBlogsCardsListStyle.module.css'
+import { MyFavBlogsSkeleton } from './Skeleton'
 
-const FavBlogsCardsList = ({userFavBlogsObj}) => {
+const FavBlogsCardsList = ({isLoading, userFavBlogsObj}) => {
 
   return (
     <div className={style.holder}>
+        {isLoading && <MyFavBlogsSkeleton cards={8} />}
         {userFavBlogsObj.map((item, index) => {
         return (
           <FavBlogsCards

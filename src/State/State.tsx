@@ -22,6 +22,7 @@ const { useGlobalState} = createGlobalState({
     isTwoStep: false,
     userGmail: '',
     userPass: '',
+    sthChangedStu: false,
 })
 
 

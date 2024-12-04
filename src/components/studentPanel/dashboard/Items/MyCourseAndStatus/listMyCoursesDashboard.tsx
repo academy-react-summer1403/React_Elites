@@ -10,9 +10,11 @@ import { getMyCourse } from "../../../../../core/services/api/getMyCourse";
 const ListMyCoursesDashboard = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [data, setdata] = useState([])
+  const [isLoading, setisLoading] = useState(true)
   const myCourses = async () => {
     let res = await getMyCourse()
     setdata(res.listOfMyCourses)
+    setisLoading(false)
   }
   useEffect(() => {
     myCourses()
@@ -22,7 +24,7 @@ const ListMyCoursesDashboard = () => {
     <div className={style.listMyCoursesDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
       <TitleHeaderMyCourseList />
       <HeaderList />
-      <ListCardBlogs data={data} />
+      <ListCardBlogs isLoading={isLoading} data={data} />
     </div>
   )
 }

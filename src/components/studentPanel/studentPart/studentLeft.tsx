@@ -14,6 +14,7 @@ const StudentGhabLeft = () => {
     const { t } = useTranslation();
     const [user, setUser] = useState([])
     const [isLogin, setIsLogin] = useGlobalState('isLogin');
+    const [sthChanged, setsthChanged] = useGlobalState('sthChangedStu')
     const getUserInfo = async () => {
         const userInfo = await getProfile();
         setUser(userInfo)
@@ -21,6 +22,9 @@ const StudentGhabLeft = () => {
     useEffect(() => {
         getUserInfo()
     }, [])
+    useEffect(() => {
+        getUserInfo()
+    }, [sthChanged])
 
     return (
         <Formik>
