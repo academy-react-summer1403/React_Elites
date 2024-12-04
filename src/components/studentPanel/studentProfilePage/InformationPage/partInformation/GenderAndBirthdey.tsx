@@ -16,7 +16,7 @@ const GenderAndBirthdey = ({setisMale, isMale, form}) => {
             <div className={styleInform.genderAndBirthdey}>
                 <div className={styleInform.smallDiv}>
                     <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("birthday")}</h1>
-                    <Field name="birthDay" className={styleInform.Input} placeholder="تاریخ تولد خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
+                    <Field name="birthDay" className={styleInform.Input} placeholder={t("enterBirthday")} data-theme={darkMode ? "dark" : "lightMode"} />
                 </div>
                 <div className={styleInform.smallDiv}>
                     <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("gender")}</h1>

@@ -16,7 +16,7 @@ const AboutMe = () => {
             <div className={styleInform.aboutMe}>
                 <div className={styleInform.bigDiv}>
                     <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("aboutMe")}</h1>
-                    <Field name="userAbout" className={styleInform.Input} placeholder="متن درباره خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
+                    <Field name="userAbout" className={styleInform.Input} placeholder={t("enterYourDesc")} data-theme={darkMode ? "dark" : "lightMode"} />
                 </div>
             </div>
 

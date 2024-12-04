@@ -8,7 +8,7 @@ export const en = {
     "readyForMarketLanding3": "Guidance and motivation", "readyForMarketLandingDesc3": "Familiarity with a technological stack of coding languages ​​with an action-oriented perspective to stimulate creative thinking during the training process ",
     "readyForMarketLanding4": "talent search", "readyForMarketLandingDesc4": "Finding streaks of interest and talent in talent search pilot courses regardless of age, field of study, geography, gender, etc. ",
     //our Services
-    "ourServicesTitleLanding1": "The services we provide you ", "ourServicesTitleLanding2": "during the courses","ourServicesTitle1": " Tests", "ourServicesTitle2": " Valid certificate", "ourServicesTitle3": " Job opportunities", "ourServicesTitle4": " 24 hour consultation", "ourServicesDesc1": " You can measure your level of knowledge with the tests to determine your level","ourServicesDesc2": " With our degree, you can easily be employed anywhere","ourServicesDesc3": " Job opportunities will be offered to you according to your ability level","ourServicesDesc4": " Our consultants answer your questions 24 hours a day",
+    "ourServicesTitleLanding1": "The services we provide you ", "ourServicesTitleLanding2": "during the courses", "ourServicesTitle1": " Tests", "ourServicesTitle2": " Valid certificate", "ourServicesTitle3": " Job opportunities", "ourServicesTitle4": " 24 hour consultation", "ourServicesDesc1": " You can measure your level of knowledge with the tests to determine your level", "ourServicesDesc2": " With our degree, you can easily be employed anywhere", "ourServicesDesc3": " Job opportunities will be offered to you according to your ability level", "ourServicesDesc4": " Our consultants answer your questions 24 hours a day",
     //courses of the weekend 
     "CoursesOfTheWeek": "Top courses of the week",
     //Blogs 
@@ -21,7 +21,7 @@ export const en = {
     "Dashboard": "Dashboard", "myCourse": "my course", "MyReservation": "My reservation", "FavoriteCourses": "Favorite courses", "FavoriteBlogs": "Favorite blogs", "Profile": "Profile", "Payments": "Payments", "exit": "exit",
     //Courses
     "headerTitleCoursesList": "Start a new adventure", "headerDescCoursesList1": "A strong start to learning a problem", "headerDescCoursesList2": "New can help you progress", "order": "order", "newest": "The newest", "oldest": "The oldest", "mostExpensive": "the most expensive", "cheapest": "The cheapest", "ClearSort": "Clear sort", "filter": "filter", "applyFilter": "Apply filter", "deleteFilter": "delete filter", "search": "search", "category": "category", "EducationalLevel": "Educational level", "dateStart-end": "Date of holding - Completion",
-    "ClassroomNumber": "Classroom number","likes": "likes","Dislikes": "Dislikes","NumberRegistrants": "Number of registrants","LastChange": "Last change",
+    "ClassroomNumber": "Classroom number", "likes": "likes", "Dislikes": "Dislikes", "NumberRegistrants": "Number of registrants", "LastChange": "Last change",
     //blogs  
     "headerTitleBlogsList": "More information, better understanding", "headerDescBlogsList1": "In blogs, we share your information", "headerDescBlogsList2": "We will increase the technology you learn", "PublicationDate": "Publication date", "popular": "the most popular", "close": "close",
     //about us
@@ -35,11 +35,15 @@ export const en = {
     "myProfile": "my profile", "informationAccount": "User account information", "name": "name", "images": "Photos", "links": "Links", "placeInform": "place of residence", "addressInform": "Residential address", "lastName": "last name", "aboutMe": "about me",
     "nationalCode": "National code", "birthday": "date of birth", "gender": "gender", "select": "choose", "applyChanges": "Apply changes", "Report": "Report", "SignOut": "Sign out of the user account", "woman": "woman", "man": "man", "lecturer": "teacher", "HoldingDate": "Date of holding",
     "CompletionDate": "Completion date", "level": "level", "student": "student", "status": "status", "type": "type", "lastChangeDate": "Date of last changes", "Visitors": "Visitors", "Score": "Score",
+    "Hi": "Good day", "GoodDay": "Hi ", "GoodDayDesc": "I hope you have a good day today", "date": "date", "Clock": "time", "StatusDashboard": "Account information status", "BottomStatus": "Your account information is incomplete.", "YourComments": "Your comments", "BlogsAndCourses": "Courses and blogs ", "collegian": "student ", "HiIAm": "I am, Hi ",
+    "ChangePassword": "Change password","UserSettings": "User settings","MapSelect": "Select your location on the map.","AddPhoto": "Add a photo","Loading": "Loading","Linkedin": "LinkedIn","Telegram": "Telegram","RecordChanges": "Record changes","BackupEmail": "Backup email","Two-stepLogin": "Two-step login","NewPassword": "New password","CurrentPassword": "Current password",
+
 
     //teacher page
-        "TeacherPage":"!List of professors","TeacherPageDesc":"!A list of the best professors in Sepehr Academy",
+    "TeacherPage": "!List of professors", "TeacherPageDesc": "!A list of the best professors in Sepehr Academy",
 
     //placeholder
-    "enterNumberReg": "Enter your mobile number", "enterPasswordPlaceHolder": "Enter your password", "enterNumber&email": "Enter your mobile number or email", "searchBlogs": "...Search for the desired blog", "searchCourses": "...Search for the desired course", "levelCourses": "Select the desired level", "TeacherCourses": "Choose the desired professor", "dateCourses": "Select the desired date", "CategoryBlogs": "Select the desired category", "enterEmailReg": "Enter your email","TeacherSearch":"...Search in the names of professors",
+    "enterNumberReg": "Enter your mobile number", "enterPasswordPlaceHolder": "Enter your password", "enterNumber&email": "Enter your mobile number or email", "searchBlogs": "...Search for the desired blog", "searchCourses": "...Search for the desired course", "levelCourses": "Select the desired level", "TeacherCourses": "Choose the desired professor", "dateCourses": "Select the desired date", "CategoryBlogs": "Select the desired category", "enterEmailReg": "Enter your email", "TeacherSearch": "...Search in the names of professors",
+    "enterCodeMeli": "Enter your national code.", "enterName": "Enter your name.", "enterLastName": "Enter your last name.","enterAddress": "Enter your residential address.","enterBirthday": "Enter your date of birth.","enterYourDesc": "Enter text about yourself.","enterLinkLinkedin": "Enter your LinkedIn link.","enterLinkTelegram": "Enter your Telegram link.","enterNewPassword": "Enter your new password.","enterCurrentPassword": "Enter your current password.",
 
 }

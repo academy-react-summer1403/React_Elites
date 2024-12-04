@@ -36,10 +36,13 @@ export const ar = {
     "myProfile": "ملفي الشخصي", "informationAccount": "معلومات حساب المستخدم", "name": "اسم", "images": "صور", "links": "روابط", "placeInform": "مكان الإقامة", "addressInform": "عنوان السكن", "lastName": "اسم العائلة", "aboutMe": "ْعَنِّي",
     "nationalCode": "الرمز الوطني", "birthday": "تاريخ الميلاد", "gender": "جنس", "select": "يختار", "applyChanges": "تطبيق التغييرات", "Report": "تقرير", "SignOut": "تسجيل الخروج من حساب المستخدم", "woman": "امرأة", "man": "الرجل", "lecturer": "مدرس", "HoldingDate": "تاريخ عقده",
     "CompletionDate": "تاريخ الانتهاء", "level": "مستوى", "student": "طالب", "status": "حالة", "type": "يكتب", "lastChangeDate": "تاريخ آخر التغييرات", "Visitors": "الزوار", "Score": "نتيجة",
+    "Hi": "السلام عليكم", "GoodDay": "يوم جيد", "GoodDayDesc": "أتمنى أن يكون لديك يوم جيد اليوم", "date": "تاريخ", "Clock": "ساعة", "StatusDashboard": "حالة معلومات حساب المستخدم", "BottomStatus": "معلومات حسابك غير كاملة", "YourComments": "تعليقاتك", "BlogsAndCourses": "الدورات والمدونات ", "collegian": "طالب ", "HiIAm": "مرحبًا، أنا ",
+    "ChangePassword": "تغيير كلمة المرور","UserSettings": "إعدادات المستخدم","MapSelect": "حدد موقعك على الخريطة","AddPhoto": "أضف صورة","Loading": "تحميل","Linkedin": "ينكدين","Telegram": "تلگرام","RecordChanges": "سجل التغييرات","BackupEmail": "البريد الإلكتروني الاحتياطية","Two-stepLogin": "تسجيل الدخول بخطوتين","NewPassword": "كلمة المرور الجديدة","CurrentPassword": "كلمة المرور الحالية",
 
     //teacher page
         "TeacherPage":"قائمة الأساتذة!","TeacherPageDesc":"قائمة أفضل الأساتذة في أكاديمية سبهر!",
 
     //placeholder
     "enterNumberReg": "أدخل رقم هاتفك المحمول", "enterPasswordPlaceHolder": "أدخل كلمة المرور الخاصة بك", "enterNumber&email": "أدخل رقم هاتفك المحمول أو البريد الإلكتروني", "searchBlogs": "ابحث عن المدونة المطلوبة...", "searchCourses": "ابحث عن الدورة المطلوبة...", "levelCourses": "حدد المستوى المطلوب", "TeacherCourses": "اختر الأستاذ المطلوب", "dateCourses": "حدد التاريخ المطلوب", "CategoryBlogs": "حدد الفئة المطلوبة", "enterEmailReg": "أدخل بريدك الإلكتروني","TeacherSearch":"بحث في أسماء الأساتذة...",
+    "enterCodeMeli": "أدخل الرمز الوطني الخاص بك", "enterName": "أدخل اسمك", "enterLastName": "أدخل اسمك الأخير","enterAddress": "أدخل عنوان منزلك","enterBirthday": "أدخل تاريخ ميلادك","enterYourDesc": "أدخل النص عنك","enterLinkLinkedin": " أدخل رابط  لینکدین الخاص بك","enterLinkTelegram": "أدخل رابط التليجرام الخاص بك","enterNewPassword": "أدخل كلمة المرور الجديدة","enterCurrentPassword": "أدخل كلمة المرور الحالية الخاصة بك",
 }

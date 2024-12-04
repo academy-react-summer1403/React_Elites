@@ -9,11 +9,13 @@ import { putUserInfoEdit } from "../../../../core/services/api/putUserInfoEdit";
 import toast, { Toaster } from "react-hot-toast";
 import { getProfile } from "../../../../core/services/api/getProfileInfo";
 import { LinksHolder } from "./partLinkPage/LinkedinAndTelegramHolder";
+import { useTranslation } from "react-i18next";
 
 
 const LinkForm = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [user, setUser] = useState()
+    const { t } = useTranslation();
 
     const updateProfileInfo = async (values) => {
         let userr = await putUserInfoEdit(values)
@@ -41,17 +43,17 @@ const LinkForm = () => {
                 <Form>
                 <Toaster />
                     <div className={style.titleHolder}>
-                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
+                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("myProfile")}</h1>
                     </div>
                     <div className={styleInform.page2}>
                         <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
                             <div className={styleInform.right}>
-                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اطلاعات حساب کاربری </NavLink>
-                                <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>عکس ها </NavLink>
-                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
-                                <div><h1 className={styleLink.selected}>لینک ها </h1></div>
-                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
-                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> تنظیمات کاربری </NavLink> 
+                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("informationAccount")} </NavLink>
+                                <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("images")} </NavLink>
+                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("placeInform")} </NavLink>
+                                <div><h1 className={styleLink.selected}>{t("links")} </h1></div>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("ChangePassword")} </NavLink>  
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("UserSettings")} </NavLink> 
                             </div>
                         </div>
                         <LinksHolder />
