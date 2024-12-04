@@ -7,7 +7,14 @@
     direction: ltr;
     border-radius: 16px;
 }
-
+.DataTable > div:first-child > div:first-child > div:first-child > div > div > div > div{
+    font-family: DannaBold;
+    font-size: 17px;
+}
+.DataTable > div:first-child > div:first-child > div:last-child > div  {
+    cursor: pointer;
+    border-radius: 9px;
+}
 .containerFactor{
     direction: ltr;
     display: flex;
@@ -76,6 +83,11 @@
 
 .seeFactor{
     font-family: DannaMedium;
+    color: white;
+    padding:5px 10px 5px 36px;
+    border-radius: 50px;
+    background:#3772FF url(https://img.icons8.com/?size=100&id=54792&format=png&color=ffffff)no-repeat 10% 50%;
+    background-size: 20px;
 }
 
 .modal{
@@ -105,4 +117,15 @@
 
 .seePayment:active{
     scale: 1.1;
+}
+
+.h6{
+    font-family: DannaDemiBold;
+    color: #2f2f2f;
+}
+.FactorHolder{
+    padding: 10px 0;
+}
+.FactorImage{
+    border-radius: 10px;
 }

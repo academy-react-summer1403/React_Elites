@@ -40,7 +40,7 @@ const Payment = () => {
           <DataTable
             data={paymentList}
             columns={columnPayment}
-            className='react-dataTable'
+            className={style.DataTable}
             responsive={true}
             highlightOnHover={true}
           />
