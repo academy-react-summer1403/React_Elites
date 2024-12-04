@@ -3,11 +3,14 @@ import style from './ModalComments.module.css'
 import { likeComment } from '../../../../../../../core/services/api/postCommentBlogLike'
 import toast, { Toaster } from 'react-hot-toast'
 import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
+import { useGlobalState } from '../../../../../../../State/State'
 
 const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
 
     const [isClicked, setIsClicked] = useState(false)
     const [isClicked2, setIsClicked2] = useState(false)
+    const [commentId, setCommentId] = useGlobalState('blogCommentId');
+    const [isReplying, setIsReplying] = useGlobalState('isReplying');
     
     useEffect(() => {
         setIsClicked(currentUserIsLike)
@@ -54,7 +57,10 @@ const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, lik
                 setIsClicked(false)
             }}></div>
             <div  className={style.dislikeCount}> {dissLikeCount} </div>
-            <div  className={style.reply}> جواب دادن </div>
+            <div  className={style.reply}  onClick={() => {
+                setIsReplying(!isReplying)
+                setCommentId(id)
+                }}> جواب دادن </div>
         </div>
     </div>
   )
