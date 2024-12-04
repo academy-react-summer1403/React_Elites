@@ -5,14 +5,18 @@ import { useGlobalState } from '../../../../../State/State';
 import { NavLink } from 'react-router-dom'
 import { ReserveCourses } from './ReserveCourses';
 import { getMyCourse } from '../../../../../core/services/api/getMyCourse';
+import { CardsCourseSkeleton } from './SkeletonLoading';
 
 const MiniBasket = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [coursesArr, setcoursesArr] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setisLoading] = useState(true)
+
   const getCourses = async () => {
     let res = await getMyCourse()
     setcoursesArr(res.listOfMyCourses)
+    setisLoading(false)
   }
   const showModal = () => {
     setIsModalOpen(true);
@@ -29,11 +33,12 @@ const MiniBasket = () => {
   return (
     <>
       <div className={style.miniBasketHolder} data-theme={darkMode ? "minibasket" : "lightMode"} onClick={showModal}>
-        <Modal closeIcon={null} footer={null} width={400} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "511px"}}>
+        <Modal closeIcon={null} footer={null} width={400} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "511px" }}>
           <div className={style.miniBasket}>
             <div className={style.holderMiniBasketOveral}>
               <div className={style.titleMiniBasketCount}> تعداد دوره در سبد : {coursesArr.length} </div>
               <div className={style.miniBasketItems}>
+                {isLoading && <CardsCourseSkeleton cards={3} />}
                 {coursesArr.map((item, index) => {
                   return (
                     <ReserveCourses
