@@ -21,12 +21,14 @@ const InformationForm = () => {
     const { t } = useTranslation();
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [isMale, setisMale] = useState(false)
+    const [sthChanged, setsthChanged] = useGlobalState('sthChangedStu')
     const [user, setUser] = useState()
 
     const updateProfileInfo = async (values) => {
         let userr = await putUserInfoEdit(values)
         if (userr.success === true) {
             toast.success("عملیات با موفقیت انجام شد")
+            setsthChanged(!sthChanged)
         }
     }
     const getUserInfo = async () => {

@@ -17,7 +17,7 @@ const CommentDashboard = () => {
     setcourseCommentt(res.myCommentsDtos)
 
     let res2 = await getMyNewsComment()
-    setnewsComment(res2.myCommentsDtos)
+    setnewsComment(res2.myNewsCommetDtos)
 
     setdata(res.myCommentsDtos)
   }
