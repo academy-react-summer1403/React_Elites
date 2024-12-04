@@ -20,12 +20,14 @@ const Login = () => {
   const [isTwoStep, setisTwoStep] = useGlobalState('isTwoStep');
   const [userGmail, setuserGmail] = useGlobalState('userGmail');
   const [userPass, setuserPass] = useGlobalState('userPass');
+  const [userId, setUserId] = useGlobalState('userId');
 
   const loginUser = async (values) => {
     const user = await loginAPI(values)
     if (user.success == true && user.token != null) {
       setItem("token", user.token)
       setIsLogin(true)
+      setUserId(user.id)
     }
     else if (user.success == true && user.token == null) {
       setisTwoStep(true)

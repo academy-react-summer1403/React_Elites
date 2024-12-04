@@ -4,14 +4,18 @@ import { AddCommentModal } from '../AddCommentModal/AddCommentModal'
 
 const AddComment = ({comments, title}) => {
   const [openModal, setOpenModal] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
   return (
     <>
-        <div className={style.addComment} onClick={() => setOpenModal(!openModal)}>
+        <div className={style.addComment}  onClick={showModal}>
             <div className={style.add}></div>
             <div className={style.bigText}> نظر شما </div>
-            <div className={style.smallText}> برای نظر دادن کلیک کنید </div>
+            <div className={style.smallText} > برای نظر دادن کلیک کنید </div>
         </div>
-        <AddCommentModal title={title} comments={comments} isOpen={openModal} onClose={() => setOpenModal(false)} />
+        <AddCommentModal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} title={title} comments={comments} />
     </>
   )
 }

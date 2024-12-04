@@ -4,14 +4,22 @@ import { CoursesAndBlogsHolder } from './CoursesAndBlogsHolder';
 import { TitleHeaderMyCommentList } from './TitleHeaderMyCommentList';
 import { getMyCourseComment } from "../../../../../core/services/api/getMyCourseComments";
 import { useEffect, useState } from "react";
+import { getMyNewsComment } from "../../../../../core/services/api/getMyNewsComments";
 
 const CommentDashboard = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [courseCommentt, setcourseCommentt] = useState([])
+  const [newsComment, setnewsComment] = useState([])
+  const [data, setdata] = useState([])
 
   const courseComment = async () => {
     let res = await getMyCourseComment()
     setcourseCommentt(res.myCommentsDtos)
+
+    let res2 = await getMyNewsComment()
+    setnewsComment(res2.myCommentsDtos)
+
+    setdata(res.myCommentsDtos)
   }
 
   useEffect(() => {
@@ -20,7 +28,7 @@ const CommentDashboard = () => {
 
   return (
     <div className={style.commentDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
-      <TitleHeaderMyCommentList courseCommentt={courseCommentt} />
+      <TitleHeaderMyCommentList data={data} courseCommentt={courseCommentt} newsComment={newsComment} setdata={setdata} />
       <CoursesAndBlogsHolder courseCommentt={courseCommentt} />
     </div>
   )

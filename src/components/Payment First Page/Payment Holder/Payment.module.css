@@ -7,3 +7,32 @@
     direction: ltr;
     border-radius: 16px;
 }
+
+.modal{
+    direction: rtl;
+}
+
+.seePaymentHolder{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: right;
+}
+
+.seePayment{
+    color: black;
+    cursor: pointer;
+    font-family: DannaNormal;
+    text-align: center;
+    padding: 10px 5px 10px 5px;
+    border-radius: 28px;
+    background-color: #3772FF;
+    width: auto;
+    color: white;
+
+}
+
+.seePayment:active{
+    scale: 1.1;
+}

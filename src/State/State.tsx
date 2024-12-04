@@ -18,6 +18,7 @@ const { useGlobalState} = createGlobalState({
     isFavouriteBlog: false,
     isReplying: false,
     courseCommentId: "",
+    blogCommentId: "",
     isTwoStep: false,
     userGmail: '',
     userPass: '',

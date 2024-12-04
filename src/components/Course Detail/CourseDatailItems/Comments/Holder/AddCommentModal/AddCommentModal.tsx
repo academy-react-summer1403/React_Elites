@@ -8,46 +8,26 @@ import { postCourseComment } from '../../../../../../core/services/api/postComme
 import toast, { Toaster } from 'react-hot-toast';
 import { postCourseReplyComment } from '../../../../../../core/services/api/postCourseReplyComment';
 import { useGlobalState } from '../../../../../../State/State';
+import { Modal } from 'antd';
 
-const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
+const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => {
     const { t } = useTranslation();
     const [addYourComment, setaddYourComment] = useState(false)
     const [isReplying, setIsReplying] = useGlobalState('isReplying');
     const [commentId, setCommentId] = useGlobalState('courseCommentId');
     const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
-    const handleEscape = e => {
-        if(e.keyCode == 27) {
-            onClose();
-        }
-    }
+    const handleOk = () => {
+        setIsModalOpen(false);
+      };
+      const handleCancel = () => {
+        setIsModalOpen(false);
+      };
 
-    useEffect(() => {
-        document.addEventListener('keydown', handleEscape)
-        return () => document.removeEventListener("keydown", handleEscape)
-    }, [])
-    
 
-    const modalTransition = useTransition(isOpen, {
-        from: { opacity: 0},
-        enter: { opacity: 1},
-        leave: { opacity: 1},
-        config: {
-            duration: 300
-        }
-    })
-
-    const springs = useSpring({
-        opacity: isOpen ? 1 : 0,
-        transform: isOpen ? "translateY(0%)" : "translateY(-100%)",
-        config: {
-            duration: 300
-        }
-    })
-
-    return modalTransition((styles, isOpen) => isOpen && (
+    return(
         <>
-        <animated.div style={styles} className={style.overLay} onClick={onClose}></animated.div>
+        <Modal  closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px"}}>
             {addYourComment === true && 
                     <Formik
             initialValues={{Title: '', Describe: '', CourseId: id}}
@@ -96,10 +76,8 @@ const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
             </div>
             </Form>
             </Formik>}
-        <animated.div style={springs} className={style.holder}>
             <div className={style.header}>
                 <div className={style.close} onClick={() => {
-                    onClose()
                 }}> {t("close")} 
                     <div className={style.closeIcon}></div>
                 </div>
@@ -130,9 +108,9 @@ const AddCommentModal = ({comments, isOpen, onClose, id, title}) => {
                 />
             )
         })}
-        </animated.div>
+        </Modal>
         </>
-    ))
+    )
 }
 
 export {AddCommentModal}

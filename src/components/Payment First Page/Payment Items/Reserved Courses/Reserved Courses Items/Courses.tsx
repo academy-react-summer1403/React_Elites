@@ -19,6 +19,7 @@ const Courses = ({ id, reserverDate }) => {
   const getCourseDetail = async () => {
     const Details = await getCourseById(id)
     setcourseDetail(Details)
+    console.log(id)
   }
   useEffect(() => {
     getCourseDetail()
