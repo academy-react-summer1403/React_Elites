@@ -16,7 +16,7 @@ const CoursesAndBlogsHolder = ({courseCommentt}) => {
       <div className={style.CoursesAndBlogsLine}></div>
       <h1 className={style.CoursesAndBlogsSt} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("BlogsAndCourses")} </h1>
       <div className={style.CoursesAndBlogsLine}></div>
-      <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.holderCommentsD}>
+      <div data-theme={darkMode ? "dark" : "lightMode"} className={s.holderCommentsD}>
       {courseCommentt.map((item, index) => {
         return(
           <CommentMain

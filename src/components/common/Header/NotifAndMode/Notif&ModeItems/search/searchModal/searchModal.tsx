@@ -68,9 +68,9 @@ const SearchModal = () => {
   return (
     <>
       <div className={style.titleHeaderMyCourseList}>
-        <div className={style.SearchHeader} onClick={showModal}> </div>
-        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px"}}>
-          <div className={s.titleHolder}>
+        <div data-theme={darkMode ? "darkSearch" : "lightMode"} className={style.SearchHeader} onClick={showModal}> </div>
+        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none",padding:"0"}}>
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
@@ -99,8 +99,8 @@ const SearchModal = () => {
             })}
           </div>
         </Modal>
-        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <div className={s.titleHolder}>
+        <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none"}}>
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>

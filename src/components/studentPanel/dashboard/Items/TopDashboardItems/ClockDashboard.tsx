@@ -17,9 +17,8 @@ const ClockDashboard = () => {
 
       const hour = dateObject.getHours()
       const minute = dateObject.getMinutes()
-      const second = dateObject.getSeconds()
 
-      const currentTime = second + ' : ' + minute + ' : ' + hour
+      const currentTime = minute + ' : ' + hour
       
       setTime(currentTime)
     }, 1000)
