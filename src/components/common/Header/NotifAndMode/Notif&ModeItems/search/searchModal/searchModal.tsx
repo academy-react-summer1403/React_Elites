@@ -76,14 +76,14 @@ const SearchModal = () => {
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
               <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
             </div>
-            <div className={s.title}>: جستجو در </div>
+            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>
           </div>
-          <div className={style.InputSearchHolder}>
-            <input placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
+            <input data-theme={darkMode ? "darkSmall" : "lightMode"} placeholder=' جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
               setSearchValue(e.target.value)
             }} />
           </div>
-          <div className={style.holderCards}>
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
             {blogsList.map((item, index) => {
               return (
                 <CardModal
@@ -99,21 +99,21 @@ const SearchModal = () => {
             })}
           </div>
         </Modal>
-        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px"}}>
+        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           <div className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
               <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
             </div>
-            <div className={s.title}>: جستجو در </div>
+            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>
           </div>
-          <div className={style.InputSearchHolder}>
-            <input placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
+            <input data-theme={darkMode ? "darkSmall" : "lightMode"}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
               setSearchValue(e.target.value)
             }} />
           </div>
-          <div className={style.holderCards}>
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
             {courseList.map((item, index) => {
               return (
                 <CardModal

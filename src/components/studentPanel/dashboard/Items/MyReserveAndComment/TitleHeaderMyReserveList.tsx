@@ -8,7 +8,7 @@ const TitleHeaderMyReserveList = () => {
 
   return (
     <div className={style.titleHeaderMyCourseList}>
-      <h1>رزرو من</h1>
+      <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>رزرو من</h1>
       <NavLink to='/Student-Panel/My-Reserve'>مشاهده بیشتر &gt;</NavLink>
     </div>
   )

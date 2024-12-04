@@ -111,7 +111,7 @@
   border-color: #0D7377 !important;
 }
 [data-theme="darkSmall"] {
-  background: #323232 !important;
+  background-color: #323232 !important;
   color: #14FFEC !important;
   border-color: #0D7377 !important;
 }
@@ -145,6 +145,8 @@
 }
 [data-theme="search"] {
   color: #14FFEC !important;
+  background: #2f2f2f url("https://img.icons8.com/?size=100&id=132&format=png&color=14FFEC") no-repeat 50% 50% !important;
+  background-size: 60% !important;
 }
 [data-theme="level"] {
   color: #14FFEC !important;

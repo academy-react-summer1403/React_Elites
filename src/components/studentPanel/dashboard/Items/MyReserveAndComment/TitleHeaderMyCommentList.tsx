@@ -24,12 +24,12 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
   };
   return (
     <>
-      <div className={style.titleHeaderMyCourseList}>
+      <div data-theme={darkMode ? "dark" : "lightMode"} className={style.titleHeaderMyCourseList}>
         <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>نظرات شما</h1>
         <div  onClick={showModal}>مشاهده بیشتر </div>
-        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <div className={s.titleHolder}>
-            <div className={s.close}> بستن </div>
+        <Modal data-theme={darkMode ? "dark" : "lightMode"} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
+            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => {
                 setisBlog(true)
@@ -40,7 +40,7 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
                 setdata(courseCommentt)
                 }}> دوره ها </div>
             </div>
-            <div className={s.title}> نظرات شما </div>
+            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}> نظرات شما </div>
           </div>
           <div className={s.holderComments}>
           {data.map((item, index) => {
