@@ -3,10 +3,12 @@ import style from "./../../../Style/studentPanel.module.css"
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../State/State";
 import { useTranslation } from 'react-i18next';
+import { removeItem } from "../../../core/services/storage/storage.services";
 
 const StudentGhabRight = () => {
     const { t } = useTranslation();
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+    const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
     return (
         <Formik>
@@ -52,7 +54,10 @@ const StudentGhabRight = () => {
                     </div>
                     <div className={style.logout}>
                         <div className={style.exit}> </div>
-                        <NavLink to='/'> {t("SignOut")}</NavLink>
+                        <button className="DannaM" onClick={() => {
+                            removeItem("token")
+                            setIsLogin(false)
+                        }}> {t("SignOut")}</button>
                     </div>
                 </div>
             </div>

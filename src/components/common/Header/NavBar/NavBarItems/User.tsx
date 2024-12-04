@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import style from './User.module.css'
 import { useGlobalState } from '../../../../../State/State'
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'antd';
 import { removeItem } from '../../../../../core/services/storage/storage.services';
@@ -14,6 +14,7 @@ const User = () => {
 
   return (
     <div className={style.user}>
+      {isLogin == false && <Navigate to="/auth/Login"/>}
       <img className={style.profile} src={userInfoObj.currentPictureAddress}></img>
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"  onClick={() => {
         setisClicked(!isClicked)
