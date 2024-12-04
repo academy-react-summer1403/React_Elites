@@ -24,7 +24,7 @@ export const columnPayment = [
 
       return (
         <div className={style.FactorHolder}>
-          <NavLink to={"/Course-Detail/" +course.courseId}>
+          <NavLink className={style.FactorNavLink} to={"/Course-Detail/" +course.courseId}>
             <img className={style.FactorImage} width={80} height={80} src={row.imageAdress && row.imageAdress.slice(0, 4) != "https" ? row.imageAdress : "https://classapi.sepehracademy.ir///Pictures//Course//blank-thumbnail_4031a67c-6002-4004-baf7-c0840ebed86f.jpg"} />
             <h6 className={style.h6}>{course.title}</h6>
           </NavLink>
@@ -41,6 +41,7 @@ export const columnPayment = [
         <div className={style.FactorHolder}>
           <div>
             <h6 className={style.h6}>{row.paid}تومان</h6>
+            <h6 className={style.h6Res}>{(dateConvertor(row.insertDate))}</h6>
           </div>
         </div>
       )
