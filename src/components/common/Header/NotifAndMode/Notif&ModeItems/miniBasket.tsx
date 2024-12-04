@@ -7,13 +7,16 @@ import { getCourseReserve } from '../../../../../core/services/api/getCourseRese
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi';
 import { ReserveCourses } from './ReserveCourses';
 import { getMyCourse } from '../../../../../core/services/api/getMyCourse';
+import { CardsCourseSkeleton } from './SkeletonLoading';
 
 const MiniBasket = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [coursesArr, setcoursesArr] = useState([])
+  const [isLoading, setisLoading] = useState(true)
   const getCourses = async () => {
     let res = await getMyCourse()
     setcoursesArr(res.listOfMyCourses)
+    setisLoading(false)
   }
   useEffect(() => {
     getCourses()
@@ -25,6 +28,7 @@ const MiniBasket = () => {
                 <div className={style.holderMiniBasketOveral}>
                   <div className={style.titleMiniBasketCount}> تعداد دوره در سبد : {coursesArr.length} </div>
                   <div className={style.miniBasketItems}>
+                    {isLoading && <CardsCourseSkeleton cards={3} />}
                     {coursesArr.map((item, index) => {
                       return (
                       <ReserveCourses

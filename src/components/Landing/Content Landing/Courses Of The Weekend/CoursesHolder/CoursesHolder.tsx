@@ -78,7 +78,6 @@ const CoursesHolder = ({courseList, isLoading}) => {
     <div className={style.holder}>
         <CoursesTitle />
         <Slider className={style.slider} {...settings} >
-          {isLoading && <PuffLoader />}
           {courseList.map((item, index) => {
           return (
             <>

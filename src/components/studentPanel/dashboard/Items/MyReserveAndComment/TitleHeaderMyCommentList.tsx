@@ -25,8 +25,8 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
   return (
     <>
       <div data-theme={darkMode ? "dark" : "lightMode"} className={style.titleHeaderMyCourseList}>
-        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>نظرات شما</h1>
-        <div  onClick={showModal}>مشاهده بیشتر </div>
+        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"} className="DannaM">نظرات شما</h1>
+        <div  onClick={showModal}  className={style.seeMore}>مشاهده بیشتر </div>
         <Modal data-theme={darkMode ? "dark" : "lightMode"} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
             <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.close}> بستن </div>

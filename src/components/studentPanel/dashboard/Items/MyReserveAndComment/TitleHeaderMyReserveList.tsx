@@ -9,7 +9,7 @@ const TitleHeaderMyReserveList = () => {
   return (
     <div className={style.titleHeaderMyCourseList}>
       <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>رزرو من</h1>
-      <NavLink to='/Student-Panel/My-Reserve'>مشاهده بیشتر &gt;</NavLink>
+      <NavLink className={style.seeMore} to='/Student-Panel/My-Reserve'>مشاهده بیشتر </NavLink>
     </div>
   )
 }

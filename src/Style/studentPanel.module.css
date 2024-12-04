@@ -577,6 +577,15 @@
     margin: 0 24px;
 }
 
+.seeMore{
+        width: auto;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.02px;
+  text-align: right;
+  color: #3772FF;
+}
+
 .titleHeaderMyCourseList>h1,
 .titleHeaderMyCourseList>a {
     width: auto;
