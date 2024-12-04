@@ -35,8 +35,9 @@ const Level = ({setLevelId}) => {
             {Level.map((item, index) => {
               return (  
                 <>
-                  <input type="radio" id={String(index)} name='teachers' className={style.input} onChange={() => {
-                    setLevelId(String(item.LevelId));
+                  <input type="radio" id={String(index)} name='levels' className={style.input} onChange={() => {
+                    setLevelId(String(item.id));
+
                   }}/>
                   <label htmlFor={String(index)} className={style.Level}>{item.levelName}</label>
                 </>

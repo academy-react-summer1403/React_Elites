@@ -3,11 +3,12 @@ import style from './CourseListAndFilter.module.css'
 import { CourseListGridHolder } from '../CourseListGrid/CourseListGridHolder/CourseListGridHolder'
 import { CourseFilterHolder } from '../CourseFilter/CourseFilterHolder/CourseFilterHolder'
 
-const CourseListAndFilter = ({applyFilter, minValueBining, maxValueBining,  set_minValue, set_maxValue, maxValue, minValue, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
+const CourseListAndFilter = ({categoryId, length, setlength, courseType, setcourseType, applyFilter, minValueBining, maxValueBining,  set_minValue, set_maxValue, maxValue, minValue, setTeacherId, setApplyFilter, teacherId, setTotalCount, totalCount, levelId, setLevelId, searchValue, setSearchValue, isSearched, setIsSearched, categoryId, setcategoryId}) => {
   return (
     <div className={style.CourseListAndFilterHolder}>
       <CourseListGridHolder
         applyFilter={applyFilter}
+        length={length}
         teacherId={teacherId}
         setTotalCount={setTotalCount}
         totalCount={totalCount}
@@ -17,11 +18,15 @@ const CourseListAndFilter = ({applyFilter, minValueBining, maxValueBining,  set_
         categoryId={categoryId}
         maxValue={maxValue}
         minValue={minValue}
+        courseType={courseType}
       />
       <CourseFilterHolder
         minValueBining={minValueBining}
         maxValueBining={maxValueBining}
+        setlength={setlength}
+        setcourseType={setcourseType}
         maxValue={maxValue}
+        categoryId={categoryId}
         minValue={minValue}
         set_minValue={set_minValue}
         set_maxValue={set_maxValue}

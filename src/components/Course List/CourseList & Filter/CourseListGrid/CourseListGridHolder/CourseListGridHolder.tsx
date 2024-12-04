@@ -7,9 +7,10 @@ import { allCourseList } from '../../../../../core/services/api/AllCourseList'
 import { Filter } from '../../../../../core/services/api/Filter'
 import { Sort } from '../../../../../core/services/api/Sort'
 import { useGlobalState } from '../../../../../State/State'
+import { allCourseListSearch } from '../../../../../core/services/api/AllCourseListSearch'
 
 
-const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTotalCount, totalCount, levelId, searchValue, isSearched, categoryId}) => {
+const CourseListGridHolder = ({length, courseType, applyFilter, maxValue, minValue, teacherId, setTotalCount, totalCount, levelId, searchValue, isSearched, categoryId}) => {
   const [clicked, setClicked] = useState(false)
   const [sortModal, setSortModal] = useState(false)
   const [courseList, setCourseList] = useState([]);
@@ -25,14 +26,17 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
 
   const getFilteredList = async () => {
 
-    let data = await Filter(teacherId, pagInation, levelId, categoryId, maxValue, minValue)
+    let data = await Filter(teacherId, pagInation, levelId, categoryId, maxValue, minValue, courseType, `&TechCount=${length}`, `&ListTech=${String(categoryId)}`)
 
     let sortData = await Sort(col, sortType)
+
+    let searchData = await allCourseListSearch(1)
 
     const allCourses = await allCourseList(pagInation)
 
     if(applyFilter === true){
       setisLoading(true)
+      console.log(minValue, maxValue)
       setCourseList(data.courseFilterDtos)
       setTotalCount(data.totalCount)
       setisLoading(false)
@@ -41,7 +45,9 @@ const CourseListGridHolder = ({applyFilter, maxValue, minValue, teacherId, setTo
       setisLoading(true)
       setCourseList(allCourses.courseFilterDtos)
       setTotalCount(allCourses.totalCount)
-      setCourseList(allCourses.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
+        if(searchValue != ""){
+          setCourseList(searchData.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
+        }
       setisLoading(false)
     }
     else if(applySort === true){

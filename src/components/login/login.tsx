@@ -28,6 +28,9 @@ const Login = () => {
       setItem("token", user.token)
       setIsLogin(true)
       setUserId(user.id)
+      if(user.roles.includes("Administrator")){
+        window.open("http://localhost:3000/home")
+      }
     }
     else if (user.success == true && user.token == null) {
       setisTwoStep(true)

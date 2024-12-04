@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { getCourseById } from '../../../core/services/api/courseById'
 import { dateConvertor } from '../../../core/services/Functions/DateMiladi'
+import { Factor } from './Factor'
 
 // ** Table columns 
 
@@ -11,7 +12,7 @@ export const columnPayment = [
     name: 'دوره',
     minWidth: '100px',
     cell: row => {
-      const [course, setCourse] = useState([])
+      const [course, setCourse] = useState({})
       const courseDetail = async () => {
         let res = await getCourseById(row.courseId)
         setCourse(res)
@@ -62,10 +63,18 @@ export const columnPayment = [
           name: 'عملیات',
           minWidth: '100px',
           cell: row => {
+            const [course, setCourse] = useState({})
+            const courseDetail = async () => {
+              let res = await getCourseById(row.courseId)
+              setCourse(res)
+            }
+            useEffect(() => {
+              courseDetail()
+            }, [])
             return (
               <div>
                 <div>
-                  <h6 className='DannaM'>مشاهده رسید</h6>
+                    <Factor peymentDate={row.peymentDate} paymentId={row.paymentId} course={course} />
                 </div>
               </div>
             )

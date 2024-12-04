@@ -8,6 +8,76 @@
     border-radius: 16px;
 }
 
+.containerFactor{
+    direction: ltr;
+    display: flex;
+    justify-content: right;
+    flex-flow: row wrap;
+    color: white;
+}
+
+.download{
+    margin-top: 15px;
+    font-family: DannaMedium;
+    color: white;
+    direction: rtl;
+
+}
+
+.success{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: DannaMedium;
+    background: rgb(0, 255, 0);
+    color: white;
+}
+
+.enteghal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: DannaMedium;
+    color: black;
+}
+
+.bigG{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    background: rgb(195, 195, 195);
+    font-family: DannaMedium;
+    color: black;
+    direction: rtl;
+}
+
+.text{
+    font-family: DannaMedium;
+    color: black;
+}
+
+.bigW{
+    direction: rtl;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    background: white;
+    font-family: DannaMedium;
+    color: black;
+}
+
+.seeFactor{
+    font-family: DannaMedium;
+}
+
 .modal{
     direction: rtl;
 }
