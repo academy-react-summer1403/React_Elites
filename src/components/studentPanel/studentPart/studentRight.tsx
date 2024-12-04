@@ -54,10 +54,10 @@ const StudentGhabRight = () => {
                     </div>
                     <div className={style.logout}>
                         <div className={style.exit}> </div>
-                        <button className="DannaM" onClick={() => {
+                        <NavLink to="/" className="DannaM" onClick={() => {
                             removeItem("token")
                             setIsLogin(false)
-                        }}> {t("SignOut")}</button>
+                        }}> {t("SignOut")}</NavLink>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
             </div>
             <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}> {t("YourComments")} </div>
           </div>
-          <div className={s.holderComments}>
+          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.holderComments}>
           {data.map((item, index) => {
             return(
               <Comment

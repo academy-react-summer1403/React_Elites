@@ -7,7 +7,8 @@
     color: white;
     font-size: 16px;
     font-family: DannaMedium;
-}.holderMiniBasketOveral{
+}
+.holderMiniBasketOveral{
     overflow: hidden;
 }
 .titleMiniBasketCount{
@@ -51,30 +52,26 @@
     background: url(https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=000000) no-repeat 50% 50%;
     background-size: 60%;
 }
-.miniBasketHolder:hover > .miniBasket{
-    display: flex;
-}
 
 .miniBasket {
     background: #fff;
-    position: absolute;
-    top: 40px;
-    left: 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px 1px #eee;
-    font-size: 10px;
     z-index: 2000;
-    display: none;
+    display: flex;
     padding: 10px;
     overflow: hidden;
+
 }
 
 .miniBasketItems{
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    padding:0 20px;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     overflow-y: scroll;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 8px;
 }
 
 .buttonHolder{
@@ -83,6 +80,7 @@
 }
 .button{
     background-color: rgb(0, 106, 255);
+    color: #fff;
     text-align: right;
     border-radius: 32px;
     padding: 10px;
@@ -91,6 +89,9 @@
     font-family: DannaMedium;
 }
 
+.button:hover{
+    color: #fff;
+}
 .imgMiniBasket{
     width: 100px;
     height: 70px;
@@ -123,15 +124,4 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-family: DannaMedium;
-}
-
-@media screen and (max-width: 1217px) {
-    .container {
-        font-size: 12px;
-    }
-}
-@media screen and (max-width: 900px) {
-    .miniBasketHolder{
-        display: none;
-    }
 }
