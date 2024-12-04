@@ -33,7 +33,7 @@ const MiniBasket = () => {
   return (
     <>
       <div className={style.miniBasketHolder} data-theme={darkMode ? "minibasket" : "lightMode"} onClick={showModal}>
-        <Modal closeIcon={null} footer={null} width={400} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "511px" }}>
+      <Modal closeIcon={null} footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "511px" }}>
           <div className={style.miniBasket}>
             <div className={style.holderMiniBasketOveral}>
               <div className={style.titleMiniBasketCount}> تعداد دوره در سبد : {coursesArr.length} </div>
