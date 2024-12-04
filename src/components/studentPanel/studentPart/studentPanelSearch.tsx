@@ -18,14 +18,14 @@ const StudentPanelSearch = () => {
                 <label className="text-base font-DannaBold text-black pb-1.5" data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("search")}</label>
                 <div className={style.searchLogo}> </div>
             </div>
-            <Field className={style.input} placeholder="دوره مورد نظر را جست‌جو کنید..." data-theme={darkMode ? "dark" : "lightMode"}/>
+            <Field className={style.input} placeholder={t("searchCourses")} data-theme={darkMode ? "dark" : "lightMode"}/>
             </div>
               <div className={style.dateHolder}> 
                 <div>
                     <label className="text-base font-DannaBold text-black pb-1.5" data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("dateStart-end")}</label>
                     <div className={style.dateLogo}> </div>
                 </div>
-                <Field className={style.input} placeholder="29 اردیبهشت 1403 - 5 خرداد 1403" data-theme={darkMode ? "dark" : "lightMode"}/>
+                <input type="date" className={style.input} data-theme={darkMode ? "dark" : "lightMode"}/>
             </div>
         </div>
       )}

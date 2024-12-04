@@ -1,14 +1,29 @@
 import style from "../../../../../Style/studentPanel.module.css";
 import { useGlobalState } from "../../../../../State/State";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ClockDashboard = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  const { t } = useTranslation();
 
-  let date = new Date()
+  const [time, setTime] = useState()
 
   useEffect(() => {
-    console.log()
+
+    setInterval(() => {
+
+      const dateObject = new Date()
+
+      const hour = dateObject.getHours()
+      const minute = dateObject.getMinutes()
+      const second = dateObject.getSeconds()
+
+      const currentTime = second + ' : ' + minute + ' : ' + hour
+      
+      setTime(currentTime)
+    }, 1000)
+
   }, [])
   
 
@@ -17,8 +32,8 @@ const ClockDashboard = () => {
     <div className={style.clock}>
       <div className={style.icon}></div>
       <div className={style.clockItem}>
-        <p data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>ساعت</p>
-        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{}</h1>
+        <p data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("Clock")}</p>
+        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{time}</h1>
       </div>
     </div>
   )

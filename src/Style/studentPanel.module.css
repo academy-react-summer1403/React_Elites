@@ -590,7 +590,7 @@
     color: #2F2F2F;
 }
 
-.titleHeaderMyCourseList>div {
+.titleHeaderMyCourseList>a,.titleHeaderMyCourseList>div {
     color: #3772FF;
 }
 

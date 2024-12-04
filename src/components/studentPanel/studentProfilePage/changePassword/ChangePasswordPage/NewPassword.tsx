@@ -5,17 +5,19 @@ import styleLink from "./../../LinkPage/partLinkPage/link.module.css";
 import { Form, NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../../State/State";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 
 const NewPassword = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+    const { t } = useTranslation();
 
     return (
 
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>رمز عبور جدید</h1>
-                <Field name="newPassword" className={styleInform.Input} placeholder="رمز عبور جدید خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
+                <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("NewPassword")}</h1>
+                <Field name="newPassword" className={styleInform.Input} placeholder={t("enterNewPassword")} data-theme={darkMode ? "dark" : "lightMode"} />
             </div>
         </div>
 

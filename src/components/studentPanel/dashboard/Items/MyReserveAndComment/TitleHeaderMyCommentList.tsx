@@ -5,11 +5,13 @@ import { NavLink } from 'react-router-dom';
 import { useState } from "react";
 import { Modal } from "antd";
 import { Comment } from "./comment";
+import { useTranslation } from "react-i18next";
 const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBlog, setisBlog] = useState(false)
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
+  const { t } = useTranslation();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -25,22 +27,22 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
   return (
     <>
       <div data-theme={darkMode ? "dark" : "lightMode"} className={style.titleHeaderMyCourseList}>
-        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>نظرات شما</h1>
-        <div  onClick={showModal}>مشاهده بیشتر </div>
+        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("YourComments")}</h1>
+        <div  onClick={showModal}>{t("ButtonViewAll")} </div>
         <Modal data-theme={darkMode ? "dark" : "lightMode"} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.close}> بستن </div>
+            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.close}> {t("close")} </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => {
                 setisBlog(true)
                 setdata(newsComment)
-                }}> بلاگ ها </div>
+                }}> {t("blogs")} </div>
               <div className={isBlog === true ? s.courses : s.selected} onClick={() => {
                 setisBlog(false)
                 setdata(courseCommentt)
-                }}> دوره ها </div>
+                }}> {t("courses")} </div>
             </div>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}> نظرات شما </div>
+            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}> {t("YourComments")} </div>
           </div>
           <div className={s.holderComments}>
           {data.map((item, index) => {

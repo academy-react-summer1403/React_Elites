@@ -6,32 +6,34 @@ import {Map} from "./partLocationPage/Map";
 
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../State/State";
+import { useTranslation } from "react-i18next";
 
 
 const LocationForm = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+    const { t } = useTranslation();
 
     return (
         <Formik>
             {(form) => (
                 <>
                     <div className={style.titleHolder}>
-                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
+                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("myProfile")}</h1>
                     </div>
                     <div className={styleInform.page2}>
                         <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
                             <div className={styleInform.right} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
-                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اطلاعات حساب کاربری </NavLink>
-                                <NavLink to='/Student-Panel/Image' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>عکس ها </NavLink>
-                                <div><h1 className={styleLocation.selected} >محل سکونت </h1></div>
-                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
-                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
-                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> تنظیمات کاربری </NavLink> 
+                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("informationAccount")} </NavLink>
+                                <NavLink to='/Student-Panel/Image' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("images")} </NavLink>
+                                <div><h1 className={styleLocation.selected} >{t("placeInform")} </h1></div>
+                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("links")} </NavLink>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("ChangePassword")} </NavLink>  
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("UserSettings")} </NavLink> 
                             </div>
                         </div>
                         <div className={styleLocation.left}>
                             <div className={styleLocation.locationHolder}> 
-                                <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>داخل نقشه موقعیت مکانی محل سکونت خود را انتخاب کنید</h1>
+                                <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("MapSelect")}</h1>
                                 <Map />
                             </div>
                         </div>

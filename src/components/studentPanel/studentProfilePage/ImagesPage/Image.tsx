@@ -10,6 +10,7 @@ import { selectImage } from "../../../../core/services/api/postSelectImage";
 import toast, { Toaster } from "react-hot-toast";
 import { uploadImage } from "../../../../core/services/api/postUserProfile";
 import { removeUserProfile } from "../../../../core/services/api/deleteUserProfile";
+import { useTranslation } from "react-i18next";
 
 const ImageForm = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -19,6 +20,7 @@ const ImageForm = () => {
     const [image, setImage] = useState()
     const [uploaded, setuploaded] = useState(false)
     const [imageChanged, setimageChanged] = useState(false)
+    const { t } = useTranslation();
 
     const getAllImagesCall = async () => {
         const userInfo = await getProfile()
@@ -58,23 +60,24 @@ const ImageForm = () => {
             <>
                 <Toaster />
                     <div className={style.titleHolder}>
-                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پروفایل من</h1>
+                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("myProfile")}</h1>
                     </div>
                     <div className={styleImage.page2}>
                         <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
                             <div className={styleInform.right}>
-                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اطلاعات حساب کاربری </NavLink>
-                                <div><h1 className={styleImage.selected}>عکس ها </h1></div>
-                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>محل سکونت </NavLink>
-                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>لینک ها </NavLink>
-                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>تغییر رمز عبور </NavLink>  
+                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("informationAccount")} </NavLink>
+                                <div><h1 className={styleImage.selected}>{t("images")} </h1></div>
+                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("placeInform")} </NavLink>
+                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("links")} </NavLink>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("ChangePassword")} </NavLink>
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("UserSettings")}  </NavLink>   
                             </div>
                         </div>
                         <div className={styleImage.imagesHolder}>
                             <div className={style.header}>
                                 <div className={style.uploadImage}  onClick={() => {
                                         setisClicked(!isClicked)
-                                    }}> اضافه کردن عکس 
+                                    }}> {t("AddPhoto")}
                                     <span className={style.addImage}></span>
                                 </div>
                                 {isClicked && 
@@ -92,7 +95,7 @@ const ImageForm = () => {
                                             const imageData = new FormData();
                                             imageData.append('formFile', image)
                                             onUpload(imageData)
-                                        }}> بارگذاری </button>
+                                        }}> {t("Loading")} </button>
                                         </div>
                                         <div className={styleImage.fileHolder}></div>
                                         <input type="file" id="file" className={styleImage.file} onChange={(e) => setImage(e.target.files[0])} />

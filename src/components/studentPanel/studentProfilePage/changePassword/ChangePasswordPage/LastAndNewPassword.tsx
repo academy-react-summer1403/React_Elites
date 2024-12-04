@@ -7,32 +7,33 @@ import { Form, Formik } from "formik";
 import { postChangePass } from "../../../../../core/services/api/postChangePass";
 import { NewPassword } from "./NewPassword";
 import toast, { Toaster } from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 const LinksHolder = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+    const { t } = useTranslation();
 
     const sendNewPass = async (value) => {
         let res = await postChangePass(value)
-        if(res.success == true){
+        if (res.success == true) {
             toast.success("رمز عبور تغییر یافت")
         }
     }
 
     return (
         <>
-        <Toaster />
-        <Formik 
-        onSubmit={(value) => sendNewPass(value)}
-        initialValues={{oldPassword: '', newPassword: ''}} 
-        className={styleInform.left}
-        >
+            <Toaster />
+            <Formik
+                onSubmit={(value) => sendNewPass(value)}
+                initialValues={{ oldPassword: '', newPassword: '' }}
+                className={styleInform.left}
+            >
                 <Form>
                     <LastPassword />
                     <NewPassword />
-                    <button type="submit" data-theme={darkMode ? "darkNoBG" : "lightMode"} className={style.button}>تغییر رمز عبور</button>
-                    {/* <Button /> */}
+                    <Button />
                 </Form>
-        </Formik>
+            </Formik>
         </>
     )
 }

@@ -8,11 +8,13 @@ import { useEffect, useState } from "react";
 import { putSecurityInfo } from "../../../../../core/services/api/putEditSecurity";
 import { getSecurityInfo } from "../../../../../core/services/api/getSecurityInfo";
 import toast, { Toaster } from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 const EditSecurityHolder = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [twoStep, settwoStep] = useState(false)
     const [user, setuser] = useState({})
+    const { t } = useTranslation();
 
     const getSecurityInfoo = async () => {
         let res = await getSecurityInfo()
@@ -45,7 +47,7 @@ const EditSecurityHolder = () => {
                 <Form>
                     <RecoveryEmail />
                     <TwoStep twoStep={twoStep} settwoStep={settwoStep} />
-                    <button type="submit" data-theme={darkMode ? "darkNoBG" : "lightMode"} className={style.button}> ثبت تغییرات </button>
+                    <button type="submit" data-theme={darkMode ? "darkNoBG" : "lightMode"} className={style.button}> {t("RecordChanges")} </button>
                 </Form>
             </Formik>
         </>

@@ -16,11 +16,11 @@ const Name = () => {
             <div className={styleInform.name}>
                 <div className={styleInform.smallDiv}>
                     <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("name")}</h1>
-                    <Field name="fName" className={styleInform.Input} placeholder="نام خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
+                    <Field name="fName" className={styleInform.Input} placeholder={t("enterName")} data-theme={darkMode ? "dark" : "lightMode"} />
                 </div>
                 <div className={styleInform.smallDiv}>
                     <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("lastName")}</h1>
-                    <Field name="lName" className={styleInform.Input} placeholder="نام خانوادگی خود را وارد کنید" data-theme={darkMode ? "dark" : "lightMode"} />
+                    <Field name="lName" className={styleInform.Input} placeholder={t("enterLastName")} data-theme={darkMode ? "dark" : "lightMode"} />
                 </div>
             </div>
 
