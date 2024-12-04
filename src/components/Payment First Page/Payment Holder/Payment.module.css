@@ -1,4 +1,4 @@
-.payment{
+.payment {
     width: 100%;
     height: auto;
     display: flex;
@@ -7,15 +7,18 @@
     direction: ltr;
     border-radius: 16px;
 }
-.DataTable > div:first-child > div:first-child > div:first-child > div > div > div > div{
+
+.DataTable>div:first-child>div:first-child>div:first-child>div>div>div>div {
     font-family: DannaBold;
     font-size: 17px;
 }
-.DataTable > div:first-child > div:first-child > div:last-child > div  {
+
+.DataTable>div:first-child>div:first-child>div:last-child>div {
     cursor: pointer;
     border-radius: 9px;
 }
-.containerFactor{
+
+.containerFactor {
     direction: ltr;
     display: flex;
     justify-content: right;
@@ -23,7 +26,7 @@
     color: white;
 }
 
-.download{
+.download {
     margin-top: 15px;
     font-family: DannaMedium;
     color: white;
@@ -31,7 +34,7 @@
 
 }
 
-.success{
+.success {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -42,7 +45,7 @@
     color: white;
 }
 
-.enteghal{
+.enteghal {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -52,7 +55,7 @@
     color: black;
 }
 
-.bigG{
+.bigG {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -64,12 +67,12 @@
     direction: rtl;
 }
 
-.text{
+.text {
     font-family: DannaMedium;
     color: black;
 }
 
-.bigW{
+.bigW {
     direction: rtl;
     width: 100%;
     display: flex;
@@ -81,20 +84,20 @@
     color: black;
 }
 
-.seeFactor{
+.seeFactor {
     font-family: DannaMedium;
     color: white;
-    padding:5px 10px 5px 36px;
+    padding: 5px 10px 5px 36px;
     border-radius: 50px;
-    background:#3772FF url(https://img.icons8.com/?size=100&id=54792&format=png&color=ffffff)no-repeat 10% 50%;
+    background: #3772FF url(https://img.icons8.com/?size=100&id=54792&format=png&color=ffffff)no-repeat 10% 50%;
     background-size: 20px;
 }
 
-.modal{
+.modal {
     direction: rtl;
 }
 
-.seePaymentHolder{
+.seePaymentHolder {
     width: 100%;
     padding: 20px;
     display: flex;
@@ -102,7 +105,7 @@
     justify-content: right;
 }
 
-.seePayment{
+.seePayment {
     color: black;
     cursor: pointer;
     font-family: DannaNormal;
@@ -115,17 +118,119 @@
 
 }
 
-.seePayment:active{
+.seePayment:active {
     scale: 1.1;
 }
 
-.h6{
+.h6 {
     font-family: DannaDemiBold;
     color: #2f2f2f;
 }
-.FactorHolder{
+
+.h6Res {
+    display: none;
+    font-family: DannaDemiBold;
+    color: #2f2f2f;
+}
+
+.FactorHolder {
     padding: 10px 0;
 }
-.FactorImage{
+
+.FactorImage {
     border-radius: 10px;
+}
+
+
+@media screen and (max-width: 597px) {
+    .DataTable>div:first-child>div:first-child>div:last-child>div {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 5px;
+        border: 1px solid #dcdcdc;
+    }
+
+    .DataTable>div:first-child>div:first-child>div:last-child {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 20px;
+    }
+
+    .FactorNavLink {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .FactorNavLink>.h6 {
+        color: #2f2f2f;
+        font-size: 17px;
+        font-family: DannaDemiBold;
+        width: 100%;
+        text-align: center;
+    }
+
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(3) {
+        display: none;
+    }
+
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(2),
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(4)>.FactorHolder>div>div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(2)>.FactorHolder>div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(4)>.FactorHolder>div>div,
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(4)>.FactorHolder>div,
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(4)>.FactorHolder>div,
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(4)>.FactorHolder,
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(2)>.FactorHolder {
+        width: 100%;
+    }
+
+    .h6Res {
+        display: block;
+    }
+
+    .FactorHolder {
+        padding: 0;
+    }
+
+    .FactorImage {
+        width: 80%;
+    }
+
+    .DataTable>div:first-child>div:first-child>div:first-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 292px) {
+    .DataTable>div:first-child>div:first-child>div:last-child>div>div:nth-child(2)>.FactorHolder>div {
+        padding-top: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .FactorImage {
+        width: 100%;
+        padding:0 -5px ;
+    }
+}
+
+@media screen and (max-width: 228px) {
+    .seeFactor {
+        font-family: 12px;
+        width: 100%;
+    }
 }
