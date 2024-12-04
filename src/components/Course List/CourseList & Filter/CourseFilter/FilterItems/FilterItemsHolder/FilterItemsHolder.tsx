@@ -8,8 +8,9 @@ import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { useTranslation } from "react-i18next";
 import { useGlobalState } from '../../../../../../State/State'
+import { Type } from '../FilterType/Type'
 
-const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {
+const FilterItemsHolder = ({setlength, categoryId, setcourseType, setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {
   const { t } = useTranslation();
   return (
     <div className={style.holder}>
@@ -18,6 +19,7 @@ const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxVal
         <Category setcategoryId={setcategoryId} />
         <Level setLevelId={setLevelId}/>
         <Teacher setTeacherId={setTeacherId}/>
+        <Type setcourseType={setcourseType} />
         <Price 
           minValueBining={minValueBining}
           maxValueBining={maxValueBining}
@@ -30,12 +32,14 @@ const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxVal
           setApplyFilter(false);
           setTeacherId("")
           setLevelId("")
-          setcategoryId(2)
-          set_minValue("1000000000")
-          set_maxValue("1000")
+          setcategoryId([1,2,3,4,5,6,7,8,9,10,11,12,13,14,20,21,22,26,25,27,28,29,30,31,32,33,34,35,36,37])
+          set_minValue("1000")
+          set_maxValue("1000000000")
+          setlength("0")
         }}> {t("deleteFilter")} </span>
         <span className={applyFilter ? style.applyFilter2 : style.applyFilter} onClick={() => {
-          setApplyFilter(true);
+          setApplyFilter(true)
+          setlength(categoryId.length)
         }}> {t("applyFilter")} </span>
 
     </div>

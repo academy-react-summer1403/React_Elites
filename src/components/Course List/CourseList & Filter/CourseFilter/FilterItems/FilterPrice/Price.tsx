@@ -32,8 +32,8 @@ const Price = ({maxValue, minValue, set_minValue, set_maxValue, maxValueBining, 
       <MultiRangeSlider
       ruler='false'
       style={{border: "none", boxShadow: "none", padding: "15px 10px"}}
-			min={minValueBining}
-			max={maxValueBining}
+			min={1000}
+			max={100000000}
       thumbLeftColor='#3772FF'
       thumbRightColor='#3772FF'
       barInnerColor='#F1F1F1'
@@ -41,8 +41,8 @@ const Price = ({maxValue, minValue, set_minValue, set_maxValue, maxValueBining, 
       barRightColor='#F1F1F1'
       label='false'
 			step={100000}
-			minValue={minValueBining}
-			maxValue={maxValueBining}
+			minValue={minValue}
+			maxValue={maxValue}
 			onInput={(e) => {
 				handleInput(e);
 			}}

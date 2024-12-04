@@ -15,11 +15,13 @@ const CourseList = () => {
   const [searchValue, setSearchValue] = useState("")
   const [isSearched, setIsSearched] = useState(false)
   const [isCourse, setisCourse] = useGlobalState('isCourse');
-  const [categoryId, setcategoryId] = useState(2)
+  const [categoryId, setcategoryId] = useState([1])
+  const [length, setlength] = useState(0)
   const [minValue, set_minValue] = useState("1000");
   const [maxValue, set_maxValue] = useState("100000000");
   const [maxValueBining, setmaxValueBining] = useState()
   const [minValueBining, setminValueBining] = useState()
+  const [courseType, setcourseType] = useState("")
   const { scrollYProgress } = useScroll()
 
   const getMaxValue = async () => {
@@ -45,6 +47,10 @@ const CourseList = () => {
         <StartNewJourney />
         <CourseListAndFilter 
           applyFilter={applyFilter}
+          setlength={setlength}
+          length={length}
+          setcourseType={setcourseType}
+          courseType={courseType}
           setTeacherId={setTeacherId}
           teacherId={teacherId}
           setApplyFilter={setApplyFilter}
