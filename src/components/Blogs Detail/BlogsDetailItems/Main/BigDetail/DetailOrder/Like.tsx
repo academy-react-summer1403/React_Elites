@@ -3,7 +3,7 @@ import style from './style.module.css'
 import { likeNews } from '../../../../../../core/services/api/postNewsLike'
 import toast, { Toaster } from 'react-hot-toast'
 import { useGlobalState } from '../../../../../../State/State'
-
+import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier'
 const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -20,7 +20,7 @@ const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   return (
     <>
     <Toaster />
-    <div data-theme={darkMode ? "darkLikeDetail" : "lightMode"} className={isClicked ? style.liked : style.like} onClick={() => {
+    <div data-theme={identifier("darkLikeDetail")} className={isClicked ? style.liked : style.like} onClick={() => {
       likeNewsCall(id)
       setIsClicked2(false)
       setIsClicked(true)

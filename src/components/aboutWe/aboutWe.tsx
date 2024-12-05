@@ -12,6 +12,7 @@ import {Programming} from "./aboutWeItems/Programming.tsx";
 import { useGlobalState } from "../../State/State.tsx";
 import { useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
+import { identifier } from '../../core/services/Functions/ThemeIdentifier';
 
 const AboutWe = (props) => {
   const [isAboutUs, setisAboutUs] = useGlobalState('isAboutUs');
@@ -31,11 +32,11 @@ const AboutWe = (props) => {
   <>
     <Formik>
       {(form) => (
-        <div className={style.container} data-theme={darkMode ? "dark" : "lightMode"}>
+        <div className={style.container} data-theme={identifier("dark")}>
           <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
-          <div className={style.page} data-theme={darkMode ? "dark" : "lightMode"}>
+          <div className={style.page} data-theme={identifier("dark")}>
             <AboutUsTitleHeader />
-          <div className={style.page2} data-theme={darkMode ? "dark" : "lightMode"}>
+          <div className={style.page2} data-theme={identifier("dark")}>
             <AboutWeDesc />
             <TargetWe />
             <Teaching />

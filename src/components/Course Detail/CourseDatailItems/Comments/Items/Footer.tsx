@@ -6,7 +6,7 @@ import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi
 import { postCourseCommentLike } from '../../../../../core/services/api/postCoureCommentLike';
 import toast, { Toaster } from 'react-hot-toast';
 import { postCourseCommentDisLike } from '../../../../../core/services/api/postCourseCommentDisLike';
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, likeCount, insertDate, commentId}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
@@ -14,15 +14,15 @@ const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, 
     <div className={style.footer}>
       <Toaster />
         <div className={style.likeAndDislikes}>
-            <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{likeCount}</div>
-            <div data-theme={darkMode ? "darkLikeDetail" : "lightMode"} className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
+            <div className={style.count} data-theme={identifier("darkNoBG")}>{likeCount}</div>
+            <div data-theme={identifier("darkLikeDetail")} className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
               let res = await postCourseCommentLike(commentId)
               if(res.success === true){
                 toast.success("کامنت لایک شد")
               }
             }}></div>
-            <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{disslikeCount}</div>
-            <div data-theme={darkMode ? "darkDisLikeDetail" : "lightMode"} className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
+            <div className={style.count} data-theme={identifier("darkNoBG")}>{disslikeCount}</div>
+            <div data-theme={identifier("darkDisLikeDetail")} className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
               let res = await postCourseCommentDisLike(commentId)
               console.log(res)
               if(res.success === true){
@@ -31,9 +31,9 @@ const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, 
             }}></div>
         </div>
         <div className={style.user}>
-            <div className={style.username} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{author}</div>
+            <div className={style.username} data-theme={identifier("darkNoBG")}>{author}</div>
             <img className={style.profile} src={pictureAddress} />
-            <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{dateConvertor(insertDate)}</div>
+            <div className={style.date} data-theme={identifier("darkNoBG")}>{dateConvertor(insertDate)}</div>
         </div>
     </div>
   )

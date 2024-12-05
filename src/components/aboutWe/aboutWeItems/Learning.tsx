@@ -2,14 +2,14 @@ import React from 'react'
 import style from './cardsBlogsListStyle.module.css'
 import { useGlobalState } from '../../../State/State';
 import { useTranslation } from 'react-i18next';
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 
 const Learning = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
   return (
     <div className={style.holderP}>
-      <span data-theme={darkMode ? "dark" : "lightMode"}>{t("aboutUsTitle6")}</span>
-      <p className={style.courseCounts} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>{t("aboutUsDesc10")}</p>
+      <span data-theme={identifier("dark")}>{t("aboutUsTitle6")}</span>
+      <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc")}>{t("aboutUsDesc10")}</p>
     </div>
   )
 }

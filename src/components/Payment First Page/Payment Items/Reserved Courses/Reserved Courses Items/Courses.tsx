@@ -10,7 +10,7 @@ import { getCourseById } from '../../../../../core/services/api/courseById'
 import { PayButtonHolder } from './payButtonHolder'
 import { NavLink } from 'react-router-dom'
 import { Date } from './Date'
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const Courses = ({ id, reserverDate }) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [courseDetail, setcourseDetail] = useState({})
@@ -26,7 +26,7 @@ const Courses = ({ id, reserverDate }) => {
   }, [])
 
   return (
-    <div className={style.coursesHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
+    <div className={style.coursesHolder} data-theme={identifier("darkNoBG")}>
       <div className={style.PriceAndPayHolder}>
         <Price cost={courseDetail.cost} />        
         <PayButtonHolder id={courseDetail.courseId} />

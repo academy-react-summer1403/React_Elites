@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Rate } from 'antd';
 import { StarFilled } from '@ant-design/icons';
 import { postCoourseRate } from '../../../../core/services/api/postCourseRate';
-
+import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const Description = ({description, isLoading, id, currentUserRateNumber}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [value, setvalue] = useState(`http://localhost:5173/Course-Detail/${id}`)
@@ -22,8 +22,8 @@ const Description = ({description, isLoading, id, currentUserRateNumber}) => {
   return currentUserRateNumber >= 0 && (
     <div className={style.containerDesc}>
         <Toaster />
-        <div className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}> توضیحات دوره </div>
-        {isLoading ? <SyncLoader /> : <p className={style.paragraph} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{description}</p>}
+        <div className={style.title} data-theme={identifier("darkNoBG")}> توضیحات دوره </div>
+        {isLoading ? <SyncLoader /> : <p className={style.paragraph} data-theme={identifier("darkNoBG")}>{description}</p>}
         <div className={style.copyLink} onClick={() => {
           copyToClipboard()
           setCopySuccess(true)

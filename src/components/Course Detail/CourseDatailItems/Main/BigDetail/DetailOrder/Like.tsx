@@ -4,7 +4,7 @@ import { postCourseLike } from '../../../../../../core/services/api/postCourseLi
 import { useGlobalState } from '../../../../../../State/State';
 import toast, { Toaster } from 'react-hot-toast';
 import { deleteCourseLike } from '../../../../../../core/services/api/delete-course-like';
-
+import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const Like = ({id, userLikeId}) => {
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
@@ -36,7 +36,7 @@ const Like = ({id, userLikeId}) => {
   return (
     <>
       <Toaster />
-      <div data-theme={darkMode ? "darkLikeDetail" : "lightMode"} className={isLiked == "1" ? style.liked : style.like} onClick={() => {
+      <div data-theme={identifier("darkLikeDetail")} className={isLiked == "1" ? style.liked : style.like} onClick={() => {
         if(isLiked == "0"){
           likeCourse()
         }

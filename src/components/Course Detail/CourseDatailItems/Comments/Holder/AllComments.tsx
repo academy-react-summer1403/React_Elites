@@ -4,13 +4,13 @@ import { Comment } from '../Items/Comment'
 import { useGlobalState } from '../../../../../State/State';
 import { AddComment } from './AddComment/AddComment';
 import { PulseLoader, ScaleLoader } from 'react-spinners';
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const AllComments = ({comments, id, isLoading, title}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
     <div className={style.container}>
-      <div className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}> نظرات دانشجو ها و اساتید </div>
+      <div className={style.title} data-theme={identifier("darkNoBG")}> نظرات دانشجو ها و اساتید </div>
       {isLoading && <PulseLoader />}
       {comments.slice(0,3).map((item, index) => {
         return(

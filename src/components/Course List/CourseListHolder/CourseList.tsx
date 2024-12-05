@@ -5,7 +5,7 @@ import { CourseListAndFilter } from '../CourseList & Filter/CourseList&FilterHol
 import { useGlobalState } from '../../../State/State'
 import { Sort } from '../../../core/services/api/Sort'
 import { motion, useScroll } from "framer-motion";
-
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
 const CourseList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [applyFilter, setApplyFilter] = useState(false)
@@ -41,7 +41,7 @@ const CourseList = () => {
     }
   }, [])
   return (
-    <div className={style.body}  data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.body}  data-theme={identifier("dark")}>
         <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
         <div className={style.courseListHolder}>
         <StartNewJourney />

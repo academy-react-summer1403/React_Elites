@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { ReserveCourses } from './ReserveCourses';
 import { getMyCourse } from '../../../../../core/services/api/getMyCourse';
 import { CardsCourseSkeleton } from './SkeletonLoading';
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const MiniBasket = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [coursesArr, setcoursesArr] = useState([])
@@ -32,7 +32,7 @@ const MiniBasket = () => {
   }, [])
   return (
     <>
-      <div className={style.miniBasketHolder} data-theme={darkMode ? "minibasket" : "lightMode"} onClick={showModal}>
+      <div className={style.miniBasketHolder} data-theme={identifier("minibasket")} onClick={showModal}>
       <Modal closeIcon={null} footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "511px" }}>
           <div className={style.miniBasket}>
             <div className={style.holderMiniBasketOveral}>

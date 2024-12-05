@@ -1,79 +1,79 @@
 import style from "../../Style/Compare.module.css";
 import { useGlobalState } from '../../State/State';
 import { useTranslation } from 'react-i18next';
-
+import { identifier } from "../../core/services/Functions/ThemeIdentifier";
 const Compare = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
   return (
-    <div className={style.Holder} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.Holder} data-theme={identifier("dark")}>
       <div className={style.Images}> 
         <img className={style.imageProgramming} src='https://classapi.sepehracademy.ir///Pictures//Course//blank-thumbnail_4031a67c-6002-4004-baf7-c0840ebed86f.jpg' />
-        <span className={style.Line} data-theme={darkMode ? "darkNoBG" : "lightMode"}></span>
+        <span className={style.Line} data-theme={identifier("darkNoBG")}></span>
         <img className={style.imageProgramming} src='https://classapi.sepehracademy.ir///Pictures//Course//blank-thumbnail_4031a67c-6002-4004-baf7-c0840ebed86f.jpg' />
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>نام دوره</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>نام دوره</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>والیبال</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>والیبال</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>اموزش ساخت تریاک</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>اموزش ساخت تریاک</div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>سایر توضیحات</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>سایر توضیحات</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>توضیحات اول</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>توضیحات اول</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>توضیحات دوم</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>توضیحات دوم</div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>قیمت</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>قیمت</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>1000تومان</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>1000تومان</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>300000تومان </div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>300000تومان </div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>تعداد لایک ها</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>تعداد لایک ها</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>198</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>198</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>300 </div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>300 </div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>وضعیت</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>وضعیت</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>در حال برگزاری</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>در حال برگزاری</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}> در حال برگزاری</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}> در حال برگزاری</div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>سطح آموزشی</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>سطح آموزشی</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>مبتدی</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>مبتدی</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>پیشرفته </div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>پیشرفته </div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>دسته بندی</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>دسته بندی</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>بک اند</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>بک اند</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>فرانت اند </div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>فرانت اند </div>
         </div>
       </div>
       <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={darkMode ? "darkNoBGDisc" : "lightMode"}>نام استاد</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>نام استاد</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>نوید</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>نوید</div>
  
-          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>طاها </div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>طاها </div>
         </div>
       </div>
     </div>

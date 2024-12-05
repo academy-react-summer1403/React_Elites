@@ -8,7 +8,7 @@ import { getProfile } from "../../../core/services/api/getProfileInfo";
 import { useEffect, useState } from "react";
 import { removeItem } from "../../../core/services/storage/storage.services";
 import { useTranslation } from "react-i18next";
-
+import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const StudentGhabLeft = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const { t } = useTranslation();
@@ -39,43 +39,43 @@ const StudentGhabLeft = () => {
                                 <div className={style.menu}>
                                     <div>
                                         <div className={style.home}> </div>
-                                        <NavLink to='/' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("MainPage")}</NavLink>
+                                        <NavLink to='/' data-theme={identifier("darkNoBG")}> {t("MainPage")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.Dashboard}> </div>
-                                        <NavLink to='/Student-Panel/dashboard' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Dashboard")}</NavLink>
+                                        <NavLink to='/Student-Panel/dashboard' data-theme={identifier("darkNoBG")}> {t("Dashboard")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.MyPeriod}> </div>
-                                        <NavLink to='/Student-Panel/My-Courses' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("myCourse")}</NavLink>
+                                        <NavLink to='/Student-Panel/My-Courses' data-theme={identifier("darkNoBG")}> {t("myCourse")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.MyReservation}> </div>
-                                        <NavLink to='/Student-Panel/My-Reserve' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("MyReservation")}</NavLink>
+                                        <NavLink to='/Student-Panel/My-Reserve' data-theme={identifier("darkNoBG")}> {t("MyReservation")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.favoritePeriod}> </div>
-                                        <NavLink to="/Student-Panel/Fav-Courses" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("FavoriteCourses")}</NavLink>
+                                        <NavLink to="/Student-Panel/Fav-Courses" data-theme={identifier("darkNoBG")}> {t("FavoriteCourses")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.BlogMenu}> </div>
-                                        <NavLink to="/Student-Panel/Fav-Blogs" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("FavoriteBlogs")}</NavLink>
+                                        <NavLink to="/Student-Panel/Fav-Blogs" data-theme={identifier("darkNoBG")}> {t("FavoriteBlogs")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.profile}> </div>
-                                        <NavLink to='/Information' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Profile")}</NavLink>
+                                        <NavLink to='/Information' data-theme={identifier("darkNoBG")}> {t("Profile")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.pay}> </div>
-                                        <NavLink to="/Shopping-Basket" data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Payments")}</NavLink>
+                                        <NavLink to="/Shopping-Basket" data-theme={identifier("darkNoBG")}> {t("Payments")}</NavLink>
                                     </div>
                                     <div>
                                         <div className={style.report}> </div>
-                                        <NavLink to='/' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("Report")} </NavLink>
+                                        <NavLink to='/' data-theme={identifier("darkNoBG")}> {t("Report")} </NavLink>
                                     </div>
                                     <div>
                                         <div className={style.communicate}> </div>
-                                        <NavLink to='/' data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("contactUs")} </NavLink>
+                                        <NavLink to='/' data-theme={identifier("darkNoBG")}> {t("contactUs")} </NavLink>
                                     </div>
                                     <div className={style.logout}>
                                         <div className={style.exit}> </div>
@@ -90,14 +90,14 @@ const StudentGhabLeft = () => {
                     </label>
                     <img src={user.currentPictureAddress} className={style.userProfile} />
                     <div className={style.userHolder}>
-                        <p className={style.userName} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{user.fName} {user.lName}</p>
-                        <p className={style.userLevel} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("collegian")} </p>
+                        <p className={style.userName} data-theme={identifier("darkNoBG")}>{user.fName} {user.lName}</p>
+                        <p className={style.userLevel} data-theme={identifier("darkNoBG")}>{t("collegian")} </p>
                     </div>
                 </div>
                 <div className={style.navigate}>
-                    <NavLink to="/" className={style.titleHeader} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("MainPage")} </NavLink>
-                    <p className={style.titleHeader} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("Report")} </p>
-                    <p className={style.titleHeader} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("contactUs")}</p>
+                    <NavLink to="/" className={style.titleHeader} data-theme={identifier("darkNoBG")}>{t("MainPage")} </NavLink>
+                    <p className={style.titleHeader} data-theme={identifier("darkNoBG")}>{t("Report")} </p>
+                    <p className={style.titleHeader} data-theme={identifier("darkNoBG")}> {t("contactUs")}</p>
                 </div>
                 <div className={style.notifAndDarkHolder}>
                     <div className={style.notif}>

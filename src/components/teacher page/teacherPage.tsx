@@ -7,7 +7,7 @@ import {getTeacher} from '../../core/services/api/TeachersList.ts'
 import { useGlobalState } from "../../State/State.tsx";
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll } from "framer-motion";
-
+import { identifier } from "../../core/services/Functions/ThemeIdentifier.ts";
 const TeacherList = (props) => {
   const { t } = useTranslation();
   const [teacherList, setTeacherList] = useState([]);
@@ -37,11 +37,11 @@ const TeacherList = (props) => {
     <Formik>
       {(form) => (
 
-        <div className=' h-full w-full flex flex-wrap justify-center mt-12' data-theme={darkMode ? "dark" : "lightMode"}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-12' data-theme={identifier("dark")}>
           <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
           <div className={style.titleHolder}>
-            <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPage")}</h1>
-            <h1 className={style.p} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("TeacherPageDesc")}</h1>
+            <h1 className={style.title} data-theme={identifier("darkNoBG")}>{t("TeacherPage")}</h1>
+            <h1 className={style.p} data-theme={identifier("darkNoBG")}>{t("TeacherPageDesc")}</h1>
           </div>  
           <div className={style.page}>
             <div className={style.page2}>      

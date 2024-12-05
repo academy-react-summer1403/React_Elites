@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom'
 import { getCourseById } from '../../../core/services/api/courseById'
 import { getCourseComment } from '../../../core/services/api/getCourseComment'
 import { allCourseList } from '../../../core/services/api/AllCourseList'
-
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
 const CourseDetail = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
@@ -56,7 +56,7 @@ const CourseDetail = () => {
 
 
   return (
-    <div className={style.body} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.body} data-theme={identifier("dark")}>
       <div className={style.holder}>
         <Main
           isLoading={isLoading}

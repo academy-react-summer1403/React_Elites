@@ -1,7 +1,7 @@
 import style from "./../../../../../Style/studentPanel.module.css";
 import { useGlobalState } from "../../../../../State/State";
 import { useTranslation } from "react-i18next";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const HeaderList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -9,12 +9,12 @@ const HeaderList = () => {
 
   return (
 
-    <div className={style.headerList} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-      <div className={style.imgList} data-theme={darkMode ? "darkNoBG" : "lightMode"}># </div>
-      <div className={style.nameList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("name")} </div>
-      <div className={style.teacherList} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("lecturer")}</div>
-      <div className={style.dateStartList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("HoldingDate")} </div>
-      <div className={style.levelList} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("status")} </div>
+    <div className={style.headerList} data-theme={identifier("darkSmall")}>
+      <div className={style.imgList} data-theme={identifier("darkNoBG")}># </div>
+      <div className={style.nameList} data-theme={identifier("darkNoBG")}>{t("name")} </div>
+      <div className={style.teacherList} data-theme={identifier("darkNoBG")}> {t("lecturer")}</div>
+      <div className={style.dateStartList} data-theme={identifier("darkNoBG")}>{t("HoldingDate")} </div>
+      <div className={style.levelList} data-theme={identifier("darkNoBG")}>{t("status")} </div>
       <div className={style.eyeList}> </div>
     </div>
   )

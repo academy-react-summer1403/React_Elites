@@ -4,11 +4,11 @@ import { GridItemsTitle } from '../GridItemsTitle/GridItemsTitle'
 import { Description } from '../GridItemsDescription/Description'
 import { Image } from '../GridItemsImage/Image'
 import { useGlobalState } from '../../../../../../../State/State'
-
+import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier'
 const GridItemsHolderTwo = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.holder} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.holder} data-theme={identifier("dark")}>
       <GridItemsTitle />
       <Description />
       <Image />

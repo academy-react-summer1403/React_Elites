@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import style from '../../../Style/DarkOrLightMode.module.css'
 import { useGlobalState } from '../../../State/State'
-
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 const DarkOrLightMode = () => {
 
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -11,7 +11,7 @@ const DarkOrLightMode = () => {
         <input type='checkbox' id="check" className={style.inputToggle} onChange={() => {
           setDarkMode(!darkMode)
         }}/>
-        <label htmlFor='check' className={style.DarkOrLight2} data-theme={darkMode ? "darkOrLight" : "lightMode"}></label>
+        <label htmlFor='check' className={style.DarkOrLight2} data-theme={identifier("darkOrLight")}></label>
     </>
   )
 }

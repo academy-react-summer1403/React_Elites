@@ -4,13 +4,13 @@ import { NavLink } from "react-router-dom";
 import { BottomStatusDashboard } from "./BottomStatusDashboard";
 import { TopStatusDashboard } from "./TopStatusDashboard";
 import { MiddleStatusDashboard } from "./middleStatusDashboard";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const StatusDashboard = ({percentage}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   return (
 
-    <div className={style.statusDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.statusDashboard} data-theme={identifier("dark")}>
       <TopStatusDashboard />
       <MiddleStatusDashboard percentage={percentage} />
       <BottomStatusDashboard />

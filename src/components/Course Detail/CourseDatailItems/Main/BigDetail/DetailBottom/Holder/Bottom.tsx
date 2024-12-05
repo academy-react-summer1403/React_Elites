@@ -4,12 +4,12 @@ import { DisLikes } from '../BottomItems/DisLikes'
 import { DateEnd } from '../BottomItems/DateEnd'
 import { DateStart } from '../BottomItems/DateStart'
 import { useGlobalState } from '../../../../../../../State/State'
-
+import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier'
 
 const Bottom = ({dislike, like, end, start, isLoading}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.bottom} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.bottom} data-theme={identifier("dark")}>
       <DisLikes isLoading={isLoading} dislike={dislike}  />
       <Likes isLoading={isLoading} like={like} />
       <DateEnd isLoading={isLoading} end={end} />

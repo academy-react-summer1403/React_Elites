@@ -2,7 +2,7 @@ import style from "./../../../../../Style/studentPanel.module.css";
 import { useGlobalState } from "../../../../../State/State";
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const TitleHeaderMyCourseList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ const TitleHeaderMyCourseList = () => {
   return (
 
     <div className={style.titleHeaderMyCourseList}>
-      <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("myCourse")}</h1>
+      <h1 data-theme={identifier("darkNoBG")}>{t("myCourse")}</h1>
       <NavLink to='/Student-Panel/My-courses'>{t("ButtonViewAll")}</NavLink>
     </div>
   )

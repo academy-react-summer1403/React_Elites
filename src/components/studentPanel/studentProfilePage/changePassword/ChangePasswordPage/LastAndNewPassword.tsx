@@ -9,7 +9,7 @@ import { NewPassword } from "./NewPassword";
 import toast, { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 import * as yup from "yup";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const LinksHolder = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const { t } = useTranslation();

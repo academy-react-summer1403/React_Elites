@@ -3,7 +3,7 @@ import { useGlobalState } from "../../../../State/State";
 import { NavLink } from 'react-router-dom';
 import { ListMyCoursesDashboard } from './MyCourseAndStatus/listMyCoursesDashboard';
 import { StatusDashboard } from './MyCourseAndStatus/StatusDashboard';
-
+import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
 
 const MyCourseAndStatus = ({percentage}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');

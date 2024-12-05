@@ -4,7 +4,7 @@ import { CourseFilterHolder } from './Filter Modal/CourseFilterHolder/CourseFilt
 import { SortModal } from './Sort Modal/SortModal'
 import { useGlobalState } from '../../../../../../State/State'
 import { useTranslation } from 'react-i18next';
-
+import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier'
 const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, setCol, applySort, setapplySort, }) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isClicked1, setIsClicked1] = useState(false)
@@ -14,7 +14,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
   const { t } = useTranslation();
   return (
     <>
-      <div className={isClicked1 ? style.selected : style.categories} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+      <div className={isClicked1 ? style.selected : style.categories} data-theme={identifier("darkSmall")} onClick={() => {
         setCol("insertDate")
         setapplySort(true)
         setIsClicked1(!isClicked1)
@@ -26,7 +26,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         }
         setSortType("DESC")
       }}>{t("newest")}</div>
-      <div className={isClicked2 ? style.selected : style.categories} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+      <div className={isClicked2 ? style.selected : style.categories} data-theme={identifier("darkSmall")} onClick={() => {
         setCol("insertDate")
         setapplySort(true)
         setIsClicked1(false)
@@ -35,7 +35,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         setIsClicked4(false)
         setSortType("ASC")
       }}> {t("oldest")} </div>
-      <div className={isClicked3 ? style.selected : style.categories} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+      <div className={isClicked3 ? style.selected : style.categories} data-theme={identifier("darkSmall")} onClick={() => {
         setCol("Cost")
         setapplySort(true)
         setIsClicked1(false)
@@ -44,7 +44,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         setIsClicked4(false)
         setSortType("DESC")
       }}> {t("mostExpensive")}</div>
-      <div className={isClicked4 ? style.selected : style.categories} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+      <div className={isClicked4 ? style.selected : style.categories} data-theme={identifier("darkSmall")} onClick={() => {
         setCol("Cost")
         setapplySort(true)
         setIsClicked1(false)
@@ -53,7 +53,7 @@ const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, s
         setIsClicked4(!isClicked4)
         setSortType("ASC")
       }}>{t("cheapest")}</div>
-      <div className={style.clearSort} data-theme={darkMode ? "darkClearSort" : "lightMode"} onClick={() => {
+      <div className={style.clearSort} data-theme={identifier("darkClearSort")} onClick={() => {
         setapplySort(false)
         setIsClicked1(false)
         setIsClicked2(false)

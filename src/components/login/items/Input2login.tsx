@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useGlobalState } from "../../../State/State";
 import { useState } from "react";
-
+import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 
 const Input2login = () => {
   const { t } = useTranslation();
@@ -13,9 +13,9 @@ const Input2login = () => {
   return (
 
     <div className={styleLogin.inputHolder}>
-      <label data-theme={darkMode ? "darkNoBG" : "lightMode"} className="text-base font-DannaDemiBold text-black pb-1.5">{t("password")}</label>
+      <label data-theme={identifier("darkNoBG")} className="text-base font-DannaDemiBold text-black pb-1.5">{t("password")}</label>
       <div className={styleLogin.inputPasswordHolder}>
-        <Field type={isPass ? "password" : "text"} data-theme={darkMode ? "darkSmall" : "lightMode"} className={styleLogin.input} name="password" placeholder={t("enterPasswordPlaceHolder")} />
+        <Field type={isPass ? "password" : "text"} data-theme={identifier("darkSmall")} className={styleLogin.input} name="password" placeholder={t("enterPasswordPlaceHolder")} />
         <div className={isPass ? styleLogin.inputPasswordC : styleLogin.inputPassword} onClick={() => setisPass(!isPass)}></div>
       </div>
       <ErrorMessage name="password" component={"p"} className="error" />

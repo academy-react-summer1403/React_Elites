@@ -11,7 +11,7 @@ import { postReserveCourse } from '../../../../../core/services/api/postAddCours
 import toast, { Toaster } from 'react-hot-toast'
 import { getCourseById } from '../../../../../core/services/api/courseById'
 import { useEffect, useState } from 'react'
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const FavCoursesCards = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [courseDetail, setCourseDetail] = useState({})
@@ -51,7 +51,7 @@ const FavCoursesCards = (props) => {
         <Type type={props.type} />
         <Level level={props.level}/>
         <div className={style.closeAndViewHolder}>
-          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
+          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view")}></NavLink>
           {courseReserve === false ? <span className={style.Book} onClick={() => reserveCourse()}></span> : <span className={style.isReserved}></span>}
           <span className={style.Close} ></span>
         </div>

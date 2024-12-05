@@ -11,7 +11,7 @@ import { MyCourseAndStatus } from './Items/MyCourseAndStatus';
 import { MyReserveAndComment } from './Items/MyReserveAndComment';
 import { getProfile } from '../../../core/services/api/getProfileInfo';
 import { Color } from 'antd/es/color-picker';
-
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 
 const StudentDashboard = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -37,7 +37,7 @@ const StudentDashboard = () => {
   return (
     <Formik>
       {(form) => (
-        <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+        <div className={style.page} data-theme={identifier("darkSmall")}>
 
           <TopDashboard user={user}/>
           <MyCourseAndStatus percentage={percentage}/>

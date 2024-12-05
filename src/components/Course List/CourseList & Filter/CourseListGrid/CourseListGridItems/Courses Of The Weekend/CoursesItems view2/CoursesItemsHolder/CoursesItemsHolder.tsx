@@ -8,11 +8,11 @@ import { TeacherAndPriceHolder } from '../Items/Teacher&PriceHolder/TeacherAndPr
 import { LevelAndCategoryHolder } from '../Items/level&CategoryHolder/LevelAndCategoryHolder'
 import { DislikeAndLikeHolder } from '../Items/dislike&Like/dislike&likeHolder'
 import { ClassRoomNameAndCurrentRegistrants } from '../Items/ClassRoomNameAndCurrentRegistrants/ClassRoomNameAndCurrentRegistrantsHolder'
-
+import { identifier } from '../../../../../../../../core/services/Functions/ThemeIdentifier';
 const CoursesItemsHolderView2 = ({image, id, title, teacher, price, level, category, likeCount, dissLikeCount, classRoomName, currentRegistrants, lastUpdate}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.holder} data-theme={darkMode ? "darkCoursesHolder" : "lightMode"}>
+    <div className={style.holder} data-theme={identifier("darkCoursesHolder")}>
         <Image id={id} image={image} />
         <div className={style.titleAndTeacherHolder}>
           <Title title={title} />

@@ -1,7 +1,7 @@
 import style from "./link.module.css";
 import { useGlobalState } from "../../../../../State/State";
 import { useTranslation } from "react-i18next";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const Button = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');

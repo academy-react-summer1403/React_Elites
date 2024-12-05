@@ -9,6 +9,8 @@ import { useParams } from 'react-router-dom'
 import { getBlogById } from '../../../core/services/api/BlogById'
 import { getAllBlogsList } from '../../../core/services/api/AllBlogsList'
 import { getRelatedBlog } from '../../../core/services/api/getRelatedBlog'
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
+
 
 const BlogsDetail = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -38,7 +40,7 @@ const BlogsDetail = () => {
   }, [isFavouriteBlog])
 
   return (
-    <div className={style.body} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.body} data-theme={identifier("dark")}>
           <div className={style.holder}>
         <Main 
           category={blogDetail?.newsCatregoryName}

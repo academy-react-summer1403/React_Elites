@@ -1,11 +1,11 @@
 import React from 'react'
 import style from './../../ItemsHolder.module.css'
 import { useGlobalState } from '../../../../../../../State/State';
-
+import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
 const Status = ({status}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
-  const identifier = () => {
+  const ali = () => {
     if(status === "0"){
       return "تایید نشده"
     }
@@ -14,7 +14,7 @@ const Status = ({status}) => {
     }
   }
   return (
-    <div className={style.status} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{identifier()}</div>
+    <div className={style.status} data-theme={identifier("darkNoBG")}>{ali()}</div>
   )
 }
 

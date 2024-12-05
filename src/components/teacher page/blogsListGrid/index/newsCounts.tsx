@@ -2,7 +2,7 @@ import React from 'react'
 import style from './cardsBlogsListStyle.module.css'
 import { useGlobalState } from '../../../../State/State';
 import s from './Title&courseHolder.module.css'
-
+import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const NewsCounts = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
@@ -15,7 +15,7 @@ const NewsCounts = (props) => {
       <path d="M17.7812 16.6953L17.7899 16.693" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M12 8.00019L18.5001 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> خبر ها : {props.countN}</div>
+      <div className={style.count} data-theme={identifier("darkNoBG")}> خبر ها : {props.countN}</div>
     </div>
   )
 }

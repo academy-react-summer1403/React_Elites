@@ -16,7 +16,7 @@ import { useParams } from 'react-router-dom'
 import { getCourseById } from '../../core/services/api/courseById'
 import { getCourseComment } from '../../core/services/api/getCourseComment'
 import { allCourseList } from '../../core/services/api/AllCourseList'
-
+import { identifier } from "../../core/services/Functions/ThemeIdentifier";
 const CompareSelect = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
@@ -53,7 +53,7 @@ const CompareSelect = () => {
 
 
   return (
-    <div className={style.Holder} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.Holder} data-theme={identifier("dark")}>
       <Image Image2={detailCompare?.imageAddress} Image={courseDetail?.imageAddress} />
       <Title title2={detailCompare?.title} title={courseDetail?.title}/>
       <Discription discription2={detailCompare?.describe} discription={courseDetail?.describe} />

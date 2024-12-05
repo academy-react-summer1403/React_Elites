@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { useGlobalState } from '../../../State/State.tsx'
 import { getProfile } from '../../../core/services/api/getProfileInfo.ts'
 import { motion, useScroll } from "framer-motion";
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier.ts'
 
 const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
@@ -53,7 +54,7 @@ const LandingHolder = () => {
   return (
     <>
       <Toaster />
-        <div className={style.landing} data-theme={darkMode ? "dark" : "light"}>
+        <div className={style.landing} data-theme={identifier("dark")}>
           <ContentLandingHolder
             MAndJ={MAndJ}
           />

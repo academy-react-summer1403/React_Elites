@@ -2,13 +2,13 @@ import React from 'react'
 import style from './style.module.css'
 import { useGlobalState } from '../../../../../../../State/State';
 import { BeatLoader } from 'react-spinners';
-
+import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
 const Teacher = ({teacher, isLoading}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.Teacher} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
-        <div className={style.topT} data-theme={darkMode ? "dark" : "lightMode"}>استاد دوره</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={darkMode ? "dark" : "lightMode"}>{teacher}</div>}
+    <div className={style.Teacher} data-theme={identifier("darkNoBG")}>
+        <div className={style.topT} data-theme={identifier("dark")}>استاد دوره</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={identifier("dark")}>{teacher}</div>}
     </div>
   )
 }

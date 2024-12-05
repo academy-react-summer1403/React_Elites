@@ -2,7 +2,7 @@ import styleInform from "./../../InformationPage/partInformation/Information.mod
 import { useGlobalState } from "../../../../../State/State";
 import { Telegram } from "./telegram";
 import { Linkedin } from "./linkedin";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const LinksHolder = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 

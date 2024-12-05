@@ -5,11 +5,11 @@ import { Level } from '../TopItems/Level'
 import { Category } from '../TopItems/Category'
 import { Teacher } from '../TopItems/Teacher'
 import { useGlobalState } from '../../../../../../../State/State'
-
+import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier'
 const Top = ({status, teacher, category, level, isLoading}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
-    <div className={style.top} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.top} data-theme={identifier("dark")}>
         <Teacher isLoading={isLoading} teacher={teacher} />
         <Category isLoading={isLoading} category={category} />
         <Level isLoading={isLoading} level={level} />

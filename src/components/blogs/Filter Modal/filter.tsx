@@ -4,13 +4,14 @@ import { DateFilter } from "./date/dateFilter.tsx";
 import { SearchFilter } from "./search/searchFilter.tsx";
 import { useGlobalState } from "../../../State/State.tsx";
 import { useTranslation } from 'react-i18next';
+import { identifier } from "../../../core/services/Functions/ThemeIdentifier.ts";
 
 const Filter = ({setFilterModal}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
   return (
-    <div className={styleFilter.filter} data-theme={darkMode ? "darkSmall" : "lightMode"}>
-        <h1 className={styleFilter.filterTitle} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("filter")}</h1>
+    <div className={styleFilter.filter} data-theme={identifier("darkSmall")}>
+        <h1 className={styleFilter.filterTitle} data-theme={identifier("darkNoBG")}> {t("filter")}</h1>
         <SearchFilter  />
         <CategoryFilter />
         <span className={styleFilter.applyFilter} onClick={() => {

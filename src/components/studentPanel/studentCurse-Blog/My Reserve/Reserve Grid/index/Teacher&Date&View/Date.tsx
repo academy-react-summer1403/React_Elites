@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './style.module.css'
 import { useGlobalState } from '../../../../../../../State/State';
-
+import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
 const Date = ({date}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
@@ -51,7 +51,7 @@ const Date = ({date}) => {
     return dateMiladii;
   }
   return (
-    <div className={style.date} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{dateConvertor(date)}</div>
+    <div className={style.date} data-theme={identifier("darkNoBG")}>{dateConvertor(date)}</div>
   )
 }
 

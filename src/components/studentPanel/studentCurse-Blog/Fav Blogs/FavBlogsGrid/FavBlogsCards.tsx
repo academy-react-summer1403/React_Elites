@@ -6,7 +6,7 @@ import { Date } from './index/Teacher&Date&View/Date'
 import { useGlobalState } from '../../../../../State/State'
 import { Level } from './index/Items/level&CategoryHolder/Level'
 import { NavLink } from 'react-router-dom'
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const FavBlogsCards = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   return (
@@ -17,7 +17,7 @@ const FavBlogsCards = (props) => {
         <Date date={props.date} />
         <Level level={Math.round(props.level)}/>
         <div className={style.closeAndViewHolder}>
-          <NavLink to={"/Blogs-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
+          <NavLink to={"/Blogs-Detail/" + props.id} className={style.View} data-theme={identifier("view")}></NavLink>
           <span className={style.Close}></span>
         </div>
     </div>

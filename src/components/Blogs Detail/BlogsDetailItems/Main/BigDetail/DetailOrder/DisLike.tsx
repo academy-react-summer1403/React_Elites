@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { likeNews } from '../../../../../../core/services/api/postNewsLike'
 import { dislikeNews } from '../../../../../../core/services/api/postNewsDislike'
 import { useGlobalState } from '../../../../../../State/State'
-
+import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier'
 const DisLike = ({ isClicked2, setIsClicked2, setIsClicked, id }) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -21,7 +21,7 @@ const DisLike = ({ isClicked2, setIsClicked2, setIsClicked, id }) => {
   return (
     <>
       <Toaster />
-      <div data-theme={darkMode ? "darkDisLikeDetail" : "lightMode"} className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
+      <div data-theme={identifier("darkDisLikeDetail")} className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
         likeNewsCall(id)
         setIsClicked(false)
         setIsClicked2(true)

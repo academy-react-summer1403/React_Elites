@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import style from '../../../../../Style/blogList.module.css'
 import { useGlobalState } from '../../../../../State/State';
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 
 const ChangePageList = ({setPagInation, pagInation, totalCount}) => {
   const [darkMode] = useGlobalState('DarkMode');
@@ -38,11 +39,11 @@ const ChangePageList = ({setPagInation, pagInation, totalCount}) => {
   
 
   return (
-    <div className={style.ChangePageList} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+    <div className={style.ChangePageList} data-theme={identifier("darkSmall")}>
         <span className={style.toLeft} onClick={toPreviousPage}></span>
           {syncPageList(totalCountCourses).map((index, item) => {
             return(
-              <div key={index} className={pagInation == index ? style.selected : style.button} data-theme={darkMode ? "darkSmall" : "lightMode"} onClick={() => {
+              <div key={index} className={pagInation == index ? style.selected : style.button} data-theme={identifier("darkSmall")} onClick={() => {
                 setPagInation(index)
               }}>{index}</div>
             )

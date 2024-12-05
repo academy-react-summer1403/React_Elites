@@ -14,7 +14,7 @@ import { NumberAndCode } from './partInformation/numberAndCode';
 import { GenderAndBirthdey } from './partInformation/GenderAndBirthdey';
 import { Email } from './partInformation/Email';
 import { Location } from './partInformation/location';
-
+import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
 
 
 const InformationForm = () => {
@@ -63,17 +63,17 @@ const InformationForm = () => {
                 <>
                     <Toaster />
                     <div className={style.titleHolder}>
-                        <h1 className={style.title} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("myProfile")}</h1>
+                        <h1 className={style.title} data-theme={identifier("darkNoBG")}> {t("myProfile")}</h1>
                     </div>
                     <div className={styleInform.page2}>
-                        <div className={styleInform.rightHolder} data-theme={darkMode ? "darkNoBG" : "lightMode"}>
+                        <div className={styleInform.rightHolder} data-theme={identifier("darkNoBG")}>
                             <div className={styleInform.right}>
                                 <div><h1 className={styleInform.selected}> {t("informationAccount")}</h1></div>
-                                <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("images")} </NavLink>
-                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("placeInform")} </NavLink>
-                                <NavLink to="/Student-Panel/Link" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("links")} </NavLink>
-                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("ChangePassword")} </NavLink>
-                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {t("UserSettings")}  </NavLink> 
+                                <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("images")} </NavLink>
+                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("placeInform")} </NavLink>
+                                <NavLink to="/Student-Panel/Link" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("links")} </NavLink>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("ChangePassword")} </NavLink>
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={identifier("darkNoBG")}> {t("UserSettings")}  </NavLink> 
                             </div>
                         </div>
                         <Form className={styleInform.left}>

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Modal } from "antd";
 import { Comment } from "./comment";
 import { useTranslation } from "react-i18next";
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,12 +27,12 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
   };
   return (
     <>
-      <div data-theme={darkMode ? "dark" : "lightMode"} className={style.titleHeaderMyCourseList}>
-        <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("YourComments")}</h1>
+      <div data-theme={identifier("dark")} className={style.titleHeaderMyCourseList}>
+        <h1 data-theme={identifier("darkNoBG")}>{t("YourComments")}</h1>
         <div  onClick={showModal}>{t("ButtonViewAll")} </div>
-        <Modal data-theme={darkMode ? "dark" : "lightMode"} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.close}> {t("close")} </div>
+        <Modal data-theme={identifier("dark")} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+          <div data-theme={identifier("dark")} className={s.titleHolder}>
+            <div data-theme={identifier("darkNoBG")} className={s.close}> {t("close")} </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => {
                 setisBlog(true)
@@ -42,9 +43,9 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
                 setdata(courseCommentt)
                 }}> {t("courses")} </div>
             </div>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}> {t("YourComments")} </div>
+            <div data-theme={identifier("darkNoBG")} className={s.title}> {t("YourComments")} </div>
           </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.holderComments}>
+          <div data-theme={identifier("dark")} className={s.holderComments}>
           {data.map((item, index) => {
             return(
               <Comment

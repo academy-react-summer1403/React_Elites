@@ -4,7 +4,7 @@ import {StudentGhabRight} from "../studentPart/studentRight";
 import {StudentGhabLeft} from "../studentPart/studentLeft";
 import { useGlobalState } from "../../../State/State";
 import { Outlet } from "react-router-dom";
-
+import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 
 const StudentPanel = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -14,7 +14,7 @@ const StudentPanel = () => {
             <StudentGhabRight />
             <div className={style.left}> 
                 <StudentGhabLeft />
-                <div className={style.page} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+                <div className={style.page} data-theme={identifier("darkSmall")}>
                   <Outlet />
                 </div>
             </div>

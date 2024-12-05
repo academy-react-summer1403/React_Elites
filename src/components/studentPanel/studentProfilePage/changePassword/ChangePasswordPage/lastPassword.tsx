@@ -6,7 +6,7 @@ import { Form, NavLink } from "react-router-dom";
 import { useGlobalState } from "../../../../../State/State";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const LastPassword = () => {
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -15,8 +15,8 @@ const LastPassword = () => {
     return (
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("CurrentPassword")}</h1>
-                <Field name="oldPassword" className={styleInform.Input} placeholder={t("enterCurrentPassword")} data-theme={darkMode ? "dark" : "lightMode"} />
+                <h1 data-theme={identifier("darkNoBG")}>{t("CurrentPassword")}</h1>
+                <Field name="oldPassword" className={styleInform.Input} placeholder={t("enterCurrentPassword")} data-theme={identifier("dark")} />
                 <ErrorMessage name="oldPassword" component={"p"} className="error" />
             </div>
         </div>

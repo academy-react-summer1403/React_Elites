@@ -3,14 +3,14 @@ import style from '../../Course List/CourseList & Filter/CourseFilter/FilterItem
 import styleCompare from '../../../Style/Compare.module.css'
 import { useGlobalState } from '../../../State/State';
 import { useTranslation } from "react-i18next";
-
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 const Search = ({ setSearchValue, setIsSearched, searchValue, isSearched }) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const { t } = useTranslation();
 
   return (
     <div id='searchCompare' className={styleCompare.searchHolder}>
-      <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={darkMode ? "dark" : "lightMode"} onChange={(e) => {
+      <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={identifier("dark")} onChange={(e) => {
         setSearchValue(e.target.value)
       }}
       />

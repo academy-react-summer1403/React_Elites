@@ -5,7 +5,7 @@ import style from './SeachModal.module.css'
 import { useGlobalState } from '../../../State/State';
 import { CardModal } from './Card';
 import { allCourseListSearch } from '../../../core/services/api/AllCourseListSearch';
-
+import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 const SearchModal = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,21 +38,21 @@ const SearchModal = () => {
   return (
     <>
       <div className={style.titleHeaderMyCourseList}>
-        <div data-theme={darkMode ? "darkSearch" : "lightMode"} className={style.SearchHeader} onClick={showModal}> </div>
+        <div data-theme={identifier("darkSearch")} className={style.SearchHeader} onClick={showModal}> </div>
         <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none"}}>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
+          <div data-theme={identifier("dark")} className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
               <div className={s.courses}> دوره ها </div>
             </div>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>
+            <div data-theme={identifier("darkNoBG")} className={s.title}>: جستجو در </div>
           </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
-            <input data-theme={darkMode ? "darkSmall" : "lightMode"}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
+          <div data-theme={identifier("dark")} className={style.InputSearchHolder}>
+            <input data-theme={identifier("darkSmall")}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
               setSearchValue(e.target.value)
             }} />
           </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
+          <div data-theme={identifier("dark")} className={style.holderCards}>
             {courseList.map((item, index) => {
               return (
                 <CardModal

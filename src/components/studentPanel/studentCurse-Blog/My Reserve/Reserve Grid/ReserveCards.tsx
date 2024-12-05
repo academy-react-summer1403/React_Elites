@@ -10,7 +10,7 @@ import { getCourseById } from '../../../../../core/services/api/courseById'
 import { deleteCourseReserve } from '../../../../../core/services/api/deleteCourseReserve'
 import { NavLink } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast'
-
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const ReserveCards = (props) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [courseDetail, setCourseDetail] = useState({})
@@ -44,7 +44,7 @@ const ReserveCards = (props) => {
         <Date date={courseDetail.endTime} />
         <Status status={courseDetail.isCourseUser}/>
         <div className={style.closeAndViewHolder}>
-          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={darkMode ? "view" : "lightMode"}></NavLink>
+          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view")}></NavLink>
           <span className={style.Close} onClick={() => deleteCourseReserveCall()} ></span>
         </div>
     </div>

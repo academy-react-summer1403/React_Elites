@@ -5,7 +5,7 @@ import { TitleHeaderMyCourseList } from './TitleHeaderMyCourseList';
 import { HeaderList } from './HeaderList';
 import { useEffect, useState } from "react";
 import { getMyCourse } from "../../../../../core/services/api/getMyCourse";
-
+import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const ListMyCoursesDashboard = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -21,7 +21,7 @@ const ListMyCoursesDashboard = () => {
   }, [])
   return (
 
-    <div className={style.listMyCoursesDashboard} data-theme={darkMode ? "dark" : "lightMode"}>
+    <div className={style.listMyCoursesDashboard} data-theme={identifier("dark")}>
       <TitleHeaderMyCourseList />
       <HeaderList />
       <ListCardBlogs isLoading={isLoading} data={data} />

@@ -9,6 +9,7 @@ import { useGlobalState } from "../../State/State.tsx";
 import { getNewsCategoryList } from "../../core/services/api/getNewsCategoryList.ts";
 import { getAllBlogsList } from "../../core/services/api/AllBlogsList.ts";
 import { motion, useScroll } from "framer-motion";
+import { identifier } from "../../core/services/Functions/ThemeIdentifier.ts";
 
 const BlogsList = () => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -44,7 +45,7 @@ const BlogsList = () => {
   <>
     <Formik>
       {(form) => (
-        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={darkMode ? "dark" : "lightMode"}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={identifier("dark")}>
           <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
           <TitleHeaderBlogs />
           <div className={styleBlogList.page}>
