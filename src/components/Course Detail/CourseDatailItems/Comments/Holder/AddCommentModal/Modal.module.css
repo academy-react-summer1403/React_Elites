@@ -27,14 +27,17 @@
     color: #707070;
     padding: 2px;
 }
-
-.send {
+.send:active{
+    scale: 1.1;
+}
+.send{
     width: 40px;
     height: 40px;
     border-radius: 100%;
     margin-right: 10px;
     background: #3772FF url("https://img.icons8.com/?size=100&id=TbpCBFVQVHZA&format=png&color=ffffff") 50% 50% no-repeat;
     background-size: 60%;
+    cursor: pointer;
 }
 
 .borderG {
@@ -52,7 +55,7 @@
     transform: translate(-50%, -50%);
     color: red;
     width: 490px;
-    height: 72px;
+    padding: 10px;
     border: 1px solid #3772FF;
     z-index: 10000;
     background: white;
@@ -83,8 +86,11 @@
     flex-flow: row nowrap;
 
 }
-
-.close {
+.close:active{
+    scale: 1.1;
+}
+.close{
+    cursor: pointer;
     width: 101px;
     height: 40px;
     border: 1px solid #FF5353;
@@ -131,7 +137,13 @@
     margin-top: 20px;
 }
 
-.addComment {
+
+
+.addComment:active{
+    scale: 1.1;
+}
+.addComment{
+    cursor: pointer;
     width: 107px;
     height: 40px;
     background: #3772FF;

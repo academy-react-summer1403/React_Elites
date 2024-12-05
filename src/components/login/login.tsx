@@ -13,6 +13,7 @@ import { RememberAndForget } from "./items/RememberAndForget";
 import { Input2login } from "./items/Input2login";
 import { HomePageButton } from "./items/HomePageButton";
 import { useTranslation } from 'react-i18next';
+import * as yup from "yup";
 
 const Login = () => {
   const { t } = useTranslation();
@@ -42,10 +43,16 @@ const Login = () => {
     }
   }
 
+  const validation = yup.object().shape({
+    phoneOrGmail: yup.string().required("لطفا ایمیل را وارد کنید"),
+    password: yup.string().required("لطفا رمز عبور را وارد کنید"),
+  });
+
   return (
     <Formik
       initialValues={{ password: "", phoneOrGmail: "" }}
       onSubmit={(values) => loginUser(values)}
+      validationSchema={validation}
     >
       {(form) => (
         <Form className={styleLogin.form}>

@@ -61,11 +61,11 @@ var settings = {
   ]
 };
 
-  return (
+  return related.length > 1 &&  (
     <div className={style.container}>
         <BlogTitle />
         <Slider className={style.slider}  {...settings} >
-        {related.length > 0 && related.map((item, index) => {
+        {related.map((item, index) => {
             return(
                 <BlogItems
                     key={index}

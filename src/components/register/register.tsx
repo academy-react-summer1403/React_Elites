@@ -13,6 +13,7 @@ import { PhoneNumberReg } from "./Items/PhoneNumberReg";
 import { SendCode } from "./Items/SendCode";
 import { LoginRegister } from "./Items/LoginRegister";
 import { MainPageButton } from "./Items/MainPageButton";
+import * as yup from "yup";
 
 const Register = () => {
   const [phoneNumber, setPhoneNumber] = useGlobalState('phoneNumber');
@@ -23,11 +24,16 @@ const Register = () => {
     console.log(phoneNumb)
   }
 
+  const validation = yup.object().shape({
+    phoneNumber: yup.string().required("لطفا شماره همراه را وارد کنید"),
+  });
+
   return (
 
     <Formik
       initialValues={{ phoneNumber: "" }}
       onSubmit={(values) => Register_User_PhoneNumber(values)}
+      validationSchema={validation}
     >
       {(form) => (
         <Form className={styleLogin.form}>

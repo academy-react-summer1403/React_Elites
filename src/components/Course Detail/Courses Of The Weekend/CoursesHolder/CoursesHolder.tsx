@@ -73,10 +73,10 @@ const CoursesHolder = ({related}) => {
       ]
     };
 
-  return (
+  return related.length > 1 &&  (
     <div className={style.holder}>
         <CoursesTitle />
-        {related.length > 0 && <Slider className={style.slider} {...settings} >
+        <Slider className={style.slider} {...settings} >
         {related.map((item, index) => {
         return (
           <CoursesItemsHolder 
@@ -91,7 +91,7 @@ const CoursesHolder = ({related}) => {
           />
         )
       })}
-      </Slider>}
+      </Slider>
     </div>
   )
 }

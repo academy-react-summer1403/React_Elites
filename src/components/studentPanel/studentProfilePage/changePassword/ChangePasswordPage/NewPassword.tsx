@@ -1,4 +1,4 @@
-import { Field, Formik } from "formik";
+import { ErrorMessage, Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../../InformationPage/partInformation/Information.module.css";
 import styleLink from "./../../LinkPage/partLinkPage/link.module.css";
@@ -18,6 +18,7 @@ const NewPassword = () => {
             <div className={styleInform.bigDiv}>
                 <h1 data-theme={darkMode ? "darkNoBG" : "lightMode"}>{t("NewPassword")}</h1>
                 <Field name="newPassword" className={styleInform.Input} placeholder={t("enterNewPassword")} data-theme={darkMode ? "dark" : "lightMode"} />
+                <ErrorMessage name="newPassword" component={"p"} className="error" />
             </div>
         </div>
 
