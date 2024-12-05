@@ -8,8 +8,8 @@ const DateEnd = ({end, isLoading}) => {
 
   return (
     <div className={style.Level} data-theme={identifier("darkNoBG")}>
-        <div className={style.topL} data-theme={identifier("dark")}>تاریخ اتمام</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomL} data-theme={identifier("dark")}>{dateConvertor(end)}</div>}
+        <div className={style.topL} >تاریخ اتمام</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomL} >{dateConvertor(end)}</div>}
     </div>
   )
 }

@@ -3,12 +3,14 @@ import style from './style.module.css'
 
 import { BeatLoader } from 'react-spinners';
 import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
+import { Title } from './Title';
+import { Name } from './Name';
 const Teacher = ({teacher, isLoading}) => {
 
   return (
     <div className={style.Teacher} data-theme={identifier("darkNoBG")}>
-        <div className={style.topT} data-theme={identifier("dark")}>استاد دوره</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={identifier("dark")}>{teacher}</div>}
+        <Title />
+        <Name teacher={teacher} isLoading={isLoading} />
     </div>
   )
 }

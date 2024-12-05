@@ -22,8 +22,8 @@ const Description = ({description, isLoading, id, currentUserRateNumber}) => {
   return currentUserRateNumber >= 0 && (
     <div className={style.containerDesc}>
         <Toaster />
-        <div className={style.title} data-theme={identifier("darkNoBG")}> توضیحات دوره </div>
-        {isLoading ? <SyncLoader /> : <p className={style.paragraph} data-theme={identifier("darkNoBG")}>{description}</p>}
+        <div className={style.title}> توضیحات دوره </div>
+        {isLoading ? <SyncLoader /> : <p className={style.paragraph}>{description}</p>}
         <div className={style.copyLink} onClick={() => {
           copyToClipboard()
           setCopySuccess(true)

@@ -11,7 +11,7 @@ const PopularInputBlogs = ({isClicked2, setisClicked2, setisClicked1, setapplySo
       setisClicked1(false)
       setisClicked2(true)
       setapplySort(true)
-      setSortType("DESC")
+      setSortType("ASC")
       setCol("insertDate")
     }}>
       {t("popular")}

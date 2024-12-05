@@ -3,12 +3,14 @@ import style from './style.module.css'
 
 import { BeatLoader } from 'react-spinners';
 import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
+import { TitleD } from './TitleL';
+import { CountL } from './CountL';
 const Likes = ({like, isLoading}) => {
 
   return (
     <div className={style.Status} data-theme={identifier("darkNoBG")}>
-        <div className={style.topS} data-theme={identifier("dark")}>تعداد لایک</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark")}>{like} نفر</div>}
+      <TitleD />
+      <CountL isLoading={isLoading} like={like} />
     </div>
   )
 }

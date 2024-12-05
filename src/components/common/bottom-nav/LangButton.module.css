@@ -9,6 +9,64 @@
     position: relative;
     padding: 10px;
 }
+.pencil{
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: orange url("https://img.icons8.com/?size=100&id=49&format=png&color=ffffff") 50% 50% no-repeat;
+    background-size: 50%;
+    border: 1px solid #ccc;
+        z-index: 1;
+        position: relative;
+}
+.theme1{
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 100%;
+}
+.theme2{
+    width: 20px;
+    height: 20px;
+    background: green;
+    border-radius: 100%;
+}
+.theme3{
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border-radius: 100%;
+}
+.theme4{
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 100%;
+}
+.theme5{
+    width: 20px;
+    height: 20px;
+    background: purple;
+    border-radius: 100%;
+}
+.theme6{
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 100%;
+}
+.holderPalette{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-flow: row wrap;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left: 55px;
+}
 .Language > option{
     margin-top: -4px;
 }

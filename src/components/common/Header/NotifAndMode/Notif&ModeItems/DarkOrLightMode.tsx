@@ -3,6 +3,7 @@ import style from '../../../../../Style/DarkOrLightMode.module.css'
 
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 import { useGlobalState } from '../../../../../State/State';
+import { getItem, setItem } from '../../../../../core/services/storage/storage.services';
 const DarkOrLightMode = () => {
 
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
