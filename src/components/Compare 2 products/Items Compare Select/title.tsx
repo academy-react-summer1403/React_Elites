@@ -9,10 +9,10 @@ const Title = ({ title, title2 }) => {
 
   return (
     <div className={style.Discription}>
-      <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>نام دوره</h1>
+      <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>نام دوره</h1>
       <div className={style.DiscriptionCompare}>
-        <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{title}</div>
-        <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{title2}</div>
+        <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{title}</div>
+        <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{title2}</div>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ const BlogTitle = () => {
 
   return (
     <div className={style.holderTitle}>
-        <div className={style.title} data-theme={identifier("dark")}>{t("blogTitleLanding")}</div>
+        <div className={style.title} data-theme={identifier("dark","dark2")}>{t("blogTitleLanding")}</div>
     </div>
   )
 }

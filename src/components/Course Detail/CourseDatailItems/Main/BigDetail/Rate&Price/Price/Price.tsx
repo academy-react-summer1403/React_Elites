@@ -9,8 +9,8 @@ const Price = ({price, isLoading}) => {
   const {t} = useTranslation();
   return (
     <div className={style.price}>
-        <div className={style.toman} data-theme={identifier("darkNoBG")}>{t("toman")}</div>
-        {isLoading ? <ClipLoader /> : <div className={style.number} data-theme={identifier("darkNoBG")}>{price}</div>}
+        <div className={style.toman} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("toman")}</div>
+        {isLoading ? <ClipLoader /> : <div className={style.number} data-theme={identifier("darkNoBG","dark2NoBG")}>{price}</div>}
 
     </div>
   )

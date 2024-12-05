@@ -9,7 +9,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Bottom = ({dislike, like, end, start, isLoading}) => {
 
   return (
-    <div className={style.bottom} data-theme={identifier("dark")}>
+    <div className={style.bottom} data-theme={identifier("dark","dark2")}>
       <DisLikes isLoading={isLoading} dislike={dislike}  />
       <Likes isLoading={isLoading} like={like} />
       <DateEnd isLoading={isLoading} end={end} />

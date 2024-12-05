@@ -6,9 +6,9 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Teacher = ({teacher, isLoading}) => {
 
   return (
-    <div className={style.Teacher} data-theme={identifier("darkNoBG")}>
-        <div className={style.topT} data-theme={identifier("dark")}>استاد دوره</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={identifier("dark")}>{teacher}</div>}
+    <div className={style.Teacher} data-theme={identifier("darkNoBG","dark2NoBG")}>
+        <div className={style.topT} data-theme={identifier("dark","dark2")}>استاد دوره</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={identifier("dark","dark2")}>{teacher}</div>}
     </div>
   )
 }

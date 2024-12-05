@@ -6,7 +6,7 @@ import { identifier } from '../../../../../core/services/Functions/ThemeIdentifi
 const Date = ({dateMiladi}) => {
 
   return (
-    <div className={style.date} data-theme={identifier("DateBlog")}>{dateMiladi}</div>
+    <div className={style.date} data-theme={identifier("DateBlog","DateBlog2")}>{dateMiladi}</div>
   )
 }
 

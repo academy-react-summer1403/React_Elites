@@ -8,7 +8,7 @@ const LastUpdate = ({lastUpdate}) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.lastUpdate} data-theme={identifier("darkNoBGDisc")}>{t("LastChange")}:{dateConvertor(lastUpdate)}</div>
+    <div className={style.lastUpdate} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("LastChange")}:{dateConvertor(lastUpdate)}</div>
   )
 }
 

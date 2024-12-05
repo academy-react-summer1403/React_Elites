@@ -10,7 +10,7 @@ const TitleHeaderMyReserveList = () => {
 
   return (
     <div className={style.titleHeaderMyCourseList}>
-      <h1 data-theme={identifier("darkNoBG")}>{t("MyReservation")}</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("MyReservation")}</h1>
       <NavLink to='/Student-Panel/My-Reserve'>{t("ButtonViewAll")}</NavLink>
     </div>
   )

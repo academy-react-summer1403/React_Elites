@@ -8,9 +8,9 @@ const DateStart = ({start, isLoading}) => {
 
   
   return (
-    <div className={style.Category} data-theme={identifier("darkNoBG")}>
-        <div className={style.topC} data-theme={identifier("dark")}>تاریخ برگزاری</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomC} data-theme={identifier("dark")}>{dateConvertor(start)}</div>}
+    <div className={style.Category} data-theme={identifier("darkNoBG","dark2NoBG")}>
+        <div className={style.topC} data-theme={identifier("dark","dark2")}>تاریخ برگزاری</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomC} data-theme={identifier("dark","dark2")}>{dateConvertor(start)}</div>}
     </div>
   )
 }

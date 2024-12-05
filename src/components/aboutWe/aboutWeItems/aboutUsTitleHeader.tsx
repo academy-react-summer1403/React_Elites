@@ -7,7 +7,7 @@ import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 const AboutUsTitleHeader = (props) => {
   const { t } = useTranslation();
   return (
-    <h1 className={style.title} data-theme={identifier("darkNoBG")}>{t("aboutUsTitle1")} </h1>
+    <h1 className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("aboutUsTitle1")} </h1>
   )
 }
 

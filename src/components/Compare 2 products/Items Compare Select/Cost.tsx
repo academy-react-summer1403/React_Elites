@@ -9,10 +9,10 @@ const Price = ({ cost, cost2 }) => {
 
   return (
     <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>قیمت</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>قیمت</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{cost}  {t("toman")}</div>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{cost2}  {t("toman")}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{cost}  {t("toman")}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{cost2}  {t("toman")}</div>
 
         </div>
       </div>

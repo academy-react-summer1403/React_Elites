@@ -14,7 +14,7 @@ const StudentPanel = () => {
             <StudentGhabRight />
             <div className={style.left}> 
                 <StudentGhabLeft />
-                <div className={style.page} data-theme={identifier("darkSmall")}>
+                <div className={style.page} data-theme={identifier("darkSmall","dark2Small")}>
                   <Outlet />
                 </div>
             </div>

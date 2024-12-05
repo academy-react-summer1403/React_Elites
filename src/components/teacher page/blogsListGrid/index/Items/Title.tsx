@@ -13,7 +13,7 @@ const Title = ({title}) => {
       <path d="M2 17V13C2 12.0572 2 11.5858 2.29289 11.2929C2.58579 11 3.05719 11 4 11H6M2 17H6M2 17V22M6 11V17M6 11H9H12M6 17V22" stroke="#272727" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M6 6.5C6 7.60457 5.10457 8.5 4 8.5C2.89543 8.5 2 7.60457 2 6.5C2 5.39543 2.89543 4.5 4 4.5C5.10457 4.5 6 5.39543 6 6.5Z" stroke="#272727" stroke-width="1.5"/>
       </svg>
-      <div className={style.title} data-theme={identifier("dark")}> استاد {title}</div>
+      <div className={style.title} data-theme={identifier("dark","dark2")}> استاد {title}</div>
     </div>
   )
 }

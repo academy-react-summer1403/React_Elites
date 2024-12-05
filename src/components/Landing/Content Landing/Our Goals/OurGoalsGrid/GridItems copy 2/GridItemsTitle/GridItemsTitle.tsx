@@ -8,7 +8,7 @@ const GridItemsTitle = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.title} data-theme={identifier("dark")}>{t("readyForMarketLanding3")}</div>
+    <div className={style.title} data-theme={identifier("dark","dark2")}>{t("readyForMarketLanding3")}</div>
   )
 }
 

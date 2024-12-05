@@ -5,7 +5,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Title = ({title}) => {
 
   return (
-    <div className={style.title} data-theme={identifier("dark")}>{title}</div>
+    <div className={style.title} data-theme={identifier("dark","dark2")}>{title}</div>
   )
 }
 

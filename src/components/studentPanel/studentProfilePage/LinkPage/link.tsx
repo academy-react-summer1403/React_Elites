@@ -43,17 +43,17 @@ const LinkForm = () => {
                 <Form>
                 <Toaster />
                     <div className={style.titleHolder}>
-                        <h1 className={style.title} data-theme={identifier("darkNoBG")}>{t("myProfile")}</h1>
+                        <h1 className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("myProfile")}</h1>
                     </div>
                     <div className={styleInform.page2}>
-                        <div className={styleInform.rightHolder} data-theme={identifier("darkNoBG")}>
+                        <div className={styleInform.rightHolder} data-theme={identifier("darkNoBG","dark2NoBG")}>
                             <div className={styleInform.right}>
-                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("informationAccount")} </NavLink>
-                                <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("images")} </NavLink>
-                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("placeInform")} </NavLink>
+                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("informationAccount")} </NavLink>
+                                <NavLink to="/Student-Panel/Image" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("images")} </NavLink>
+                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("placeInform")} </NavLink>
                                 <div><h1 className={styleLink.selected}>{t("links")} </h1></div>
-                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={identifier("darkNoBG")}>{t("ChangePassword")} </NavLink>  
-                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={identifier("darkNoBG")}> {t("UserSettings")} </NavLink> 
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("ChangePassword")} </NavLink>  
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("UserSettings")} </NavLink> 
                             </div>
                         </div>
                         <LinksHolder />

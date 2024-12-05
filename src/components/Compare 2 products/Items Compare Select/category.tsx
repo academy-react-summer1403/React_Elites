@@ -9,11 +9,11 @@ const Category = ({ techs, techs2 }) => {
 
   return (
     <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>دسته بندی</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>دسته بندی</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{techs}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{techs}</div>
 
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{techs2}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{techs2}</div>
         </div>
       </div>
   )

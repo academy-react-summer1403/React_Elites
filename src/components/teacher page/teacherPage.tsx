@@ -37,11 +37,11 @@ const TeacherList = (props) => {
     <Formik>
       {(form) => (
 
-        <div className=' h-full w-full flex flex-wrap justify-center mt-12' data-theme={identifier("dark")}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-12' data-theme={identifier("dark","dark2")}>
           <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
           <div className={style.titleHolder}>
-            <h1 className={style.title} data-theme={identifier("darkNoBG")}>{t("TeacherPage")}</h1>
-            <h1 className={style.p} data-theme={identifier("darkNoBG")}>{t("TeacherPageDesc")}</h1>
+            <h1 className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("TeacherPage")}</h1>
+            <h1 className={style.p} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("TeacherPageDesc")}</h1>
           </div>  
           <div className={style.page}>
             <div className={style.page2}>      

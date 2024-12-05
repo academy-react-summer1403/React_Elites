@@ -6,8 +6,8 @@ const FPRepeatPassInput = () => {
 
   return (
     <div className={styleLogin.inputHolder}>
-      <label data-theme={identifier("darkNoBG")} className="text-base font-DannaBold text-black pb-1.5">تکرار رمزعبور جدید</label>
-      <Field data-theme={identifier("darkSmall")} className={styleLogin.input} name="newPassword" placeholder="تکرار رمزعبور خود را وارد کنید" />
+      <label data-theme={identifier("darkNoBG","dark2NoBG")} className="text-base font-DannaBold text-black pb-1.5">تکرار رمزعبور جدید</label>
+      <Field data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.input} name="newPassword" placeholder="تکرار رمزعبور خود را وارد کنید" />
       <ErrorMessage name="password" component={"p"} className="error" />
     </div>
   )

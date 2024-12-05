@@ -8,7 +8,7 @@ const OurGoalsTitle = () => {
   
     return (
         <div className={style.holderTitle}>
-            <div className={style.title}  data-theme={identifier("dark")}>{t("ourGoalsLandingTitle")}</div>
+            <div className={style.title}  data-theme={identifier("dark","dark2")}>{t("ourGoalsLandingTitle")}</div>
         </div>
 
     )

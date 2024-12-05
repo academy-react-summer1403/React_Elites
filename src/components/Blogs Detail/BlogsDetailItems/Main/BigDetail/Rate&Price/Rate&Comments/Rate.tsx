@@ -10,7 +10,7 @@ const Ratee = ({rate, isLoading}) => {
   return (
     <>
   <Rate character={<StarFilled style={{fontSize: "25px"}} /> } defaultValue={rate} disabled/>
-      {isLoading ? <ClipLoader /> : <div className={style.number} data-theme={identifier("dark")}>({rate})</div>}
+      {isLoading ? <ClipLoader /> : <div className={style.number} data-theme={identifier("dark","dark2")}>({rate})</div>}
     </>
 
   )

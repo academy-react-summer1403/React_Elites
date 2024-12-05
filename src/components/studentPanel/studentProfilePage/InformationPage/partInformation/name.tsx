@@ -15,12 +15,12 @@ const Name = () => {
         <>
             <div className={styleInform.name}>
                 <div className={styleInform.smallDiv}>
-                    <h1 data-theme={identifier("darkNoBG")}>{t("name")}</h1>
-                    <Field name="fName" className={styleInform.Input} placeholder={t("enterName")} data-theme={identifier("dark")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("name")}</h1>
+                    <Field name="fName" className={styleInform.Input} placeholder={t("enterName")} data-theme={identifier("dark","dark2")} />
                 </div>
                 <div className={styleInform.smallDiv}>
-                    <h1 data-theme={identifier("darkNoBG")}>{t("lastName")}</h1>
-                    <Field name="lName" className={styleInform.Input} placeholder={t("enterLastName")} data-theme={identifier("dark")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("lastName")}</h1>
+                    <Field name="lName" className={styleInform.Input} placeholder={t("enterLastName")} data-theme={identifier("dark","dark2")} />
                 </div>
             </div>
 

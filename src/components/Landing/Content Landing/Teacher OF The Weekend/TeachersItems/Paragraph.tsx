@@ -7,7 +7,7 @@ const Paragraph = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.paragraph} data-theme={identifier("darkNoBG")}>{t("teacherPageLandingDesc")}</div>
+    <div className={style.paragraph} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("teacherPageLandingDesc")}</div>
   )
 }
 

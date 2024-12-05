@@ -9,8 +9,8 @@ const Price = () => {
   return (
     <div className={style.price}>
 
-        <div className={style.toman} data-theme={identifier("dark")}>{t("toman")}</div>ی
-        <div className={style.number} data-theme={identifier("dark")}>2،500،000</div>
+        <div className={style.toman} data-theme={identifier("dark","dark2")}>{t("toman")}</div>ی
+        <div className={style.number} data-theme={identifier("dark","dark2")}>2،500،000</div>
 
     </div>
   )

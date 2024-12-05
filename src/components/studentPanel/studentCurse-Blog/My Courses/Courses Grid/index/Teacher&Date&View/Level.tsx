@@ -5,7 +5,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Level = (props) => {
 
   return (
-    <div className={style.level} data-theme={identifier("darkNoBG")}>{props.level}</div>
+    <div className={style.level} data-theme={identifier("darkNoBG","dark2NoBG")}>{props.level}</div>
   )
 }
 

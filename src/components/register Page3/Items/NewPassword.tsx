@@ -7,8 +7,8 @@ const NewPassword = () => {
   return (
 
     <div className={styleLogin.inputHolder}>
-      <label data-theme={identifier("darkNoBG")} className="text-base font-DannaBold text-black pb-3">رمزعبور جدید </label>
-      <Field data-theme={identifier("darkSmall")} className={styleLogin.input} name="password" placeholder="رمزعبور جدید خود را وارد کنید" />
+      <label data-theme={identifier("darkNoBG","dark2NoBG")} className="text-base font-DannaBold text-black pb-3">رمزعبور جدید </label>
+      <Field data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.input} name="password" placeholder="رمزعبور جدید خود را وارد کنید" />
       <ErrorMessage name="adress" component={"p"} className="error" />
     </div>
   )

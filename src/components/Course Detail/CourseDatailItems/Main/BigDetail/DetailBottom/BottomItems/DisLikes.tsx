@@ -6,9 +6,9 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const DisLikes = ({dislike, isLoading}) => {
 
   return (
-    <div className={style.Teacher} data-theme={identifier("darkNoBG")}>
-        <div className={style.topT} data-theme={identifier("dark")}>تعداد دیس‌لایک</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={identifier("dark")}>{dislike} نفر</div>}
+    <div className={style.Teacher} data-theme={identifier("darkNoBG","dark2NoBG")}>
+        <div className={style.topT} data-theme={identifier("dark","dark2")}>تعداد دیس‌لایک</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomT} data-theme={identifier("dark","dark2")}>{dislike} نفر</div>}
     </div>
   )
 }

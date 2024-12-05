@@ -7,7 +7,7 @@ const Text = () => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.text}  data-theme={identifier("dark")}>{t("StartNowBanner1")} <br /> {t("StartNowBanner2")} </div>
+    <div className={style.text}  data-theme={identifier("dark","dark2")}>{t("StartNowBanner1")} <br /> {t("StartNowBanner2")} </div>
   )
 }
 

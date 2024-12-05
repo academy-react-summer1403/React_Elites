@@ -8,7 +8,7 @@ const Date = ({Date,title}) => {
 
   return (
     <>
-        <h1 className={style.Date} data-theme={identifier("darkNoBG")}>{title}   {dateConvertor(Date)} </h1>
+        <h1 className={style.Date} data-theme={identifier("darkNoBG","dark2NoBG")}>{title}   {dateConvertor(Date)} </h1>
     </>
   )
 }

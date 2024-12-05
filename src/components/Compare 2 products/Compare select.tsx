@@ -54,7 +54,7 @@ const CompareSelect = () => {
 
 
   return (
-    <div className={style.Holder} data-theme={identifier("dark")}>
+    <div className={style.Holder} data-theme={identifier("dark","dark2")}>
       <Image Image2={detailCompare?.imageAddress} Image={courseDetail?.imageAddress} />
       <Title title2={detailCompare?.title} title={courseDetail?.title}/>
       <Discription discription2={detailCompare?.describe} discription={courseDetail?.describe} />

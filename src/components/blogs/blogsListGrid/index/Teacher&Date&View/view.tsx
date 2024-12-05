@@ -6,7 +6,7 @@ import { identifier } from '../../../../../core/services/Functions/ThemeIdentifi
 const View = (props) => {
 
   return (
-    <div className={style.view} data-theme={identifier("ViewBlog")}>{props.view} </div>
+    <div className={style.view} data-theme={identifier("ViewBlog","ViewBlog2")}>{props.view} </div>
   )
 }
 

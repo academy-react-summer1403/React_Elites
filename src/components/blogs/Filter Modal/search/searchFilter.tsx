@@ -12,9 +12,9 @@ const SearchFilter = ({setSearchValue}) => {
     <div className={styleFilter.filterDetail}>
       <div className={styleFilter.Flex}>
       <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgSearch}`} data-theme={identifier("search")}/>
-        <p className={styleFilter.filterText} data-theme={identifier("darkNoBG")}>{t("search")}</p>
+        <p className={styleFilter.filterText} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("search")}</p>
       </div>
-      <input className={styleFilter.filterInput} name="password" placeholder={t("searchBlogs")} data-theme={identifier("dark")} onChange={(e) => {
+      <input className={styleFilter.filterInput} name="password" placeholder={t("searchBlogs")} data-theme={identifier("dark","dark2")} onChange={(e) => {
           setSearchValue(e.target.value)
         }}/>
       <div className={styleFilter.searchBox}></div>

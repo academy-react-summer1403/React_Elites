@@ -13,9 +13,9 @@ const Input2login = () => {
   return (
 
     <div className={styleLogin.inputHolder}>
-      <label data-theme={identifier("darkNoBG")} className="text-base font-DannaDemiBold text-black pb-1.5">{t("password")}</label>
+      <label data-theme={identifier("darkNoBG","dark2NoBG")} className="text-base font-DannaDemiBold text-black pb-1.5">{t("password")}</label>
       <div className={styleLogin.inputPasswordHolder}>
-        <Field type={isPass ? "password" : "text"} data-theme={identifier("darkSmall")} className={styleLogin.input} name="password" placeholder={t("enterPasswordPlaceHolder")} />
+        <Field type={isPass ? "password" : "text"} data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.input} name="password" placeholder={t("enterPasswordPlaceHolder")} />
         <div className={isPass ? styleLogin.inputPasswordC : styleLogin.inputPassword} onClick={() => setisPass(!isPass)}></div>
       </div>
       <ErrorMessage name="password" component={"p"} className="error" />

@@ -55,7 +55,7 @@ const LandingHolder = () => {
   return (
     <>
       <Toaster />
-        <div className={style.landing} data-theme={identifier("dark")}>
+        <div className={style.landing} data-theme={identifier("dark","dark2")}>
           <ContentLandingHolder
             MAndJ={MAndJ}
           />

@@ -9,7 +9,7 @@ import { identifier } from '../../../../../core/services/Functions/ThemeIdentifi
 const Comment = ({describe, pictureAddress, title, autor, dissLikeCount, likeCount, inserDate, currentUserIsLike, currentUserIsDissLike, id}) => {
 
   return (
-    <div className={style.comments} data-theme={identifier("darkSmall")}>
+    <div className={style.comments} data-theme={identifier("darkSmall","dark2Small")}>
         <Title title={title} />
         <Content describe={describe} />
         <Footer pictureAddress={pictureAddress} id={id} autor={autor} dissLikeCount={dissLikeCount} likeCount={likeCount} inserDate={inserDate} currentUserIsLike={currentUserIsLike} currentUserIsDissLike={currentUserIsDissLike}/>

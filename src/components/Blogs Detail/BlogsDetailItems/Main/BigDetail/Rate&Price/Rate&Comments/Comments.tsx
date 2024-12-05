@@ -7,7 +7,7 @@ const Comments = ({comment, isLoading}) => {
 
   return (
     <>
-    {isLoading ? <ClipLoader /> : <div className={style.comments} data-theme={identifier("dark")}> نظرات ({comment})  + </div>}
+    {isLoading ? <ClipLoader /> : <div className={style.comments} data-theme={identifier("dark","dark2")}> نظرات ({comment})  + </div>}
     </>
   )
 }

@@ -6,9 +6,9 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Likes = ({like, isLoading}) => {
 
   return (
-    <div className={style.Status} data-theme={identifier("darkNoBG")}>
-        <div className={style.topS} data-theme={identifier("dark")}>تعداد لایک</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark")}>{like} نفر</div>}
+    <div className={style.Status} data-theme={identifier("darkNoBG","dark2NoBG")}>
+        <div className={style.topS} data-theme={identifier("dark","dark2")}>تعداد لایک</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark","dark2")}>{like} نفر</div>}
     </div>
   )
 }

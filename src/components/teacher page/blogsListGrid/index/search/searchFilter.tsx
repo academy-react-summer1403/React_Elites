@@ -10,7 +10,7 @@ const SearchFilter = ({setSearchValue}) => {
 
   return (
     <div className={style.filterDetail}>
-      <input className={styleFilter.filterInput} name="password" placeholder={t("TeacherSearch")} data-theme={identifier("dark")} onChange={(e) => {
+      <input className={styleFilter.filterInput} name="password" placeholder={t("TeacherSearch")} data-theme={identifier("dark","dark2")} onChange={(e) => {
           setSearchValue(e.target.value)
         }}/>
       <div className={style.searchBox}></div>

@@ -9,10 +9,10 @@ const Like = ({ like, like2 }) => {
 
   return (
     <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>تعداد لایک ها</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>تعداد لایک ها</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{like}</div>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{like2}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{like}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{like2}</div>
         </div>
       </div>
   )

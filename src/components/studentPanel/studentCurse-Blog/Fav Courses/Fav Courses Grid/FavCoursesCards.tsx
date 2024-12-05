@@ -51,7 +51,7 @@ const FavCoursesCards = (props) => {
         <Type type={props.type} />
         <Level level={props.level}/>
         <div className={style.closeAndViewHolder}>
-          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view")}></NavLink>
+          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view","view2")}></NavLink>
           {courseReserve === false ? <span className={style.Book} onClick={() => reserveCourse()}></span> : <span className={style.isReserved}></span>}
           <span className={style.Close} ></span>
         </div>

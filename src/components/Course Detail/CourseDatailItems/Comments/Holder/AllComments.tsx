@@ -10,7 +10,7 @@ const AllComments = ({comments, id, isLoading, title}) => {
 
   return (
     <div className={style.container}>
-      <div className={style.title} data-theme={identifier("darkNoBG")}> نظرات دانشجو ها و اساتید </div>
+      <div className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}> نظرات دانشجو ها و اساتید </div>
       {isLoading && <PulseLoader />}
       {comments.slice(0,3).map((item, index) => {
         return(

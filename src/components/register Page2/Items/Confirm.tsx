@@ -8,8 +8,8 @@ const Confirm = () => {
 
   return (
 
-    <div data-theme={identifier("darkSmall")} className={styleLogin.divRegister}>
-      <button data-theme={identifier("darkNoBG")} className={styleLogin.button} type="submit">تایید</button>
+    <div data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.divRegister}>
+      <button data-theme={identifier("darkNoBG","dark2NoBG")} className={styleLogin.button} type="submit">تایید</button>
     </div>
 
   )

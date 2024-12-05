@@ -12,7 +12,7 @@ import { identifier } from '../../../../../../../../core/services/Functions/Them
 const CoursesItemsHolderView2 = ({image, id, title, teacher, price, level, category, likeCount, dissLikeCount, classRoomName, currentRegistrants, lastUpdate}) => {
 
   return (
-    <div className={style.holder} data-theme={identifier("darkCoursesHolder")}>
+    <div className={style.holder} data-theme={identifier("darkCoursesHolder","dark2CoursesHolder")}>
         <Image id={id} image={image} />
         <div className={style.titleAndTeacherHolder}>
           <Title title={title} />

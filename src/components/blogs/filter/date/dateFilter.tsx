@@ -11,10 +11,10 @@ const DateFilter = () => {
   return (
     <div className={styleFilter.filterDetail}>
         <div className={styleFilter.Flex}>
-            <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgDate}`} data-theme={identifier("dateBlogFilter")}/>
-            <p className={styleFilter.filterText} data-theme={identifier("darkNoBG")}>{t("PublicationDate")}</p>
+            <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgDate}`} data-theme={identifier("dateBlogFilter","dateBlogFilter2")}/>
+            <p className={styleFilter.filterText} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("PublicationDate")}</p>
         </div>
-        <Field type="date" className={styleFilter.filterInput} name="password" placeholder="" data-theme={identifier("dark")}/>
+        <Field type="date" className={styleFilter.filterInput} name="password" placeholder="" data-theme={identifier("dark","dark2")}/>
     </div>
 )
 }

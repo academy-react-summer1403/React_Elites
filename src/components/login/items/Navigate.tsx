@@ -12,12 +12,12 @@ const NavigateLogin1 = () => {
     <div className={styleLogin.navigate}>
       <div className={styleLogin.select}>
         <div>  </div>
-        <h1 data-theme={identifier("darkNoBG")}>{t("enterPhoneNumber")} </h1>
+        <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("enterPhoneNumber")} </h1>
       </div>
       <div>
         <div>  </div>
-        <h1 data-theme={identifier("darkNoBGDisc")}> {t("confirmCodeTitle")}</h1>
-        <h1 data-theme={identifier("darkNoBGDisc")}>{t("confirmCodeDesc")} </h1>
+        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}> {t("confirmCodeTitle")}</h1>
+        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("confirmCodeDesc")} </h1>
       </div>
     </div>
 

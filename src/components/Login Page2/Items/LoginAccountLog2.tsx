@@ -9,7 +9,7 @@ const LoginAccountLog2 = () => {
 
   return (
 
-    <div  data-theme={identifier("darkSmall")} className={styleLogin.LoginAccount}>
+    <div  data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.LoginAccount}>
       <button  type="submit">{t("loginAccount")} </button>
     </div>
 

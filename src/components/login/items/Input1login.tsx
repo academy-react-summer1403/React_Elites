@@ -10,8 +10,8 @@ const Input1Login = () => {
   return (
 
     <div className={styleLogin.inputHolder}>
-      <label data-theme={identifier("darkNoBG")} className="text-base font-DannaDemiBold text-black pb-3">{t("EmailOrPhoneNumber")} </label>
-      <Field data-theme={identifier("darkSmall")} className={styleLogin.input} name="phoneOrGmail" placeholder={t("enterNumber&email")} />
+      <label data-theme={identifier("darkNoBG","dark2NoBG")} className="text-base font-DannaDemiBold text-black pb-3">{t("EmailOrPhoneNumber")} </label>
+      <Field data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.input} name="phoneOrGmail" placeholder={t("enterNumber&email")} />
       <ErrorMessage name="phoneOrGmail" component={"p"} className="error" />
     </div>
 

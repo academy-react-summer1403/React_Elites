@@ -15,8 +15,8 @@ const AboutMe = () => {
         <>
             <div className={styleInform.aboutMe}>
                 <div className={styleInform.bigDiv}>
-                    <h1 data-theme={identifier("darkNoBG")}>{t("aboutMe")}</h1>
-                    <Field name="userAbout" className={styleInform.Input} placeholder={t("enterYourDesc")} data-theme={identifier("dark")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("aboutMe")}</h1>
+                    <Field name="userAbout" className={styleInform.Input} placeholder={t("enterYourDesc")} data-theme={identifier("dark","dark2")} />
                 </div>
             </div>
 

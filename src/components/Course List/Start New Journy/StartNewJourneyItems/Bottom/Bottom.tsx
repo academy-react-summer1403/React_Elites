@@ -7,7 +7,7 @@ const Bottom = () => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.bottom} data-theme={identifier("darkNoBG")}> {t("headerDescCoursesList1")} <br /> {t("headerDescCoursesList2")}</div>
+    <div className={style.bottom} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("headerDescCoursesList1")} <br /> {t("headerDescCoursesList2")}</div>
   )
 }
 
