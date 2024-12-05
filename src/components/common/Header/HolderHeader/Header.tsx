@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NotifAndModeHolder } from '../NotifAndMode/Notif&ModeHolder/NotifAndModeHolder.tsx';
 import { NavBar } from '../NavBar/NavBar.tsx';
 import { Logo } from '../Logo/LogoHolder/Logo.tsx';
 import style from '../../../../Style/Header.module.css'
 import { useGlobalState } from '../../../../State/State.tsx';
+import { identifier } from '../../../../core/services/Functions/ThemeIdentifier.ts';
 
 const Header = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+    
     return (
-        <div className={style.header} data-theme={darkMode ? "darkSmall" : "lightMode"}>
+        <div className={style.header} data-theme={identifier('darkSmall')}>
                 <NotifAndModeHolder />
                 <NavBar />
                 <Logo />

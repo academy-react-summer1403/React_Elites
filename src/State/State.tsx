@@ -23,6 +23,7 @@ const { useGlobalState} = createGlobalState({
     userGmail: '',
     userPass: '',
     sthChangedStu: false,
+    courseIdCompare: ''
 })
 
 

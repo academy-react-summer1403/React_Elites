@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import React, { useEffect, useState } from 'react'
 import { useGlobalState } from "../../../State/State";
 
-const Category = ({ techs }) => {
+const Category = ({ techs, techs2 }) => {
   const {t} = useTranslation();
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
@@ -13,7 +13,7 @@ const Category = ({ techs }) => {
         <div className={style.DiscriptionCompare}>
           <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{techs}</div>
 
-
+          <div className={style.discCompare} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{techs2}</div>
         </div>
       </div>
   )

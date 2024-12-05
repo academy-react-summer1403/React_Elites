@@ -15,7 +15,7 @@ const NotifAndModeHolder = () => {
       
       <Notification />
       <Menu />
-      <SearchModal />
+      <SearchModal hideBlog={false} />
       {isLogin === true && <User />}
       {isLogin === true && <MiniBasket />}
     </div>

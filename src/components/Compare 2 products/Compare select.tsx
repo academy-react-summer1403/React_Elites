@@ -24,54 +24,45 @@ const CompareSelect = () => {
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
   const [isReserved, setIsReserved] = useGlobalState('isReserved');
   const [isFavourite, setIsFavourite] = useGlobalState('isFavoriteCourse');
+  const [courseId, setCourseId] = useGlobalState('courseIdCompare');
   const [courseDetail, setCourseDetail] = useState([])
   const [comments, setComments] = useState([])
   const [related, setrelated] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const { id } = useParams();
+  const [detailCompare, setdetailCompare] = useState({})
 
-  const getCourseDetail = async () => {
-    const Details = await getCourseById(id)
-    const res = await getCourseComment(id)
-    setCourseDetail(Details)
-    setComments(res)
-    setDiIsLiked(Details?.currentUserDissLike)
-    setIsLiked(Details?.currentUserLike)
-    setIsReserved(Details?.isCourseReseve)
-    setIsFavourite(Details?.isUserFavorite)
-    setDiIsLiked(Details?.currentUserDissLike)
-
-    const list = await allCourseList(1)
-    setrelated(list.courseFilterDtos.filter((e) => String(e.technologyList) == String(Details?.techs)))
-
-    console.log(related)
-
-    setisLoading(false)
+  const getCompareDetail = async () => {
+    const Detail2 = await getCourseById(courseId)
+    setdetailCompare(Detail2)
+    console.log(Detail2)
   }
 
+  const getCourseDetail = async () => {
+    const Detail = await getCourseById(id)
+    setCourseDetail(Detail)
+  }
 
   useEffect(() => {
     getCourseDetail()
   }, [])
 
   useEffect(() => {
-    getCourseDetail()
-  }, [id, isLiked, isReserved, isFavourite])
+    getCompareDetail()
+  }, [courseId])
 
-  const [searchValue, setSearchValue] = useState("")
-  const [isSearched, setIsSearched] = useState(false)
 
   return (
     <div className={style.Holder} data-theme={darkMode ? "dark" : "lightMode"}>
-      <Image Image={courseDetail?.imageAddress} />
-      <Title title={courseDetail?.title}/>
-      <Discription discription={courseDetail?.describe} />
-      <Price cost={courseDetail?.cost}/>
-      <Like like={courseDetail?.likeCount}/>
-      <Status status={courseDetail?.courseStatusName}/>
-      <Level level={courseDetail?.courseLevelName}/>
-      <Category techs={courseDetail?.techs} />
-      <TeacherName teacherName={courseDetail?.teacherName}/>
+      <Image Image2={detailCompare?.imageAddress} Image={courseDetail?.imageAddress} />
+      <Title title2={detailCompare?.title} title={courseDetail?.title}/>
+      <Discription discription2={detailCompare?.describe} discription={courseDetail?.describe} />
+      <Price cost2={detailCompare?.cost} cost={courseDetail?.cost}/>
+      <Like like2={detailCompare?.likeCount} like={courseDetail?.likeCount}/>
+      <Status status2={detailCompare?.courseStatusName} status={courseDetail?.courseStatusName}/>
+      <Level level2={detailCompare?.courseLevelName} level={courseDetail?.courseLevelName}/>
+      <Category techs2={detailCompare?.techs} techs={courseDetail?.techs} />
+      <TeacherName teacherName2={detailCompare?.teacherName} teacherName={courseDetail?.teacherName}/>
     </div>
   )
 }

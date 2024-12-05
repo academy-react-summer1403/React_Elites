@@ -7,7 +7,7 @@ import { CardModal } from '../Card';
 import { getAllBlogsListSearch } from '../../../../../../../core/services/api/AllBlogsListSearch';
 import { allCourseListSearch } from '../../../../../../../core/services/api/AllCourseListSearch';
 
-const SearchModal = () => {
+const SearchModal = ({hideBlog}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [applyFilter, setApplyFilter] = useState(false)
@@ -73,7 +73,7 @@ const SearchModal = () => {
           <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
-              <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
+              {hideBlog == false && <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>}
               <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
             </div>
             <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>

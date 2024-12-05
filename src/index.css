@@ -204,6 +204,11 @@
   border: 2px solid #14ffec !important;
 }
 
+[data-theme="red"] {
+  color: red !important;
+  background: red !important;
+}
+
 .progressBar {
   position: fixed;
   top: 0;
