@@ -98,10 +98,11 @@
     display: flex;
     padding: 10px 0;
     flex-flow: row wrap;
-    justify-content: right ;   
+    justify-content: right;
     width: 200px;
 }
-.price{
+
+.price {
     font-family: IranYekan;
     font-size: 20px;
     color: #000000;
@@ -134,4 +135,56 @@
     height: 100%;
     width: 210px;
     padding: 20px 0;
+}
+
+@media screen and (max-width: 901px) {
+    .coursesHolder {
+        height: auto;
+        flex-flow: column-reverse nowrap;
+        width: 48%;
+        border: 1px solid #dcdcdc;
+        border-radius: 8px;
+        padding: 5px;
+    }
+    .TitleAndImageHolder {
+        width: 100%; 
+        flex-flow: column-reverse wrap;
+        padding: 0;
+    }
+    .image {
+        width: 100%; 
+        height: 240px;
+    }
+    .titleAndStatus {
+        width: 100%;
+        margin: 0;
+        flex-flow: row-reverse nowrap;
+        margin-top: 10px;
+    }
+    .titleCourse {
+        text-align: center;
+        height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .PriceAndPayHolder {
+        width: 100%;
+        flex-flow: row-reverse nowrap;
+    }
+    .status{
+        width: 130px;
+    }
+}
+@media screen and (max-width: 655px) {
+    .coursesHolder {
+        width: 90%;
+    }
+    .PriceAndPayHolder {
+        flex-flow: row-reverse wrap;
+        justify-content: center;
+    }
+    .priceHolder {
+        justify-content: center;
+    }
 }

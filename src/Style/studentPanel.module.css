@@ -762,6 +762,9 @@
     .hamburgerMenu {
         display: block;
     }
+    .accountHolder {
+        width: 240px;
+    }
 
 }
 

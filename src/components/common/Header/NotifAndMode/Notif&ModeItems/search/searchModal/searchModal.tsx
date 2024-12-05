@@ -6,6 +6,7 @@ import { useGlobalState } from '../../../../../../../State/State';
 import { CardModal } from '../Card';
 import { getAllBlogsListSearch } from '../../../../../../../core/services/api/AllBlogsListSearch';
 import { allCourseListSearch } from '../../../../../../../core/services/api/AllCourseListSearch';
+import { useTranslation } from 'react-i18next';
 
 const SearchModal = ({hideBlog}) => {
   const [darkMode, setDarkMode] = useGlobalState('DarkMode');
@@ -18,6 +19,7 @@ const SearchModal = ({hideBlog}) => {
   const [blogsList, setBlogsList] = useState([]);
   const [isLoading, setisLoading] = useState(true)
   const [pagInation, setPagInation] = useState(1)
+  const { t } = useTranslation();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -31,7 +33,7 @@ const SearchModal = ({hideBlog}) => {
 
   const allBlogsList = async () => {
     let allBlogs = await getAllBlogsListSearch()
-     if (applyFilter === false && applySort === false) {
+    if (applyFilter === false && applySort === false) {
       setBlogsList(allBlogs.news)
       setBlogsList(allBlogs.news.filter(doc => doc.title.includes(searchValue)))
     }
@@ -40,7 +42,7 @@ const SearchModal = ({hideBlog}) => {
 
   const getFilteredList = async () => {
     const allCourses = await allCourseListSearch(pagInation)
-     if(applyFilter === false && applySort === false){
+    if (applyFilter === false && applySort === false) {
       setisLoading(true)
       setCourseList(allCourses.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
       setisLoading(false)
@@ -69,69 +71,74 @@ const SearchModal = ({hideBlog}) => {
     <>
       <div className={style.titleHeaderMyCourseList}>
         <div data-theme={darkMode ? "darkSearch" : "lightMode"} className={style.SearchHeader} onClick={showModal}> </div>
-        <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none",padding:"0"}}>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
-            <div className={s.close}> بستن </div>
-            <div className={s.blogOrCourse}>
-              {hideBlog == false && <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>}
-              <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
+        <div id='Modal1Search'>
+          <Modal closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "600px", background: "none", padding: "0" }}>
+            <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
+              <div className={s.close}> {t("close")} </div>
+              <div className={s.blogOrCourse}>
+                <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
+                <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
+              </div>
+              <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>
             </div>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>
-          </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
-            <input data-theme={darkMode ? "darkSmall" : "lightMode"} placeholder=' جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
-              setSearchValue(e.target.value)
-            }} />
-          </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
-            {blogsList.map((item, index) => {
-              return (
-                <CardModal
-                  key={index}
-                  id={item.id}
-                  title={item.title}
-                  desc={item.miniDescribe}
-                  image={item.currentImageAddressTumb}
-                  NavLinkTitle="/Blogs-Detail/"
-                  NavTitle="بلاگ"
-                />
-              )
-            })}
-          </div>
-        </Modal>
-        <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none"}}>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
-            <div className={s.close}> بستن </div>
-            <div className={s.blogOrCourse}>
-              <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> بلاگ ها </div>
-              <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> دوره ها </div>
+            <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
+              <input data-theme={darkMode ? "darkSmall" : "lightMode"} placeholder=' جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
+                setSearchValue(e.target.value)
+              }} />
             </div>
-            <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: جستجو در </div>
-          </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
-            <input data-theme={darkMode ? "darkSmall" : "lightMode"}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
-              setSearchValue(e.target.value)
-            }} />
-          </div>
-          <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
-            {courseList.map((item, index) => {
-              return (
-                <CardModal
-                  key={index}
-                  id={item.courseId}
-                  title={item.title}
-                  desc={item.describe}
-                  image={item.tumbImageAddress}
-                  NavLinkTitle="/Course-Detail/"
-                  NavTitle="دوره"
-                />
-              )
-            })}
-          </div>
-        </Modal>
+            <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
+              {blogsList.map((item, index) => {
+                return (
+                  <CardModal
+                    key={index}
+                    id={item.id}
+                    title={item.title}
+                    desc={item.miniDescribe}
+                    image={item.currentImageAddressTumb}
+                    NavLinkTitle="/Blogs-Detail/"
+                    NavTitle="بلاگ"
+                  />
+                )
+              })}
+            </div>
+          </Modal>
+        </div>
+        <div id='Modal2Search'>
+          <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "600px", background: "none" }}>
+            <div data-theme={darkMode ? "dark" : "lightMode"} className={s.titleHolder}>
+              <div className={s.close}> {t("close")} </div>
+              <div className={s.blogOrCourse}>
+                <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> {t("blogs")} </div>
+                <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> {t("courses")} </div>
+              </div>
+              <div data-theme={darkMode ? "darkNoBG" : "lightMode"} className={s.title}>: {t("search")} </div>
+            </div>
+            <div data-theme={darkMode ? "dark" : "lightMode"} className={style.InputSearchHolder}>
+              <input data-theme={darkMode ? "darkSmall" : "lightMode"} placeholder={t("ُSearchLandingPlaceHolder")} className={style.InputSearchModal} onChange={(e) => {
+                setSearchValue(e.target.value)
+              }} />
+            </div>
+            <div data-theme={darkMode ? "dark" : "lightMode"} className={style.holderCards}>
+              {courseList.map((item, index) => {
+                return (
+                  <CardModal
+                    key={index}
+                    id={item.courseId}
+                    title={item.title}
+                    desc={item.describe}
+                    image={item.tumbImageAddress}
+                    NavLinkTitle="/Course-Detail/"
+                    NavTitle="دوره"
+                  />
+                )
+              })}
+            </div>
+          </Modal>
+        </div>
       </div>
     </>
   );
 }
+
 
 export default SearchModal

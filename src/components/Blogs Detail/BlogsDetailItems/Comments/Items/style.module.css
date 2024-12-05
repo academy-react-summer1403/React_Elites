@@ -54,27 +54,35 @@
 .like{
     width: 24px;
     height: 24px;
-    background: url('../../../../../assets/Images/like(1).png') 50% 50% no-repeat;
-    background-size: cover;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=0037ff') 50% 50% no-repeat !important;
+    background-size: cover !important;
+    cursor: pointer;
 }
 .iconLike{
     width: 24px;
     height: 24px;
-    background: url(../../../../../assets/Images/like.png ) 50% 50% no-repeat;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=000000' ) 50% 50% no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 
 .dislike{
     width: 24px;
     height: 24px;
-    background: url('../../../../../assets/Images/dislike(1).png') 50% 50% no-repeat;
-    background-size: cover;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=0037ff') 50% 50% no-repeat !important;
+    background-size: cover !important;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    cursor: pointer;
 }
 .iconDislike{
     width: 24px;
     height: 24px;
-    background: url(../../../../../assets/Images/dislike.png) 50% 50% no-repeat;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=000000') 50% 50% no-repeat;
     background-size: cover;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    cursor: pointer;
 }
 
 .user{

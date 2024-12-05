@@ -1,4 +1,4 @@
-.comments{
+.comments {
     width: 23.82352941176471%;
     height: 282px;
     background: #F6F6F6;
@@ -9,39 +9,43 @@
     flex-flow: row wrap;
 }
 
-.disliked{
+.disliked {
     width: 24px;
     height: 24px;
-    background: url('../../../../../assets/Images/dislike(1).png') 50% 50% no-repeat;
-    background-size: cover;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=0037ff') 50% 50% no-repeat !important;
+    background-size: cover !important;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    cursor: pointer;
 }
 
-.liked{
+.liked {
     width: 24px;
     height: 24px;
-    background: url('../../../../../assets/Images/like(1).png') 50% 50% no-repeat;
-    background-size: cover;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=0037ff') 50% 50% no-repeat !important;
+    background-size: cover !important;
+    cursor: pointer;
 }
 
-.title{
+.title {
     width: 100%;
- text-align: right;
+    text-align: right;
     font-size: 18px;
     font-family: DannaBold;
     color: #2F2F2F;
 }
 
-.content{
+.content {
     width: 100%;
     height: auto;
     font-size: 16px;
     font-family: DannaMedium;
     color: #707070;
- text-align: right;
+    text-align: right;
     margin-top: 20px;
 }
 
-.footer{
+.footer {
 
     width: 100%;
     height: auto;
@@ -51,7 +55,7 @@
     flex-flow: row wrap;
 }
 
-.likeAndDislikes{
+.likeAndDislikes {
     width: 103px;
     height: 24px;
     display: flex;
@@ -59,30 +63,32 @@
     align-items: center;
 }
 
-.count{
+.count {
     font-family: DannaMedium;
     font-size: 16px;
     color: black;
 }
 
-.like{
+.like {
     width: 24px;
     height: 24px;
-    background: url(../../../../../assets/Images/like.png) 50% 50% no-repeat;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=000000') 50% 50% no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
-.dislike{
+.dislike {
     width: 24px;
     height: 24px;
-    background: url(../../../../../assets/Images/dislike.png) 50% 50% no-repeat;
+    background: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=0037ff') 50% 50% no-repeat;
     background-size: cover;
-        cursor: pointer;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    cursor: pointer;
 }
 
 
-.user{
+.user {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -91,45 +97,45 @@
     height: 41px;
 }
 
-.username{
+.username {
     font-family: DannaDemiBold;
     font-size: 14px;
     color: black;
     width: 93px;
     height: 20px;
-     text-align: center;
-            text-overflow: ellipsis;
+    text-align: center;
+    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.date{
+.date {
     font-family: DannaMedium;
     font-size: 12px;
     height: 17px;
     width: 93px;
     color: #707070;
- text-align: right;
+    text-align: right;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     margin-top: -15px;
 }
 
-.profile{
+.profile {
     width: 40px;
     height: 40px;
     border-radius: 100%;
 }
 
 @media screen and (max-width: 1078px) {
-    .comments{
+    .comments {
         height: auto;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .comments{
+    .comments {
         width: 100%;
         margin-top: 10px;
     }

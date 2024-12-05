@@ -8,6 +8,7 @@ const DisLike = ({id}) => {
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   const dislikeCourse = async () => {
     let res = await postCourseDisLike(id)
@@ -21,7 +22,7 @@ const DisLike = ({id}) => {
   }
 
   return (
-    <div className={isDisLiked == "1" ? style.disLiked : style.dislike} onClick={() => isDisLiked === "0" && dislikeCourse()}></div>
+    <div data-theme={darkMode ? "darkDisLikeDetail" : "lightMode"} className={isDisLiked == "1" ? style.disLiked : style.dislike} onClick={() => isDisLiked === "0" && dislikeCourse()}></div>
   )
 }
 

@@ -46,8 +46,9 @@
     direction: ltr;
     align-items: center;
     position: fixed;
-    top: 600px;
-    left: 500px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: red;
     width: 490px;
     border: 1px solid #3772FF;
@@ -142,4 +143,35 @@
     bottom: 50px;
     left: 200px;
     background: white;
+}
+@media screen and (max-width: 507px) {
+    .addCommentInput{
+        width: 90%;
+    }
+    .inputHolders,.inputs {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 592px) {
+    .titleBlog{
+        display: none;
+    }
+    .titleModal {
+        width: 100%;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 592px) {
+    .titleBlog{
+        display: none;
+    }
+    .titleModal {
+        width: 100%;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 278px) {
+    .titleModal {
+        width: 70px;
+    }
 }

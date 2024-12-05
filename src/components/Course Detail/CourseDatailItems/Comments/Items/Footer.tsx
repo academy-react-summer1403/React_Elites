@@ -15,14 +15,14 @@ const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, 
       <Toaster />
         <div className={style.likeAndDislikes}>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{likeCount}</div>
-            <div className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
+            <div data-theme={darkMode ? "darkLikeDetail" : "lightMode"} className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
               let res = await postCourseCommentLike(commentId)
               if(res.success === true){
                 toast.success("کامنت لایک شد")
               }
             }}></div>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}>{disslikeCount}</div>
-            <div className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
+            <div data-theme={darkMode ? "darkDisLikeDetail" : "lightMode"} className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
               let res = await postCourseCommentDisLike(commentId)
               console.log(res)
               if(res.success === true){
