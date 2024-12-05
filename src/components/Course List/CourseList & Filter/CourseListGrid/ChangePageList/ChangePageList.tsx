@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import style from '../../../../../Style/blogList.module.css'
 
-import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
-
 const ChangePageList = ({setPagInation, pagInation, totalCount}) => {
 
 
@@ -39,11 +37,11 @@ const ChangePageList = ({setPagInation, pagInation, totalCount}) => {
   
 
   return (
-    <div className={style.ChangePageList} data-theme={identifier("darkSmall")}>
+    <div className={style.ChangePageList} >
         <span className={style.toLeft} onClick={toPreviousPage}></span>
           {syncPageList(totalCountCourses).map((index, item) => {
             return(
-              <div key={index} className={pagInation == index ? style.selected : style.button} data-theme={identifier("darkSmall")} onClick={() => {
+              <div key={index} className={pagInation == index ? style.selected : style.button} onClick={() => {
                 setPagInation(index)
               }}>{index}</div>
             )
