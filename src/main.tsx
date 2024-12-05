@@ -76,6 +76,7 @@ import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 import { Compare } from './components/Compare 2 products/Compare.tsx'
 import { CompareSelect } from './components/Compare 2 products/Compare select.tsx'
 import { ChangeSecurity } from './components/studentPanel/studentProfilePage/Change Security/ChangeSecurity.tsx'
+import { MyJobs } from './components/studentPanel/My Jobs/MyJobs.tsx'
 
 const router = createBrowserRouter([
   {
@@ -235,6 +236,11 @@ const router = createBrowserRouter([
       {
         path: "/Student-Panel/dashboard",
         element: <StudentDashboard />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/Student-Panel/my-jobs",
+        element: <MyJobs />,
         errorElement: <ErrorPage />
       },
     ]
