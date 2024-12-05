@@ -7,8 +7,8 @@ const HeaderRegister = () => {
   return (
 
     <div className={styleLogin.HeaderLogin}>
-      <h1 data-theme={identifier("darkNoBG")} className="text-black text-2xl font-DannaBold m-4">وارد کردن اطلاعات شخصی </h1>
-      <p data-theme={identifier("darkNoBGDisc")} className="text-gray-400 text-sm font-DannaDemiBold">لطفا اطلاعات اولیه خواسته شده را وارد کنید</p>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG")} className="text-black text-2xl font-DannaBold m-4">وارد کردن اطلاعات شخصی </h1>
+      <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")} className="text-gray-400 text-sm font-DannaDemiBold">لطفا اطلاعات اولیه خواسته شده را وارد کنید</p>
     </div>
   )
 }

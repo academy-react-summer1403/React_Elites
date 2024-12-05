@@ -8,9 +8,9 @@ const Level = ({date, isLoading}) => {
 
   
   return (
-    <div className={style.Level} data-theme={identifier("dark")}>
-        <div className={style.topL} data-theme={identifier("dark")}>تاریخ انتشار</div>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomL} data-theme={identifier("dark")}>{dateConvertor(date)}</div>}
+    <div className={style.Level} data-theme={identifier("dark","dark2")}>
+        <div className={style.topL} data-theme={identifier("dark","dark2")}>تاریخ انتشار</div>
+        {isLoading ? <BeatLoader /> : <div className={style.bottomL} data-theme={identifier("dark","dark2")}>{dateConvertor(date)}</div>}
     </div>
   )
 }

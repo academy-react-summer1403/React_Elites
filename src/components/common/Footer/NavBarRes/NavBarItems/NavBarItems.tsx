@@ -6,13 +6,13 @@ const NavBarItems = () => {
 
   return (
     <>        
-        <div className={style.text} data-theme={identifier("darkNoBG")}> خدمات ما </div>
-        <div className={style.text} data-theme={identifier("darkNoBG")}> ارتباط باما </div>
-        <div className={style.text} data-theme={identifier("darkNoBG")}> درباره ما </div>
-        <div className={style.text} data-theme={identifier("darkNoBG")}> اساتید </div>
-        <div className={style.text} data-theme={identifier("darkNoBG")}> بلاگ ها </div>
-        <div className={style.text} data-theme={identifier("darkNoBG")}> دوره ها </div>
-        <div className={style.text} data-theme={identifier("darkNoBG")}> خانه </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> خدمات ما </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> ارتباط باما </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> درباره ما </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> اساتید </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> بلاگ ها </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> دوره ها </div>
+        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> خانه </div>
     </>
   )
 }

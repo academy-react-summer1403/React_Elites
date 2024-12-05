@@ -10,7 +10,7 @@ const Search = ({ setSearchValue, setIsSearched, searchValue, isSearched }) => {
 
   return (
     <div id='searchCompare' className={styleCompare.searchHolder}>
-      <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={identifier("dark")} onChange={(e) => {
+      <input name='search' type='search' placeholder={t("searchCourses")} className={style.search} data-theme={identifier("dark","dark2")} onChange={(e) => {
         setSearchValue(e.target.value)
       }}
       />

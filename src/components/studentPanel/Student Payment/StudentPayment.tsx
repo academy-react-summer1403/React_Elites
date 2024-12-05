@@ -9,7 +9,7 @@ const StudentPayment = () => {
   return (
     <Formik>
       {(form) => (
-        <div className={style.page} data-theme={identifier("darkSmall")}>
+        <div className={style.page} data-theme={identifier("darkSmall","dark2Small")}>
           <Payment/>
         </div>
       )}

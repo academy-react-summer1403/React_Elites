@@ -46,7 +46,7 @@ const BlogsList = () => {
   <>
     <Formik>
       {(form) => (
-        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={identifier("dark")}>
+        <div className=' h-full w-full flex flex-wrap justify-center mt-20' data-theme={identifier("dark","dark2")}>
           <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
           <TitleHeaderBlogs />
           <div className={styleBlogList.page}>

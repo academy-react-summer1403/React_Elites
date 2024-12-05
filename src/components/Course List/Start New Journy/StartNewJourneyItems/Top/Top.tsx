@@ -7,7 +7,7 @@ const Top = () => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.top} data-theme={identifier("dark")}>{t("headerTitleCoursesList")}</div>
+    <div className={style.top} data-theme={identifier("dark","dark2")}>{t("headerTitleCoursesList")}</div>
   )
 }
 

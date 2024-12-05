@@ -10,8 +10,8 @@ const Filter = ({setCategoryId, setApplyFilter, categoryId, applyFilter, setSear
 
   const { t } = useTranslation();
   return (
-    <div className={styleFilter.filter} data-theme={identifier("darkSmall")}>
-        <h1 className={styleFilter.filterTitle} data-theme={identifier("darkNoBG")}> {t("filter")}</h1>
+    <div className={styleFilter.filter} data-theme={identifier("darkSmall","dark2Small")}>
+        <h1 className={styleFilter.filterTitle} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("filter")}</h1>
         <SearchFilter setSearchValue={setSearchValue} />
         <CategoryFilter categoryList={categoryList} setCategoryId={setCategoryId} categoryId={categoryId} />
         <span className={applyFilter ? styleFilter.applyFilter2 : styleFilter.applyFilter} onClick={() => {

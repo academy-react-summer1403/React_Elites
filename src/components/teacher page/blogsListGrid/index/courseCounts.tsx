@@ -14,7 +14,7 @@ const CourseCounts = (props) => {
       <path d="M3 3H14C14.9319 3 15.3978 3 15.7654 3.15224C16.2554 3.35523 16.6448 3.74458 16.8478 4.23463C17 4.60218 17 5.06812 17 6C17 6.93188 17 7.39782 16.8478 7.76537C16.6448 8.25542 16.2554 8.64477 15.7654 8.84776C15.3978 9 14.9319 9 14 9H3" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M13 9V15.1905C13 16.3045 13 16.8616 12.6735 16.9803C12.3469 17.0991 11.9782 16.6761 11.2407 15.8303L10.7593 15.278C10.4064 14.8733 10.23 14.6709 10 14.6709C9.77003 14.6709 9.5936 14.8733 9.24074 15.278L8.75926 15.8303C8.02179 16.6761 7.65305 17.0991 7.32653 16.9803C7 16.8616 7 16.3045 7 15.1905V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <div className={style.count} data-theme={identifier("darkNoBG")}> دوره ها : {props.count}</div>
+      <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}> دوره ها : {props.count}</div>
     </div>
   )
 }

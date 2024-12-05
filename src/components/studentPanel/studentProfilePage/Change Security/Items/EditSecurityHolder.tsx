@@ -47,7 +47,7 @@ const EditSecurityHolder = () => {
                 <Form>
                     <RecoveryEmail />
                     <TwoStep twoStep={twoStep} settwoStep={settwoStep} />
-                    <button type="submit" data-theme={identifier("darkNoBG")} className={style.button}> {t("RecordChanges")} </button>
+                    <button type="submit" data-theme={identifier("darkNoBG","dark2NoBG")} className={style.button}> {t("RecordChanges")} </button>
                 </Form>
             </Formik>
         </>

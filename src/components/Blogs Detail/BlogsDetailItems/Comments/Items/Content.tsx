@@ -6,7 +6,7 @@ import { identifier } from '../../../../../core/services/Functions/ThemeIdentifi
 const Content = ({describe}) => {
 
   return (
-    <div className={style.content} data-theme={identifier("darkNoBG")}>{describe}</div>
+    <div className={style.content} data-theme={identifier("darkNoBG","dark2NoBG")}>{describe}</div>
   )
 }
 

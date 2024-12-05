@@ -40,8 +40,8 @@ const MiddleStatusDashboard = ({percentage}) => {
   return (
 
 
-    <div data-theme={identifier("dark")} className={style.middleStatusDashboard}>
-        <Chart series={series} width={250} options={options} type='radialBar' data-theme={identifier("dark")} />
+    <div className={style.middleStatusDashboard}>
+        <Chart series={series} width={250} options={options} type='radialBar'/>
     </div>
   )
 }

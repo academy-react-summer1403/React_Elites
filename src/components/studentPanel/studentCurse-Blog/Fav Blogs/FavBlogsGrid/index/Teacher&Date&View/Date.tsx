@@ -50,7 +50,7 @@ const Date = (props) => {
     return dateMiladii;
   }
   return (
-    <div className={style.date} data-theme={identifier("darkNoBG")}>{dateConvertor(props.date)}</div>
+    <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG")}>{dateConvertor(props.date)}</div>
   )
 }
 

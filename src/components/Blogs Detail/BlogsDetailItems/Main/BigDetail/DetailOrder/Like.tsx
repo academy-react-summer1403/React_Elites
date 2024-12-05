@@ -21,7 +21,7 @@ const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   return (
     <>
     <Toaster />
-    <div data-theme={identifier("darkLikeDetail")} className={isClicked ? style.liked : style.like} onClick={() => {
+    <div data-theme={identifier("darkLikeDetail","darkLikeDetail2")} className={isClicked ? style.liked : style.like} onClick={() => {
       likeNewsCall(id)
       setIsClicked2(false)
       setIsClicked(true)

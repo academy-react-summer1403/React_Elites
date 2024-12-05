@@ -7,7 +7,7 @@ const Confirm = () => {
   return (
 
     <div className={styleLogin.buttonHolder}>
-      <button data-theme={identifier("darkSmall")} className={styleLogin.button} type="submit">تایید </button>
+      <button data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.button} type="submit">تایید </button>
     </div>
   )
 }

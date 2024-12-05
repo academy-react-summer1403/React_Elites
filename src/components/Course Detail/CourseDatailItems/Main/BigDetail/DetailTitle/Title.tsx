@@ -11,7 +11,7 @@ const Title = ({title, isLoading, id}) => {
     <div className={style.titleHolder}>
       {isLoading ? <BeatLoader /> : 
       <>
-            <div className={style.title} data-theme={identifier("darkNoBG")}>{title}</div>
+            <div className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{title}</div>
             <NavLink className={style.CompareButton} to={"/Compare-products-select/" +id}>مقایسه دوره</NavLink>
       </>}
     </div>

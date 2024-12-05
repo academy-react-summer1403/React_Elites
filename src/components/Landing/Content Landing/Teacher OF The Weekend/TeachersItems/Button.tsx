@@ -8,7 +8,7 @@ const Button = () => {
   const {t} = useTranslation();
 
   return (
-    <NavLink to="/teacher-page" className={style.button} data-theme={identifier("dark")}>{t("TeachersPageTitle")}</NavLink>
+    <NavLink to="/teacher-page" className={style.button} data-theme={identifier("dark","dark2")}>{t("TeachersPageTitle")}</NavLink>
   )
 }
 

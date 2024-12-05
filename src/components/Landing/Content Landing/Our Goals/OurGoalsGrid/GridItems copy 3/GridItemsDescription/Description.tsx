@@ -8,7 +8,7 @@ const Description = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.description} data-theme={identifier("dark")}>{t("readyForMarketLandingDesc4")}</div>
+    <div className={style.description} data-theme={identifier("dark","dark2")}>{t("readyForMarketLandingDesc4")}</div>
   )
 }
 

@@ -18,7 +18,7 @@ const ReservedCourses = () => {
     getCourses()
   }, [])
   return (
-    <div className={style.reserved} data-theme={identifier("darkNoBG")}>
+    <div className={style.reserved} data-theme={identifier("darkNoBG","dark2NoBG")}>
       <div className={style.coursesHolder}>
         {coursesArr.map((item, index) => {
           return (

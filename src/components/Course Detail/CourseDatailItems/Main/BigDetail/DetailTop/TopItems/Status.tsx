@@ -6,8 +6,8 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Status = ({status, isLoading}) => {
 
   return (
-    <div className={style.Status} data-theme={identifier("darkNoBG")}>
-        <div className={style.topS} data-theme={identifier("dark")}>وضعیت</div>
+    <div className={style.Status} data-theme={identifier("darkNoBG","dark2NoBG")}>
+        <div className={style.topS} data-theme={identifier("dark","dark2")}>وضعیت</div>
         {isLoading ? <BeatLoader /> : <div className={style.bottomS}>{status}</div>}
     </div>
   )

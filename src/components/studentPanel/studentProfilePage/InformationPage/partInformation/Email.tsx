@@ -15,8 +15,8 @@ const Email = () => {
         <>
             <div className={styleInform.email}>
                 <div className={styleInform.bigDiv}>
-                    <h1 data-theme={identifier("darkNoBG")}>{t("email")}</h1>
-                    <Field name="email" className={styleInform.Input} placeholder={t("enterEmailReg")} data-theme={identifier("dark")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("email")}</h1>
+                    <Field name="email" className={styleInform.Input} placeholder={t("enterEmailReg")} data-theme={identifier("dark","dark2")} />
                 </div>
             </div>
 

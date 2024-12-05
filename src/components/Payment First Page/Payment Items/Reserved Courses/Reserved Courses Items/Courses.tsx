@@ -26,7 +26,7 @@ const Courses = ({ id, reserverDate }) => {
   }, [])
 
   return (
-    <div className={style.coursesHolder} data-theme={identifier("darkNoBG")}>
+    <div className={style.coursesHolder} data-theme={identifier("darkNoBG","dark2NoBG")}>
       <div className={style.PriceAndPayHolder}>
         <Price cost={courseDetail.cost} />        
         <PayButtonHolder id={courseDetail.courseId} />

@@ -23,9 +23,9 @@ const Type = ({setcourseType}) => {
     <>
           <div className={style.holderIconAndTitle}>
           <div className={style.type}></div>
-          <div className={style.titleTeacher} data-theme={identifier("teacher")}> نوع دوره </div>
+          <div className={style.titleTeacher} data-theme={identifier("teacher","teacher2")}> نوع دوره </div>
           </div>
-        <div className={style.teacher1} data-theme={identifier("dark")}>نوع دوره را انتخاب کنید
+        <div className={style.teacher1} data-theme={identifier("dark","dark2")}>نوع دوره را انتخاب کنید
           <div className={isClicked ? style.arrowUp : style.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
           {isClicked && <div className={style.filterTeacher}>
             {types.map((item, index) => {

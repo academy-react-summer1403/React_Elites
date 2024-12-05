@@ -9,8 +9,8 @@ const TargetWe = (props) => {
   const { t } = useTranslation();
   return (
     <div className={style.holderP}>
-      <span data-theme={identifier("dark")}>{t("aboutUsTitle2")}</span>
-      <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc")}>{t("aboutUsDesc3")}</p>
+      <span data-theme={identifier("dark","dark2")}>{t("aboutUsTitle2")}</span>
+      <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("aboutUsDesc3")}</p>
     </div>
   )
 }

@@ -12,13 +12,13 @@ const TopHolder = ({clicked, setClicked, sortModal, setSortModal, setSortType, s
 
   return (
     <div className={style.holder}>
-      <div data-theme={identifier("gridView")} className={isGrid ? `${style.gridView} ${style.selectedG}` : `${style.gridView}`} onClick={() => {
+      <div data-theme={identifier("gridView","gridView2")} className={isGrid ? `${style.gridView} ${style.selectedG}` : `${style.gridView}`} onClick={() => {
         setIsGrid(!isGrid)
       }}></div>
-      <div data-theme={identifier("listView")} className={isGrid == false ? `${style.listView} ${style.selectedG}` : `${style.listView}`} onClick={() => {
+      <div data-theme={identifier("listView","listView2")} className={isGrid == false ? `${style.listView} ${style.selectedG}` : `${style.listView}`} onClick={() => {
         setIsGrid(!isGrid)
       }}></div>
-      <div className={style.title} data-theme={identifier("dark")} >{t("order")} </div>
+      <div className={style.title} data-theme={identifier("dark","dark2")} >{t("order")} </div>
       <TopItems clicked={clicked} setapplySort={setapplySort} applySort={applySort} setClicked={setClicked} sortModal={sortModal} setSortModal={setSortModal} setSortType={setSortType} setCol={setCol}/>
     </div>
   )

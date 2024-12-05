@@ -11,8 +11,8 @@ const Telegram = () => {
     return (
         <div className={styleInform.email}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={identifier("darkNoBG")}>{t("Telegram")}</h1>
-                <Field name="telegramLink" className={styleInform.Input} placeholder={t("enterLinkTelegram")} data-theme={identifier("dark")} />
+                <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("Telegram")}</h1>
+                <Field name="telegramLink" className={styleInform.Input} placeholder={t("enterLinkTelegram")} data-theme={identifier("dark","dark2")} />
             </div>
         </div>
     )

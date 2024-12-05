@@ -10,7 +10,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Bottom = ({dislikes, likes}) => {
 
   return (
-    <div className={style.bottom} data-theme={identifier("dark")}>
+    <div className={style.bottom} data-theme={identifier("dark","dark2")}>
       <DisLikes dislikes={dislikes} />
       <Likes likes={likes} />
     </div>

@@ -28,12 +28,12 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
   };
   return (
     <>
-      <div data-theme={identifier("dark")} className={style.titleHeaderMyCourseList}>
-        <h1 data-theme={identifier("darkNoBG")}>{t("YourComments")}</h1>
+      <div data-theme={identifier("dark","dark2")} className={style.titleHeaderMyCourseList}>
+        <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("YourComments")}</h1>
         <div  onClick={showModal}>{t("ButtonViewAll")} </div>
-        <Modal data-theme={identifier("dark")} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <div data-theme={identifier("dark")} className={s.titleHolder}>
-            <div data-theme={identifier("darkNoBG")} className={s.close}> {t("close")} </div>
+        <Modal data-theme={identifier("dark","dark2")} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+          <div data-theme={identifier("dark","dark2")} className={s.titleHolder}>
+            <div data-theme={identifier("darkNoBG","dark2NoBG")} className={s.close}> {t("close")} </div>
             <div className={s.blogOrCourse}>
               <div className={isBlog === false ? s.courses : s.selected} onClick={() => {
                 setisBlog(true)
@@ -44,9 +44,9 @@ const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) 
                 setdata(courseCommentt)
                 }}> {t("courses")} </div>
             </div>
-            <div data-theme={identifier("darkNoBG")} className={s.title}> {t("YourComments")} </div>
+            <div data-theme={identifier("darkNoBG","dark2NoBG")} className={s.title}> {t("YourComments")} </div>
           </div>
-          <div data-theme={identifier("dark")} className={s.holderComments}>
+          <div data-theme={identifier("dark","dark2")} className={s.holderComments}>
           {data.map((item, index) => {
             return(
               <Comment

@@ -27,7 +27,7 @@ const CommentDashboard = () => {
   }, [])
 
   return (
-    <div className={style.commentDashboard} data-theme={identifier("dark")}>
+    <div className={style.commentDashboard} data-theme={identifier("dark","dark2")}>
       <TitleHeaderMyCommentList data={data} courseCommentt={courseCommentt} newsComment={newsComment} setdata={setdata} />
       <CoursesAndBlogsHolder courseCommentt={courseCommentt} />
     </div>

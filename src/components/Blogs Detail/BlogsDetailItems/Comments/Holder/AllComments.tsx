@@ -11,7 +11,7 @@ const AllComments = ({comments, isLoading, title}) => {
 
   return (
     <div className={style.container}>
-      <div className={style.title} data-theme={identifier("dark")}> نظرات دانشجو ها و اساتید </div>
+      <div className={style.title} data-theme={identifier("dark","dark2")}> نظرات دانشجو ها و اساتید </div>
         {isLoading && <PulseLoader />}
         {comments.slice(0,3).map((item, index) => {
           return (

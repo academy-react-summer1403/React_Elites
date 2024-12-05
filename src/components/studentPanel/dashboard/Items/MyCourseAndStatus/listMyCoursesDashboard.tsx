@@ -21,7 +21,7 @@ const ListMyCoursesDashboard = () => {
   }, [])
   return (
 
-    <div className={style.listMyCoursesDashboard} data-theme={identifier("dark")}>
+    <div className={style.listMyCoursesDashboard} data-theme={identifier("dark","dark2")}>
       <TitleHeaderMyCourseList />
       <HeaderList />
       <ListCardBlogs isLoading={isLoading} data={data} />

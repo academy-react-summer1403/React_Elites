@@ -7,7 +7,7 @@ const Title = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.title} data-theme={identifier("darkNoBG")}>{t("teacherPageLandingTitle")}</div>
+    <div className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("teacherPageLandingTitle")}</div>
   )
 }
 

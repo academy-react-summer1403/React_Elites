@@ -23,7 +23,7 @@ const DisLike = ({id}) => {
   }
 
   return (
-    <div data-theme={identifier("darkDisLikeDetail")} className={isDisLiked == "1" ? style.disLiked : style.dislike} onClick={() => isDisLiked === "0" && dislikeCourse()}></div>
+    <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2")} className={isDisLiked == "1" ? style.disLiked : style.dislike} onClick={() => isDisLiked === "0" && dislikeCourse()}></div>
   )
 }
 

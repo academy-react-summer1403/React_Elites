@@ -5,9 +5,9 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const DisLikes = ({dislikes}) => {
 
   return (
-    <div className={style.Teacher} data-theme={identifier("darkNoBG")}>
-        <div className={style.topT} data-theme={identifier("dark")}>تعداد دیس‌لایک</div>
-        <div className={style.bottomT} data-theme={identifier("dark")}>{dislikes} نفر</div>
+    <div className={style.Teacher} data-theme={identifier("darkNoBG","dark2NoBG")}>
+        <div className={style.topT} data-theme={identifier("dark","dark2")}>تعداد دیس‌لایک</div>
+        <div className={style.bottomT} data-theme={identifier("dark","dark2")}>{dislikes} نفر</div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Top = ({status, teacher, category, level, isLoading}) => {
 
   return (
-    <div className={style.top} data-theme={identifier("dark")}>
+    <div className={style.top} data-theme={identifier("dark","dark2")}>
         <Teacher isLoading={isLoading} teacher={teacher} />
         <Category isLoading={isLoading} category={category} />
         <Level isLoading={isLoading} level={level} />

@@ -11,7 +11,7 @@ const PayButton = ({ id }) => {
   return (
 
     <NavLink to={"/Payment-Gateway/" +id} className={style.PaymentHolder}>
-      <div className={style.PaymentButton} data-theme={identifier("darkNoBG")} ></div>
+      <div className={style.PaymentButton} data-theme={identifier("darkNoBG","dark2NoBG")} ></div>
       <h1 className={style.PaymentTitle}>پرداخت</h1>
     </NavLink>
   )

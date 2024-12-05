@@ -8,7 +8,7 @@ import { identifier } from '../../../../../../core/services/Functions/ThemeIdent
 const ServicesItemsHolder = (props) => {
 
   return (
-    <div className={style.holder} data-theme={identifier("darkSmall")}>
+    <div className={style.holder} data-theme={identifier("darkSmall","dark2Small")}>
       <Image image={props.image} />
       <TitleAndDescHolder title={props.title} desc={props.desc}/>
     </div>

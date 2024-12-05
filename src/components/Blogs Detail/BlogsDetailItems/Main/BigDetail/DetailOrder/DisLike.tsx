@@ -22,7 +22,7 @@ const DisLike = ({ isClicked2, setIsClicked2, setIsClicked, id }) => {
   return (
     <>
       <Toaster />
-      <div data-theme={identifier("darkDisLikeDetail")} className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
+      <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2")} className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
         likeNewsCall(id)
         setIsClicked(false)
         setIsClicked2(true)

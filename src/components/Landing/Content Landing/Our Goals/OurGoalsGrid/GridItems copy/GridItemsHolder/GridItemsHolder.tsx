@@ -8,7 +8,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const GridItemsHolderTwo = () => {
 
   return (
-    <div className={style.holder} data-theme={identifier("dark")}>
+    <div className={style.holder} data-theme={identifier("dark","dark2")}>
       <GridItemsTitle />
       <Description />
       <Image />

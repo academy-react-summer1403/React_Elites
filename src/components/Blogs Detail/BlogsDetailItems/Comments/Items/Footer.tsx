@@ -36,23 +36,23 @@ const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, cur
     <div className={style.footer}>
       <Toaster />
         <div className={style.likeAndDislikes}>
-            <div className={style.count} data-theme={identifier("darkNoBG")}> {likeCount} </div>
-            <div data-theme={identifier("darkLikeDetail")} className={isClicked ? style.like : style.iconLike} onClick={() => {
+            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}> {likeCount} </div>
+            <div data-theme={identifier("darkLikeDetail","darkLikeDetail2")} className={isClicked ? style.like : style.iconLike} onClick={() => {
               likeSystem(id, true)
               setisClicked(true)
               setisClicked2(false)
             }}></div>
-            <div className={style.count} data-theme={identifier("darkNoBG")}> {dissLikeCount} </div>
-            <div data-theme={identifier("darkDisLikeDetail")} className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
+            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}> {dissLikeCount} </div>
+            <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2")} className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
               likeSystem(id, false)
               setisClicked(false)
               setisClicked2(true)
             }}></div>
         </div>
         <div className={style.user}>
-            <div className={style.username} data-theme={identifier("darkNoBG")}> {autor} </div>
+            <div className={style.username} data-theme={identifier("darkNoBG","dark2NoBG")}> {autor} </div>
             <img className={style.profile} src={pictureAddress} />
-            <div className={style.date} data-theme={identifier("darkNoBG")}> {dateConvertor(inserDate)} </div>
+            <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG")}> {dateConvertor(inserDate)} </div>
         </div>
     </div>
   )

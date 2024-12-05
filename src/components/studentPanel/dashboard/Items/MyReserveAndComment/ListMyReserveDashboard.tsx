@@ -9,7 +9,7 @@ const ListMyReserveDashboard = ({userReserveCoursesObj, isLoading}) => {
 
 
   return (
-      <div className={style.listMyReserveDashboard} data-theme={identifier("dark")}>
+      <div className={style.listMyReserveDashboard} data-theme={identifier("dark","dark2")}>
         <TitleHeaderMyReserveList />
         <HeaderList />
         <ReserveCardsList isLoading={isLoading} userReserveCoursesObj={userReserveCoursesObj} />

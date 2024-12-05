@@ -5,7 +5,7 @@ import { identifier } from '../../../../core/services/Functions/ThemeIdentifier'
 const CoursesTitle = () => {
  
   return (
-    <div className={style.title} data-theme={identifier("dark")}>دوره های مرتبط </div>
+    <div className={style.title} data-theme={identifier("dark","dark2")}>دوره های مرتبط </div>
   )
 }
 

@@ -9,10 +9,10 @@ const CursesTeaching = (props) => {
   const { t } = useTranslation();
   return (
     <div className={style.holderP}>
-      <span data-theme={identifier("dark")}>{t("aboutUsTitle5")}</span>
+      <span data-theme={identifier("dark","dark2")}>{t("aboutUsTitle5")}</span>
       <div className={style.holderGap}>
-        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc")}> {t("aboutUsDesc8")} </p> 
-        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc")}> {t("aboutUsDesc9")} </p> 
+        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}> {t("aboutUsDesc8")} </p> 
+        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}> {t("aboutUsDesc9")} </p> 
       </div>
     </div>  
   )

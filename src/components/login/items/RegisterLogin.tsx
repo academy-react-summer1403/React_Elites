@@ -11,7 +11,7 @@ const RegisterLogin = () => {
   return (
 
     <div className={styleLogin.RegisterLoginButton}>
-      <h1 data-theme={identifier("darkNoBG")} className="red text-black text-sm font-DannaDemiBold">    {t("Don'tHaveAnAccount")}</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG")} className="red text-black text-sm font-DannaDemiBold">    {t("Don'tHaveAnAccount")}</h1>
       <NavLink to="/Auth/Register" className="border-none cursor-pointer text-blue-700 text-sm font-DannaDemiBold tracking-tight decoratio underline">  {t("creatAccount")}</NavLink>
     </div>
 

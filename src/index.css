@@ -214,10 +214,252 @@
   background-repeat: no-repeat !important;
 }
 
-[data-theme="red"] {
-  color: red !important;
-  background: red !important;
+/*dark2*/
+
+[data-theme="dark2"] {
+  background: #181C14 !important;
+  color: #ECDFCC !important;
+  border-color: #697565 !important;
 }
+[data-theme="dark2CoursesHolder"] {
+  background: #202020 !important;
+  color: #ECDFCC !important;
+  border-color: #697565 !important;
+  box-shadow: 0px 0px 10px 2px #fff !important;
+}
+[data-theme="dark2Path"] {
+  stroke: #ECDFCC !important;
+}
+[data-theme="dark2NoBG"] {
+  color: #ECDFCC !important;
+  border-color: #e0caa9 !important;
+}
+[data-theme="dark2NoBGDisc"] {
+  color: #e0caa9 !important;
+  border-color: #697565 !important;
+}
+[data-theme="dark2Small"] {
+  background-color: #3C3D37 !important;
+  color: #ECDFCC !important;
+  border-color: #697565 !important;
+}
+[data-theme="dark2OrLight"] {
+  background:white url("https://img.icons8.com/?size=100&id=q4yXFoEnYRH7&format=png&color=000000") 50% 50% no-repeat !important;
+  background-size: 60% !important;
+}
+[data-theme="notification2"] {
+  background: url("https://img.icons8.com/?size=100&id=eMfeVHKyTnkc&format=png&color=ECDFCC") 50% 50% no-repeat !important;
+  background-size: 60% !important;
+}
+[data-theme="instagram2"] {
+  background: url("https://img.icons8.com/?size=100&id=32292&format=png&color=ECDFCC") !important;
+  background-size: cover !important;
+}
+[data-theme="darkClearSort2"] {
+  background: url("https://img.icons8.com/?size=100&id=71202&format=png&color=ECDFCC") 50% 50% no-repeat !important;
+  background-size: cover !important;
+}
+[data-theme="telegram2"] {
+  background: url(./assets/Images/telegramRes.png) !important;
+  background-size: cover !important;
+}
+[data-theme="youtube2"] {
+  background: url("https://img.icons8.com/?size=100&id=Aq10GU126KJX&format=png&color=ECDFCC") !important;
+  background-size: cover !important;
+}
+[data-theme="twitter2"] {
+  background: url("https://img.icons8.com/?size=100&id=gNsLgEvYCwpR&format=png&color=ECDFCC") !important;
+  background-size: cover !important;
+}
+[data-theme="dark2Search"] {
+  color: #ECDFCC !important;
+  background: #2f2f2f url("https://img.icons8.com/?size=100&id=132&format=png&color=ECDFCC") no-repeat 50% 50% !important;
+  background-size: 60% !important;
+}
+[data-theme="level2"] {
+  color: #ECDFCC !important;
+}
+[data-theme="teacher2"] {
+  color: #ECDFCC !important;
+}
+[data-theme="date2"] {
+  color: #ECDFCC !important;
+}
+[data-theme="cat2"] {
+  color: #ECDFCC !important;
+}
+[data-theme="view2"] {
+  background: url("https://img.icons8.com/?size=25&id=85028&format=png&color=ECDFCC")  no-repeat 100% 50% !important;
+}
+[data-theme="minibasket2"] {
+  background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=ECDFCC") 50% 50% no-repeat !important;
+  background-size: 60% !important;
+}
+[data-theme="dateBlogFilter2"] {
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=ECDFCC") 50% 50% no-repeat !important;
+  background-size: 25px !important;
+}
+[data-theme="categoryBlogFilter2"] {
+  background: url("https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=ECDFCC") 50% 50% no-repeat !important;
+  background-size: 25px !important;
+}
+[data-theme="DateBlog2"] {
+  color: #ECDFCC !important;
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=ECDFCC") no-repeat 0% 50% !important;
+  border-color: #697565 !important;
+    background-size: 18px !important;
+}
+[data-theme="ViewBlog2"] {
+  color: #ECDFCC !important;
+  background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=ECDFCC") no-repeat 0% 50% !important;
+  border-color: #697565 !important;  
+  background-size: 18px !important;
+}
+[data-theme="gridView2"] {
+  background: url(https://img.icons8.com/?size=100&id=20228&format=png&color=ECDFCC) 50% 50% no-repeat !important;
+  background-size: 90% 120% !important;
+  border: 2px solid #ECDFCC !important;
+}
+[data-theme="listView2"] {
+  background: url(https://img.icons8.com/?size=100&id=82758&format=png&color=ECDFCC) 50% 50% no-repeat !important;
+  background-size: 100% !important;
+  border: 2px solid #ECDFCC !important;
+}
+[data-theme="darkLikeDetail2"] {
+  background-image: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=dcdcdc') !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+[data-theme="darkDisLikeDetail2"] {
+  background-image: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=dcdcdc') !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/*green  theme*/
+
+
+[data-theme="green"] {
+  background: #37AFE1 !important;
+  color: #F5F4B3 !important;
+  border-color: #FFFECB !important;
+}
+[data-theme="greenCoursesHolder"] {
+  background: #07587a !important;
+  color: #F5F4B3 !important;
+  border-color: #FFFECB !important;
+  box-shadow: 0px 0px 10px 2px #fff !important;
+}
+[data-theme="dark2Path"] {
+  stroke: #F5F4B3 !important;
+}
+[data-theme="dark2NoBG"] {
+  color: #F5F4B3 !important;
+  border-color: #e0caa9 !important;
+}
+[data-theme="greenNoBGDisc"] {
+  color: #e0caa9 !important;
+  border-color: #FFFECB !important;
+}
+[data-theme="greenSmall"] {
+  background-color: #07587a !important;
+  color: #F5F4B3 !important;
+  border-color: #FFFECB !important;
+}
+[data-theme="greenOrLight"] {
+  background:rgb(68, 120, 0) url("https://img.icons8.com/?size=100&id=q4yXFoEnYRH7&format=png&color=000000") 50% 50% no-repeat !important;
+  background-size: 60% !important;
+}
+[data-theme="notification"] {
+  background: url("https://img.icons8.com/?size=100&id=eMfeVHKyTnkc&format=png&color=F5F4B3") 50% 50% no-repeat !important;
+  background-size: 60% !important;
+}
+[data-theme="instagram"] {
+  background: url("https://img.icons8.com/?size=100&id=32292&format=png&color=F5F4B3") !important;
+  background-size: cover !important;
+}
+[data-theme="greenClearSort"] {
+  background: url("https://img.icons8.com/?size=100&id=71202&format=png&color=F5F4B3") 50% 50% no-repeat !important;
+  background-size: cover !important;
+}
+[data-theme="telegram3"] {
+  background: url(./assets/Images/telegramRes.png) !important;
+  background-size: cover !important;
+}
+[data-theme="youtube3"] {
+  background: url("https://img.icons8.com/?size=100&id=Aq10GU126KJX&format=png&color=F5F4B3") !important;
+  background-size: cover !important;
+}
+[data-theme="twitter3"] {
+  background: url("https://img.icons8.com/?size=100&id=gNsLgEvYCwpR&format=png&color=F5F4B3") !important;
+  background-size: cover !important;
+}
+[data-theme="greenSearch"] {
+  color: #ECDFCC !important;
+  background: #2f2f2f url("https://img.icons8.com/?size=100&id=132&format=png&color=F5F4B3") no-repeat 50% 50% !important;
+  background-size: 60% !important;
+}
+[data-theme="level3"] {
+  color: #ECDFCC !important;
+}
+[data-theme="teacher3"] {
+  color: #ECDFCC !important;
+}
+[data-theme="date3"] {
+  color: #ECDFCC !important;
+}
+[data-theme="cat3"] {
+  color: #ECDFCC !important;
+}
+[data-theme="view3"] {
+  background: url("https://img.icons8.com/?size=25&id=85028&format=png&color=F5F4B3")  no-repeat 100% 50% !important;
+}
+[data-theme="minibasket3"] {
+  background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=F5F4B3") 50% 50% no-repeat !important;
+  background-size: 60% !important;
+}
+[data-theme="dateBlogFilter3"] {
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=F5F4B3") 50% 50% no-repeat !important;
+  background-size: 25px !important;
+}
+[data-theme="categoryBlogFilter3"] {
+  background: url("https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=F5F4B3") 50% 50% no-repeat !important;
+  background-size: 25px !important;
+}
+[data-theme="DateBlog3"] {
+  color: #F5F4B3 !important;
+  background: url("https://img.icons8.com/?size=100&id=BCKAW92AuElD&format=png&color=F5F4B3") no-repeat 0% 50% !important;
+  border-color: #FFFECB !important;
+    background-size: 18px !important;
+}
+[data-theme="ViewBlog3"] {
+  color: #F5F4B3 !important;
+  background: url("https://img.icons8.com/?size=100&id=85028&format=png&color=F5F4B3") no-repeat 0% 50% !important;
+  border-color: #FFFECB !important;  
+  background-size: 18px !important;
+}
+[data-theme="gridView2"] {
+  background: url(https://img.icons8.com/?size=100&id=20228&format=png&color=F5F4B3) 50% 50% no-repeat !important;
+  background-size: 90% 120% !important;
+  border: 2px solid #FFFECB !important;
+}
+[data-theme="listView3"] {
+  background: url(https://img.icons8.com/?size=100&id=82758&format=png&color=F5F4B3) 50% 50% no-repeat !important;
+  background-size: 100% !important;
+  border: 2px solid #FFFECB !important;
+}
+[data-theme="greenLikeDetail2"] {
+  background-image: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=dcdcdc') !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+[data-theme="greenDisLikeDetail"] {
+  background-image: url('https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=dcdcdc') !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+}
+
 
 .progressBar {
   position: fixed;

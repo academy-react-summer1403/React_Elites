@@ -2,6 +2,7 @@ import { createGlobalState } from "react-hooks-global-state";
 
 const { useGlobalState} = createGlobalState({
     DarkMode: false,
+    DarkMode2: false,
     isLogin: false,
     userId: '',
     phoneNumber: "",

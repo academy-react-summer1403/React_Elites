@@ -9,7 +9,7 @@ const GridItemsHolderFour = () => {
 
 
   return (
-    <div className={style.holder} data-theme={identifier("dark")}>
+    <div className={style.holder} data-theme={identifier("dark","dark2")}>
       <GridItemsTitle />
       <Description />
       <Image />

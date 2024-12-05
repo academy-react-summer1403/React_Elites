@@ -700,7 +700,6 @@
 .statusDashboard > .bottomStatusDashboard{
     display: flex;
     justify-content: center;
-    height: 20px;
 }
 
 .listMyReserveDashboard{
@@ -772,6 +771,101 @@
         width: 240px;
     }
 
+}
+@media screen and (max-width: 1065px) {
+    .headerList{
+        gap: 0;
+    }
+    .dateStartList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(4),.listMyReserveDashboard>div:last-child>div>div:nth-child(7)  {
+        display: none;
+    }
+    .levelList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(6){
+        width: 13%;
+    }
+    .eyeList,.listMyCoursesDashboard > div:last-child > div > a{
+        width: 4.4%;
+    }
+    .teacherList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(3),.listMyReserveDashboard>div:last-child>div>div:nth-child(4){
+        width: 25%;
+    }
+    .imgList,.listMyCoursesDashboard > div:last-child > div > img,.listMyReserveDashboard>div:last-child>div>img{
+        width: 15.1%;
+    }
+    .nameList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(2){
+        width: 24%;
+    }
+    .listMyReserveDashboard>.headerList>.eyeList{
+        width: 13.6%;
+    }
+}
+@media screen and (max-width: 791px) {
+
+    .MyCourseAndStatus,.MyReserveAndComment{
+        flex-flow: column wrap;
+        gap: 20px;
+    }
+    .listMyCoursesDashboard,.statusDashboard,.commentDashboard,.listMyReserveDashboard{
+        width: 100%;
+    }
+    .listMyReserveDashboard{
+        height: 260px;
+    }
+    .listMyReserveDashboard > div:last-child{
+        height: 160px;
+        padding-bottom: 15px;
+    }
+}
+@media screen and (max-width: 696px) {
+    .leftTopDashboard{
+        display: none;
+    }
+    .rightTopDashboard {
+        width: 100%;
+    }
+    .TopRightTopDashboard>h1{
+        font-size: 20px;
+    }
+    .TopRightTopDashboard>p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 582px) {
+    .teacherList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(3),.listMyReserveDashboard>div:last-child>div>div:nth-child(4),.levelList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(6){
+        display: none;
+    }
+    .imgList,.listMyCoursesDashboard > div:last-child > div > img,.listMyReserveDashboard>div:last-child>div>img{
+        width: 20.1%;
+    }
+    .nameList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(2){
+        width: 40%;
+    }
+    .listMyReserveDashboard>.headerList>.eyeList,.listMyCoursesDashboard > div:last-child > div > div:last-child{
+        width: 20%;
+    }
+    .eyeList,.listMyCoursesDashboard > div:last-child > div > a{
+        width: 8%;
+    }
+    .userHolder{
+        display: none;
+    }
+}
+@media screen and (max-width: 427px) {
+    .BottomRightTopDashboard{
+        flex-flow: column wrap;
+        justify-content: center;
+        height: auto;
+        gap: 20px; 
+    }
+    .BottomRightTopDashboard > div{
+        width: 100%;
+
+    }
+    .listMyReserveDashboard{
+        overflow-x: scroll;
+    }
+    .page{
+        padding: 10px;
+    }
 }
 
 /* @media screen and (max-width: 1085px) {

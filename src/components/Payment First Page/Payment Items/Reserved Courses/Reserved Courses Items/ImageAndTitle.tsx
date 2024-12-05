@@ -7,7 +7,7 @@ const ImageAndTitle = ({title, Image}) => {
 
 
   return (
-    <div className={style.TitleAndImageHolder} data-theme={identifier("darkNoBG")}>
+    <div className={style.TitleAndImageHolder} data-theme={identifier("darkNoBG","dark2NoBG")}>
       <Image Image={Image}/>
       <Title title={title} />
     </div>

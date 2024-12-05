@@ -11,7 +11,7 @@ const BottomStatusDashboard = () => {
   return (
 
     <div className={style.bottomStatusDashboard}>
-      <h1 data-theme={identifier("darkNoBG")}>{t("BottomStatus")}</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("BottomStatus")}</h1>
     </div>
   )
 }

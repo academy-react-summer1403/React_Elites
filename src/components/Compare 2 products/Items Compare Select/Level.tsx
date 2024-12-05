@@ -9,10 +9,10 @@ const Level = ({ level, level2 }) => {
 
   return (
     <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc")}>سطح آموزشی</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>سطح آموزشی</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{level}</div>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG")}>{level2}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{level}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{level2}</div>
 
         </div>
       </div>

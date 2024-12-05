@@ -5,7 +5,7 @@ import { identifier } from '../../../../../core/services/Functions/ThemeIdentifi
 const ReservedTitle = () => {
 
   return (
-    <div className={style.title} data-theme={identifier("darkNoBG")}>دوره های رزرو شده</div>
+    <div className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>دوره های رزرو شده</div>
   )
 }
 

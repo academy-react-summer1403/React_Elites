@@ -9,11 +9,11 @@ const HeaderList = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={style.headerList} data-theme={identifier("darkSmall")}>
-      <div className={style.imgList} data-theme={identifier("darkNoBG")}># </div>
-      <div className={style.nameList} data-theme={identifier("darkNoBG")}>{t("name")} </div>
-      <div className={style.teacherList} data-theme={identifier("darkNoBG")}>{t("lecturer")} </div>
-      <div className={style.dateStartList} data-theme={identifier("darkNoBG")}>{t("status")} </div>
+    <div className={style.headerList} data-theme={identifier("darkSmall","dark2Small")}>
+      <div className={style.imgList} data-theme={identifier("darkNoBG","dark2NoBG")}># </div>
+      <div className={style.nameList} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("name")} </div>
+      <div className={style.teacherList} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("lecturer")} </div>
+      <div className={style.dateStartList} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("status")} </div>
       <div className={style.eyeList}> </div>
     </div>
   )

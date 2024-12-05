@@ -8,8 +8,8 @@ const Price = ({price}) => {
   const {t} = useTranslation();
   return (
     <div className={style.holderP}>
-      <div className={style.tooman} data-theme={identifier("darkNoBG")}>{t("toman")}  </div>
-      <div className={style.price} data-theme={identifier("dark")}> {price}</div>
+      <div className={style.tooman} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("toman")}  </div>
+      <div className={style.price} data-theme={identifier("dark","dark2")}> {price}</div>
     </div>
   )
 }

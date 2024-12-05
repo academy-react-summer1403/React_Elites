@@ -12,7 +12,7 @@ const NavBar = () => {
     const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
     return (
-        <div className={style.container} data-theme={identifier("dark")}>
+        <div className={style.container} data-theme={identifier("dark","dark2")}>
             { isLogin === true ? <User /> : <LogInOrRegister />}
             <NavBarItems />
         </div>

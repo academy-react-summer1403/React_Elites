@@ -37,7 +37,7 @@ const Like = ({id, userLikeId}) => {
   return (
     <>
       <Toaster />
-      <div data-theme={identifier("darkLikeDetail")} className={isLiked == "1" ? style.liked : style.like} onClick={() => {
+      <div data-theme={identifier("darkLikeDetail","darkLikeDetail2")} className={isLiked == "1" ? style.liked : style.like} onClick={() => {
         if(isLiked == "0"){
           likeCourse()
         }

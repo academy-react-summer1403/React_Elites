@@ -40,19 +40,19 @@ const SearchModal = () => {
       <div className={style.titleHeaderMyCourseList}>
         <div data-theme={identifier("darkSearch")} className={style.SearchHeader} onClick={showModal}> </div>
         <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none"}}>
-          <div data-theme={identifier("dark")} className={s.titleHolder}>
+          <div data-theme={identifier("dark","dark2")} className={s.titleHolder}>
             <div className={s.close}> بستن </div>
             <div className={s.blogOrCourse}>
               <div className={s.courses}> دوره ها </div>
             </div>
-            <div data-theme={identifier("darkNoBG")} className={s.title}>: جستجو در </div>
+            <div data-theme={identifier("darkNoBG","dark2NoBG")} className={s.title}>: جستجو در </div>
           </div>
-          <div data-theme={identifier("dark")} className={style.InputSearchHolder}>
-            <input data-theme={identifier("darkSmall")}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
+          <div data-theme={identifier("dark","dark2")} className={style.InputSearchHolder}>
+            <input data-theme={identifier("darkSmall","dark2Small")}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
               setSearchValue(e.target.value)
             }} />
           </div>
-          <div data-theme={identifier("dark")} className={style.holderCards}>
+          <div data-theme={identifier("dark","dark2")} className={style.holderCards}>
             {courseList.map((item, index) => {
               return (
                 <CardModal

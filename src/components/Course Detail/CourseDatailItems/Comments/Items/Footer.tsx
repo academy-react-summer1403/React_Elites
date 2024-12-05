@@ -14,15 +14,15 @@ const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, 
     <div className={style.footer}>
       <Toaster />
         <div className={style.likeAndDislikes}>
-            <div className={style.count} data-theme={identifier("darkNoBG")}>{likeCount}</div>
-            <div data-theme={identifier("darkLikeDetail")} className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
+            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}>{likeCount}</div>
+            <div data-theme={identifier("darkLikeDetail","darkLikeDetail2")} className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
               let res = await postCourseCommentLike(commentId)
               if(res.success === true){
                 toast.success("کامنت لایک شد")
               }
             }}></div>
-            <div className={style.count} data-theme={identifier("darkNoBG")}>{disslikeCount}</div>
-            <div data-theme={identifier("darkDisLikeDetail")} className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
+            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}>{disslikeCount}</div>
+            <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2")} className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
               let res = await postCourseCommentDisLike(commentId)
               console.log(res)
               if(res.success === true){
@@ -31,9 +31,9 @@ const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, 
             }}></div>
         </div>
         <div className={style.user}>
-            <div className={style.username} data-theme={identifier("darkNoBG")}>{author}</div>
+            <div className={style.username} data-theme={identifier("darkNoBG","dark2NoBG")}>{author}</div>
             <img className={style.profile} src={pictureAddress} />
-            <div className={style.date} data-theme={identifier("darkNoBG")}>{dateConvertor(insertDate)}</div>
+            <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG")}>{dateConvertor(insertDate)}</div>
         </div>
     </div>
   )
