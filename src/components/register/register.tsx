@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { registerPhoneNumber } from "../../core/services/api/auth-register-phonenumber";
 import toast, { Toaster } from 'react-hot-toast';
 import { RegisterPage2 } from "../register Page2/register";
-import { useGlobalState } from "../../State/State";
+
 import { useTranslation } from 'react-i18next';
 import { NavigateRegister } from "./Items/navigateRegister";
 import { WelcomeRegister } from "./Items/WelcomeRegister";
@@ -14,6 +14,7 @@ import { SendCode } from "./Items/SendCode";
 import { LoginRegister } from "./Items/LoginRegister";
 import { MainPageButton } from "./Items/MainPageButton";
 import * as yup from "yup";
+import { useGlobalState } from "../../State/State";
 
 const Register = () => {
   const [phoneNumber, setPhoneNumber] = useGlobalState('phoneNumber');

@@ -1,12 +1,12 @@
 import style from "./../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { NavLink } from "react-router-dom";
 import { BottomStatusDashboard } from "./BottomStatusDashboard";
 import { TopStatusDashboard } from "./TopStatusDashboard";
 import { MiddleStatusDashboard } from "./middleStatusDashboard";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const StatusDashboard = ({percentage}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import style from './Level.module.css'
-import { useGlobalState } from '../../../../../../State/State';
+
 import { useTranslation } from "react-i18next";
 import { GetCourseLevel } from '../../../../../../core/services/api/getCorseLevel';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const Level = ({setLevelId}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isClicked, setIsClicked] = useState(false)
   const [Level, setLevel] = useState([])
   const { t } = useTranslation();

@@ -1,11 +1,11 @@
 import style from "../../../Style/Compare.module.css";
 import { useTranslation } from 'react-i18next';
 import React, { useEffect, useState } from 'react'
-import { useGlobalState } from "../../../State/State";
+
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const TeacherName = ({ teacherName, teacherName2 }) => {
   const {t} = useTranslation();
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
     <div className={style.Discription}>

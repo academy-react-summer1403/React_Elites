@@ -1,11 +1,11 @@
-import { useGlobalState } from '../../../State/State';
+
 import style from './ItemsHolder.module.css'
 import { Image } from './index/Items/Image';
 import { TitleAndCountHolder } from './index/TitleAndCountHolder';
 import { NavLink } from "react-router-dom";
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 const CardBlogs = ({image, title,count,countN, LinkedinProf}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     
     <div className={style.holder} data-theme={identifier("darkSmall")}>

@@ -4,10 +4,10 @@ import { SocialMedias } from '../SocialMedias/SocialMediasHolder/SocialMedias'
 import { Logo } from '../Logo/LogoHolder/Logo'
 import { NavBarHolder } from '../NavBar/NavBarHolder/NavBarHolder'
 import { NavBarHolderRes } from '../NavBarRes/NavBarHolder/NavBarHolder'
-import { useGlobalState } from '../../../../State/State'
+
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier'
 const HolderFooter = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
     <>

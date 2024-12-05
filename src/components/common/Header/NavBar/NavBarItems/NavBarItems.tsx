@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import style from "../../../../../Style/NavBarItems.module.css"
 import { NavLink } from 'react-router-dom'
-import { useGlobalState } from '../../../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from '../../../../../State/State';
 
 const NavBarItems = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isLanding, setisLanding] = useGlobalState('isLanding');
   const [isBlog, setisBlog] = useGlobalState('isBlog');
   const [isAboutUs, setisAboutUs] = useGlobalState('isAboutUs');

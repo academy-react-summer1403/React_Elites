@@ -5,14 +5,14 @@ import { Image } from './Image'
 import { Title } from './Title'
 import { PayButton } from './payButton'
 import { ImageAndTitle } from './ImageAndTitle'
-import { useGlobalState } from '../../../../../State/State'
+
 import { getCourseById } from '../../../../../core/services/api/courseById'
 import { PayButtonHolder } from './payButtonHolder'
 import { NavLink } from 'react-router-dom'
 import { Date } from './Date'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const Courses = ({ id, reserverDate }) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [courseDetail, setcourseDetail] = useState({})
   const [courseList, setCourseList] = useState([]);
 

@@ -3,7 +3,7 @@ import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleLink from "./../LinkPage/partLinkPage/link.module.css";
 import { Form, NavLink } from "react-router-dom";
-import { useGlobalState } from "../../../../State/State";
+
 import { useEffect, useState } from "react";
 import { putUserInfoEdit } from "../../../../core/services/api/putUserInfoEdit";
 import toast, { Toaster } from "react-hot-toast";
@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
 
 const LinkForm = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const [user, setUser] = useState()
     const { t } = useTranslation();
 

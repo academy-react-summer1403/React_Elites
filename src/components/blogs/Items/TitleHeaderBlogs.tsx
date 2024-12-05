@@ -1,12 +1,12 @@
 import React from 'react'
 import style from '../../../Style/blogList.module.css'
-import { useGlobalState } from "../../../State/State.tsx";
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier.ts';
 
 const TitleHeaderBlogs = () => {
   const { t } = useTranslation();
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
     <div className={style.titleBlogs}>

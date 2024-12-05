@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import style from './Category.module.css'
-import { useGlobalState } from '../../../../../../State/State';
+
 import { useTranslation } from "react-i18next";
 import { getCategoriesList } from '../../../../../../core/services/api/getCategoriesList';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const Category = ({setcategoryId}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isClicked, setIsClicked] = useState(false)
   const [categoriesList, setCategoriesList] = useState([])
   const { t } = useTranslation();

@@ -6,7 +6,7 @@ import { ChangePageList } from '../ChangePageList/ChangePageList'
 import { allCourseList } from '../../../../../core/services/api/AllCourseList'
 import { Filter } from '../../../../../core/services/api/Filter'
 import { Sort } from '../../../../../core/services/api/Sort'
-import { useGlobalState } from '../../../../../State/State'
+
 import { allCourseListSearch } from '../../../../../core/services/api/AllCourseListSearch'
 
 

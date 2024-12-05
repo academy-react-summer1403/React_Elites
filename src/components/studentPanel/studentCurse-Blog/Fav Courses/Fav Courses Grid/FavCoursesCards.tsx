@@ -3,7 +3,7 @@ import { Image } from './index/Items/Image'
 import { Title } from './index/Items/Title'
 import { Teacher } from './index/Teacher&Date&View/Teacher'
 import { Date } from './index/Teacher&Date&View/Date'
-import { useGlobalState } from '../../../../../State/State'
+
 import { Level } from './index/Items/level&CategoryHolder/Level'
 import { Type } from './index/Teacher&Date&View/type'
 import { NavLink } from 'react-router-dom'
@@ -13,7 +13,7 @@ import { getCourseById } from '../../../../../core/services/api/courseById'
 import { useEffect, useState } from 'react'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const FavCoursesCards = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [courseDetail, setCourseDetail] = useState({})
   const [courseReserve, setcourseReserve] = useState(false)
 

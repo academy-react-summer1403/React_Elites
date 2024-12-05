@@ -4,11 +4,11 @@ import { Title } from './index/Items/Title'
 import { Teacher } from './index/Teacher&Date&View/Teacher'
 import { Date } from './index/Teacher&Date&View/Date'
 import { Level } from './index/Teacher&Date&View/Level'
-import { useGlobalState } from '../../../../../State/State'
+
 import { NavLink } from 'react-router-dom'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const CardBlogs = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={style.holder}>
         <Image image={props.image} />

@@ -10,8 +10,9 @@ import { FPReturnButton } from "./Items/FPReturnButton";
 import { Navigate, NavLink, useParams } from "react-router-dom";
 import { resetPassConfirmVAlue } from "../../core/services/api/forgetPassGetConfig";
 import toast, { Toaster } from "react-hot-toast";
-import { useGlobalState } from "../../State/State";
+
 import { postResetValue } from "../../core/services/api/postResetValue";
+import { useGlobalState } from "../../State/State";
 
 const ForgetPassPage2 = () => {
   const {id} = useParams()

@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import styleLogin from "../../../Style/list.module.css";
 import { useTranslation } from 'react-i18next';
-import { useGlobalState } from "../../../State/State";
+
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const HomePageButton = () => {
   const { t } = useTranslation();
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
 
   return (

@@ -2,15 +2,16 @@ import { Formik } from "formik";
 import style from "./../../../Style/studentPanel.module.css";
 import { NavLink } from "react-router-dom";
 import { DarkOrLightMode } from "./DarkOrLightMode";
-import { useGlobalState } from "../../../State/State";
+
 import profile from "../../../assets/Images/userName.png"
 import { getProfile } from "../../../core/services/api/getProfileInfo";
 import { useEffect, useState } from "react";
 import { removeItem } from "../../../core/services/storage/storage.services";
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
+import { useGlobalState } from "../../../State/State";
 const StudentGhabLeft = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const { t } = useTranslation();
     const [user, setUser] = useState([])
     const [isLogin, setIsLogin] = useGlobalState('isLogin');

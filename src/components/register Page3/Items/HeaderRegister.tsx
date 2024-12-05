@@ -1,9 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styleLogin from "../../../Style/list.module.css";
-import { useGlobalState } from "../../../State/State";
+
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const HeaderRegister = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
 
     <div className={styleLogin.HeaderLogin}>

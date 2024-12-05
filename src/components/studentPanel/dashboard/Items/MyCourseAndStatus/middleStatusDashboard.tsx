@@ -1,11 +1,11 @@
 import style from "./../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { NavLink } from "react-router-dom";
 import Chart from 'react-apexcharts'
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const MiddleStatusDashboard = ({percentage}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   var options = {
     plotOptions: {

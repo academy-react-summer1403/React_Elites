@@ -2,12 +2,12 @@ import {  Formik  } from "formik";
 import style from "./../../../Style/studentPanel.module.css";
 import {StudentGhabRight} from "../studentPart/studentRight";
 import {StudentGhabLeft} from "../studentPart/studentLeft";
-import { useGlobalState } from "../../../State/State";
+
 import { Outlet } from "react-router-dom";
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 
 const StudentPanel = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
         <div className={style.root}>

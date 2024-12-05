@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import style from './CourseList.module.css'
 import { StartNewJourney } from '../Start New Journy/StartNewJourneyHolder/StartNewJourney'
 import { CourseListAndFilter } from '../CourseList & Filter/CourseList&FilterHolder/CourseListAndFilter'
-import { useGlobalState } from '../../../State/State'
+
 import { Sort } from '../../../core/services/api/Sort'
 import { motion, useScroll } from "framer-motion";
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
+import { useGlobalState } from '../../../State/State'
 const CourseList = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [applyFilter, setApplyFilter] = useState(false)
   const [totalCount, setTotalCount] = useState("")
   const [teacherId, setTeacherId] = useState("")

@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../../../Style/aboutWe.module.css'
-import { useGlobalState } from '../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 

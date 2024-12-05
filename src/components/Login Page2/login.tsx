@@ -8,10 +8,11 @@ import { HeaderLogin2 } from './Items/HeaderLogin2';
 import { TwoCodeLogin2 } from './Items/TwoCodeLogin2';
 import { LoginAccountLog2 } from './Items/LoginAccountLog2';
 import { ReturnLogin2 } from './Items/ReturnLogin2';
-import { useGlobalState } from "../../State/State";
+
 import { postVerify } from "../../core/services/api/post-verify-code";
 import toast, { Toaster } from "react-hot-toast";
 import { setItem } from "../../core/services/storage/storage.services";
+import { useGlobalState } from "../../State/State";
 
 const LoginPage2 = () => {
   const { t } = useTranslation();

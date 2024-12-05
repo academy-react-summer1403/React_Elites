@@ -1,10 +1,10 @@
 import React from 'react'
 import style from '../../../Style/blogList.module.css'
-import { useGlobalState } from '../../../State/State';
+
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 
 const ChangePageList = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={style.ChangePageList} data-theme={identifier("darkSmall")}>
         <span className={style.toLeft}></span>

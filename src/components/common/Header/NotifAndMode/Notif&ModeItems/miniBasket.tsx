@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Modal } from 'antd';
 import style from '../../../../../Style/NavBarItems.module.css'
-import { useGlobalState } from '../../../../../State/State';
+
 import { NavLink } from 'react-router-dom'
 import { ReserveCourses } from './ReserveCourses';
 import { getMyCourse } from '../../../../../core/services/api/getMyCourse';
 import { CardsCourseSkeleton } from './SkeletonLoading';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const MiniBasket = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [coursesArr, setcoursesArr] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setisLoading] = useState(true)

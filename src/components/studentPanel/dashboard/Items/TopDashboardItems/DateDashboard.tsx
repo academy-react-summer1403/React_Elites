@@ -1,10 +1,10 @@
 import style from "../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const DateDashboard = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const { t } = useTranslation();
 
   function getDate() {

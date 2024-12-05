@@ -1,14 +1,15 @@
 import React from 'react'
 import style from './style.module.css'
-import { useGlobalState } from '../../../../../../State/State';
+
 import toast from 'react-hot-toast';
 import { postCourseDisLike } from '../../../../../../core/services/api/postCourseDislike';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from '../../../../../../State/State';
 const DisLike = ({id}) => {
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   const dislikeCourse = async () => {
     let res = await postCourseDisLike(id)

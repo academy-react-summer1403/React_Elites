@@ -5,6 +5,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 import { useGlobalState } from '../../../../../../../State/State'
 
+
 const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
 
     const [isClicked, setIsClicked] = useState(false)

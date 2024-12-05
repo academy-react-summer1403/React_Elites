@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Formik } from "formik";
 import style from "./../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../State/State";
+
 import { ListCardBlogs } from '../studentCurse-Blog/My Courses/Courses Grid/index/CoursesCardsList';
 import { ReserveCardsList } from '../studentCurse-Blog/My Reserve/Reserve Grid/index/ReserveCardsList';
 import { NavLink } from 'react-router-dom';
@@ -14,7 +14,7 @@ import { Color } from 'antd/es/color-picker';
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 
 const StudentDashboard = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [userReserveCoursesObj, setUserReserveCoursesObj] = useState([])
   const [percentage, setpercentage] = useState("")
   const [user, setuser] = useState({})

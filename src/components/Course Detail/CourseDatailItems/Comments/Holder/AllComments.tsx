@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import style from './AllComments.module.css'
 import { Comment } from '../Items/Comment'
-import { useGlobalState } from '../../../../../State/State';
+
 import { AddComment } from './AddComment/AddComment';
 import { PulseLoader, ScaleLoader } from 'react-spinners';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const AllComments = ({comments, id, isLoading, title}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
     <div className={style.container}>

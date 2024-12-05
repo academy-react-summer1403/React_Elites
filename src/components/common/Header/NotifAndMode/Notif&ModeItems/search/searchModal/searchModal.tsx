@@ -2,14 +2,15 @@ import { Modal } from 'antd';
 import React, { useEffect, useState } from 'react'
 import s from '../../../../../../studentPanel/dashboard/Items/MyReserveAndComment/modal.module.css'
 import style from '../SeachModal.module.css'
-import { useGlobalState } from '../../../../../../../State/State';
+
 import { CardModal } from '../Card';
 import { getAllBlogsListSearch } from '../../../../../../../core/services/api/AllBlogsListSearch';
 import { allCourseListSearch } from '../../../../../../../core/services/api/AllCourseListSearch';
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from '../../../../../../../State/State';
 const SearchModal = ({hideBlog}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [applyFilter, setApplyFilter] = useState(false)
   const [searchValue, setSearchValue] = useState("")

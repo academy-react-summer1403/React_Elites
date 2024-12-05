@@ -8,12 +8,10 @@ import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { Date } from '../FilterDate/Date'
 import { useTranslation } from "react-i18next";
-import { useGlobalState } from '../../../../../../../../../State/State'
+
 
 const FilterItemsHolder = ({setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched, setClicked}) => {
   const { t } = useTranslation();
-  const[startDate, setStartDate] = useGlobalState("startDate")
-  const[endDate, setEndDate] = useGlobalState("endDate")
   return (
     <div className={style.holder}>
         <Title setClicked={setClicked} />

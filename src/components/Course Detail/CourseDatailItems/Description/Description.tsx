@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import style from './Description.module.css'
-import { useGlobalState } from '../../../../State/State';
+
 import { PropagateLoader, SyncLoader } from 'react-spinners';
 import toast, { Toaster } from 'react-hot-toast';
 import { Rate } from 'antd';
@@ -8,7 +8,7 @@ import { StarFilled } from '@ant-design/icons';
 import { postCoourseRate } from '../../../../core/services/api/postCourseRate';
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const Description = ({description, isLoading, id, currentUserRateNumber}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [value, setvalue] = useState(`http://localhost:5173/Course-Detail/${id}`)
   const [copySuccess, setCopySuccess] = useState(false);
 

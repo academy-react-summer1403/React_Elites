@@ -1,8 +1,8 @@
-import { useGlobalState } from "../../../State/State";
+
 import styleLogin from "../../../Style/list.module.css";
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const FPNavigate = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={styleLogin.navigate}>
       <div  className={styleLogin.lastSelect}>

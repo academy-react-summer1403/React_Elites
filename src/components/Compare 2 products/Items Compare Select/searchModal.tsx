@@ -2,12 +2,12 @@ import { Modal } from 'antd';
 import React, { useEffect, useState } from 'react'
 import s from '../../studentPanel/dashboard/Items/MyReserveAndComment/modal.module.css'
 import style from './SeachModal.module.css'
-import { useGlobalState } from '../../../State/State';
+
 import { CardModal } from './Card';
 import { allCourseListSearch } from '../../../core/services/api/AllCourseListSearch';
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 const SearchModal = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("")
   const [courseList, setCourseList] = useState([]);

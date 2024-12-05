@@ -1,5 +1,5 @@
 import style from "./../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { CoursesAndBlogsHolder } from './CoursesAndBlogsHolder';
 import { TitleHeaderMyCommentList } from './TitleHeaderMyCommentList';
 import { getMyCourseComment } from "../../../../../core/services/api/getMyCourseComments";
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { getMyNewsComment } from "../../../../../core/services/api/getMyNewsComments";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const CommentDashboard = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [courseCommentt, setcourseCommentt] = useState([])
   const [newsComment, setnewsComment] = useState([])
   const [data, setdata] = useState([])

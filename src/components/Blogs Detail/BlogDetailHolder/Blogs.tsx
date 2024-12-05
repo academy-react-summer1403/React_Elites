@@ -4,16 +4,17 @@ import { Main } from '../BlogsDetailItems/Main/Main'
 import { Description } from '../BlogsDetailItems/Description/Description'
 import { AllComments } from '../BlogsDetailItems/Comments/Holder/AllComments'
 import { Blogs } from '../Blogs/BlogsHolder/Blogs'
-import { useGlobalState } from '../../../State/State'
+
 import { useParams } from 'react-router-dom'
 import { getBlogById } from '../../../core/services/api/BlogById'
 import { getAllBlogsList } from '../../../core/services/api/AllBlogsList'
 import { getRelatedBlog } from '../../../core/services/api/getRelatedBlog'
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
+import { useGlobalState } from '../../../State/State'
 
 
 const BlogsDetail = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isFavouriteBlog, setisCurrentUserFavorite] = useGlobalState('isFavouriteBlog');
   const [isLoading, setisLoading] = useState(true)
   const [blogDetail, setBlogDetail] = useState([])

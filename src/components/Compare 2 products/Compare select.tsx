@@ -11,14 +11,15 @@ import { Category } from './Items Compare Select/category';
 import { Level } from './Items Compare Select/Level';
 import { TeacherName } from './Items Compare Select/TeacherName';
 import React, { useEffect, useState } from 'react'
-import { useGlobalState } from '../../State/State'
+
 import { useParams } from 'react-router-dom'
 import { getCourseById } from '../../core/services/api/courseById'
 import { getCourseComment } from '../../core/services/api/getCourseComment'
 import { allCourseList } from '../../core/services/api/AllCourseList'
 import { identifier } from "../../core/services/Functions/ThemeIdentifier";
+import { useGlobalState } from "../../State/State";
 const CompareSelect = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const { t } = useTranslation();
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');

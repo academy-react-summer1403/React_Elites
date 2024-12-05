@@ -9,6 +9,7 @@ import { postCourseReplyComment } from '../../../../../../../core/services/api/p
 import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 import { useGlobalState } from '../../../../../../../State/State'
 
+
 const MainComment = ({title, currentUserEmotion, pictureAddress, describe, author, dissLikeCount, likeCount, insertDate, id}) => {
     const [replyComment, setreplyComment] = useState(false)
     const [isReplying, setIsReplying] = useGlobalState('isReplying');

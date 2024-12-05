@@ -3,10 +3,11 @@ import style from './LandingHolder.module.css'
 import { ContentLandingHolder } from '../Content Landing/ContentLandingHolder/ContentLandingHolder'
 import {getStudentAndTeacherCount} from '../../../core/services/api/StudentAndTeacher.ts'
 import toast, { Toaster } from 'react-hot-toast'
-import { useGlobalState } from '../../../State/State.tsx'
+
 import { getProfile } from '../../../core/services/api/getProfileInfo.ts'
 import { motion, useScroll } from "framer-motion";
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier.ts'
+import { useGlobalState } from '../../../State/State.tsx'
 
 const LandingHolder = () => {
   const [MAndJ, setMAndJ] = useState([])
@@ -49,7 +50,7 @@ const LandingHolder = () => {
   }, [])
   
 
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   
   return (
     <>

@@ -3,7 +3,7 @@ import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleImage from "./partImagePage/Image.module.css";
 import { NavLink } from "react-router-dom";
-import { useGlobalState } from "../../../../State/State";
+
 import { getProfile } from "../../../../core/services/api/getProfileInfo";
 import { useEffect, useState } from "react";
 import { selectImage } from "../../../../core/services/api/postSelectImage";
@@ -12,8 +12,9 @@ import { uploadImage } from "../../../../core/services/api/postUserProfile";
 import { removeUserProfile } from "../../../../core/services/api/deleteUserProfile";
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
+import { useGlobalState } from "../../../../State/State";
 const ImageForm = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const [images, setImages] = useState([])
     const [isClicked, setisClicked] = useState(false)
     const [userInfoo, setUserInfoo] = useState()

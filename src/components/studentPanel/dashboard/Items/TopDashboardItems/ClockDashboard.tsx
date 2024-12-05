@@ -1,10 +1,10 @@
 import style from "../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const ClockDashboard = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const { t } = useTranslation();
 
   const [time, setTime] = useState()

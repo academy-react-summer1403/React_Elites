@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
-import { useGlobalState } from '../../../../../State/State';
+
 import { likeComment } from '../../../../../core/services/api/postCommentBlogLike';
 import toast, { Toaster } from 'react-hot-toast';
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [renderLike, setrenderLike] = useState(false)
 
   const [isClicked, setisClicked] = useState(false)

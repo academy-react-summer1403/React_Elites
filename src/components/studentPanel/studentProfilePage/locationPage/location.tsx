@@ -5,12 +5,12 @@ import styleLocation from "./partLocationPage/location.module.css";
 import {Map} from "./partLocationPage/Map";
 import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
 import { NavLink } from "react-router-dom";
-import { useGlobalState } from "../../../../State/State";
+
 import { useTranslation } from "react-i18next";
 
 
 const LocationForm = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const { t } = useTranslation();
 
     return (

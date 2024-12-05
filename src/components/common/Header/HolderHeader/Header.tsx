@@ -3,7 +3,7 @@ import { NotifAndModeHolder } from '../NotifAndMode/Notif&ModeHolder/NotifAndMod
 import { NavBar } from '../NavBar/NavBar.tsx';
 import { Logo } from '../Logo/LogoHolder/Logo.tsx';
 import style from '../../../../Style/Header.module.css'
-import { useGlobalState } from '../../../../State/State.tsx';
+
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier.ts';
 
 const Header = () => {

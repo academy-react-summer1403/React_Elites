@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './Modal.module.css'
 import { ModalComments } from './Modal Comments/ModalComments'
 import { useTranslation } from 'react-i18next';
-import { useGlobalState } from '../../../../../../State/State';
+
 import { Modal } from 'antd';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useParams } from 'react-router-dom';
@@ -10,6 +10,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { postBlogComment } from '../../../../../../core/services/api/postBlogComment';
 import { postBlogCommentReply } from '../../../../../../core/services/api/postBlogCommentReply';
 import * as yup from "yup";
+import { useGlobalState } from '../../../../../../State/State';
 
 const AddCommentModal = ({comments, title, isModalOpen, setIsModalOpen}) => {
     const { t } = useTranslation();

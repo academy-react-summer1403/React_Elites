@@ -2,7 +2,7 @@ import { Field, Formik, Form } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./partInformation/Information.module.css";
 import { NavLink } from "react-router-dom";
-import { useGlobalState } from "../../../../State/State";
+
 import { useEffect, useState } from "react";
 import { putUserInfoEdit } from "../../../../core/services/api/putUserInfoEdit";
 import { getProfile } from "../../../../core/services/api/getProfileInfo";
@@ -15,11 +15,12 @@ import { GenderAndBirthdey } from './partInformation/GenderAndBirthdey';
 import { Email } from './partInformation/Email';
 import { Location } from './partInformation/location';
 import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
+import { useGlobalState } from "../../../../State/State";
 
 
 const InformationForm = () => {
     const { t } = useTranslation();
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const [isMale, setisMale] = useState(true)
     const [sthChanged, setsthChanged] = useGlobalState('sthChangedStu')
     const [user, setUser] = useState()

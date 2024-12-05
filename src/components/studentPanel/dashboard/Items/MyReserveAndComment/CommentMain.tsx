@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import style from './comment.module.css'
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi'
-import { useGlobalState } from '../../../../../State/State';
+
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from '../../../../../State/State';
 
 const CommentMain = ({avatar, userName, date, title, description, likeCount, disLikeCount}) => {
-    const [darkMode,setDarkMode]= useGlobalState('DarkMode');
 
     return (
         <>

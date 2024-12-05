@@ -3,13 +3,13 @@ import style from "./style.module.css";
 import { StudentPanelSearch } from '../../studentPart/studentPanelSearch';
 import { ListCardBlogs } from './Courses Grid/index/CoursesCardsList';
 import { ChangePageList } from '../../../blogs/ChangePageList/ChangePageList';
-import { useGlobalState } from '../../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { getMyCourse } from '../../../../core/services/api/getMyCourse';
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const StudentMyCourse = () => {
   const { t } = useTranslation();
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [data, setdata] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const myCourses = async () => {

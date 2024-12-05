@@ -1,15 +1,16 @@
 import React from 'react'
 import style from './style.module.css'
 import { postCourseLike } from '../../../../../../core/services/api/postCourseLike'
-import { useGlobalState } from '../../../../../../State/State';
+
 import toast, { Toaster } from 'react-hot-toast';
 import { deleteCourseLike } from '../../../../../../core/services/api/delete-course-like';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from '../../../../../../State/State';
 const Like = ({id, userLikeId}) => {
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
 
   const likeCourse = async () => {
     let res = await postCourseLike(id)

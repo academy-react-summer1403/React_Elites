@@ -7,7 +7,7 @@ import { Level } from '../FilterLevel/Level'
 import { Teacher } from '../FilterTeacher/Teacher'
 import { Price } from '../FilterPrice/Price'
 import { useTranslation } from "react-i18next";
-import { useGlobalState } from '../../../../../../State/State'
+
 import { Type } from '../FilterType/Type'
 
 const FilterItemsHolder = ({setlength, categoryId, setcourseType, setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setcategoryId, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched}) => {

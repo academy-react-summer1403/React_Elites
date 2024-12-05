@@ -9,10 +9,11 @@ import {AboutUsTitleHeader} from "./aboutWeItems/aboutUsTitleHeader.tsx";
 import {Learning} from "./aboutWeItems/Learning.tsx";
 import {LearningWorld} from "./aboutWeItems/LearningWorld.tsx";
 import {Programming} from "./aboutWeItems/Programming.tsx";
-import { useGlobalState } from "../../State/State.tsx";
+
 import { useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import { identifier } from '../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from "../../State/State.tsx";
 
 const AboutWe = (props) => {
   const [isAboutUs, setisAboutUs] = useGlobalState('isAboutUs');

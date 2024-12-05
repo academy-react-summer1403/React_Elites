@@ -7,9 +7,10 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { postCourseComment } from '../../../../../../core/services/api/postCommentCourse';
 import toast, { Toaster } from 'react-hot-toast';
 import { postCourseReplyComment } from '../../../../../../core/services/api/postCourseReplyComment';
-import { useGlobalState } from '../../../../../../State/State';
+
 import { Modal } from 'antd';
 import * as yup from "yup";
+import { useGlobalState } from '../../../../../../State/State';
 
 const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => {
     const { t } = useTranslation();

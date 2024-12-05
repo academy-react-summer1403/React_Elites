@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import style from './Teacher.module.css'
-import { useGlobalState } from '../../../../../../State/State';
+
 import { useTranslation } from "react-i18next";
 import { getTeacher } from '../../../../../../core/services/api/TeachersList';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const Teacher = ({setTeacherId}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isClicked, setIsClicked] = useState(false)
   const [teachers, setteachers] = useState([])
   const { t } = useTranslation();

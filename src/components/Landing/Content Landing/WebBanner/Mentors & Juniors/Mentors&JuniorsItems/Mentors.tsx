@@ -1,11 +1,11 @@
 import React from 'react'
 import style from './Mentors.module.css'
-import { useGlobalState } from '../../../../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const Mentors = (props) => {
   const {t} = useTranslation();
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={style.container}>
       <div className={style.mentors}></div>

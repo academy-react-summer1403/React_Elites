@@ -1,9 +1,9 @@
 import style from "../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const LeftTopDashboard = ({user}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const { t } = useTranslation();
 
   return (

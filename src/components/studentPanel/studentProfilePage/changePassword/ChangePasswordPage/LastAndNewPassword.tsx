@@ -1,6 +1,6 @@
 import styleInform from "./../../InformationPage/partInformation/Information.module.css";
 import style from './link.module.css'
-import { useGlobalState } from "../../../../../State/State";
+
 import { LastPassword } from "./lastPassword";
 import { Button } from "./Button";
 import { Form, Formik } from "formik";
@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import * as yup from "yup";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const LinksHolder = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const { t } = useTranslation();
 
     const sendNewPass = async (value) => {

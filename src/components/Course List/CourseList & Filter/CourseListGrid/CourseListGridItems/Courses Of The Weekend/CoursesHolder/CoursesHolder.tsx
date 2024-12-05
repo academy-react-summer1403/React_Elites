@@ -5,6 +5,7 @@ import style from './Courses.module.css'
 import { CoursesHolderSkeleton } from './CoursesHolderSkeleton'
 import { useGlobalState } from '../../../../../../../State/State'
 
+
 const CoursesHolder = ({courseList, isLoading}) => {
   const [isGrid, setIsGrid] = useGlobalState('isGrid');
 

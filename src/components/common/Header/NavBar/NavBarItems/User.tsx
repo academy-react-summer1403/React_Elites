@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import style from './User.module.css'
-import { useGlobalState } from '../../../../../State/State'
+
 import { Navigate, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'antd';
 import { removeItem } from '../../../../../core/services/storage/storage.services';
+import { useGlobalState } from '../../../../../State/State';
 
 const User = () => {
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');

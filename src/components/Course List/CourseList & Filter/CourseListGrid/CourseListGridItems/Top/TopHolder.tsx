@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import style from './Top.module.css'
 import { TopItems } from './TopItems'
-import { useGlobalState } from '../../../../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
+import { useGlobalState } from '../../../../../../State/State';
 const TopHolder = ({clicked, setClicked, sortModal, setSortModal, setSortType, setCol, applySort, setapplySort}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isGrid, setIsGrid] = useGlobalState('isGrid');
   const { t } = useTranslation();
 

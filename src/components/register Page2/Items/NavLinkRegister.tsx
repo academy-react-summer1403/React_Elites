@@ -1,9 +1,9 @@
-import { useGlobalState } from "../../../State/State";
+
 import styleLogin from "../../../Style/list.module.css";
 import { NavLink } from "react-router-dom";
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const NavLinkRegister = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import style from './Items.module.css'
-import { useGlobalState } from '../../../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { PaymentButton } from './payButtonHolder';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const PayButton = ({ id }) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const { t } = useTranslation();
   return (
 

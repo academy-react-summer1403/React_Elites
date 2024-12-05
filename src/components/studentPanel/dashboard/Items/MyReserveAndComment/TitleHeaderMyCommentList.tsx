@@ -1,14 +1,15 @@
 import style from "./../../../../../Style/studentPanel.module.css";
 import s from './modal.module.css'
-import { useGlobalState } from "../../../../../State/State";
+
 import { NavLink } from 'react-router-dom';
 import { useState } from "react";
 import { Modal } from "antd";
 import { Comment } from "./comment";
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
+import { useGlobalState } from "../../../../../State/State";
 const TitleHeaderMyCommentList = ({courseCommentt, newsComment, setdata, data}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBlog, setisBlog] = useState(false)
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');

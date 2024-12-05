@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import style from './Top.module.css'
 import { CourseFilterHolder } from './Filter Modal/CourseFilterHolder/CourseFilterHolder'
 import { SortModal } from './Sort Modal/SortModal'
-import { useGlobalState } from '../../../../../../State/State'
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier'
 const TopItems = ({ clicked, setClicked, sortModal, setSortModal, setSortType, setCol, applySort, setapplySort, }) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isClicked1, setIsClicked1] = useState(false)
   const [isClicked2, setIsClicked2] = useState(false)
   const [isClicked3, setIsClicked3] = useState(false)

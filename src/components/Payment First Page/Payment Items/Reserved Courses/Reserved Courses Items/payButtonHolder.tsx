@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import style from './Items.module.css'
-import { useGlobalState } from '../../../../../State/State';
+
 import { useTranslation } from 'react-i18next';
 import { NavLink, useParams } from 'react-router-dom';
 import { PayButton } from './payButton';

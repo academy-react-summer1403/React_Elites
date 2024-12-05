@@ -1,11 +1,11 @@
 import React from 'react'
 import style from './NavBarItems.module.css'
-import { useGlobalState } from '../../../../../State/State';
+
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const NavBarItems = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const {t} = useTranslation();
   return (
     <>        

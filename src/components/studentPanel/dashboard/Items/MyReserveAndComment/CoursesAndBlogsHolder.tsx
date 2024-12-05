@@ -1,12 +1,13 @@
 import style from "./../../../../../Style/studentPanel.module.css";
 import s from './modal.module.css'
-import { useGlobalState } from "../../../../../State/State";
+
 import {CommentMain} from './CommentMain'
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
+import { useGlobalState } from "../../../../../State/State";
 
 const CoursesAndBlogsHolder = ({courseCommentt}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
   const { t } = useTranslation();
 

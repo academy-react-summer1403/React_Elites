@@ -1,13 +1,13 @@
 import styleLogin from "./../../../Style/list.module.css";
 import { useTranslation } from 'react-i18next';
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useGlobalState } from "../../../State/State";
+
 import { useState } from "react";
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 
 const Input2login = () => {
   const { t } = useTranslation();
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isPass, setisPass] = useState(false)
 
   return (

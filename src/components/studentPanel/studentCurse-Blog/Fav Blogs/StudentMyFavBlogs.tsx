@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { StudentPanelSearch } from '../../studentPart/studentPanelSearch'
 import { FavBlogsCardsList } from './FavBlogsGrid/index/FavBlogsCardsList'
 import style from "./style.module.css";
-import { useGlobalState } from '../../../../State/State';
+
 import { getFavBlogs } from '../../../../core/services/api/getFavBlogs';
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const StudentMyFavBlogs = () => {
     const { t } = useTranslation();
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const [userFavBlogsObj, setuserFavBlogsObj] = useState([])
     const [isLoading, setisLoading] = useState(true)
     

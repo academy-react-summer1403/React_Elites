@@ -4,6 +4,7 @@ import { postCourseFavourite } from '../../../../../../core/services/api/postCou
 import toast from 'react-hot-toast'
 import { useGlobalState } from '../../../../../../State/State'
 
+
 const AddToFavourite = ({id}) => {
   const [isFavourite, setIsFavourite] = useGlobalState('isFavoriteCourse');
   const [isLogin, setIsLogin] = useGlobalState('isLogin');

@@ -2,7 +2,7 @@ import { Field, Formik } from "formik";
 import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../InformationPage/partInformation/Information.module.css";
 import styleLink from "../Change Security/Items/EditSecurity.module.css";
-import { useGlobalState } from "../../../../State/State";
+
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import { NavLink } from "react-router-dom";
@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../core/services/Functions/ThemeIdentifier";
 
 const ChangeSecurity = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const { t } = useTranslation();
 
     return (

@@ -1,6 +1,6 @@
 import styleInform from "./../../InformationPage/partInformation/Information.module.css";
 import style from './EditSecurity.module.css'
-import { useGlobalState } from "../../../../../State/State";
+
 import { Form, Formik } from "formik";
 import { RecoveryEmail } from "./RecoveyEmail";
 import { TwoStep } from "./TwoStep";
@@ -11,7 +11,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 const EditSecurityHolder = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const [twoStep, settwoStep] = useState(false)
     const [user, setuser] = useState({})
     const { t } = useTranslation();

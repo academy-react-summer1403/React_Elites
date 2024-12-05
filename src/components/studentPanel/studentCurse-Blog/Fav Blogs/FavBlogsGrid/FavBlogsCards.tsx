@@ -3,12 +3,12 @@ import { Image } from './index/Items/Image'
 import { Title } from './index/Items/Title'
 import { Teacher } from './index/Teacher&Date&View/Teacher'
 import { Date } from './index/Teacher&Date&View/Date'
-import { useGlobalState } from '../../../../../State/State'
+
 import { Level } from './index/Items/level&CategoryHolder/Level'
 import { NavLink } from 'react-router-dom'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const FavBlogsCards = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={style.holder}>
         <Image image={props.image} />

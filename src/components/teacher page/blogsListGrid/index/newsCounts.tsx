@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './cardsBlogsListStyle.module.css'
-import { useGlobalState } from '../../../../State/State';
+
 import s from './Title&courseHolder.module.css'
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const NewsCounts = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={s.holderlinkedin}>
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import styleLogin from "../../Style/list.module.css";
 import { Navigate, NavLink } from "react-router-dom";
 import { loginAPI } from "../../core/services/api/auth-Login";
-import { useGlobalState } from "../../State/State";
+
 import { setItem } from "../../core/services/storage/storage.services";
 import { NavigateLogin1 } from "./items/Navigate";
 import { HeaderLogin1 } from "./items/HeaderLogin";
@@ -14,6 +14,7 @@ import { Input2login } from "./items/Input2login";
 import { HomePageButton } from "./items/HomePageButton";
 import { useTranslation } from 'react-i18next';
 import * as yup from "yup";
+import { useGlobalState } from "../../State/State";
 
 const Login = () => {
   const { t } = useTranslation();

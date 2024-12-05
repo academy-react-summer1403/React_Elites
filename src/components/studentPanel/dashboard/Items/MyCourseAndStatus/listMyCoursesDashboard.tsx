@@ -1,5 +1,5 @@
 import style from "./../../../../../Style/studentPanel.module.css";
-import { useGlobalState } from "../../../../../State/State";
+
 import { ListCardBlogs } from '../../../studentCurse-Blog/My Courses/Courses Grid/index/CoursesCardsList';
 import { TitleHeaderMyCourseList } from './TitleHeaderMyCourseList';
 import { HeaderList } from './HeaderList';
@@ -8,7 +8,7 @@ import { getMyCourse } from "../../../../../core/services/api/getMyCourse";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const ListMyCoursesDashboard = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [data, setdata] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const myCourses = async () => {

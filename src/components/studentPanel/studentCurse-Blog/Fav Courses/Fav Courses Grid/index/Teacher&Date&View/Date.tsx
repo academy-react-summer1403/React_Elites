@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './style.module.css'
-import { useGlobalState } from '../../../../../../../State/State';
+
 import { identifier } from '../../../../../../../core/services/Functions/ThemeIdentifier';
 const Date = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const dateConvertor = (item) => {
     let miladiRaw = `${item}`
     let miladi = miladiRaw.slice(0, 10);

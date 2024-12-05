@@ -4,6 +4,7 @@ import { addToFav } from '../../../../../../core/services/api/postNewsFav'
 import toast, { Toaster } from 'react-hot-toast'
 import { useGlobalState } from '../../../../../../State/State'
 
+
 const AddToFavourite = ({id}) => {
   const [isFavouriteBlog, setisCurrentUserFavorite] = useGlobalState('isFavouriteBlog');
   const [isLogin, setIsLogin] = useGlobalState('isLogin');

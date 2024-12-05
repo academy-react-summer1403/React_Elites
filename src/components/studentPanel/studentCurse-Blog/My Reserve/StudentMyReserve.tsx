@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import style from "./style.module.css";
 import { StudentPanelSearch } from '../../studentPart/studentPanelSearch';
-import { useGlobalState } from '../../../../State/State';
+
 import { ReserveCardsList } from './Reserve Grid/index/ReserveCardsList';
 import { getCourseReserve } from '../../../../core/services/api/getCourseReserveId';
 import { useTranslation } from 'react-i18next';
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const StudentMyReserve = () => {
     const { t } = useTranslation();
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const [userReserveCoursesObj, setUserReserveCoursesObj] = useState([])
     const [isLoading, setisLoading] = useState(true)
 

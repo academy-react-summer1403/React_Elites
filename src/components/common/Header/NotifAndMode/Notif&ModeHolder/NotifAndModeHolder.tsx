@@ -8,6 +8,7 @@ import  SearchModal  from '../Notif&ModeItems/search/searchModal/searchModal'
 import { User } from '../Notif&ModeItems/User'
 import { useGlobalState } from '../../../../../State/State'
 
+
 const NotifAndModeHolder = () => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
   return (

@@ -4,7 +4,7 @@ import { ListCardBlogs } from "./blogsListGrid/index/cardsBlogsList.tsx";
 import { SearchFilter } from "./blogsListGrid/index/search/searchFilter.tsx";
 import { useEffect, useState } from "react";
 import {getTeacher} from '../../core/services/api/TeachersList.ts'
-import { useGlobalState } from "../../State/State.tsx";
+
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll } from "framer-motion";
 import { identifier } from "../../core/services/Functions/ThemeIdentifier.ts";
@@ -30,7 +30,7 @@ const TeacherList = (props) => {
     getTeacherList();
   }, [searchValue]);
 
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
   <>

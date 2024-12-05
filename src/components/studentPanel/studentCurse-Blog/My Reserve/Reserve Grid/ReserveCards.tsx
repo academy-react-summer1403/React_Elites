@@ -4,7 +4,7 @@ import { Title } from './index/Items/Title'
 import { Teacher } from './index/Teacher&Date&View/Teacher'
 import { Date } from './index/Teacher&Date&View/Date'
 import { Status } from './index/Teacher&Date&View/Status'
-import { useGlobalState } from '../../../../../State/State'
+
 import { useEffect, useState } from 'react'
 import { getCourseById } from '../../../../../core/services/api/courseById'
 import { deleteCourseReserve } from '../../../../../core/services/api/deleteCourseReserve'
@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
 const ReserveCards = (props) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [courseDetail, setCourseDetail] = useState({})
   const [accept, setAccept] = useState("")
 

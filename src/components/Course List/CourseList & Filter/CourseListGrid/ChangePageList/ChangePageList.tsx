@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import style from '../../../../../Style/blogList.module.css'
-import { useGlobalState } from '../../../../../State/State';
+
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 
 const ChangePageList = ({setPagInation, pagInation, totalCount}) => {
-  const [darkMode] = useGlobalState('DarkMode');
+
 
   const toNextPage = () => {
     if(pagInation > Math.ceil(totalCount/12)){

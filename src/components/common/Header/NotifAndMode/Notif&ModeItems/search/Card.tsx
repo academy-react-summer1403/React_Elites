@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import style from './SeachModal.module.css'
 import { NavLink } from 'react-router-dom'
-import { useGlobalState } from '../../../../../../State/State';
+
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const CardModal = ({ id, title, desc, image, NavLinkTitle, NavTitle }) => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     return (
         <div className={style.Card} data-theme={identifier("dark")}>
             <div className={style.CardBody}>

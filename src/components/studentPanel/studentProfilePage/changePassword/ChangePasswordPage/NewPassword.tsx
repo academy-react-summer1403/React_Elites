@@ -3,13 +3,13 @@ import style from "./../../../../Style/studentPanel.module.css";
 import styleInform from "./../../InformationPage/partInformation/Information.module.css";
 import styleLink from "./../../LinkPage/partLinkPage/link.module.css";
 import { Form, NavLink } from "react-router-dom";
-import { useGlobalState } from "../../../../../State/State";
+
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { identifier } from "../../../../../core/services/Functions/ThemeIdentifier";
 
 const NewPassword = () => {
-    const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+  
     const { t } = useTranslation();
 
     return (

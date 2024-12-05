@@ -1,12 +1,13 @@
 import React from 'react'
 import style from './ReplyComments.module.css'
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi'
-import { useGlobalState } from '../../../../../State/State'
+
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
+import { useGlobalState } from '../../../../../State/State'
 
 const ReplyComment = ({title, pictureAddress, likeCount, disslikeCount, describe, author, insertDate}) => {
 
-    const [darkMode ,setDarkMode] = useGlobalState('DarkMode');
+
     return (
         <div data-theme={identifier("dark")} className={style.mainHolder}>
             <div className={style.isReply}></div>

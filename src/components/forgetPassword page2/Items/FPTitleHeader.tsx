@@ -1,8 +1,8 @@
-import { useGlobalState } from "../../../State/State";
+
 import styleLogin from "../../../Style/list.module.css";
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const FPTitleHeader = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   return (
     <div className={styleLogin.HeaderLogin}>
       <h1 data-theme={identifier("darkNoBG")} className="text-black text-2xl font-DannaBold mt-4 mb-4">رمزعبور جدید!</h1>

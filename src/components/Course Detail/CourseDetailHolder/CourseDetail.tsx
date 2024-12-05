@@ -4,14 +4,15 @@ import { Main } from '../CourseDatailItems/Main/Main'
 import { Description } from '../CourseDatailItems/Description/Description'
 import { AllComments } from '../CourseDatailItems/Comments/Holder/AllComments'
 import { CoursesHolder } from '../Courses Of The Weekend/CoursesHolder/CoursesHolder'
-import { useGlobalState } from '../../../State/State'
+
 import { useParams } from 'react-router-dom'
 import { getCourseById } from '../../../core/services/api/courseById'
 import { getCourseComment } from '../../../core/services/api/getCourseComment'
 import { allCourseList } from '../../../core/services/api/AllCourseList'
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
+import { useGlobalState } from '../../../State/State'
 const CourseDetail = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const [isLiked, setIsLiked] = useGlobalState('courseLike');
   const [isDisLiked, setDiIsLiked] = useGlobalState('courseDisLike');
   const [isReserved, setIsReserved] = useGlobalState('isReserved');

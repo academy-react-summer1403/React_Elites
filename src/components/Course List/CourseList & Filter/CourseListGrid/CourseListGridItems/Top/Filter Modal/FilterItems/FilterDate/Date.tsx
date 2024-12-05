@@ -1,12 +1,8 @@
 import React from 'react'
 import style from './Date.module.css'
-import { useGlobalState } from '../../../../../../../../../State/State';
+
 import { useTranslation } from "react-i18next";
 import { identifier } from '../../../../../../../../../core/services/Functions/ThemeIdentifier';
-const Date = () => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
-  const[startDate, setStartDate] = useGlobalState("startDate")
-  const[endDate, setEndDate] = useGlobalState("endDate")
   const { t } = useTranslation();
   return (
     <>

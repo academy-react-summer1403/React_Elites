@@ -3,13 +3,13 @@ import style from './comment.module.css'
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi'
 import { getCourseReplyComment } from '../../../../../core/services/api/getReplyCourseComment'
 import { ReplyComment } from './ReplyComment'
-import { useGlobalState } from '../../../../../State/State'
+
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
+import { useGlobalState } from '../../../../../State/State'
 
 const Comment = ({avatar, userName, date, title, description, likeCount, disLikeCount, id, courseId}) => {
 
     const [repliesObj, setRepliesObj] = useState([])
-    const [darkMode,setDarkMode]= useGlobalState('DarkMode');
     const getReplyCall = async () => {
         let res = await getCourseReplyComment(courseId, id)
         setRepliesObj(res)

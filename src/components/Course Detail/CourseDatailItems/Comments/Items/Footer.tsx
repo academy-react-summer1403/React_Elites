@@ -1,14 +1,14 @@
 import React from 'react'
 import style from './style.module.css'
 import Bahr from '../../../../../assets/Images/Bahr.jpg'
-import { useGlobalState } from '../../../../../State/State';
+
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi';
 import { postCourseCommentLike } from '../../../../../core/services/api/postCoureCommentLike';
 import toast, { Toaster } from 'react-hot-toast';
 import { postCourseCommentDisLike } from '../../../../../core/services/api/postCourseCommentDisLike';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 const Footer = ({pictureAddress, currentUserEmotion, id, author, disslikeCount, likeCount, insertDate, commentId}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   return (
     <div className={style.footer}>

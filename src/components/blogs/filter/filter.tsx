@@ -2,12 +2,12 @@ import styleFilter from "./filter.module.css";
 import { CategoryFilter } from "./category/categoryFilter.tsx";
 import { DateFilter } from "./date/dateFilter.tsx";
 import { SearchFilter } from "./search/searchFilter.tsx";
-import { useGlobalState } from "../../../State/State.tsx";
+
 import { useTranslation } from 'react-i18next';
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier.ts";
 
 const Filter = ({setCategoryId, setApplyFilter, categoryId, applyFilter, setSearchValue, categoryList}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
   const { t } = useTranslation();
   return (
     <div className={styleFilter.filter} data-theme={identifier("darkSmall")}>

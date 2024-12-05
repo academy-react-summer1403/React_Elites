@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import style from './Price.module.css'
 import MultiRangeSlider from "multi-range-slider-react";
 import { Sort } from '../../../../../../core/services/api/Sort';
-import { useGlobalState } from '../../../../../../State/State';
+
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier';
 const Price = ({maxValue, minValue, set_minValue, set_maxValue, maxValueBining, minValueBining}) => {
-  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
+
 
   const handleInput = (e) => {
     set_minValue(e.minValue);
