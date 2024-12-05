@@ -6,6 +6,7 @@ import { useGlobalState } from '../../../../../../State/State'
 
 const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
+  const [darkMode, setDarkMode] = useGlobalState('DarkMode');
 
   const likeNewsCall = async (id) => {
     let res = await likeNews(id)
@@ -19,7 +20,7 @@ const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   return (
     <>
     <Toaster />
-    <div className={isClicked ? style.liked : style.like} onClick={() => {
+    <div data-theme={darkMode ? "darkLikeDetail" : "lightMode"} className={isClicked ? style.liked : style.like} onClick={() => {
       likeNewsCall(id)
       setIsClicked2(false)
       setIsClicked(true)

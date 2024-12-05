@@ -37,13 +37,13 @@ const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, cur
       <Toaster />
         <div className={style.likeAndDislikes}>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {likeCount} </div>
-            <div className={isClicked ? style.like : style.iconLike} onClick={() => {
+            <div data-theme={darkMode ? "darkLikeDetail" : "lightMode"} className={isClicked ? style.like : style.iconLike} onClick={() => {
               likeSystem(id, true)
               setisClicked(true)
               setisClicked2(false)
             }}></div>
             <div className={style.count} data-theme={darkMode ? "darkNoBG" : "lightMode"}> {dissLikeCount} </div>
-            <div className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
+            <div data-theme={darkMode ? "darkDisLikeDetail" : "lightMode"} className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
               likeSystem(id, false)
               setisClicked(false)
               setisClicked2(true)

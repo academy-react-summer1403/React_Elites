@@ -58,7 +58,7 @@
 }
 
 .like{
-        cursor: pointer;
+    cursor: pointer;
     width: 56px;
     height: 56px;
     border-radius: 100%;
@@ -77,16 +77,22 @@
     width: 56px;
     height: 56px;
     border-radius: 100%;
-    background: url(../../../../../../assets/Images/icons8-dislike-24.png) 50% 50% no-repeat;
+    background: url(https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=000000) 50% 50% no-repeat;
     border: 1px solid #DCDCDC;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    cursor: pointer;
 }
 
 .disliked{
     width: 56px;
     height: 56px;
     border-radius: 100%;
-    background: #3772FF url(../../../../../../assets/Images/dislikewhitec.png) 50% 50% no-repeat;
+    background: #3772FF url(https://img.icons8.com/?size=24&id=SVZUo0RhRuHJ&format=png&color=FFFFFF) 50% 50% no-repeat;
     border: 1px solid #DCDCDC;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    cursor: pointer;
 }
 
 

@@ -20,7 +20,7 @@ import { Location } from './partInformation/location';
 const InformationForm = () => {
     const { t } = useTranslation();
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
-    const [isMale, setisMale] = useState(false)
+    const [isMale, setisMale] = useState(true)
     const [sthChanged, setsthChanged] = useGlobalState('sthChangedStu')
     const [user, setUser] = useState()
 

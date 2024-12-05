@@ -46,5 +46,6 @@ export const fa = {
     //placeholder
     "enterNumberReg": "شماره همراه خود را وارد کنید", "enterPasswordPlaceHolder": "رمز عبور خود را وارد کنید", "enterNumber&email": "شماره همراه یا ایمیل خود را وارد کنید", "searchBlogs": "بلاگ مورد نظر را جست‌جو کنید...", "searchCourses": "دوره مورد نظر را جست‌جو کنید...", "levelCourses": "سطح مورد نظر را انتخاب کنید", "TeacherCourses": "استاد مورد نظر را انتخاب کنید", "dateCourses": "تاریخ مورد نظر را انتخاب کنید", "CategoryBlogs": "دسته مورد نظر را انتخاب کنید", "enterEmailReg": "ایمیل خود را وارد کنید", "TeacherSearch": "جستجو در نام اساتید...",
     "enterCodeMeli": "کد ملی خود را وارد کنید", "enterName": "نام خود را وارد کنید", "enterLastName": "نام خانوادگی خود را وارد کنید","enterAddress": "آدرس محل سکونت خود را وارد کنید","enterBirthday": "تاریخ تولد خود را وارد کنید","enterYourDesc": "متن درباره خود را وارد کنید","enterLinkLinkedin": "لینک لینکدین خود را وارد کنید","enterLinkTelegram": "لینک تلگرام خود را وارد کنید","enterNewPassword": "رمز عبور جدید خود را وارد کنید","enterCurrentPassword": "رمز عبور فعلی خود را وارد کنید",
+    "ُSearchLandingPlaceHolder":"نام دوره یا وبلاگ مورد نظر خود را جستجو کنید",
 
 }
