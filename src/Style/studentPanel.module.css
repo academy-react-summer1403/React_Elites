@@ -14,6 +14,14 @@
     height: 40px;
 }
 
+.button{
+    margin-top: 20px !important;
+    background: #3772FF;
+    border-radius: 32px;
+    padding: 11px;
+    font-family: DannaMedium;
+}
+
 .uploadImage {
     width: 179px;
     height: 48px;

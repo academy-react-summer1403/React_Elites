@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 import { useGlobalState } from '../../../State/State';
 import { useTranslation } from 'react-i18next';
-const CardModal = ({ id, title, desc, image, NavLinkTitle, NavTitle }) => {
+const CardModal = ({ id, title, desc, image, NavLinkTitle, NavTitle, setselected }) => {
     const { t } = useTranslation();
     const [courseId, setCourseId] = useGlobalState('courseIdCompare');
     return (
@@ -17,7 +17,9 @@ const CardModal = ({ id, title, desc, image, NavLinkTitle, NavTitle }) => {
                     <div data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} className={style.CardDesc}>{desc}</div>
                 </div>
             </div>
-            <div className={style.CardBottom} onClick={() => setCourseId(id)}> {t("choose")} {NavTitle}</div>
+            <div className={style.CardBottom} onClick={() => {
+                setselected(true)
+                setCourseId(id)}}> {t("choose")} {NavTitle}</div>
         </div>
     )
 }

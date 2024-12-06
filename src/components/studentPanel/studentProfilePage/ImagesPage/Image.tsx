@@ -132,10 +132,11 @@ const ImageForm = () => {
                                                 postSelectImageCall({ImageId: item.id})
                                             }} />
                                             <span className={styleImage.delete} onClick={async () => {
-                                                const data = new FormData();
-                                                data.append("DeleteEntityId", item.id);
-                                                let res = await removeUserProfile(data)
+                                                let res = await removeUserProfile(item.id)
                                                 console.log(res)
+                                                if(res.success == true){
+                                                    toast.success('پروفایل حذف شد')
+                                                }
                                             }}></span>
                                             {userInfoo.currentPictureAddress == item.puctureAddress && <span className={styleImage.tick}></span> }
                                         </div>

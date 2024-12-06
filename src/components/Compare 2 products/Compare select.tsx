@@ -31,7 +31,7 @@ const CompareSelect = () => {
   const [related, setrelated] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const { id } = useParams();
-  const [detailCompare, setdetailCompare] = useState({})
+  const [detailCompare, setdetailCompare] = useState()
 
   const getCompareDetail = async () => {
     const Detail2 = await getCourseById(courseId)
@@ -51,6 +51,13 @@ const CompareSelect = () => {
   useEffect(() => {
     getCompareDetail()
   }, [courseId])
+
+  useEffect(() => {
+    return () => {
+      setdetailCompare(null)
+    }
+  }, [])
+  
 
 
   return (

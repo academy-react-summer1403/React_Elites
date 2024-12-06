@@ -16,18 +16,11 @@ const Description = ({description, isLoading, id, currentUserRateNumber}) => {
   const { t } = useTranslation();
 
   function copyToClipboard() {
-    toast.loading('درحال پردازش', {
-      id: "1"
-  })
     navigator.clipboard.writeText(value)
     if(copySuccess === true){
-      toast.remove("1");
+
       toast.success("لینک صفحه کپی شد")
     }
-    else {
-      toast.remove("1");
-      toast.error("خطا در انجام عملیات")
-  }
   };
 
   return currentUserRateNumber >= 0 && (

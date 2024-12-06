@@ -39,7 +39,7 @@ const FilterItemsHolder = ({setlength, categoryId, setcourseType, setTeacherId, 
         }}> {t("deleteFilter")} </span>
         <span className={applyFilter ? style.applyFilter2 : style.applyFilter} onClick={() => {
           setApplyFilter(true)
-          setlength(categoryId.length)
+          setlength(1)
         }}> {t("applyFilter")} </span>
 
     </div>
