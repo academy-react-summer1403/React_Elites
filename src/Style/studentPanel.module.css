@@ -366,13 +366,19 @@
 }
 
 .list {
-    width: 1078px;
+    width: 80%;
     background-color: #f1f1f1;
     height: 710px;
     border-radius: 24px;
     margin-top: 24px;
     padding-top: 24px;
+    overflow: hidden;
 }
+.list > div:last-child{
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+
 
 .headerList {
     margin: 0 24px;
@@ -930,7 +936,21 @@
         font-size: 12px;
     }
 }
-
+@media screen and (max-width: 628px) {
+    .searchAndDateHolder {
+        flex-flow: row wrap;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+    .searchAndDateHolder > div{
+        width: 100%;
+    }
+    .searchAndDateHolder > div > div,.searchAndDateHolder > div > input{
+        width: 100%;
+        justify-content: right;
+    }
+}
 @media screen and (max-width: 582px) {
     .userHolder {
         display: none;
