@@ -6,7 +6,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Number = ({isLoading, price}) => {
   return (
     <>
-        {isLoading ? <ClipLoader /> : <div className={style.number} data-theme={identifier("darkNoBG")}>{price}</div>}
+        {isLoading ? <ClipLoader /> : <div className={style.number} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{price}</div>}
     </>
   )
 }

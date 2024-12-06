@@ -10,7 +10,7 @@ const DateStart = ({start, isLoading}) => {
 
   
   return (
-    <div className={style.Category} data-theme={identifier("darkNoBG")}>
+    <div className={style.Category} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <DateStartTitle />
       <DateStartNumber isLoading={isLoading} start={start} />
     </div>

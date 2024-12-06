@@ -159,12 +159,11 @@
   color: #14FFEC !important;
   background: #2f2f2f url("https://img.icons8.com/?size=100&id=132&format=png&color=14FFEC") no-repeat 50% 50% !important;
   background-size: 60% !important;
+  border-color: #0D7377 !important;
 }
 
 [data-theme="search"] {
   color: #14FFEC !important;
-  background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=14FFEC) no-repeat 90% 50% !important;
-  background-size: 25px !important;
 }
 
 [data-theme="level"] {
@@ -190,6 +189,7 @@
 [data-theme="minibasket"] {
   background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=14FFEC") 50% 50% no-repeat !important;
   background-size: 60% !important;
+  border-color: #0D7377 !important;
 }
 
 [data-theme="dateBlogFilter"] {
@@ -309,12 +309,13 @@
   color: #ECDFCC !important;
   background: #3C3D37 url("https://img.icons8.com/?size=100&id=132&format=png&color=ECDFCC") no-repeat 50% 50% !important;
   background-size: 60% !important;
+  border-color: #697565 !important;
 }
 
 [data-theme="notification2"] {
   background-color: #3C3D37 !important;
   color: #ECDFCC !important;
-  border-color: #0D7377 !important;
+  border-color: #697565 !important;
 }
 
 [data-theme="level2"] {
@@ -339,13 +340,12 @@
 
 [data-theme="search2"] {
   color: #ECDFCC !important;
-  background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=ECDFCC) no-repeat 90% 50% !important;
-  background-size: 25px !important;
 }
 
 [data-theme="minibasket2"] {
   background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=ECDFCC") 50% 50% no-repeat !important;
   background-size: 60% !important;
+  border-color: #697565 !important;
 }
 
 [data-theme="dateBlogFilter2"] {
@@ -460,8 +460,6 @@
 
 [data-theme="search3"] {
   color: #E8ECD7 !important;
-  background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=E8ECD7) no-repeat 90% 50% !important;
-  background-size: 25px !important;
 }
 
 [data-theme="greenClearSort"] {
@@ -505,6 +503,7 @@
 [data-theme="minibasket3"] {
   background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=E8ECD7") 50% 50% no-repeat !important;
   background-size: 60% !important;
+  border-color: #EED3B1 !important;
 }
 
 [data-theme="dateBlogFilter3"] {
@@ -617,8 +616,6 @@
 
 [data-theme="search4"] {
   color: #FFE6E6 !important;
-  background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=FFE6E6) no-repeat 90% 50% !important;
-  background-size: 25px !important;
 }
 
 [data-theme="pinkClearSort"] {
@@ -660,8 +657,9 @@
 }
 
 [data-theme="minibasket4"] {
-  background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFE6E6") 50% 50% no-repeat !important;
+  background:#7469B6 url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFE6E6") 50% 50% no-repeat !important;
   background-size: 60% !important;
+  border-color: #AD88C6 !important;
 }
 
 [data-theme="dateBlogFilter4"] {
@@ -769,8 +767,6 @@
 
 [data-theme="search5"] {
   color: #E5E1DA !important;
-  background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=E5E1DA) no-repeat 90% 50% !important;
-  background-size: 25px !important;
 }
 
 [data-theme="blueClearSort"] {
@@ -814,6 +810,7 @@
 [data-theme="minibasket5"] {
   background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=E5E1DA") 50% 50% no-repeat !important;
   background-size: 60% !important;
+  border-color: #F1F0E8 !important;
 }
 
 [data-theme="dateBlogFilter5"] {
@@ -917,8 +914,6 @@
 
 [data-theme="search6"] {
   color: #FFF8DC !important;
-  background: url(https://img.icons8.com/?size=100&id=nkCNPELCzMa7&format=png&color=FFF8DC) no-repeat 90% 50% !important;
-  background-size: 25px !important;
 }
 
 [data-theme="redClearSort"] {
@@ -962,6 +957,7 @@
 [data-theme="minibasket6"] {
   background: url("https://img.icons8.com/?size=100&id=0DBkCUANmgoQ&format=png&color=FFF8DC") 50% 50% no-repeat !important;
   background-size: 60% !important;
+  border-color: #DC6B19 !important;
 }
 
 [data-theme="dateBlogFilter6"] {

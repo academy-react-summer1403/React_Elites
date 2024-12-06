@@ -7,7 +7,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const DateStartNumber = ({isLoading, start}) => {
   return (
     <>
-            {isLoading ? <BeatLoader /> : <div className={style.bottomC} data-theme={identifier('darkNoBG')}>{dateConvertor(start)}</div>}
+            {isLoading ? <BeatLoader /> : <div className={style.bottomC} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{dateConvertor(start)}</div>}
     </>
   )
 }
