@@ -21,15 +21,19 @@ const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, cur
   
 
   const likeSystem = async (id, type) => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await likeComment(id, type)
     setrenderLike(!renderLike)
-    console.log(res)
     if(res.success === true){
+      toast.remove("1");
       toast.success('عملیات با موفقیت انجام شد')
     }
-    else{
-      return
-    }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
   }
 
   

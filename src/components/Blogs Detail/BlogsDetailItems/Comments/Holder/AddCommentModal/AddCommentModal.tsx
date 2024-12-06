@@ -47,8 +47,12 @@ const AddCommentModal = ({comments, title, isModalOpen, setIsModalOpen}) => {
                 }}
                 validationSchema={validation}
                 onSubmit={async (values) => {
+                    toast.loading('درحال پردازش', {
+                        id: "1"
+                    })
                     let res = await postBlogComment(values)
                     if(res.success === true){
+                        toast.remove("1");
                         toast.success("نظر شما به بلاگ اضافه شد")
                     }
                     else if(isLogin === false){
@@ -80,14 +84,17 @@ const AddCommentModal = ({comments, title, isModalOpen, setIsModalOpen}) => {
                     parentId: commentId
                   }}
                 onSubmit={async (values) => {
+                    toast.loading('درحال پردازش', {
+                        id: "1"
+                    })
                     let res = await postBlogCommentReply(values)
-                    console.log(res)
-                    console.log(values)
                     if(res.success === true){
+                        toast.remove('1')
                         toast.success("پاسخ شما به کامنت اضافه شد")
                     }
                     else if(isLogin === false){
                         toast.error("لطفا به حساب کاربری خود وارد شوید")
+                        toast.remove("1");
                     }
                 }}
             > 

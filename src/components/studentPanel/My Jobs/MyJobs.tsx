@@ -50,12 +50,20 @@ const MyJobs = () => {
   });
 
   const onSubmit = async (value) => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postJob(value)
     console.log(res)
     console.log(value)
     if(res.success == true){
+      toast.remove("1");
         toast.success('شغل شما اضافه شد')
     }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
   }
   const { t } = useTranslation();
   

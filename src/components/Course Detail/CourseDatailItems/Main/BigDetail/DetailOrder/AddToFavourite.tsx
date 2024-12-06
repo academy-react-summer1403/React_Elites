@@ -10,12 +10,17 @@ const AddToFavourite = ({id}) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
   const addToFavoutite = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postCourseFavourite({courseId: `${id}`})
     if(res.success === true){
+      toast.remove("1");
       toast.success("دوره به لیست مورد علاقه اضافه شد")
       setIsFavourite(true)
     }
     if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }

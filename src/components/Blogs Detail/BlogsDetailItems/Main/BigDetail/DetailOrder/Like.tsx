@@ -11,11 +11,16 @@ const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   const { t } = useTranslation();
 
   const likeNewsCall = async (id) => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await likeNews(id)
     if(res.success === true) {
+      toast.remove("1");
       toast.success(res.message)
     }
     else if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }

@@ -20,15 +20,6 @@ const LandingHolder = () => {
     setMAndJ(SAndT)
   }
 
-  // const isLoginOrNot = () => {
-  //   if(isLogin === true){
-  //     toast.success('ورود با موفقیت انجام شد')
-  //   }
-  //   else{
-  //     return
-  //   }
-  // }
-
   const getProfilee = async () => {
     let userInfo = await getProfile()
     setUserInfoObj(userInfo)

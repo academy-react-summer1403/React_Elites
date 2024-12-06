@@ -13,23 +13,33 @@ const Like = ({id, userLikeId}) => {
   
 
   const likeCourse = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postCourseLike(id)
     if(res.success === true){
+      toast.remove("1");
       toast.success("دوره با موفقیت لایک شد")
       setIsLiked("1")
     }
     else if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   const unLikeCourse = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res2 = await deleteCourseLike(userLikeId)
     console.log(res2)
     if(res2.success === true){
+      toast.remove("1");
       toast.success("لایک دوره برداشته شد")
       setIsLiked("0")
     }
     else if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }

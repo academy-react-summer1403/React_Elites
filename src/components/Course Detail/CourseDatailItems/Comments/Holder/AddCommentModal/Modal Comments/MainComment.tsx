@@ -35,16 +35,32 @@ const MainComment = ({title, currentUserEmotion, pictureAddress, describe, autho
         </div>
         <div className={style.footer}>
             <div className={currentUserEmotion == "LIKED" ? style.liked : style.like} onClick={async () => {
+                                    toast.loading('درحال پردازش', {
+                                        id: "1"
+                                    })
             let res = await postCourseCommentLike(id)
             if(res.success === true){
+                toast.remove("1");
             toast.success('کامنت لایک شد')
+            }
+            else {
+                toast.remove("1");
+                toast.error("خطا در انجام عملیات")
             }
             }}></div>
             <div className={style.likeCount}> {likeCount} </div>
             <div className={currentUserEmotion == "DISSLIKED" ? style.disliked : style.dislike} onClick={async () => {
+                                    toast.loading('درحال پردازش', {
+                                        id: "1"
+                                    })
             let res = await postCourseCommentDisLike(id)
             if(res.success === true){
+                toast.remove("1");
             toast.success('کامنت دیس لایک شد')
+            }
+            else {
+                toast.remove("1");
+                toast.error("خطا در انجام عملیات")
             }
             }}></div>
             <div  className={style.dislikeCount}> {dissLikeCount} </div>

@@ -19,11 +19,19 @@ const FavCoursesCards = (props) => {
   const [courseReserve, setcourseReserve] = useState(false)
 
   const reserveCourse = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postReserveCourse(props.id)
     if(res.success === true) {
+      toast.remove("1");
       toast.success("عملیات با موفقیت انجام شد")
       setcourseReserve(true)
     }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
   }
 
   const getCourseDetail = async () => {
@@ -39,11 +47,19 @@ const FavCoursesCards = (props) => {
   }
 
   const onDelete = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await deleteCourseFavourite(courseDetail?.userFavoriteId)
     console.log(res)
     if(res.success == true){
+      toast.remove("1");
       toast.success('دوره از لیست علاقه مندی حذف شد')
     }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
   }
 
   useEffect(() => {

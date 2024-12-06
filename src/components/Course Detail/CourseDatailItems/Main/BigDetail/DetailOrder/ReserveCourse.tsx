@@ -10,12 +10,17 @@ const ReserveCourse = ({id}) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
 
   const reserveCourse = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postReserveCourse(id)
     if(res.success === true){
+      toast.remove("1");
       toast.success("دوره رزرو شد")
       setIsReserved("1")
     }
     if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }

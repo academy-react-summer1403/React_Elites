@@ -15,11 +15,18 @@ const ContentRight = ({Details}) => {
 
 
     const paymentValue = async () => {
+        toast.loading('درحال پردازش', {
+            id: "1"
+        })
         let res = await addCoursePayment(value)
         if(res.success == true){
+            toast.remove("1");
             toast.success("پرداخت انجام شد")
         }
-        console.log(value)
+        else {
+            toast.remove("1");
+            toast.error("خطا در انجام عملیات")
+        }
     }
 
     return (

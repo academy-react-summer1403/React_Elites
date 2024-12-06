@@ -39,11 +39,16 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
             initialValues={{Title: '', Describe: '', CourseId: id}}
             validationSchema={validation}
             onSubmit={async (values) => {
+                toast.loading('درحال پردازش', {
+                    id: "1"
+                })
                 let res = await postCourseComment(values)
                 if(res.success === true){
+                    toast.remove("1");
                     toast.success("نظر شما به دوره اضافه شد")
                 }
                 else if(isLogin === false){
+                    toast.remove("1");
                     toast.error("لطفا به حساب کاربری خود وارد شوید")
                 }
             }}
@@ -66,11 +71,16 @@ const AddCommentModal = ({comments, id, title, isModalOpen, setIsModalOpen}) => 
                 initialValues={{CommentId: commentId, CourseId: id, Title: '', Describe: ''}}
                 validationSchema={validation}
                 onSubmit={async (values) => {
+                    toast.loading('درحال پردازش', {
+                        id: "1"
+                    })
                     let res = await postCourseReplyComment(values)
                     if(res.success === true){
+                        toast.remove("1");
                         toast.success("پاسخ شما به کامنت اضافه شد")
                     }
                     else if(isLogin === false){
+                        toast.remove("1");
                         toast.error("لطفا به حساب کاربری خود وارد شوید")
                     }
                 }}

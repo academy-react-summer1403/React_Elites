@@ -20,10 +20,18 @@ const ForgetPassPage2 = () => {
   const [passChanged, setpassChanged] = useState(false)
   
   const checkConfig = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await resetPassConfirmVAlue(id)
     if(res.success == true){
+      toast.remove("1");
       toast.success("رمز عبور جدید را وارد کنید")
     }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
     setUserId(res.id)
   }
   useEffect(() => {
@@ -35,12 +43,20 @@ const ForgetPassPage2 = () => {
     <Toaster />
     {passChanged && <Navigate to="/auth/Login" />}
     <Formik onSubmit={async (values) => {
+                          toast.loading('درحال پردازش', {
+                            id: "1"
+                        })
       let res = await postResetValue(values)
       console.log(values)
       if(res.success == true){
+        toast.remove("1");
         toast.success("رمز عبور شما با موفقیت تغییر یافت")
         setpassChanged(true)
       }
+      else {
+        toast.remove("1");
+        toast.error("خطا در انجام عملیات")
+    }
     }} initialValues={{ userId: userId, newPassword: "", resetValue: id }}>
       {(form) => (
         <Form className={styleLogin.form}>

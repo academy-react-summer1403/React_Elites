@@ -15,9 +15,17 @@ const LinksHolder = () => {
     const { t } = useTranslation();
 
     const sendNewPass = async (value) => {
+        toast.loading('درحال پردازش', {
+            id: "1"
+        })
         let res = await postChangePass(value)
         if (res.success == true) {
+            toast.remove("1");
             toast.success("رمز عبور تغییر یافت")
+        }
+        else {
+            toast.remove("1");
+            toast.error("خطا در انجام عملیات")
         }
     }
 

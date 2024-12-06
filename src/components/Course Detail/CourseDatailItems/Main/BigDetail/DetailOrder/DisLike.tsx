@@ -12,12 +12,17 @@ const DisLike = ({id}) => {
 
 
   const dislikeCourse = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postCourseDisLike(id)
     if(res.success === true){
+      toast.remove("1");
       toast.success("دوره با موفقیت دیسلایک شد")
       setIsLiked("0")
     }
     if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }

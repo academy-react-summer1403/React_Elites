@@ -22,12 +22,20 @@ const LoginPage2 = () => {
   const [verifyCode, setverifyCode] = useState('')
 
   const postVerifyCode = async (values) => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await postVerify(verifyCode, values)
     if(res.success === true){
+      toast.remove("1");
       toast.success("لوگین انجام شد")
       setItem("token", res.token)
       setIsLogin(true)
     }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
   }
 
   return (

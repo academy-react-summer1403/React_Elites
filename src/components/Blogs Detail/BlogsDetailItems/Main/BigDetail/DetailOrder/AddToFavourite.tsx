@@ -12,12 +12,17 @@ const AddToFavourite = ({id}) => {
   const { t } = useTranslation();
 
   const addToFavCall = async (newsId) => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let res = await addToFav(newsId);
     if(res.success === true) {
+      toast.remove("1");
       toast.success("بلاگ به لیست مورد علاقه اضافه شد")
       setisCurrentUserFavorite("1")
     }
     else if(isLogin === false){
+      toast.remove("1");
       toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }

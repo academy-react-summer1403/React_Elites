@@ -21,12 +21,17 @@ const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, lik
     
 
         const likeSystem = async (id, type) => {
+            toast.loading('درحال پردازش', {
+                id: "1"
+            })
             let res = await likeComment(id, type)
             if(res.success === true){
             toast.success('عملیات با موفقیت انجام شد')
+            toast.remove("1");
             }
-            else{
-            return
+            else {
+                toast.remove("1");
+                toast.error("خطا در انجام عملیات")
             }
         }
 

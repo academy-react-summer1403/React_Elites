@@ -24,10 +24,18 @@ const ForgetPass = () => {
       email: "",
       baseUrl: "http://localhost:5173/Auth/Forget-Password-Page2"
       }} onSubmit={async(values) => {
+        toast.loading('درحال پردازش', {
+          id: "1"
+      })
         let res = await postForgetPassEmail(values)
         if(res.success === true){
+          toast.remove("1");
           toast.success("لینک به ایمیل شما فرستاده شد")
         }
+        else {
+          toast.remove("1");
+          toast.error("خطا در انجام عملیات")
+      }
       }}>
       {(form) => (
         <Form className={styleLogin.form}>

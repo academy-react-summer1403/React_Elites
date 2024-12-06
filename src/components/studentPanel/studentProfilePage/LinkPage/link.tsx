@@ -18,9 +18,17 @@ const LinkForm = () => {
     const { t } = useTranslation();
 
     const updateProfileInfo = async (values) => {
+        toast.loading('درحال پردازش', {
+            id: "1"
+        })
         let userr = await putUserInfoEdit(values)
         if(userr.success === true){
+            toast.remove("1");
             toast.success("عملیات با موفقیت انجام شد")
+        }
+        else {
+            toast.remove("1");
+            toast.error("خطا در انجام عملیات")
         }
     }
     const getUserInfo = async () => {

@@ -28,10 +28,17 @@ const EditSecurityHolder = () => {
     
 
     const changeUserSetting = async (value) => {
+        toast.loading('درحال پردازش', {
+            id: "1"
+        })
         let res2 = await putSecurityInfo(value)
 
         if(res2.success == true){
             toast.success("تنظیمات کاربری تغییر یافت")
+        }
+        else {
+            toast.remove("1");
+            toast.error("خطا در انجام عملیات")
         }
     }
 

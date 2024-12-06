@@ -23,11 +23,19 @@ const ReserveCards = (props) => {
   }
 
   const deleteCourseReserveCall = async () => {
+    toast.loading('درحال پردازش', {
+      id: "1"
+  })
     let s = await deleteCourseReserve(props.reserveId)
     console.log(s)
     if(s.success === true){
+      toast.remove("1");
       toast.success("عملیات با موفقیت انجام شد")
     }
+    else {
+      toast.remove("1");
+      toast.error("خطا در انجام عملیات")
+  }
   }
 
   useEffect(() => {

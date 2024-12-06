@@ -31,21 +31,34 @@ const ImageForm = () => {
     }
 
     const postSelectImageCall = async (ImageId) => {
+        toast.loading('درحال پردازش', {
+            id: "1"
+        })
         const onSucces = await selectImage(ImageId)
         if (onSucces.success == true) {
+            toast.remove("1");
             toast.success("عملیات با موفقیت انجام شد")
         }
-        else if(onSucces.success == true){
+        else {
+            toast.remove("1");
             toast.error("خطا در انجام عملیات")
         }
         setsthChanged(!sthChanged)
     }
 
     const onUpload = async (image) => {
+        toast.loading('درحال پردازش', {
+            id: "1"
+        })
         const result = await uploadImage(image)
         if(result.success == true){
+            toast.remove("1");
             toast.success("عملیات با موفقیت انجام شد")
             setuploaded(!uploaded)
+        }
+        else {
+            toast.remove("1");
+            toast.error("خطا در انجام عملیات")
         }
         setisClicked(false)
     }
