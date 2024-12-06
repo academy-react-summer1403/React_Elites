@@ -1,17 +1,15 @@
 import http from '../../interceptor/index.ts'
 
-const deleteCourseLike = async (value) => {
-    let config = {
-        headers: {
-            "Content-Type": "multipart/form-data", 
-        }
-    }
+const deleteCourseLike = async (id) => {
 
     try{
-        const response = await http.delete(`/Course/DeleteCourseLike`, value, config);
-        return response
-    }
-    catch(error){
+        const result = await http.delete(`/Course/DeleteCourseLike`, {
+            data: {
+                id,
+            },
+        })
+        return result
+    } catch(error){
         return error
     }
 }

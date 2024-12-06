@@ -604,6 +604,7 @@
     font-weight: 600;
     line-height: 20.02px;
     text-align: right;
+    position: relative;
     color: #3772FF;
 }
 

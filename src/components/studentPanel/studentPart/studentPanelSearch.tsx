@@ -20,13 +20,6 @@ const StudentPanelSearch = ({setsearchValue}) => {
             </div>
             <input className={style.input} placeholder={t("searchCourses")} data-theme={identifier("dark","dark2","green","pink","blue","red")} onChange={(e) => setsearchValue(e.target.value)}/>
             </div>
-              <div className={style.dateHolder}> 
-                <div>
-                    <label className="text-base font-DannaBold text-black pb-1.5" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("dateStart-end")}</label>
-                    <div className={style.dateLogo}> </div>
-                </div>
-                <input type="date" className={style.input} data-theme={identifier("dark","dark2","green","pink","blue","red")}/>
-            </div>
         </div>
       )}
     </Formik>

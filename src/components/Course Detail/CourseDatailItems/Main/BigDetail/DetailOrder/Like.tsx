@@ -23,9 +23,8 @@ const Like = ({id, userLikeId}) => {
     }
   }
   const unLikeCourse = async () => {
-
-    let res2 = await deleteCourseLike({CourseLikeId: userLikeId})
-    console.log(userLikeId)
+    let res2 = await deleteCourseLike(userLikeId)
+    console.log(res2)
     if(res2.success === true){
       toast.success("لایک دوره برداشته شد")
       setIsLiked("0")
