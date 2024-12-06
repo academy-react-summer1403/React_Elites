@@ -42,6 +42,7 @@ const StudentMyReserve = () => {
             <ReserveCardsList isLoading={isLoading} userReserveCoursesObj={userReserveCoursesObj} />
         </div>
     </div>
+    </div>
   )
 }
 
