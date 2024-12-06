@@ -43,7 +43,7 @@ const LinksHolder = () => {
                 initialValues={{ oldPassword: '', newPassword: '' }}
                 className={styleInform.left}
             >
-                <Form>
+                <Form className={style.changePasswordHolder}>
                     <LastPassword />
                     <NewPassword />
                     <Button />

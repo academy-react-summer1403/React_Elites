@@ -16,5 +16,20 @@
 .button:active{
     scale: 1.1;
 }
-
+.checkBox{
+    appearance: none;
+    background: #efefef;
+    border: 1px solid #dcdcdc;
+    width: 21.6px;
+    height: 21.6px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.checkBox:checked{
+    appearance: auto;
+}
+.changeSecurityHolder{
+    width: 60%;
+    margin: 0 auto;
+}
 

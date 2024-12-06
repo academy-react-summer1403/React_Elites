@@ -51,7 +51,7 @@ const EditSecurityHolder = () => {
             enableReinitialize={true}
             className={styleInform.left}
             >
-                <Form>
+                <Form className={style.changeSecurityHolder}>
                     <RecoveryEmail />
                     <TwoStep twoStep={twoStep} settwoStep={settwoStep} />
                     <button type="submit" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} className={style.button}> {t("RecordChanges")} </button>
