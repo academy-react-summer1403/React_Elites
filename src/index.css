@@ -473,6 +473,7 @@
   color: #ECDFCC !important;
   background: #47663B url("https://img.icons8.com/?size=100&id=132&format=png&color=E8ECD7") no-repeat 50% 50% !important;
   background-size: 60% !important;
+  border-color: #EED3B1 !important;
 }
 
 [data-theme="level3"] {
@@ -482,7 +483,7 @@
 [data-theme="notification3"] {
   background-color: #47663B !important;
   color: #E8ECD7 !important;
-  border-color: #0D7377 !important;
+  border-color: #EED3B1 !important;
 }
 
 [data-theme="teacher3"] {
@@ -629,6 +630,7 @@
   color: #E1AFD1 !important;
   background: #FFE6E6 url("https://img.icons8.com/?size=100&id=132&format=png&color=E1AFD1") no-repeat 50% 50% !important;
   background-size: 60% !important;
+  border-color: #7469B6 !important;
 }
 
 [data-theme="level4"] {
@@ -928,6 +930,7 @@
   color: #E85C0D !important;
   background: #C7253E url("https://img.icons8.com/?size=100&id=132&format=png&color=E85C0D") no-repeat 50% 50% !important;
   background-size: 60% !important;
+  border-color: #821131 !important;
 }
 
 [data-theme="level6"] {
