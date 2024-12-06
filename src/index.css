@@ -583,7 +583,7 @@
 }
 
 [data-theme="pinkCoursesHolder"] {
-  background: #FFE6E6 !important;
+  background: #fbe7e7 !important;
   color: #E1AFD1 !important;
   border-color: #7469B6 !important;
   box-shadow: 0px 0px 10px 2px #fff !important;
@@ -604,7 +604,7 @@
 }
 
 [data-theme="pinkSmall"] {
-  background-color: #E1AFD1 !important;
+  background-color: #AD88C6 !important;
   color: #E1AFD1 !important;
   border-color: #7469B6 !important;
 }
@@ -627,7 +627,7 @@
 
 [data-theme="pinkSearch"] {
   color: #E1AFD1 !important;
-  background: #E1AFD1 url("https://img.icons8.com/?size=100&id=132&format=png&color=E1AFD1") no-repeat 50% 50% !important;
+  background: #FFE6E6 url("https://img.icons8.com/?size=100&id=132&format=png&color=E1AFD1") no-repeat 50% 50% !important;
   background-size: 60% !important;
 }
 
@@ -636,7 +636,7 @@
 }
 
 [data-theme="notification4"] {
-  background-color: #E1AFD1 !important;
+  background-color: #FFE6E6 !important;
   color: #E1AFD1 !important;
   border-color: #7469B6 !important;
 }
