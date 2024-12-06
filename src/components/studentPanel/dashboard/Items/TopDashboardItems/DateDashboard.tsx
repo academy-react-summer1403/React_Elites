@@ -21,8 +21,8 @@ const DateDashboard = () => {
     <div className={style.date}>
       <div className={style.icon}></div>
       <div className={style.dateItem}>
-        <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("date")}</p>
-        <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{currentDate}</h1>
+        <p className="DannaM" data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("date")}</p>
+        <h1 className="DannaM" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{currentDate}</h1>
       </div>
     </div>
   )

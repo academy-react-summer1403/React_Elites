@@ -17,6 +17,7 @@ const SearchModal = () => {
   const [blogsList, setBlogsList] = useState([]);
   const [isBlog, setisBlog] = useState(false)
   const [data, setdata] = useState([])
+  const [isLoading, setisLoading] = useState(true)
 
   const { t } = useTranslation();
 
@@ -31,15 +32,19 @@ const SearchModal = () => {
   };
 
   const allBlogsList = async () => {
+    setisLoading(true)
     let allBlogs = await getAllBlogsListSearch()
       setBlogsList(allBlogs.news)
       setBlogsList(allBlogs.news.filter(doc => doc.title.includes(searchValue)))
+      setisLoading(false)
   }
 
   const getFilteredList = async () => {
+    setisLoading(true)
     const allCourses = await allCourseListSearch(1)
       setdata(courseList)
       setCourseList(allCourses.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
+      setisLoading(false)
   }
 
   useEffect(() => {

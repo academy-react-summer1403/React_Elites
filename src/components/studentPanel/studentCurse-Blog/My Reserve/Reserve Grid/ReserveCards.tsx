@@ -23,9 +23,7 @@ const ReserveCards = (props) => {
   }
 
   const deleteCourseReserveCall = async () => {
-    let request = {id: props.reserveId}
-    console.log(request)
-    let s = await deleteCourseReserve(request)
+    let s = await deleteCourseReserve(props.reserveId)
     console.log(s)
     if(s.success === true){
       toast.success("عملیات با موفقیت انجام شد")

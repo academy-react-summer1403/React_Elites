@@ -4,7 +4,7 @@ import style from "./../../../Style/studentPanel.module.css";
 import { useTranslation } from 'react-i18next';
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 
-const StudentPanelSearch = () => {
+const StudentPanelSearch = ({setsearchValue}) => {
 
   const { t } = useTranslation();
 
@@ -18,7 +18,7 @@ const StudentPanelSearch = () => {
                 <label className="text-base font-DannaBold text-black pb-1.5" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("search")}</label>
                 <div className={style.searchLogo}> </div>
             </div>
-            <Field className={style.input} placeholder={t("searchCourses")} data-theme={identifier("dark","dark2","green","pink","blue","red")}/>
+            <input className={style.input} placeholder={t("searchCourses")} data-theme={identifier("dark","dark2","green","pink","blue","red")} onChange={(e) => setsearchValue(e.target.value)}/>
             </div>
               <div className={style.dateHolder}> 
                 <div>

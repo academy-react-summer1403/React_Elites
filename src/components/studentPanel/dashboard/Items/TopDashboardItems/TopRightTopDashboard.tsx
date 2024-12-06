@@ -9,8 +9,8 @@ const TopRightTopDashboard = ({ user }) => {
   return (
 
     <div className={style.TopRightTopDashboard}>
-      <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("Hi")} {user.fName}{user.lName}  ، {t("GoodDay")}👋</h1>
-      <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("GoodDayDesc")}</p>
+      <h1 className="DannaM" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("Hi")} {user.fName}{user.lName}  ، {t("GoodDay")}👋</h1>
+      <p className="DannaM" data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("GoodDayDesc")}</p>
     </div>
   )
 }

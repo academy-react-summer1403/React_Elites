@@ -12,6 +12,7 @@ const SearchModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("")
   const [courseList, setCourseList] = useState([]);
+  const [isLoading, setisLoading] = useState(true)
   const { t } = useTranslation();
 
   const showModal = () => {
@@ -25,8 +26,10 @@ const SearchModal = () => {
   };
 
   const getFilteredList = async () => {
+    setisLoading(true)
     const allCourses = await allCourseListSearch(1)
       setCourseList(allCourses.courseFilterDtos.filter(doc => doc.title.includes(searchValue)))
+      setisLoading(false)
   }
 
   useEffect(() => {

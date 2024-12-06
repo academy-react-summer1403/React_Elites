@@ -11,6 +11,7 @@ const StudentMyReserve = () => {
   
     const [userReserveCoursesObj, setUserReserveCoursesObj] = useState([])
     const [isLoading, setisLoading] = useState(true)
+    const [searchValue, setsearchValue] = useState("")
 
     const getCourseReserveCall = async () => {
       const userReserveCoursesRes = await getCourseReserve();
@@ -27,7 +28,7 @@ const StudentMyReserve = () => {
         <div className={style.titleHolder}>
             <h1 className={style.titleHeaderTopStudent} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("MyReservation")}</h1>
         </div>
-        <StudentPanelSearch />
+        <div className={style.list} data-theme={identifier("dark","dark2")}> 
         <div className={style.list} data-theme={identifier("dark","dark2","green","pink","blue","red")}> 
             <div className={style.headerList} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
                 <div className={style.imgList} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}># </div>

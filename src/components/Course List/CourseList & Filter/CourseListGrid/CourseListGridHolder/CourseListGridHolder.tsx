@@ -25,6 +25,7 @@ const CourseListGridHolder = ({length, courseType, applyFilter, maxValue, minVal
 
 
   const getFilteredList = async () => {
+    setisLoading(true)
 
     let data = await Filter(teacherId, pagInation, levelId, categoryId, maxValue, minValue, courseType, `&TechCount=${length}`, `&ListTech=${String(categoryId)}`)
 

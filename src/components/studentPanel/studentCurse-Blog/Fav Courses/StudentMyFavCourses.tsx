@@ -9,19 +9,26 @@ import { identifier } from '../../../../core/services/Functions/ThemeIdentifier'
 const StudentMyFavCourses = () => {
   const { t } = useTranslation();
   const [isLoading, setisLoading] = useState(true)
-
+  const [searchValue, setsearchValue] = useState("")
   const [userFavcoursesObj, setuserFavcoursesObj] = useState([])
 
   const getFavCoursesCall = async () => {
+    setisLoading(true)
     const userFavouriteCoursesRes = await getFavCourses();
     setuserFavcoursesObj(userFavouriteCoursesRes.favoriteCourseDto)
-    
+    if(searchValue != ""){
+      setuserFavcoursesObj(userFavcoursesObj.filter(doc => doc.courseTitle.includes(searchValue)))
+    }
     setisLoading(false)
   }
 
   useEffect(() => {
     getFavCoursesCall()
   }, [])
+
+  useEffect(() => {
+    getFavCoursesCall()
+  }, [searchValue])
   
   
   return (
@@ -29,7 +36,7 @@ const StudentMyFavCourses = () => {
       <div className={style.titleHolder}>
         <h1 className={style.titleHeaderTopStudent} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("FavoriteCourses")}</h1>
       </div>
-      <StudentPanelSearch />
+      <StudentPanelSearch setsearchValue={setsearchValue} />
       <div className={style.list} data-theme={identifier("dark","dark2","green","pink","blue","red")}> 
         <div className={style.headerList} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
           <div className={style.imgList} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}># </div>
