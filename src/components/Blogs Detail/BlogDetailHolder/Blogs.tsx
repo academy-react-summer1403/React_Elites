@@ -12,7 +12,6 @@ import { getRelatedBlog } from '../../../core/services/api/getRelatedBlog'
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier'
 import { useGlobalState } from '../../../State/State'
 
-
 const BlogsDetail = () => {
 
   const [isFavouriteBlog, setisCurrentUserFavorite] = useGlobalState('isFavouriteBlog');
