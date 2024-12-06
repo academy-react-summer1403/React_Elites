@@ -19,11 +19,12 @@ const ReserveCards = (props) => {
   const getCourseDetail = async () => {
     const Details = await getCourseById(props.id)
     setCourseDetail(Details)
-    console.log(Details)
+    console.log()
   }
 
   const deleteCourseReserveCall = async () => {
     let request = {id: props.reserveId}
+    console.log(request)
     let s = await deleteCourseReserve(request)
     console.log(s)
     if(s.success === true){

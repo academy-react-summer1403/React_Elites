@@ -6,7 +6,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Rate } from 'antd';
 import { StarFilled } from '@ant-design/icons';
 import { postCoourseRate } from '../../../../core/services/api/postCourseRate';
-import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
+import { DescriptionTitle } from './DescriptionTitle';
+import { Main } from './Main';
 const Description = ({description, isLoading, id, currentUserRateNumber}) => {
 
   const [value, setvalue] = useState(`http://localhost:5173/Course-Detail/${id}`)
@@ -21,9 +22,9 @@ const Description = ({description, isLoading, id, currentUserRateNumber}) => {
 
   return currentUserRateNumber >= 0 && (
     <div className={style.containerDesc}>
+      <DescriptionTitle />
         <Toaster />
-        <div className={style.title}> توضیحات دوره </div>
-        {isLoading ? <SyncLoader /> : <p className={style.paragraph}>{description}</p>}
+        <Main isLoading={isLoading} description={description}/>
         <div className={style.copyLink} onClick={() => {
           copyToClipboard()
           setCopySuccess(true)
