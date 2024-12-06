@@ -111,11 +111,11 @@ const AddCommentModal = ({comments, title, isModalOpen, setIsModalOpen}) => {
                 </div>
                 <div className={style.titleHolder}>
                 <div className={style.titleBlog}>({title})</div>
-                    <div className={style.titleModal}> {t("YourComments")} </div>
+                    <div className={style.titleModal}> {t("StAndTeComments")} </div>
                 </div>
             </div>
             <div className={style.yourCommentHodler}>
-                <div className={style.addComment} onClick={() => setaddYourComment(!addYourComment)}>{t("StAndTeComments")} 
+                <div className={style.addComment} onClick={() => setaddYourComment(!addYourComment)}>{t("YourComments")} 
                     <div className={style.addCommentIcon}></div>
                 </div>
             </div>
