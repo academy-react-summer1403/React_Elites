@@ -3,6 +3,7 @@ import { DarkOrLightMode } from '../Header/NotifAndMode/Notif&ModeItems/DarkOrLi
 import DarkAndLangButton from './DarkAndChangeButton'
 import style from "./LangButton.module.css";
 import { useState } from 'react';
+import EditTheme from './EditTheme';
 
 const LangAndMode = () => {
   const [isClicked, setisClicked] = useState(false)
@@ -12,7 +13,7 @@ const LangAndMode = () => {
         <DarkAndLangButton setisClicked={setisClicked} isClicked={isClicked}/>
         {isClicked &&
           <>
-            <DarkOrLightMode />
+            <EditTheme />
             <ChangeLang />
           </>
         }
