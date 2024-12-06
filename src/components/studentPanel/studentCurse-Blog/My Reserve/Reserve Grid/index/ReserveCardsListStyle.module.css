@@ -1,6 +1,5 @@
 .holder{
     margin-top: 30px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -9,4 +8,5 @@
     padding: 0 24px;
     height: 600px;
     overflow: scroll;
+    padding-bottom: 20px;
 }

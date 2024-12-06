@@ -81,7 +81,7 @@
     font-size: 16px;
     font-family: DannaDemiBold;
     line-height: 22.88px;
-  text-align: right;
+    text-align: right;
     color: #FCFCFC;
 }
 
@@ -89,7 +89,7 @@
     font-size: 14px;
     font-family: DannaMedium;
     line-height: 20.02px;
-  text-align: right;
+    text-align: right;
     color: #F6F6F6;
 
 }
@@ -112,7 +112,7 @@
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 22.88px;
-  text-align: right;
+    text-align: right;
     color: #FCFCFC;
 }
 
@@ -153,7 +153,7 @@
     font-size: 12px;
     font-family: DannaMedium;
     line-height: 17.16px;
-     text-align: center;
+    text-align: center;
 
 }
 
@@ -162,7 +162,7 @@
     font-size: 24px;
     font-family: DannaBold;
     line-height: 34.32px;
-  text-align: right;
+    text-align: right;
     color: #2F2F2F;
 }
 
@@ -184,7 +184,7 @@
     margin: 24px 24px 0 0;
 }
 
-.bottom{
+.bottom {
     display: flex;
     flex-flow: column wrap;
     height: 100vh;
@@ -218,7 +218,7 @@
     font-size: 18px;
     font-family: DannaMedium;
     line-height: 25.74px;
-  text-align: right;
+    text-align: right;
     color: #FCFCFC;
 }
 
@@ -291,7 +291,7 @@
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 22.88px;
-  text-align: right;
+    text-align: right;
 }
 
 .exit {
@@ -333,7 +333,7 @@
     font-size: 16px;
     font-family: DannaMedium;
     line-height: 22.88px;
-     text-align: right;
+    text-align: right;
     color: #2F2F2F;
 }
 
@@ -360,19 +360,25 @@
     font-size: 13px;
     font-family: DannaMedium;
     line-height: 17.16px;
-  text-align: right;
+    text-align: right;
     color: #707070;
     border: none;
 }
 
 .list {
-    width: 1078px;
+    width: 80%;
     background-color: #f1f1f1;
     height: 710px;
     border-radius: 24px;
     margin-top: 24px;
     padding-top: 24px;
+    overflow: hidden;
 }
+.list > div:last-child{
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+
 
 .headerList {
     margin: 0 24px;
@@ -391,7 +397,7 @@
     font-size: 14px;
     font-family: DannaDemiBold;
     line-height: 20.02px;
-  text-align: right;
+    text-align: right;
     color: #707070;
 }
 
@@ -562,7 +568,8 @@
     width: 40%;
 }
 
-.MyCourseAndStatus,.MyReserveAndComment {
+.MyCourseAndStatus,
+.MyReserveAndComment {
     margin-top: 20px;
     justify-content: space-between;
     display: flex;
@@ -573,7 +580,7 @@
     font-family: DannaMedium;
     font-size: 16px;
     line-height: 22.88px;
-  text-align: right;
+    text-align: right;
     font-weight: 600;
 }
 
@@ -591,13 +598,13 @@
     margin: 0 24px;
 }
 
-.seeMore{
-        width: auto;
+.seeMore {
+    width: auto;
     font-size: 14px;
     font-weight: 600;
     line-height: 20.02px;
-  text-align: right;
-  color: #3772FF;
+    text-align: right;
+    color: #3772FF;
 }
 
 .titleHeaderMyCourseList>h1,
@@ -606,14 +613,15 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 20.02px;
-  text-align: right;
+    text-align: right;
 }
 
 .titleHeaderMyCourseList>h1 {
     color: #2F2F2F;
 }
 
-.titleHeaderMyCourseList>a,.titleHeaderMyCourseList>div {
+.titleHeaderMyCourseList>a,
+.titleHeaderMyCourseList>div {
     color: #3772FF;
 }
 
@@ -657,7 +665,7 @@
     width: 11.3%;
 }
 
-.statusDashboard{
+.statusDashboard {
     background-color: #F6F6F6;
     width: 26%;
     border-radius: 24px;
@@ -666,21 +674,24 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.statusDashboard > .topStatusDashboard{
+
+.statusDashboard>.topStatusDashboard {
     display: flex;
     justify-content: space-between;
     height: 20px;
 }
-.statusDashboard > .topStatusDashboard > h1,.statusDashboard > .bottomStatusDashboard > h1{
+
+.statusDashboard>.topStatusDashboard>h1,
+.statusDashboard>.bottomStatusDashboard>h1 {
     font-family: DannaMedium;
     font-size: 14px;
     font-weight: 600;
     line-height: 20.02px;
-  text-align: right;
+    text-align: right;
     color: #2F2F2F;
 }
 
-.statusDashboard > .topStatusDashboard > a{
+.statusDashboard>.topStatusDashboard>a {
     background: url(https://img.icons8.com/?size=100&id=P1bJzKUoOQYz&format=png&color=3772FF) no-repeat 50% 50%;
     width: 20px;
     height: 20px;
@@ -688,53 +699,61 @@
 }
 
 
-.statusDashboard > div{
+.statusDashboard>div {
     width: 100%;
     height: auto;
 }
-.statusDashboard > .middleStatusDashboard{
+
+.statusDashboard>.middleStatusDashboard {
     display: flex;
     justify-content: center;
 }
 
-.statusDashboard > .bottomStatusDashboard{
+.statusDashboard>.bottomStatusDashboard {
     display: flex;
     justify-content: center;
 }
 
-.listMyReserveDashboard{
+.listMyReserveDashboard {
     width: 62%;
     background-color: #F6F6F6;
     border-radius: 24px;
     height: 448px;
     overflow: hidden;
-    
+
 }
-.listMyReserveDashboard > .headerList{
+
+.listMyReserveDashboard>.headerList {
     justify-content: space-between;
     background-color: #F1F1F1;
 }
-.listMyReserveDashboard > div:last-child > div > div:nth-child(5),.listMyReserveDashboard > div:last-child > div > div:nth-child(6){
+
+.listMyReserveDashboard>div:last-child>div>div:nth-child(5),
+.listMyReserveDashboard>div:last-child>div>div:nth-child(6) {
     display: none;
 }
-.commentDashboard{
+
+.commentDashboard {
     background-color: #F6F6F6;
     border-radius: 24px;
     width: 37%;
 }
-.CoursesAndBlogsHolder{
+
+.CoursesAndBlogsHolder {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.CoursesAndBlogsLine{
+
+.CoursesAndBlogsLine {
     background-color: #c9c9c9;
     width: 30%;
     height: 2px;
     margin-top: 3%;
 }
-.CoursesAndBlogsSt{
+
+.CoursesAndBlogsSt {
     font-family: DannaMedium;
     font-size: 14px;
     font-weight: 600;
@@ -744,8 +763,103 @@
     width: 30%;
 }
 
+.headerList {
+    gap: 0;
+}
 
+.listMyCoursesDashboard>div:last-child>div>div:not(:nth-child(2)),
+.listMyReserveDashboard>div:last-child>div>div:not(:nth-child(3)) {
+    font-size: 14px !important;
+}
 
+.dateStartList,
+.listMyCoursesDashboard>div:last-child>div>div:nth-child(4),
+.listMyReserveDashboard>div:last-child>div>div:nth-child(7) {
+    width: 110px;
+}
+
+.levelList,
+.listMyCoursesDashboard>div:last-child>div>div:nth-child(6) {
+    width: 62px;
+}
+
+.eyeList,
+.listMyCoursesDashboard>div:last-child>div>a {
+    width: 24px;
+}
+
+.imgList,
+.listMyCoursesDashboard>div:last-child>div>img {
+    width: 83px;
+}
+
+.listMyCoursesDashboard>.headerList>.nameList,
+.listMyCoursesDashboard>div:last-child>div>div:nth-child(2) {
+    width: 86px;
+}
+
+.teacherList,
+.listMyCoursesDashboard>div:last-child>div>div:nth-child(3),
+.listMyReserveDashboard>div:last-child>div>div:nth-child(4) {
+    width: 140px;
+}
+
+.listMyReserveDashboard>.headerList>.imgList {
+    width: 83px;
+}
+
+.listMyReserveDashboard>.headerList>.nameList,
+.listMyReserveDashboard>div:last-child>div>div:nth-child(3) {
+    width: 100px;
+}
+
+.listMyReserveDashboard>.headerList>.eyeList,
+.listMyCoursesDashboard>div:last-child>div>div:last-child {
+    width: 65px;
+}
+
+.listMyReserveDashboard>div:last-child>div>img {
+    width: 83px;
+}
+
+.listMyCoursesDashboard>div:not(:first-child) {
+    padding-left: 24px;
+}
+
+.listMyCoursesDashboard>div {
+    min-width: 808px;
+}
+
+.listMyCoursesDashboard>div:last-child {
+    padding: 0 24px 20px 0;
+    height: 136px ;
+    overflow: scroll ;
+}
+
+.listMyReserveDashboard>div:not(:first-child) {
+    padding-left: 24px;
+}
+
+.listMyReserveDashboard>div {
+    min-width: 630px;
+}
+
+.listMyReserveDashboard>div:last-child {
+    padding: 0 24px 20px 0;
+    height: 368px ;
+    overflow: scroll ;
+}
+.listMyReserveDashboard {
+    height: 487px;
+}
+
+.listMyCoursesDashboard {
+    height: 289px;
+}
+.listMyReserveDashboard,
+.listMyCoursesDashboard {
+    overflow: hidden;
+}
 
 @media screen and (max-width:1362px) {
     .navigate {
@@ -767,103 +881,95 @@
     .hamburgerMenu {
         display: block;
     }
+
     .accountHolder {
         width: 240px;
     }
 
 }
+
 @media screen and (max-width: 1065px) {
-    .headerList{
+    .headerList {
         gap: 0;
     }
-    .dateStartList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(4),.listMyReserveDashboard>div:last-child>div>div:nth-child(7)  {
-        display: none;
-    }
-    .levelList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(6){
-        width: 13%;
-    }
-    .eyeList,.listMyCoursesDashboard > div:last-child > div > a{
-        width: 4.4%;
-    }
-    .teacherList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(3),.listMyReserveDashboard>div:last-child>div>div:nth-child(4){
-        width: 25%;
-    }
-    .imgList,.listMyCoursesDashboard > div:last-child > div > img,.listMyReserveDashboard>div:last-child>div>img{
-        width: 15.1%;
-    }
-    .nameList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(2){
-        width: 24%;
-    }
-    .listMyReserveDashboard>.headerList>.eyeList{
-        width: 13.6%;
-    }
 }
+
 @media screen and (max-width: 791px) {
 
-    .MyCourseAndStatus,.MyReserveAndComment{
+    .MyCourseAndStatus,
+    .MyReserveAndComment {
         flex-flow: column wrap;
         gap: 20px;
     }
-    .listMyCoursesDashboard,.statusDashboard,.commentDashboard,.listMyReserveDashboard{
+
+    .listMyCoursesDashboard,
+    .statusDashboard,
+    .commentDashboard,
+    .listMyReserveDashboard {
         width: 100%;
     }
-    .listMyReserveDashboard{
+
+    .listMyReserveDashboard {
         height: 260px;
     }
-    .listMyReserveDashboard > div:last-child{
+
+    .listMyReserveDashboard>div:last-child {
         height: 160px;
         padding-bottom: 15px;
     }
 }
+
 @media screen and (max-width: 696px) {
-    .leftTopDashboard{
+    .leftTopDashboard {
         display: none;
     }
+
     .rightTopDashboard {
         width: 100%;
     }
-    .TopRightTopDashboard>h1{
+
+    .TopRightTopDashboard>h1 {
         font-size: 20px;
     }
-    .TopRightTopDashboard>p{
+
+    .TopRightTopDashboard>p {
         font-size: 12px;
     }
 }
+@media screen and (max-width: 628px) {
+    .searchAndDateHolder {
+        flex-flow: row wrap;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+    .searchAndDateHolder > div{
+        width: 100%;
+    }
+    .searchAndDateHolder > div > div,.searchAndDateHolder > div > input{
+        width: 100%;
+        justify-content: right;
+    }
+}
 @media screen and (max-width: 582px) {
-    .teacherList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(3),.listMyReserveDashboard>div:last-child>div>div:nth-child(4),.levelList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(6){
-        display: none;
-    }
-    .imgList,.listMyCoursesDashboard > div:last-child > div > img,.listMyReserveDashboard>div:last-child>div>img{
-        width: 20.1%;
-    }
-    .nameList,.listMyCoursesDashboard > div:last-child > div > div:nth-child(2){
-        width: 40%;
-    }
-    .listMyReserveDashboard>.headerList>.eyeList,.listMyCoursesDashboard > div:last-child > div > div:last-child{
-        width: 20%;
-    }
-    .eyeList,.listMyCoursesDashboard > div:last-child > div > a{
-        width: 8%;
-    }
-    .userHolder{
+    .userHolder {
         display: none;
     }
 }
+
 @media screen and (max-width: 427px) {
-    .BottomRightTopDashboard{
+    .BottomRightTopDashboard {
         flex-flow: column wrap;
         justify-content: center;
         height: auto;
-        gap: 20px; 
+        gap: 20px;
     }
-    .BottomRightTopDashboard > div{
-        width: 100%;
 
+    .BottomRightTopDashboard>div {
+        width: 100%;
     }
-    .listMyReserveDashboard{
-        overflow-x: scroll;
-    }
-    .page{
+
+    .page {
         padding: 10px;
     }
 }
