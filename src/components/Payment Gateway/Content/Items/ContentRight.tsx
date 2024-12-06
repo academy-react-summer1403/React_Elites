@@ -6,12 +6,12 @@ import toast, { Toaster } from 'react-hot-toast'
 
 const ContentRight = ({Details}) => {
 
-    const [value, setvalue] = useState({
+    const value = {
         CourseId: Details?.courseId,
         Paid: Details?.cost,
         PeymentDate: new Date,
         PaymentInvoiceNumber: Math.floor(Math.random() * 100) + 100000,
-    })
+    }
 
 
     const paymentValue = async () => {
@@ -19,6 +19,7 @@ const ContentRight = ({Details}) => {
             id: "1"
         })
         let res = await addCoursePayment(value)
+        console.log(res)
         if(res.success == true){
             toast.remove("1");
             toast.success("پرداخت انجام شد")

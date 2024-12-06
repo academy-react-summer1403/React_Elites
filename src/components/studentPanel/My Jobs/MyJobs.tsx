@@ -129,13 +129,13 @@ const MyJobs = () => {
             </Formik>
         </Modal>
         </div>
-    <DataTable
+    {allJobs != null && <DataTable
     data={allJobs}
     columns={columnJobs}
     className={style.DataTable}
     responsive={true}
     highlightOnHover={true}
-    />
+    />}
     </div>
   )
 }

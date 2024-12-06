@@ -1,12 +1,4 @@
-.SearchHeader{
-    border: 1px solid #dcdcdc;
-    background: #ffffff url(https://img.icons8.com/?size=100&id=132&format=png&color=000000) no-repeat 50% 50% ;
-    background-size: 60%;
-    width: 48px;
-    height: 48px;
-    border-radius: 100px;
-    cursor: pointer;
-}
+
 .holderCards{
     display: flex;
     justify-content: center;

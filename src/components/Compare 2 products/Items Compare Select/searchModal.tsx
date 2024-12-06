@@ -1,4 +1,4 @@
-import { Modal } from 'antd';
+import { Button, Modal } from 'antd';
 import React, { useEffect, useState } from 'react'
 import s from '../../studentPanel/dashboard/Items/MyReserveAndComment/modal.module.css'
 import style from './SeachModal.module.css'
@@ -7,7 +7,7 @@ import { CardModal } from './Card';
 import { allCourseListSearch } from '../../../core/services/api/AllCourseListSearch';
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
 import { useTranslation } from 'react-i18next';
-const SearchModal = () => {
+const SearchModal = ({setselected}) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("")
@@ -43,7 +43,7 @@ const SearchModal = () => {
   return (
     <>
       <div className={style.titleHeaderMyCourseList}>
-        <div data-theme={identifier("darkSearch","dark2Search","greenSearch","pinkSearch","blueSearch","redSearch")} className={style.SearchHeader} onClick={showModal}> </div>
+        <Button data-theme={identifier("darkSearch","dark2Search","greenSearch","pinkSearch","blueSearch","redSearch")} className="DannaM" color='primary' onClick={showModal}> انتخاب دوره </Button>
         <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none"}}>
           <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={s.titleHolder}>
             <div className={s.close}> {t("close")} </div>
@@ -68,6 +68,7 @@ const SearchModal = () => {
                   image={item.tumbImageAddress}
                   NavLinkTitle="/Course-Detail/"
                   NavTitle={t("courses")}
+                  setselected={setselected}
                 />
               )
             })}
