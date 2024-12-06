@@ -9,7 +9,7 @@ import { TitleL } from './TitleD';
 const DisLikes = ({dislike, isLoading}) => {
 
   return (
-    <div className={style.Teacher} data-theme={identifier("darkNoBG")}>
+    <div className={style.Teacher} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <CountD />
       <TitleL dislike={dislike} isLoading={isLoading} />
     </div>

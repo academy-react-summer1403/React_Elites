@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const DateStartTitle = () => {
   const { t } = useTranslation();
   return (
-    <div className={style.topC} data-theme={identifier('darkNoBG')}>{t("HoldingDate")}</div>
+    <div className={style.topC} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("HoldingDate")}</div>
   )
 }
 

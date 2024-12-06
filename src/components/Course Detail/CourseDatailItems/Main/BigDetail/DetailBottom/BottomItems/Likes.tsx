@@ -8,7 +8,7 @@ import { CountL } from './CountL';
 const Likes = ({like, isLoading}) => {
 
   return (
-    <div className={style.Status} data-theme={identifier("darkNoBG")}>
+    <div className={style.Status} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <TitleD />
       <CountL isLoading={isLoading} like={like} />
     </div>

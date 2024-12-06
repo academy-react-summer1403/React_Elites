@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const TitleD = () => {
   const { t } = useTranslation();
   return (
-    <div className={style.topS} data-theme={identifier("dark")}>{t("LikeCount")}</div>
+    <div className={style.topS} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("LikeCount")}</div>
   )
 }
 

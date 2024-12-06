@@ -73,7 +73,6 @@ import { PaymentGateway } from './components/Payment Gateway/PaymentGateway.tsx'
 
 // Compare Products
 
-import { Compare } from './components/Compare 2 products/Compare.tsx'
 import { CompareSelect } from './components/Compare 2 products/Compare select.tsx'
 import { ChangeSecurity } from './components/studentPanel/studentProfilePage/Change Security/ChangeSecurity.tsx'
 import { MyJobs } from './components/studentPanel/My Jobs/MyJobs.tsx'
@@ -117,11 +116,6 @@ const router = createBrowserRouter([
       {
         path: "/about-we",
         element: <AboutUsPage />,
-        errorElement: <ErrorPage />
-      },
-      {
-        path: "/Compare-products",
-        element: <Compare />,
         errorElement: <ErrorPage />
       },
       {

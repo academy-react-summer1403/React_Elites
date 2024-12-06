@@ -6,7 +6,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const CountL = ({isLoading, like}) => {
   return (
     <>
-        {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark")}>{like} نفر</div>}
+        {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{like} نفر</div>}
     </>
   )
 }

@@ -9,7 +9,7 @@ import { DateEndNumber } from './DateEndNumber';
 const DateEnd = ({end, isLoading}) => {
 
   return (
-    <div className={style.Level} data-theme={identifier("darkNoBG")}>
+    <div className={style.Level} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <DateEndTitle />
     <DateEndNumber isLoading={isLoading} end={end} />
     </div>

@@ -9,7 +9,7 @@ const Button = () => {
 
     return (
         <div>
-            <button className={style.button} type="submit" onClick={(e) => e.preventDefault()}> تغییر رمز عبور</button>
+            <button className={style.button} type="submit" onClick={(e) => e.preventDefault()}> {t("ChangePassword")}</button>
         </div>
     )
 }
