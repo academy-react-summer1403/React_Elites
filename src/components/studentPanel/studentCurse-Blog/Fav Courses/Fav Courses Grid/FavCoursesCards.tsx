@@ -12,6 +12,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import { getCourseById } from '../../../../../core/services/api/courseById'
 import { useEffect, useState } from 'react'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
+import { deleteCourseFavourite } from '../../../../../core/services/api/deleteCourseFavourite'
 const FavCoursesCards = (props) => {
 
   const [courseDetail, setCourseDetail] = useState({})
@@ -37,6 +38,14 @@ const FavCoursesCards = (props) => {
     }
   }
 
+  const onDelete = async () => {
+    let res = await deleteCourseFavourite(courseDetail?.userFavoriteId)
+    console.log(res)
+    if(res.success == true){
+      toast.success('دوره از لیست علاقه مندی حذف شد')
+    }
+  }
+
   useEffect(() => {
     getCourseDetail()
   }, [])
@@ -53,7 +62,7 @@ const FavCoursesCards = (props) => {
         <div className={style.closeAndViewHolder}>
           <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view","view2","view3","view4","view5","view6")}></NavLink>
           {courseReserve === false ? <span className={style.Book} onClick={() => reserveCourse()}></span> : <span className={style.isReserved}></span>}
-          <span className={style.Close} ></span>
+          <span className={style.Close} onClick={() => onDelete()}></span>
         </div>
     </div>
   )
