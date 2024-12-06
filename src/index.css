@@ -578,7 +578,7 @@
 
 [data-theme="pink"] {
   background: #7469B6 !important;
-  color: #FFE6E6 !important;
+  color: #ffffff !important;
   border-color: #AD88C6 !important;
 }
 
@@ -594,18 +594,18 @@
 }
 
 [data-theme="pinkNoBG"] {
-  color: #FFE6E6 !important;
+  color: #ffffff !important;
   border-color: #AD88C6 !important;
 }
 
 [data-theme="pinkNoBGDisc"] {
-  color: #ab63b1 !important;
+  color: #fdecfe !important;
   border-color: #AD88C6 !important;
 }
 
 [data-theme="pinkSmall"] {
   background-color: #E1AFD1 !important;
-  color: #e0c0f5 !important;
+  color: #ffffff !important;
   border-color: #AD88C6 !important;
 }
 
