@@ -33,11 +33,11 @@ const AboutWe = (props) => {
   <>
     <Formik>
       {(form) => (
-        <div className={style.container} data-theme={identifier("dark","dark2")}>
+        <div className={style.container} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
           <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
-          <div className={style.page} data-theme={identifier("dark","dark2")}>
+          <div className={style.page} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
             <AboutUsTitleHeader />
-          <div className={style.page2} data-theme={identifier("dark","dark2")}>
+          <div className={style.page2} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
             <AboutWeDesc />
             <TargetWe />
             <Teaching />

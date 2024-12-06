@@ -7,7 +7,7 @@ const PopularInputBlogs = ({isClicked2, setisClicked2, setisClicked1, setapplySo
 
   const { t } = useTranslation();
   return (
-    <div className={isClicked2 ? styleBlogList.selectedC : styleBlogList.categories} data-theme={identifier("darkSmall","dark2Small")} onClick={() => {
+    <div className={isClicked2 ? styleBlogList.selectedC : styleBlogList.categories} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} onClick={() => {
       setisClicked1(false)
       setisClicked2(true)
       setapplySort(true)

@@ -4,10 +4,11 @@ import { likeComment } from '../../../../../../../core/services/api/postCommentB
 import toast, { Toaster } from 'react-hot-toast'
 import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 import { useGlobalState } from '../../../../../../../State/State'
+import { useTranslation } from 'react-i18next'
 
 
 const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
-
+    const {t}=useTranslation();
     const [isClicked, setIsClicked] = useState(false)
     const [isClicked2, setIsClicked2] = useState(false)
     const [commentId, setCommentId] = useGlobalState('blogCommentId');
@@ -61,7 +62,7 @@ const MainComment = ({title, pictureAddress, describe, autor, dissLikeCount, lik
             <div  className={style.reply}  onClick={() => {
                 setIsReplying(!isReplying)
                 setCommentId(id)
-                }}> جواب دادن </div>
+                }}> {t("answer")} </div>
         </div>
     </div>
   )

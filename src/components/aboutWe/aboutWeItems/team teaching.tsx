@@ -9,10 +9,10 @@ const TeamTeaching = (props) => {
   const { t } = useTranslation();
   return (
     <div className={style.holderP}>
-      <span data-theme={identifier("dark","dark2")}>{t("aboutUsTitle4")}</span>
+      <span data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("aboutUsTitle4")}</span>
       <div className={style.holderGap}>
-        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("aboutUsDesc6")} </p> 
-        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("aboutUsDesc7")} </p> 
+        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc6")} </p> 
+        <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc7")} </p> 
       </div>
     </div>  
   )

@@ -2,17 +2,20 @@ import React from 'react'
 import style from './NavBarItems.module.css'
 
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
+import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 const NavBarItems = () => {
-
+  const { t } = useTranslation();
   return (
     <>        
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> خدمات ما </div>
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> ارتباط باما </div>
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> درباره ما </div>
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> اساتید </div>
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> بلاگ ها </div>
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> دوره ها </div>
-        <div className={style.text} data-theme={identifier("darkNoBG","dark2NoBG")}> خانه </div>
+        <a href="/#OurService" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("OurServices")}   </a>
+        <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("contactUs")}  </NavLink>
+        <NavLink to="/about-We" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("aboutUs")}   </NavLink>
+        <NavLink to="/teacher-page" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("teachers")}</NavLink>
+        <NavLink to="/Blogs-List" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("blogs")}  </NavLink>
+        <NavLink to="/Courses-List" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>  {t("courses")} </NavLink>
+        <NavLink to="/" className={`${style.text} ${style.textHover}`} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("home")} </NavLink>
+        
     </>
   )
 }

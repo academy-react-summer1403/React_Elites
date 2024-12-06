@@ -7,7 +7,7 @@ import style from './style.module.css'
 const LevelCount = ({date, isLoading}) => {
   return (
     <>
-    {isLoading ? <BeatLoader /> : <div className={style.bottomL} data-theme={identifier("dark","dark2")}>{dateConvertor(date)}</div>}
+    {isLoading ? <BeatLoader /> : <div className={style.bottomL} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{dateConvertor(date)}</div>}
     </>
   )
 }

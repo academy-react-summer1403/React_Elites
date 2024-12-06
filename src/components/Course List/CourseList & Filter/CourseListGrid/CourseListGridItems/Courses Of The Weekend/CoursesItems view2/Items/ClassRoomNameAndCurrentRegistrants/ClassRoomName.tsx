@@ -7,7 +7,7 @@ const ClassRoomName = (props) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.classRoom} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("ClassroomNumber")} :{props.classRoomName}</div>
+    <div className={style.classRoom} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("ClassroomNumber")} :{props.classRoomName}</div>
   )
 }
 

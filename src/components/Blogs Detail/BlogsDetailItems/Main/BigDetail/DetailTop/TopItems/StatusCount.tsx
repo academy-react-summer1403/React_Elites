@@ -6,7 +6,7 @@ import { BeatLoader } from 'react-spinners'
 const StatusCount = ({views, isLoading}) => {
   return (
     <>
-    {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark","dark2")}>{views} نفر</div>}
+    {isLoading ? <BeatLoader /> : <div className={style.bottomS} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{views} نفر</div>}
     </>
   )
 }

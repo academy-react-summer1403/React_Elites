@@ -6,7 +6,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const SortModal = ({setSortModal,applySort, setapplySort, setSortType, setCol,}) => {
 
   return (
-    <div className={style.container}  data-theme={identifier("dark","dark2")}>
+    <div className={style.container}  data-theme={identifier("dark","dark2","green","pink","blue","red")}>
       <TopItems setSortType={setSortType} setCol={setCol} setapplySort={setapplySort} applySort={applySort} setSortModal={setSortModal} />
     </div>
   )

@@ -8,7 +8,7 @@ import { StatusCount } from './StatusCount';
 const Status = ({views, isLoading}) => {
 
   return (
-    <div className={style.Status} data-theme={identifier("darkNoBG","dark2NoBG")}>
+    <div className={style.Status} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <StatusTitle />
       <StatusCount views={views} isLoading={isLoading} />
     </div>

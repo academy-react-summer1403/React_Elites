@@ -10,8 +10,8 @@ const Filter = ({setFilterModal}) => {
 
   const { t } = useTranslation();
   return (
-    <div className={styleFilter.filter} data-theme={identifier("darkSmall","dark2Small")}>
-        <h1 className={styleFilter.filterTitle} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("filter")}</h1>
+    <div className={styleFilter.filter} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
+        <h1 className={styleFilter.filterTitle} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("filter")}</h1>
         <SearchFilter  />
         <CategoryFilter />
         <span className={styleFilter.applyFilter} onClick={() => {

@@ -8,7 +8,7 @@ const Button = () => {
   const {t} = useTranslation();
 
   return (
-    <NavLink to="Courses-list" className={style.button} data-theme={identifier("darkSmall","dark2Small")}>{t("ButtonViewAll")}</NavLink>
+    <NavLink to="Courses-list" className={style.button} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>{t("ButtonViewAll")}</NavLink>
   )
 }
 

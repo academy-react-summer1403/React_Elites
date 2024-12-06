@@ -14,7 +14,7 @@ const Status = ({status}) => {
     }
   }
   return (
-    <div className={style.status} data-theme={identifier("darkNoBG","dark2NoBG")}>{ali()}</div>
+    <div className={style.status} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{ali()}</div>
   )
 }
 

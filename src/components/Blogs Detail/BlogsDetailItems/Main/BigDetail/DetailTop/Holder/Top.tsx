@@ -10,7 +10,7 @@ const Top = ({views, teacher, category, date, isLoading}) => {
 
 
   return (
-    <div className={style.top} data-theme={identifier("dark","dark2")}>
+    <div className={style.top} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
 
         <Status views={views} isLoading={isLoading} />
         <Level date={date} isLoading={isLoading}/>

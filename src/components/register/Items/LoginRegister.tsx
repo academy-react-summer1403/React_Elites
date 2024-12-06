@@ -9,7 +9,7 @@ const LoginRegister = () => {
   return (
 
     <div className={styleLogin.RegisterLoginButton}>
-      <h1 data-theme={identifier("darkNoBG","dark2NoBG")} className="red text-black text-sm font-DannaExtraBold ">{t("haveAccount")}</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} className="red text-black text-sm font-DannaExtraBold ">{t("haveAccount")}</h1>
       <NavLink className="border-none cursor-pointer text-blue-700 text-sm font-DannaBold tracking-tight underline" to="/Auth/Login"> {t("loginAccount")}</NavLink>
     </div>
   )

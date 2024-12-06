@@ -7,7 +7,7 @@ const Description = (props) => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.description}  data-theme={identifier("dark","dark2")}>{t("readyForMarketLandingDesc")}</div>
+    <div className={style.description}  data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("readyForMarketLandingDesc")}</div>
   )
 }
 

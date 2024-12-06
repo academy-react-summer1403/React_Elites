@@ -7,8 +7,9 @@ import { ReserveCourses } from './ReserveCourses';
 import { getMyCourse } from '../../../../../core/services/api/getMyCourse';
 import { CardsCourseSkeleton } from './SkeletonLoading';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
+import { useTranslation } from 'react-i18next';
 const MiniBasket = () => {
-
+  const { t } = useTranslation();
   const [coursesArr, setcoursesArr] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setisLoading] = useState(true)
@@ -32,11 +33,11 @@ const MiniBasket = () => {
   }, [])
   return (
     <>
-      <div className={style.miniBasketHolder} data-theme={identifier("minibasket","minibasket2")} onClick={showModal}>
+      <div className={style.miniBasketHolder} data-theme={identifier("minibasket","minibasket2","minibasket3","minibasket4","minibasket5","minibasket6")} onClick={showModal}>
       <Modal closeIcon={null} footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "511px" }}>
           <div className={style.miniBasket}>
             <div className={style.holderMiniBasketOveral}>
-              <div className={style.titleMiniBasketCount}> تعداد دوره در سبد : {coursesArr.length} </div>
+              <div className={style.titleMiniBasketCount}> {t("CountMiniBasket")} : {coursesArr.length} </div>
               <div className={style.miniBasketItems}>
                 {isLoading && <CardsCourseSkeleton cards={3} />}
                 {coursesArr.map((item, index) => {
@@ -49,7 +50,7 @@ const MiniBasket = () => {
                 })}
               </div>
               <div className={style.buttonHolder}>
-                <NavLink className={style.button} to="/Student-Panel/Shopping-Basket"> نمایش سبد و پرداخت</NavLink>
+                <NavLink className={style.button} to="/Student-Panel/Shopping-Basket"> {t("ViewMiniBasket")}</NavLink>
               </div>
             </div>
           </div>

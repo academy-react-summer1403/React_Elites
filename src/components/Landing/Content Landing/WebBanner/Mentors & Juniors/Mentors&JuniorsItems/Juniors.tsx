@@ -11,8 +11,8 @@ const Juniors = (props) => {
   return (
     <div className={style.container}>
       <div className={style.juniors}></div>
-      <div className={style.studentCount}  data-theme={identifier("dark","dark2")}> + {Math.floor(props.studentCount.studentCount)} </div>
-      <div className={style.title}  data-theme={identifier("dark","dark2")}>{t("ActiveStudentBanner")}</div>
+      <div className={style.studentCount}  data-theme={identifier("dark","dark2","green","pink","blue","red")}> + {Math.floor(props.studentCount.studentCount)} </div>
+      <div className={style.title}  data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("ActiveStudentBanner")}</div>
 
     </div>
   )

@@ -59,23 +59,23 @@ const SearchModal = () => {
   return (
     <>
       <div className={style.titleHeaderMyCourseList}>
-        <div data-theme={identifier("darkSearch")} className={style.SearchHeader} onClick={showModal}> </div>
+        <div data-theme={identifier("darkSearch","dark2Search","greenSearch","pinkSearch","blueSearch","redSearch")} className={style.SearchHeader} onClick={showModal}> </div>
         <div id='Modal2Search'>
           <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{ overflow: "scroll", height: "600px", background: "none" }}>
-            <div data-theme={identifier("dark")} className={s.titleHolder}>
+            <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={s.titleHolder}>
               <div className={s.close} onClick={handleCancel}> {t("close")} </div>
               <div className={s.blogOrCourse}>
                 <div className={isBlog === false ? s.courses : s.selected} onClick={() => setisBlog(true)}> {t("blogs")} </div>
                 <div className={isBlog === true ? s.courses : s.selected} onClick={() => setisBlog(false)}> {t("courses")} </div>
               </div>
-              <div data-theme={identifier("darkNoBG")} className={s.title}>: {t("search")} </div>
+              <div data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} className={s.title}>: {t("search")} </div>
             </div>
-            <div data-theme={identifier("dark")} className={style.InputSearchHolder}>
-              <input data-theme={identifier("darkSmall")} placeholder={t("ُSearchLandingPlaceHolder")} className={style.InputSearchModal} onChange={(e) => {
+            <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={style.InputSearchHolder}>
+              <input data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} placeholder={t("ُSearchLandingPlaceHolder")} className={style.InputSearchModal} onChange={(e) => {
                 setSearchValue(e.target.value)
               }} />
             </div>
-            <div data-theme={identifier("dark")} className={style.holderCards}>
+            <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={style.holderCards}>
               {courseList.map((item, index) => {
                 return isBlog == false && (
                   <CardModal
@@ -85,7 +85,7 @@ const SearchModal = () => {
                     desc={item.describe}
                     image={item.tumbImageAddress}
                     NavLinkTitle="/Course-Detail/"
-                    NavTitle="دوره"
+                    NavTitle={t("courses")}
                   />
                 )
               })}
@@ -98,7 +98,7 @@ const SearchModal = () => {
                     desc={item.miniDescribe}
                     image={item.currentImageAddressTumb}
                     NavLinkTitle="/Blogs-Detail/"
-                    NavTitle="بلاگ"
+                    NavTitle={t("blogs")}
                   />
                 )
               })}

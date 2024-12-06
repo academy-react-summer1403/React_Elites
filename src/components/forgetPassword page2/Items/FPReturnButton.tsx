@@ -6,8 +6,8 @@ const FPReturnButton = () => {
 
   return (
     <div className={styleLogin.returnHolder}>
-      <div data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.return}>
-        <NavLink data-theme={identifier("darkNoBG","dark2NoBG")} to="/Auth/Forget-Password"> بازگشت &gt; </NavLink>
+      <div data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} className={styleLogin.return}>
+        <NavLink data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} to="/Auth/Forget-Password"> بازگشت &gt; </NavLink>
       </div>
     </div>
   )

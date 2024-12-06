@@ -7,7 +7,7 @@ const Dislike = (props) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.dislike} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("Dislikes")}: {props.dissLikeCount}</div>
+    <div className={style.dislike} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("Dislikes")}: {props.dissLikeCount}</div>
   )
 }
 

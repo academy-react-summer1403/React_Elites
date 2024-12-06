@@ -15,12 +15,12 @@ const NumberAndCode = () => {
         <>
             <div className={styleInform.numberAndCode}>
                 <div className={styleInform.smallDiv}>
-                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("PhoneNumberReg")}</h1>
-                    <Field name="phoneNumber" className={styleInform.Input} placeholder={t("enterNumberReg")} data-theme={identifier("dark","dark2")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("PhoneNumberReg")}</h1>
+                    <Field name="phoneNumber" className={styleInform.Input} placeholder={t("enterNumberReg")} data-theme={identifier("dark","dark2","green","pink","blue","red")} />
                 </div>
                 <div className={styleInform.smallDiv}>
-                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("nationalCode")}</h1>
-                    <Field name="nationalCode" className={styleInform.Input} placeholder={t("enterCodeMeli")} data-theme={identifier("dark","dark2")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("nationalCode")}</h1>
+                    <Field name="nationalCode" className={styleInform.Input} placeholder={t("enterCodeMeli")} data-theme={identifier("dark","dark2","green","pink","blue","red")} />
                 </div>
             </div>
 

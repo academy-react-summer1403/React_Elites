@@ -8,7 +8,7 @@ const Title = ({title, isLoading}) => {
 
   return (
     <>
-    {isLoading ? <BeatLoader /> : <div className={style.title} data-theme={identifier("dark","dark2")}>{title}</div>}
+    {isLoading ? <BeatLoader /> : <div className={style.title} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{title}</div>}
     </>
   )
 }

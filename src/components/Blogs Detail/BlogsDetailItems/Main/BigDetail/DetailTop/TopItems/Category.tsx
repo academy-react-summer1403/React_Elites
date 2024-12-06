@@ -6,8 +6,8 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Category = ({category, isLoading}) => {
 
   return (
-    <div className={style.Category} data-theme={identifier("darkNoBG","dark2NoBG")}>
-        <div className={style.topC} data-theme={identifier("dark","dark2")}>دسته بندی</div>
+    <div className={style.Category} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
+        <div className={style.topC} data-theme={identifier("dark","dark2","green","pink","blue","red")}>دسته بندی</div>
         {isLoading ? <BeatLoader /> : <div className={style.bottomC}>{category}</div>}
     </div>
   )

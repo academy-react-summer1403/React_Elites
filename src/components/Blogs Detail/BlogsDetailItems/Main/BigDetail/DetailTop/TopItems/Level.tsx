@@ -10,7 +10,7 @@ const Level = ({date, isLoading}) => {
 
   
   return (
-    <div className={style.Level} data-theme={identifier("dark","dark2")}>
+    <div className={style.Level} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
       <LevelTitle />
       <LevelCount isLoading={isLoading} date={date} />
     </div>

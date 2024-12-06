@@ -15,17 +15,17 @@ const StudentPanelSearch = () => {
             <div className={style.searchAndDateHolder}>  
             <div className={style.searchHolder}> 
             <div>
-                <label className="text-base font-DannaBold text-black pb-1.5" data-theme={identifier("darkNoBG","dark2NoBG")}>{t("search")}</label>
+                <label className="text-base font-DannaBold text-black pb-1.5" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("search")}</label>
                 <div className={style.searchLogo}> </div>
             </div>
-            <Field className={style.input} placeholder={t("searchCourses")} data-theme={identifier("dark","dark2")}/>
+            <Field className={style.input} placeholder={t("searchCourses")} data-theme={identifier("dark","dark2","green","pink","blue","red")}/>
             </div>
               <div className={style.dateHolder}> 
                 <div>
-                    <label className="text-base font-DannaBold text-black pb-1.5" data-theme={identifier("darkNoBG","dark2NoBG")}>{t("dateStart-end")}</label>
+                    <label className="text-base font-DannaBold text-black pb-1.5" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("dateStart-end")}</label>
                     <div className={style.dateLogo}> </div>
                 </div>
-                <input type="date" className={style.input} data-theme={identifier("dark","dark2")}/>
+                <input type="date" className={style.input} data-theme={identifier("dark","dark2","green","pink","blue","red")}/>
             </div>
         </div>
       )}

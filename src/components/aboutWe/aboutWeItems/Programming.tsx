@@ -9,8 +9,8 @@ const Programming = (props) => {
   const { t } = useTranslation();
   return (
     <div className={style.holderP}>
-      <span data-theme={identifier("dark","dark2")}>{t("aboutUsTitle8")}</span>
-      <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("aboutUsDesc12")}</p>
+      <span data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("aboutUsTitle8")}</span>
+      <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc12")}</p>
     </div>
   )
 }

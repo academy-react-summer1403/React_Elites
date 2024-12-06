@@ -5,13 +5,14 @@ import { Comment } from '../Items/Comment'
 import { AddComment } from './AddComment/AddComment';
 import { PulseLoader } from 'react-spinners';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
+import { useTranslation } from 'react-i18next';
 
 const AllComments = ({comments, isLoading, title}) => {
-
+  const { t } = useTranslation();
 
   return (
     <div className={style.container}>
-      <div className={style.title} data-theme={identifier("dark","dark2")}> نظرات دانشجو ها و اساتید </div>
+      <div className={style.title} data-theme={identifier("dark","dark2","green","pink","blue","red")}> {t("StAndTeComments")} </div>
         {isLoading && <PulseLoader />}
         {comments.slice(0,3).map((item, index) => {
           return (

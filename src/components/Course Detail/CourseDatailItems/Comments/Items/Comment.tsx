@@ -9,7 +9,7 @@ const Comment = ({title, currentUserEmotion, id, describe, pictureAddress, autho
 
   
   return (
-    <div className={style.comments} data-theme={identifier("darkSmall","dark2Small")}>
+    <div className={style.comments} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
         <Title title={title} />
         <Content describe={describe} />
         <Footer currentUserEmotion={currentUserEmotion} id={id} commentId={commentId} insertDate={insertDate} disslikeCount={disslikeCount} likeCount={likeCount} author={author} pictureAddress={pictureAddress} />

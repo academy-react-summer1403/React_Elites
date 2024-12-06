@@ -7,7 +7,7 @@ const Like = (props) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.like} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("likes")}: {props.like}</div>
+    <div className={style.like} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("likes")}: {props.like}</div>
   )
 }
 

@@ -7,7 +7,7 @@ import { identifier } from '../../../../../../../../core/services/Functions/Them
 const CourseFilterHolder = ({setClicked}) => {
 
   return (
-    <div className={style.filterHolder}  data-theme={identifier("darkSmall","dark2Small")}>
+    <div className={style.filterHolder}  data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
         <FilterItemsHolder setClicked={setClicked} />
     </div>
   )

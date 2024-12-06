@@ -10,8 +10,8 @@ const TitleHeaderBlogs = () => {
 
   return (
     <div className={style.titleBlogs}>
-      <h1 className={style.h1} data-theme={identifier("dark","dark2")}>{t("headerTitleBlogsList")}</h1>
-      <p className={style.p} data-theme={identifier("dark","dark2")}>{t("headerDescBlogsList1")}   <br />{t("headerDescBlogsList2")}</p>
+      <h1 className={style.h1} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("headerTitleBlogsList")}</h1>
+      <p className={style.p} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("headerDescBlogsList1")}   <br />{t("headerDescBlogsList2")}</p>
     </div>
   )
 }

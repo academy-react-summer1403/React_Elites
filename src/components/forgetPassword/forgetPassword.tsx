@@ -8,11 +8,13 @@ import { FPReturnButton } from "./Items/FPReturnButton";
 import { postForgetPassEmail } from "../../core/services/api/postForgetPassEmail";
 import toast, { Toaster } from "react-hot-toast";
 import * as yup from "yup";
+import { useTranslation } from "react-i18next";
 
 const ForgetPass = () => {
   const validation = yup.object().shape({
     email: yup.string().required("لطفا ایمیل خود را وارد کنید"),
   });
+  const { t } = useTranslation();
   return (
     <>
       <Toaster />

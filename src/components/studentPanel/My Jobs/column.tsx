@@ -17,6 +17,7 @@ export const columnJobs = [
       )
     }
   },
+  
   {
     name: 'توضیحات',
     minWidth: '100px',

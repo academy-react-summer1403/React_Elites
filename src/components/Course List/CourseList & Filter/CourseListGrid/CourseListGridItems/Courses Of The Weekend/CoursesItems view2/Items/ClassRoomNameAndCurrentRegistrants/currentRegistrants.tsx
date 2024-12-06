@@ -7,7 +7,7 @@ const CurrentRegistrants = (props) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.NumberRegistrants} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("NumberRegistrants")}: {props.currentRegistrants}</div>
+    <div className={style.NumberRegistrants} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("NumberRegistrants")}: {props.currentRegistrants}</div>
   )
 }
 

@@ -14,15 +14,15 @@ const NavigateRegister = () => {
     <div className={`${styleLogin.navigate} ${styleLogin.navigateRegister}`}>
       <div className={styleLogin.select}>
         <div>  </div>
-        <h1 data-theme={identifier("darkNoBG","dark2NoBG")} className={`${styleLogin.textNavigate} ${styleLogin.selectedNavigate}`}>{t("enterPhoneNumberReg")} </h1>
+        <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} className={`${styleLogin.textNavigate} ${styleLogin.selectedNavigate}`}>{t("enterPhoneNumberReg")} </h1>
       </div>
       <div>
         <div>  </div>
-        <h1  data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")} className={styleLogin.textNavigate}>{t("confirmCodeRegister")} </h1>
+        <h1  data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")} className={styleLogin.textNavigate}>{t("confirmCodeRegister")} </h1>
       </div>
       <div>
         <div>  </div>
-        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")} className={styleLogin.textNavigate}>{t("enterInformationRegister")} </h1>
+        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")} className={styleLogin.textNavigate}>{t("enterInformationRegister")} </h1>
       </div>
     </div>
 

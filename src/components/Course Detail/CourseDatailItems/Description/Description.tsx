@@ -8,10 +8,12 @@ import { StarFilled } from '@ant-design/icons';
 import { postCoourseRate } from '../../../../core/services/api/postCourseRate';
 import { DescriptionTitle } from './DescriptionTitle';
 import { Main } from './Main';
+import { useTranslation } from 'react-i18next';
 const Description = ({description, isLoading, id, currentUserRateNumber}) => {
 
   const [value, setvalue] = useState(`http://localhost:5173/Course-Detail/${id}`)
   const [copySuccess, setCopySuccess] = useState(false);
+  const { t } = useTranslation();
 
   function copyToClipboard() {
     navigator.clipboard.writeText(value)
@@ -28,9 +30,9 @@ const Description = ({description, isLoading, id, currentUserRateNumber}) => {
         <div className={style.copyLink} onClick={() => {
           copyToClipboard()
           setCopySuccess(true)
-        }}>کپی کردن لینک صفحه</div>
+        }}>{t("CopyLinkPage")}</div>
         <Rate style={{margin: "0 10px 0 10px"}} character={<StarFilled style={{fontSize: "30px"}} /> } defaultValue={currentUserRateNumber} disabled={currentUserRateNumber != 0 ? true : false} onChange={(value) => postCoourseRate(id, value) }/>
-        <div className={style.yourRate}> امتیاز بدید </div>
+        <div className={style.yourRate}> {t("Rate")} </div>
     </div>
 
   )

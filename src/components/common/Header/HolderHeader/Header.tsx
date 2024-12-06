@@ -9,7 +9,7 @@ import { identifier } from '../../../../core/services/Functions/ThemeIdentifier.
 const Header = () => {
     
     return (
-        <div className={style.header} data-theme={identifier("darkSmall","dark2Small")}>
+        <div className={style.header} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
                 <NotifAndModeHolder />
                 <NavBar />
                 <Logo />

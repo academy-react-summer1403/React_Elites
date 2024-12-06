@@ -6,7 +6,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Publisher = (props) => {
 
   return (
-    <div className={style.publisher} data-theme={identifier("dark","dark2")}>{props.pub}</div>
+    <div className={style.publisher} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{props.pub}</div>
   )
 }
 

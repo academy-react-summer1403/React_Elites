@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component'
 import { getPaymentList } from '../../../core/services/api/getPaymentList';
 import { columnPayment } from './column';
+import { useTranslation } from 'react-i18next';
 
 const Payment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [paymentList, setpaymentList] = useState([])
-
+  const { t } = useTranslation();
   const getPaymentListCall = async () => {
     let res = await getPaymentList()
     setpaymentList(res)
@@ -34,7 +35,7 @@ const Payment = () => {
   return (
     <div className={style.payment}>
       <div className={style.seePaymentHolder}>
-        <div onClick={showModal} className={style.seePayment} > مشاهده لیست </div>
+        <div onClick={showModal} className={style.seePayment} > {t("ViewList")} </div>
       </div>
         <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           <DataTable

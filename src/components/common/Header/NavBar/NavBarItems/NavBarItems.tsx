@@ -16,10 +16,10 @@ const NavBarItems = () => {
   return (
     <div className={style.container}>
             
-        <NavLink to="/about-We" className={isAboutUs ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("aboutUs")} </NavLink>
-        <NavLink to="/Blogs-List" className={isBlog ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("blogs")} </NavLink>
-        <NavLink to="/Courses-List" className={isCourse ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("courses")} </NavLink>
-        <NavLink to="/" className={isLanding ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG")}>  {t("home")} </NavLink>    
+        <NavLink to="/about-We" className={isAboutUs ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("aboutUs")} </NavLink>
+        <NavLink to="/Blogs-List" className={isBlog ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("blogs")} </NavLink>
+        <NavLink to="/Courses-List" className={isCourse ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("courses")} </NavLink>
+        <NavLink to="/" className={isLanding ? style.selected : style.items} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>  {t("home")} </NavLink>    
     </div>
   )
 }

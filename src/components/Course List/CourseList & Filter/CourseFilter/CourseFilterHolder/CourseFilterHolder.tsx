@@ -6,7 +6,7 @@ import { identifier } from '../../../../../core/services/Functions/ThemeIdentifi
 const CourseFilterHolder = ({categoryId, setlength, setcourseType, setTeacherId, minValueBining, maxValueBining, maxValue, minValue, set_minValue, set_maxValue, setApplyFilter, applyFilter, setLevelId, setSearchValue, setIsSearched, searchValue, isSearched, setcategoryId}) => {
 
   return (
-    <div className={style.filterHolder} data-theme={identifier("darkSmall","dark2Small")}>
+    <div className={style.filterHolder} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
       <FilterItemsHolder
       categoryId={categoryId}
       setlength={setlength}

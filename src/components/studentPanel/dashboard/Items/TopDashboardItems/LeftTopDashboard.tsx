@@ -9,7 +9,7 @@ const LeftTopDashboard = ({user}) => {
   return (
 
     <div className={style.leftTopDashboard}>
-      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("HiIAm")}  {user.fName} <br />{user.userAbout} </h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("HiIAm")}  {user.fName} <br />{user.userAbout} </h1>
     </div>
   )
 }

@@ -8,7 +8,7 @@ import { PublisherName } from './PublisherName';
 const Teacher = ({teacher, isLoading}) => {
 
   return (
-    <div className={style.Teacher} data-theme={identifier("dark","dark2")}>
+    <div className={style.Teacher} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
       <PublisherTitle />
       <PublisherName isLoading={isLoading} teacher={teacher} />
     </div>

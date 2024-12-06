@@ -31,7 +31,7 @@ const SortBlogList = ({ setSortModal, setFilterModal, filterModal, sortModal, se
         setapplySort={setapplySort}
         setCol={setCol}
        />
-        <div data-theme={identifier("darkClearSort","darkClearSort2")} className={styleBlogList.clearSort} onClick={() => {
+        <div data-theme={identifier("darkClearSort","darkClearSort2","greenClearSort","pinkClearSort","blueClearSort","redClearSort")} className={styleBlogList.clearSort} onClick={() => {
         setisClicked1(false)
         setisClicked2(false)
         setapplySort(false)

@@ -8,7 +8,7 @@ const LogInOrRegister = () => {
   const {t} = useTranslation();
 
   return (
-    <NavLink to="/auth/Login" className={style.container} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("LoginOrRegister")}</NavLink>
+    <NavLink to="/auth/Login" className={style.container} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("LoginOrRegister")}</NavLink>
   )
 }
 

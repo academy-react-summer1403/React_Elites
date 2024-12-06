@@ -9,8 +9,8 @@ const Mentors = (props) => {
   return (
     <div className={style.container}>
       <div className={style.mentors}></div>
-      <div className={style.teacherCount}  data-theme={identifier("dark","dark2")}> + {props.teacherCount.teacherCount} </div>
-      <div className={style.title}  data-theme={identifier("dark","dark2")}>{t("BestTeacherBanner")}</div>
+      <div className={style.teacherCount}  data-theme={identifier("dark","dark2","green","pink","blue","red")}> + {props.teacherCount.teacherCount} </div>
+      <div className={style.title}  data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("BestTeacherBanner")}</div>
     </div>
   )
 }

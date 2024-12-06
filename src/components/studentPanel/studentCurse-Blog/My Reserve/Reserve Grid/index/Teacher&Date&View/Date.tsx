@@ -51,7 +51,7 @@ const Date = ({date}) => {
     return dateMiladii;
   }
   return (
-    <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG")}>{dateConvertor(date)}</div>
+    <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{dateConvertor(date)}</div>
   )
 }
 

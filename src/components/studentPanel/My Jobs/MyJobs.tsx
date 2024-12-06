@@ -9,6 +9,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { postJob } from '../../../core/services/api/StudentPanel/Jobs/postJob';
 import toast, { Toaster } from 'react-hot-toast';
 import * as yup from "yup";
+import { useTranslation } from 'react-i18next';
 
 const MyJobs = () => {
   const [isLoading, setisLoading] = useState(true)
@@ -56,14 +57,14 @@ const MyJobs = () => {
         toast.success('شغل شما اضافه شد')
     }
   }
-  
+  const { t } = useTranslation();
   
   return (
     <div className={style.page2}>
         <Toaster />
         <div className={style.containerTitle}>
-        <div className={style.title}> شغل ها </div>
-        <Button className={style.button} icon={<AppstoreAddOutlined />} size='large' color='primary' onClick={showModal}> افزودن </Button>
+        <div className={style.title}> {t("jobs")} </div>
+        <Button className={style.button} icon={<AppstoreAddOutlined />} size='large' color='primary' onClick={showModal}> {t("add")} </Button>
         <Modal className={style.modal} closeIcon={null} footer={null} width={700} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <Formik
                 initialValues={{
@@ -81,41 +82,41 @@ const MyJobs = () => {
             >
             <Form>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> عنوان کار </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("jobsTitle")} </label>
             <Field className={style.input} name="jobTitle" />
             <ErrorMessage name="jobTitle" component={"p"} className="error" />
             </div>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> توضیحات </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("Description")} </label>
             <Field className={style.input} name="aboutJob" />
             <ErrorMessage name="aboutJob" component={"p"} className="error" />
             </div>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> سایت شرکت </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("siteCompany")} </label>
             <Field className={style.input} name="companyWebSite" />
             <ErrorMessage name="companyWebSite" component={"p"} className="error" />
             </div>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> نام شرکت </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("nameCompany")} </label>
             <Field className={style.input} name="companyName" />
             <ErrorMessage name="companyName" component={"p"} className="error" />
             </div>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> لینکدین شرکت </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("LinkedInCompany")} </label>
             <Field className={style.input} name="companyLinkdin" />
             <ErrorMessage name="companyLinkdin" component={"p"} className="error" />
             </div>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> تاریخ شروع </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("dateStart")} </label>
             <Field className={style.input} name="workStartDate" />
             <ErrorMessage name="workStartDate" component={"p"} className="error" />
             </div>
             <div className={style.inputHolder}>
-            <label className="text-base font-DannaDemiBold text-black pb-3"> تاریخ پایان </label>
+            <label className="text-base font-DannaDemiBold text-black pb-3"> {t("dateEnd")} </label>
             <Field className={style.input} name="workEndDate" />
             <ErrorMessage name="workEndDate" component={"p"} className="error" />
             </div>
-            <button className={style.addWork} type='submit'> ثبت </button>
+            <button className={style.addWork} type='submit'> {t("record")} </button>
             </Form>
             </Formik>
         </Modal>

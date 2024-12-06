@@ -14,7 +14,7 @@ const TopItems = ({setSortModal, applySort, setapplySort, setSortType, setCol}) 
     <>
     <div className={style.container1}>
     <div className={style.closeBtn} onClick={() => setSortModal(false)}> بستن </div>
-      <div className={style.clearSort} data-theme={identifier("darkClearSort","darkClearSort2")} onClick={() => {
+      <div className={style.clearSort} data-theme={identifier("darkClearSort","darkClearSort2","greenClearSort","pinkClearSort","blueClearSort","redClearSort")} onClick={() => {
         setapplySort(false)
         setIsClicked1(false)
         setIsClicked2(false)
@@ -23,7 +23,7 @@ const TopItems = ({setSortModal, applySort, setapplySort, setSortType, setCol}) 
       }}>
       </div>
     </div>
-      <div className={isClicked1 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small")} onClick={() => {
+      <div className={isClicked1 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} onClick={() => {
         setCol("insertDate")
         setapplySort(true)
         setIsClicked1(!isClicked1)
@@ -35,7 +35,7 @@ const TopItems = ({setSortModal, applySort, setapplySort, setSortType, setCol}) 
         }
         setSortType("DESC")
       }}>{t("newest")}</div>
-      <div className={isClicked2 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small")} onClick={() => {
+      <div className={isClicked2 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} onClick={() => {
         setCol("insertDate")
         setapplySort(true)
         setIsClicked1(false)
@@ -44,7 +44,7 @@ const TopItems = ({setSortModal, applySort, setapplySort, setSortType, setCol}) 
         setIsClicked4(false)
         setSortType("ASC")
       }}> {t("oldest")} </div>
-      <div className={isClicked3 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small")} onClick={() => {
+      <div className={isClicked3 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} onClick={() => {
         setCol("Cost")
         setapplySort(true)
         setIsClicked1(false)
@@ -53,7 +53,7 @@ const TopItems = ({setSortModal, applySort, setapplySort, setSortType, setCol}) 
         setIsClicked4(false)
         setSortType("DESC")
       }}> {t("mostExpensive")}</div>
-      <div className={isClicked4 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small")} onClick={() => {
+      <div className={isClicked4 ? style.selected : style.categories} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} onClick={() => {
         setCol("Cost")
         setapplySort(true)
         setIsClicked1(false)

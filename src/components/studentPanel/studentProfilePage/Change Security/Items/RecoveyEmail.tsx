@@ -13,8 +13,8 @@ const RecoveryEmail = () => {
 
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={identifier("darkNoBG","dark2NoBG")}> {t("BackupEmail")} </h1>
-                <Field name="recoveryEmail" className={styleInform.Input} data-theme={identifier("dark","dark2")} />
+                <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("BackupEmail")} </h1>
+                <Field name="recoveryEmail" className={styleInform.Input} data-theme={identifier("dark","dark2","green","pink","blue","red")} />
             </div>
         </div>
 

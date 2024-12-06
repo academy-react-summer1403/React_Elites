@@ -8,8 +8,8 @@ const LoginAccount = () => {
 
   return (
 
-    <div data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.LoginAccount}>
-      <button data-theme={identifier("darkSmall","dark2Small")} type="submit">{t("loginAccount")}</button>
+    <div data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} className={styleLogin.LoginAccount}>
+      <button data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} type="submit">{t("loginAccount")}</button>
     </div>
 
   )

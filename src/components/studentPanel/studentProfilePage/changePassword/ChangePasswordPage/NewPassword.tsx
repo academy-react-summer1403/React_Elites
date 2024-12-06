@@ -16,8 +16,8 @@ const NewPassword = () => {
 
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("NewPassword")}</h1>
-                <Field name="newPassword" className={styleInform.Input} placeholder={t("enterNewPassword")} data-theme={identifier("dark","dark2")} />
+                <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("NewPassword")}</h1>
+                <Field name="newPassword" className={styleInform.Input} placeholder={t("enterNewPassword")} data-theme={identifier("dark","dark2","green","pink","blue","red")} />
                 <ErrorMessage name="newPassword" component={"p"} className="error" />
             </div>
         </div>
