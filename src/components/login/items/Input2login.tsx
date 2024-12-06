@@ -8,7 +8,7 @@ import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const Input2login = () => {
   const { t } = useTranslation();
 
-  const [isPass, setisPass] = useState(false)
+  const [isPass, setisPass] = useState(true)
 
   return (
 
