@@ -8,7 +8,7 @@ const Comments = ({comment, isLoading}) => {
   const { t } = useTranslation();
   return (
     <>
-    {isLoading ? <ClipLoader /> : <div className={style.comments} data-theme={identifier("dark","dark2","green","pink","blue","red")}> {t("comment")} ({comment})  + </div>}
+    {isLoading ? <ClipLoader /> : <div className={style.comments}> {t("comment")} ({comment})  + </div>}
     </>
   )
 }
