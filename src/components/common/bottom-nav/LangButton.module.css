@@ -22,37 +22,37 @@
 .theme1{
     width: 20px;
     height: 20px;
-    background: red;
+    background: #6C0345;
     border-radius: 100%;
 }
 .theme2{
     width: 20px;
     height: 20px;
-    background: green;
+    background: #1F4529;
     border-radius: 100%;
 }
 .theme3{
     width: 20px;
     height: 20px;
-    background: yellow;
+    background: #181C14;
     border-radius: 100%;
 }
 .theme4{
     width: 20px;
     height: 20px;
-    background: blue;
+    background: #89A8B2;
     border-radius: 100%;
 }
 .theme5{
     width: 20px;
     height: 20px;
-    background: purple;
+    background: #7469B6;
     border-radius: 100%;
 }
 .theme6{
     width: 20px;
     height: 20px;
-    background: black;
+    background: #202020;
     border-radius: 100%;
 }
 .holderPalette{
