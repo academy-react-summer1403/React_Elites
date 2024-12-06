@@ -11,7 +11,7 @@ const TopStatusDashboard = () => {
   return (
 
     <div className={style.topStatusDashboard}>
-      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("StatusDashboard")}</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("StatusDashboard")}</h1>
       <NavLink to='/Student-Panel/Information'> </NavLink>
     </div>
 

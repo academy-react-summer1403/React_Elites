@@ -15,8 +15,8 @@ const LastPassword = () => {
     return (
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("CurrentPassword")}</h1>
-                <Field name="oldPassword" className={styleInform.Input} placeholder={t("enterCurrentPassword")} data-theme={identifier("dark","dark2")} />
+                <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("CurrentPassword")}</h1>
+                <Field name="oldPassword" className={styleInform.Input} placeholder={t("enterCurrentPassword")} data-theme={identifier("dark","dark2","green","pink","blue","red")} />
                 <ErrorMessage name="oldPassword" component={"p"} className="error" />
             </div>
         </div>

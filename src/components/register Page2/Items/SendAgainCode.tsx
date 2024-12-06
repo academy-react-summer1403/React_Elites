@@ -9,7 +9,7 @@ const SendAgainCode = () => {
   return (
 
     <div className={styleLogin.sendAgain}>
-      <button data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.sendAgainButton} type="submit">ارسال مجدد کد تایید 01:00</button>
+      <button data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} className={styleLogin.sendAgainButton} type="submit">ارسال مجدد کد تایید 01:00</button>
     </div>
 
   )

@@ -10,7 +10,7 @@ const StatusDashboard = ({percentage}) => {
 
   return (
 
-    <div className={style.statusDashboard} data-theme={identifier("dark","dark2")}>
+    <div className={style.statusDashboard} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
       <TopStatusDashboard />
       <MiddleStatusDashboard percentage={percentage} />
       <BottomStatusDashboard />

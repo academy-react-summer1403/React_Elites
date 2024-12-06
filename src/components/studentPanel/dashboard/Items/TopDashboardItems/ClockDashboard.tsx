@@ -31,8 +31,8 @@ const ClockDashboard = () => {
     <div className={style.clock}>
       <div className={style.icon}></div>
       <div className={style.clockItem}>
-        <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("Clock")}</p>
-        <h1 className="DannaM" data-theme={identifier("darkNoBG","dark2NoBG")}>{time}</h1>
+        <p className="DannaM" data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("Clock")}</p>
+        <h1 className="DannaM" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{time}</h1>
       </div>
     </div>
   )

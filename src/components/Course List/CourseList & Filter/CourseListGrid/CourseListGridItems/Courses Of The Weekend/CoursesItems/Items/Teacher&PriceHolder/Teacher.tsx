@@ -5,7 +5,7 @@ import { identifier } from '../../../../../../../../../core/services/Functions/T
 const Teacher = (props) => {
 
   return (
-    <div className={style.teacher} data-theme={identifier("dark","dark2")}>{props.teacher}</div>
+    <div className={style.teacher} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{props.teacher}</div>
   )
 }
 

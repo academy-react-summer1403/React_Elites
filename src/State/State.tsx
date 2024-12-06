@@ -3,6 +3,10 @@ import { createGlobalState } from "react-hooks-global-state";
 const { useGlobalState} = createGlobalState({
     DarkMode: false,
     DarkMode2: false,
+    GreenMode: false,
+    PinkMode: false,
+    BlueMode: false,
+    RedMode: false,
     isLogin: false,
     userId: '',
     phoneNumber: "",

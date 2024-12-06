@@ -17,7 +17,7 @@ const CardBlogs = (props) => {
         <Date date={props.date} />
         <Date date={props.date} />
         <Level level={props.level}/>
-        <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view","view2")}></NavLink>
+        <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view","view2","view3","view4","view5","view6")}></NavLink>
     </div>
   )
 }

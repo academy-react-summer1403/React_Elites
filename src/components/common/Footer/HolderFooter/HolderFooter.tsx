@@ -11,8 +11,8 @@ const HolderFooter = () => {
 
   return (
     <>
-    <div className={style.footerFix} data-theme={identifier("dark","dark2")}>
-        <div className={style.footerContainer} data-theme={identifier("dark","dark2")}>
+    <div className={style.footerFix} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
+        <div className={style.footerContainer} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
             <NavBarHolderRes />
             <SocialMedias />
             <NavBarHolder />

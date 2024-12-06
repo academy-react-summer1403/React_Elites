@@ -5,7 +5,7 @@ import { identifier } from '../../../../../../../../core/services/Functions/Them
 const Views = (props) => {
 
   return (
-    <div className={style.views} data-theme={identifier("ViewBlog","ViewBlog2")}>{props.views}</div>
+    <div className={style.views} data-theme={identifier("ViewBlog","ViewBlog2","ViewBlog3","ViewBlog4","ViewBlog5","ViewBlog6")}>{props.views}</div>
   )
 }
 

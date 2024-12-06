@@ -10,8 +10,8 @@ const ReturnLogin2 = () => {
   return (
 
     <div className={styleLogin.returnHolder}>
-      <div  data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.return}>
-        <NavLink  data-theme={identifier("darkNoBG","dark2NoBG")} to="/Auth/Login"> {t("return")} &gt;</NavLink>
+      <div  data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} className={styleLogin.return}>
+        <NavLink  data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} to="/Auth/Login"> {t("return")} &gt;</NavLink>
       </div>
     </div>
 

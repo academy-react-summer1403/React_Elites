@@ -9,8 +9,8 @@ const AboutWeDesc = (props) => {
   const { t } = useTranslation();
   return (
     <div className={style.holderGap}>
-      <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("aboutUsDesc1")}</p>
-      <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("aboutUsDesc2")}</p>
+      <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc1")}</p>
+      <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc2")}</p>
     </div>
   )
 }

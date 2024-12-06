@@ -3,12 +3,13 @@ import style from './style.module.css'
 import { addToFav } from '../../../../../../core/services/api/postNewsFav'
 import toast, { Toaster } from 'react-hot-toast'
 import { useGlobalState } from '../../../../../../State/State'
+import { useTranslation } from 'react-i18next'
 
 
 const AddToFavourite = ({id}) => {
   const [isFavouriteBlog, setisCurrentUserFavorite] = useGlobalState('isFavouriteBlog');
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
-
+  const { t } = useTranslation();
 
   const addToFavCall = async (newsId) => {
     let res = await addToFav(newsId);

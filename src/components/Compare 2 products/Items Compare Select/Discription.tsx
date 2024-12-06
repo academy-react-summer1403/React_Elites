@@ -4,15 +4,15 @@ import React, { useEffect, useState } from 'react'
 
 import { identifier } from "../../../core/services/Functions/ThemeIdentifier";
 const Discription = ({ discription, discription2 }) => {
-
+  const { t } = useTranslation();
 
 
   return (
     <div className={style.Discription}>
-      <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>سایر توضیحات</h1>
+      <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("moreDesc")}</h1>
       <div className={style.DiscriptionCompare}>
-        <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{discription}</div>
-        <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{discription2}</div>
+        <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{discription}</div>
+        <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{discription2}</div>
       </div>
     </div>
   )

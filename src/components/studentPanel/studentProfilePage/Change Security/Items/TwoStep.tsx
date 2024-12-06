@@ -15,8 +15,8 @@ const TwoStep = ({twoStep, settwoStep}) => {
     return (
         <div className={styleInform.location}>
             <div className={styleInform.bigDiv}>
-                <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("Two-stepLogin")}</h1>
-                <input checked={twoStep ? true : false} onChange={() => settwoStep(!twoStep)} className={styleInform.checkBox} type="checkbox" data-theme={identifier("dark","dark2")} />
+                <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("Two-stepLogin")}</h1>
+                <input checked={twoStep ? true : false} onChange={() => settwoStep(!twoStep)} className={styleInform.checkBox} type="checkbox" data-theme={identifier("dark","dark2","green","pink","blue","red")} />
             </div>
         </div>
 

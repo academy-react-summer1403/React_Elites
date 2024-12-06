@@ -11,8 +11,9 @@ import { PayButtonHolder } from './payButtonHolder'
 import { NavLink } from 'react-router-dom'
 import { Date } from './Date'
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier'
+import { useTranslation } from 'react-i18next'
 const Courses = ({ id, reserverDate }) => {
-
+  const { t } = useTranslation();
   const [courseDetail, setcourseDetail] = useState({})
   const [courseList, setCourseList] = useState([]);
 
@@ -26,14 +27,14 @@ const Courses = ({ id, reserverDate }) => {
   }, [])
 
   return (
-    <div className={style.coursesHolder} data-theme={identifier("darkNoBG","dark2NoBG")}>
+    <div className={style.coursesHolder} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <div className={style.PriceAndPayHolder}>
         <Price cost={courseDetail.cost} />        
         <PayButtonHolder id={courseDetail.courseId} />
       </div>
       <div className={style.DateHolder}>
-        <Date title="تاریخ اتمام :" Date={courseDetail?.startTime} />
-        <Date title="تاریخ شروع :" Date={courseDetail?.endTime} />  
+        <Date title={t("CompletionDate")} Date={courseDetail?.startTime} />
+        <Date title={t("dateStart")} Date={courseDetail?.endTime} />  
       </div>
       <NavLink to={"/Course-Detail/" +courseDetail.courseId} className={style.TitleAndImageHolder}>
         <Title title={courseDetail.title} status={courseDetail?.courseStatusName} />

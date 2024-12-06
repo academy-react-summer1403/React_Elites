@@ -11,8 +11,8 @@ const SendCode = () => {
 
   return (
 
-    <div data-theme={identifier("darkSmall","dark2Small")} className={styleLogin.LoginAccount}>
-      <button data-theme={identifier("darkNoBG","dark2NoBG")}  type="submit">{t("sendCodeRegister")}</button>
+    <div data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} className={styleLogin.LoginAccount}>
+      <button data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}  type="submit">{t("sendCodeRegister")}</button>
     </div>
 
   )

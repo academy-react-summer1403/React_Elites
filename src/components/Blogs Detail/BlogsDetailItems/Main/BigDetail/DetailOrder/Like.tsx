@@ -5,9 +5,10 @@ import toast, { Toaster } from 'react-hot-toast'
 
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier'
 import { useGlobalState } from '../../../../../../State/State'
+import { useTranslation } from 'react-i18next'
 const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
-
+  const { t } = useTranslation();
 
   const likeNewsCall = async (id) => {
     let res = await likeNews(id)
@@ -21,7 +22,7 @@ const Like = ({isClicked, setIsClicked2, setIsClicked, id}) => {
   return (
     <>
     <Toaster />
-    <div data-theme={identifier("darkLikeDetail","darkLikeDetail2")} className={isClicked ? style.liked : style.like} onClick={() => {
+    <div data-theme={identifier("darkLikeDetail","darkLikeDetail2","greenLikeDetail","pinkLikeDetail","blueLikeDetail","redLikeDetail")} className={isClicked ? style.liked : style.like} onClick={() => {
       likeNewsCall(id)
       setIsClicked2(false)
       setIsClicked(true)

@@ -8,7 +8,7 @@ const Title = ({setClicked}) => {
 
   return (
     <div className={style.titleAndClose}>
-          <div className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("filter")}</div>
+          <div className={style.title} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("filter")}</div>
           <div className={style.close} onClick={() => setClicked(false)}></div>
     </div>
   )

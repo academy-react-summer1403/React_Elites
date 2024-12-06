@@ -8,7 +8,7 @@ const TitleSortBlogs = () => {
   const { t } = useTranslation();
   return (
     <>
-      <h1 className={styleBlogList.sortingTitle} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("order")}</h1>
+      <h1 className={styleBlogList.sortingTitle} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("order")}</h1>
     </>
   )
 }

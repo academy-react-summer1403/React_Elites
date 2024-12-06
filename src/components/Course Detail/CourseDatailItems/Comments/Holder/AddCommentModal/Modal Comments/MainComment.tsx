@@ -8,12 +8,14 @@ import { Field, Formik, Form } from 'formik'
 import { postCourseReplyComment } from '../../../../../../../core/services/api/postCourseReplyComment'
 import { dateConvertor } from '../../../../../../../core/services/Functions/DateMiladi'
 import { useGlobalState } from '../../../../../../../State/State'
+import { useTranslation } from 'react-i18next'
 
 
 const MainComment = ({title, currentUserEmotion, pictureAddress, describe, author, dissLikeCount, likeCount, insertDate, id}) => {
     const [replyComment, setreplyComment] = useState(false)
     const [isReplying, setIsReplying] = useGlobalState('isReplying');
     const [commentId, setCommentId] = useGlobalState('courseCommentId');
+    const { t } = useTranslation();
 
     return (
     <>
@@ -49,7 +51,7 @@ const MainComment = ({title, currentUserEmotion, pictureAddress, describe, autho
             <div  className={style.reply} onClick={() => {
                 setIsReplying(!isReplying)
                 setCommentId(id)
-                }}> جواب دادن </div>
+                }}> {t("answer")} </div>
         </div>
     </div>
     </>

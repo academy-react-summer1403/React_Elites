@@ -15,8 +15,8 @@ const Location = () => {
         <>
             <div className={styleInform.location}>
                 <div className={styleInform.bigDiv}>
-                    <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("addressInform")}</h1>
-                    <Field name="homeAdderess" className={styleInform.Input} placeholder={t("enterAddress")} data-theme={identifier("dark","dark2")} />
+                    <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("addressInform")}</h1>
+                    <Field name="homeAdderess" className={styleInform.Input} placeholder={t("enterAddress")} data-theme={identifier("dark","dark2","green","pink","blue","red")} />
                 </div>
             </div>
 

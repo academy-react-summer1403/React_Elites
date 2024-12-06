@@ -6,12 +6,14 @@ import style from './SeachModal.module.css'
 import { CardModal } from './Card';
 import { allCourseListSearch } from '../../../core/services/api/AllCourseListSearch';
 import { identifier } from '../../../core/services/Functions/ThemeIdentifier';
+import { useTranslation } from 'react-i18next';
 const SearchModal = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("")
   const [courseList, setCourseList] = useState([]);
   const [isLoading, setisLoading] = useState(true)
+  const { t } = useTranslation();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -41,21 +43,21 @@ const SearchModal = () => {
   return (
     <>
       <div className={style.titleHeaderMyCourseList}>
-        <div data-theme={identifier("darkSearch")} className={style.SearchHeader} onClick={showModal}> </div>
+        <div data-theme={identifier("darkSearch","dark2Search","greenSearch","pinkSearch","blueSearch","redSearch")} className={style.SearchHeader} onClick={showModal}> </div>
         <Modal className={style.modal} closeIcon={null} footer={null} width={851} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} style={{overflow: "scroll", height: "600px",background:"none"}}>
-          <div data-theme={identifier("dark","dark2")} className={s.titleHolder}>
-            <div className={s.close}> بستن </div>
+          <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={s.titleHolder}>
+            <div className={s.close}> {t("close")} </div>
             <div className={s.blogOrCourse}>
-              <div className={s.courses}> دوره ها </div>
+              <div className={s.courses}> {t("courses")} </div>
             </div>
-            <div data-theme={identifier("darkNoBG","dark2NoBG")} className={s.title}>: جستجو در </div>
+            <div data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} className={s.title}>: {t("searchIn")} </div>
           </div>
-          <div data-theme={identifier("dark","dark2")} className={style.InputSearchHolder}>
-            <input data-theme={identifier("darkSmall","dark2Small")}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
+          <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={style.InputSearchHolder}>
+            <input data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}  placeholder='جستجو کنید' className={style.InputSearchModal} onChange={(e) => {
               setSearchValue(e.target.value)
             }} />
           </div>
-          <div data-theme={identifier("dark","dark2")} className={style.holderCards}>
+          <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={style.holderCards}>
             {courseList.map((item, index) => {
               return (
                 <CardModal
@@ -65,7 +67,7 @@ const SearchModal = () => {
                   desc={item.describe}
                   image={item.tumbImageAddress}
                   NavLinkTitle="/Course-Detail/"
-                  NavTitle="دوره"
+                  NavTitle={t("courses")}
                 />
               )
             })}

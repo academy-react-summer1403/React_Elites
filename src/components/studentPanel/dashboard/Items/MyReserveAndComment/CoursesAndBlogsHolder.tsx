@@ -13,11 +13,11 @@ const CoursesAndBlogsHolder = ({courseCommentt}) => {
 
   return (
 
-    <div className={style.CoursesAndBlogsHolder} data-theme={identifier("darkNoBG","dark2NoBG")}>
+    <div className={style.CoursesAndBlogsHolder} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
       <div className={style.CoursesAndBlogsLine}></div>
-      <h1 className={style.CoursesAndBlogsSt} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("BlogsAndCourses")} </h1>
+      <h1 className={style.CoursesAndBlogsSt} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("BlogsAndCourses")} </h1>
       <div className={style.CoursesAndBlogsLine}></div>
-      <div data-theme={identifier("dark","dark2")} className={s.holderCommentsD}>
+      <div data-theme={identifier("dark","dark2","green","pink","blue","red")} className={s.holderCommentsD}>
       {courseCommentt.map((item, index) => {
         return(
           <CommentMain

@@ -10,7 +10,7 @@ const TitleHeaderMyCourseList = () => {
   return (
 
     <div className={style.titleHeaderMyCourseList}>
-      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("myCourse")}</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("myCourse")}</h1>
       <NavLink to='/Student-Panel/My-courses'>{t("ButtonViewAll")}</NavLink>
     </div>
   )

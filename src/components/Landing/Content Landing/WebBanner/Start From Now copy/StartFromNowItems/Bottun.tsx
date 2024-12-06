@@ -7,7 +7,7 @@ const Bottun = () => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.Button}  data-theme={identifier("darkSmall","dark2Small")}> {t("NewCourses")} </div>
+    <div className={style.Button}  data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}> {t("NewCourses")} </div>
   )
 }
 

@@ -6,8 +6,8 @@ const Title = ({ title,status }) => {
 
   return (
     <div className={style.titleAndStatus}>
-      <div className={style.titleCourse} data-theme={identifier("darkNoBG","dark2NoBG")}>{title}</div>
-      <div className={style.status} data-theme={identifier("darkNoBG","dark2NoBG")}>{status}</div>
+      <div className={style.titleCourse} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{title}</div>
+      <div className={style.status} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{status}</div>
     </div>
   )
 }

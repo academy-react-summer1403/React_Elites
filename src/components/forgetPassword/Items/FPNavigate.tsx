@@ -9,12 +9,12 @@ const ForgetPassNavigate = () => {
     <div className={styleLogin.navigate}>
       <div className={styleLogin.select}>
         <div>  </div>
-        <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("enterEmail")} </h1>
+        <h1 data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("enterEmail")} </h1>
       </div>
       <div>
         <div>  </div>
-        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("confirmCodeTitle")} </h1>
-        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}> {t("confirmCodeDesc")}</h1>
+        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("confirmCodeTitle")} </h1>
+        <h1 data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}> {t("confirmCodeDesc")}</h1>
       </div>
     </div>
   )

@@ -13,10 +13,10 @@ const CategoryFilter = ({setCategoryId, categoryId, categoryList}) => {
   return (
     <div className={styleFilter.filterDetail}>
         <div className={styleFilter.Flex}>
-            <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgCategory}`} data-theme={identifier("categoryBlogFilter","categoryBlogFilter2")}/> 
-            <p className={styleFilter.filterText} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("category")} </p>
+            <div className={`${styleFilter.filterTextImg} ${styleFilter.filterImgCategory}`} data-theme={identifier("categoryBlogFilter","categoryBlogFilter2","categoryBlogFilter3","categoryBlogFilter4","categoryBlogFilter5","categoryBlogFilter6")}/> 
+            <p className={styleFilter.filterText} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("category")} </p>
         </div>
-        <div className={styleFilter.filterCategory} data-theme={identifier("dark","dark2")}>  {t("CategoryBlogs")}
+        <div className={styleFilter.filterCategory} data-theme={identifier("dark","dark2","green","pink","blue","red")}>  {t("CategoryBlogs")}
             <div className={isClicked ? styleFilter.arrowUp : styleFilter.arrowDown} onClick={() => setIsClicked(!isClicked)}></div>
             {isClicked && 
             <div className={styleFilter.filterBox}>

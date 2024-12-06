@@ -43,7 +43,7 @@ const ReserveCards = (props) => {
         <Date date={courseDetail.endTime} />
         <Status status={courseDetail.isCourseUser}/>
         <div className={style.closeAndViewHolder}>
-          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view","view2")}></NavLink>
+          <NavLink to={"/Course-Detail/" + props.id} className={style.View} data-theme={identifier("view","view2","view3","view4","view5","view6")}></NavLink>
           <span className={style.Close} onClick={() => deleteCourseReserveCall()} ></span>
         </div>
     </div>

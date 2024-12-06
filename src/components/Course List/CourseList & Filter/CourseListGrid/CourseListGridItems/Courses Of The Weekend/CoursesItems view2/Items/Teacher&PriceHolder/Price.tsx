@@ -7,7 +7,7 @@ const Price = (props) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.price} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{props.price} {t("toman")}</div>
+    <div className={style.price} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{props.price} {t("toman")}</div>
   )
 }
 

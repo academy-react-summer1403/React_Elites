@@ -5,6 +5,7 @@ import { getCourseById } from '../../../core/services/api/courseById'
 import { dateConvertor } from '../../../core/services/Functions/DateMiladi'
 import { Factor } from './Factor'
 import style from './Payment.module.css'
+import { useTranslation } from 'react-i18next'
 
 // ** Table columns 
 
@@ -21,7 +22,7 @@ export const columnPayment = [
       useEffect(() => {
         courseDetail()
       }, [])
-
+      const { t } = useTranslation();
       return (
         <div className={style.FactorHolder}>
           <NavLink className={style.FactorNavLink} to={"/Course-Detail/" +course.courseId}>

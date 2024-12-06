@@ -63,17 +63,17 @@ const ImageForm = () => {
             <>
                 <Toaster />
                     <div className={style.titleHolder}>
-                        <h1 className={style.title} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("myProfile")}</h1>
+                        <h1 className={style.title} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("myProfile")}</h1>
                     </div>
                     <div className={styleImage.page2}>
-                        <div className={styleInform.rightHolder} data-theme={identifier("darkNoBG","dark2NoBG")}>
+                        <div className={styleInform.rightHolder} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>
                             <div className={styleInform.right}>
-                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("informationAccount")} </NavLink>
+                                <NavLink to="/Student-Panel/Information" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("informationAccount")} </NavLink>
                                 <div><h1 className={styleImage.selected}>{t("images")} </h1></div>
-                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("placeInform")} </NavLink>
-                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("links")} </NavLink>
-                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("ChangePassword")} </NavLink>
-                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG")}> {t("UserSettings")}  </NavLink>   
+                                <NavLink to="/Student-Panel/Location" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("placeInform")} </NavLink>
+                                <NavLink to='/Student-Panel/Link' className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("links")} </NavLink>
+                                <NavLink to="/Student-Panel/changePassword" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("ChangePassword")} </NavLink>
+                                <NavLink to="/Student-Panel/change-security" className={styleInform.pages} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("UserSettings")}  </NavLink>   
                             </div>
                         </div>
                         <div className={styleImage.imagesHolder}>

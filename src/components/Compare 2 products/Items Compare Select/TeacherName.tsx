@@ -9,10 +9,10 @@ const TeacherName = ({ teacherName, teacherName2 }) => {
 
   return (
     <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>نام استاد</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("teacherName")}</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{teacherName}</div>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{teacherName2}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{teacherName}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{teacherName2}</div>
         </div>
       </div>
   )

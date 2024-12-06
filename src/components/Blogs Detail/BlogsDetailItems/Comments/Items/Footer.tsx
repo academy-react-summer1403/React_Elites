@@ -5,9 +5,11 @@ import { likeComment } from '../../../../../core/services/api/postCommentBlogLik
 import toast, { Toaster } from 'react-hot-toast';
 import { dateConvertor } from '../../../../../core/services/Functions/DateMiladi';
 import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
+import { useTranslation } from 'react-i18next';
 const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, currentUserIsDissLike, currentUserIsLike, id}) => {
 
   const [renderLike, setrenderLike] = useState(false)
+  const { t } = useTranslation();
 
   const [isClicked, setisClicked] = useState(false)
   const [isClicked2, setisClicked2] = useState(false)
@@ -36,23 +38,23 @@ const Footer = ({autor, pictureAddress, dissLikeCount, likeCount, inserDate, cur
     <div className={style.footer}>
       <Toaster />
         <div className={style.likeAndDislikes}>
-            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}> {likeCount} </div>
-            <div data-theme={identifier("darkLikeDetail","darkLikeDetail2")} className={isClicked ? style.like : style.iconLike} onClick={() => {
+            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {likeCount} </div>
+            <div data-theme={identifier("darkLikeDetail","darkLikeDetail2","greenLikeDetail","pinkLikeDetail","blueLikeDetail","redLikeDetail")} className={isClicked ? style.like : style.iconLike} onClick={() => {
               likeSystem(id, true)
               setisClicked(true)
               setisClicked2(false)
             }}></div>
-            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG")}> {dissLikeCount} </div>
-            <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2")} className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
+            <div className={style.count} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {dissLikeCount} </div>
+            <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2","greenDisLikeDetail","pinkDisLikeDetail","blueDisLikeDetail","redDisLikeDetail")} className={isClicked2 ? style.dislike : style.iconDislike} onClick={() => {
               likeSystem(id, false)
               setisClicked(false)
               setisClicked2(true)
             }}></div>
         </div>
         <div className={style.user}>
-            <div className={style.username} data-theme={identifier("darkNoBG","dark2NoBG")}> {autor} </div>
+            <div className={style.username} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {autor} </div>
             <img className={style.profile} src={pictureAddress} />
-            <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG")}> {dateConvertor(inserDate)} </div>
+            <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {dateConvertor(inserDate)} </div>
         </div>
     </div>
   )

@@ -9,10 +9,10 @@ const Status = ({ status, status2 }) => {
 
   return (
     <div className={style.Discription}>
-        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>وضعیت</h1>
+        <h1 className={style.titleCompare} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>وضعیت</h1>
         <div className={style.DiscriptionCompare}>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{status}</div>
-          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG")}>{status2}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{status}</div>
+          <div className={style.discCompare} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{status2}</div>
 
         </div>
       </div>

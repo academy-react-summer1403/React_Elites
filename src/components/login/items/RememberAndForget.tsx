@@ -13,10 +13,10 @@ const RememberAndForget = () => {
 
     <div className={styleLogin.RememberAndForget}>
       <div>
-        <label  data-theme={identifier("darkNoBG","dark2NoBG")} htmlFor="rememberPassInput" >{t("rememberMe")}</label>
+        <label  data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")} htmlFor="rememberPassInput" >{t("rememberMe")}</label>
         <Field id="rememberPassInput" type="checkbox" name="rememberPass" />
       </div>
-      <NavLink data-theme={identifier("darkSmall","dark2Small")} to="/Auth/Forget-Password" className={styleLogin.forgetPasswordLogin}> {t("forgetPassword")}</NavLink>
+      <NavLink data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")} to="/Auth/Forget-Password" className={styleLogin.forgetPasswordLogin}> {t("forgetPassword")}</NavLink>
       <ErrorMessage name="rememberPass" component={"p"} className="error" />
     </div>
 

@@ -7,7 +7,7 @@ const SmallText = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.smallText}  data-theme={identifier("dark","dark2")}>{t("TeachLandingBannerSmall")}</div>
+    <div className={style.smallText}  data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("TeachLandingBannerSmall")}</div>
   )
 }
 

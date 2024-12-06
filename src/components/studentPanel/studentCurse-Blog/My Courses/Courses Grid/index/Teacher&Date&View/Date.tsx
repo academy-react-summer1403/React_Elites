@@ -6,7 +6,7 @@ import { identifier } from '../../../../../../../core/services/Functions/ThemeId
 const Date = (props) => {
 
   return (
-    <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG")}>{dateConvertor(props.date)}</div>
+    <div className={style.date} data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{dateConvertor(props.date)}</div>
   )
 }
 

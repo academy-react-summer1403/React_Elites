@@ -1,11 +1,12 @@
 import {useId, useState} from 'react'
 import style from '../../../../../Style/DarkOrLightMode.module.css'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 
 const Menu = () => {
   const [show, setShow] = useState(1)
-
+  const { t } = useTranslation();
   const showMenu = () => {
     const mainMenu = document.getElementById('mainMenu')
     if (show == 1) {
@@ -32,11 +33,11 @@ const Menu = () => {
           </div>
         </div>
         <div className={style.content}>
-          <NavLink to="/" className={style.nav}> خانه </NavLink>
-          <NavLink to="/Courses-List" className={style.nav} > دوره ها </NavLink>
-          <NavLink to="/Blogs-List" className={style.nav} > بلاگ ها </NavLink>
-          <NavLink to="/" className={style.nav} > درباره ما </NavLink>
-          <NavLink to="/" className={style.nav} > ارتباط با ما </NavLink>
+          <NavLink to="/" className={style.nav}> {t("home")} </NavLink>
+          <NavLink to="/Courses-List" className={style.nav} > {t("courses")} </NavLink>
+          <NavLink to="/Blogs-List" className={style.nav} > {t("blogs")} </NavLink>
+          <NavLink to="/about-We" className={style.nav} > {t("aboutUs")} </NavLink>
+          <NavLink to="/" className={style.nav} > {t("contactUs")} </NavLink>
         </div>
         <div className={style.footer}>
           <div className={style.twitter}></div> 

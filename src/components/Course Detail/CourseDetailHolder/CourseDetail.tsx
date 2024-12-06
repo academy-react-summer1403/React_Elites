@@ -57,7 +57,7 @@ const CourseDetail = () => {
 
 
   return (
-    <div className={style.body} data-theme={identifier("dark","dark2")}>
+    <div className={style.body} data-theme={identifier("dark","dark2","green","pink","blue","red")}>
       <div className={style.holder}>
         <Main
           isLoading={isLoading}

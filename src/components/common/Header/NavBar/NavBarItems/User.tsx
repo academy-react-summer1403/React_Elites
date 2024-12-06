@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from 'antd';
 import { removeItem } from '../../../../../core/services/storage/storage.services';
 import { useGlobalState } from '../../../../../State/State';
+import { identifier } from '../../../../../core/services/Functions/ThemeIdentifier';
 
 const User = () => {
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
@@ -20,7 +21,7 @@ const User = () => {
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"  onClick={() => {
         setisClicked(!isClicked)
       }}>
-      <path d="M15 7.50004C15 7.50004 11.3176 12.5 10 12.5C8.68233 12.5 5 7.5 5 7.5" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path data-theme={identifier("darkPath","dark2Path","greenPath","pinkPath","bluePath","redPath")} d="M15 7.50004C15 7.50004 11.3176 12.5 10 12.5C8.68233 12.5 5 7.5 5 7.5" stroke="#FCFCFC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       {isClicked && <div className={style.userAccebility}>
         <div className={style.fixed}>

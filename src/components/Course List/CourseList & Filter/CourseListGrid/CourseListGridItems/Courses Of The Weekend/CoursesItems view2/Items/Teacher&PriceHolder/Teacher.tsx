@@ -6,7 +6,7 @@ const Teacher = (props) => {
 
   const {t} = useTranslation();
   return (
-    <div className={style.teacher} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("lecturer")}:  {props.teacher}</div>
+    <div className={style.teacher} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("lecturer")}:  {props.teacher}</div>
   )
 }
 

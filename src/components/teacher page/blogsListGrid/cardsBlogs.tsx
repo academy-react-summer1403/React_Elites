@@ -8,7 +8,7 @@ const CardBlogs = ({image, title,count,countN, LinkedinProf}) => {
 
   return (
     
-    <div className={style.holder} data-theme={identifier("darkSmall","dark2Small")}>
+    <div className={style.holder} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
         <Image image={image && image.slice(0, 5) == "https" ? image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtu74pEiq7ofeQeTsco0migV16zZoBwSlGg&s'} />
         <TitleAndCountHolder LinkedinProf={LinkedinProf} title={title} count={count} countN={countN} />
     </div>

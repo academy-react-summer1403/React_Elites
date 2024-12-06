@@ -42,7 +42,7 @@ const CourseList = () => {
     }
   }, [])
   return (
-    <div className={style.body}  data-theme={identifier("dark","dark2")}>
+    <div className={style.body}  data-theme={identifier("dark","dark2","green","pink","blue","red")}>
         <motion.div className="progressBar" style={{ scaleX: scrollYProgress }} />
         <div className={style.courseListHolder}>
         <StartNewJourney />

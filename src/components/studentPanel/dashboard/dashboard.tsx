@@ -37,7 +37,7 @@ const StudentDashboard = () => {
   return (
     <Formik>
       {(form) => (
-        <div className={style.page} data-theme={identifier("darkSmall","dark2Small")}>
+        <div className={style.page} data-theme={identifier("darkSmall","dark2Small","greenSmall","pinkSmall","blueSmall","redSmall")}>
 
           <TopDashboard user={user}/>
           <MyCourseAndStatus percentage={percentage}/>

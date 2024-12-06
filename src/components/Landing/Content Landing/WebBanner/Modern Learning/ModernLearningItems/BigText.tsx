@@ -7,7 +7,7 @@ const BigText = () => {
   const {t} = useTranslation();
 
   return (
-    <div className={style.bigText} data-theme={identifier("dark","dark2")}>{t("TeachLandingBannerBig1")} <br /> {t("TeachLandingBannerBig2")}</div>
+    <div className={style.bigText} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("TeachLandingBannerBig1")} <br /> {t("TeachLandingBannerBig2")}</div>
   )
 }
 

@@ -6,9 +6,10 @@ import { dislikeNews } from '../../../../../../core/services/api/postNewsDislike
 
 import { identifier } from '../../../../../../core/services/Functions/ThemeIdentifier'
 import { useGlobalState } from '../../../../../../State/State'
+import { useTranslation } from 'react-i18next'
 const DisLike = ({ isClicked2, setIsClicked2, setIsClicked, id }) => {
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
-
+  const { t } = useTranslation();
 
   const likeNewsCall = async (id) => {
     let res = await dislikeNews(id)
@@ -22,7 +23,7 @@ const DisLike = ({ isClicked2, setIsClicked2, setIsClicked, id }) => {
   return (
     <>
       <Toaster />
-      <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2")} className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
+      <div data-theme={identifier("darkDisLikeDetail","darkDisLikeDetail2","greenDisLikeDetail","pinkDisLikeDetail","blueDisLikeDetail","redDisLikeDetail")} className={isClicked2 ? style.disliked : style.dislike} onClick={() => {
         likeNewsCall(id)
         setIsClicked(false)
         setIsClicked2(true)
