@@ -8,12 +8,12 @@ export const identifier = (className, className2, className3, className4, classN
     // اضافه کردن تم ها
     const [darkMode, setDarkMode] = useGlobalState('DarkMode');
     const [darkMode2, setDarkMode2] = useGlobalState('DarkMode2');
-    const [greenMode, setGreenMode] = useGlobalState('greenMode');
-    const [pinkMode2, setPinkMode2] = useGlobalState('pinkMode');
-    const [blueMode, setBlueMode] = useGlobalState('blueMode');
-    const [redMode2, setRedMode2] = useGlobalState('redMode');
+    const [greenMode, setGreenMode] = useGlobalState('GreenMode');
+    const [pinkMode2, setPinkMode2] = useGlobalState('PinkMode');
+    const [blueMode, setBlueMode] = useGlobalState('BlueMode');
+    const [redMode2, setRedMode2] = useGlobalState('RedMode');
 
-    // اگر این تم روشن شود
+    // اگر این تم روشن شودس
 
     if (darkMode == true) {
         return className

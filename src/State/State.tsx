@@ -5,7 +5,7 @@ const { useGlobalState} = createGlobalState({
     DarkMode2: false,
     GreenMode: false,
     PinkMode: false,
-    BlueMode2: false,
+    BlueMode: false,
     RedMode: false,
     isLogin: false,
     userId: '',
