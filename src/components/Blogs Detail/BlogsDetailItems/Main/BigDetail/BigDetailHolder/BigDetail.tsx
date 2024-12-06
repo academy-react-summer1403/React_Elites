@@ -13,7 +13,6 @@ const BigDetail = ({isLoading, id, category, teacher, views, likes, dislikes, ra
         <Title title={title} isLoading={isLoading}/>
         <Top category={category} teacher={teacher} views={views} date={insertDate} isLoading={isLoading}/>
         <Bottom likes={likes} dislikes={dislikes}/>
-
         <RateAndPrice isLoading={isLoading} rate={rate} comment={comment} />
         <Order id={id} currentUserIsLike={currentUserIsLike} currentUserIsDissLike={currentUserIsDissLike} />
     </div>
