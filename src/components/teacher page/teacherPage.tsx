@@ -17,6 +17,7 @@ const TeacherList = (props) => {
   const { scrollYProgress } = useScroll()
 
   const getTeacherList = async () => {
+    setisLoading(true)
     const teacher = await getTeacher();
     setTeacherList(teacher);
     setisLoading(false)

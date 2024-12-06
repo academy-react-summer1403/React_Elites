@@ -9,24 +9,32 @@ import { getMyCourse } from '../../../../core/services/api/getMyCourse';
 import { identifier } from '../../../../core/services/Functions/ThemeIdentifier';
 const StudentMyCourse = () => {
   const { t } = useTranslation();
+  const [searchValue, setsearchValue] = useState("")
 
   const [data, setdata] = useState([])
   const [isLoading, setisLoading] = useState(true)
   const myCourses = async () => {
+    setisLoading(true)
     let res = await getMyCourse()
     setdata(res.listOfMyCourses)
+    if(searchValue != ""){
+      setdata(data.filter(doc => doc.courseTitle.includes(searchValue)))
+    }
     setisLoading(false)
   }
   useEffect(() => {
     myCourses()
   }, [])
+  useEffect(() => {
+    myCourses()
+  }, [searchValue])
   
   return (
     <div className={style.page2}>
         <div className={style.titleHolder}>
             <h1 className={style.titleHeaderTopStudent} data-theme={identifier("darkNoBG","dark2NoBG")}>{t("myCourse")}</h1>
         </div>
-        <StudentPanelSearch />
+        <StudentPanelSearch setsearchValue={setsearchValue} />
         <div className={style.list} data-theme={identifier("dark","dark2")}> 
             <div className={style.headerList} data-theme={identifier("darkSmall","dark2Small")}>
                 <div className={style.imgList} data-theme={identifier("darkNoBG","dark2NoBG")}># </div>
@@ -39,7 +47,7 @@ const StudentMyCourse = () => {
             </div>
             <ListCardBlogs isLoading={isLoading} data={data} />
             <div className="flex justify-center mt-8">
-            </div>  
+            </div> 
         </div>
     </div>
   )

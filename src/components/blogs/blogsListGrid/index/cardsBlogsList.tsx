@@ -11,6 +11,7 @@ const ListCardBlogs = ({categoryId, applyFilter, searchValue, applySort, col, so
   const [isLoading, setisLoading] = useState(true)
 
   const allBlogsList = async () => {
+    setisLoading(true)
 
     let allBlogs = await getAllBlogsList()
 

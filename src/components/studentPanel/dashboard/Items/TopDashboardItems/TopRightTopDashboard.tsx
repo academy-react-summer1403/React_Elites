@@ -9,7 +9,7 @@ const TopRightTopDashboard = ({ user }) => {
   return (
 
     <div className={style.TopRightTopDashboard}>
-      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("Hi")} {user.fName}{user.lName}  ، {t("GoodDay")}👋</h1>
+      <h1 data-theme={identifier("darkNoBG","dark2NoBG")}>{t("Hi")} {user.fName} {user.lName}  ، {t("GoodDay")}👋</h1>
       <p data-theme={identifier("darkNoBGDisc","dark2NoBGDisc")}>{t("GoodDayDesc")}</p>
     </div>
   )

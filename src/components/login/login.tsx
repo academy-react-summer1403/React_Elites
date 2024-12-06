@@ -31,7 +31,8 @@ const Login = () => {
       setIsLogin(true)
       setUserId(user.id)
       if(user.roles.includes("Administrator")){
-        window.open("http://localhost:3000/home")
+        let token = user.token.replaceAll(".", "1000000000")
+        window.open("http://localhost:3000/home/" + `${token}`)
       }
     }
     else if (user.success == true && user.token == null) {
