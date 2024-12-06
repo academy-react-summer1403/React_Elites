@@ -859,7 +859,7 @@
 }
 .listMyReserveDashboard,
 .listMyCoursesDashboard {
-    overflow: hidden;
+    overflow: scroll;
 }
 
 @media screen and (max-width:1362px) {
