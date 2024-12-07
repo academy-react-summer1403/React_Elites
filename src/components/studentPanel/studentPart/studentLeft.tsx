@@ -102,7 +102,6 @@ const StudentGhabLeft = () => {
                 </div>
                 <div className={style.notifAndDarkHolder}>
                     <div className={style.notif}>
-                        <span>2</span>
                     </div>
                     <DarkOrLightMode />
                 </div>
