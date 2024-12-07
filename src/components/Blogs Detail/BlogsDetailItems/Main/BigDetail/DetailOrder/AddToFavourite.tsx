@@ -16,14 +16,14 @@ const AddToFavourite = ({id}) => {
       id: "1"
   })
     let res = await addToFav(newsId);
+    if(isLogin === false){
+      toast.remove("1");
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
+    }
     if(res.success === true) {
       toast.remove("1");
       toast.success("بلاگ به لیست مورد علاقه اضافه شد")
       setisCurrentUserFavorite("1")
-    }
-    else if(isLogin === false){
-      toast.remove("1");
-      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   return (

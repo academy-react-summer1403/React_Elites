@@ -16,13 +16,13 @@ const DisLike = ({ isClicked2, setIsClicked2, setIsClicked, id }) => {
       id: "1"
   })
     let res = await dislikeNews(id)
+    if (isLogin === false) {
+      toast.remove("1");
+      toast.error("لطفا به حساب کاربری خود وارد شوید")
+    }
     if (res.success === true) {
       toast.remove("1");
       toast.success(res.message)
-    }
-    else if (isLogin === false) {
-      toast.remove("1");
-      toast.error("لطفا به حساب کاربری خود وارد شوید")
     }
   }
   return (
