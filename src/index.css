@@ -584,7 +584,7 @@
 
 [data-theme="pinkCoursesHolder"] {
   background: #7469B6 !important;
-  color: #FFE6E6 !important;
+  color: #fff !important;
   border-color: #AD88C6 !important;
   box-shadow: 0px 0px 10px 2px #fff !important;
 }
@@ -615,7 +615,7 @@
 }
 
 [data-theme="search4"] {
-  color: #FFE6E6 !important;
+  color: #fff !important;
 }
 
 [data-theme="pinkClearSort"] {
@@ -624,32 +624,32 @@
 }
 
 [data-theme="pinkSearch"] {
-  color: #FFE6E6 !important;
+  color: #fff !important;
   background: #7469B6 url("https://img.icons8.com/?size=100&id=132&format=png&color=FFE6E6") no-repeat 50% 50% !important;
   background-size: 60% !important;
   border-color: #AD88C6 !important;
 }
 
 [data-theme="level4"] {
-  color: #FFE6E6 !important;
+  color: #fff !important;
 }
 
 [data-theme="notification4"] {
   background-color: #7469B6 !important;
-  color: #FFE6E6 !important;
+  color: #fff !important;
   border-color: #AD88C6 !important;
 }
 
 [data-theme="teacher4"] {
-  color: #FFE6E6 !important;
+  color: #fff !important;
 }
 
 [data-theme="date4"] {
-  color: #FFE6E6 !important;
+  color: #fff !important;
 }
 
 [data-theme="cat4"] {
-  color: #FFE6E6 !important;
+  color: #fff !important;
 }
 
 [data-theme="view4"] {

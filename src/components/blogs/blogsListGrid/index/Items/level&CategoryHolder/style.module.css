@@ -12,6 +12,9 @@
 }
 
 .level{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
