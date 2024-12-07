@@ -11,7 +11,8 @@ const User = () => {
   const [userInfoObj, setUserInfoObj] = useGlobalState('userInfoObj');
   const [isClicked, setisClicked] = useState(false)
   const [isLogin, setIsLogin] = useGlobalState('isLogin');
-  const { t } = useTranslation();
+  const{t}= useTranslation();
+
   return (
     <div className={style.user}>
       <img className={style.profile} src={userInfoObj.currentPictureAddress}></img>
@@ -21,34 +22,34 @@ const User = () => {
       {isClicked && <div className={style.userAccebility}>
         <div className={style.fixed}>
           <div className={style.holderr}>
-            <NavLink className={style.items} to='/Student-Panel/dashboard' data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("Dashboard")}</NavLink>
+            <NavLink className={style.items} to='/Student-Panel/dashboard'> {t("Dashboard")}</NavLink>
           </div>
           <div className={style.holderr}>
-            <NavLink className={style.items} to='/Student-Panel/My-Courses' data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("myCourse")}</NavLink>
-          </div>
-
-          <div className={style.holderr}>
-            <NavLink className={style.items} to='/Student-Panel/My-Reserve' data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("MyReservation")}</NavLink>
+            <NavLink className={style.items} to='/Student-Panel/My-Courses' > {t("myCourse")}</NavLink>
           </div>
 
           <div className={style.holderr}>
-            <NavLink className={style.items} to="/Student-Panel/Fav-Courses" data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("FavoriteCourses")}</NavLink>
+            <NavLink className={style.items} to='/Student-Panel/My-Reserve' > {t("MyReservation")}</NavLink>
           </div>
 
           <div className={style.holderr}>
-            <NavLink className={style.items} to="/Student-Panel/Fav-Blogs" data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("FavoriteBlogs")}</NavLink>
+            <NavLink className={style.items} to="/Student-Panel/Fav-Courses" > {t("FavoriteCourses")}</NavLink>
           </div>
 
           <div className={style.holderr}>
-            <NavLink className={style.items} to='/Student-Panel/Information' data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("Profile")}</NavLink>
+            <NavLink className={style.items} to="/Student-Panel/Fav-Blogs" > {t("FavoriteBlogs")}</NavLink>
           </div>
 
           <div className={style.holderr}>
-            <NavLink className={style.items} to='/Student-Panel/my-jobs' data-theme={identifier("darkNoBG", "dark2NoBG")}>{t("jobs")}</NavLink>
+            <NavLink className={style.items} to='/Student-Panel/Information' > {t("Profile")}</NavLink>
           </div>
 
           <div className={style.holderr}>
-            <NavLink className={style.items} to="/Student-Panel/Shopping-Basket" data-theme={identifier("darkNoBG", "dark2NoBG")}> {t("Payments")}</NavLink>
+            <NavLink className={style.items} to='/Student-Panel/my-jobs' >{t("jobs")}</NavLink>
+          </div>
+
+          <div className={style.holderr}>
+            <NavLink className={style.items} to="/Student-Panel/Shopping-Basket" > {t("Payments")}</NavLink>
           </div>
           <div className={style.holderr}>
             <NavLink className={style.items} to="/"  onClick={() => {

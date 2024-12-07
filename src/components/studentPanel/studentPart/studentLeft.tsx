@@ -71,12 +71,12 @@ const StudentGhabLeft = () => {
                                         <NavLink to="/Shopping-Basket" data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("Payments")}</NavLink>
                                     </div>
                                     <div>
-                                        <div className={style.report}> </div>
-                                        <NavLink to='/' data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("Report")} </NavLink>
+                                        <div className={style.profile}> </div>
+                                        <NavLink to='/Student-Panel/Information' data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("Profile")}</NavLink>
                                     </div>
                                     <div>
-                                        <div className={style.communicate}> </div>
-                                        <NavLink to='/' data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}> {t("contactUs")} </NavLink>
+                                        <div className={style.jobs}> </div>
+                                        <NavLink to='/Student-Panel/my-jobs' data-theme={identifier("darkNoBG","dark2NoBG","greenNoBG","pinkNoBG","blueNoBG","redNoBG")}>{t("jobs")}</NavLink>
                                     </div>
                                     <div className={style.logout}>
                                         <div className={style.exit}> </div>
