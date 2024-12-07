@@ -147,6 +147,7 @@
 .notif {
     background-image: url("https://img.icons8.com/?size=100&id=H1UeFcv5ogFU&format=png&color=ffffff");
     position: relative;
+    border: 1px solid #dcdcdc;
 }
 
 .notif>span {
