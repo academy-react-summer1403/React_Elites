@@ -12,10 +12,10 @@
 
 .coursesHolder {
     overflow-y: scroll;
-    height: 600px;
     display: flex;
     justify-content: right;
     flex-flow: row wrap;
+    align-items: flex-start;
     width: 100%;
 }
 

@@ -24,3 +24,9 @@
     color: #2F2F2F;
     margin-top: 5px;
 }
+
+@media screen and (max-width: 1000px){
+    .CompareButton{
+        display: none;
+    }
+}

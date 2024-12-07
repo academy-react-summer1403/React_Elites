@@ -75,10 +75,10 @@
 .page2{
     height: 100vh;
     overflow: scroll;
-    display: flex;
+    /* display: flex;
     justify-content: right;
     flex-flow: row wrap;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 
 .containerFactor {

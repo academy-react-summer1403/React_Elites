@@ -56,8 +56,6 @@
 .miniBasket {
     background: #fff;
     border-radius: 5px;
-    z-index: 2000;
-    display: flex;
     padding: 10px;
     overflow: hidden;
 
@@ -67,10 +65,8 @@
     height: 350px;
     padding:0 20px;
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
     overflow-y: scroll;
-    border: 1px solid rgb(145, 145, 145);
+    border: 1px solid #919191;
     border-radius: 8px;
 }
 
