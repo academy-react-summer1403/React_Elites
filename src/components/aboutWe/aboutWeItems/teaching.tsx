@@ -9,7 +9,7 @@ const Teaching = (props) => {
   const { t } = useTranslation();
   return (
     <div className={style.holderP}>
-      <span data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("aboutUsTitle3")}</span>
+      <span className={style.span} data-theme={identifier("dark","dark2","green","pink","blue","red")}>{t("aboutUsTitle3")}</span>
       <div className={style.holderGap}>
         <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc4")}</p> 
         <p className={style.courseCounts} data-theme={identifier("darkNoBGDisc","dark2NoBGDisc","greenNoBGDisc","pinkNoBGDisc","blueNoBGDisc","redNoBGDisc")}>{t("aboutUsDesc5")}</p> 
